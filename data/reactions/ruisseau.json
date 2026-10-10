@@ -1,0 +1,546 @@
+{
+  "id": "ruisseau",
+  "description": "Un ruisseau clair et peu profond qui serpente au sud de la ville entre saules et peupliers, sur un lit de galets où brillent parfois des paillettes. Il descend des collines, longe l'enclos à bétail, et ses berges boueuses sont criblées d'empreintes de sabots.",
+  "repliques": [
+    "L'eau glougloute sur les galets.",
+    "Une truite saute, puis disparaît dans un rond d'argent.",
+    "*Les grenouilles coassent dans les roseaux.*"
+  ],
+  "reactions": {
+    "boire_eau": [
+      {
+        "texte": "Tu t'agenouilles sur les galets et bois dans le creux de tes mains. L'eau est fraîche, avec un léger goût de terre et de feuilles mortes.",
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "L'eau a un arrière-goût suspect. En levant les yeux, tu aperçois, cent pas en amont, une vache de l'enclos plantée au milieu du courant, l'air très satisfaite.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu bois à plat ventre sous les étoiles. Sur l'autre rive, un coyote boit en même temps que toi, sans te quitter des yeux.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Tu remontes le courant jusqu'à l'endroit où le ruisseau sort des collines, limpide comme du verre. Le meilleur breuvage de Valentine, et le seul gratuit.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 15
+        }
+      },
+      {
+        "texte": "Tu bois vite, accroupi entre les saules, l'oreille tendue vers la piste. Un bruit de sabots te fait plonger le visage dans l'eau jusqu'aux oreilles : ce n'était qu'un vacher.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines le ruisseau entre les saules, les galets ronds, un héron figé sur une patte. Pour une fois, ton modèle ne bouge pas."
+      },
+      {
+        "texte": "Assis sur la berge, tu dessines les lavandières qui battent le linge sur les pierres plates. Elles finissent par t'apercevoir et te bombardent de chaussettes mouillées.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu tentes de dessiner le reflet de la lune sur l'eau qui court. Il ne tient jamais en place ; ta page se couvre de petits traits argentés, comme une averse.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu croques le vacher qui fait boire ses bêtes en chantant faux. Il découvre ton dessin, rougit, et te supplie de lui donner une allure plus « Buffalo Bill »."
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} dans le ruisseau. Le courant emporte le projectile en tourbillonnant entre les galets, jusqu'à un remous sous les saules où il disparaît."
+      },
+      {
+        "texte": "Tu lances {outil} à l'eau dans une grande gerbe. En aval, les lavandières poussent les hauts cris : « Tu peux pas jeter tes saletés ailleurs, sauvage ? »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu lances {outil} dans le noir. Un « plouf », puis un grand battement d'ailes : tu viens de réveiller un héron, qui s'envole en protestant.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu lances {outil} vers l'autre rive ; le projectile ricoche sur un galet et s'enfonce dans la vase. Une grenouille vient s'asseoir dessus, comme pour en prendre possession."
+      },
+      {
+        "texte": "Tu lances {outil} sur un serpent d'eau qui ondulait vers tes bottes. Il change de cap, vexé, et le projectile coule à pic dans un trou d'eau."
+      }
+    ],
+    "nager": [
+      {
+        "texte": "Tu entres dans l'eau jusqu'à la poitrine : elle est froide à couper le souffle, puis délicieuse. Le courant te pousse doucement vers l'aval, parmi les feuilles qui tournent.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu nages entre les saules, et les gamins de la ville viennent plonger avec toi depuis le gros rocher. Le gamin des rues te propose une course ; il triche, et il gagne.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu nages seul sous les étoiles. Quelque chose de long et de froid te frôle la jambe ; tu ressors de l'eau bien plus vite que tu n'y es entré.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "En sortant de l'eau, tu découvres trois sangsues collées à ton mollet. Le docteur te les retirerait pour un dollar ; ton couteau le fait gratuitement.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu plonges et te laisses dériver sous la surface jusqu'aux roseaux, en ne respirant que par le nez. Sur la berge, le chasseur de primes cherche des traces de pas qui n'existent plus.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Un veau de l'enclos s'est fait emporter par le courant. Tu nages jusqu'à lui, l'attrapes par le cou et le ramènes sur la berge, sous les vivats du vacher.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 2,
+          "sante": -5
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Le ruisseau court sur un lit de galets si clair qu'on compte les cailloux. Des truites tiennent leur place contre le courant, immobiles comme des pensées."
+      },
+      {
+        "texte": "Dans le sable du fond, entre deux galets, quelque chose brille en fines paillettes. L'ivrogne n'a peut-être pas tout inventé, finalement."
+      },
+      {
+        "texte": "La lune trace un chemin d'argent sur l'eau. Sur la berge d'en face, deux yeux jaunes brillent entre les saules, puis s'éteignent.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Dans la boue de la berge, des empreintes de fers : trois chevaux, venus de nuit, repartis vers les collines. Le genre de traces que laissent les O'Driscoll quand ils surveillent une ville."
+      },
+      {
+        "texte": "Un gué peu profond, des saules touffus, un coude du ruisseau invisible depuis la ville : le meilleur endroit pour attendre une diligence ou enterrer un butin.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Le vacher fait boire le troupeau en amont pendant que, cent pas plus bas, les lavandières rincent le linge. Personne ne semble faire le rapprochement.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "pecher": [
+      {
+        "texte": "Tu lances ta ligne dans le remous sous les saules. Au bout d'un moment, ça tire : une belle truite arc-en-ciel se débat dans la lumière. Le boucher t'en donnera bien un dollar.",
+        "effets": {
+          "argent": 1
+        }
+      },
+      {
+        "texte": "Le vacher vient s'asseoir à côté de toi et t'explique qu'il sera bientôt plus célèbre que Buffalo Bill. Pendant ce temps, trois poissons mordent et se décrochent.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu pêches au clair de lune. Un poisson-chat énorme, moustachu comme un sénateur, avale ton hameçon et t'entraîne jusqu'à mi-mollet dans l'eau avant de se rendre.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 2
+        }
+      },
+      {
+        "texte": "Tu pêches avec {outil} une heure durant. Bilan : deux perches, une écrevisse vexée et une vieille botte d'où dépasse un orteil... non, une racine. C'était une racine.",
+        "effets": {
+          "argent": 1
+        }
+      },
+      {
+        "texte": "Tu en as assez d'attendre : tu attrapes les truites à la main dans les bassins peu profonds et assommes les plus grosses sur les galets. Pas élégant, mais efficace.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 2
+        }
+      },
+      {
+        "texte": "Tu pêches en gardant un œil sur la piste. Quand ça mord enfin, un cavalier apparaît au loin ; tu lâches tout et plonges dans les saules. Le cavalier passe. Le poisson aussi.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu installes {outil} sur la berge et photographies le ruisseau entre les saules. Avec la longue pose, l'eau deviendra un voile de brume sur la plaque."
+      },
+      {
+        "texte": "Au moment du déclic, une truite bondit hors de l'eau. Tu ne sauras qu'au développement si tu l'as eue : ce sera soit le chef-d'œuvre de ta vie, soit une tache.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "L'éclair de magnésium illumine la berge comme en plein jour et fait fuir une biche qui buvait sur l'autre rive. Sur le cliché, elle restera là pour toujours, les yeux brillants.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu photographies les lavandières au travail. L'une réclame un tirage pour son fiancé de Saint Denis, l'autre pour sa mère ; tu promets deux tirages que tu ne feras jamais."
+      }
+    ],
+    "se_laver": [
+      {
+        "texte": "Tu te déshabilles derrière les saules et entres dans l'eau froide. La crasse de la piste s'en va en nuage brun dans le courant : tu ressors neuf, et l'hôtel peut garder ses cinquante cents.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu te laves en caleçon quand les lavandières arrivent avec leurs paniers. Elles s'installent juste en face, très intéressées, et commentent ta musculature à voix haute.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu te laves sous la lune, les dents serrées contre le froid. Un hibou t'observe depuis une branche, l'air de juger ta technique.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Pendant que tu te frottes au sable, le chien errant s'empare de ta chemise et file sur la berge. Il faut une course poursuite à moitié nu jusqu'à l'enclos pour la récupérer."
+      },
+      {
+        "texte": "Tu laves le sang séché sur tes manches. Le courant l'emporte en filaments roses vers l'aval, là où les lavandières battent le linge du pasteur.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Tu tires avec {outil} dans l'eau : une gerbe jaillit, les grenouilles se taisent d'un coup, et un héron s'envole dans un claquement d'ailes indigné."
+      },
+      {
+        "texte": "La détonation fait détaler les lavandières, paniers sur la tête, en criant aux O'Driscoll. L'adjoint arrive au galop, l'arme à la main, et te trouve en train de viser une grenouille.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le coup de feu roule sur l'eau et se perd dans les collines. Là-bas, à l'enclos, Lucifer le taureau beugle de colère, et toutes les vaches lui répondent.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu tires avec {outil} sur un poisson qui affleure. Raté, évidemment : l'eau trompe l'œil. La balle ricoche sur un galet et t'érafle l'avant-bras au passage.",
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Tu vides ton arme dans le ruisseau pour le seul plaisir du bruit. Un poisson mort remonte, le ventre en l'air : ton unique trophée de la journée.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "remplir_sa_gourde": [
+      {
+        "texte": "Tu plonges ta gourde dans le courant, en amont des saules ; elle se remplit en gargouillant d'une eau fraîche et claire.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu remplis ta gourde sans regarder en amont. Ce n'est qu'en la rebouchant que tu remarques le troupeau de l'éleveur qui piétine dans l'eau, cent pas plus haut. Tu la vides et remontes le courant."
+      },
+      {
+        "texte": "Tu remplis ta gourde à genoux sur les galets, sous les étoiles. L'eau est si froide qu'elle t'engourdit les doigts.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu remplis ta gourde, la vides sur ta tête, puis la remplis encore. Prochain arrêt : les collines, loin de la loi.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      }
+    ],
+    "se_debarrasser_dans_eau@outil": [
+      {
+        "texte": "Tu jettes {cible} au milieu du ruisseau. Le courant fait rouler l'objet entre les galets et le couche dans un trou d'eau, sous les racines des saules."
+      },
+      {
+        "texte": "Tu laisses filer {cible} au fil de l'eau, mais une lavandière, en aval, repêche l'objet au passage et le brandit, ravie : « Merci du cadeau, monsieur ! »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu enterres {cible} dans la vase du fond, sous une grosse pierre plate. Personne, jamais, ne viendra chercher là.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu lestes {cible} d'une pierre et envoies le tout au fond du trou d'eau. Une preuve de moins pour le shérif Malloy.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu abandonnes {cible} au ruisseau sans un regard en arrière. Il y a dans ce cours d'eau plus de secrets que de truites.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ],
+    "chercher_or_batee": [
+      {
+        "texte": "Tu racles le gravier du fond et fais tourner la batée, lentement, en laissant l'eau emporter le sable. Rien. Puis rien. Puis, au dixième essai, trois paillettes d'or grosses comme des puces.",
+        "effets": {
+          "argent": 1
+        }
+      },
+      {
+        "texte": "L'ivrogne s'installe sur la berge pour te regarder faire, une flasque à la main : « Plus haut, l'ami ! Dans les collines ! C'est là-haut que je l'ai vue, la veine, grosse comme mon bras ! »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Une heure les pieds dans l'eau glacée, le dos en compote, pour une poignée de pyrite : de l'or des fous, qui brille plus que le vrai. Le boucher se moquera de toi toute la semaine si tu essaies de la vendre.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu tamises à la lueur d'une lanterne. Un éclat lourd roule au fond de la batée : une vraie pépite, grosse comme un haricot. Ton cœur cogne ; tu jettes un œil autour de toi avant de la serrer dans ton poing.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 15
+        }
+      },
+      {
+        "texte": "Tu ne trouves rien de la journée, puis tu as une meilleure idée : vendre à l'ivrogne une fiole de pyrite en lui jurant que c'est de l'or véritable. Il te paie cinq dollars en tremblant de joie.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu trouves quelques paillettes et les offres au fermier endetté qui passait sur la berge. Ce n'est pas assez pour le banquier, mais il te serre la main comme si c'était une fortune.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu partages la berge avec un vieux prospecteur qui parle aux galets. Il t'apprend à incliner la batée « comme on berce un enfant » ; tu trouves deux paillettes, lui aucune, et il t'accuse de sorcellerie.",
+        "effets": {
+          "argent": 1
+        }
+      }
+    ],
+    "faire_boire_son_cheval": [
+      {
+        "texte": "Tu mènes ton cheval au ruisseau. Il boit à longues gorgées, les naseaux frémissants, puis s'ébroue et t'éclabousse de la tête aux pieds, visiblement très content de lui."
+      },
+      {
+        "texte": "Ton cheval boit à côté du troupeau de l'éleveur. Le vacher touche le bord de son chapeau et te demande, l'air de rien, si ta monture serait à vendre.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Ton cheval boit sous les étoiles, puis relève brusquement la tête, oreilles dressées vers les saules. Tu restes immobile : il y a quelqu'un, ou quelque chose, sur l'autre rive.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Ton cheval refuse d'abord l'eau, puis entre jusqu'aux genoux et se met à frapper le courant du sabot comme un poulain. Tu ressors trempé ; lui est ravi."
+      },
+      {
+        "texte": "Pendant que ton cheval boit, tu repères les sentiers qui remontent vers les collines. Si l'adjoint se montre, c'est par là que tu fileras, à travers le gué.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "traverser_a_gue": [
+      {
+        "texte": "Tu traverses le ruisseau à gué, l'eau aux genoux, en sautant de galet en galet. Le dernier roule sous ta botte : tu finis la traversée assis, trempé jusqu'aux reins."
+      },
+      {
+        "texte": "Tu passes le gué dans le noir en tâtant le fond du pied. Le courant est plus fort qu'il n'y paraît ; sur l'autre rive, la ville n'est plus qu'une rangée de lanternes derrière les saules.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu remontes le lit du ruisseau sur cent pas avant de ressortir sur l'autre rive : sur les galets mouillés, aucun pisteur ne retrouvera ta trace.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Au milieu du gué, tu croises le fermier de passage qui pousse une brouette de pommes de terre. Vous vous aidez à traverser, et il te raconte ses dettes envers la banque jusqu'à l'autre rive.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Trois enjambées et te voilà de l'autre côté. Là-bas, l'herbe est plus haute, les saules plus épais, et la ville paraît soudain très loin."
+      }
+    ],
+    "faire_ricochets": [
+      {
+        "texte": "Tu choisis un galet bien plat et le fais ricocher : un, deux, trois, quatre, cinq ! Une grenouille, sur une pierre, a l'air sincèrement impressionnée."
+      },
+      {
+        "texte": "Le gamin des rues te défie aux ricochets, un dollar la partie. Il fait sept rebonds du premier coup ; tu comprends trop tard qu'il s'entraîne ici tous les jours.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Tes galets rebondissent sur le reflet de la lune et le brisent en mille morceaux, qui se recollent aussitôt. Tu recommences, encore et encore, sans savoir pourquoi.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Ton galet ricoche quatre fois et va heurter le chapeau d'un pêcheur assoupi sur l'autre rive. Il se réveille en sursaut, fusil en main ; tu te découvres un vif intérêt pour les nuages."
+      },
+      {
+        "texte": "Tu fais des ricochets avec tes propres pièces, pour le panache. Le gamin des rues plonge aussitôt les repêcher, tout habillé, en riant comme un fou.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      }
+    ],
+    "attraper_ecrevisses": [
+      {
+        "texte": "Tu retournes les pierres une à une, manches retroussées. Sous la cinquième, une écrevisse bleue brandit ses pinces et te pince l'index jusqu'au sang. Tu la gardes : elle l'a bien mérité.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "En une heure, tu remplis ton chapeau d'écrevisses grouillantes. Le boucher, hilare et couvert de sang, te les achète un dollar « pour la soupe de la pension ».",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 1
+        }
+      },
+      {
+        "texte": "Tu chasses les écrevisses à la lanterne : elles accourent vers la lumière comme des papillons de nuit. Un festin grillé sur la berge, avec du sel et de la patience.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 15
+        }
+      },
+      {
+        "texte": "Tu plonges la main sous une racine et en ressors une écrevisse énorme, puis une sangsue, puis une cuillère en argent gravée d'initiales. Le ruisseau a de drôles de poches.",
+        "effets": {
+          "argent": 2
+        }
+      },
+      {
+        "texte": "Tu remplis une besace d'écrevisses et la déposes près du vétéran mendiant en rentrant en ville. Il sourit pour la première fois depuis longtemps : « Ça me rappelle le bivouac, en soixante-trois. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      }
+    ]
+  }
+}

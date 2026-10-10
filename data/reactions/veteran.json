@@ -1,0 +1,1192 @@
+{
+  "id": "veteran",
+  "description": "Un vieil homme à la barbe jaunie de tabac, assis au bout du banc devant le magasin général, la jambe gauche de son pantalon gris épinglée au-dessus du genou. Képi confédéré délavé mais brossé, béquille rafistolée au fil de fer, médaille ternie sur la poitrine, et un képi retourné posé dans la boue pour les pièces.",
+  "personnalite": "Ezra Holloway, ancien sergent d'infanterie du Tennessee, a laissé sa jambe à Franklin en novembre 1864. Fier, amer, ombrageux, drôle quand il a bu. Il refuse la pitié mais accepte « une contribution », raconte la guerre contre une pièce et ne pardonne ni aux Yankees, ni au banquier, ni à la Providence. Il cache sous sa couverture un vieux Colt Navy et trois balles, « pour les O'Driscoll, ou pour moi ». Le crieur lui lit le journal chaque soir ; le chien errant, qu'il appelle Caporal, dort contre sa jambe valide.",
+  "repliques": [
+    "Une pièce pour un soldat du Sud ? Pas par pitié. Pour service rendu.",
+    "Franklin, Tennessee, novembre 64. Ma jambe y est encore. Elle a eu plus de chance que moi.",
+    "Trente-cinq ans que la guerre est finie. Personne m'a prévenu.",
+    "On nous avait promis la gloire. On a eu la dysenterie.",
+    "Caporal ! Au pied ! ... Bon. Il obéit pas mieux que mes recrues.",
+    "Le croque-mort me mesure du regard chaque matin. Une jambe de moins, que je lui dis : ça te fera une économie de planche.",
+    "*sifflote « Lorena » en battant la mesure avec sa béquille*",
+    "*astique sa médaille ternie avec son pouce, lentement, comme on caresse un chat*",
+    "Il pleuvra demain. Ma jambe me le dit. Celle qui est plus là.",
+    "Le banquier m'a jeté un cent, un jour. Je le lui ai rendu, avec la monnaie de ma façon de penser."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 6,
+      "lieu": "ecurie",
+      "activite": "dort dans la paille, avec la permission muette du palefrenier"
+    },
+    {
+      "de": 6,
+      "a": 7,
+      "lieu": "rue_eglise",
+      "activite": "se débarbouille au puits et brosse son képi"
+    },
+    {
+      "de": 7,
+      "a": 11,
+      "lieu": "rue_principale",
+      "activite": "mendie au bout du banc, devant le magasin général"
+    },
+    {
+      "de": 11,
+      "a": 12,
+      "lieu": "eglise",
+      "activite": "avale la soupe du pasteur en grommelant contre la tempérance"
+    },
+    {
+      "de": 12,
+      "a": 16,
+      "lieu": "rue_principale",
+      "activite": "raconte la guerre aux passants contre une pièce"
+    },
+    {
+      "de": 16,
+      "a": 17,
+      "lieu": "cimetiere",
+      "activite": "parle aux morts, les seuls qui l'écoutent jusqu'au bout"
+    },
+    {
+      "de": 17,
+      "a": 21,
+      "lieu": "rue_principale",
+      "activite": "mendie à l'heure où les cow-boys sont payés, puis écoute le crieur lui lire le journal"
+    },
+    {
+      "de": 21,
+      "a": 23,
+      "lieu": "saloon_smithfield",
+      "activite": "boit les pièces de la journée en whisky frelaté"
+    },
+    {
+      "de": 23,
+      "a": 24,
+      "lieu": "ecurie",
+      "activite": "rentre en zigzag et s'effondre dans la paille"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il lève vers toi des yeux pâles et durs : « Je raconte pas pour rien, l'ami. Une pièce, et je te dis comment on a tenu la ligne à Franklin. Deux, et je te dis pourquoi on l'a perdue. »"
+      },
+      {
+        "texte": "« Tu sais ce qu'on gagne à se battre pour une cause perdue ? » Il soulève la jambe vide de son pantalon. « Ça. Et une médaille que personne veut acheter. »"
+      },
+      {
+        "texte": "« Le pasteur dit que Dieu a un plan pour chacun. » Il tapote son moignon. « Faut croire que le sien avait besoin d'une jambe. »"
+      },
+      {
+        "texte": "Il te scrute longuement : « T'as l'air d'un homme qui tient parole. Ça devient rare. De mon temps, on se serrait la main et c'était signé. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Je connais ton genre. J'en ai commandé, des comme toi : ils pillaient les fermes et appelaient ça du ravitaillement. » Il crache dans la boue.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il ricane : « Recherché, hein ? Moi aussi, en 65. L'Union m'a retrouvé dans un fossé, une jambe en moins. Y a pas de quoi pavoiser, fiston. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il sent le whisky du Smithfield's : « Tu l'entends ? Le canon. Toutes les nuits. » Il rit sans joie. « Non. C'est le train de marchandises. Je sais. Je sais. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "« Assieds-toi, soldat. » Il tapote le banc. « Le gamin m'a lu que nos garçons se battent aux Philippines, maintenant. Toujours la même chanson : des jeunes qui meurent loin pour des vieux qui restent au chaud. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il porte deux doigts à la visière de son képi, raide comme à la revue : « Sergent Holloway. Tennessee. Repos. »"
+      },
+      {
+        "texte": "Il grogne un « 'jour » sans lever les yeux, occupé à rouler une cigarette d'une seule main avec une adresse effrayante."
+      },
+      {
+        "texte": "Son visage se fend d'un sourire édenté : « Tiens, voilà mon seul ami qui a encore ses deux jambes ! »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il lève sa flasque vers toi en guise de salut : « À la santé des morts. Eux, au moins, ils ont plus froid. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il se hisse sur sa béquille, péniblement, pour te rendre ton salut debout : « On se lève pour un homme d'honneur. C'est le règlement. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il ne répond pas. Il pose juste la main sur sa béquille, comme on la pose sur la crosse d'un fusil.",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Il éclate d'un rire sec : « Fiston, j'ai chargé à la baïonnette contre des canons chargés à mitraille. Tes mots me font même pas froid à la jambe. »"
+      },
+      {
+        "texte": "Il se redresse, l'œil mauvais : « Répète ça, et je te montre ce qu'un homme à une jambe peut faire avec une béquille. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il hausse la voix pour les passants : « Regardez-le bien, mesdames ! Il insulte un vieux soldat estropié en pleine rue. Voilà la jeunesse d'aujourd'hui ! »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il est trop saoul pour saisir l'insulte. Il croit que tu lui parles de Shiloh et te raconte la bataille en pleurant, sans s'arrêter.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "« Tu me provoques, moi ? Avec ta tête placardée sur le panneau ? » Il siffle entre ses dents. « Un mot au shérif, et je bois gratis tout l'hiver. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Il ne recule pas d'un pouce : « J'ai vu des hommes éventrés appeler leur mère. Tu crois que ta grosse voix va me faire peur ? »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te regarde droit dans les yeux, puis crache sur tes bottes : « Le dernier qui m'a regardé comme ça portait du bleu. Il est resté à Nashville. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il serre sa béquille à s'en blanchir les jointures, mais sa voix tremble : « Va-t'en. Laisse un vieil homme en paix. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Le crieur cesse de crier, le boucher sort sur son seuil : toute la rue regarde un homme armé menacer un mendiant à une jambe.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "« Approche, approche. » Il a glissé la main sous sa couverture ; tu y devines la forme d'un vieux revolver de l'armée.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Il regarde {outil} sans ciller : « Vas-y. Finis le travail des Yankees. Ça fera un mendiant de moins devant le magasin général. »",
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il lève les mains avec une lenteur moqueuse : « Mon trésor est dans mon képi. Quarante cents et un bouton d'uniforme. Sers-toi, bandit. »",
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Le crieur se met à hurler « AU SECOURS ! », et l'adjoint du shérif surgit au bout de la rue, la main sur la crosse.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Dans l'ombre, il murmure : « Tire, si tu veux. Personne pleurera, à part le chien. » Le chien errant, justement, se plante devant lui en grondant.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il te dévisage, plus déçu qu'effrayé : « J'aurais juré que t'étais des bons. On se trompe toujours sur les hommes. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -3
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Un coup sec, et le vieux bascule du banc dans la boue. Sa béquille roule jusque sous l'abreuvoir.",
+        "effets": {
+          "honneur": -3,
+          "prime": 10,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il a gardé des réflexes : il pare avec sa béquille et t'en assène un coup sur le genou avant de s'effondrer.",
+        "effets": {
+          "sante": -5,
+          "honneur": -2,
+          "prime": 5,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Toute la rue l'a vu. Le crieur hurle, une femme pleure, et le maréchal-ferrant traverse la rue sans un mot pour se planter entre vous deux, les bras croisés.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -3,
+          "prime": 15,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il s'effondre sans un bruit. Le chien errant vient se coucher contre lui et gronde dès que tu fais un pas.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -3,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu frappes avec {outil}. Le vieux soldat tombe du banc en jurant comme à Franklin, la main plaquée sur une plaie qui saigne.",
+        "effets": {
+          "honneur": -4,
+          "prime": 50,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il bloque avec sa béquille, qui se brise en deux. Il reste assis dans la boue, désarmé, à te maudire jusqu'à la septième génération.",
+        "effets": {
+          "honneur": -4,
+          "prime": 25,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Les témoins accourent. Le vétéran gît sur le flanc, et le crieur court déjà vers le bureau du shérif en hurlant ton signalement.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -4,
+          "prime": 50,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il t'attendait, son vieux couteau de l'armée à la main. La lame t'entaille l'avant-bras avant que {outil} ne l'atteigne.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "honneur": -3,
+          "prime": 25,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Le coup est mortel. Il meurt sans un cri, le képi de travers, la main serrée sur sa médaille.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -5,
+          "prime": 100,
+          "relation": -5,
+          "etat": "mort"
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La détonation résonne dans la rue principale. Le vieux soldat s'affaisse sur le banc, comme s'il s'endormait enfin : trente-cinq ans après Franklin, une balle a fini le travail.",
+        "effets": {
+          "honneur": -5,
+          "prime": 150,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "La balle le touche à l'épaule. Il roule dans la boue en hurlant des ordres à une compagnie morte depuis longtemps : « À couvert ! À COUVERT ! »",
+        "effets": {
+          "honneur": -4,
+          "prime": 75,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Ta balle fait voler son képi. Le vieux ne bronche pas : « T'as jamais tiré sur un homme qui te regarde, hein ? Ça se voit. »",
+        "effets": {
+          "honneur": -2,
+          "prime": 25,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Personne dans la rue, sauf le chien errant qui hurle à la mort. Au matin, c'est le crieur qui le trouvera le premier.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -5,
+          "prime": 100,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Il avait son vieux Colt Navy sous la couverture. Vous tirez presque ensemble : sa balle te traverse la cuisse, la tienne le jette à terre.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -35,
+          "honneur": -3,
+          "prime": 50,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu glisses la main sous sa couverture et en sors un vieux Colt Navy rouillé, trois balles dans le barillet. Il hausse les épaules : « Je les gardais pour les O'Driscoll. Ou pour moi. Je m'étais pas décidé. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il lâche son couteau de l'armée avant même que tu le touches : « Prends-le. Il a rien coupé d'autre que du tabac depuis trente ans. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il se défend avec sa béquille comme avec une baïonnette et t'en plante le bout dans le ventre avant que tu lui arraches son revolver.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te tend son vieux Colt, crosse en avant, comme on remet une arme à un officier : « Garde-le cette nuit. Y a des soirs où je préfère pas l'avoir sous la main. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Le lasso le cueille sur le banc et le jette dans la boue. Il se débat comme un diable, sa béquille battant l'air : « Je suis pas un veau, espèce de... ! »",
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Le nœud coulant se prend dans sa béquille. Il la secoue, se dégage et te lance un regard noir : « Nos cavaliers faisaient ça mieux que toi, et ils avaient faim. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu traînes un infirme dans la boue devant la ville entière. Le pasteur, qui passait, s'arrête net et ferme les yeux pour prier pour toi.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -3,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Ivre, il croit que les Yankees l'ont capturé et entonne « The Bonnie Blue Flag » à pleine voix, prisonnier de la corde, couché dans la boue.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -2
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu lui lies les poignets. Il te laisse faire, l'œil glacé : « Les Yankees m'ont ligoté à Franklin. Ils avaient plus de manières. »",
+        "effets": {
+          "honneur": -2,
+          "prime": 10,
+          "relation": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Il se débat, perd l'équilibre et tombe du banc. Tu le ligotes au sol pendant qu'il te traite de tous les noms qu'on apprend à l'armée.",
+        "effets": {
+          "honneur": -2,
+          "prime": 10,
+          "relation": -4,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Ligoté contre le banc, il finit par s'endormir en ronflant. Le chien errant ronge les cordes jusqu'à l'aube.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "« Tu veux m'empêcher d'aller au Smithfield's, c'est ça ? C'est le pasteur qui t'envoie ? » Il tend lui-même ses poignets, à moitié amusé.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": -1,
+          "etat": "ligote"
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il éclate de rire : « Un duel ? Je tiens à peine debout, fiston. On peut s'asseoir tous les deux et tirer au premier qui tombe du banc. »"
+      },
+      {
+        "texte": "Il se hisse sur sa béquille, soudain grave : « J'ai un vieux Colt et trois balles. Si je gagne, tu me paies à boire. Si je perds, tu me paies l'enterrement. »",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "« Défier un estropié devant toute la ville ? » Les passants murmurent, et le crieur sort son crayon pour prendre des notes.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te regarde longtemps, puis secoue la tête : « Non. T'es pas de ceux qui tirent sur les vieux. Et moi, je suis plus de ceux qui meurent pour rien. »",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing le cueille à la mâchoire. Il tombe du banc, crache un peu de sang et une dent jaunie : « J'en avais plus beaucoup. Merci. »",
+        "effets": {
+          "honneur": -3,
+          "prime": 5,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il bloque ton coup avec sa béquille et t'en donne un sur le tibia : « On a pas perdu la guerre parce qu'on savait pas se battre, petit. »",
+        "effets": {
+          "sante": -5,
+          "honneur": -1,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Le maréchal-ferrant, le colosse de la forge, traverse la rue et t'arrête le bras d'une seule main. Il ne dit rien. Il n'a pas besoin.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Personne pour le défendre, sauf le chien errant, qui te plante les crocs dans le mollet.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -5,
+          "honneur": -3,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Il lève sa béquille et dévie le projectile d'un geste de vieux soldat : « À Franklin, c'était de la mitraille. Faudra faire mieux, fiston. »",
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Touché à l'épaule, il bascule du banc. Il te maudit, toi, puis la guerre, puis Abraham Lincoln, dans cet ordre.",
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Ça tombe à ses pieds. Il regarde {outil}, puis toi : « Si c'est une aumône, t'as une drôle de façon de donner. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Les passants s'écartent en criant. De l'autre côté de la rue, l'adjoint du shérif porte déjà la main à son arme.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il somnolait. Le projectile le réveille en sursaut ; il se met à hurler « LES YANKEES ! LES YANKEES ! » et réveille la moitié de la rue.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "relation": -2
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu le croques sur le banc : le képi, la béquille, la jambe de pantalon épinglée, et ce regard qui fixe quelque chose de très loin. Il jette un œil : « T'as oublié la médaille. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il prend la pose, raide comme un portrait de général : « Fais-moi avec mes deux jambes, tu veux ? Comme en 61, quand on est partis en chantant. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "À la lueur du saloon, tu dessines un vieil homme endormi, le chien errant contre sa jambe valide, une flasque vide à la main.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il garde le dessin longtemps, puis te le rend : « Envoie-le à personne. J'ai plus personne. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il se redresse, ajuste son képi, pose la main sur sa médaille et ne cille pas : « La dernière fois qu'on m'a photographié, j'avais un uniforme neuf et dix-huit ans. On croyait tous qu'on reviendrait. »"
+      },
+      {
+        "texte": "Il rabat sa couverture sur sa jambe manquante : « Pas de photo de ça. Ça, c'est entre moi et le Tennessee. »"
+      },
+      {
+        "texte": "« Prends le chien aussi. » Il attire le chien errant contre lui. « Comme ça, si on me cherche après ma mort, on saura avec qui j'étais. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il lève sa béquille devant l'objectif : « Pas de portrait pour les bandits. Va photographier ta tête sur le panneau. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Une jambe en moins, une barbe jaunie, des mains qui tremblent, sauf quand il roule une cigarette. Sa médaille est ternie, mais son képi est brossé chaque matin."
+      },
+      {
+        "texte": "Il regarde passer les jeunes cow-boys, et tu lis sur son visage quelque chose entre la tendresse et le mépris."
+      },
+      {
+        "texte": "Le crieur passe et laisse tomber une pièce dans son képi sans s'arrêter. Le vieux fait semblant de ne rien voir, mais il cligne des yeux plus que nécessaire."
+      },
+      {
+        "texte": "Chaque fois qu'un cavalier passe au galop, il sursaute, et sa main cherche un fusil qui n'est plus là depuis trente-cinq ans.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Assis seul, il parle à voix basse à des hommes qui ne sont pas là. Tu entends des prénoms, et le mot « Franklin », encore et encore.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu le charges sur ton épaule. Il te tambourine le dos de son poing : « Pose-moi, bon sang ! Je suis pas un sac de grain ! »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il pèse moins que tu ne pensais. Il le sait, et ça le rend furieux : « Ils m'ont pris une jambe, et toi tu me prends ma dignité. Pose-moi ! »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu le portes jusqu'au saloon. Il rit comme un gamin : « La dernière fois qu'on m'a porté, c'était sur une civière, à Franklin ! Celle-là est plus confortable. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu le trouves ivre mort dans la boue devant le Smithfield's et le portes jusqu'à la paille de l'écurie. Le palefrenier hoche la tête, sans un mot.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Il avance au rythme de sa béquille, toc, toc, toc, jusqu'à l'église, où il avale la soupe du pasteur en grommelant contre la tempérance."
+      },
+      {
+        "texte": "Il s'arrête net et se retourne d'un bloc : « Tu me suis depuis le magasin général. À la guerre, on fusillait les espions, tu sais ? »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il clopine jusqu'au cimetière, ôte son képi devant les tombes et parle à voix basse aux morts.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu le suis jusqu'au Smithfield's. Il boit ses pièces de la journée en trois verres, puis rentre en zigzag jusqu'à la paille de l'écurie.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il sent qu'on le suit et presse le pas, autant qu'un homme à une jambe peut le presser, jusqu'à se réfugier sous le porche du bureau du shérif.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il prend {outil}, le soupèse et hoche la tête avec gravité : « J'accepte. Pas par charité, hein. En paiement de 61 à 65. »",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il regarde ton cadeau avec méfiance : « C'est quoi, le piège ? Personne donne rien pour rien. » Puis il le glisse sous sa couverture, vite.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te serre la main un long moment : « T'aurais fait un bon officier. Pas de ceux qui restaient derrière. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« Toi, alors. » Sa voix se casse un peu ; il fait mine de chasser une mouche de son œil.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il est trop ivre pour comprendre. Il te remercie trois fois, appelle le chien « mon lieutenant » et s'endort en serrant ton cadeau contre lui.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "aumone_veteran": [
+      {
+        "texte": "Tu laisses tomber une pièce dans son képi. Il ne dit pas merci ; il porte deux doigts à la visière : « Contribution enregistrée, soldat. »",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il regarde ta pièce, puis toi : « Je mendie pas. J'encaisse une pension que personne m'a jamais versée. » Il l'empoche quand même.",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu lui tends un billet de cinq dollars. Il le fixe longtemps sans y toucher : « C'est trop. » Puis, plus bas : « Merci, l'ami. Vraiment. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -5,
+          "honneur": 1,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Il repousse ta pièce du bout de sa béquille : « Garde ton argent sale. J'ai perdu une jambe, pas mon honneur. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Ça ira tout droit au Smithfield's, je te préviens. » Il sourit pour la première fois. « Au moins, je te mens pas. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il refuse ta pièce : « Pas de toi. Toi, tu me paies en conversation. » Il désigne le chien : « Achète-lui un os, plutôt. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "ecouter_recit_guerre": [
+      {
+        "texte": "« Franklin, novembre 64. Deux miles de plaine à découvert, en plein jour, face aux Yankees retranchés. Hood a dit : chargez. » Il se tait longtemps. « Six généraux morts en cinq heures. Et ma jambe. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Tu veux savoir ce qu'on mangeait ? Du maïs grillé et des rats, les bons jours. Un jour, on a mangé le cheval du colonel. » Il éclate de rire. « Le colonel était encore dessus. Non, je plaisante. Presque. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Le chirurgien avait une scie et une bouteille de whisky. Le whisky, c'était pour lui. » Il frotte son moignon. « J'avais dix-neuf ans. J'ai appelé ma mère, comme tout le monde. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "La guerre lui revient en désordre : les feux de camp, les chansons, un ami nommé Josiah qui jouait de l'harmonica et qui est resté à Shiloh. Il finit en pleurant, sans honte.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« Je raconte pas ma guerre aux voleurs de poules. » Il se détourne. « Va écouter le pianiste du Keane. Lui, au moins, il joue faux gratuitement. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il sort une photographie jaunie : six jeunes gens en uniforme gris. Il pose le doigt sur chacun : « Mort. Mort. Mort. Pendu après la guerre. Mort. » Puis sur le dernier : « Moi. Le moins chanceux. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« On t'a dit qu'on se battait pour l'honneur ? À moi aussi, on l'a dit. » Il hausse les épaules. « Je sais plus pour quoi on se battait. Je sais juste avec qui. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "payer_verre_veteran": [
+      {
+        "texte": "Vous traversez la rue jusqu'au Smithfield's. Il vide son whisky frelaté d'un trait et grimace : « Ça a le goût de la poudre noire. Exactement comme je l'aime. »",
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il commande « un whisky et un verre vide ». Il remplit le second et le pose en face de lui, pour quelqu'un qui ne viendra pas.",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Au saloon de Keane, le barman fronce le nez en voyant entrer le mendiant, mais il le sert quand tu poses ta pièce. Le vieux lève son verre : « Aux absents. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Trois verres plus tard, il te raconte la vraie histoire de sa médaille : elle n'est pas à lui. Elle était à son petit frère.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Il est déjà bien entamé : « Un dernier, alors. Le dernier, c'est toujours celui qui compte. » Il le boit lentement, les yeux fermés.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il repousse le verre : « Paie-moi plutôt un bol de soupe. Le pasteur a raison, des fois. Ne lui répète pas. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      }
+    ],
+    "salut_militaire_veteran": [
+      {
+        "texte": "Tu portes la main à ton chapeau, raide. Le vieux se fige, se hisse sur sa béquille et te rend un salut impeccable : « Repos, soldat. »",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Ses yeux s'embuent. Il te rend ton salut et murmure : « Ça faisait trente ans. »",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« Te moque pas de ça. » Sa voix est glacée. « Des hommes sont morts pour ce geste-là. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il se lève, te rend ton salut et lance au crieur : « Petit ! Note ça dans ton journal : le sergent Holloway passe en revue les troupes de Valentine ! »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Des passants s'arrêtent. Sur le seuil de l'armurerie, l'armurier porte lui aussi deux doigts à son front. Pour un instant, la rue principale a l'air d'un champ de parade.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "offrir_jambe_de_bois": [
+      {
+        "texte": "Tu proposes de payer le croque-mort pour tailler le bois et le maréchal-ferrant pour le cercler de fer. Il te dévisage, méfiant : « Pourquoi tu ferais ça ? » Tu ne réponds pas. Il détourne les yeux : « D'accord. »",
+        "effets": {
+          "argent": -15,
+          "honneur": 2,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Trois jours plus tard, il descend la rue principale sur une jambe de chêne cerclée de fer, un peu raide, très fier. Il s'arrête devant toi : « Je marche, soldat. Je marche. »",
+        "effets": {
+          "argent": -15,
+          "honneur": 2,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Il ricane : « Une jambe de bois, offerte par un bandit ? Pour que je puisse courir te dénoncer ? » Il accepte quand même, du bout des lèvres.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -15,
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il est ivre et refuse : « J'en veux pas. Si je marche, plus personne me donnera rien. » Puis, plus bas : « Reviens demain. Quand j'aurai pas bu. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il pleure, ce vieux dur à cuire, sans même essayer de le cacher : « Ma mère disait que les anges existaient. Elle m'avait pas dit qu'ils portaient un revolver. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -15,
+          "honneur": 2,
+          "relation": 3
+        }
+      }
+    ],
+    "chanter_avec_veteran": [
+      {
+        "texte": "Tu entonnes « Lorena ». Il te suit d'une voix rauque et juste, les yeux fermés ; à la fin, le chien errant hurle avec vous.",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il chante faux, très fort, en battant la mesure avec sa béquille sur le banc. Sur sa caisse, le crieur se bouche les oreilles.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Un couple de passants s'arrête et jette une pièce dans le képi. Le vieux te fait un clin d'œil : « On devrait faire ça tous les jours. Moitié-moitié. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Au Smithfield's, vous chantez « When Johnny Comes Marching Home ». À la fin, trois ivrognes pleurent dans leur bière, et même le barman bourru renifle.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il refuse : « Ces chansons-là, on les chantait entre hommes de parole. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "questionner_temoin_rue": [
+      {
+        "texte": "« J'ai que ça à faire, regarder. » Il pointe sa béquille vers le cheval attaché : « Son cavalier boit au Smithfield's et regarde la prison par la fenêtre. Un O'Driscoll, j'en mettrais ma jambe à couper. L'autre. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Une pièce, et je te dis tout. » Tu paies. Il te fait un rapport d'éclaireur : l'adjoint trois fois au saloon, le caissier qui a changé deux fois de chemin pour rentrer, un inconnu qui a demandé l'heure du train de jeudi.",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« La nuit, les rats sortent. Deux cavaliers sont passés derrière le bureau du shérif, sans lanterne, au pas. Des éclaireurs. J'en ai été un. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te regarde par en dessous : « Qui est passé ? L'adjoint du shérif, avec un papier où y a ta tête. Il demandait si on t'avait vu. J'ai dit non. » Il tend son képi.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Pour toi, gratis. » Il baisse la voix : « Le chasseur de primes et le balafré du Smithfield's se sont croisés ce matin devant l'abreuvoir. Ni l'un ni l'autre a bronché. Ça finira en enterrement, crois-moi. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ]
+  }
+}

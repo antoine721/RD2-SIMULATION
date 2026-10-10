@@ -1,0 +1,273 @@
+{
+  "id": "forge",
+  "description": "Un hangar de briques noircies ouvert sur la rue, où ronfle un foyer de braises rouges. Une enclume énorme trône au centre sous des rangées de fers à cheval pendus aux poutres, et un soufflet de cuir rapiécé respire dans un coin.",
+  "repliques": [
+    "*Clang ! Clang !*",
+    "Le soufflet halète et les braises virent à l'orange.",
+    "Un fer trempé siffle dans le seau d'eau."
+  ],
+  "reactions": {
+    "entrer": [
+      {
+        "texte": "La chaleur te gifle dès le seuil. Le marteau s'arrête une seconde ; le maréchal-ferrant te jauge du regard, puis reprend sa cadence.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Les braises couvent sous la cendre et projettent des ombres rouges sur les murs. Au fond, sur un lit de camp, le forgeron ronfle comme un soufflet.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Ça sent le fer chaud, la corne brûlée et le crottin. Un cheval attend, une patte levée, pendant que les clous refroidissent dans un seau."
+      },
+      {
+        "texte": "Au mur, près de la liste des tarifs, est cloué un avis de recherche dont le dos sert de carnet de commandes. Ton visage a des chiffres sur le front.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Le foyer rougeoie, le soufflet halète, et le marteau tombe en cadence : quatre coups, une pause, quatre coups. On dirait le cœur de Valentine.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La porte est fermée par une simple chaîne. Par les fentes des volets, on voit encore palpiter la lueur des braises.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Au-dessus de la porte, un fer à cheval cloué pointes en haut retient la chance. Il est rouillé, mais personne n'oserait y toucher."
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines la gueule rouge du foyer, l'enclume et la silhouette massive du forgeron dans la fumée. Une étincelle vient trouer ta page."
+      },
+      {
+        "texte": "Dans la rue endormie, seule la forge brille encore. Tu dessines ce carré de lumière rouge comme une bouche ouverte sur l'enfer.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu passes une heure à dessiner les fers pendus aux poutres, tous différents, comme une collection de lunes.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "La plaque saisit la forge en plein travail : la gerbe d'étincelles forme une constellation floue autour de l'enclume.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Sans lumière, la plaque ne garde qu'une tache rouge et une ombre de géant. C'est presque mieux.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le maréchal-ferrant sort se planter devant l'objectif, bras croisés, comme pour dire que c'est sa forge et qu'elle mérite d'être prise au sérieux."
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} par la porte ouverte ; ça finit dans les braises, qui crachent une gerbe d'étincelles. Le forgeron le repêche avec sa pince et le pose, noirci, devant toi."
+      },
+      {
+        "texte": "Tu lances {outil}, qui rebondit sur l'enclume avec un tintement clair. Tous les fers suspendus se mettent à vibrer comme des cloches."
+      },
+      {
+        "texte": "Tu lances {outil} dans la forge endormie. Il renverse le bidon de pétrole posé près du foyer ; une flamme jaillit et la charpente s'embrase en quelques minutes.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 50,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Ton projectile brise un carreau de la fenêtre. Le grognement qui sort de la forge te fait reculer d'un pas.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle ricoche sur l'enclume avec un hurlement de métal et va se ficher dans une poutre. Le maréchal-ferrant sort, le marteau à la main.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu perces le soufflet de cuir. Désormais il souffle en sifflant, comme un vieil asthmatique, et le forgeron sait qui remercier.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Ta balle fait éclater la lampe à pétrole accrochée au-dessus de l'établi. Le pétrole enflammé coule sur les copeaux ; la forge brûle jusqu'à l'aube.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 50,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Le coup de feu fait cabrer le cheval qu'on était en train de ferrer. Il arrache sa longe et galope dans la rue principale ; on crie au shérif.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      }
+    ],
+    "actionner_le_soufflet": [
+      {
+        "texte": "Tu pompes le soufflet ; les braises passent du rouge à l'orange, puis au blanc. Le maréchal-ferrant hoche la tête : bon rythme."
+      },
+      {
+        "texte": "Tu pompes trop fort : une gerbe d'étincelles te saute au visage et te roussit les sourcils.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu ranimes les braises endormies. La forge s'illumine d'un coup, et le forgeron se dresse sur son lit de camp, prêt à cogner.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu tiens le soufflet une heure pendant que le forgeron martèle. À la fin, il pose une pièce sur l'enclume, sans un mot : elle est pour toi.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 1
+        }
+      }
+    ],
+    "battre_le_fer": [
+      {
+        "texte": "Tu saisis le marteau, plus lourd que prévu. Le premier coup rate le fer et fait sonner l'enclume comme la cloche de l'église."
+      },
+      {
+        "texte": "Tu frappes le fer rouge jusqu'à ce qu'il ressemble vaguement à un fer à cheval. Le forgeron le ramasse, l'examine, et le jette dans le tas de ferraille."
+      },
+      {
+        "texte": "Une écaille brûlante saute dans ta chemise. Tu lâches le marteau, qui manque ton pied de peu.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Le vacarme de l'enclume en pleine nuit réveille la moitié de la rue. Des volets claquent ; quelqu'un te traite de fou depuis la pension.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "À force de patience, tu forges un clou presque parfait. Le maréchal-ferrant le glisse dans sa poche, et ça vaut tous les compliments.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "cauteriser_ses_plaies": [
+      {
+        "texte": "Tu chauffes une lame dans les braises jusqu'à ce qu'elle rougisse, serres les dents et l'appliques sur ta plaie. L'odeur de chair brûlée te soulève le cœur, mais le sang s'arrête.",
+        "effets": {
+          "sante": 15
+        }
+      },
+      {
+        "texte": "Tu tiens le fer trop longtemps. La plaie est fermée, mais la brûlure te fera souffrir pendant des jours.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Seul à la lueur des braises, tu mords ta ceinture et appliques le fer. Tu t'évanouis une seconde ; quand tu rouvres les yeux, le saignement a cessé.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Le maréchal-ferrant te prend le fer des mains, te plaque d'une main contre l'établi et fait le travail en un seul geste précis. Il a déjà fait ça.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 20
+        }
+      },
+      {
+        "texte": "Pas de docteur pour toi : trop de questions. Tu cautérises la plaie au fer rouge, en silence. Le forgeron regarde ailleurs.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": 10
+        }
+      }
+    ],
+    "se_rechauffer_aux_braises": [
+      {
+        "texte": "Tu tends tes mains gelées vers le foyer. La chaleur remonte dans tes doigts et, pour la première fois depuis des jours, tu cesses de trembler.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu t'approches trop près ; une braise éclate et brûle le bout de ta botte.",
+        "effets": {
+          "sante": -2
+        }
+      },
+      {
+        "texte": "Tu fais sécher tes vêtements trempés près du foyer. Ils fument comme une cheminée et sentiront la corne brûlée pendant une semaine.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Il fait déjà une chaleur d'enfer dans la forge. En dix secondes, tu es en nage ; l'idée était mauvaise.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -1
+        }
+      }
+    ]
+  }
+}

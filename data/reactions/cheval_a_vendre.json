@@ -1,0 +1,808 @@
+{
+  "id": "cheval_a_vendre",
+  "description": "Un Morgan alezan brûlé, couleur de bourbon, à la liste blanche et aux jambes fines, enfermé dans le dernier box de l'écurie. Encolure puissante, œil vif et inquiet ; une ardoise clouée à sa porte annonce : « MORGAN — 60 $ — À DRESSER ».",
+  "personnalite": "Nerveux, fier et rancunier : son ancien maître, à Strawberry, le battait. Il rue, mord et désarçonne tous ceux qui le montent, et il a envoyé le vacher dans la boue devant tout Valentine. Mais il a du cœur à revendre : une main patiente, une voix calme et quelques pommes peuvent en faire le meilleur cheval de la région. Le palefrenier l'appelle Bourbon et refuse de le vendre à un homme brutal.",
+  "repliques": [
+    "*frappe la cloison de son box à grands coups de sabot*",
+    "*passe la tête par-dessus la porte et hennit vers la rue*",
+    "*couche les oreilles dès qu'un inconnu approche*",
+    "*tourne en rond dans le paddock en lançant des ruades dans le vide*"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 5,
+      "lieu": "ecurie",
+      "activite": "somnole debout dans le dernier box"
+    },
+    {
+      "de": 5,
+      "a": 6,
+      "lieu": "berge",
+      "activite": "boit au ruisseau avec les chevaux en pension, en tête de file"
+    },
+    {
+      "de": 6,
+      "a": 15,
+      "lieu": "ecurie",
+      "activite": "tourne en rond dans son box en guettant les visiteurs"
+    },
+    {
+      "de": 15,
+      "a": 18,
+      "lieu": "enclos",
+      "activite": "travaille à la longe avec le palefrenier, entre deux ruades, loin du taureau"
+    },
+    {
+      "de": 18,
+      "a": 24,
+      "lieu": "ecurie",
+      "activite": "mange son foin et frappe la cloison de son box"
+    }
+  ],
+  "reactions": {
+    "acheter": [
+      {
+        "texte": "Tu comptes soixante dollars dans la main de {outil}. Au fond du box, le Morgan couche les oreilles : il vient de changer de maître et ne sait pas encore s'il doit s'en réjouir.",
+        "effets": {
+          "argent": -60
+        }
+      },
+      {
+        "texte": "Le Morgan tend le cou vers toi pendant que tu règles {outil} : il t'avait déjà choisi. Cinquante dollars, et un licol neuf offert pour la peine.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -50,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Avant de prendre ton argent, {outil} te dévisage longtemps. On te fait payer soixante-quinze dollars, « le prix pour ceux qui cravachent ».",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -75
+        }
+      },
+      {
+        "texte": "Marché conclu à la lueur d'une lanterne, dans l'odeur du foin. Le Morgan, réveillé en sursaut, salue son nouveau maître d'un coup de sabot dans la porte du box.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -60
+        }
+      },
+      {
+        "texte": "Tu paies le prix fort, sans discuter. Personne ne pose de question sur ton visage, mais ce visage a coûté vingt dollars de plus.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -80
+        }
+      },
+      {
+        "texte": "On te fait un prix honnête : « Paraît que t'es un homme qui traite bien ses bêtes. » Le Morgan est à toi pour cinquante-cinq dollars.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -55,
+          "relation": 1
+        }
+      }
+    ],
+    "caresser": [
+      {
+        "texte": "Tu tends la main ; il la flaire, souffle, puis tente de te mordre les doigts. Tu les retires de justesse. Le palefrenier, au fond : « Il dit bonjour. »"
+      },
+      {
+        "texte": "Il baisse la tête et te laisse lui gratter le front, sous la mèche. Ses yeux se ferment à demi. Le palefrenier n'en revient pas.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il se jette contre le fond de son box dès que ta main approche, les naseaux dilatés, l'œil fou.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Dans le noir, il ne voit pas ta main venir. Sa peau frissonne, il renâcle… puis se laisse faire, une seconde, deux secondes. Un début.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu le caresses par-dessus la porte du box. Il supporte trois secondes, puis secoue la tête et va bouder dans un coin. Trois secondes, c'est un record, assure le palefrenier.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "brosser": [
+      {
+        "texte": "Au premier passage de {outil}, il se tortille comme une anguille. Tu persévères ; au bout d'un quart d'heure, il te laisse brosser l'encolure, et seulement elle.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il t'envoie un coup de croupe contre la cloison, et {outil} vole dans le foin. Pas aujourd'hui.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Il se laisse brosser des oreilles aux sabots, et sa robe brille comme du bourbon dans un verre. Le palefrenier sourit pour la première fois de la semaine.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Sous le soleil du paddock, tu le brosses pendant qu'il mâchonne une touffe de foin. Le vacher, de loin, n'en croit pas ses yeux.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "nourrir": [
+      {
+        "texte": "Il hume {outil} longuement, te regarde, puis l'arrache de ta paume et recule au fond du box pour la croquer en paix.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il vient chercher sa pomme jusque dans ta poche et te souffle dans le cou. Un Morgan conquis par le ventre, comme les hommes.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il ignore ta main tendue. Tu poses la pomme sur le rebord du box et t'éloignes : il ne la mange qu'une fois que tu as tourné le dos.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu lui glisses une pomme dans le noir. Il la croque bruyamment, puis frappe la porte du sabot pour en réclamer une autre.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "monter_a_cheval": [
+      {
+        "texte": "Le Morgan te laisse passer une jambe par-dessus, puis explose : trois ruades, une pirouette, et tu atterris dans le crottin. Le palefrenier ne lève même pas les yeux : « Huit secondes. Le vacher en avait tenu six. »",
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Il frémit sous ton poids mais ne rue pas. Vous faites le tour du box au pas, et le palefrenier, appuyé à la porte, mâchonne sa paille en silence. Chez lui, c'est une ovation.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "À peine en selle, il se jette contre la cloison du box pour te broyer la jambe, puis te désarçonne par-dessus la porte.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -20
+        }
+      },
+      {
+        "texte": "Monter un cheval pas dressé, de nuit, dans un box sans lumière : le Morgan te projette contre le râtelier, et une lanterne s'allume au grenier. « Qui va là ?! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -15
+        }
+      },
+      {
+        "texte": "Le palefrenier attrape la bride avant que tu sois en selle : « Descends de là. Il est pas à toi, et je suis pas sûr qu'il le sera un jour. »",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Dans le paddock, devant une poignée de badauds, il rue, tourne, se cabre… et tu tiens. Une minute entière. Le vacher lance son chapeau en l'air.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu sautes sur son dos, à cru, pour fuir. Mauvaise idée : il file droit vers le ruisseau et pile net au bord. Toi, tu continues tout seul.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      }
+    ],
+    "dresser": [
+      {
+        "texte": "Tu le fais travailler à la longe dans l'enclos, des heures durant : au pas, au trot, au pas. Au coucher du soleil, il accepte la couverture sur son dos sans ruer. Une victoire.",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu montes, il rue ; tu remontes, il rue encore. À la cinquième chute, tu as mal partout, mais il s'arrête enfin, couvert d'écume, et souffle en te regardant.",
+        "effets": {
+          "relation": 2,
+          "sante": -15
+        }
+      },
+      {
+        "texte": "Il ne lutte presque plus. Une ruade pour l'honneur, puis il part au petit galop autour de l'enclos, l'encolure arrondie. Le palefrenier ôte son chapeau : « Il est à toi, ce cheval. Que tu l'achètes ou non. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Il se cabre si haut qu'il manque de se renverser sur toi. Tu sautes juste à temps ; il faudra tout reprendre depuis le début, avec plus de patience.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -20,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Dresser dans le noir, c'est se casser le cou. Tu passes la nuit dans l'enclos à lui parler, sans le monter. À l'aube, il vient de lui-même renifler ta main.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu sors une cravache. Le palefrenier te l'arrache des mains et la brise sur son genou : « Pas ici. Pas lui. Plus jamais lui. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Un Morgan alezan brûlé, la liste blanche jusqu'aux naseaux, les jambes fines et nerveuses. Une belle bête, qui tourne dans son box comme un lion en cage."
+      },
+      {
+        "texte": "Sur son épaule, de vieilles traces de coups, presque effacées. Le palefrenier, derrière toi : « Son ancien maître, à Strawberry. Je l'ai racheté pour que ça cesse. »"
+      },
+      {
+        "texte": "Il dort debout, mais ses sabots restent plantés sur un coin de paille plus épaisse qu'ailleurs, comme s'il gardait quelque chose. Un éclat de fer-blanc y brille sous la lanterne.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Dans l'enclos, il trotte avec une élégance de cheval de parade, jusqu'à ce qu'un chien aboie : alors il se cabre et frappe l'air.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il a les oreilles tournées vers toi, et rien que vers toi. C'est la première fois qu'il regarde un homme sans méfiance.",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu le suis le long de la clôture. Il accélère, ralentit, s'arrête net et te regarde : c'est lui qui décide du rythme."
+      },
+      {
+        "texte": "Il vient à la porte de son box et te suit de l'autre côté de la cloison, pas à pas, tête contre tête.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le palefrenier le mène boire au ruisseau, et tu suis : le Morgan marche fier, en tête de file, devant les vieux chevaux de pension.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il se retourne et te charge, oreilles plaquées, jusqu'à la barrière. Le message est clair.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Tu le frappes. Il hennit de rage, se cabre et te répond d'un coup de sabot dans l'épaule. Ce cheval-là a déjà été battu ; il ne se laissera plus faire.",
+        "effets": {
+          "sante": -15,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Le palefrenier jaillit de nulle part, t'empoigne le bras et te plaque contre la cloison : « Personne lève la main sur lui. Personne. Dehors ! »",
+        "effets": {
+          "relation": -3,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il se fige, comme foudroyé. Tout le travail des derniers jours vient de s'effondrer : il recule au fond du box et ne te regarde plus.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -4,
+          "honneur": -1,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Personne ne t'a vu. Mais au matin, le Morgan ne laisse plus personne l'approcher, et le palefrenier cherche le coupable une fourche à la main.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -3,
+          "honneur": -1,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu lèves {outil} sur le Morgan. Il défonce la porte de son box d'un coup de poitrail et s'enfuit dans la rue principale, au milieu des cris.",
+        "effets": {
+          "etat": "en_fuite",
+          "honneur": -2,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Le coup l'atteint à l'encolure. Il s'écroule dans la paille en hennissant, et le palefrenier se jette sur toi en hurlant comme un fou.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -3,
+          "prime": 15,
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Il te voit venir et frappe le premier : ses dents se referment sur ton bras avant que {outil} ne le touche.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -20
+        }
+      },
+      {
+        "texte": "Au matin, le palefrenier découvre son Morgan blessé dans le box. Il ne dit rien. Il charge sa vieille carabine et commence à poser des questions dans toute la ville.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -3,
+          "prime": 10
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Le Morgan s'effondre dans son box. Le palefrenier sort de la sellerie, voit le corps, et pousse un cri que personne à Valentine ne lui connaissait.",
+        "effets": {
+          "etat": "mort",
+          "honneur": -4,
+          "prime": 25
+        }
+      },
+      {
+        "texte": "Ta balle l'effleure à l'encolure. Fou de terreur, il fracasse la porte du box et s'enfuit au galop vers les collines, crinière au vent.",
+        "effets": {
+          "etat": "en_fuite",
+          "honneur": -2,
+          "prime": 15
+        }
+      },
+      {
+        "texte": "Coup de feu dans l'écurie en plein jour : les chevaux hurlent, le palefrenier décroche sa carabine, l'adjoint accourt. Le Morgan, touché à la cuisse, boite jusqu'au fond de son box.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -3,
+          "prime": 20
+        }
+      },
+      {
+        "texte": "Un éclair dans le noir de l'écurie. Le Morgan tombe sans un bruit. Au grenier, le palefrenier se réveille ; il ne dormira plus jamais vraiment.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "mort",
+          "honneur": -4,
+          "prime": 25
+        }
+      },
+      {
+        "texte": "Le Morgan charge au moment où tu tires. La balle part dans le plafond, et ses sabots te passent sur le corps.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -30
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Ton lancer atteint le Morgan au flanc. Il explose en ruades contre les cloisons, et toute l'écurie s'affole avec lui.",
+        "effets": {
+          "relation": -2,
+          "honneur": -1,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il esquive {outil} d'un écart et te fixe par-dessus la porte du box, l'œil mauvais. Il s'en souviendra.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il croit que tu joues. Il ramasse {outil} entre ses dents, le secoue et le jette par-dessus la porte du box, très fier de lui.",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Le palefrenier a vu ton geste : « Encore une fois, et c'est toi que je lance. Dans le fumier. » Le Morgan, touché à l'épaule, boite jusqu'au fond de son box.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "relation": -3,
+          "honneur": -1
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Ta boucle se referme sur son encolure. Il se cabre, tire, et te voilà traîné à plat ventre dans l'enclos. Le palefrenier compte : « Un… deux… trois… lâche ! »",
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Tu le prends au lasso comme un vrai vaquero. Il tire, tu tiens ; il tire, tu tiens. Au bout de dix minutes, il s'arrête et te fixe, haletant, impressionné malgré lui.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il se laisse passer {outil} autour du cou et te suit comme un chien. Le vacher, accoudé à la barrière, en reste bouche bée.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il casse la corde d'un coup de tête et te charge. Tu sautes la barrière de justesse.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      }
+    ],
+    "atteler": [
+      {
+        "texte": "Un Morgan pas dressé, attelé à {outil} ? Il démolit un brancard au premier pas et part au galop avec la moitié du harnais.",
+        "effets": {
+          "relation": -1,
+          "sante": -5
+        }
+      },
+      {
+        "texte": "À ta grande surprise, il accepte le collier. Il tire {outil} sur vingt mètres, nerveux mais obéissant, puis s'arrête et refuse d'aller plus loin.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le palefrenier accourt, horrifié : « T'es fou ?! C'est un cheval de selle, pas une mule de chariot ! » Il détache tout lui-même en marmonnant.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il se cabre dans les traits et retombe sur {outil}, cassant une roue. Ça va te coûter cher.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "argent": -10,
+          "sante": -5
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Il ne tient pas en place une seconde. Ton dessin dans {outil} est une tornade de crinière et de sabots, mais on reconnaît le Morgan à son regard."
+      },
+      {
+        "texte": "Il s'immobilise, le cou tendu vers toi, comme s'il voulait voir le crayon. Le meilleur croquis de ton carnet.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu le dessines dans l'enclos, tête haute, robe brillante sous le soleil. Le palefrenier jette un œil par-dessus ton épaule : « La croupe est plus large. Mais c'est bien. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "À la lumière d'une lanterne, tu dessines son œil, seulement son œil, inquiet et brillant. Ça suffit à tout dire.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Le flash le fait exploser en ruades. Sur la plaque, il n'y a qu'un nuage de poussière et un sabot."
+      },
+      {
+        "texte": "Dans l'enclos, en pleine lumière, il se fige sans raison, superbe. La photographie est parfaite ; le palefrenier t'en réclame un tirage.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le magnésium illumine le box. Sur la plaque, deux yeux affolés et une porte qui vole en éclats.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il se laisse photographier sans broncher, la tête posée sur la porte du box. Le palefrenier jure qu'il n'a jamais vu ça.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "calmer_cheval": [
+      {
+        "texte": "Tu lui parles à voix basse, sans le regarder dans les yeux, comme le fait le palefrenier. Peu à peu, ses oreilles cessent de tourner dans tous les sens.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il frappe la cloison, renâcle, mord le bois. Tu restes là une heure, assis sur un seau, à lui parler de la pluie et des collines. Il finit par se taire.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": 2,
+          "etat": "normal"
+        }
+      },
+      {
+        "texte": "Ta voix suffit : il cesse de tourner, vient vers toi et pose ses naseaux dans ta main.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Un orage gronde sur les collines et le Morgan panique. Tu entres dans son box, dans le noir, et lui parles jusqu'à ce que le tonnerre s'éloigne.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Lucifer, le taureau, mugit dans l'enclos voisin, et le Morgan s'affole. Tu le calmes d'une main sur l'encolure et d'une vieille chanson.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "faire_boire_cheval": [
+      {
+        "texte": "Tu lui apportes un seau d'eau fraîche du puits. Il le renverse d'un coup de nez, puis boit ce qui reste en te regardant de travers.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il boit tranquillement pendant que tu tiens le seau, puis pose son menton mouillé sur ton épaule.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu le mènes au ruisseau sous la lune. Il boit à côté de toi, calme pour une fois, comme si la nuit l'apaisait.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il attend que tu sois sorti du box pour toucher à l'eau. Fier jusqu'au bout.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "examiner_dents": [
+      {
+        "texte": "Tu lui soulèves la lèvre. Il tente de te mordre, évidemment, mais tu as le temps de voir : sept ans, peut-être huit. Des dents saines. Le palefrenier n'a pas menti."
+      },
+      {
+        "texte": "Il serre les mâchoires comme un coffre-fort. Le palefrenier rigole : « Sept ans. Je te le dis, ça t'évitera de perdre un doigt. »"
+      },
+      {
+        "texte": "Il te laisse ouvrir sa bouche comme un vieux cheval de labour. Sept ans, des dents parfaites et une haleine de pomme.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tes doigts approchent à peine que ses dents claquent et te pincent le pouce. Tu ne sauras pas son âge aujourd'hui.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "« Tu cherches quoi ? Une raison de payer moins ? » Le palefrenier se plante derrière toi, bras croisés, pendant que tu examines les dents. Sept ans. Pas un dollar de moins.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "marchander_cheval": [
+      {
+        "texte": "Tu proposes cinquante dollars. Le palefrenier crache sa chique : « Soixante. C'est un Morgan, pas une mule. » Il ne bougera pas d'un cent."
+      },
+      {
+        "texte": "Tu fais remarquer qu'il n'est pas dressé. Le palefrenier réfléchit en mâchonnant : « Cinquante-cinq. Mais si tu le revends à une brute, je te retrouve. »"
+      },
+      {
+        "texte": "Il t'arrête d'un geste : « Cinquante. Et je te donne la selle. Je préfère le savoir avec toi qu'avec un inconnu. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Plus tu marchandes, plus le prix monte : « Soixante-dix. Quatre-vingts si tu continues. Ce cheval-là a assez souffert sous des types comme toi. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Le palefrenier tend la main avant la fin de ta phrase : « Cinquante-cinq. Paraît que t'es un homme bien. Regarde-le : pour une fois, il couche pas les oreilles. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Marchander à cette heure ? Le palefrenier bâille : « Soixante, et va te coucher. » Le Morgan, réveillé, approuve d'un coup de sabot dans la cloison.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ]
+  }
+}

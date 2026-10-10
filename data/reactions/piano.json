@@ -1,0 +1,344 @@
+{
+  "id": "piano",
+  "description": "Un piano droit Kimball venu de Chicago par le train, au vernis craquelé et aux touches d'ivoire jaunies, dont deux manquent. Trois vieux impacts de balles constellent sa caisse, des ronds de verres tachent le couvercle, et un écriteau cloué au-dessus prie de ne pas tirer sur le pianiste.",
+  "repliques": [
+    "Le piano grince.",
+    "Un do aigu reste enfoncé, puis remonte tout seul.",
+    "*une corde désaccordée vibre encore longtemps*"
+  ],
+  "reactions": {
+    "jouer_instrument": [
+      {
+        "texte": "Tu t'assois sur le tabouret branlant et plaques un accord. Il en sort un bruit de casserole et de regret ; le si bémol, lui, ne sort pas du tout."
+      },
+      {
+        "texte": "Tu tentes « Oh! Susanna » d'un seul doigt. Deux vachers reprennent le refrain par pitié, puis par habitude, et finissent par taper du pied."
+      },
+      {
+        "texte": "Tu joues une valse approximative. Un client de l'étage tape du talon sur le plancher, le chat roux file sous l'escalier, et le pianiste, ivre, t'applaudit en pleurant.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Dans la salle presque vide, tu joues lentement, et le vieux piano finit par te répondre : même faux, il a une voix. Le barman s'arrête d'essuyer son verre pour écouter.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu joues un vieil air de ta jeunesse. La salle se tait, quelqu'un fredonne, et en te levant tu trouves deux pièces posées sur le couvercle.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 2
+        }
+      },
+      {
+        "texte": "Dès les premières notes, toutes les têtes se tournent vers le piano… puis vers ton visage. Un client plie son journal, regarde l'avis de recherche en première page et sort sans finir son verre.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "detruire": [
+      {
+        "texte": "Tu arraches le couvercle et défonces la caisse à coups de botte. Le piano meurt dans une cacophonie de cordes qui claquent, et le barman hurle comme si c'était sa mère.",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Tu le renverses de tout ton poids : il s'écrase sur le plancher dans un dernier accord énorme qui résonne jusque dans la rue. Les touches d'ivoire roulent partout comme des dents.",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Tu cognes le bois à coups de poing, mais il résiste : un Kimball de Chicago ne se laisse pas faire. Tu en ressors les phalanges en sang, et le piano à peine rayé.",
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "La salle s'est vidée. Tu fracasses le piano à coups de chaise ; seul le pianiste, ivre, reste là à ramasser les touches une par une en pleurant.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -3,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Le barman sort son fusil à deux coups : « Touche encore à ce piano et c'est toi qu'on accorde ! » Tu finis quand même le travail, sous les huées.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "prime": 15,
+          "honneur": -2,
+          "etat": "detruit"
+        }
+      }
+    ],
+    "faire_sauter": [
+      {
+        "texte": "Tu cales {outil} sous le clavier et tu cours. L'explosion pulvérise le piano et toutes les vitres du saloon ; une pluie de touches d'ivoire retombe jusque dans la rue.",
+        "effets": {
+          "prime": 50,
+          "honneur": -3,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "La mèche crépite, la salle se vide en hurlant. BOUM. Du piano, il ne reste qu'un cadre de fonte tordu qui vibre encore d'une dernière note, et des cordes qui pendent du plafond comme des lianes.",
+        "effets": {
+          "prime": 50,
+          "honneur": -3,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Tu allumes la mèche, mais le pianiste se jette dessus, l'arrache et la lance par la fenêtre. La déflagration ne secoue que l'abreuvoir de la rue. Il serre son piano dans ses bras, tremblant.",
+        "effets": {
+          "prime": 25,
+          "honneur": -2,
+          "etat": "normal"
+        }
+      },
+      {
+        "texte": "L'explosion réveille tout Valentine. Le piano part en morceaux, le lustre s'effondre, et toi, trop près, tu es projeté contre le comptoir. Au loin, l'adjoint du shérif crie déjà.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -25,
+          "prime": 75,
+          "honneur": -4,
+          "etat": "detruit"
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle traverse la caisse avec un BOÂNG lugubre et va rejoindre les trois vieux impacts. Le piano compte maintenant une cicatrice de plus et une note de moins.",
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu vises le clavier : la balle fait sauter un do d'ivoire qui roule jusqu'aux bottes du joueur de poker. Le pianiste te regarde, puis l'écriteau : « Le piano non plus, s'il vous plaît. »",
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "La détonation coupe net la musique. Le pianiste plonge sous le clavier, quelqu'un renverse la table de poker, et le barman crie qu'il va chercher Malloy. Le piano, lui, résonne encore.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Deux vachers s'empoignaient près du piano ; ton coup de feu dans la caisse les fige net. Le barman te remercie d'un signe de tête, le pianiste beaucoup moins.",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Tu tires dans le piano pour faire du bruit. C'est réussi : tout le monde te regarde, et plusieurs reconnaissent ton visage de l'affiche. Mauvaise idée.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} sur le piano. Il heurte la caisse avec un « dong » sourd qui réveille toutes les cordes à la fois."
+      },
+      {
+        "texte": "Ton projectile atterrit en plein sur le clavier et déclenche une gamme absurde qui dévale du grave à l'aigu. La salle éclate de rire ; le pianiste, beaucoup moins.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu lances {outil}, qui rebondit sur le couvercle et tombe pile dans le bocal à pourboires. Le pianiste l'examine et le garde : « Un pourboire est un pourboire. »"
+      },
+      {
+        "texte": "Tu lances {outil} vers le piano ; le verre du pianiste se renverse et coule entre les touches. Il le regarde avec une infinie tristesse : « C'était le quatrième. Le meilleur. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Un piano droit Kimball, venu de Chicago par le train. Le vernis est craquelé, deux touches d'ivoire manquent, et des ronds de verres constellent le couvercle comme des taches de lune."
+      },
+      {
+        "texte": "Tu comptes trois impacts de balles dans la caisse, dont un juste sous le clavier. Au-dessus, un écriteau peint à la main : « Prière de ne pas tirer sur le pianiste, il fait de son mieux. »"
+      },
+      {
+        "texte": "À la lueur des lampes, les touches jaunies ressemblent à des dents de cheval. Un verre de whisky tremble sur le couvercle à chaque accord.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Dans la lumière poussiéreuse du matin, tu remarques des initiales gravées au couteau sous le clavier : « J.M. 1887 », et, à côté, une petite croix.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines le vieux piano, ses ronds de verres et ses impacts de balles. Sur le papier, il a l'air presque noble."
+      },
+      {
+        "texte": "Tu recopies l'écriteau au-dessus du piano, mot pour mot. Le pianiste, penché sur ton épaule, te suggère d'ajouter « et il joue faux »."
+      },
+      {
+        "texte": "Tu dessines à la lueur d'une lampe à pétrole : le piano, le verre, la main du pianiste. Ton croquis dans {outil} sent presque le whisky.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Le flash au magnésium blanchit tout le saloon. Sur la plaque, le piano apparaîtra plus beau qu'il ne l'a jamais été, et sans ses fausses notes."
+      },
+      {
+        "texte": "Le pianiste pose fièrement à côté, une main sur le couvercle, comme un chasseur près de son ours. Le barman exige d'être sur la photo, lui aussi."
+      },
+      {
+        "texte": "L'éclair du flash fait sursauter un client, qui renverse sa bière dans le piano. Une corde rend un dernier « ping » et se tait pour de bon.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "accorder_piano": [
+      {
+        "texte": "Tu trouves une clé d'accordage oubliée dans la caisse et resserres les chevilles une à une. Au bout d'une heure, le la sonne presque juste. Le pianiste, ému, te serre la main."
+      },
+      {
+        "texte": "Tu tournes une cheville trop fort : une corde casse avec un claquement de fouet et te cingle la joue. Le piano est maintenant faux d'une façon toute nouvelle.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Impossible d'accorder quoi que ce soit dans ce vacarme. Chaque fois que tu frappes un la pour l'écouter, le joueur de poker crie « Je relance ! ».",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Dans le calme du matin, tu accordes le piano note par note. Le soir venu, le pianiste joue juste pendant trois verres entiers, un record. Le barman t'offre un whisky.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le barman te surveille, méfiant, puis te laisse faire. Quand tu termines, il fait sonner une touche et hoche la tête : « Si tu cherches du travail honnête, il y a des pianos partout dans l'Ouest. »",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "soulever_couvercle_piano": [
+      {
+        "texte": "Entre les marteaux de feutre, tu trouves une flasque d'argent à moitié pleine. Le pianiste te regarde par-dessus son épaule, gêné : « Ma réserve d'urgence. »"
+      },
+      {
+        "texte": "Une vieille balle déformée est coincée entre deux cordes, souvenir d'une bagarre d'il y a dix ans. Tu la fais tomber dans ta paume : elle est encore noire de poudre."
+      },
+      {
+        "texte": "Une lettre jaunie, pliée en quatre, est glissée contre la table d'harmonie. Elle commence par « Mon cher Théophile », vient de La Nouvelle-Orléans et parle d'une dette."
+      },
+      {
+        "texte": "Tu découvres une liasse de billets roulés serrés : les économies du pianiste pour son billet vers le sud. Tu en prends quelques-uns. Personne ne voit rien.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 12,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Une souris jaillit d'entre les cordes et saute à terre. Le gros chat roux surgit de nulle part et la poursuit à travers toute la salle, sous les acclamations.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "pousser_piano_porte": [
+      {
+        "texte": "Tu arc-boutes ton dos contre le piano. Les roulettes grincent, le plancher gémit, et le monstre de bois finit par bloquer la porte battante. Plus personne n'entre, ni ne sort."
+      },
+      {
+        "texte": "Le piano avance d'un pied, puis s'arrête net : une roulette s'est coincée entre deux lattes. Le barman te regarde suer en essuyant son verre : « Il a fallu six hommes pour l'entrer, l'ami. »",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu barricades la porte avec le piano pendant que, dehors, les bottes de l'adjoint martèlent le trottoir. Ça te laisse une minute. Peut-être deux.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu pousses le piano contre la porte battante pour la nuit. Le barman, d'abord furieux, trouve finalement l'idée excellente : « Comme ça, les ivrognes du Smithfield's resteront chez eux. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "graver_initiales_piano": [
+      {
+        "texte": "Tu graves tes initiales avec {outil} dans le vernis, juste sous celles d'un certain « J.M. 1887 ». Te voilà entré dans l'histoire du saloon de Keane."
+      },
+      {
+        "texte": "Le barman te surprend en pleine besogne : « Hé ! Le patron a payé ce piano trois cents dollars ! » Il te fait payer un dollar de dégâts.",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Personne ne te voit. Au matin, le pianiste découvre tes initiales et les caresse du pouce : « Encore un qui voulait qu'on se souvienne de lui. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Au lieu de tes initiales, tu graves avec {outil} : « T. ARCENEAUX, LA NOUVELLE-ORLÉANS ». Le pianiste le découvre et ne dit rien, mais il joue juste toute la soirée.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      }
+    ]
+  }
+}

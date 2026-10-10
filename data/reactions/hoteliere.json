@@ -1,0 +1,1149 @@
+{
+  "id": "hoteliere",
+  "description": "Une veuve sèche et droite comme un piquet, en robe noire boutonnée jusqu'au menton, un camée à la gorge et des lunettes cerclées d'acier au bout du nez. Un trousseau de clés de laiton tinte à sa ceinture ; derrière elle, le portrait sévère de feu M. Ambrose Whitlock surveille le registre.",
+  "personnalite": "Mme Cornelia Whitlock, 53 ans, ancienne institutrice de Boston, veuve depuis la fluxion de poitrine qui a emporté son mari en 1894. Stricte, pointilleuse, à cheval sur le règlement : chambre 1 $, bain 50 cents, pas d'armes dégainées, pas de boue sur le tapis. Cache mal un cœur tendre devant les gens bien élevés. Méprise les ivrognes, la boue et les mouches du boucher d'à côté, qui la courtise à coups de côtelettes et qu'elle fait semblant de ne pas voir. Lit en cachette des romans de Saint Denis et garde le derringer nacré de son mari dans le tiroir du comptoir.",
+  "repliques": [
+    "Les bottes, monsieur. Le paillasson n'est pas là pour décorer.",
+    "Chambre : un dollar. Bain : cinquante cents. Le savon n'est pas à emporter.",
+    "Rengainez cette arme, ou rengainez-vous dehors.",
+    "*astique la sonnette du comptoir avec son mouchoir brodé*",
+    "Ambrose, si tu voyais ce qu'ils font de ton tapis...",
+    "Encore ces mouches ! Ce boucher finira par me coûter ma clientèle.",
+    "Le petit-déjeuner est servi à sept heures. Pas à sept heures cinq.",
+    "Un homme qui ôte son chapeau, voilà qui se fait rare à Valentine.",
+    "*tourne une page du registre en humectant son index*",
+    "On ne crie pas dans l'escalier. L'escalier crie bien assez tout seul."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 6,
+      "lieu": "hotel",
+      "activite": "dort dans sa chambre derrière la réception, le derringer sous l'oreiller"
+    },
+    {
+      "de": 6,
+      "a": 7,
+      "lieu": "hotel",
+      "activite": "fait chauffer l'eau des bains et compte les serviettes"
+    },
+    {
+      "de": 7,
+      "a": 12,
+      "lieu": "hotel",
+      "activite": "sert le petit-déjeuner, tient la réception et inspecte les bottes des clients"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "magasin_general",
+      "activite": "marchande le savon et la lessive avec l'épicier, qui ne cède jamais"
+    },
+    {
+      "de": 13,
+      "a": 17,
+      "lieu": "hotel",
+      "activite": "tient le registre et fait la chasse à la poussière"
+    },
+    {
+      "de": 17,
+      "a": 18,
+      "lieu": "boucherie",
+      "activite": "achète la viande du dîner en se pinçant le nez"
+    },
+    {
+      "de": 18,
+      "a": 19,
+      "lieu": "eglise",
+      "activite": "prie pour feu M. Whitlock et approuve les sermons du pasteur sur la tempérance"
+    },
+    {
+      "de": 19,
+      "a": 22,
+      "lieu": "hotel",
+      "activite": "sert le dîner aux pensionnaires et ferme le registre de la journée"
+    },
+    {
+      "de": 22,
+      "a": 24,
+      "lieu": "hotel",
+      "activite": "verrouille la porte et fait sa dernière ronde, lampe à la main"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Elle lève les yeux du registre sans lever la tête : « Une chambre, un bain, ou une conversation ? Seuls les deux premiers sont tarifés, et seuls les deux premiers m'intéressent. »"
+      },
+      {
+        "texte": "Elle baisse la voix et vérifie que l'escalier est vide : « Un Irlandais m'a demandé la chambre du fond, celle qui donne sur la cour de la prison. Je la lui ai refusée. On ne regarde pas une prison comme on regarde un paysage. »"
+      },
+      {
+        "texte": "« Le boucher d'à côté ? » Elle chasse une mouche imaginaire. « Un brave homme, sans doute. Mais il traîne son tablier sanglant sur mon trottoir et m'apporte des côtelettes comme d'autres apportent des fleurs. »"
+      },
+      {
+        "texte": "Elle apparaît en bonnet de nuit, une lampe à pétrole à la main : « Il est plus de dix heures, monsieur. Les gens convenables dorment, et les autres paient d'avance. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Son visage se détend d'un millimètre : « Vous êtes bien le seul à vous essuyer les pieds, cette semaine. Feu mon mari vous aurait apprécié. » Elle désigne le portrait sévère derrière le comptoir.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle referme le registre d'un coup sec : « Votre visage me dit quelque chose, monsieur, et ce n'est pas un compliment. J'ai des yeux, et le panneau des avis de recherche est juste en face. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle sort deux tasses de thé de sous le comptoir : « Asseyez-vous. Pas sur le fauteuil d'Ambrose, personne ne s'assoit sur le fauteuil d'Ambrose. » Elle te raconte Boston, ses trente écoliers et ses hivers sans boue.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle pose la main sur le tiroir du comptoir sans te quitter des yeux : « Nous n'avons plus rien à nous dire, monsieur. La porte est derrière vous, et elle s'ouvre très bien dans ce sens-là. »",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Elle incline la tête d'exactement un degré : « Monsieur. » C'est tout, mais pour elle, c'est déjà une effusion."
+      },
+      {
+        "texte": "Elle te rend ton salut avec une petite révérence d'institutrice : « Enfin quelqu'un qui a été élevé. Vous êtes de Boston ? Non ? Quel dommage. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Bonsoir, oui, bonsoir. » Elle ne lève pas le nez de sa lampe et compte ses clés une à une, comme chaque soir avant de verrouiller.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Elle répond à ton salut en fixant tes bottes crottées : « Bonjour. Le paillasson est à votre gauche. Il l'a toujours été. »",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "« Ah, c'est vous ! » Elle retire même ses lunettes, ce qu'elle ne fait que pour le pasteur et pour toi. « Votre chambre est faite. J'ai mis les draps qui sentent la lavande. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Elle t'écoute jusqu'au bout, impassible, puis trempe sa plume dans l'encrier : « J'inscris “grossier” à côté de votre nom. Cela vous coûtera un dollar de plus par nuit. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Des insultes ? » Elle soupire. « Feu mon mari en recevait davantage à la sortie de la messe, et il est mort couvert d'honneurs. Vous, je ne sais pas. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle frappe trois coups de sonnette à te rendre sourd : « Ceci est un établissement respectable. Allez donc faire le coq au Smithfield's, on y apprécie ce genre de plumage. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle saisit le balai derrière le comptoir et te chasse jusqu'au trottoir comme un chien qui aurait marché sur le tapis : « Dehors ! Et ne remettez plus les pieds ici ! »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "« Il est tard, et vous êtes ivre ou stupide. » Elle souffle la lampe. « Dans les deux cas, bonne nuit. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu te penches sur le comptoir, l'air mauvais. Elle ne recule pas d'un pouce : « J'ai enterré un mari et dompté trente gamins de Boston, monsieur. Vous ne m'impressionnez pas. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle pince les lèvres et sonne la clochette : un client en caleçon long apparaît en haut de l'escalier qui grince. « Monsieur Pike, soyez témoin : ce monsieur me fait les gros yeux. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Seule dans le hall, la lampe tremble un peu dans sa main. « Prenez la chambre que vous voulez, mais n'approchez pas. » Sa voix, elle, ne tremble pas.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Elle ouvre lentement le tiroir du comptoir. Le petit derringer nacré de feu son mari brille dans la pénombre : « Je vise mal, monsieur, mais de très près. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "« Intimidez tant que vous voudrez. » Elle tourne son registre vers toi. « Le shérif Malloy passe tous les jours à midi, il n'a qu'une porte à franchir. Je pourrais lui montrer votre signature. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Tu sors {outil}. Elle pâlit, mais pointe un doigt sec vers l'écriteau : « PAS D'ARMES DÉGAINÉES. Je ne le répéterai pas. » Elle le répète quand même, plus fort, et une porte s'ouvre à l'étage.",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Elle fixe {outil}, puis toi : « Mon mari a fait la guerre, monsieur. Il disait qu'un homme qui menace une femme n'a jamais vu le feu de près. » Elle ne bouge pas d'un cil.",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Elle recule contre le casier à clés, qui cliquette. « Prenez la caisse ! » Elle jette sur le comptoir une boîte en fer-blanc : huit dollars et un bouton de culotte.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 8,
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Elle ouvre le tiroir et braque à son tour un minuscule derringer nacré : « Le mien est plus petit, mais j'ai moins à perdre que vous. Rangez ça. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "hostile",
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "« Faites donc. » Elle fait tinter la sonnette du comptoir, trois coups longs. Derrière la cloison, au bureau du shérif, une chaise racle le plancher.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10,
+          "relation": -3
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu te jettes sur elle avec {outil}. Elle pare le coup avec le registre, qui en garde une entaille, et hurle à réveiller tout l'étage : « AU SECOURS ! SHÉRIF ! »",
+        "effets": {
+          "etat": "blesse",
+          "prime": 15,
+          "honneur": -3,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Elle s'effondre derrière le comptoir en entraînant la sonnette. Le portrait de M. Whitlock tombe face contre terre, comme s'il refusait de voir ça.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 20,
+          "honneur": -4,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Dans le hall obscur, elle trouve à tâtons le derringer du tiroir et tire au jugé : la balle t'effleure l'épaule. Elle s'enfuit dans l'escalier qui grince en criant au meurtre.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -15,
+          "etat": "en_fuite",
+          "prime": 15,
+          "honneur": -3,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Elle t'attendait : un coup de tisonnier en travers des côtes te coupe le souffle avant que {outil} ne l'atteigne au bras. Elle recule, blessée, sans un cri.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "etat": "blesse",
+          "prime": 15,
+          "honneur": -3,
+          "relation": -4
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La détonation fait trembler les vitres de l'hôtel. Mme Whitlock s'effondre sur son registre ouvert, la plume encore à la main. Dans l'escalier, quelqu'un hurle.",
+        "effets": {
+          "etat": "mort",
+          "prime": 100,
+          "honneur": -5,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "La balle lui traverse l'épaule ; elle tombe assise dans le fauteuil d'Ambrose, ce qui semble la choquer davantage que la blessure. « Pas sur son fauteuil... » souffle-t-elle.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 50,
+          "honneur": -4,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Tu tires avec {outil}, mais elle s'est baissée derrière le comptoir de chêne, qui encaisse. Elle file par la porte de service vers le bureau du shérif, jupes relevées au-dessus de la boue.",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 30,
+          "honneur": -3,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Elle a été plus rapide que prévu : le derringer claque depuis le tiroir entrouvert et te brûle la cuisse. Ta balle, elle, finit dans le portrait de feu son mari.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -25,
+          "etat": "hostile",
+          "prime": 30,
+          "honneur": -3,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Le coup part. Elle s'écroule contre le casier, qui déverse ses clés de laiton sur le plancher. Juste à côté, Malloy a tout entendu.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "mort",
+          "prime": 150,
+          "honneur": -5,
+          "relation": -5
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ta gifle lui fait voler les lunettes. Elle les ramasse, les remet en place et te regarde comme une tache sur le tapis : « Vous venez de perdre votre chambre. Et votre âme, probablement. »",
+        "effets": {
+          "prime": 5,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Elle titube contre le casier à clés et se met à crier au secours d'une voix d'institutrice qui porte jusqu'à la gare.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "honneur": -3,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Elle esquive avec une agilité surprenante et t'assène un coup de registre, trois kilos de reliure en cuir, en pleine tempe.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -8,
+          "prime": 5,
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Dans la pénombre, ton poing la jette sur le tapis. Elle reste à terre, gémissante, tandis que des portes s'ouvrent à l'étage et qu'une voix appelle le shérif.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -3,
+          "relation": -4
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Un coup sec derrière l'oreille : elle s'affaisse sur le comptoir, la joue posée sur le registre ouvert. Sa plume trace une longue ligne d'encre jusqu'au bas de la page.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -2,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Elle s'effondre sans un mot. Son trousseau tinte en tombant : toutes les chambres de l'hôtel sont désormais à ta portée.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -2,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Ton coup est trop mou : elle chancelle, se rattrape au comptoir et te plante son coupe-papier dans le dos de la main. « Je vous avais dit : pas de grabuge ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -10,
+          "etat": "hostile",
+          "prime": 5,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Elle s'écroule doucement dans le fauteuil d'Ambrose, comme si elle s'était endormie en lisant. À cette heure, personne n'a rien vu.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -2,
+          "relation": -4
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Ta corde se referme sur ses épaules et la plaque contre le casier à clés. « Lâchez-moi immédiatement ! Ce lasso sent le crottin ! »",
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu lances {outil}, mais la boucle accroche le lustre à pétrole, qui oscille dangereusement. Elle profite de ta maladresse pour filer vers le bureau du shérif.",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "La boucle l'attrape au pied de l'escalier qui grince. Elle tombe assise sur la première marche, le bonnet de nuit de travers, trop indignée pour crier.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "« Vous jouez au cow-boy dans mon hall ? » Elle se dégage de la boucle d'un geste agacé et te rend {outil} : « Les jeux de vacher, c'est à l'enclos. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu la ligotes au fauteuil d'Ambrose avec {outil}. Elle ne crie pas : elle te dicte calmement la liste de tes futurs chefs d'accusation.",
+        "effets": {
+          "etat": "ligote",
+          "prime": 15,
+          "honneur": -3,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Elle se débat comme une chatte, te griffe la joue, et finit ficelée derrière son comptoir, son camée arraché.",
+        "effets": {
+          "etat": "ligote",
+          "sante": -5,
+          "prime": 15,
+          "honneur": -3,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Tu l'attaches au pied de son lit, en bonnet de nuit. Avant le bâillon, elle siffle : « Les draps sont propres. Ne touchez à rien. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 15,
+          "honneur": -3,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Elle te regarde serrer les nœuds, incrédule : « Vous ? Vous qui ôtiez votre chapeau ? Ambrose avait raison, on ne connaît jamais les gens. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 15,
+          "honneur": -3,
+          "relation": -5
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu lui saisis le poignet au moment où elle ouvrait le tiroir : un petit derringer à crosse de nacre tombe sur le registre. « C'était celui de mon mari, rendez-le-moi ! »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "« Me désarmer ? » Elle te montre ses mains vides, puis son coupe-papier. « Prenez-le, si cela vous rassure. Il me reste une langue, et le shérif à côté. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu bloques son bras : le tisonnier qu'elle brandissait s'écrase sur le tapis. Elle recule, haletante, et lisse sa robe comme si de rien n'était.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "normal",
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu la surprends en chemise de nuit, derringer pointé vers l'escalier. Tu le lui arraches ; elle croise les bras : « Il y a des voleurs partout, ces temps-ci. Je vois que j'avais raison. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "« Un duel ? » Elle repose sa plume. « Je suis une veuve de cinquante-trois ans, monsieur. Si vous voulez vous battre, allez provoquer le boucher, il a besoin d'exercice. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle tire le derringer du tiroir et le pose sur le comptoir, entre vous deux : « Dix pas dans la rue, à midi ? Soit. Mais vous réglez votre chambre d'avance, au cas où. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle éclate d'un rire sec, le premier depuis 1894 : « Un homme qui défie une femme en duel ! Je vais l'écrire dans le registre, à la rubrique “curiosités”. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Elle te dévisage longuement : « Vous plaisantez, j'espère. Un gentleman comme vous ne ferait pas cela. » Tu as soudain l'impression d'être un écolier pris en faute.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Elle époussette le comptoir avec un mouchoir brodé A.W., puis l'encrier, puis la sonnette, puis le mouchoir lui-même. Rien n'échappe à son chiffon."
+      },
+      {
+        "texte": "Ses yeux glissent vers tes bottes, puis vers le tapis rouge, puis à nouveau vers tes bottes. Elle ne dit rien. Elle n'en a pas besoin."
+      },
+      {
+        "texte": "Sous le registre dépasse un roman à couverture jaune, « Les Amants de Saint Denis ». Elle le cache précipitamment quand elle surprend ton regard."
+      },
+      {
+        "texte": "Lampe à la main, elle fait sa ronde dans les couloirs, essaie chaque serrure et murmure « bonne nuit, Ambrose » devant le portrait avant d'éteindre.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Par la fenêtre, elle surveille le boucher qui suspend une carcasse devant sa boutique. Elle soupire, mais ne détourne pas les yeux aussi vite qu'elle le voudrait.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Elle s'arrête net, se retourne et te fixe à travers ses lunettes : « Vous me suivez, monsieur, ou vous avez simplement oublié où vous alliez ? »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle te mène jusqu'à la boucherie, où elle entre en se pinçant le nez. À travers la vitrine, tu vois le boucher lui tendre un filet bien ficelé... qu'elle accepte, en regardant ailleurs."
+      },
+      {
+        "texte": "Tu la suis à distance : elle traverse la rue en relevant sa jupe au-dessus de la boue, entre au magasin général et marchande le prix du savon pendant vingt minutes.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Lampe en main, elle monte l'escalier qui grince, longe le couloir et frappe à la porte de la chambre 4 : « Monsieur, vos éperons ! On les entend à travers le plafond ! »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Elle presse le pas et entre droit au bureau du shérif, juste à côté. Par la fenêtre, tu la vois pointer un doigt sec dans ta direction.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu la jettes sur ton épaule comme un sac de farine. Elle te martèle le dos de ses poings osseux : « Posez-moi ! Ma jupe ! Le TAPIS, vos bottes sont sur le TAPIS ! »",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Elle ne pèse rien et hurle beaucoup. Sur le trottoir, le boucher lâche sa carcasse et accourt, fendoir en main : « Pose-la, toi ! Tout de suite ! »",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Elle s'est tordu la cheville dans l'escalier ; tu la portes jusqu'au cabinet du docteur. Elle reste raide comme un manche à balai, mais murmure : « Merci. Ne le dites à personne. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu l'emportes, enroulée dans un drap. Elle se tortille et te mord l'épaule à travers la chemise, avec une férocité que le pasteur ne lui soupçonnait pas.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -5,
+          "prime": 15,
+          "honneur": -3,
+          "relation": -4
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} sur elle. Elle se baisse derrière le comptoir et l'objet fracasse le portrait de feu M. Whitlock. Un silence de mort tombe sur le hall.",
+        "effets": {
+          "prime": 5,
+          "honneur": -2,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Le projectile l'atteint à l'épaule et la fait chanceler contre le casier à clés. « Barbare ! » crie-t-elle en se tenant le bras.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Elle attrape {outil} au vol, d'un geste net d'institutrice qui confisque une fronde, et l'enferme dans le tiroir : « Confisqué. Vous le récupérerez à votre départ, avant onze heures. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle esquive et te renvoie aussitôt l'encrier en pleine figure. Ta chemise est bleue jusqu'à la ceinture.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -3,
+          "relation": -2
+        }
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Elle se fige, menton levé, mains croisées sur sa robe noire, sans un battement de cils pendant toute la pose. La plaque montre une femme qui pourrait présider un procès."
+      },
+      {
+        "texte": "« Une photographie ? » Elle remet son camée bien droit et va chercher le portrait de son mari pour poser à côté. « Il n'aurait pas voulu être oublié. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle met la main devant l'objectif : « On ne photographie pas les gens sans leur permission. Ni sans s'être essuyé les pieds. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle accepte, et pour la première fois l'ombre d'un sourire passe sur la plaque. « Faites-m'en un tirage. Pour le hall. Pas pour moi : pour le hall. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu la croques dans {outil} : chignon serré, lunettes au bout du nez, clés à la ceinture. Elle se penche : « Le nez est trop long. Non, laissez. Il est exact. »"
+      },
+      {
+        "texte": "Elle remarque ton manège et pose, raide comme une statue de sel : « Faites vite, j'ai quarante draps à compter. »"
+      },
+      {
+        "texte": "Ton croquis la montre l'index pointé vers le paillasson, comme toujours. Elle s'y reconnaît et en paraît presque flattée : « Au moins, vous observez. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle regarde longtemps ton dessin, puis te le rend : « Ambrose dessinait, lui aussi. Des bateaux, surtout. » Elle se mouche très discrètement.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Elle examine {outil} par-dessus ses lunettes comme une pièce à conviction : « Est-ce un présent ou un pot-de-vin, monsieur ? » Elle range tout de même l'objet sous le comptoir.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle note dans le registre, en belle anglaise : « Reçu de ce monsieur : {outil}. » Puis elle déduit un dollar de ta note, parce qu'elle est juste.",
+        "effets": {
+          "argent": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle hésite, puis accepte {outil} avec une raideur touchante : « On ne m'a rien offert depuis des années. Hormis des côtelettes. » Elle rougit, et cela lui va bien.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« Je n'accepte rien d'un homme dont les bottes ont fait trois fois le tour de la rue principale. » Elle te rend {outil} du bout des doigts.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« À cette heure-ci ? » Elle prend {outil} d'un air soupçonneux, range ton cadeau dans le casier de la chambre 2 et souffle la lampe. Tu ne sais pas si c'était un merci.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "acheter@outil": [
+      {
+        "texte": "Elle te regarde comme si tu avais demandé un baiser : « Acheter ici ? Monsieur, ceci est un hôtel. Nous vendons du sommeil et de l'eau chaude, pas {cible}. »"
+      },
+      {
+        "texte": "Elle pince les lèvres : « Pour {cible}, voyez l'épicier, l'armurier ou l'éleveur. Moi, je loue des chambres. Un dollar la nuit, si cela vous intéresse. »"
+      },
+      {
+        "texte": "Elle inscrit ta demande dans un carnet à part, entre « un piano neuf » et « un mari qui s'essuie les pieds » : « Je transmettrai à l'épicier. Il ne fait pas crédit, je vous préviens. »"
+      },
+      {
+        "texte": "« Pour vous, je peux faire une exception. » Elle envoie le gamin des rues négocier pour toi et prélève un dollar de commission, « pour le dérangement ».",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Le comptoir est fermé, monsieur. Et même ouvert, ce n'est pas un magasin. » Elle te rabat le guichet au nez.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "vendre@outil": [
+      {
+        "texte": "Elle repousse {cible} du bout de son coupe-papier : « Je ne suis pas prêteuse sur gages. Le directeur de la banque, lui, prend tout... y compris votre chemise. »"
+      },
+      {
+        "texte": "« Je n'achète que du savon et des draps. » Elle te montre l'écriteau au-dessus du comptoir : ON N'ACHÈTE RIEN, ON NE FAIT PAS CRÉDIT, ON S'ESSUIE LES PIEDS."
+      },
+      {
+        "texte": "Elle examine {cible} un long moment, puis sort trois dollars de sa boîte en fer-blanc : « Pour la vitrine du hall. Ambrose aimait les belles choses. Ne le dites à personne. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 3,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle regarde {cible}, puis ton visage, puis le panneau des avis de recherche par la fenêtre : « Je n'achète pas de marchandise volée. Ni de marchandise de voleur. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« À minuit, on ne vend que des choses qui ne sont pas à soi. » Elle souffle la lampe. « Bonne nuit, monsieur. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "louer_chambre_hotel": [
+      {
+        "texte": "Elle fait pivoter le registre vers toi et te tend la plume : « Un dollar, payable d'avance. Nom, ville d'origine, et pas de croix : je reconnais quelqu'un qui sait écrire. » Elle décroche la clé du 3.",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Elle te donne la chambre 1, la seule avec un balcon sur la rue principale : « Au prix de la 5. Les gens bien élevés méritent la vue. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle compte ta monnaie deux fois et mord une pièce : « Un dollar, plus un dollar de caution pour le tapis. Vous comprendrez. » Ta clé est celle de la chambre sous les combles.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Elle regarde ton visage, puis le panneau des avis de recherche par la fenêtre. « Complet. » Derrière elle, le casier à clés est plein.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle ouvre en bonnet de nuit, encaisse ton dollar d'une main et te tend une bougie de l'autre : « Chambre 2. Pas de bottes dans l'escalier, il grince et les clients dorment. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "« Votre chambre habituelle. » Elle y a déjà mis une cruche d'eau fraîche et refuse ton dollar d'un geste : « Vous paierez le bain. Il faut bien que je vive. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle referme le registre sur tes doigts : « Il n'y a pas de chambre pour vous ici, monsieur. Ni ce soir, ni jamais. Essayez la pension, ou l'écurie. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -1
+        }
+      }
+    ],
+    "commander_bain_chaud": [
+      {
+        "texte": "« Cinquante cents l'eau, cinquante cents la serviette. » Elle encaisse ton dollar et crie vers l'arrière-boutique de mettre deux seaux à chauffer.",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Elle prépare le bain elle-même, vérifie la température du coude comme pour un nourrisson et te tend une brosse : « Les oreilles aussi. Je vérifierai. »",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Elle te toise de la tête aux pieds : « Un bain ? Il vous en faudrait trois. Je vous fais un prix : deux dollars, et je change l'eau entre chaque. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Elle ajoute d'elle-même une poignée de sels de lavande dans l'eau fumante : « Cadeau de la maison. Ne vous y habituez pas. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Le poêle est éteint depuis neuf heures. » Elle te tend tout de même un seau d'eau froide et un savon : « Un dollar quand même, le savon est le même. Le froid forge le caractère. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Elle encaisse sans un mot, mais pendant que tu barbotes, tu l'entends ouvrir la porte et chuchoter au gamin des rues : « Cours chercher l'adjoint. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": -1
+        }
+      }
+    ],
+    "oter_chapeau_devant": [
+      {
+        "texte": "Elle remarque ton geste et redresse imperceptiblement le dos : « Tiens. Un homme qui sait à quoi sert un chapeau. » Le registre se tourne vers toi, comme par magie.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle répond par une révérence d'institutrice impeccable, puis désigne le portemanteau : « Le chapeau se pose là. Les bottes s'essuient là-bas. Une chose à la fois. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle porte une main à son camée, émue malgré elle : « Ambrose faisait exactement ce geste. Avec un peu plus de cheveux. » Elle t'offre un bonbon à la menthe de sa boîte personnelle.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« Ôter son chapeau ne lave pas les bottes, monsieur. » Mais elle te regarde avec un peu moins de dédain, ce qui, chez elle, tient du miracle.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle lève la lampe pour mieux voir ton visage découvert : « Au moins, je saurai à quoi vous ressemblez si le shérif me pose la question. » Ce n'est pas tout à fait un compliment.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "« Remettez-le donc, vous allez prendre froid. » Elle sourit franchement, ce qui la rajeunit de dix ans.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "confier_ses_armes": [
+      {
+        "texte": "Elle reçoit tes armes du bout des doigts, les étiquette d'une écriture fine et les enferme dans le placard à balais : « Vous les récupérerez à votre départ. Avant onze heures. »",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Elle inspecte chaque arme et fronce le sourcil devant la crasse du canon : « Vous ne nettoyez jamais rien, vous. » Elle les range tout de même, avec un soupir de martyre.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Si tous les clients étaient comme vous. » Elle range tes armes dans le coffret de feu son mari, doublé de velours vert, et te remet un reçu calligraphié.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Elle compte tes cartouches une à une à la lueur de la lampe et en note le nombre dans le registre : « S'il en manque une demain, je saurai où chercher. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle prend tes armes, te remet un reçu, et tourne la clé du placard un peu trop vite : « Vous les reverrez quand l'adjoint aura fini de vous chercher. Ou avant. Peut-être. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "« Trop tard pour les bonnes manières. » Elle refuse de toucher tes armes et montre la porte : « Gardez-les, et gardez-les dehors. »",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "se_faire_reveiller_aube": [
+      {
+        "texte": "« Six heures précises. » Elle l'inscrit dans la colonne des réveils. À six heures, trois coups secs à ta porte et une voix : « Debout. Le soleil n'attend personne, et moi non plus. »"
+      },
+      {
+        "texte": "Elle hoche la tête : « Le train de Saint Denis passe à six heures quarante, et le chef de gare ne l'a jamais retardé d'une seconde. Je vous réveillerai à six heures. »"
+      },
+      {
+        "texte": "À l'aube, elle frappe doucement et laisse devant ta porte un café brûlant et un œuf dur : « Bonne route. Et revenez entier. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Je réveille, je ne ressuscite pas. » Au matin, elle frappe une fois, puis envoie le gamin des rues tambouriner jusqu'à ce que tu jures.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "« L'aube ? Il est déjà quatre heures, monsieur. » Elle te tend une tasse de thé froid : « Considérez-vous réveillé. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Elle note ta demande... et, à l'aube, ce n'est pas elle qui frappe à ta porte, mais l'adjoint du shérif, la main tremblante sur son étui. Tu files par la fenêtre.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ]
+  }
+}

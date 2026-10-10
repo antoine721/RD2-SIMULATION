@@ -1,0 +1,439 @@
+{
+  "id": "maisons",
+  "description": "Une rangée de maisons de bois blanchies à la chaux, avec leurs porches, leurs jardinets clos de palissades et le linge qui sèche sur des cordes. Derrière, un poulailler de guingois, des remises et des tas de bois. Ici, on vit rideaux tirés, loin du vacarme des saloons.",
+  "repliques": [
+    "Un chien aboie derrière une palissade.",
+    "*Une femme bat un tapis sur son porche.*",
+    "Une mère appelle ses enfants pour la soupe."
+  ],
+  "reactions": {
+    "dessiner": [
+      {
+        "texte": "Tu dessines la rangée de maisons dans {outil} : les porches, les palissades, le linge en drapeaux sur les cordes. Une vraie petite ville, presque civilisée."
+      },
+      {
+        "texte": "Pendant que tu dessines dans {outil}, une ribambelle d'enfants Doyle s'agglutine derrière toi : « Il a oublié la poule ! » « Et le chien ! » « Et maman ! » Tu ajoutes tout le monde.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu dessines les maisons endormies dans {outil}. Une seule fenêtre reste éclairée : celle de la veuve, qui veille derrière son rideau, le fusil de son mari en travers des genoux.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "entrer": [
+      {
+        "texte": "Tu pousses une porte au hasard. Une famille attablée devant des haricots se fige, cuillère en l'air. Le père se lève lentement : « On ne vous a pas invité, l'étranger. » Tu ressors à reculons.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "La porte est ouverte. Une mère de famille te colle d'office un bébé dans les bras, le temps de sortir le pain du four. Tu restes planté là, terrifié, à bercer l'enfant.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu entres sans frapper dans une maison obscure. Un déclic dans le noir : un chien de fusil qu'on arme. Une voix de vieille femme : « Un pas de plus et je te fais un deuxième nombril. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu te réfugies dans une maison pour échapper aux regards. La maîtresse de maison te reconnaît d'après l'affiche, pousse un cri et file par la porte de derrière en appelant le shérif.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu entres chez la vieille Mme Hensley pour lui rapporter son panier tombé dans la rue. Elle te fait asseoir de force et te gave de tarte aux pommes. Impossible de refuser.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "sante": 10
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre une maison. Ça claque sur le bardage. Un rideau s'écarte sur un visage indigné, puis se referme d'un coup sec. Ta réputation dans le quartier vient de baisser.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu lances {outil} par-dessus une palissade. Un cri, un caquètement furieux : tu as touché le poulailler. Une poule rousse en profite pour s'évader, comme si elle n'attendait que ça.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu lances {outil} sur une maison endormie. Une vitre se brise. Les chiens aboient de proche en proche jusqu'au bout de la rue et les lampes s'allument partout.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Des maisons modestes et propres, des rideaux de cretonne aux fenêtres. Des enfants jouent au cerceau dans la boue, une vieille dame écosse des haricots sur son porche, une poule rousse se promène où elle veut."
+      },
+      {
+        "texte": "Mrs. Pruitt, la blanchisseuse, étend des draps en chantant ; un homme répare une gouttière en jurant ; la poule de Mme Hensley file sous une palissade, poursuivie par deux gamins. La vie ordinaire, celle que tu n'as jamais eue.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Les maisons dorment, volets clos. Une seule fenêtre brille : celle de la veuve. Elle ne dort plus depuis que les O'Driscoll ont tué son mari.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Derrière les rideaux, tu sens les regards. Ici, tout le monde achète le journal du petit Billy Pruitt, et tout le monde connaît le prix de ta tête. Une porte se verrouille sur ton passage.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Le pasteur sort de chez la veuve, le chapeau à la main et le visage grave. Derrière lui, la porte se referme sans bruit ; le rideau noir, lui, ne bouge pas.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu photographies la rue des maisons. Sur la plaque : des porches, du linge, et une dizaine d'enfants surgis de nulle part pour faire des grimaces à l'objectif."
+      },
+      {
+        "texte": "Une mère sort en courant, recoiffe son mari et aligne ses sept enfants par ordre de taille devant la maison : « Allez-y, maintenant. » Le portrait de famille des Doyle est dans la boîte.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le magnésium illumine les maisons endormies. Un chien hurle, un bébé pleure, et un vieux en caleçon long sort sur son porche, fusil en main : « Qui va là ? »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle traverse le bardage d'une maison. À l'intérieur, de la vaisselle éclate et un enfant se met à pleurer. Des portes claquent tout le long de la rue.",
+        "effets": {
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu tires sur les maisons endormies. Une riposte jaillit d'une fenêtre noire : un vieux fusil de chasse chargé de gros sel. Le sel te brûle la cuisse comme un tison.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Tu tires sur une maison pour faire taire un témoin à la fenêtre. Le rideau s'abat, des hurlements montent, et on entend déjà le shérif Malloy jurer en courant depuis la rue principale.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 25,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Ta balle siffle au ras d'un toit et fait détaler le coyote qui rôdait autour du poulailler. Mme Hensley te bénit depuis son porche, son balai à la main.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      }
+    ],
+    "crocheter": [
+      {
+        "texte": "Tu glisses {outil} dans la serrure d'une porte de derrière. Clic. Elle cède en dix secondes : ces gens-là font confiance à leurs voisins. Tu te sens un peu sale.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu forces la serrure, mais la tige se coince et casse net dans le barillet. Tu restes là, bête, un bout de métal à la main, avec un chien qui grogne derrière la porte."
+      },
+      {
+        "texte": "Tu crochètes à tâtons. Le pêne cède... et une clochette accrochée derrière la porte se met à tinter. Une voix d'homme ensommeillée : « Martha ? C'est toi ? »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu crochètes une porte en plein jour. Un gamin des rues, assis sur la palissade, te regarde faire en mâchonnant une paille : « Pour deux dollars, j'ai rien vu. » Tu paies.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "argent": -2
+        }
+      }
+    ],
+    "fouiller": [
+      {
+        "texte": "Tu fouilles les remises et les tas de bois derrière les maisons : une hache émoussée, un vieux harnais, et un nid caché rempli d'œufs encore tièdes."
+      },
+      {
+        "texte": "Tu fouilles une remise quand une matrone en tablier te tombe dessus avec un rouleau à pâtisserie. Deux coups sur le crâne, et tu détales sous les rires des voisins.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Dans le noir, tu fouilles les poubelles derrière une cabane et tu tombes nez à nez avec le chien errant, venu faire la même chose. Il te regarde, tu le regardes. Vous convenez de ne rien dire.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu fouilles une boîte aux lettres et tu empoches un mandat de cinq dollars adressé à Mme Hensley. La vieille dame attendait sa pension de veuve de guerre.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 5,
+          "honneur": -2
+        }
+      }
+    ],
+    "toquer_a_la_porte": [
+      {
+        "texte": "Tu frappes. Une fillette ouvre, te détaille de bas en haut et crie vers l'intérieur : « Maman ! Y a un monsieur avec plein de pistolets ! » La porte se referme."
+      },
+      {
+        "texte": "Tu frappes chez les Doyle. Sept enfants ouvrent en même temps, puis une mère épuisée qui te tend un balai : « Si c'est pour la quête, on n'a rien. Si c'est pour aider, la cour est par là. »"
+      },
+      {
+        "texte": "Tu frappes chez la vieille Mme Hensley. Elle t'ouvre, ravie : « Vous tombez bien, jeune homme. Henrietta s'est encore échappée. » Henrietta, c'est sa poule.",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Derrière la porte, un chuchotement affolé, des pas précipités, puis plus rien. Par la fenêtre, tu vois un gamin filer par-derrière en direction du bureau du shérif.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu frappes en pleine nuit. La porte s'entrouvre sur le canon d'un fusil et la voix de la veuve : « Si tu es un O'Driscoll, dis-le. J'attends ça depuis trois semaines. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "ecouter_aux_portes": [
+      {
+        "texte": "L'oreille contre une porte, tu entends un couple se disputer à propos de la dette envers la banque : « Ce vautour de directeur nous prendra jusqu'à la vache ! » Puis des sanglots."
+      },
+      {
+        "texte": "Tu entends une mère raconter à ses enfants l'histoire d'un pistolero au grand cœur. Il te ressemble un peu. Il te ressemble beaucoup moins à la fin de l'histoire."
+      },
+      {
+        "texte": "Derrière la porte de la veuve, une voix basse répète un nom, encore et encore, comme une prière. Puis le cliquetis d'une arme qu'on recharge.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Mrs. Pruitt, la blanchisseuse, te surprend les bras chargés de linge : « Vous cherchez quelque chose, monsieur ? » Ce soir, tout le quartier saura que tu écoutes aux portes.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu écoutes un vieux compter ses économies dans une boîte à biscuits : il la cache sous la troisième latte du plancher. Une information qui peut valoir de l'or... ou la corde.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Derrière les volets clos de la plus belle maison, le directeur de la banque recopie ses comptes à voix basse : « Ferme Callahan, saisie au 1er. Ferme Dobbs, saisie au 15. » Il rit tout seul, d'un petit rire sec.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "cambrioler_maison": [
+      {
+        "texte": "Tu te glisses par une fenêtre de derrière et tu vides la maison : une montre de gousset, des couverts en argent, un bocal de pièces. Dans le berceau, un bébé te regarde sans pleurer. C'est pire.",
+        "effets": {
+          "argent": 25,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Tu passes par la fenêtre et tu atterris dans un baquet de lessive. Le vacarme réveille le chien, la grand-mère et le perroquet. Tu fuis trempé, sans butin, un bonnet de nuit accroché à l'éperon.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu entres par la cuisine et tu fourres les couverts dans ton sac. Une voisine qui étend son linge te voit sortir et hurle « Au voleur ! » à pleins poumons.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 15,
+          "honneur": -3,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Le plancher craque ; un homme surgit en chemise de nuit, un tisonnier à la main. Tu esquives, mais il t'ouvre l'arcade avant que tu sautes par la fenêtre avec ce que tu as pu rafler.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 10,
+          "honneur": -3,
+          "prime": 10,
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Tu entres par la fenêtre et tu vois les assiettes vides, les enfants maigres, la lettre de saisie de la banque sur la table. Tu ressors les mains vides, et tu laisses même un dollar sur le rebord.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -1,
+          "honneur": 2
+        }
+      },
+      {
+        "texte": "Tu cambrioles la plus belle maison de Valentine, celle du directeur de la banque, aux volets toujours clos : une bague, des boutons de manchette en or, une liasse de billets. Ta prime enfle aussi vite que tes poches.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 60,
+          "honneur": -3,
+          "prime": 25
+        }
+      }
+    ],
+    "demander_hospitalite": [
+      {
+        "texte": "Une famille te fait une place au coin du feu, entre le chien et le grand-père. Personne ne te pose de questions ; on te sert de la soupe et on te prête une couverture.",
+        "effets": {
+          "sante": 15,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Mme Hensley t'accueille à bras ouverts, te fait dormir dans le lit de son défunt mari et te sert des œufs frais au petit matin : « Pondus par Henrietta, pour une fois qu'elle est rentrée. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "sante": 25
+        }
+      },
+      {
+        "texte": "Partout, les portes se ferment. Ta réputation t'a précédé : une mère cache ses enfants dans ses jupes et un homme crache sur ton passage. Tu dormiras dehors.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Une porte s'entrouvre. La femme te reconnaît, hésite, puis te fait entrer vite : « Mon mari aussi a eu une prime sur la tête, autrefois. Une nuit, pas plus, et tu pars avant l'aube. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": 20
+        }
+      },
+      {
+        "texte": "Tu frappes de maison en maison au milieu de la nuit. Personne n'ouvre, sauf un vieillard qui te tend une couverture par la fenêtre : « La grange de derrière. Et tu ne fumes pas dedans. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 10
+        }
+      }
+    ],
+    "voler_linge_etendu": [
+      {
+        "texte": "Tu décroches une chemise propre de la corde et tu la fourres sous ton manteau. Elle est un peu petite : elle appartenait sans doute à un garçon de douze ans.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu tends la main vers un caleçon long ; la poule de Mme Hensley, perchée sur la corde, te pince la main jusqu'au sang. Tu lâches tout.",
+        "effets": {
+          "sante": -2
+        }
+      },
+      {
+        "texte": "Tu voles un pantalon sur la corde de Mrs. Pruitt. La blanchisseuse te poursuit jusqu'à la rue principale en brandissant une pince à linge : « Au voleur de culottes ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu chapardes un drap blanc dans le noir et tu t'enroules dedans contre le froid. L'ivrogne te voit passer et jurera demain au saloon avoir vu un fantôme.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu tends la main vers une chemise, puis tu te ravises. Tu remets même en place une pince à linge tombée dans la boue. Ta mère serait fière.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ]
+  }
+}

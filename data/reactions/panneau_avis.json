@@ -1,0 +1,330 @@
+{
+  "id": "panneau_avis",
+  "description": "Un grand panneau de planches grises planté dans la boue de la rue principale, couvert d'avis de recherche jaunis cloués les uns sur les autres. Au centre, un portrait balafré à l'encre noire : « RECHERCHÉ MORT OU VIF — Ciaran Doyle, dit le Balafré — 75 $ ».",
+  "repliques": [
+    "Une affiche se décolle et claque dans le vent.",
+    "Un clou cède : le portrait du Balafré pend de travers.",
+    "Une affiche toute neuve brille, la colle encore fraîche."
+  ],
+  "reactions": {
+    "lire": [
+      {
+        "texte": "« RECHERCHÉ MORT OU VIF — Ciaran Doyle, dit le Balafré, du gang O'Driscoll. Vol, meurtre, incendie de fermes. 75 $. » Le portrait est grossier, mais la cicatrice ne trompe pas."
+      },
+      {
+        "texte": "Sous le Balafré, un vieil avis jauni : « Colm O'Driscoll — 1 000 $. » Quelqu'un a griffonné à côté, au crayon : « Bonne chance. »"
+      },
+      {
+        "texte": "Un petit avis : « Recherché pour vol de chevaux : un jeune rouquin, une dent en moins. » En travers, d'une main ferme : « ATTRAPÉ — Malloy. »"
+      },
+      {
+        "texte": "Un avis tout neuf, la colle encore humide : un portrait qui te ressemble vaguement, le nez plus gros, et ta prime en chiffres gras. Quelqu'un t'a déjà dessiné des cornes.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "À la lueur de la lanterne du bureau du shérif, tu déchiffres à peine les lettres. Seul le chiffre « 75 $ » ressort, gras et noir comme un corbeau.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Une note du shérif : « Récompense pour tout renseignement sur les incendies de fermes. Discrétion assurée. » Dessous, d'une écriture fine : « Je paierai aussi. — Une veuve. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Une dizaine d'avis cloués les uns sur les autres. Au centre, le Balafré te fixe de ses yeux d'encre. Le même homme qui boit au Smithfield's ? Peut-être bien."
+      },
+      {
+        "texte": "Le portrait du Balafré est criblé de petites entailles : quelqu'un s'en sert de cible pour s'entraîner au couteau."
+      },
+      {
+        "texte": "Des passants s'attardent devant ton propre avis, puis lèvent les yeux vers toi. Il est temps de rabattre ton chapeau.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Le gamin des rues se tient devant le panneau, l'air de rien, et compte les zéros des primes sur ses doigts sales.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Une silhouette au chapeau rabattu arrache discrètement un avis, le plie en quatre et disparaît vers le Smithfield's.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu recopies dans {outil} le portrait du Balafré. Ton dessin est plus ressemblant que l'original."
+      },
+      {
+        "texte": "Tu croques le panneau tout entier, ses affiches superposées comme des écailles. Un vieil homme regarde par-dessus ton épaule : « Vous êtes chasseur de primes ? »"
+      },
+      {
+        "texte": "Tu dessines ta propre affiche, en t'arrangeant un peu le nez. Un brin de vanité n'a jamais pendu personne.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "detruire": [
+      {
+        "texte": "Tu arraches les planches à coups de botte. Les avis s'envolent dans la rue principale comme des feuilles mortes.",
+        "effets": {
+          "etat": "detruit",
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Malloy sort sur le perron, sa tasse à la main : « Ça fera cinq dollars d'amende, et vous recollez tout. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu réduis le panneau en miettes, ton avis en premier. Geste inutile : le télégraphiste en a déjà câblé des copies à toute la région.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Personne ne te voit démolir le panneau. Au matin, Malloy cloue simplement les avis sur la porte de son bureau.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit"
+        }
+      }
+    ],
+    "faire_sauter": [
+      {
+        "texte": "L'explosion pulvérise le panneau. Une neige de papier déchiré retombe sur la rue ; un morceau du portrait du Balafré se pose sur ton épaule.",
+        "effets": {
+          "etat": "detruit",
+          "prime": 25,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Les chevaux s'emballent, les passants hurlent, et l'adjoint dégaine en tremblant. Du panneau, il ne reste qu'un poteau fumant.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 40,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Ton avis part en fumée avec les autres. Malloy, sur son perron : « J'en ai cinquante exemplaires dans mon tiroir. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 30,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "BOUM. Valentine se réveille en sursaut. Des lambeaux d'avis brûlent encore dans la boue quand les premières lampes s'allument.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 25,
+          "honneur": -1
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Ton projectile frappe le portrait du Balafré en plein entre les deux yeux. Un passant applaudit."
+      },
+      {
+        "texte": "Tu lances {outil} ; ça rebondit sur le bois et retombe dans la boue. Quelque part, un gamin ricane."
+      },
+      {
+        "texte": "Tu vises ton propre avis... et tu le rates. Le portrait a l'air de se moquer de toi.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "L'adjoint sursaute au bruit, la main sur son colt : « Hé ! C'est un bien du comté, ce panneau ! »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Ta plaque immortalise le portrait du Balafré. De quoi le reconnaître... ou le vendre au chasseur de primes."
+      },
+      {
+        "texte": "Tu photographies ton propre avis. Un souvenir pour tes vieux jours, si tu en as.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Le crieur de journaux accourt : « Vous travaillez pour un journal de Saint Denis ? Je vous en vends un, si vous voulez ! »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle traverse le portrait du Balafré entre les deux yeux. Un ivrogne lève son chapeau : « Joli coup ! »",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "L'adjoint jaillit du bureau, l'arme au poing : « Qui a fait feu ? » Tous les doigts de la rue se tournent vers toi.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Tu troues ton propre portrait, en plein milieu du front. Un passant superstitieux se signe.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le coup de feu claque dans la nuit ; le portrait du Balafré tombe dans la boue, troué. Quelque part, un chien aboie.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "arracher_avis": [
+      {
+        "texte": "Tu arraches l'avis du Balafré et le plies dans ta poche. Une preuve à montrer... ou une prime à toucher."
+      },
+      {
+        "texte": "Tu arraches ton propre avis et le roules en boule. Le lendemain, un nouveau le remplace, avec une prime plus grosse.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Malloy t'interpelle depuis son perron : « Hé ! Ces avis sont la propriété du comté ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Personne ne te voit. Au dos de l'avis de l'O'Driscoll, une main a griffonné : « Smithfield's, table du fond. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Sous l'affiche, une autre plus ancienne apparaît : un pistolero recherché il y a vingt ans, dont le visage ressemble étrangement à celui du pasteur."
+      }
+    ],
+    "noter_prime": [
+      {
+        "texte": "Tu recopies soigneusement dans {outil} : « Ciaran Doyle, dit le Balafré. 75 $. Balafre de la tempe au menton, foulard vert, trèfle tatoué sur le bras. »"
+      },
+      {
+        "texte": "Tu notes toutes les primes du panneau. Additionnées, elles valent plus que ce qu'un vacher gagne en dix ans."
+      },
+      {
+        "texte": "Tu notes ta propre prime, par curiosité. Elle a encore grimpé depuis la veille.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Le télégraphiste, qui passe par là, jette un œil à tes notes : « Si c'est le Balafré qui vous intéresse, il boit au Smithfield's. Vous ne le tenez pas de moi. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "griffonner_portrait": [
+      {
+        "texte": "Tu offres au Balafré une moustache en croc et un chapeau à fleurs. Un gamin éclate de rire derrière toi."
+      },
+      {
+        "texte": "L'adjoint t'attrape par le col : « On ne gribouille pas les avis officiels ! Cinq dollars ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Sur ton propre avis, tu ajoutes une barbe épaisse et des lunettes rondes. Avec un peu de chance, ça brouillera les pistes.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Le lendemain, tout Valentine rit devant le Balafré à moustache. Au Smithfield's, l'O'Driscoll, lui, ne rit pas du tout.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "comparer_portraits": [
+      {
+        "texte": "Tu scrutes les passants, puis les portraits. Le vacher ? Non. Le pianiste ? Non plus... Mais l'homme au chapeau rabattu qui entre au Smithfield's porte la même balafre."
+      },
+      {
+        "texte": "Un passant fait exactement comme toi : il regarde ton portrait, puis toi, puis ton portrait. Il presse le pas vers le bureau du shérif.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Dans l'obscurité, tous les visages se ressemblent. Tu manques de reconnaître le Balafré dans le pasteur qui rentre de l'église.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "À l'autre bout du panneau, le chasseur de primes fait la même chose que toi. Vos regards se croisent : « Le Balafré est à moi, l'ami. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ]
+  }
+}

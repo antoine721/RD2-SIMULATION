@@ -1,0 +1,383 @@
+{
+  "id": "pension",
+  "description": "Une grande maison de planches à deux étages, peinte d'un vert fatigué, avec une véranda qui penche où sèchent des chaussettes. Un écriteau annonce « Chambres - Pension complète - Pas de chiens, pas de chevaux, pas de chansons ». Une odeur de soupe aux choux s'échappe par les fenêtres.",
+  "repliques": [
+    "Une voix crie à l'étage : « Qui m'a pris mon rasoir ? »",
+    "*Une clochette tinte dans la salle commune : la soupe est servie.*",
+    "Des ronflements à l'unisson s'échappent d'une fenêtre ouverte."
+  ],
+  "reactions": {
+    "dessiner": [
+      {
+        "texte": "Tu dessines la pension dans {outil} : la véranda affaissée, les chaussettes sur la rambarde, et au deuxième la fenêtre aux rideaux tirés, celle que personne n'ouvre jamais."
+      },
+      {
+        "texte": "Tu dessines la façade de nuit dans {outil}. Toutes les fenêtres sont noires sauf deux : la chandelle du télégraphiste au premier, et au deuxième une lampe derrière un rideau jauni. La logeuse ne dort donc jamais ?",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Pendant que tu dessines dans {outil}, la danseuse se penche à sa fenêtre : « Fais-moi jolie, cow-boy. C'est pour quand je serai célèbre à Saint Denis. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "entrer": [
+      {
+        "texte": "Tu pousses la porte. Un couloir sombre, un portemanteau croulant sous les cache-poussière, une odeur de chou bouilli. Sur la console, un écriteau : « Les nouveaux s'inscrivent au registre. La Direction vous voit. »"
+      },
+      {
+        "texte": "Tu entres à pas de loup. L'escalier craque à chaque marche et, derrière les portes, ça ronfle en canon. Tout en haut, une lampe s'éteint brusquement, comme si on t'avait entendu.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Un balai appuyé au mur, un seau encore fumant, mais personne. Un pensionnaire en bretelles te croise et chuchote : « Ne cherche pas la logeuse. Personne ne l'a vue en entier depuis 1891. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Dans la salle commune, le caissier de la banque lit les nouvelles des braquages en buvant son café. Il lève les yeux, reconnaît ton visage, renverse sa tasse et court se barricader dans sa chambre.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu essuies tes bottes et tu ôtes ton chapeau en entrant. Sur la console, quelqu'un a déjà posé une tasse de café chaud avec un petit mot : « Pour le monsieur poli. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "sante": 2
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la façade de la pension. Ça cogne contre les planches ; une fenêtre s'ouvre et une bassine d'eau sale te tombe dessus, sans un mot."
+      },
+      {
+        "texte": "Tu envoies {outil} sur la véranda. Ça renverse une chaise à bascule et déloge une poule rousse qui s'y était installée ; elle file vers les maisons, ravie de l'aventure."
+      },
+      {
+        "texte": "Tu lances {outil} sur la pension en pleine nuit. Une fenêtre s'allume, puis trois, puis toutes, et un chœur de pensionnaires en chemise de nuit t'injurie dans quatre langues.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Deux étages de planches vertes, une véranda qui penche, des chaussettes sur la rambarde. Au deuxième, une fenêtre aux rideaux toujours tirés : celle de la logeuse, que personne en ville ne se souvient d'avoir vue."
+      },
+      {
+        "texte": "La danseuse répète ses pas devant un miroir fêlé, le pianiste soigne sa migraine sur la véranda avec un café noir, et la vieille Mrs. Thimble tricote dans sa chaise à bascule en surveillant toute la rue.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La pension ronfle : le pianiste en mesure, les frères Kowalski, poseurs de rails, comme deux locomotives à l'arrêt. Une chandelle brûle chez le télégraphiste et, au deuxième, la lampe de la logeuse veille.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu repères les issues : porte de devant, porte de la cuisine, et une gouttière solide qui descend du deuxième. Un bon endroit pour dormir. Un mauvais endroit pour être coincé, surtout avec un adjoint et un chasseur de primes parmi les locataires.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Au moment du déclic, tous les pensionnaires de la véranda prennent la pose, raides comme des piquets, sauf un qui éternue. La plaque sera floue d'un côté."
+      },
+      {
+        "texte": "Tu photographies la façade. En développant la plaque, tu remarques une silhouette de femme derrière le rideau du deuxième. La logeuse existe donc bel et bien.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le magnésium éclaire la façade endormie. Une voix furieuse jaillit d'une fenêtre : « Si c'est encore un journaliste de Saint Denis, je lâche le chien ! » La pension n'a pas de chien.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle troue une planche de la façade et fait exploser un pot de géraniums. Les pensionnaires se jettent à plat ventre sur la véranda ; Mrs. Thimble, elle, continue de tricoter.",
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu tires dans les fenêtres. Les vitres éclatent, quelqu'un hurle, et le chasseur de primes riposte depuis le premier étage sans même se lever de son lit : une balle te frôle l'épaule.",
+        "effets": {
+          "prime": 15,
+          "honneur": -2,
+          "sante": -15
+        }
+      },
+      {
+        "texte": "Le coup de feu réveille toute la pension. L'adjoint jaillit sur la véranda en caleçon long, mais bottes aux pieds, et vide son barillet dans la nuit, au hasard.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu tires sur la pension pour couvrir ta fuite. Mauvaise idée : c'est là que dort l'adjoint, qui sort par la fenêtre du rez-de-chaussée en dégainant trop vite.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -2
+        }
+      }
+    ],
+    "fouiller": [
+      {
+        "texte": "Tu fouilles la salle commune : un jeu de cartes graisseux, un almanach de 1894 et une boîte à biscuits contenant trois boutons et une dent. La pension n'est pas riche."
+      },
+      {
+        "texte": "Tu montes fouiller les chambres pendant le repas. Dans la valise de M. Pettibone, représentant en corsets, entre deux baleines, une enveloppe de billets. Tu redescends en sifflotant.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 15,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Sous une latte du plancher de la danseuse, une boîte à biscuits : ses économies pour Saint Denis, comptées et recomptées. Tu les prends. Quelque part, un rêve vient de mourir.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 30,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Tu fouilles la commode du couloir quand le maréchal-ferrant sort de la salle commune, une cuillère dans une main. Il ne dit pas un mot. Son autre poing parle pour lui.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Tu fouilles la cuisine à tâtons et tu trouves la réserve de la logeuse : jambon fumé, confitures, whisky du Kentucky. Sur l'étagère, un petit mot t'attend déjà : « Je compte les pots. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      }
+    ],
+    "toquer_a_la_porte": [
+      {
+        "texte": "Tu frappes. Rien. Puis un carton glisse sous la porte : « Lit : 50 cents. Soupe à 7 h. Pas de visites après 10 h. » La porte s'entrouvre toute seule en grinçant."
+      },
+      {
+        "texte": "Tu frappes en pleine nuit. Une fenêtre s'ouvre et l'adjoint, en chemise de nuit et bottes aux pieds, braque son revolver sur toi en bégayant : « Qu... qui va là ? »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu frappes. Le judas s'ouvre, un œil te détaille, puis se referme. Un verrou glisse, puis un deuxième, puis un troisième : le caissier de la banque n'ouvrira pas.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu frappes, chapeau à la main. Mrs. Thimble t'ouvre, ses aiguilles sous le bras : « Un gentleman ! Entrez, entrez, la soupe est chaude et les autres sont des sauvages. »",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Tu frappes trop fort et la porte, mal fermée, s'ouvre en grand sur M. Pettibone, représentant en corsets, en caleçon long, qui essaie un modèle sur un mannequin. Personne ne parlera de ce moment. Jamais.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "ecouter_aux_portes": [
+      {
+        "texte": "L'oreille collée à une porte, tu entends l'adjoint s'entraîner à dégainer devant sa glace : « Tu cherches des ennuis, O'Driscoll ? » Puis un bruit de chute et un juron : il a lâché son revolver."
+      },
+      {
+        "texte": "Derrière la porte du télégraphiste, des froissements de papier et un petit rire : « Tiens, tiens... le directeur de la banque écrit à une dame de Saint Denis. Et ce n'est pas sa femme. »"
+      },
+      {
+        "texte": "Derrière la porte du deuxième, celle de la logeuse, tu n'entends qu'une plume qui gratte du papier. Puis la plume s'arrête. Puis, très doucement, quelqu'un respire de l'autre côté du battant.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "La porte s'ouvre d'un coup et Mrs. Thimble te toise : « Si vous voulez les ragots, jeune homme, demandez-moi. C'est plus rapide, et je ne mords pas. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu entends la danseuse recompter ses dollars pour Saint Denis : « ... quarante-deux, quarante-trois. » Puis le grincement d'une latte qu'on soulève. Tu sais maintenant où elle les cache.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "louer_lit_pension": [
+      {
+        "texte": "Tu glisses cinquante cents dans la boîte en fer prévue à cet effet. Une clé t'attend déjà sur le registre, avec un mot : « Chambre 4. Le lit penche à gauche. Dormez à droite. »",
+        "effets": {
+          "argent": -1,
+          "sante": 20
+        }
+      },
+      {
+        "texte": "Le matelas est bourré de paille, la couverture sent le cheval et le pensionnaire du dessus marche toute la nuit. Mais c'est moitié moins cher que l'hôtel de Mme Whitlock.",
+        "effets": {
+          "argent": -1,
+          "sante": 15
+        }
+      },
+      {
+        "texte": "On te loge à côté du pianiste, qui rentre à deux heures et ronfle en mesure, en trois-quatre. Tu t'endors malgré toi au rythme de sa valse.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "sante": 20
+        }
+      },
+      {
+        "texte": "Tu signes le registre d'un faux nom. Au matin, un mot t'attend sous la porte : « Cher monsieur Smith, si c'est votre nom : votre visage est au panneau du shérif, et l'adjoint dort au rez-de-chaussée. Le petit-déjeuner est servi quand même. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -1,
+          "sante": 15
+        }
+      },
+      {
+        "texte": "La logeuse invisible t'a réservé la meilleure chambre, celle dont la fenêtre ferme. Sur l'oreiller, un biscuit au gingembre et un mot : « Pour le monsieur qui essuie ses bottes. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -1,
+          "sante": 25
+        }
+      }
+    ],
+    "partager_repas_commun": [
+      {
+        "texte": "Soupe aux choux, pain noir et ragoût de mystère. Autour de la table, on se passe le sel et les nouvelles : le banquier a encore saisi une ferme, et l'ivrogne jure toujours qu'il a vu de l'or.",
+        "effets": {
+          "argent": -1,
+          "sante": 15
+        }
+      },
+      {
+        "texte": "À côté de toi, l'épicier glisse discrètement la moitié de son pain dans sa poche pour le lendemain, puis te fixe comme si tu allais le dénoncer.",
+        "effets": {
+          "argent": -1,
+          "sante": 15
+        }
+      },
+      {
+        "texte": "Le maréchal-ferrant avale trois assiettes sans un mot. En face, le chasseur de primes mange son ragoût sans le regarder : c'est toi qu'il regarde.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1,
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Tu arrives après le souper. Une assiette couverte t'attend pourtant sur la table, encore chaude, avec ton nom écrit sur un carton. Personne ne t'a vu arriver. Sauf elle.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "sante": 15
+        }
+      },
+      {
+        "texte": "Quelqu'un lit tout haut l'article sur les primes du jour. Toutes les cuillères s'arrêtent. Puis Mrs. Thimble dit : « Passez-moi le beurre », et chacun fait comme si de rien n'était.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -1,
+          "sante": 15
+        }
+      },
+      {
+        "texte": "Tu manges les coudes sur la table et tu piques la dernière saucisse dans l'assiette du maréchal-ferrant. Il pose lentement sa fourchette. Tu rends la saucisse.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -1,
+          "sante": 10
+        }
+      }
+    ],
+    "glisser_mot_logeuse": [
+      {
+        "texte": "Tu glisses un mot sous la porte du deuxième. Dix minutes plus tard, la réponse redescend par le même chemin, d'une écriture penchée : « Bien reçu. Non. »"
+      },
+      {
+        "texte": "Tu lui demandes par écrit qui elle est. La réponse : « Celle qui fait la soupe. » Puis, en dessous, d'une autre encre : « Et qui vous voit. »"
+      },
+      {
+        "texte": "Tu remercies la logeuse par écrit pour la soupe. Le lendemain, ta chemise est raccommodée et pliée sur ton lit, avec un mot : « Enfin quelqu'un d'éduqué. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu glisses un mot menaçant sous sa porte. Le soir, ta soupe est salée à en mourir et ta couverture a mystérieusement disparu. Elle a gagné.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu demandes par écrit qu'on ne parle pas de toi. La réponse arrive dans l'heure : « Ici, on ne parle de personne au shérif. Mais on parle de tout le monde à table. »",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ]
+  }
+}

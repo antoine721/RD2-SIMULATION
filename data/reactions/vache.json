@@ -1,0 +1,549 @@
+{
+  "id": "vache",
+  "description": "Une grosse vache à la robe pie, noire et blanche, qui rumine en fixant l'horizon avec une sagesse infinie. Le W couronné du ranch Whitmore est imprimé sur sa croupe, et une cloche de cuivre tinte à son cou.",
+  "personnalite": "Placide, gourmande et parfaitement indifférente aux affaires des hommes. Elle répond au nom de Marguerite quand le vacher l'appelle. Seuls une pomme, un fer rouge ou une traite à l'heure indue parviennent à la tirer de sa rumination.",
+  "repliques": [
+    "*Meuuuuh*",
+    "*rumine en te fixant sans ciller*",
+    "*chasse une mouche d'un coup de queue*",
+    "*fait tinter sa cloche en arrachant une touffe d'herbe*",
+    "*lâche une bouse fumante avec une grande dignité*"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 6,
+      "lieu": "enclos",
+      "activite": "dort debout, la tête basse"
+    },
+    {
+      "de": 6,
+      "a": 17,
+      "lieu": "enclos",
+      "activite": "broute et rumine avec le troupeau"
+    },
+    {
+      "de": 17,
+      "a": 18,
+      "lieu": "berge",
+      "activite": "boit au ruisseau avec le troupeau"
+    },
+    {
+      "de": 18,
+      "a": 24,
+      "lieu": "enclos",
+      "activite": "rumine en regardant tomber la nuit"
+    }
+  ],
+  "reactions": {
+    "acheter": [
+      {
+        "texte": "Tu comptes vingt-cinq dollars. On passe une longe au cou de la vache, qui te suit en mâchonnant, l'air de penser que tu as payé trop cher.",
+        "effets": {
+          "argent": -25,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Marché conclu pour vingt-deux dollars. Le vacher lui caresse le museau une dernière fois : « Adieu, Marguerite. Sois sage. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -22,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle te suit d'elle-même avant même que l'argent ait changé de main, comme si c'était elle qui t'avait choisi. Vingt dollars.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -20,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "On exige de voir tes billets avant de lâcher la longe : trente dollars, le tarif des gens louches. La vache meugle tristement.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -30
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu la frappes avec {outil}. Elle s'effondre lourdement dans la boue en poussant un meuglement déchirant.",
+        "effets": {
+          "etat": "mort",
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Elle beugle, ensanglantée, et te fonce dessus de tout son poids : tu roules dans le fumier, le souffle coupé.",
+        "effets": {
+          "etat": "blesse",
+          "sante": -15,
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Blessée, elle s'enfuit en défonçant une planche de l'enclos. L'éleveur hurle qu'on lui doit vingt-cinq dollars.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Personne ne voit rien. Au matin, le vacher pleurera sur la carcasse de Marguerite.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "mort",
+          "honneur": -2
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Ton lasso se referme sur ses cornes. Elle te regarde, mâchonne, et ne bouge pas d'un pouce : il faudrait un attelage pour la déplacer."
+      },
+      {
+        "texte": "Elle part au trot et te traîne sur trois mètres dans la boue avant de s'arrêter net devant une touffe d'herbe.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu la prends au lasso comme un vrai vacher. Elle se laisse mener docilement jusqu'à la barrière, et Tommy siffle d'admiration.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle tire si fort sur la corde que tu dois lâcher prise. Elle s'éloigne, ton lasso traînant derrière elle comme un trophée.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "caresser": [
+      {
+        "texte": "Elle tend son large mufle humide vers ta main et te lèche le poignet d'une langue râpeuse.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle continue de ruminer sans te regarder, tolérant ta main comme on tolère une mouche."
+      },
+      {
+        "texte": "Elle pose sa grosse tête contre ton épaule et pousse un soupir qui sent l'herbe mâchée.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle secoue la tête et te bouscule d'un coup de corne. Tu t'écartes en te tenant les côtes.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      }
+    ],
+    "nourrir": [
+      {
+        "texte": "Elle engloutit {outil} d'un coup de langue et en réclame une autre en te poussant du mufle.",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Elle renifle {outil} avec méfiance, puis la croque bruyamment, la bave aux lèvres.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le vacher te regarde faire en souriant : « Elle adore ça. Monsieur Whitmore dit que c'est du gaspillage. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle te reconnaît de loin et trottine jusqu'à la barrière, sa cloche tintant à tout rompre.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu croques sa robe pie, sa cloche de cuivre et son regard vide d'une profondeur toute philosophique."
+      },
+      {
+        "texte": "Elle ne bouge pas d'un pouce pendant une heure : le modèle idéal. Seule sa mâchoire remue."
+      },
+      {
+        "texte": "Elle s'approche pendant que tu dessines et tente de manger une page de {outil}.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Dans la pénombre, tu ne distingues que les taches blanches de sa robe, comme des nuages posés sur l'enclos.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing rencontre un flanc dur comme un tonneau. Elle tourne la tête, mâchonne, et te gratifie d'un mépris tout bovin.",
+        "effets": {
+          "sante": -2
+        }
+      },
+      {
+        "texte": "Elle répond d'un coup de sabot arrière qui t'envoie rouler dans le fumier.",
+        "effets": {
+          "sante": -10,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Elle meugle de surprise. Le vacher accourt, furieux : « Touchez pas à Marguerite ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Elle baisse les cornes et te charge. Tu sautes par-dessus la barrière juste à temps.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil}, qui rebondit sur son flanc. Elle tourne lentement la tête, comme si un moustique l'avait offensée."
+      },
+      {
+        "texte": "Touchée par {outil}, elle meugle de douleur et boite jusqu'à l'autre bout de l'enclos.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu lances {outil} ; elle beugle et détale à travers l'enclos, entraînant tout le troupeau dans sa panique. L'éleveur jure comme un charretier.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "relation": -1
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Elle rumine avec une régularité d'horloge, les yeux mi-clos, insensible aux affaires des hommes."
+      },
+      {
+        "texte": "Ses pis sont gonflés : personne ne l'a traite ce matin. Le vacher a encore traîné au Smithfield's."
+      },
+      {
+        "texte": "Le W couronné du ranch Whitmore orne sa croupe. Les bords de la marque sont nets : un travail de professionnel, difficile à maquiller.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Elle dort debout, la tête basse ; sa cloche tinte doucement à chaque respiration.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Le magnésium éclate. Elle cligne des yeux, lâche une bouse fumante et reprend sa rumination."
+      },
+      {
+        "texte": "Elle prend la pose sans le savoir, profil noble, cloche brillante : une vraie carte postale des Heartlands."
+      },
+      {
+        "texte": "Elle s'approche si près de l'objectif qu'il ne reste sur la plaque qu'un gros mufle humide.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu la suis à travers l'enclos. Elle va de touffe en touffe, sans but, et finit par te regarder comme si c'était toi, la bête curieuse."
+      },
+      {
+        "texte": "Elle rejoint le troupeau que le vacher mène au ruisseau et s'arrête pour boire, les sabots dans la vase.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Elle ne va nulle part : elle dort debout. Tu te sens un peu bête, planté à côté d'elle dans le noir.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La détonation fait sursauter tout l'enclos. Elle s'effondre sur le flanc, les pattes raides.",
+        "effets": {
+          "etat": "mort",
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "La balle lui érafle le cou. Elle s'immobilise, tremblante, et te regarde d'un œil immense et triste.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Blessée, elle s'enfuit en meuglant dans la rue principale et renverse l'étal du crieur. L'éleveur réclame vingt-cinq dollars à grands cris.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 15,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Personne n'a rien vu. Une bête de moins dans l'enclos ; demain, le boucher aura de la viande à bas prix.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "mort",
+          "honneur": -2
+        }
+      }
+    ],
+    "traire": [
+      {
+        "texte": "Tu t'assois sur le tabouret, le front contre son flanc chaud. Le lait gicle dans le seau avec un bruit régulier ; tu en bois une gorgée encore tiède.",
+        "effets": {
+          "sante": 5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu tires trop fort : elle te balance un coup de sabot qui renverse le seau, et toi avec.",
+        "effets": {
+          "sante": -5,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Le vacher te regarde faire, goguenard : « Pas mal, pour un pistolero. Si vous voulez, je vous laisse la traite de cinq heures. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle meugle d'indignation : on ne trait pas une dame en pleine nuit. Tu repars avec trois gouttes et une cloche qui sonne l'alarme.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle se laisse traire en rêvassant et tourne même la tête pour te lécher l'oreille.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "sante": 5,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu remplis ta gourde en douce avant que l'éleveur ne te voie. Le lait de Whitmore a un petit goût de larcin.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "sante": 5,
+          "honneur": -1
+        }
+      }
+    ],
+    "marquer_au_fer": [
+      {
+        "texte": "Tu chauffes le fer dans les braises et repasses sur sa croupe le W couronné à demi effacé. Elle beugle, l'odeur de poil brûlé monte. L'éleveur te glisse deux dollars pour le travail.",
+        "effets": {
+          "argent": 2,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu hésites trop longtemps, le fer rougeoyant à la main. Elle rue, te frappe à la cuisse et s'enfuit au fond de l'enclos.",
+        "effets": {
+          "sante": -10,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Le vacher la tient par les cornes pendant que tu appliques le fer : « Pas trop longtemps, sinon ça s'infecte ! » La marque est nette.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 2,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu brûles ta propre marque par-dessus le W couronné de Whitmore. La bête est à toi désormais, pour qui ne regarde pas de trop près.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "À la lueur d'une lanterne, tu maquilles sa marque. Elle meugle si fort que des volets s'ouvrent du côté des maisons.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -2
+        }
+      }
+    ],
+    "voler_betail": [
+      {
+        "texte": "Tu ouvres la barrière en silence et la mènes au licol vers les collines. Elle te suit, placide, comme si le vol de bétail n'était qu'une promenade.",
+        "effets": {
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Elle refuse de quitter le troupeau, plante ses sabots dans la boue et meugle à pleins poumons. Tu renonces avant que tout Valentine ne rapplique.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu n'as pas fait vingt pas que le vacher hurle : « Au voleur ! On vole Marguerite ! » L'éleveur sort son derringer.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 15,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "La nuit couvre ta fuite. Seule la cloche de cuivre risque de te trahir : tu la bourres de paille et files vers le ruisseau.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le vol se fait sans bruit. Mais en passant devant l'église, tu croises le regard du chien errant, et tu te sens très loin du héros qu'on dit que tu es.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": -3
+        }
+      }
+    ],
+    "rabattre_betail": [
+      {
+        "texte": "Tu siffles et agites ton chapeau. Elle trottine, cloche battante, et rentre dans le rang sans discuter."
+      },
+      {
+        "texte": "Elle fait un écart brusque au dernier moment et te file entre les jambes ; tu manques de t'étaler dans le fumier.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "L'éleveur suit ta manœuvre du coin de l'œil et grogne : « Pas mauvais. J'ai du travail de convoi pour toi, si tu veux. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Dans le noir, tu rabats avec ardeur... la mauvaise bête : c'est un cochon qui rentre au galop dans l'enclos. La vache, elle, n'a pas bougé.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Elle te connaît : un claquement de langue suffit, et elle rejoint le troupeau en te jetant un regard presque complice.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ]
+  }
+}

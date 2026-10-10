@@ -1,0 +1,716 @@
+{
+  "id": "ton_cheval",
+  "description": "Un hongre bai bien charpenté, robe acajou, crinière et queue noires, une balzane à l'antérieur gauche. Ta selle usée, tes sacoches et ton fusil dans son fourreau pendent à ses flancs.",
+  "personnalite": "Fidèle, curieux et gourmand : il te reconnaît à l'odeur et vient au sifflet. Il déteste les coups de feu près de ses oreilles, les serpents et les ponts de bois. Chaque soin (caresse, brosse, pomme, eau fraîche) renforce votre lien et le rend plus courageux ; chaque coup le rend craintif, rétif et long à revenir.",
+  "repliques": [
+    "*hennit doucement en te voyant arriver*",
+    "*fouille tes poches du bout du nez, à la recherche d'une pomme*",
+    "*s'ébroue et chasse une mouche d'un coup de queue*",
+    "*tend l'oreille vers le saloon d'où s'échappe un air de piano*",
+    "*frappe le sol du sabot, impatient de reprendre la piste*",
+    "*renifle avec méfiance le gris attaché devant le Smithfield's*"
+  ],
+  "reactions": {
+    "caresser": [
+      {
+        "texte": "Tu flattes son encolure du plat de la main. Il souffle fort par les naseaux et pose un instant sa tête contre ton épaule.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il ferme les yeux sous ta main et pousse un long soupir de contentement, la lèvre inférieure pendante. Entre vous, plus besoin de mots.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il recule d'un pas quand ta main approche, l'œil blanc, les oreilles plaquées. Il lui faut un long moment avant d'accepter la caresse, en tremblant.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Dans la nuit fraîche, sa robe est chaude sous ta paume. Il tourne la tête et te souffle au visage une haleine d'herbe et de foin.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu lui grattes le garrot, là où il aime. Il tend le cou, la lèvre frémissante, et finit par te mordiller la manche de plaisir. Le gamin des rues rit aux éclats.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il se laisse caresser, mais garde une oreille tournée vers toi, méfiante. Les chevaux ont la mémoire longue.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "brosser": [
+      {
+        "texte": "Tu passes {outil} à longs gestes, du garrot à la croupe. La poussière de la piste s'envole en nuage, et sa robe baie se met à briller comme un sou neuf.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il se penche dans la brosse comme un chat sous la main, et quand tu t'arrêtes, il te pousse du nez pour que tu continues.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il frémit au premier passage de {outil}, comme si on allait le frapper. Tu brosses doucement, longtemps, et peu à peu ses muscles se relâchent.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu le brosses à la lueur d'une lanterne, devant l'écurie. Le palefrenier, qui faisait sa ronde, s'arrête et hoche la tête : un compliment rare.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "La boue séchée s'en va par plaques sous {outil}. Le vacher, accoudé à la barrière de l'enclos, siffle : « Il a de l'allure, votre cheval, quand il est propre ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "nourrir": [
+      {
+        "texte": "Tu lui tends {outil} à plat dans la paume. Il la croque en deux bouchées, du jus plein les babines, et en cherche déjà une autre dans ta poche.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il connaît le bruit de ta main dans la sacoche et hennit avant même de voir la pomme. Tu ris ; il en profite pour te la chiper.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il tend le cou le plus loin possible pour attraper la pomme sans s'approcher de toi, puis recule aussitôt. Il a faim, mais il a encore peur.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il mâche sa pomme dans le noir avec un bruit de bottes dans la boue, puis pose son menton sur ton épaule, comme pour dire merci.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il mange. Les chevaux ne jugent pas, ou pas tout de suite.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "monter_a_cheval": [
+      {
+        "texte": "Tu glisses ta botte dans l'étrier et te hisses en selle. Ton cheval s'ébroue, déjà tourné vers la piste."
+      },
+      {
+        "texte": "Tu attrapes le pommeau et te mets en selle d'un seul mouvement. Il fait deux pas de côté pour trouver son équilibre, puis attend tes ordres, les oreilles en avant."
+      },
+      {
+        "texte": "Il se tient immobile pour t'aider à monter, puis part au pas sans même attendre tes talons. Vous ne faites plus qu'un.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il fait un écart au moment où tu montes ; te voilà à cloche-pied, une botte coincée dans l'étrier, sous les rires des badauds.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Dans la nuit, tu cherches l'étrier à tâtons. Ton cheval reste parfaitement immobile, les oreilles pointées vers l'obscurité d'où monte le cri d'une chouette.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu sautes en selle sans toucher l'étrier. Ton cheval sent l'urgence et piaffe ; derrière toi, quelqu'un crie ton signalement depuis la galerie du saloon.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il couche les oreilles quand tu t'approches, puis se laisse monter avec résignation, le dos raide comme une planche.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Sous le soleil, tu enfourches ta monture au milieu de la rue principale. Le vacher te regarde avec envie : « Un jour, j'aurai un cheval comme ça. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Un hongre bai bien charpenté, aux jambes nettes, une balzane à l'antérieur gauche. D'anciennes cicatrices de fil barbelé lui zèbrent le poitrail."
+      },
+      {
+        "texte": "Il te suit des yeux où que tu ailles, une oreille pivotant vers chacun de tes gestes. Il t'attend, tout simplement.",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Il garde la tête basse, les flancs tendus, et sursaute au moindre bruit de botte. Un cheval qu'on a frappé, ça se voit de loin.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Endormi debout près de l'abreuvoir, une jambe arrière repliée, il ronfle doucement.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il chasse les mouches de la queue, un sabot posé sur la pince, et lorgne les pommes à l'étal du magasin général.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Il marche tranquillement jusqu'à l'abreuvoir, boit longtemps, puis va renifler le chien errant, qui file sans demander son reste."
+      },
+      {
+        "texte": "Il s'arrête, se retourne et vient vers toi : c'est lui qui préfère te suivre.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il s'éloigne à chaque pas que tu fais vers lui, en gardant toujours la même distance. Il faudra le regagner.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il te mène d'un pas sûr jusqu'à l'écurie et s'arrête devant la porte en grattant le sol : il sait où dorment le foin et l'avoine.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Tu le frappes au chanfrein. Il recule en couchant les oreilles, l'œil affolé ; il lui faudra longtemps pour l'oublier.",
+        "effets": {
+          "relation": -3,
+          "honneur": -1,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Ta main claque sur son encolure. Il fait un écart, renverse un seau et se colle contre la barre d'attache en tremblant.",
+        "effets": {
+          "relation": -2,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il ne comprend pas. Il te regarde, immobile, comme si c'était une erreur, puis baisse la tête et s'éloigne de quelques pas.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -3,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le palefrenier, qui a tout vu depuis l'écurie, lâche sa fourche et traverse la rue à grands pas : « Refais ça, et c'est toi que je frappe. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -2,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Cette fois, il se défend : une ruade te cueille à la hanche et t'envoie rouler dans la boue.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -15,
+          "relation": -2,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu lèves {outil} sur ton propre cheval. Il se cabre, hennit de terreur, arrache sa longe et s'enfuit au galop vers la sortie de la ville.",
+        "effets": {
+          "etat": "en_fuite",
+          "relation": -5,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Le coup l'atteint au flanc. Il s'effondre à moitié, se relève en boitant, et te regarde comme on regarde un étranger.",
+        "effets": {
+          "etat": "blesse",
+          "relation": -5,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Des cris montent de la galerie du saloon. Le palefrenier se jette entre toi et ta bête : « T'as perdu la tête ?! » Tu restes là, {outil} à la main, sous les regards de toute la rue.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -3,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Il ne fuit même pas. Il encaisse le coup et reste là, tremblant, comme s'il attendait que tu redeviennes toi-même.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "relation": -5,
+          "honneur": -4
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La détonation résonne dans la rue. Ton cheval s'effondre sur le flanc, une jambe battant l'air, puis plus rien. Te voilà seul, à pied, avec ta selle et ton silence.",
+        "effets": {
+          "etat": "mort",
+          "relation": -5,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "La balle lui laboure la croupe. Il hurle — un cheval qui hurle, tu ne l'oublieras jamais — et part au triple galop vers les collines.",
+        "effets": {
+          "etat": "en_fuite",
+          "relation": -5,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Un éclair dans le noir, un cri. Au matin, tu retrouves ton cheval derrière l'écurie, couché dans la paille, une plaie au cou que le palefrenier recoud sans t'adresser un mot.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "relation": -5,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Toute la rue te voit abattre ton propre cheval. Le croque-mort, sur le pas de sa porte, soulève son chapeau : « Je ne fais pas les chevaux. Voyez le boucher. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "mort",
+          "relation": -5,
+          "honneur": -4,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tes mains tremblent. Le coup part à côté et se fiche dans l'abreuvoir. Ton cheval te fixe, les naseaux dilatés, puis recule lentement, très lentement, hors de ta portée.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "etat": "hostile",
+          "relation": -4,
+          "honneur": -2
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} sur ton cheval. Touché à l'épaule, il fait un bond de côté et se met à tourner en rond au bout de sa longe, affolé.",
+        "effets": {
+          "relation": -2,
+          "honneur": -1,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il esquive {outil} d'un écart de tête et te regarde, outré, les oreilles en arrière.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il croit à un jeu, trottine renifler {outil} dans la boue, puis revient vers toi en secouant la crinière, l'air de dire : « Encore ? »",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Ton lancer le blesse à la jambe. Il boite jusqu'à l'abreuvoir sous les regards outrés des passants ; une dame te traite de brute.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "relation": -3,
+          "honneur": -2
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "La boucle de {outil} se pose sur son encolure. Il s'arrête net et tourne la tête vers toi, l'air de demander pourquoi tant de manières, alors qu'il suffisait de siffler."
+      },
+      {
+        "texte": "Il sent la corde, se cabre et tire de toutes ses forces. Tu es traîné sur trois mètres dans la boue avant qu'il ne s'arrête, haletant.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il se laisse prendre et vient de lui-même vers toi en suivant la corde, comme un chien en laisse.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu le récupères au lasso dans le noir, près de l'enclos où il s'était éloigné pour brouter. Il revient en traînant les sabots, de l'herbe encore aux lèvres.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "atteler": [
+      {
+        "texte": "Tu lui passes le collier et l'attelles à {outil}. Il n'a jamais tiré de voiture : il piaffe, regarde les brancards de travers, puis finit par donner un coup d'épaule.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il accepte le harnais sans broncher, parce que c'est toi. Il tire {outil} au pas, la tête basse, avec le sérieux d'un vieux cheval de labour.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il refuse le collier, rue dans les brancards et manque de briser une roue de {outil}. Le cocher accourt en jurant.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Toute la rue regarde ton cheval de selle attelé à {outil} comme à une charrue. Le palefrenier secoue la tête : « On met pas un cheval de selle aux brancards. Pauvre bête. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines sa tête de profil, l'œil doux, une oreille tournée vers toi. Il vient renifler {outil} et y laisse une trace de bave en guise de signature."
+      },
+      {
+        "texte": "Il pose pour toi sans bouger, la tête haute, comme s'il comprenait. C'est le plus beau dessin de {outil}.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Au coin du feu, tu le dessines endormi debout, la lèvre pendante. Le croquis te fait sourire toute la soirée.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il refuse de rester immobile et broute une touffe d'herbe chaque fois que tu lèves le crayon. Ton dessin a trois têtes et une seule queue.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Le flash le fait sursauter, mais il reste en place. Sur la plaque, il aura l'allure d'un vrai cheval de cavalerie, la tête haute."
+      },
+      {
+        "texte": "Il vient coller ses naseaux contre l'objectif au moment où tu déclenches. Tu auras une magnifique photographie de nez.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "L'éclair du magnésium le terrifie : il se cabre et manque d'arracher la barre d'attache.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Au soleil, devant le saloon de Keane, il pose comme un cheval de gravure. Le crieur de journaux siffle : « Ça ferait une belle une ! »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "calmer_cheval": [
+      {
+        "texte": "Tu poses la main sur son chanfrein et lui parles tout bas. Ses oreilles reviennent vers toi, son souffle ralentit, et il baisse la tête.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il ne veut pas t'entendre, d'abord. Tu restes là à lui parler de tout et de rien jusqu'à ce qu'il cesse de trembler. Ça prend une heure, mais il revient vers toi.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": 2,
+          "etat": "normal"
+        }
+      },
+      {
+        "texte": "Il suffit de ta voix. Au premier mot, il cesse de piaffer et vient poser sa tête contre ta poitrine.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Un coyote hurle derrière l'enclos. Tu fredonnes une vieille chanson à ton cheval, et ses oreilles cessent de tourner dans tous les sens.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Un coup de feu au Smithfield's l'a affolé. Tu lui parles à l'oreille au milieu de la rue, et il se laisse ramener à l'abreuvoir, encore frémissant.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "faire_boire_cheval": [
+      {
+        "texte": "Tu le mènes à l'abreuvoir de la rue principale. Il boit longtemps, à grandes gorgées, puis relève la tête, la bouche dégoulinante, et te trempe la chemise.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il boit, puis plonge le nez dans l'eau et t'en asperge exprès en secouant la tête. Ton cheval a de l'humour.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu le mènes boire au ruisseau, sous les étoiles. Le bruit de l'eau et celui de sa gorge sont les seuls sons de Valentine endormie.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il boit en gardant un œil sur toi, prêt à fuir au moindre geste. Mais il boit, et c'est un début.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "L'abreuvoir est pris par le gris de l'O'Driscoll, qui couche les oreilles. Ton cheval attend poliment son tour, puis boit pendant que tu surveilles la porte du Smithfield's.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "fouiller_sacoches": [
+      {
+        "texte": "Tu fouilles tes sacoches : des cartouches, une boîte de biscuits écrasés, une lettre jamais envoyée. Ton cheval tourne la tête pour vérifier que tu ne voles rien."
+      },
+      {
+        "texte": "Au fond d'une sacoche, sous une chemise roulée, tu retrouves un dollar d'argent oublié. Ton cheval souffle dans ton cou, l'air de dire que ça aurait pu être une pomme.",
+        "effets": {
+          "argent": 1
+        }
+      },
+      {
+        "texte": "Pendant que tu fouilles, il glisse le nez dans l'autre sacoche et en ressort fièrement ton foulard de rechange, tout baveux.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il fait un écart chaque fois que tu approches des sacoches. Tu finis par les vider à bout de bras, au rythme de ses pas de côté.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "À tâtons dans le noir, tu sens sous tes doigts une gourde, une boîte de cartouches et un vieux portrait que tu ne regardes plus qu'à la lueur des feux de camp.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "donner_un_nom": [
+      {
+        "texte": "Tu lui donnes un nom, à voix haute. Il dresse les oreilles, comme s'il l'avait toujours attendu.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu murmures son nouveau nom. Il hennit aussitôt, une fois, bien fort. Au loin, le palefrenier hoche la tête : « Ça lui va. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il ne réagit pas à son nouveau nom et te regarde avec méfiance. Il faudra le mériter, ce nom-là.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le gamin des rues, qui traînait par là, propose « Tonnerre », puis « Whisky », puis « Shérif ». Tu choisis autre chose. Ton cheval approuve d'un coup de tête.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu lui donnes le nom d'un hors-la-loi célèbre. Il s'ébroue, peu impressionné.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ]
+  }
+}

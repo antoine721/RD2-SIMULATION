@@ -1,0 +1,1276 @@
+{
+  "id": "ivrogne",
+  "description": "Un vieil homme voûté au chapeau défoncé, barbe grise collée de whisky et de boue, qui titube en serrant contre sa poitrine une petite bourse de cuir pendue à son cou. Sa chemise a dû être blanche avant la guerre ; ses yeux bleu délavé s'allument dès qu'on parle d'or.",
+  "personnalite": "Amos Pickett, dit « Pépite », ancien chercheur d'or de Leadville. Bavard, fanfaron et sentimental, il ment sur tout sauf sur une chose : il jure avoir vu de l'or dans les collines au nord, au coude d'un ruisseau, sous un rocher en forme d'enclume. Vraie piste ou délire, personne ne sait. Généreux quand il n'a rien, bagarreur au cinquième verre, il pleure au troisième couplet de « Clementine ».",
+  "repliques": [
+    "J'te dis qu'elle était grosse comme un œuf de caille, la pépite ! Au coude du ruisseau, sous le rocher en forme d'enclume !",
+    "*chante faux* « Oh my darling, oh my darling, oh my darling Clementine... »",
+    "*hic* Qui... qui a déplacé la rue ?",
+    "Un jour, j'achèterai tout Valentine. La banque d'abord. Pour le plaisir de flanquer ce vautour de directeur dans l'abreuvoir.",
+    "*trébuche et s'étale de tout son long dans la boue*",
+    "Eh, l'étranger ! T'as une tête à m'offrir un verre.",
+    "Le shérif me croit pas. Le pasteur me croit pas. Même le chien me croit pas.",
+    "Approche, freluquet, j'vais t'apprendre la boxe à la mode de Leadville !"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 5,
+      "lieu": "ecurie",
+      "activite": "ronfle dans le foin, en cachette du palefrenier"
+    },
+    {
+      "de": 5,
+      "a": 7,
+      "lieu": "rue_principale",
+      "activite": "chassé de l'écurie à coups de fourche, se trempe la tête dans l'abreuvoir"
+    },
+    {
+      "de": 7,
+      "a": 9,
+      "lieu": "magasin_general",
+      "activite": "tente de vendre sa « pépite » à l'épicier, qui ne fait ni crédit ni confiance"
+    },
+    {
+      "de": 9,
+      "a": 11,
+      "lieu": "eglise",
+      "activite": "dort au dernier rang pendant le sermon du pasteur sur la tempérance"
+    },
+    {
+      "de": 11,
+      "a": 14,
+      "lieu": "rue_principale",
+      "activite": "raconte son filon d'or à quiconque ralentit le pas"
+    },
+    {
+      "de": 14,
+      "a": 17,
+      "lieu": "berge",
+      "activite": "cherche de l'or dans le ruisseau avec une vieille batée cabossée"
+    },
+    {
+      "de": 17,
+      "a": 21,
+      "lieu": "saloon_smithfield",
+      "activite": "boit le whisky frelaté qu'il paie en cailloux brillants et en promesses"
+    },
+    {
+      "de": 21,
+      "a": 24,
+      "lieu": "rue_principale",
+      "activite": "chante « Clementine » devant le saloon de Keane, qui l'a banni, puis s'étale dans la boue"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il t'agrippe la manche et souffle une haleine à décaper un comptoir : « Au nord, l'ami. Là où le ruisseau fait un coude sous le rocher en forme d'enclume. De l'or gros comme mon pouce. »"
+      },
+      {
+        "texte": "Il plisse les yeux pour faire le point sur ta figure : « On s'connaît ? T'étais à Leadville en 78 ? Non ? Dommage, c'était le bon temps. On mangeait nos bottes, mais on était riches demain. »"
+      },
+      {
+        "texte": "Assis dans la boue, le dos contre l'abreuvoir, il parle aux étoiles plus qu'à toi : « Elle brillait comme ça, la pépite. Exactement comme ça. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il baisse la voix et regarde à droite, à gauche : « Toi, je t'aime bien. Alors écoute : un homme de la banque est monté là-haut le mois dernier, avec un sac et un marteau. Pourquoi, hein ? »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il recule en titubant et lève deux poings tremblants : « Toi, j't'ai à l'œil ! Encore un pas et j'te fais goûter le crochet du gauche de Leadville ! »",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il plisse les yeux vers le panneau des avis de recherche, puis vers toi, puis encore vers le panneau : « T'aurais pas un frère jumeau ? Bah. Le whisky me fait voir double, de toute façon. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il désigne le bureau du shérif d'un doigt crasseux : « Le gars qu'ils ont coffré, j'ai vu un balafré rôder sous la fenêtre de sa cellule, cette nuit. Mais qui écoute un ivrogne, hein ? »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il s'abrite sous le porche, trempé, et suit l'éclair du doigt vers les collines : « L'orage, ça lave la terre. Après, l'or remonte. Demain, j'y vais. Demain. »",
+        "si": [
+          "orage"
+        ]
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il soulève un chapeau qui n'a plus de fond et s'incline si bas qu'il manque de s'étaler : « Amos Pickett, futur roi des collines, pour vous servir ! »"
+      },
+      {
+        "texte": "Il te répond d'un rot sonore, puis, par politesse, d'un second, plus court, plus distingué."
+      },
+      {
+        "texte": "Son visage s'illumine : « Mon ami ! Mon seul ami dans cette ville de rats ! » Il te serre la main à deux mains, longtemps, beaucoup trop longtemps.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Allongé sous le porche du saloon, il lève une main molle sans ouvrir les yeux : « B'soir, m'dame. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il se redresse et tente un salut militaire approximatif : « On dit que t'es un homme bien. Un homme bien, ça paie un verre à un vieux soldat de l'or, non ? »",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Il crache par terre, à un bon mètre de tes bottes, ce qui chez lui relève de l'exploit : « J'salue pas les traîtres. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il lève sa bouteille vers toi, très haut, jusqu'au poitrail de ton cheval : « Salut, cavalier ! Tu me prends en croupe jusqu'aux collines ? »",
+        "si": [
+          "a_cheval"
+        ]
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Il n'attendait que ça. Il jette sa veste dans la boue, rate son premier pas et se met en garde à l'envers : « Viens donc, freluquet ! »",
+        "effets": {
+          "etat": "hostile",
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il éclate d'un rire édenté : « Tu crois m'faire peur ? J'ai passé un hiver dans les Rocheuses à manger mes bottes ! » Puis il retourne à sa bouteille comme si tu n'existais plus."
+      },
+      {
+        "texte": "Il se met à hurler pour toute la rue : « Au secours, le voyageur m'agresse ! » Le gamin des rues ricane et quelques rideaux bougent aux fenêtres.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il te fixe un long moment, soudain lucide : « J'connais ton genre. T'as les yeux de ceux qui m'ont volé ma concession en 81. » Il crache et lève les poings.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "hostile",
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il essaie de te balancer sa bouteille vide, mais elle lui glisse des doigts et se brise derrière lui. Il se retourne, vexé, pour engueuler l'abreuvoir.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il pose la main sur ton épaule, peiné : « Pas toi, l'ami. Pas toi aussi. » Il se mouche dans sa manche et s'éloigne en reniflant.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu te penches sur lui de toute ta hauteur. Il cligne des yeux, rote, puis te tapote la joue : « T'es mignon quand tu fais le méchant. »"
+      },
+      {
+        "texte": "Il blêmit et recule jusqu'à heurter l'abreuvoir, où il tombe assis dans l'eau : « D'accord, d'accord ! J'ai rien vu, rien dit, rien bu ! »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il brandit un goulot de bouteille cassé, la main tremblante : « Reste où t'es ! J'ai tué un grizzly avec moins que ça ! » C'est faux, mais il a l'air d'y croire.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il se recroqueville contre un poteau d'attache et se met à pleurer : « Pas les O'Driscoll, pitié, j'ai rien, j'ai que des cailloux ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il vide ses poches à toute vitesse et te tend un bouchon, trois cents et un caillou jaune : « Prends tout, mais laisse-moi la bouteille. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Tu sors {outil}. Il le regarde, puis toi, puis lève les mains si haut qu'il perd l'équilibre et tombe à la renverse dans la boue.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il hurle « À l'assassin ! » si fort que le shérif Malloy sort la tête de son bureau. Tu as juste le temps de ranger {outil}.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il fixe {outil} avec un sourire triste : « Vas-y. Ça m'évitera de payer le croque-mort. Il me mesure du regard depuis trois hivers, celui-là. »"
+      },
+      {
+        "texte": "Il te lance sa bouteille, qui rebondit mollement sur ton torse, puis détale en zigzag entre les chevaux attachés.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il se met à genoux dans la boue et récite le Notre Père à l'envers. Arrivé à « amen », il te demande si tu peux lui avancer un dollar.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il plisse les yeux : « T'es sur le panneau, toi, non ? Range ça. Les recherchés et les ivrognes, on est de la même famille : celle que personne veut voir. »",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Il tient à peine debout mais ne lâche jamais la petite bourse de cuir pendue à son cou. De temps en temps, il la palpe, comme pour vérifier qu'elle respire encore."
+      },
+      {
+        "texte": "Il tend une écuelle en fer-blanc aux passants, la remplit à l'abreuvoir faute de pièces, boit, puis recommence avec la même dignité.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Devant le saloon de Keane, il chante « Clementine » à pleins poumons jusqu'à ce qu'une fenêtre s'ouvre et qu'un pot de chambre se vide à côté de lui.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Sous la crasse, ses mains sont celles d'un mineur : larges, calleuses, deux doigts tordus. Au revers de sa veste, une épingle en forme de pioche, en vrai cuivre."
+      },
+      {
+        "texte": "Il s'arrête devant les tonneaux du magasin général, regarde partout, plonge le bras dans le tonneau de farine et en ressort une flasque. L'épicier n'en sait rien."
+      },
+      {
+        "texte": "Sous la pluie battante, il reste assis dans la boue, la bouche ouverte vers le ciel : « L'eau de Dieu, au moins, elle est gratuite. Et elle a pas été coupée par le Smithfield's. »",
+        "si": [
+          "pluie"
+        ]
+      },
+      {
+        "texte": "Le dimanche, le pasteur le traîne par l'oreille jusqu'au premier rang. Il chante les cantiques sur l'air de « Clementine », et personne n'ose l'arrêter.",
+        "si": [
+          "dimanche"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu le croques assis contre l'abreuvoir, la bouche ouverte sur une chanson. Il se penche pour regarder : « Tu m'as fait le nez trop rouge. » Il a le nez exactement de ce rouge-là.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il prend la pose avec une dignité de sénateur, la main sur la bourse à son cou, puis s'endort debout avant que tu aies fini le chapeau."
+      },
+      {
+        "texte": "Il réclame le dessin et griffonne dessous, d'une écriture d'enfant : « Amos Pickett, roi de l'or ». Puis il te le rend : « Garde-le, il vaudra cher un jour. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "À la lueur d'une lanterne, tu ne distingues qu'une silhouette tassée dans la boue et l'éclat d'une bouteille. Ton dessin a l'air d'une scène de la Bible.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il se fige devant l'objectif, les yeux écarquillés, et retient sa respiration si longtemps qu'il devient violet. Le flash part ; il s'écroule de soulagement."
+      },
+      {
+        "texte": "Il brandit son caillou jaune face à l'appareil : « Mets bien l'or au milieu ! C'est pour le prospectus de ma future compagnie minière ! »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le flash de magnésium l'éblouit. Il hurle « Les O'Driscoll ! », lève les mains et bascule à la renverse dans l'abreuvoir.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te tourne le dos et baisse son pantalon pour la photo. Le crieur de journaux, qui passait, en lâche ses gazettes de rire.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu le charges sur ton épaule comme un sac de farine. Il ne pèse presque rien et continue de chanter « Clementine », la tête en bas, pendant tout le trajet.",
+        "effets": {
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "À peine sur ton épaule, il te vomit dans le dos un whisky qui sent la térébenthine. Le barman du Smithfield's ne coupe décidément pas son alcool qu'à l'eau.",
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu le déposes dans le foin de l'écurie. Il s'y enroule comme un chat et murmure : « Merci, m'man. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il se débat comme un diable, te mord l'épaule et hurle à l'enlèvement. Tu le lâches dans la boue, où il se met aussitôt à ronfler.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -2,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu le portes jusqu'au banc de la rue. Le pasteur, de passage, hoche la tête : « Voilà de la charité. Dommage qu'elle ne le guérisse pas de la bouteille. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 1
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Il zigzague jusqu'aux tonneaux du magasin général, y repêche une flasque cachée, puis file vers le ruisseau, une vieille batée sous le bras."
+      },
+      {
+        "texte": "Au bord du ruisseau, il fait tourner sa batée avec une adresse surprenante, l'œil soudain vif. Au fond brille une poussière jaune... ou peut-être juste le soleil.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il entre au cimetière et s'assoit près d'une tombe sans nom : « J'te l'avais dit, Jake, qu'on la trouverait. On la trouvera. » Il s'endort là, la joue contre la terre.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il se retourne tous les dix pas, te voit, accélère, se prend les pieds dans un poteau d'attache et s'étale. Il reste allongé en faisant le mort.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il te mène jusqu'à la sortie nord de la ville, pointe les collines du doigt, puis fait demi-tour vers le Smithfield's : « Demain. J'irai demain. » Il dit ça depuis neuf ans."
+      },
+      {
+        "texte": "Dans le brouillard, tu ne vois que sa silhouette qui zigzague et tu n'entends que sa chanson. Puis plus rien. Tu le retrouves endormi contre une tombe, au cimetière.",
+        "si": [
+          "brouillard"
+        ]
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing l'atteint au menton. Il tourne sur lui-même avec une grâce de danseuse et s'effondre face la première dans la boue. Le gamin des rues applaudit.",
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il esquive par miracle en trébuchant au bon moment, et son coup de poing de riposte, parti du fond de la rue, t'atteint en plein nez.",
+        "effets": {
+          "sante": -5,
+          "prime": 5,
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu le frappes au ventre. Il se plie en deux, vomit dans l'abreuvoir, puis se redresse, digne : « Bon. Ça, c'est fait. Tu me dois un verre. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il s'écroule dans la boue sous les yeux de la gérante de l'hôtel, qui pince les lèvres et va chercher l'adjoint. Il arrive en courant, la main déjà sur son revolver.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il attendait ça : il te saute dessus avec la rage d'un blaireau, et vous roulez dans la boue jusqu'à ce qu'il s'endorme en plein combat, un poing sur ta joue.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "relation": -1
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Un seul coup derrière l'oreille et il s'affaisse dans la boue, l'air presque soulagé. Il ronfle avant d'avoir touché le sol.",
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu frappes, mais son crâne de mineur en a vu d'autres. Il se retourne, te regarde d'un air vexé, puis s'évanouit quand même, par politesse.",
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il tombe raide devant le magasin général. L'épicier sort, constate, et lui fait les poches avant toi : « Il me devait quarante cents. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il s'effondre sans un bruit derrière l'abreuvoir. Personne ne remarque rien : un ivrogne étalé dans la boue, c'est le paysage de Valentine.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Ton coup est trop fort. Il s'ouvre l'arcade sur le rebord de l'abreuvoir et reste là, sonné, le sang mêlé à l'eau verte.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -2,
+          "relation": -3
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu fonds sur lui, {outil} à la main. Il lève sa bouteille pour parer, et le verre éclate en pluie dorée sur vous deux avant qu'il s'écroule, blessé.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -2,
+          "prime": 10,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Il tombe à genoux avant le premier coup et se protège la tête : « Pas la figure ! C'est tout ce qui me reste ! » Il reste recroquevillé dans la boue, en sang.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -3,
+          "prime": 10,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Il s'effondre en hurlant à l'assassin. L'adjoint du shérif surgit au coin de la rue, dégaine trop vite et tire en l'air, ce qui affole tous les chevaux.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -3,
+          "prime": 20,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Il s'agrippe à un poteau d'attache, te balance un coup de genou d'une précision de vétéran, puis s'enfuit en titubant.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "etat": "en_fuite",
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Dans l'obscurité, tu le touches au bras. Il s'enfuit vers l'écurie en hurlant que le Diable est descendu à Valentine.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "honneur": -2,
+          "relation": -4
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Le coup de feu claque dans la rue. Il regarde le trou dans sa chemise, puis toi : « C'était ma chemise du dimanche. » Il s'effondre dans la boue et ne se relève pas.",
+        "effets": {
+          "etat": "mort",
+          "honneur": -5,
+          "prime": 100,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "La balle lui traverse l'épaule. Il tombe assis dans l'abreuvoir en hurlant, et l'eau devient rose. Toute la rue se jette à couvert.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -4,
+          "prime": 40,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Tu le rates : la balle fait voler en éclats sa bouteille. Il contemple le goulot dans sa main, et ce deuil-là le dégrise d'un coup. Il s'enfuit en courant droit, pour une fois.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il s'écroule au milieu de la rue. Le croque-mort sort aussitôt de sa boutique, son mètre ruban à la main : « Un mètre soixante-deux. Je l'avais dit. » Le shérif Malloy, lui, arrive en courant.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "mort",
+          "honneur": -5,
+          "prime": 120
+        }
+      },
+      {
+        "texte": "Il tombe à genoux, la main sur sa bourse de cuir : « Prends-la... mais elle est maudite... » Il meurt avec un sourire de travers que tu n'oublieras pas.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "mort",
+          "honneur": -5,
+          "prime": 100
+        }
+      },
+      {
+        "texte": "Il voit l'éclair du canon et se jette à plat ventre avec un réflexe de vieux mineur habitué aux coups de grisou. La balle siffle au-dessus de lui ; il rampe sous le trottoir de bois et disparaît.",
+        "effets": {
+          "etat": "en_fuite",
+          "honneur": -2,
+          "prime": 10,
+          "relation": -4
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil}, qui l'atteint en plein front. Il vacille, regarde le ciel d'un air accusateur, puis s'assoit dans la boue.",
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il ne voit pas venir {outil}, qui le rate d'un bon mètre. Il continue sa chanson sans se douter de rien, en battant la mesure avec sa bouteille."
+      },
+      {
+        "texte": "Il esquive en tombant à la renverse, ramasse ce qui lui tombe sous la main, une poignée de crottin, et te la renvoie en pleine poitrine.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lances {outil} sur lui devant toute la rue. Le pasteur, qui passait, s'arrête : « Même les bêtes ne s'acharnent pas sur les plus faibles, mon fils. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -2
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu lui arraches le goulot de bouteille cassé qu'il brandissait. Il fixe sa main vide, puis fond en larmes : « C'était ma dernière arme... et ma dernière bouteille. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Dans sa poche, tu trouves un vieux derringer rouillé, sans cartouche, le canon bouché par de la terre. « Il a jamais tiré, dit-il. Mais il fait peur aux coyotes. »"
+      },
+      {
+        "texte": "Il te mord la main jusqu'au sang avant que tu lui arraches son couteau de mineur à lame cassée. Puis il te traite de voleur pendant cinq bonnes minutes.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il te tend lui-même sa vieille lame : « Garde-la, l'ami. Moi, quand j'ai bu, j'ai peur de faire une bêtise. » Il a l'air sincèrement soulagé.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "detrousser": [
+      {
+        "texte": "Ses poches contiennent un bouchon, trois cents, une chique mâchouillée et un caillou jaune enveloppé dans un mouchoir. Le caillou brille drôlement.",
+        "effets": {
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il ronfle pendant que tu le fouilles. Dans la doublure de sa veste, une carte griffonnée sur une étiquette de whisky : un ruisseau, un rocher en forme d'enclume, une croix.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "L'épicier te voit faire depuis sa vitrine et file prévenir le shérif : « Même un ivrogne, ça se vole pas devant chez moi ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 10,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Dans sa botte, un dollar d'argent roulé dans un chiffon, ses économies de toute une saison. Il gémit dans son sommeil : « Pas la botte... »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 1,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Il se réveille à moitié et te saisit le poignet avec une force étonnante : « Les mains d'un voleur, ça se reconnaît. » Il hurle jusqu'à ce que tu lâches tout.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il prend {outil} avec un respect de communiant, le retourne dans tous les sens, puis demande, plein d'espoir : « Ça se boit ? »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il mord {outil} pour voir si c'est de l'or, grimace, puis le glisse quand même dans sa veste : « On sait jamais. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Ses yeux se mouillent : « Personne m'avait rien donné depuis Leadville. » Il te tend son caillou jaune, puis le reprend vite : « Non, pas ça. Mais un jour, je te revaudrai ça. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il prend {outil} et file droit au Smithfield's pour l'échanger contre un whisky. Tu l'entends marchander à travers la porte battante.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il s'endort au pied de l'abreuvoir en serrant {outil} contre lui comme un enfant sa poupée.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il accepte avec enthousiasme, compte dix pas, puis onze, puis douze, et continue à compter jusqu'au Smithfield's, où il entre boire un coup. Le duel est remis à jamais."
+      },
+      {
+        "texte": "Il se campe au milieu de la rue, la main au-dessus de sa ceinture... où il n'y a aucune arme. Il la regarde, déçu : « Tu m'prêtes un pistolet ? »"
+      },
+      {
+        "texte": "Le pasteur s'interpose entre vous, la main posée là où il portait autrefois un colt : « Un duel contre un homme qui voit trois soleils, c'est un meurtre. » La rue approuve.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il accepte, tremblant, un derringer rouillé à la main. Tu dégaines le premier ; il tombe dans la boue sans avoir levé le bras. Personne à Valentine n'appellera ça un duel loyal.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "mort",
+          "honneur": -5,
+          "prime": 75
+        }
+      },
+      {
+        "texte": "Il dégaine un vieux derringer qui fait long feu, puis te le lance à la figure de dépit. Vous restez plantés là, bêtes, au clair de lune, jusqu'à ce qu'il s'endorme debout.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu lui lies les poignets. Il ne proteste pas : « Enfin quelqu'un qui m'empêche de boire. » Puis il s'endort, ficelé comme un rôti.",
+        "effets": {
+          "etat": "ligote",
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il se débat comme une anguille et chante « Clementine » à tue-tête, si faux que deux chevaux attachés tirent sur leur longe. Tu finis par serrer le dernier nœud.",
+        "effets": {
+          "etat": "ligote",
+          "honneur": -1,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu le ficelles au poteau d'attache devant le saloon. Les passants rient, le gamin des rues lui vole son chapeau, et le shérif Malloy te regarde d'un œil las.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "honneur": -2,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te tend lui-même les poignets : « Ligote-moi jusqu'à demain, l'ami. J'veux voir à quoi ça ressemble, un matin sans whisky. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "relation": 1
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Le nœud coulant se referme sur lui et il tombe d'un bloc, comme un veau. De la boue jusqu'aux oreilles, il marmonne : « Joli lancer, cow-boy. »",
+        "effets": {
+          "etat": "ligote",
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le lasso le manque : il vient de se pencher pour ramasser une pièce imaginaire. Il se relève, ignorant tout, et reprend sa chanson."
+      },
+      {
+        "texte": "Tu le traînes sur trois mètres dans la boue sous les rires du vacher, qui crie : « Pas mal ! Tu le marques au fer, maintenant ? »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "honneur": -2,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "La corde lui serre la taille ; il s'agrippe à l'abreuvoir de toutes ses forces, et vous tirez chacun de votre côté jusqu'à ce que le bois craque.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "relation": -1
+        }
+      }
+    ],
+    "interroger_filon": [
+      {
+        "texte": "Il trace une carte dans la boue avec son doigt : « Ici le ruisseau, ici le rocher en forme d'enclume, et là... » Un cheval passe et efface tout. « Bah. C'est là, crois-moi. »"
+      },
+      {
+        "texte": "Il parle de Leadville, de la neige de 78, de son associé Jake mort dans un éboulement, et seulement à la fin, à voix basse, d'une veine qui brillait sous l'eau d'un ruisseau, au nord."
+      },
+      {
+        "texte": "Il te prend par le col et murmure : « Le directeur de la banque veut saisir des fermes là-haut. Toutes au bord du même ruisseau. Tu trouves pas ça drôle, toi ? » Il ne rit pas.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il se ferme comme une huître : « T'as des yeux de voleur de concession. J'en ai connu, des comme toi. Va creuser ailleurs. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il pleure en racontant. L'or, il l'a vu, il en est sûr. Mais il était si saoul ce jour-là qu'il ne se rappelle plus de quel côté coulait le ruisseau.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il montre les collines au nord, bleues dans la chaleur : « Trois heures à cheval. Le ruisseau fait un coude. Le fermier qui traîne devant la banque habite juste à côté, même. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il se gratte la barbe : « Y avait des traces de sabots partout autour du rocher. Des tas. Comme si d'autres gars venaient y cacher des choses, pas en chercher. » Il frissonne."
+      },
+      {
+        "texte": "Il s'éponge le front sous le soleil de plomb : « Il faisait chaud comme ça, le jour où je l'ai vue. L'eau était basse, et la veine brillait au fond comme un serpent d'or. »",
+        "si": [
+          "chaleur"
+        ]
+      }
+    ],
+    "examiner_pepite": [
+      {
+        "texte": "Il dénoue la bourse de cuir avec des gestes de prêtre. Dedans, un caillou jaune gros comme un ongle. Tu le mords : il ne marque pas. Ça pourrait être de l'or. Ou de l'or des fous."
+      },
+      {
+        "texte": "Tu le tournes au soleil : des paillettes dorées, mais aussi des petits cubes trop parfaits. La pyrite fait ça. L'or aussi, parfois. Amos te regarde, suspendu à tes lèvres."
+      },
+      {
+        "texte": "Il te laisse le soupeser dans ta paume : « L'armurier m'en a offert dix dollars. Dix ! Pour un morceau de la montagne d'or ! J'ai refusé, évidemment. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il fourre la bourse dans son pantalon et recule : « Personne touche à ma pépite ! Personne ! Pas même le Bon Dieu ! »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "À la lueur des lampes du saloon, le caillou brille d'un éclat chaud qui te fait douter. Amos chuchote : « Tu la vois, hein ? Tu la vois, toi aussi ? »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "acheter_carte_filon": [
+      {
+        "texte": "Il te vend pour cinq dollars une étiquette de whisky couverte de gribouillis : un ruisseau, un rocher, une croix, et dans un coin, « JAKE » entouré d'un cœur.",
+        "effets": {
+          "argent": -5,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il te cède la carte pour deux dollars, mais en garde la moitié déchirée : « La moitié du chemin pour la moitié du prix. L'autre moitié quand tu reviens riche. »",
+        "effets": {
+          "argent": -2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il refuse ton argent : « Les amis, ça s'associe. Cinquante-cinquante. » Il te serre la main, crache dedans, et te la resserre.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il empoche tes dix dollars et glousse : « T'es sur le panneau, hein ? Avec ta tête, il te faut un coin où personne cherche. Les collines, c'est parfait. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -10,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te vend une carte pour trois dollars. Tu remarques trop tard que le ruisseau dessiné passe en plein milieu du cimetière de Valentine.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -3
+        }
+      }
+    ],
+    "payer_un_verre": [
+      {
+        "texte": "Ses yeux s'allument comme deux lampes à pétrole. Au Smithfield's, il vide le verre d'un trait, rote, et te raconte toute sa vie en quatre minutes.",
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il lève son verre si haut qu'il se le renverse dans la manche : « À l'or ! À toi ! Au shérif ! Non, pas au shérif. » Puis il lèche sa manche.",
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Au troisième verre, il te confie la vraie histoire : la pépite, ce n'est pas lui qui l'a trouvée, c'est Jake, son associé, la veille de mourir. Il a juré de retrouver le filon pour lui.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -3,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Le pasteur te croise à la porte du saloon et soupire : « Tu lui offres un verre, je lui offre une prière. On verra lequel des deux l'emporte. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Au comptoir du Smithfield's, il porte un toast si long que le barman bourru lui reprend le verre avant la fin. Il chante pour se consoler, faux.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      }
+    ],
+    "plonger_tete_abreuvoir": [
+      {
+        "texte": "Tu lui enfonces la tête dans l'eau verte. Il remonte en crachant un brin de foin : « Merci, j'avais soif ! » Puis il y retourne de lui-même.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il ressort de l'abreuvoir dégrisé d'un coup, les yeux soudain clairs : « Le rocher en forme d'enclume ! Au nord du coude, pas au sud ! » Puis la lucidité s'envole.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "La moitié de la rue s'arrête pour rire. Un cheval attaché renâcle et refuse de boire après lui. L'ivrogne te regarde, trempé et humilié.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il se débat, t'arrose des pieds à la tête et t'entraîne avec lui dans l'abreuvoir. Vous en ressortez couverts de mousse verte, sous les applaudissements du gamin.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu le maintiens sous l'eau trop longtemps. Quand tu le lâches, il tousse, vomit et te fixe avec une peur nue que tu n'avais encore vue chez personne.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -2,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "L'eau est glacée. Il hurle comme un coyote, réveille la moitié de l'hôtel, et la gérante lui jette un seau d'eau par la fenêtre pour faire bonne mesure.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "chanter_clementine": [
+      {
+        "texte": "Vous braillez « Oh my darling Clementine » à deux voix, aussi faux l'un que l'autre. Au troisième couplet, il pleure à chaudes larmes sur ton épaule.",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il chante le refrain, toi les couplets, et le chien errant hurle à la mort pour vous accompagner. Le crieur de journaux vous lance une pièce pour que vous arrêtiez.",
+        "effets": {
+          "argent": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Une fenêtre de la pension s'ouvre : « Fermez-la, bon sang ! » Amos, ravi, entame un couplet de son invention sur la propriétaire.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le pianiste de Keane, qui passait, s'arrête et grimace : « Et c'est moi qu'on accuse de jouer faux... » Il reprend quand même l'air en sifflotant.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Les gens s'attroupent, étonnés de voir un homme respecté chanter avec l'ivrogne. Une vieille dame lui glisse un sandwich. Amos te regarde comme on regarde un saint.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      }
+    ],
+    "relever_de_la_boue": [
+      {
+        "texte": "Tu le tires par les aisselles. Il se relève, te remercie avec une dignité de lord anglais, fait deux pas et retombe exactement au même endroit.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il s'accroche à ton bras et refuse de lâcher : « T'es un bon gars. Je te lègue la moitié de ma mine. Non. Un tiers. » Tu repars couvert de boue jusqu'aux coudes.",
+        "effets": {
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Une dame à ombrelle qui sortait du magasin général te regarde faire, puis hoche la tête. Pour la première fois depuis longtemps, quelqu'un à Valentine sourit à Amos.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il chasse ta main d'une gifle : « J'ai pas besoin de pitié ! J'suis tombé exprès ! J'inspectais la boue ! » Et il reste allongé, l'air très important.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Tu le relèves ; il sent le whisky frelaté et la vase. Il te serre contre lui en sanglotant : « Ma fille aurait ton âge. Elle m'a jamais écrit. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      }
+    ],
+    "offrir_un_verre": [
+      {
+        "texte": "Tu lui tends ta flasque. Il la vide d'un trait, te la rend, puis la reprend pour vérifier qu'elle est bien vide : « Juste pour être sûr. »",
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il refuse d'un geste noble : « Non, non, non. » Puis : « Bon, un seul. » Puis, une heure plus tard, au Smithfield's : « Le dernier, promis. »",
+        "effets": {
+          "argent": -3,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il lève le verre que tu lui offres vers les collines : « À Jake. » Il le boit lentement, pour une fois, comme on boit à un enterrement.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il regarde le verre, puis toi, longuement : « Un homme bien qui me paie à boire... Le pasteur dirait que tu m'aides à mourir. » Il boit quand même.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te soupçonne : « Tu veux me saouler pour me voler ma carte, hein ? » Il boit quand même, d'une traite, puis serre sa bourse de cuir à deux mains.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le dimanche, le Smithfield's sert par la porte de derrière. Il t'y conduit avec la sûreté d'un pèlerin en route vers la Terre promise.",
+        "si": [
+          "dimanche"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      }
+    ]
+  }
+}

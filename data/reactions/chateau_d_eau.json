@@ -1,0 +1,368 @@
+{
+  "id": "chateau_d_eau",
+  "description": "Une grosse cuve de bois cerclée de fer, perchée sur quatre pattes de poutres goudronnées au bout du quai, avec une échelle rouillée qui grimpe jusqu'à sa plateforme. Un bras verseur articulé pend au-dessus de la voie, et des gouttes tombent sans fin sur le ballast.",
+  "repliques": [
+    "*plic… plic… plic…*",
+    "Le bois de la cuve craque sous le soleil.",
+    "L'échelle grince dans le vent."
+  ],
+  "reactions": {
+    "escalader": [
+      {
+        "texte": "Tu montes l'échelle de fer rouillée, barreau après barreau. En haut, le vent siffle et Valentine s'étale à tes pieds comme une carte dépliée."
+      },
+      {
+        "texte": "Du sommet, tu vois tout : la rue principale, l'enclos où tourne Lucifer, le cimetière, et le chef de gare, minuscule, qui te montre sa montre en criant.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Un barreau cède sous ta botte. Tu restes suspendu d'une main au-dessus du vide avant de te hisser sur la plateforme, le cœur battant.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Couché sur les planches de la plateforme, tu es invisible. En bas, l'adjoint passe deux fois sous le château d'eau sans lever la tête.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "La cuve suinte de partout. Une flaque permanente s'étale sous les pattes, où les chevaux de passage viennent boire en douce."
+      },
+      {
+        "texte": "Sur une poutre, quelqu'un a gravé un cœur maladroit et une inscription : « T.O. + M.L. 1887 ». Le bois a gardé le secret mieux que les amoureux.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Sous la lune, le château d'eau ressemble à un géant sur quatre pattes qui monte la garde au bord de la voie. Une ombre est-elle couchée tout en haut ? Peut-être.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "De la plateforme, on doit voir toute la rue principale, la banque et le bureau du shérif. Le meilleur poste de tireur de toute la ville."
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines le château d'eau dans {outil} : quatre pattes grêles, une cuve ventrue, et le bras verseur comme un nez trop long."
+      },
+      {
+        "texte": "Pendant que tu dessines, la locomotive vient boire sous le bras verseur. Tu ajoutes la vapeur, et le mécanicien qui te fait coucou.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Au clair de lune, ton croquis ressemble davantage à une araignée géante qu'à un réservoir. Ça te plaît assez.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu cadres le château d'eau contre le ciel immense. Sur la plaque, il paraît plus haut que le clocher de l'église."
+      },
+      {
+        "texte": "Le train s'arrête juste à ce moment-là pour faire le plein. Ta photo montre la locomotive qui boit au bras verseur comme un cheval à l'abreuvoir.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La pose est trop longue : sur le cliché, la cuve est floue, et une silhouette en haut de l'échelle semble te regarder.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la cuve. Le projectile rebondit sur les douelles avec un « bong » sourd, et un pigeon s'envole du toit conique."
+      },
+      {
+        "texte": "Tu vises le bras verseur avec {outil}. Il oscille, grince, et lâche une gerbe d'eau sur un passant qui te maudit sur sept générations.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu lances {outil} vers le sommet, dans le noir. Ça retombe à tes pieds deux secondes plus tard, avec une certaine insolence.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle perce la cuve. Un jet d'eau fin comme une ficelle jaillit et arrose le quai en arc de cercle.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu tires encore et encore : la cuve fuit bientôt de partout, comme une passoire. Le chef de gare accourt avec un seau, puis repart en chercher un deuxième.",
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Un jet d'eau jaillit droit sur le chapeau d'une dame de Saint Denis qui attendait le train. Elle te foudroie du regard, trempée jusqu'au corset.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le coup de feu résonne et l'eau se met à gargouiller dans le noir. Au matin, le quai sera un lac.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "La balle ricoche sur un cercle de fer et siffle à ton oreille. Le château d'eau, lui, n'a pas une égratignure.",
+        "effets": {
+          "sante": -3
+        }
+      }
+    ],
+    "detruire": [
+      {
+        "texte": "Tu t'attaques à une poutre de soutien à grands coups de botte. Elle tient bon : le château d'eau a vu passer des orages bien pires que toi."
+      },
+      {
+        "texte": "Tu fais sauter les cercles de fer à coups de crosse. Les douelles s'écartent et l'eau jaillit de partout en sifflant ; la cuve se vide sur la voie.",
+        "effets": {
+          "etat": "detruit",
+          "prime": 15,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Le chef de gare accourt, livide : « Sans eau, pas de vapeur ! Sans vapeur, pas de train ! Sans train, pas de monde ! » Il siffle l'adjoint de toutes ses forces.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu cognes et tu arraches pendant une heure. Au petit matin, la cuve s'effondre dans un torrent de boue qui inonde la voie ferrée.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 20,
+          "honneur": -2
+        }
+      }
+    ],
+    "faire_sauter": [
+      {
+        "texte": "Tu cales {outil} entre deux poutres et allumes la mèche. L'explosion brise les pattes ; la cuve bascule et se fracasse sur les rails dans une vague d'eau et d'échardes.",
+        "effets": {
+          "etat": "detruit",
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "La détonation secoue toute la ville. Une vague d'eau boueuse balaie le quai, emportant des malles, la casquette du chef de gare et sa dignité.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 75,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "La cuve éclate dans la nuit comme une bombe d'eau. Les rails sont noyés : le 7 h 12 ne partira pas à l'heure, et le chef de gare ne s'en remettra jamais.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "La mèche était trop courte : le souffle te projette au sol, trempé et assourdi, sous une pluie d'échardes.",
+        "effets": {
+          "etat": "detruit",
+          "sante": -20,
+          "prime": 50,
+          "honneur": -3
+        }
+      }
+    ],
+    "se_cacher": [
+      {
+        "texte": "Tu te plaques derrière une grosse patte de poutre goudronnée. L'eau qui goutte de la cuve te tombe régulièrement dans le cou."
+      },
+      {
+        "texte": "Caché derrière les poutres, tu regardes l'adjoint fouiller le quai. Une goutte glacée s'écrase sur ta nuque ; tu ne bouges pas d'un cil.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Dans l'ombre du château d'eau, tu es invisible. Seul le plic-plic de la fuite trahit qu'il y a encore de la vie par ici.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Les pattes du château d'eau ne sont pas bien larges : ton chapeau et ton coude dépassent. Un gamin des rues te montre du doigt en riant.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "abaisser_bras_verseur": [
+      {
+        "texte": "Tu tires sur la corde ; le bras verseur s'abaisse en grinçant et lâche une cataracte d'eau sur la voie. Te voilà trempé jusqu'aux bottes."
+      },
+      {
+        "texte": "Le mécanicien te fait signe : tu abaisses le bras pile au-dessus du tender. L'eau s'engouffre en grondant, et il te lance une pièce.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 1
+        }
+      },
+      {
+        "texte": "Le bras descend dans le noir et arrose copieusement un ivrogne qui cuvait sur le ballast. Il se relève en jurant qu'il a vu de l'or dans les collines.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le chef de gare surgit : « Ce bras ne se manœuvre qu'à l'arrivée d'un train ! Il y a un horaire, même pour l'eau ! » Il le remonte lui-même en marmonnant."
+      },
+      {
+        "texte": "Tu inondes le quai pour faire diversion : pendant que tout le monde court chercher des seaux, tu t'éclipses.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "guetter_depuis": [
+      {
+        "texte": "Allongé sur la plateforme, tu vois toute Valentine : la banque, le bureau du shérif, les deux saloons, et l'enclos où Lucifer tourne en rond."
+      },
+      {
+        "texte": "De là-haut, tu repères l'O'Driscoll qui sort du Smithfield's et rôde autour du bureau du shérif en comptant ses pas. Il prépare quelque chose.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La ville dort. Seules brillent les fenêtres des saloons et celle du télégraphe. Sur les collines, des feux de camp : trop nombreux pour être honnêtes.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu suis du regard l'adjoint qui organise une battue dans la rue principale. Personne ne pense à regarder en haut du château d'eau.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Au-delà des voies, tu vois un cavalier masqué forcer la porte d'une ferme isolée. Tu as le temps de prévenir le shérif.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      }
+    ],
+    "se_rafraichir_sous_fuite": [
+      {
+        "texte": "Tu te places sous la fuite de la cuve. L'eau glacée te dégouline dans la nuque et emporte la poussière de trois jours de route.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Les voyageurs du quai te regardent te laver sous le château d'eau, chemise ouverte. Une dame se voile la face ; le chef de gare consulte sa montre, outré.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "L'eau est si froide que tu en claques des dents, mais tu te sens neuf. Une chouette te regarde depuis une poutre.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Le jet te gifle en pleine figure. Ça sent la rouille et le goudron, mais c'est gratuit, contrairement au bain de l'hôtel.",
+        "effets": {
+          "sante": 3
+        }
+      }
+    ],
+    "graver_initiales": [
+      {
+        "texte": "Tu graves tes initiales dans le bois goudronné avec {outil}, juste à côté d'un vieux cœur : « T.O. + M.L. 1887 ». Te voilà dans l'histoire de Valentine."
+      },
+      {
+        "texte": "Le chef de gare te voit faire depuis le quai : « Dégradation du matériel de la Compagnie ! » Il note ton signalement dans son carnet, heure comprise.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu graves à tâtons, sous la lune. Au matin, tu découvres que tu as écrit tes initiales à l'envers.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu graves ton nom, puis une tête de mort, puis « ICI ON BRAQUE ». L'adjoint le découvrira demain et en perdra le sommeil.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ]
+  }
+}

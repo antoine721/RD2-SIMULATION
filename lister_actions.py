@@ -32,7 +32,8 @@ def main(argv: list[str] | None = None) -> int:
     verbes, base = charger()
     ville = charger_ville(args.ville) if args.ville else None
     entites = entites_jouables(ville, base) if ville else base
-    problemes = verifier(verbes, {**base, **entites})
+    # Les verbes propres à une ville exigent des tags qui n'existent que dans cette ville.
+    problemes = verifier(verbes, {**base, **entites_jouables(ville or charger_ville(), base)})
     for probleme in problemes:
         print(f"⚠ {probleme}", file=sys.stderr)
     if problemes:

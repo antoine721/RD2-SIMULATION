@@ -1,0 +1,1270 @@
+{
+  "id": "barman_keane",
+  "description": "Un petit homme rond au tablier taché, moustache cirée en crocs, qui essuie sans fin le même verre derrière un long comptoir en acajou. Un crayon derrière l'oreille et des yeux qui ne s'arrêtent jamais : ils suivent chaque client, chaque pièce, chaque mot.",
+  "personnalite": "Bavard, curieux et peureux. Il vend autant de rumeurs que de whisky, adore les ragots et déteste la casse. Fier de tenir le saloon « respectable » de Valentine, il méprise le tord-boyaux du Smithfield's, juste en face. En secret, il glisse au shérif Malloy tout ce qu'il entend, contre un peu de tranquillité.",
+  "repliques": [
+    "Whisky, bière, ou des nouvelles fraîches ?",
+    "On dit que Malloy a coffré un O'Driscoll hier soir. Pour vol de chevaux, rien que ça.",
+    "Chez nous, le whisky vient de Saint Denis. En face, il vient d'une baignoire.",
+    "*essuie le même verre pour la dixième fois*",
+    "Le caissier de la banque n'a pas dormi depuis trois semaines. Moi, je dis qu'il sait quelque chose.",
+    "Théo ! Joue-nous quelque chose de gai, pour une fois !",
+    "Pas de bagarre ici, messieurs. Le Smithfield's est juste en face.",
+    "Le gros roux a encore attrapé un rat. Ce chat mérite un salaire.",
+    "Les chambres sont à l'étage. Un dollar la nuit, draps propres compris.",
+    "Tu as vu le cheval attaché devant ? Pas un cheval d'ici, ça. Pas un cavalier d'ici non plus."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 2,
+      "lieu": "saloon_keane",
+      "activite": "ferme le saloon, chasse les derniers ivrognes et compte la caisse"
+    },
+    {
+      "de": 2,
+      "a": 9,
+      "lieu": "saloon_keane",
+      "activite": "dort dans sa chambre à l'étage, la caisse sous le lit"
+    },
+    {
+      "de": 9,
+      "a": 10,
+      "lieu": "gare",
+      "activite": "réceptionne les caisses de whisky de Saint Denis et bavarde avec le télégraphiste"
+    },
+    {
+      "de": 10,
+      "a": 13,
+      "lieu": "saloon_keane",
+      "activite": "ouvre le saloon, balaie la sciure et fait briller le comptoir en acajou"
+    },
+    {
+      "de": 13,
+      "a": 14,
+      "lieu": "bureau_sherif",
+      "activite": "porte un café au shérif Malloy et lui glisse les ragots de la veille"
+    },
+    {
+      "de": 14,
+      "a": 24,
+      "lieu": "saloon_keane",
+      "activite": "sert au comptoir et vend des rumeurs avec le whisky"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il se penche par-dessus le comptoir, ravi d'avoir un public : « Tu n'as pas entendu ? Malloy a coffré un O'Driscoll hier soir. Vol de chevaux. Et il paraît qu'il n'est pas venu seul en ville… »"
+      },
+      {
+        "texte": "Il désigne la fenêtre d'un coup de menton : « Au Smithfield's, il y a un type qui ne quitte pas son verre des yeux, et un autre qui ne quitte pas ce type des yeux. Un chasseur de primes. Ça va finir en musique, et pas celle de Théo. »"
+      },
+      {
+        "texte": "Il baisse la voix pendant que le piano déraille au fond de la salle : « Le caissier de la banque est passé boire trois whiskys d'affilée. Trois ! Un homme qui a peur comme ça, il sait quelque chose. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il aligne des sous-bocks tout propres sur l'acajou : « Le matin, c'est calme. Profites-en : le soir, Théo boit, joue faux, et le joueur de poker ramasse les gilets de tout le monde. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Son chiffon s'arrête net. Il jette un regard vers le mur qu'il partage avec le bureau du shérif, puis sourit trop largement : « Rien vu, rien entendu, l'ami. C'est la devise de la maison. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il te fait signe d'approcher et murmure : « Entre nous ? Le cheval attaché dans la rue, celui à la selle cloutée… c'est celui de l'O'Driscoll d'en face. Si ça tourne mal, c'est par là qu'il filera. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il garde une main sous le comptoir, là où dort le fusil à deux coups : « Je parle à tout le monde, moi. Mais avec certains, je parle moins longtemps. »",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Il pose un verre d'eau devant toi sans que tu demandes : « On raconte que tu as rendu service en ville. Ici, ça vaut mieux qu'une lettre de recommandation. Qu'est-ce que je peux faire pour toi ? »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il lève son verre à moitié essuyé : « Bienvenue chez Keane ! Le seul saloon de Valentine où l'on ne marche pas dans le sang en entrant. »"
+      },
+      {
+        "texte": "Il porte la main au bord d'un chapeau qu'il n'a pas et rougit : « L'habitude. Je l'ai perdu dans une bagarre en 94. Le chapeau, pas l'habitude. »"
+      },
+      {
+        "texte": "« Te revoilà ! » Un verre t'attend déjà sur le comptoir avant que tu aies traversé la salle.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il hoche la tête par-dessus le brouhaha et pointe le piano du menton : « Ne fais pas attention à la musique, Théo en est à son quatrième. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il répond d'un signe de tête bref, sans sourire, et fait glisser la caisse sous le comptoir d'un coup de genou.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Tu lui lances que son whisky a un goût de fond de crachoir. Il pâlit, puis rougit jusqu'aux oreilles : « Celui-là vient de Saint Denis, monsieur ! Le tord-boyaux, c'est en face ! »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu te moques de sa moustache cirée. Il la lisse nerveusement : « Une moustache pareille demande plus d'entretien qu'un cheval de course, figure-toi. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il recule contre les étagères, faisant tinter les bouteilles : « Théo, va chercher le shérif. Non, ne cours pas. Marche normalement. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Toute la salle se tourne vers toi. Il pose son chiffon, sort lentement le fusil à deux coups de sous le comptoir et le couche sur l'acajou, sans un mot.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il éclate de rire : « Tu veux ma place ? Prends-la ! Tu verras ce que c'est d'écouter les malheurs de tout Valentine pour dix cents le verre. »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu poses tes deux mains sur le comptoir et tu le fixes. Il déglutit, puis tout sort d'un coup : « L'O'Driscoll du Smithfield's veut faire évader son copain, tout le monde le sait, je n'ai rien dit, je n'ai rien dit ! »",
+        "effets": {
+          "relation": -2,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu t'approches beaucoup trop près. Il recule et fait tomber une bouteille qui éclate à ses pieds : « Ça fait un dollar de casse. Enfin… on dira que c'est offert. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il fronce les sourcils, plus déçu qu'effrayé : « Toi aussi ? Je te croyais d'une autre trempe. » Il continue d'essuyer son verre, mais ses mains tremblent.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il jette un regard vers le bureau du shérif, fermé à cette heure : « D'accord, d'accord ! Le joueur de poker a des cartes dans la manche. Voilà, tu sais tout. Ne lui dis pas que ça vient de moi. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Cette fois, il ne recule pas. Le canon du fusil à deux coups dépasse déjà du comptoir : « Pas deux fois dans la même semaine. Dehors. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Tu pointes {outil} sur lui. Il lève les mains si haut qu'il heurte la lampe à pétrole : « La caisse est là, prends tout, mais pas les verres, ils viennent de Saint Denis ! »",
+        "effets": {
+          "prime": 5,
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "À la vue de {outil}, il pousse le tiroir-caisse vers toi d'une main tremblante. Tu ramasses une poignée de billets froissés pendant que la salle retient son souffle.",
+        "effets": {
+          "argent": 18,
+          "prime": 25,
+          "honneur": -3,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il glapit et plonge derrière le comptoir. Une seconde plus tard, l'adjoint du shérif passe la porte battante, la main déjà sur son colt : quelqu'un a couru prévenir le bureau d'à côté.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il fixe {outil}, puis toi, puis la porte. Au fond, le joueur de poker range ses cartes et la danseuse s'éclipse dans l'escalier. « Qu'est-ce que tu veux ? Un nom ? Je connais tous les noms. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il blêmit en reconnaissant ton visage, celui de l'affiche : « Je ne dirai rien à Malloy, je le jure sur la tête du chat ! » Il le dira dans l'heure.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1,
+          "relation": -3
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing l'atteint au nez. Il part en arrière dans les étagères et une pluie de bouteilles s'écrase autour de lui. « Mon bourbon ! » gémit-il, plus triste pour les bouteilles que pour son nez.",
+        "effets": {
+          "prime": 5,
+          "honneur": -1,
+          "relation": -2,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il esquive par miracle et ton poing s'écrase sur l'acajou. Tu te tiens la main pendant qu'il hurle : « Théo ! Le shérif ! »",
+        "effets": {
+          "sante": -5,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Le coup part et toute la salle se lève : chaises renversées, verres qui volent. En une minute, le saloon respectable de Valentine ressemble au Smithfield's. Le barman, sonné, pleure sous le comptoir.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3,
+          "sante": -10,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il t'attendait : il te casse une bouteille vide sur le crâne avant que ton poing arrive. Tu vois des étoiles, puis le plafond du saloon.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -15,
+          "prime": 5
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Tu l'attrapes par le col et lui cognes la tête contre le comptoir. Il s'affaisse sans un mot, son chiffon toujours à la main.",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Un coup sec derrière l'oreille, et il glisse le long des étagères en emportant une rangée de verres. Au fond, le pianiste s'arrête au milieu d'une note.",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Personne ne voit rien : toute la salle suit une partie de poker houleuse. Il s'écroule derrière le comptoir et tu le recouvres de son propre tablier.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il te voit venir et te jette la carafe d'eau au visage. Le temps de t'essuyer les yeux, il a filé par la porte de derrière en criant au shérif.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "prime": 5,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu bondis par-dessus le comptoir avec {outil}. Il pare avec un plateau en fer-blanc qui sonne comme une cloche, puis s'effondre en se tenant le bras.",
+        "effets": {
+          "prime": 25,
+          "honneur": -3,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il n'a pas le temps de crier : tu le frappes avec {outil} et il tombe derrière l'acajou. Un silence de mort s'abat sur le saloon, puis quelqu'un court chercher Malloy.",
+        "effets": {
+          "prime": 100,
+          "honneur": -5,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Il attrape le fusil à deux coups sous le comptoir et tire le premier. La décharge te frôle l'épaule et pulvérise le miroir derrière toi.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -25,
+          "prime": 15,
+          "honneur": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il esquive {outil} de justesse, saute par la trappe de la cave et disparaît dans le noir en hurlant au meurtre.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 20,
+          "honneur": -2,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La détonation fait trembler les lampes. Il s'effondre derrière le comptoir dans un fracas de verre, et le grand miroir venu de Saint Denis se fend du haut en bas.",
+        "effets": {
+          "prime": 100,
+          "honneur": -5,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Ta balle lui traverse l'épaule. Il glisse au sol en gémissant : « Pas ici… pas chez Keane… »",
+        "effets": {
+          "prime": 50,
+          "honneur": -3,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Tu le rates : la balle fait exploser une bouteille de bourbon. Il plonge, rampe jusqu'à la porte de derrière et s'enfuit en appelant le shérif.",
+        "effets": {
+          "prime": 25,
+          "honneur": -2,
+          "relation": -4,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il était prêt : le fusil à deux coups jaillit de sous le comptoir. Vous tirez presque ensemble. Il s'écroule ; toi, tu restes debout, mais la chevrotine t'a déchiré le flanc.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -40,
+          "prime": 75,
+          "honneur": -3,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Le coup part dans la pénombre enfumée. Le barman tombe, le piano se tait, et dix chaises raclent le plancher en même temps. Plus personne ne te quitte des yeux jusqu'à l'arrivée de Malloy.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 125,
+          "honneur": -5,
+          "relation": -5,
+          "etat": "mort"
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} vers le comptoir. Il plonge, et c'est l'étagère qui prend tout : une cascade de whisky de Saint Denis ruisselle sur le plancher.",
+        "effets": {
+          "prime": 5,
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il voit venir {outil} et l'attrape au vol, par pur réflexe de barman qui rattrape les verres depuis vingt ans. Il te regarde, interdit, puis le pose délicatement sur le comptoir.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Le projectile le frappe en pleine poitrine. Il recule en titubant contre les étagères, le souffle coupé, la bouche ouverte comme un poisson.",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Tu lances {outil} à travers la salle enfumée. Il se baisse, et c'est le joueur de poker qui le reçoit derrière la tête. La bagarre générale démarre en trois secondes.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1,
+          "relation": -2,
+          "sante": -10
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Ta corde siffle et se referme autour de sa taille. Tu le tires par-dessus le comptoir comme un veau, en emportant le tiroir-caisse et une douzaine de verres.",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Le nœud se prend dans la lampe à pétrole au-dessus de lui. Elle se balance dangereusement pendant qu'il en profite pour filer par la porte de derrière.",
+        "effets": {
+          "prime": 5,
+          "relation": -2,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il se laisse attraper en riant, persuadé que c'est une plaisanterie : « Ho ! Je ne suis pas un bouvillon ! » La salle applaudit le numéro.",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Il attrapait déjà son fusil quand la corde lui plaque les bras le long du corps. L'arme tombe derrière le comptoir avec un bruit sourd.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -1,
+          "etat": "ligote"
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu lui lies les poignets et l'assois derrière son propre comptoir. Il gémit : « Au moins, laisse-moi mon chiffon. »",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Il se débat, renverse un seau d'eau de vaisselle, mais finit saucissonné contre la pompe à bière, la moustache dégoulinante.",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Tu le ligotes dans la réserve, entre les caisses de whisky. Il chuchote : « Si tu prends la caisse, prends aussi le registre. Il y a mes dettes dedans. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -2,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Une fois ficelé, il change de ton : « Bon. Puisqu'on a le temps… tu savais que le caissier de la banque dort avec la clé du coffre autour du cou ? »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -1,
+          "etat": "ligote"
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Il n'a rien d'autre en main qu'un tire-bouchon. Il te le tend poliment, manche en avant.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu passes le bras sous le comptoir et en ressors le fusil à deux coups qu'il y cache. Il proteste : « C'est pour les O'Driscoll, pas pour les clients ! »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il lève le fusil, mais tu le lui arraches d'un geste sec. Il recule, les bras en l'air, soudain passionné par un verre à essuyer.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": -1,
+          "etat": "normal"
+        }
+      },
+      {
+        "texte": "Tu lui saisis le poignet au moment où il glisse la main sous le comptoir. Il en sort… une matraque en cuir. « Pour les ivrognes ! Juste pour les ivrognes ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il éclate d'un rire nerveux : « Un duel ? Moi ? Je sais à peine viser le crachoir. Prends plutôt un verre, c'est la maison qui offre. »"
+      },
+      {
+        "texte": "Il blêmit et se tourne vers la salle : « Vous êtes tous témoins ! Il veut tuer un barman désarmé ! » Plusieurs clients se lèvent, la mine mauvaise.",
+        "effets": {
+          "relation": -2,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Sans répondre, il pose le fusil à deux coups sur le comptoir, canons vers toi : « Le seul duel qui se fait ici, c'est celui-là. Et tu l'as déjà perdu. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il retire son tablier avec solennité et pose deux verres et une bouteille : « Le duel de Keane : le premier qui roule sous la table a perdu. » Trois verres plus tard, c'est toi qui tangues.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "sante": -5,
+          "relation": 2
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Un petit homme rond, moustache cirée en crocs, qui essuie le même verre depuis une heure. Ses yeux, eux, ne s'arrêtent jamais : ils suivent chaque client, chaque pièce, chaque mot."
+      },
+      {
+        "texte": "Tu remarques qu'il garde un carnet sous le comptoir et y note des noms après chaque conversation. Il l'escamote dans sa poche quand l'adjoint du shérif passe la tête par la porte."
+      },
+      {
+        "texte": "À la lueur des lampes, il remplit les verres d'une main et compte les têtes de l'autre. Chaque fois que le pianiste rate une note, il ferme les yeux comme s'il recevait un coup.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il fait semblant de ne pas te regarder, mais tu le vois jeter trois coups d'œil vers le panneau des avis de recherche, de l'autre côté de la fenêtre.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu croques sa silhouette ronde et sa moustache en guidon de vélocipède. Il se penche pour voir : « Tu m'as fait gros. Ajoute-moi un peu de mâchoire, tu veux ? »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il prend la pose, menton levé, une bouteille brandie comme un trophée. Le temps que tu finisses ton croquis dans {outil}, trois clients ont eu soif et lui en veulent."
+      },
+      {
+        "texte": "Il arrache presque le carnet pour admirer le dessin : « Je le fais encadrer au-dessus du comptoir ! Enfin… quand tu me l'auras donné. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il se fige derrière le comptoir, bombe le torse et tient une bouteille comme un trophée. La poudre de magnésium éclate ; il cligne longtemps des yeux : « Tu m'en feras un tirage pour la vitrine ? »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il se recoiffe en hâte, lisse sa moustache, puis bouge au dernier moment. Sur la plaque, il n'y aura qu'un fantôme de tablier."
+      },
+      {
+        "texte": "L'éclair du flash fait sursauter toute la salle ; deux joueurs ont la main sur leur arme avant de comprendre. Le barman, lui, n'a pas cillé : il a l'habitude des détonations.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il détourne le visage : « Pas de portrait, merci. Les portraits, à Valentine, on les cloue sur un panneau avec un prix en dessous. »",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu le charges sur ton épaule comme un sac de farine. Il gigote, ses petites jambes battant l'air : « Posez-moi ! La caisse ! Qui va surveiller la caisse ? »",
+        "effets": {
+          "prime": 5,
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu le hisses sur ton épaule ; il est plus lourd qu'il n'en a l'air, à force de goûter la marchandise. Les ivrognes trouvent ça hilarant et lèvent leurs verres à ton passage.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu le portes jusqu'à la porte battante sous les cris des clients. Sur le trottoir, l'adjoint du shérif t'attend déjà, la main sur son colt.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1,
+          "relation": -2
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu le suis jusqu'à la gare, où il réceptionne des caisses de whisky. Il passe dix minutes à chuchoter avec le télégraphiste : c'est donc là que naissent les rumeurs."
+      },
+      {
+        "texte": "Après la fermeture, il compte la caisse à la lueur d'une bougie et cache une partie des billets dans le bocal à cornichons du comptoir. Tu sais maintenant où dort son magot.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il traverse jusqu'au bureau du shérif avec une tasse de café, entre sans frapper, et ressort deux minutes plus tard en sifflotant. Un barman qui fait ses confidences à Malloy… intéressant.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il se retourne trois fois, s'arrête devant le magasin général et finit par te lancer : « Tu veux quelque chose, l'ami, ou tu as pris goût à mon dos ? »",
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il tourne {outil} entre ses doigts, perplexe, puis le range sous le comptoir à côté du fusil : « Je te garde ça. Les objets oubliés, c'est un peu mon métier. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il soupèse {outil} en plissant les yeux : « Tu me paies en nature, maintenant ? Bon… ça vaut bien un whisky. » Il te sert un verre en échange.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il sourit jusqu'aux oreilles et installe {outil} bien en vue sur l'étagère, entre deux bouteilles de bourbon : « Un cadeau ! Pour moi ! Attends que le patron voie ça. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il repousse {outil} du bout de son chiffon : « Si c'est volé, je ne veux pas le savoir. Et je ne veux pas l'avoir. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il fourre {outil} dans la poche de son tablier sans même regarder : « Merci, l'ami. Demain matin, je me demanderai d'où ça sort. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "acheter@outil": [
+      {
+        "texte": "Il disparaît dans la réserve, là où s'entassent les gages des clients qui n'ont pas pu payer, et revient en jurant que {cible} est « de premier choix ». Le prix, lui, est de tout premier choix.",
+        "effets": {
+          "argent": -5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il pose les mains à plat sur l'acajou : « Pour {cible}, je te fais un prix. Pas un bon prix, mais un prix. » Il compte ta monnaie deux fois, puis une troisième pour le plaisir.",
+        "effets": {
+          "argent": -3
+        }
+      },
+      {
+        "texte": "Il marchande avec lui-même à voix haute, puis tranche : « Trois dollars, et la rumeur du jour en prime. » Tu repars avec {cible} et l'histoire du caissier qui dort avec un revolver sous l'oreiller.",
+        "effets": {
+          "argent": -3,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il jette un œil vers la porte battante et baisse la voix : « Les affaires de nuit se paient double. Mais je peux te trouver {cible} avant le chant du coq. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -6,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Pour toi, prix d'ami. » Il sort {cible} de la réserve des gages et te rend une pièce de trop, exprès.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te regarde, puis l'affiche par la fenêtre : « Pour {cible}, ce sera le prix normal… plus le prix de mon silence. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -8,
+          "relation": -1
+        }
+      }
+    ],
+    "vendre@outil": [
+      {
+        "texte": "Il retourne {cible} dans tous les sens, souffle dessus, le frotte avec son chiffon : « Cinq dollars. Je l'accrocherai au mur, ça fera chic pour les voyageurs de Saint Denis. »",
+        "effets": {
+          "argent": 5
+        }
+      },
+      {
+        "texte": "Il soupèse {cible} avec une grimace : « On t'en donnerait plus ailleurs, mais ailleurs on ne t'offre pas de verre avec. » Il compte les billets et pose un whisky à côté.",
+        "effets": {
+          "argent": 7,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il repousse {cible} du bout de son chiffon : « D'où ça sort, ça ? Non, non. Les objets qui ont un passé, je n'en veux pas sous mon comptoir. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il accepte {cible} sans discuter, trop vite, et te paie le double. En te raccompagnant vers la porte, il ne quitte pas des yeux le bureau du shérif.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 10
+        }
+      }
+    ],
+    "commander_whisky": [
+      {
+        "texte": "Il fait glisser un verre le long du comptoir en acajou ; il s'arrête pile devant toi. « Whisky de Saint Denis. Pas la pisse d'âne du Smithfield's. » Il te brûle délicieusement la gorge.",
+        "effets": {
+          "argent": -1,
+          "sante": 2
+        }
+      },
+      {
+        "texte": "« Avant midi ? Je ne juge pas, je sers. » Il remplit le verre à ras bord et ajoute sur le ton de la confidence : « Le shérif aussi en prend un, le matin. Pour la toux. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il te sert au jugé, l'œil sur la partie de poker. Au fond, le pianiste attaque une valse en ratant une note sur trois : « Bois vite, ça aide à supporter la musique. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "sante": 2
+        }
+      },
+      {
+        "texte": "Il sort une bouteille poussiéreuse cachée sous le comptoir : « La réserve du patron. Il n'en saura rien. » Il ne te compte qu'un whisky ordinaire.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1,
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Il tend la main avant de toucher la bouteille : « Paiement d'avance, l'ami. Ce n'est pas personnel, c'est ta tête. » Une fois la pièce empochée, il te sert un verre bien tassé.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il te sert d'une main qui tremble et renverse la moitié sur le comptoir. « Sur la maison », bredouille-t-il, les yeux rivés sur l'avis de recherche cloué de l'autre côté de la rue.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "offrir_tournee": [
+      {
+        "texte": "« Tournée générale ! » Le saloon rugit. Il aligne les verres d'un geste de prestidigitateur et même le chat roux lève la tête. Pendant une heure, tout Valentine t'aime.",
+        "effets": {
+          "argent": -12,
+          "relation": 2,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Il frappe le comptoir avec une cuillère : « Le voyageur paie sa tournée ! » Le pianiste enchaîne un air de fête, et le joueur de poker vide deux verres au lieu d'un.",
+        "effets": {
+          "argent": -10,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "À cette heure, la salle est pleine : la tournée te coûte une petite fortune. Mais quand tout le saloon entonne « Oh! Susanna » à pleins poumons et faux, tu trouves l'argent bien placé.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -18,
+          "relation": 2,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Il n'y a que trois clients et le chat. Ta tournée générale coûte trois dollars et une soucoupe de lait. Le barman applaudit quand même, très ému.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -3,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Les clients boivent à ta santé en jetant des coups d'œil vers la porte. L'un d'eux vide son verre d'un trait et s'éclipse. Tu as acheté leur gratitude, pas leur silence.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -12,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il hésite, puis sert. Les clients prennent ton whisky sans un merci et retournent à leurs tables, dos tourné. Même payé, on ne trinque pas avec n'importe qui.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -10
+        }
+      }
+    ],
+    "acheter_rumeur": [
+      {
+        "texte": "La pièce disparaît dans son tablier. « L'O'Driscoll qui boit au Smithfield's n'est pas là pour le whisky. Son copain est dans la cellule de Malloy… et la cellule a une fenêtre. »",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il empoche la pièce : « Le directeur de la banque prête à vingt pour cent aux fermiers. Vingt ! Le fermier qui traîne dans la rue lui doit sa ferme. Un homme qui perd tout finit par faire une bêtise. »",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il remplit ton verre pour se donner une contenance : « Le caissier est venu boire, ce soir. Il dit avoir vu des cavaliers tourner autour de la banque. Trois nuits de suite. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« L'ivrogne jure qu'il a vu de l'or dans les collines. Moi, je dis qu'il a vu le fond d'une bouteille. Mais l'épicier lui a vendu une pelle hier. L'ivrogne, payer une pelle ? Avec quel argent ? »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il refuse ta pièce et se penche tout près : « Pour toi, gratuit. La veuve des maisons du bas a mis de l'argent de côté pour faire payer les O'Driscoll qui ont tué son mari. Elle cherche quelqu'un. Quelqu'un comme toi. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il prend la pièce sans te regarder : « Le télégraphiste a reçu un message ce matin. Ça parlait d'un étranger armé, de ta taille, de ta figure… Moi, je dis ça pour toi. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      }
+    ],
+    "louer_chambre_etage": [
+      {
+        "texte": "Il décroche une clé en laiton d'un clou : « Chambre trois, au fond du couloir. Un dollar, draps propres, et le piano en guise de berceuse. » Tu dors d'un sommeil de plomb.",
+        "effets": {
+          "argent": -1,
+          "sante": 15
+        }
+      },
+      {
+        "texte": "« Il ne me reste que la chambre au-dessus du piano. » Toute la nuit, les fausses notes de Théo traversent le plancher. Tu dors mal, mais tu dors.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "sante": 8
+        }
+      },
+      {
+        "texte": "Il te donne la chambre du fond, celle dont la fenêtre donne sur la ruelle : « Au cas où tu voudrais partir sans passer par l'escalier. Je ne veux pas savoir pourquoi. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -2,
+          "sante": 12,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il refuse ton argent : « La chambre d'angle, la meilleure, avec vue sur la rue. Pour toi, c'est offert. » Le lit grince, mais les draps sentent le savon.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1,
+          "sante": 20
+        }
+      },
+      {
+        "texte": "Il te fait payer d'avance, et le double : « Pour la casse éventuelle. » Puis il te regarde monter et pose le fusil à deux coups sur le comptoir, bien en vue.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -2,
+          "sante": 10
+        }
+      },
+      {
+        "texte": "« Une chambre en plein jour ? Je ne pose pas de questions. » Tu fais une longue sieste dans la chaleur de l'étage, bercé par les meuglements de l'enclos.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1,
+          "sante": 10
+        }
+      }
+    ],
+    "demander_ardoise": [
+      {
+        "texte": "Il éclate de rire et montre l'ardoise pendue derrière lui, couverte de noms barrés : « Tu vois ceux-là ? Tous partis sans payer. Trois sont au cimetière. Ici, on paie comptant. »"
+      },
+      {
+        "texte": "Il hésite, la craie à la main : « Le patron m'a interdit les ardoises pour les étrangers. Mais raconte-moi une bonne histoire, et j'oublierai peut-être un verre. »"
+      },
+      {
+        "texte": "Il écrit ton nom à la craie, tout en bas, en tout petit : « Un verre, pas plus. Et si le patron demande, tu es mon cousin de Blackwater. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il ne lève même pas les yeux : « L'ardoise des gens comme toi, c'est le croque-mort qui la règle. Et il prend cher. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il trace un grand trait sous ton nom : « Pour un honnête homme, crédit ouvert jusqu'à trois verres. Au quatrième, je te présente la note et le pasteur. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il soupire, efface un nom de l'ardoise avec sa manche et écrit le tien à la place : « Celui-là ne reviendra pas réclamer. Le croque-mort l'a mesuré mardi. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "tenir_comptoir": [
+      {
+        "texte": "Il te lance un tablier : « Marché conclu. Tu sers, tu souris, et tu ne bois pas la marchandise. » À minuit, tu as les mains collantes de bière et trois dollars de pourboire.",
+        "effets": {
+          "argent": 3,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Ta soirée derrière le comptoir tourne à l'épreuve : un ivrogne veut payer en tabac, le joueur de poker réclame sa bouteille, deux vachers en viennent aux mains. Tu sépares tout le monde et gagnes le respect de la maison.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 4,
+          "relation": 2,
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Il te confie le comptoir le temps d'aller chercher ses caisses à la gare. En une heure, tu sers deux whiskys, écoutes trois confidences et apprends que le chef de gare chronomètre ses œufs à la coque.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il blêmit : « Toi, derrière mon comptoir ? Avec ta figure sur le panneau d'en face ? Le shérif boit ici le jeudi, l'ami ! » Il te sert un verre pour que tu partes plus vite.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il accepte sans hésiter. Les clients te font confiance, les pourboires pleuvent et le pianiste te dédie une ballade. Le barman, ravi, parle déjà de t'embaucher.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 5,
+          "relation": 2
+        }
+      }
+    ],
+    "payer_un_verre": [
+      {
+        "texte": "Il jette un œil vers la porte, au cas où le patron arriverait : « Jamais pendant le service. » Il se sert un fond de verre. « Bon. Un petit. Pour la politesse. »",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il trinque avec toi et, l'alcool aidant, parle encore plus vite : la veuve, le banquier, le prisonnier, tout y passe en une seule gorgée.",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il accepte avec soulagement : « Quelle soirée. Théo en est à son quatrième et moi seulement à mon premier. Il faut rétablir l'équilibre. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il sort deux verres en cristal de sous le comptoir, ceux qu'on ne sort jamais : « À notre amitié, et à la ruine du Smithfield's ! »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il repousse le verre avec un sourire contraint : « Merci, l'ami, mais si Malloy entre et me voit trinquer avec… enfin, avec toi… »",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "offrir_un_verre": [
+      {
+        "texte": "Il lève son verre vers le miroir, vers toi, puis vers le portrait du patron accroché au-dessus des bouteilles : « À Keane, qui n'en saura rien ! » Le whisky disparaît d'un trait.",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Touché, il se verse un fond de bourbon et te raconte sa vie : Saint Denis, un mariage raté, et le saloon qu'il aura à lui, un jour. Tu n'en demandais pas tant.",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il trinque, boit, et rougit soudain jusqu'aux oreilles : « Je vais te dire une chose que je n'ai jamais dite à personne… enfin, à presque personne. » Et il te sert la rumeur du jour, gratis.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« À cette heure ? Je me tromperais dans la monnaie toute la journée. » Il accepte une bière tiède à la place et la sirote avec dignité.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il regarde ton verre, puis toi : « Merci, mais je ne bois qu'avec les gens dont je connais la fin. » Et il reprend son chiffon.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ]
+  }
+}

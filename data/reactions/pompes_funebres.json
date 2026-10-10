@@ -1,0 +1,303 @@
+{
+  "id": "pompes_funebres",
+  "description": "Une façade étroite de planches peintes en noir, entre le cabinet du docteur et le Smithfield's, sous une enseigne dorée qui s'écaille : « Pembrook — Pompes funèbres — Prix honnêtes ». Dans la vitrine, des cercueils se dressent debout comme des clients qui attendent leur tour ; l'un d'eux, ouvert, expose un O'Driscoll mort sous l'écriteau « VOLEUR DE CHEVAUX ».",
+  "repliques": [
+    "Un coup de marteau résonne derrière la vitrine.",
+    "L'enseigne grince au vent. Un corbeau s'y pose.",
+    "Une odeur de sciure et de camphre flotte devant la porte."
+  ],
+  "reactions": {
+    "entrer": [
+      {
+        "texte": "La clochette de la porte tinte comme un glas. Entre les cercueils debout, le croque-mort lève les yeux de son rabot : « Bienvenue. C'est pour vous, ou pour quelqu'un d'autre ? »"
+      },
+      {
+        "texte": "La porte n'est pas verrouillée. Dans le noir, les cercueils debout ressemblent à une rangée d'hommes immobiles. À l'étage, quelque chose craque : le croque-mort se retourne dans son cercueil-lit.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "À peine entré, le croque-mort déroule son mètre ruban et sourit : « Ah. J'ai vu votre affiche. Je me demandais quand vous passeriez. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il règne ici une fraîcheur de cave. Une fermière choisit des poignées de cuivre au comptoir ; un tout petit cercueil blanc attend contre le mur. Tu ôtes ton chapeau sans y penser.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Façade noire, vitrine poussiéreuse, enseigne dorée. Trois cercueils debout dans la vitrine, du pin brut au chêne capitonné, comme les barreaux d'une échelle sociale."
+      },
+      {
+        "texte": "Des gamins se bousculent devant la vitrine pour voir l'O'Driscoll mort. L'un d'eux ose toucher la vitre, puis détale en hurlant de rire.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Une lampe brille derrière les volets de l'étage. Sur l'enseigne, un corbeau dort, la tête sous l'aile.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Une ardoise est clouée à la porte : « Pin 8 $ — Chêne 15 $ — Capitonné 20 $. Pas de crédit. Pas de retour. »"
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines la façade étroite et ses cercueils debout. Sur ton croquis, ils ressemblent à des gens qui font la queue."
+      },
+      {
+        "texte": "Le croque-mort sort sur le seuil, se penche sur ton croquis et tapote un coin vide de l'enseigne : « Vous avez oublié Edgar. Il ne vous le pardonnera pas. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "À la lueur de la lune, tu esquisses la vitrine où luit le visage cireux de l'O'Driscoll exposé. Le dessin te met mal à l'aise, et tu refermes vite le carnet.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Le cliché montre la vitrine, les cercueils debout et l'O'Driscoll exposé. Les journaux de Saint Denis se l'arracheraient."
+      },
+      {
+        "texte": "Le croque-mort surgit sur le seuil et prend la pose, haut-de-forme à la main : « Pour la réclame ! Et que l'enseigne soit bien dans le cadre ! »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "L'éclair de magnésium illumine la vitrine. L'espace d'un instant, tu jurerais que l'O'Driscoll mort a cligné des yeux.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la vitrine. Le verre se fend en étoile juste devant le visage de l'O'Driscoll exposé. Le croque-mort sort en brandissant son rabot.",
+        "effets": {
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu lances {outil} ; l'objet rebondit sur la porte noire avec un bruit sourd. De l'intérieur monte une voix lugubre : « On ne frappe pas comme ça chez les morts ! »"
+      },
+      {
+        "texte": "Tu lances {outil} contre l'enseigne. Le corbeau qui y dormait s'envole en croassant de fureur, et une lampe s'allume à l'étage.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle fait voler la vitrine en éclats. L'O'Driscoll exposé bascule hors de son cercueil et s'affale sur le trottoir. Des cris montent de la rue.",
+        "effets": {
+          "honneur": -1,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "La balle perce l'enseigne pile entre « Prix » et « honnêtes ». Le croque-mort passe la tête par la porte : « Celle-là, je vous la facture. »",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le coup de feu claque dans la rue déserte et troue un cercueil de chêne de la vitrine. Demain, le croque-mort le vendra « avec aération, à prix réduit ».",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "La rue se vide en un instant. Un trou rond fume dans la porte noire, et l'adjoint du shérif arrive déjà en courant, revolver au poing.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 10
+        }
+      }
+    ],
+    "braquer": [
+      {
+        "texte": "Tu entres arme au poing. Le croque-mort lève les mains au-dessus d'un cercueil : « La caisse est sous le comptoir. Douze dollars et des dents en or. Les dents, ce sont les miennes. »",
+        "effets": {
+          "argent": 12,
+          "honneur": -3,
+          "prime": 30
+        }
+      },
+      {
+        "texte": "Le croque-mort vide sa caisse en soupirant, mais la clochette a alerté le docteur d'à côté, qui file déjà chercher le shérif en titubant.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 10,
+          "honneur": -3,
+          "prime": 40
+        }
+      },
+      {
+        "texte": "La boutique est déserte. Tu forces le tiroir du comptoir : quelques dollars, le registre des décès, une montre en or prise sur un mort. À l'étage, le parquet grince.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 18,
+          "honneur": -3,
+          "prime": 20
+        }
+      },
+      {
+        "texte": "Le croque-mort te regarde, sincèrement peiné : « Braquer un croque-mort... On m'avait dit du bien de vous. » Il te tend la caisse. Tu repars avec l'argent et un poids neuf sur la conscience.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 12,
+          "honneur": -4,
+          "prime": 30
+        }
+      }
+    ],
+    "crocheter": [
+      {
+        "texte": "La vieille serrure cède en trois tours de crochet. La porte s'ouvre en grinçant sur l'obscurité, l'odeur de sciure et la silhouette des cercueils debout.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu travailles la serrure à tâtons. Clic. Une voix ensommeillée tombe de l'étage : « Edgar, c'est toi ? » Tu retiens ton souffle.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Un passant te voit penché sur la serrure des pompes funèbres et presse le pas vers le bureau du shérif.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Le crochet manque de se briser : la serrure est neuve, en laiton. Le croque-mort l'a changée depuis que des gamins sont venus voir les morts de trop près."
+      }
+    ],
+    "commander_cercueil": [
+      {
+        "texte": "Le croque-mort pose trois échantillons sur le comptoir : « Pin, chêne, ou noyer de Saint Denis ? » Tu choisis, tu paies, et il inscrit un nom dans son registre.",
+        "effets": {
+          "argent": -8
+        }
+      },
+      {
+        "texte": "L'atelier résonne déjà de coups de marteau quand tu ressors, ton reçu bordé de noir à la main. Le cercueil sera prêt demain à l'aube.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -10
+        }
+      },
+      {
+        "texte": "Tu glisses un mot et des billets sous la porte. Au matin, un cercueil de pin attend sur le trottoir avec une étiquette : « Payé. Merci. Condoléances. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -8
+        }
+      },
+      {
+        "texte": "Le croque-mort lit ta commande, puis regarde l'avis de recherche cloué en face : « Je le fais à votre taille, par défaut ? »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -10
+        }
+      }
+    ],
+    "essayer_cercueil": [
+      {
+        "texte": "Tu t'allonges dans un cercueil de chêne capitonné. C'est étonnamment confortable. Au-dessus de toi, le croque-mort penche la tête : « Il vous va comme un gant. Je vous le mets de côté ? »"
+      },
+      {
+        "texte": "Le couvercle se rabat sur toi avec un claquement sec. Noir complet. Puis la voix étouffée du croque-mort : « Pardon, un courant d'air. » Il rouvre en souriant.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Allongé dans le pin brut, tu entends le croque-mort marmonner en prenant des notes : « Celui-là, je le ferai plus solide. Pour les clous. »",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Une fermière entre, te voit allongé dans un cercueil ouvert, pousse un cri et ressort en courant. Le croque-mort soupire : « Encore une cliente de perdue. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu restes un moment allongé, les mains croisées. Le silence est total. Pour la première fois depuis longtemps, tu te demandes qui viendrait à ton enterrement."
+      }
+    ],
+    "regarder_mort_vitrine": [
+      {
+        "texte": "Il est debout dans son cercueil, maintenu par des sangles, les yeux mi-clos, un foulard vert noué au cou. L'écriteau dit : « VOLEUR DE CHEVAUX — O'DRISCOLL ». Il a l'air surpris d'être mort."
+      },
+      {
+        "texte": "En te penchant, tu vois ton reflet se superposer au visage du mort. Le croque-mort a laissé un cercueil vide juste à côté. Par hasard, sans doute.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "La veuve Hartley est là, immobile devant la vitrine. Elle observe le mort longtemps, puis secoue la tête : « Ce n'est pas lui. Pas encore. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La lune blanchit la vitrine. Dans le reflet, derrière toi, une silhouette au foulard vert traverse la rue et entre au Smithfield's sans se retourner.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu ris devant le mort. Un vieil homme te regarde de travers : « Riez. Lui aussi riait, la semaine dernière. »",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ]
+  }
+}

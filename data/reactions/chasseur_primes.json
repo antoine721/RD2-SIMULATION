@@ -1,0 +1,1084 @@
+{
+  "id": "chasseur_primes",
+  "description": "Un homme sec et long, manteau cache-poussière gris et chapeau noir à bord plat. Assis dos au mur, face à la porte, il garde devant lui une tasse de café froid, un carnet de cuir et, contre sa chaise, une carabine enveloppée de toile cirée.",
+  "personnalite": "Rook, chasseur de primes venu du Montana. Froid, méthodique, patient comme un vautour. Ne boit jamais d'alcool en service, parle peu et toujours en chiffres. Ni haine ni pitié : les hommes sont des primes, de préférence vivants, car vivant ça paie plein tarif. Il traque l'O'Driscoll balafré du Smithfield's et attend qu'il tente de faire évader son cousin pour les prendre tous les deux.",
+  "repliques": [
+    "Soixante-quinze dollars. Vivant.",
+    "*tourne une page de son carnet sans quitter le balafré des yeux*",
+    "La patience, c'est ce qui sépare les chasseurs des cadavres.",
+    "Je ne bois pas en service. Je suis toujours en service.",
+    "Malloy veut les pendre. Moi, je veux qu'on me paie.",
+    "Le juge arrive jeudi. L'Irlandais bougera avant.",
+    "*souffle sur son café froid, par habitude*",
+    "Tu vaux combien, toi ?"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 1,
+      "lieu": "saloon_smithfield",
+      "activite": "surveille l'O'Driscoll jusqu'à ce qu'il titube vers la sortie"
+    },
+    {
+      "de": 1,
+      "a": 6,
+      "lieu": "pension",
+      "activite": "dort tout habillé, bottes aux pieds, le revolver sous l'oreiller"
+    },
+    {
+      "de": 6,
+      "a": 7,
+      "lieu": "berge",
+      "activite": "se rase dans le ruisseau et graisse sa carabine"
+    },
+    {
+      "de": 7,
+      "a": 8,
+      "lieu": "rue_principale",
+      "activite": "examine les fers du cheval attaché, celui de l'O'Driscoll"
+    },
+    {
+      "de": 8,
+      "a": 9,
+      "lieu": "gare",
+      "activite": "interroge le télégraphiste sur les nouvelles primes"
+    },
+    {
+      "de": 9,
+      "a": 10,
+      "lieu": "rue_principale",
+      "activite": "recopie les avis de recherche du panneau dans son carnet"
+    },
+    {
+      "de": 10,
+      "a": 11,
+      "lieu": "bureau_sherif",
+      "activite": "échange trois mots secs avec le shérif Malloy et compte les barreaux de la cellule"
+    },
+    {
+      "de": 11,
+      "a": 12,
+      "lieu": "pension",
+      "activite": "avale un ragoût sans le regarder"
+    },
+    {
+      "de": 12,
+      "a": 24,
+      "lieu": "saloon_smithfield",
+      "activite": "attend, dos au mur, face à l'O'Driscoll, devant un café froid"
+    }
+  ],
+  "reactions": {
+    "assommer": [
+      {
+        "texte": "Tu lèves le poing... et tu te retrouves la joue contre la table, le bras tordu dans le dos. Il n'a même pas renversé son café. « Mauvaise idée. »",
+        "effets": {
+          "sante": -10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Ton coup le surprend, pour une fois : il bascule de sa chaise. Mais sa main a eu le temps de saisir son revolver, et même inconscient, il ne le lâche pas.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il roule une cigarette sur le perron en surveillant la rue. Un coup de crosse derrière la nuque, et il glisse dans la boue sans un mot.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -2,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Il t'attendait. Une crosse de revolver t'arrive sur la tempe avant que tu aies fini ton geste. Le monde devient noir quelques secondes.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -20
+        }
+      },
+      {
+        "texte": "Il tombe, et son carnet s'ouvre dans la sciure sur une page où ton visage est griffonné au crayon, un chiffre en dessous. Il se réveillera bientôt, et il saura.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "relation": -4
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Il se lève d'un bond et renverse la table entre vous comme un bouclier. Ton coup ne rencontre que du bois, et son canon est déjà contre ton front. « Assis. »",
+        "effets": {
+          "etat": "hostile",
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu l'atteins au bras avec {outil}. Il grimace à peine, recule d'un pas et dégaine de la main gauche : la balle te brûle les côtes.",
+        "effets": {
+          "etat": "blesse",
+          "sante": -30,
+          "prime": 10,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Ton coup le touche de plein fouet. Il s'écroule sur son carnet, qui se tache de rouge. Au fond de la salle, le balafré éclate de rire et lève son verre à ta santé.",
+        "effets": {
+          "etat": "mort",
+          "honneur": -4,
+          "prime": 75
+        }
+      },
+      {
+        "texte": "Tu le surprends dans la rue noire, à l'angle du Smithfield's. Il se défend mal, blessé, et file vers l'écurie en titubant.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "honneur": -2,
+          "prime": 10,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "« J'espérais que tu viendrais à moi. » Il esquive, te fauche les jambes et pose sa botte sur ta gorge. « Vivant, tu vaux plus. Ne m'oblige pas à baisser le prix. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -15,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Ta boucle tombe sur ses épaules ; il tranche la corde d'un coup de couteau avant même que tu tires. « Le chanvre, ça se travaille humide. Conseil gratuit. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu l'arraches de sa chaise. Il se relève couvert de sciure, sans élever la voix : « Ça, c'est mon métier. Tu veux vraiment jouer à ça avec moi ? »",
+        "effets": {
+          "etat": "hostile",
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Le lasso le cueille à la sortie du saloon. Il roule dans la boue, se débat ; tu le tiens, pour l'instant.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il attrape la corde, l'enroule sur son poignet et tire : tu t'étales à ses pieds. « Tu m'épargnes la peine de te chercher. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -10,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Ta main file vers son revolver ; la sienne y est déjà. Il te regarde sans colère : « Deux secondes de retard. Dans mon métier, ça s'appelle un enterrement. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu réussis à lui arracher son revolver. Il ne lève même pas les mains... et tu sens soudain le canon d'un derringer contre ton ventre. « J'en ai toujours deux. »",
+        "effets": {
+          "etat": "hostile",
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il devine ton geste avant toi et pose lui-même ses armes sur la table : « Si tu as une raison, dis-la. Si tu n'en as pas, rends-les. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il somnole sur sa chaise, mais au moment où tes doigts frôlent la crosse de sa carabine, ses yeux s'ouvrent : « Non. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu traces son profil anguleux, le bord plat de son chapeau. Il ne bouge pas d'un cil : « Si tu vends ce dessin, j'en veux la moitié. »"
+      },
+      {
+        "texte": "Tu le dessines penché sur son carnet. Il jette un œil à ta page : « Pas mal. Tu ferais un bon dessinateur d'affiches. Ça paie moins que de les décrocher. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Pendant que tu le dessines, il te dessine aussi. Quand tu lèves les yeux, il tourne son carnet vers toi : ton visage, avec un chiffre en dessous.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "À la lueur d'une lampe, tu ne distingues que son ombre contre le mur et le point rouge de sa cigarette. C'est le meilleur portrait que tu aies jamais fait.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il examine {outil} sans y toucher : « Qu'est-ce que tu m'achètes avec ça ? Les services, ça se paie en dollars. » Il le garde quand même.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il repousse {outil} vers toi du bout du doigt : « Je n'accepte rien des inconnus. Ça devient une dette, et les dettes rendent mou. »"
+      },
+      {
+        "texte": "Il range {outil} dans la poche intérieure de son manteau et hoche la tête : « Je m'en souviendrai le jour où ton nom tombera dans mon carnet. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« Tu essaies d'acheter un délai ? » Il prend {outil}. « Ça vaut une journée d'avance. Pas plus. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il se lève sans un mot, sort dans la rue, compte vingt pas. Tu dégaines le premier ; il est plus rapide. Sa balle te traverse l'épaule. « Tu vivras. Mort, tu ne vaux rien. »",
+        "effets": {
+          "sante": -40,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "« Un duel, ça ne paie pas. » Il se rassoit et reprend son café. « Reviens le jour où quelqu'un offrira une prime pour ta tête. »"
+      },
+      {
+        "texte": "« Volontiers. » Il retire ses gants un doigt après l'autre. La rue se vide. Tu tires le premier et le touches au bras ; il s'effondre en jurant et rampe à l'abri derrière l'abreuvoir.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il t'observe longuement : « Toi, tu fais ça pour l'honneur. C'est une raison stupide pour mourir. » Il refuse et te sert une tasse de café.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Duel sous la lune, devant le Smithfield's. Vos coups partent ensemble : il tombe dans la boue, une main sur son carnet. « Pas de prime... sur toi... », souffle-t-il. Il ne se relève pas.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "mort",
+          "honneur": -2,
+          "prime": 25
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing atteint sa mâchoire. Il tourne la tête lentement et revient vers toi : « Celui-là était gratuit. Le prochain, je te le facture. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il bloque ton bras d'un revers et t'envoie un coup sec dans le foie. Tu te plies en deux. Il n'a pas lâché sa tasse.",
+        "effets": {
+          "sante": -12,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Bagarre dans la rue noire. Il cogne comme il travaille : sans hâte, sans colère, et chaque coup porte. Tu finis assis dans l'abreuvoir.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -18,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il encaisse et s'essuie la lèvre : « Tu as tes raisons. Je ne veux pas les connaître. » Puis il te tourne le dos, ce qui est pire qu'un coup.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Toute la salle se lève pour regarder. Il te laisse frapper deux fois, puis te balaie les jambes et pose un genou sur ta poitrine : « Fini ? »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Il te regarde comme on lit une affiche : une description, un prix, rien de plus. « Tu fais peur aux fermiers, peut-être. Assieds-toi ou va-t'en. »"
+      },
+      {
+        "texte": "Tu fais craquer tes jointures. Il ouvre son carnet et se met à écrire. « Qu'est-ce que tu notes ? » « Ta taille. Ton poids. Tes signes distinctifs. Au cas où. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Tu as tort de te faire remarquer. » Il pose sa carabine sur la table, canon tourné vers ton ventre. « Un homme recherché devrait apprendre la discrétion. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "hostile",
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il plisse les yeux : « J'ai ramené des hommes plus méchants que toi. Ils se tenaient tous comme toi. Comme des hommes qui finiront pendus. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Dans la pénombre, il ne bouge pas, mais tu entends un déclic sous la table. Tu comprends qu'il te tient en joue depuis le début.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Il incline à peine la tête et {outil} va s'écraser contre le mur, derrière lui. Il ne quitte même pas le balafré des yeux.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Touché au front ! Il se lève et dégaine dans le même mouvement. Sa balle s'enfonce dans le chambranle, à un doigt de ton oreille : « La prochaine ne sera pas un avertissement. »",
+        "effets": {
+          "etat": "hostile",
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il attrape {outil} au vol et le pose sur la table, à côté de sa tasse. « Je garde ça. Pièce à conviction. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Dans le noir, ton jet l'atteint à l'épaule. Il recule dans l'ombre et disparaît. Quand un chasseur de primes disparaît, c'est rarement pour fuir.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "relation": -3
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu lui lies les poignets. Il se laisse faire, étrangement calme : « Pas comme ça. Ton nœud glisse. Je t'apprendrai, un jour. »",
+        "effets": {
+          "etat": "ligote",
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Au moment où la corde touche ses poignets, il pivote, et c'est ton bras qui se retrouve entravé. « D'habitude, c'est moi qui ligote. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Assommé dans la ruelle derrière le saloon, il ne résiste pas. Il reprendra connaissance ficelé comme un de ses propres prisonniers.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Le chasseur ligoté par sa proie : il rit pour la première fois, un rire sec comme du bois mort. « Ça, personne ne le croira. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "honneur": -1,
+          "relation": -2
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Il regarde {outil}, puis toi, et boit une gorgée de café : « Si tu tires, tu ne toucheras rien. Ton doigt tremble. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il lève les mains, lentement. Puis tu remarques que sa carabine, posée sous la table, est braquée sur tes genoux depuis le début.",
+        "effets": {
+          "etat": "hostile",
+          "relation": -2
+        }
+      },
+      {
+        "texte": "« Tu viens de doubler ta valeur, l'ami. Menace armée contre un agent de recouvrement. » Il note la date dans son carnet, avec soin.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il pose son carnet ouvert sur la table : « Tu vois cette page ? Elle est vide. Elle n'attend que ton nom. » Il ne lève même pas les mains.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Dans la rue obscure, il recule pas à pas vers la lumière du saloon : « Pas ici. Les témoins, ça coûte cher. À toi. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Il est assis dos au mur, face à la porte, et ne quitte pas des yeux le balafré qui boit au fond. Son café est froid depuis une heure."
+      },
+      {
+        "texte": "Il feuillette un carnet de cuir usé, couvert de visages au crayon et de chiffres : 75 $, 150 $, 40 $. Certains visages sont barrés d'une croix."
+      },
+      {
+        "texte": "Ses bottes sont propres, ses armes impeccables. Seules ses mains, zébrées de brûlures de corde, disent le métier qu'il fait."
+      },
+      {
+        "texte": "Il ne dort pas. Il compte : les verres de l'Irlandais, les rondes de l'adjoint, les heures qui restent avant le train de jeudi.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il t'observe aussi. Quand vos regards se croisent, il tourne une page de son carnet, sans se presser.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "parler": [
+      {
+        "texte": "« Soixante-quinze dollars. » Il désigne le balafré du menton. « C'est ce qu'il vaut. Vivant. Mort, on en tire cinquante, et ça sent mauvais sur la route. »"
+      },
+      {
+        "texte": "« On m'appelle Rook. Je ne suis pas d'ici. Je ne suis de nulle part. Je suis là où sont les primes. »"
+      },
+      {
+        "texte": "« Malloy veut les pendre tous. Moi, je veux qu'on me paie. On s'entend bien, lui et moi : on ne se parle pas. »"
+      },
+      {
+        "texte": "Il baisse la voix : « Le balafré attend son heure. Il veut sortir son cousin de la cellule avant que le juge arrive. Le jour où il bouge, je les prends tous les deux. Tu veux ta part ? »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Assieds-toi. » Il pousse une chaise du bout de sa botte. « On va parler de ce que tu vaux. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "« Les hommes font leurs erreurs la nuit. Moi, je reste éveillé. » Il remplit sa tasse à une cafetière en fer cabossée.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il ne répond pas. Il pose simplement la main sur la table, très près de son revolver.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il lève la main devant son visage au moment de l'éclair : « Pas de photographie. Les visages sur papier, c'est mon commerce, pas le tien. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te laisse faire, immobile. Sur la plaque, on ne voit que le bord de son chapeau et deux yeux très clairs. « Garde un tirage. Ça servira peut-être à identifier mon corps. »"
+      },
+      {
+        "texte": "« Bonne idée. » Il sort de sa poche un vieux portrait froissé et le tient à côté de ton visage. Il compare, puis le range sans un mot.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Il est plus léger qu'il n'en a l'air, tout en os et en cuir. Tu le charges sur ton épaule ; son carnet tombe dans la sciure.",
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu essaies de le soulever : il te plante le canon de son revolver sous le menton. « Pose-moi. »",
+        "effets": {
+          "etat": "hostile",
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Inconscient, il pend sur ton épaule comme un sac de linge. Dans la rue noire, personne ne te voit l'emporter... sauf peut-être le gamin des rues, qui a toujours un œil ouvert.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Ironie du métier : le chasseur, porté comme une prime. Tu te demandes combien vaut sa tête à lui, quelque part dans un autre comté.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "« Tu attends quoi, que l'Irlandais vienne s'asseoir sur tes genoux ? » Il ne répond pas. Il note quelque chose dans son carnet.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Chasseur de primes... charognard, oui. » Il lève les yeux : « Les charognards nettoient. Sans nous, la plaine serait couverte de cadavres qui marchent encore. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il se lève, repousse sa chaise d'un coup de talon et sort dans la rue. Il t'attend, les mains le long du corps.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il sourit, pour la première fois : « Continue. Plus tu fais de bruit, plus vite Malloy me signera le reçu. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il est tard, il a les nerfs à vif : sa main est sur ta gorge avant que tu aies fini ta phrase. « Pas ce soir. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -5,
+          "relation": -2
+        }
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il touche le bord de son chapeau d'un doigt, sans un mot. Ses yeux reviennent aussitôt sur le balafré."
+      },
+      {
+        "texte": "« Étranger. » Un seul mot, posé comme une pièce sur une table de jeu."
+      },
+      {
+        "texte": "Il pousse une chaise vers toi du bout de sa botte et te sert une tasse de café noir. C'est son invitation la plus chaleureuse.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te rend ton salut et te détaille des bottes au chapeau, comme un maquignon qui pèse une bête. « Tu as l'air en forme. Tant mieux. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "« On parle de toi en ville. En bien. C'est rare. Garde ça : ça ne s'achète pas. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "soudoyer": [
+      {
+        "texte": "Il compte tes billets avec soin, les plie et les glisse dans son carnet : « Tu as acheté une semaine. Après, si ton nom tombe sur ma table, je ne te connais pas. »",
+        "effets": {
+          "argent": -20,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il regarde les dollars sans y toucher : « Pour quoi faire ? Personne ne te cherche. Garde ton argent pour le jour où ça arrivera. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Ta prime vaut plus que ça. » Il attend. Tu doubles. Il empoche : « Je ne t'ai pas vu. Pour le moment. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -40,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Range ça. Un homme comme toi ne devrait même pas savoir comment on achète un chasseur de primes. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il prend l'argent, le compte, puis te le jette au visage : « Ce que tu me dois, ça ne se paie pas en billets. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "« La nuit, mes tarifs montent. » Il prend vingt dollars, puis cinq de plus « pour le café », et promet d'oublier ton visage jusqu'au matin.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -25
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu le suis jusqu'à la gare. Il parle à voix basse au télégraphiste, glisse une pièce sous le guichet et repart avec une feuille pliée en quatre."
+      },
+      {
+        "texte": "Il s'arrête devant le cheval attaché et examine ses fers, longuement. Puis il te parle sans se retourner : « Fers du Suédois. Posés pour un éleveur mort. Ce cheval est volé. Et toi, tu marches trop fort. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu le perds dans le noir derrière la pension. Une seconde plus tard, une main se pose sur ton épaule : « Tu me cherchais ? »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il fait le tour du bureau du shérif, compte les fenêtres, mesure à pas comptés la distance jusqu'à l'écurie. Il devine ce que d'autres préparent.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle le touche à la cuisse. Il roule sous une table, renverse un tonneau pour se couvrir et riposte : une balle te frôle, la suivante te mord le flanc.",
+        "effets": {
+          "etat": "blesse",
+          "sante": -30,
+          "honneur": -2,
+          "prime": 25,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Vos coups partent ensemble, mais seul le sien trouve sa cible. Tu tombes dans la sciure, l'épaule en feu.",
+        "effets": {
+          "sante": -50,
+          "etat": "hostile",
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Ton tir l'atteint en pleine poitrine. Il s'affaisse sur sa chaise et son carnet glisse à terre. Au fond, le balafré lève son verre dans ta direction.",
+        "effets": {
+          "etat": "mort",
+          "honneur": -4,
+          "prime": 80
+        }
+      },
+      {
+        "texte": "Dans le noir, ta balle le blesse au bras. Il disparaît derrière l'écurie ; tu entends un cheval partir au galop. Il reviendra.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "honneur": -2,
+          "prime": 20,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "« Enfin. » Il était prêt : il plonge, roule et te loge une balle dans la jambe. « Vivant, j'ai dit. Ne bouge plus. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -35,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "defier_au_bras_de_fer": [
+      {
+        "texte": "« Ma main droite me sert à tirer. Je ne la prête pas. » Il te tend la gauche. Il gagne quand même, sans renverser une goutte de café.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il pose le coude et vous restez figés une minute entière, comme deux statues de cimetière. Puis il lâche : « Égalité. Je ne gaspille pas mes forces pour rien. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il perd exprès, en grimaçant de façon peu convaincante, et te glisse : « Que l'Irlandais me croie faible. Ça m'arrange. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« Volontiers. » Sa poigne se referme comme une menotte. Il ne cherche pas à gagner : il tient ta main, et ne la lâche plus. Tu dois lui renverser son café brûlant sur les doigts pour te libérer.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "« Il est tard. » Il accepte quand même, te bat en deux secondes et se rassoit : « Va te coucher. La nuit, les vaincus font des bêtises. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "faire_equipe_prime": [
+      {
+        "texte": "Il te détaille longuement : « Moitié-moitié. Trente-sept dollars cinquante chacun. Je garde les cinquante cents pour le café. Tu couvres la porte de derrière. »",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« Pas encore. Il attend quelqu'un, ou il attend la bonne nuit. Le jour où il bouge, je te fais signe. Sois prêt, et sois sobre. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Je travaille seul. » Il tapote son carnet. « Mais un homme seul ne surveille pas deux portes. Un quart de la prime. À prendre ou à laisser. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il tire une chaise : « Voilà le plan. L'Irlandais ira vers la prison avant le train de jeudi. Toi, l'écurie ; moi, la rue. Vivant. Si tu tires, vise les jambes. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« Faire équipe avec un homme recherché ? » Il rit tout bas. « Si on gagne, je touche la prime de l'Irlandais. Si on perd, je touche la tienne. Dans les deux cas, je gagne. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "« J'ai entendu parler de toi. Tu tires d'abord, et les questions, jamais. » Il secoue la tête : « Je le veux vivant. Toi, tu ramènes des cadavres. Non. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "prevenir_evasion": [
+      {
+        "texte": "« Je sais. » Il ne lève pas les yeux. « Pourquoi crois-tu que je bois du café depuis trois jours ? »"
+      },
+      {
+        "texte": "Il hausse un sourcil et pose sa tasse : « Quand ? Combien sont-ils ? » Tu lui dis ce que tu sais. Il note tout et fait glisser un dollar vers toi : « Pour le renseignement. »",
+        "effets": {
+          "argent": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« Bien. » Il tire sa montre de gousset et la consulte. « Alors on n'attend plus. Demain, à l'aube. Tu en es ? »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il t'écoute et hoche la tête : « Utile. Je t'accorde un jour d'avance avant de m'intéresser à toi. C'est le prix de l'information. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il se lève d'un coup et noie sa cigarette dans son café : « Cette nuit ? » Il sort, carabine sous le bras, vers le bureau du shérif.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "consulter_carnet_primes": [
+      {
+        "texte": "Il tourne les pages pour toi : visages au crayon, noms, chiffres. « Lui, quarante dollars, mort en 96. Lui, cent cinquante, toujours dehors. » Il montre le balafré : « Lui, soixante-quinze. »"
+      },
+      {
+        "texte": "« Ça ne se prête pas. » Il l'ouvre pourtant à une page, une seule : un homme au visage doux, barré d'une croix. « Le seul que j'ai regretté. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il ouvre le carnet à la dernière page. Ton visage y est, mal dessiné mais reconnaissable, une somme en dessous. « La ressemblance est frappante, tu ne trouves pas ? »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il te le tend sans hésiter : « Si tu croises un de ces visages, préviens-moi. On partage. » Tu reconnais l'un d'eux : un homme croisé sur la route de Strawberry.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Tu n'y es pas. » Il referme le carnet d'un claquement sec. « Reste comme ça. Les honnêtes gens ne rapportent rien, mais ils dorment bien. »",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "se_livrer_au_chasseur": [
+      {
+        "texte": "Tu poses ton arme sur la table et lèves les mains. « Sage décision. » Il te lie les poignets sans serrer : « Direction Malloy. Vivant, tu as une chance de payer ta prime au lieu de la danser au bout d'une corde. »",
+        "effets": {
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Tu te rends ? À moi ? » Il cherche le piège, longtemps. Puis il glisse ton arme dans sa ceinture : « Tu marches devant. Si tu cours, je tire dans les jambes. »",
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Il ne prend même pas la peine de sortir sa corde : « Ta prime est trop petite pour que je m'embête. Va voir Malloy toi-même, paie, et ne me fais plus perdre mon temps. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Toi ? Te rendre ? » Convaincu que c'est une ruse, il te ligote si serré que tes doigts sont bleus en arrivant au bureau du shérif.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Il soupire : « Pourquoi moi ? » Il t'accompagne chez Malloy sans corde, en marchant à côté de toi comme un ami, et ne réclame que la moitié de la prime.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 1
+        }
+      }
+    ],
+    "lecon_de_traque": [
+      {
+        "texte": "« Leçon gratuite : un homme en fuite cherche de l'eau, un cheval et une femme. Dans cet ordre. » Il retourne à son café."
+      },
+      {
+        "texte": "Il t'emmène devant le cheval attaché : « Fer avant gauche usé de travers. Tu retrouverais ces traces n'importe où dans le comté. Voilà comment on traque un homme : par son cheval. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Cinq dollars la leçon. » Il les empoche et t'apprend à lire la boue : le poids d'un homme, sa hâte, s'il porte une charge. C'est cher. Ça vaut le prix.",
+        "effets": {
+          "argent": -5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Tu veux apprendre à traquer ? Commence par toi : ta botte droite laisse un talon fendu. Je te suis depuis l'écurie. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« La nuit, on ne piste pas. On écoute. » Il se tait. Tu entends les chevaux, un chien, et au loin quelqu'un qui marche trop vite vers le bureau du shérif.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ]
+  }
+}

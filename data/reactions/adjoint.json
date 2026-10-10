@@ -1,0 +1,1354 @@
+{
+  "id": "adjoint",
+  "description": "Un jeune homme de vingt-deux ans aux joues à peine rasées, coiffé d'un chapeau trop grand, l'étoile astiquée au point de s'y mirer. Sa main droite ne quitte jamais la crosse d'un Colt flambant neuf, et il sursaute au moindre bruit.",
+  "personnalite": "Nerveux, fier, avide de gloire. Eli rêve de voir son nom dans les journaux de Saint Denis et dégaine bien trop vite. Il admire Malloy, le jalouse un peu, a peur de le décevoir et encore plus peur de mourir, alors il joue les durs. Il est persuadé que l'O'Driscoll du Smithfield's prépare un coup, et brûle de l'arrêter lui-même.",
+  "repliques": [
+    "« Un jour, on écrira des romans à quatre sous sur moi. Eli, la Foudre de Valentine. »",
+    "*fait tourner son revolver autour de son doigt et le laisse tomber dans la boue*",
+    "« Le Balafré qui boit dos au mur au fond du Smithfield's, je le sens pas. Je le sens pas du tout. »",
+    "« Bouge pas, étranger ! … Ah. Pardon. Je t'avais pris pour un autre. »",
+    "« Le shérif dit que je dégaine trop vite. Moi je dis qu'on n'est jamais trop rapide. »",
+    "« Si les O'Driscoll viennent, je les attends. Tous. Enfin, avec le shérif. »",
+    "*astique son étoile avec sa manche en se regardant dans la vitre du bureau*",
+    "« Soixante-quinze dollars, la tête du Balafré. Avec ça, je m'achète une selle mexicaine. »"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 2,
+      "lieu": "bureau_sherif",
+      "activite": "monte la garde de nuit devant la cellule, le revolver sur les genoux"
+    },
+    {
+      "de": 2,
+      "a": 8,
+      "lieu": "pension",
+      "activite": "dort à la pension, ses bottes aux pieds, au cas où"
+    },
+    {
+      "de": 8,
+      "a": 9,
+      "lieu": "bureau_sherif",
+      "activite": "garde la cellule pendant la ronde du shérif en s'entraînant à dégainer"
+    },
+    {
+      "de": 9,
+      "a": 11,
+      "lieu": "rue_principale",
+      "activite": "patrouille en roulant des épaules, salue les dames et toise les étrangers"
+    },
+    {
+      "de": 11,
+      "a": 12,
+      "lieu": "magasin_general",
+      "activite": "achète des cartouches et tente en vain d'obtenir crédit auprès de l'épicier"
+    },
+    {
+      "de": 12,
+      "a": 14,
+      "lieu": "bureau_sherif",
+      "activite": "garde le prisonnier pendant que le shérif déjeune, un roman à quatre sous caché dans le registre"
+    },
+    {
+      "de": 14,
+      "a": 15,
+      "lieu": "saloon_keane",
+      "activite": "déjeune en vitesse et fait les yeux doux à la danseuse"
+    },
+    {
+      "de": 15,
+      "a": 17,
+      "lieu": "voie_ferree",
+      "activite": "tire sur des bouteilles derrière la voie ferrée"
+    },
+    {
+      "de": 17,
+      "a": 20,
+      "lieu": "bureau_sherif",
+      "activite": "garde le prisonnier pendant la ronde du soir du shérif"
+    },
+    {
+      "de": 20,
+      "a": 22,
+      "lieu": "saloon_smithfield",
+      "activite": "surveille l'O'Driscoll du Smithfield's, une bière tiède devant lui, la main sur la crosse"
+    },
+    {
+      "de": 22,
+      "a": 24,
+      "lieu": "bureau_sherif",
+      "activite": "veille avec le shérif et sursaute à chaque bruit de sabots"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il se redresse et bombe le torse : « Adjoint Eli, pour vous servir. Enfin, pour servir la loi. Qu'est-ce que tu veux ? »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te prend à part, l'air conspirateur : « Tu as vu le Balafré, au fond du Smithfield's ? Trois jours qu'il boit dos au mur. Son portrait est sur le panneau, et le shérif veut pas que je l'arrête tout seul. Moi je dis qu'on attend trop. »"
+      },
+      {
+        "texte": "Il parle trop vite, les yeux rivés sur la porte : « Tu as entendu ce bruit ? Non ? Moi si. Trois fois. C'est eux. Je te dis que c'est eux. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Sa main tremble au-dessus de l'étui : « Je… je te connais, toi. Ta tête, elle est sur une affiche. Bouge pas. Bouge pas, j'ai dit ! »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Ses yeux brillent : « C'est toi dont tout le monde parle ? Dis, tu m'apprendrais deux-trois trucs ? Le shérif, il dit toujours que je suis pas prêt. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il baisse la voix et regarde autour de lui : « Entre nous, j'ai jamais tué personne. Faut pas le dire. Les gens croient que si. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il pose la main sur son revolver : « Je t'ai à l'œil, étranger. Un faux pas et tu dors en cellule avec l'Irlandais. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il refuse de te répondre et crie par-dessus son épaule, d'une voix qui déraille : « Shérif ! Il est revenu ! »",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il touche son chapeau trop grand, qui lui retombe sur les yeux : « 'Jour. Enfin… salut. Bonjour, l'ami. »"
+      },
+      {
+        "texte": "Il te salue en faisant tournoyer son revolver… qui lui échappe et plonge dans l'abreuvoir. Il le repêche, rouge jusqu'aux oreilles : « Tu n'as rien vu. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il fait volte-face et te braque avant de te reconnaître : « Bon sang ! On ne surprend jamais un homme de loi la nuit ! » Il rengaine en tremblant.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te tape dans le dos avec un sourire éclatant : « Mon ami ! Viens, je te présente au shérif. Tu le connais déjà ? Je te présente quand même. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te rend ton salut, puis fixe longuement ton visage, sort une affiche pliée de sa poche et la compare : « Hmm. Hmm hmm. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il se met presque au garde-à-vous : « C'est un honneur. Vraiment. Un vrai honneur. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Tu te moques de son chapeau trop grand. Il devient écarlate : « Répète ça ! Répète ça si tu l'oses ! » Sa main tremble au-dessus de l'étui.",
+        "effets": {
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu le traites de gamin. Il dégaine si vite que le coup part tout seul dans le plancher. Il te regarde, blême : « Ça… c'était un avertissement. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu lui dis que Malloy n'a pas confiance en lui. Le coup porte : il baisse les yeux, la mâchoire serrée : « Qu'est-ce que t'en sais, toi ? Hein ? Qu'est-ce que t'en sais ? »",
+        "effets": {
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu lui murmures que les O'Driscoll arrivent. Il tire deux coups en l'air en hurlant « Aux armes ! » et réveille toute la ville. Malloy sort en caleçon long, fou de rage, et c'est à toi qu'il colle l'amende.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te saute dessus sans réfléchir. Vous roulez dans la boue jusqu'à ce que Malloy vous sépare avec un seau d'eau froide.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "prime": 5,
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "« Tu me provoques, moi ? Avec ta tête sur une affiche ? » Il se jette sur toi avec les fers, les fait tomber, se baisse pour les ramasser, et tu en profites pour reculer.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 5,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il hésite, puis te sourit bêtement : « Tu me testes, c'est ça ? Le shérif fait pareil. Je suis calme. Calme comme un lac. » Son œil gauche tressaille.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu fais un pas vers lui. Il en fait deux en arrière et se cogne contre le poteau du perron : « J'ai… j'ai pas peur de toi ! » Si, il a peur.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu le fixes sans ciller. Il dégaine par réflexe et te braque, le canon tremblant comme une feuille : « Recule ! Recule, ou je… ou je… »",
+        "effets": {
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Seul dans l'obscurité, il craque : il recule jusqu'au bureau et verrouille la porte. Tu l'entends prier à voix basse derrière le battant.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il ravale sa peur et sort un sifflet : trois coups stridents. « Shérif ! Shérif ! L'homme de l'affiche ! » Toute la rue se tourne vers toi.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il blêmit et te laisse passer sans un mot. Plus tard, tu le vois noter ton nom dans un petit carnet, en tirant la langue.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il tient bon, cette fois, les jambes flageolantes : « Le shérif m'a dit que si un jour j'ai peur, je dois faire semblant que non. Alors je fais semblant. Très fort. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "soudoyer": [
+      {
+        "texte": "Il regarde les billets comme un chien regarde un os : « C'est… c'est pour quoi, au juste ? » Il les empoche très vite, avant de changer d'avis.",
+        "effets": {
+          "argent": -20,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il prend l'argent, puis le jette par terre, fier comme un coq : « Je suis un homme de loi ! Pas un… pas un de ceux-là ! » Puis il le ramasse : « Pièce à conviction. »",
+        "effets": {
+          "argent": -20,
+          "prime": 10,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il empoche ton argent et te laisse filer… puis court tout raconter au shérif cinq minutes plus tard, l'argent compris.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -20,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Il repousse ta main, vexé : « Entre amis, on ne fait pas ça. Mais tu peux me payer un whisky au Keane's, ça, c'est autorisé. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il rougit violemment : « Toi aussi ? Je croyais que t'étais différent. » Il tourne les talons sans prendre un cent.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Dans la pénombre, il compte les billets en tremblant : « Une heure. Je ferme les yeux une heure, pas plus. Et si le shérif l'apprend, je t'ai jamais vu. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -30,
+          "relation": 1
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Tu pointes {outil} sur lui. Il lève les mains si haut que son chapeau tombe : « Fais pas ça ! J'ai une mère à Blackwater ! »",
+        "effets": {
+          "prime": 20,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu le menaces avec {outil}. Il dégaine malgré tout, par pur réflexe ; vos deux armes se font face, et il transpire à grosses gouttes : « Je tire ! Je jure que je tire ! »",
+        "effets": {
+          "prime": 20,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il recule dans l'ombre et hurle « SHÉRIF ! » de toute la force de ses poumons. Une lampe s'allume, puis deux, puis toute la rue.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 20,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il regarde ton arme, puis l'affiche froissée dans sa main : « Ta prime va monter, tu sais ? Beaucoup. Le shérif dit qu'on ne menace pas un homme de loi à Valentine. Jamais. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 30,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il tombe à genoux en sanglotant. Ce soir, toute la ville saura que tu as fait pleurer l'adjoint, et Malloy ne te le pardonnera jamais.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "prime": 25,
+          "honneur": -2,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Il n'attend pas : il tire le premier, trop vite, à côté. La balle arrache un éclat du poteau qui t'entaille la joue. Malloy arrive en courant, fusil à l'épaule.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "prime": 25,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Tu l'assommes d'un coup sec. Il s'effondre, son chapeau trop grand roulant dans la boue, et son revolver tout neuf glisse hors de l'étui.",
+        "effets": {
+          "prime": 30,
+          "honneur": -2,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il te voit venir et dégaine trop vite : le coup part dans sa propre botte. Il hurle, tu cognes, il tombe.",
+        "effets": {
+          "prime": 30,
+          "honneur": -2,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il s'est assoupi sur sa chaise devant la cellule. Un coup suffit. Le prisonnier se redresse derrière les barreaux : « Les clés, l'ami. Les clés, vite ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 40,
+          "honneur": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il t'esquive par miracle et te frappe au nez avec sa crosse : « Ha ! Tu as vu ça ? Tu as vu ça ?! » Puis il se souvient qu'il doit t'arrêter.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "prime": 20
+        }
+      },
+      {
+        "texte": "Tu l'assommes devant le bureau. Malloy sort au bruit : il voit son adjoint au sol, et toi debout. Son regard las se durcit comme de l'acier.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 40,
+          "honneur": -2,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu fonces sur lui avec {outil}. Il panique et tire trois fois au hasard ; une balle fait éclater la vitrine de l'épicier. Tu le blesses au bras.",
+        "effets": {
+          "sante": -10,
+          "prime": 50,
+          "honneur": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Tu l'attaques avec {outil}. Il pare avec sa crosse, recule en trébuchant et s'enfuit vers le bureau en appelant le shérif à pleins poumons.",
+        "effets": {
+          "prime": 40,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu l'attaques dans la nuit. Il s'effondre et rampe vers le bureau : « Shérif… ils sont là… » Malloy te prend pour un O'Driscoll : le premier coup de fusil part sans sommation.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -30,
+          "prime": 75,
+          "honneur": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il t'attendait, tremblant mais prêt : il te touche à la cuisse avant que ton arme ne l'atteigne, puis reste figé, horrifié par ce qu'il vient de faire.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -35,
+          "prime": 40,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu l'attaques en pleine rue. Malloy sort sur le perron, fusil à l'épaule, et ne dit qu'une chose avant de tirer : « Touche encore à ce gamin, et je te tue. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -20,
+          "prime": 75,
+          "honneur": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Tu frappes avec {outil}. Le jeune homme s'écroule dans la boue, la main sur son étoile. Au télégraphe, ta prime monte avant même que la poussière ne retombe.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 100,
+          "honneur": -4,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle le touche en pleine poitrine. Il te regarde, étonné, comme s'il n'avait jamais cru que ça pouvait vraiment arriver, et tombe à genoux dans la boue. Quelque part, Malloy hurle son nom.",
+        "effets": {
+          "prime": 150,
+          "honneur": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Ta balle lui traverse l'épaule. Il lâche son arme, roule derrière les tonneaux et sanglote en appelant sa mère.",
+        "effets": {
+          "prime": 75,
+          "honneur": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il dégaine avant toi, trop vite, comme toujours. Sa balle te manque, la tienne aussi. Il s'enfuit en zigzag vers le bureau du shérif en hurlant.",
+        "effets": {
+          "prime": 50,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu tires dans la nuit. Il vide son barillet au jugé ; une balle perdue te frappe à la cuisse. Malloy surgit derrière lui avec son fusil à double canon.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -40,
+          "prime": 75,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Tu tires sur l'adjoint en plein jour. Il s'effondre devant le bureau. Malloy sort, s'agenouille près de lui, puis lève vers toi des yeux qui n'ont plus rien de las. Il épaule, et il ne rate pas.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -60,
+          "prime": 150,
+          "honneur": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Vous tirez en même temps. Il est plus rapide que tu ne le croyais : sa balle te brûle les côtes, la tienne lui brise la jambe.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -35,
+          "prime": 100,
+          "honneur": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "L'adjoint tombe et ne se relève pas. Le soir même, le télégraphiste envoie ton signalement à Saint Denis, Strawberry et Rhodes : tueur d'homme de loi, mort ou vif.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 150,
+          "honneur": -5,
+          "etat": "mort"
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} dans sa direction. Il se jette à plat ventre dans la boue en hurlant « À couvert ! », puis se relève, couvert de fange, quand il comprend.",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu lances {outil} sur lui. Il le reçoit sur le front, chancelle et dégaine en tremblant : « Agression d'un officier ! Les mains en l'air ! »",
+        "effets": {
+          "prime": 15,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu lances {outil}. Par pur réflexe, il dégaine et tire dessus en plein vol. Il rate, évidemment. À la fenêtre, Malloy se prend la tête dans les mains.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lances {outil} dans le noir. Il croit à une attaque et vide son barillet sur les tonneaux d'en face. Quand la fumée retombe, toute la rue est debout.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10,
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu lui lances {outil}. Il le rattrape au vol, fier comme un paon : « T'as vu ces réflexes ? Comme Wild Bill ! »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu lui lies les poignets avec {outil}. Il se débat comme un veau qu'on marque : « Le shérif va te pendre ! Il va te pendre, tu m'entends ? »",
+        "effets": {
+          "prime": 40,
+          "honneur": -2,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Tu le ligotes au poteau du perron. Il pleure de rage, plus humilié que blessé : « Tout le monde va voir… Tout le monde ! »",
+        "effets": {
+          "prime": 40,
+          "honneur": -3,
+          "relation": -4,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Tu le ligotes devant la cellule. Le prisonnier se met à rire, longuement : « Merci, l'ami. Les gars n'auront plus qu'à pousser la porte. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 50,
+          "honneur": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Il te mord la main jusqu'au sang avant que le nœud ne se serre, et crie assez fort pour faire aboyer tous les chiens de la rue.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "prime": 40,
+          "etat": "ligote"
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Ton lasso se resserre autour de sa taille ; il s'étale de tout son long dans l'abreuvoir. Il en ressort trempé, le revolver plein d'eau : « Tu… tu vas le regretter ! »",
+        "effets": {
+          "prime": 20,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu le prends au lasso. Il tire au hasard en tombant ; la balle traverse la vitre du bureau. Malloy jaillit, le fusil à la main.",
+        "effets": {
+          "prime": 30,
+          "honneur": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu le traînes dans la boue au bout de ta corde. Les gamins de la rue rient aux éclats. L'adjoint, lui, ne te le pardonnera jamais.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 30,
+          "honneur": -2,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Ton lasso le cueille dans le noir. Il hurle « Ils m'ont eu ! Les O'Driscoll m'ont eu ! » à s'en déchirer la gorge.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 25,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu lui arraches son revolver d'un geste. Il reste bouche bée, la main vide au-dessus de l'étui : « C'était… c'était un cadeau du shérif. »",
+        "effets": {
+          "prime": 15,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il tente de dégainer, tu lui saisis le poignet. Le coup part dans le plancher, à un pouce de ton pied. Tu as son arme ; il a les larmes aux yeux.",
+        "effets": {
+          "prime": 15,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu lui prends son revolver pour lui montrer le geste. Il se gratte la tête : « Comment t'as fait ça ? Refais-le. Doucement, cette fois. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu tends la main vers son arme ; il te frappe au visage avec une rage de désespéré : « Personne touche à mon Colt ! »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "prime": 10,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu le désarmes devant la cellule. Le prisonnier siffle d'admiration. L'adjoint, lui, cherche des yeux le râtelier, beaucoup trop loin.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 20,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il accepte avant même que tu aies fini ta phrase. Au milieu de la rue, ses mains tremblent. Il dégaine trop tôt, rate, et lâche son arme en voyant ton canon : « Je me rends ! Je me rends ! »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Malloy surgit entre vous et attrape l'adjoint par l'oreille : « Pas de duel. Ni aujourd'hui, ni jamais. Toi, étranger, tu files. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Au signal, vous dégainez. Il est plus rapide que prévu : sa balle t'arrache le chapeau, la tienne lui frôle la tempe. Il éclate d'un rire nerveux, presque hystérique.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Le duel a lieu. Il dégaine le premier, mais ta balle l'atteint à la main. Il hurle, et toute la rue t'a vu tirer sur un homme de loi.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "prime": 75,
+          "honneur": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il dégaine bien avant le signal. Sa balle te touche au bras ; il te regarde, horrifié par ce qu'il vient de faire, puis s'enfuit en courant.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -40,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il te fixe, pâle comme un linge : « Contre toi ? Non. Je… je suis pas idiot. » Il recule et te tend la main à la place.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Tu le frappes au menton. Il tombe assis dans la boue, sonné, et cherche son chapeau à tâtons.",
+        "effets": {
+          "prime": 10,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Ton poing l'atteint au ventre. Il se plie en deux, puis dégaine par réflexe. Malloy lui retient le bras juste à temps.",
+        "effets": {
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il encaisse, te répond d'un direct étonnamment sec et sautille autour de toi comme un boxeur de foire.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "prime": 10,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu le frappes dans l'ombre de la ruelle. Il s'enfuit vers le bureau en hurlant à l'aide, le nez en sang.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il te regarde, la main sur sa joue rouge, avec des yeux de chiot battu : « Pourquoi ? J'croyais… »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -4
+        }
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu charges l'adjoint sur ton épaule. Il gigote comme une truite : « Lâche-moi ! C'est humiliant ! Les gens regardent ! »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu le portes, inconscient, jusqu'au cabinet du docteur. Le docteur renifle : « Encore lui ? Il s'est tiré dans le pied la semaine dernière. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu emportes l'adjoint inconscient hors du bureau. Derrière toi, la cellule n'est plus gardée par personne, et le prisonnier sourit dans le noir.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 40,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu le ramènes au bureau après sa cuite au Keane's. Il marmonne contre ton épaule : « Le shérif… faut pas qu'il sache… »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu le suis. Il marche en roulant des épaules, salue les dames et s'arrête devant chaque vitrine pour ajuster son chapeau."
+      },
+      {
+        "texte": "Il se retourne d'un coup, revolver au poing : « Pourquoi tu me suis ? Hein ? Qui t'envoie ? »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu le suis jusque derrière la voie ferrée, où il tire sur des boîtes de conserve. Il en touche une sur six et la salue comme un ennemi abattu.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu le suis jusqu'au Smithfield's. Il observe l'O'Driscoll par la fenêtre crasseuse, la main sur la crosse, en marmonnant : « Fais un geste. Un seul. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te sent dans son dos et presse le pas vers le télégraphe. Tu l'entends demander au guichet : « Combien, pour un homme comme ça ? »",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Il s'entraîne à dégainer devant son reflet dans la vitre du bureau. Il rate une fois sur trois et regarde autour de lui pour vérifier que personne n'a vu."
+      },
+      {
+        "texte": "Il a gravé une encoche sur la crosse de son revolver. Une seule. Tu apprendras plus tard que c'était pour le rat de la boucherie."
+      },
+      {
+        "texte": "Le chien de son revolver claque mollement : il a encore cassé le ressort à force de jouer avec. Ce sera la troisième visite chez l'armurier ce mois-ci."
+      },
+      {
+        "texte": "Il jette des regards jaloux au chasseur de primes qui traverse la rue, sa grande carabine à l'épaule."
+      },
+      {
+        "texte": "Il fixe la rue sombre sans cligner des yeux. Toutes les dix minutes, il vérifie que son arme est chargée. Elle l'est toujours.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il lit un roman à quatre sous caché dans un registre officiel, « Les Exploits de Buffalo Bill ». Il bouge les lèvres en lisant.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu le croques dans {outil} en train de bomber le torse. Il se penche par-dessus ton épaule : « Fais-moi le menton plus carré. Et une cicatrice. Les héros ont toujours une cicatrice. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il pose fièrement, la main sur l'étui, et retient son souffle jusqu'à devenir violet.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te demande de le dessiner avec deux revolvers et une pile d'O'Driscoll à ses pieds : « Pour ma mère. Elle sera fière. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu le dessines assoupi devant la cellule, la bouche ouverte. Il se réveille en sursaut : « J'dormais pas ! Je… je faisais semblant, pour piéger le prisonnier. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il se met en pose avant même que tu aies réglé l'appareil, revolver dégainé, regard farouche : « Pour les journaux de Saint Denis. Écris : Eli, l'homme qui fait trembler les O'Driscoll. »",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Le magnésium éclate. L'adjoint dégaine par réflexe et tire dans le plafond. De l'intérieur, la voix de Malloy : « ELI ! »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il veut un tirage pour l'afficher sur le panneau des avis, à côté de ta tête : « Le chasseur et sa proie. Ça aurait de l'allure, non ? »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il te demande deux tirages : un pour sa mère, un pour la danseuse du Keane's. Il rougit jusqu'aux oreilles en disant le second.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Tu lui tends {outil}. Il l'examine sous tous les angles, comme un trésor : « Pour moi ? Vraiment ? »",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il prend {outil} et le range avec un soin exagéré : « Je le garde comme pièce à conviction. Enfin, comme cadeau. Les deux. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il accepte {outil} du bout des doigts, soupçonneux : « C'est pas un pot-de-vin, au moins ? Parce que le shérif dit que… Bon. Merci. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Ses yeux s'embuent : « Personne m'a jamais rien donné, à part le shérif. Et c'était des corvées. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Il recule devant {outil} : « D'où tu sors ça ? C'est volé ? Je veux rien de volé, moi ! »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "signaler_un_crime": [
+      {
+        "texte": "Il note tout dans son carnet, la langue entre les dents : « Un crime ! Un vrai ! Bouge pas, je préviens le shérif. Non, attends : j'y vais seul. »",
+        "effets": {
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il dégaine aussitôt : « Où ? Qui ? Combien ? Des O'Driscoll ? » Tu n'as pas fini de parler qu'il court déjà dans la mauvaise direction.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il pâlit : « Maintenant ? Dans le noir ? » Il préfère réveiller le shérif en tremblant plutôt que d'y aller seul.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il t'écoute, puis sort l'affiche pliée de sa poche et la regarde longuement : « Attends. Le crime, c'est pas toi, plutôt ? »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Merci, citoyen ! » Il te serre la main avec énergie : « Avec des gens comme toi, Valentine sera un jour aussi sûre que Saint Denis. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      }
+    ],
+    "partager_cafe_brule": [
+      {
+        "texte": "Il boit une gorgée et tousse : « Il est infâme, hein ? Le shérif dit que ça forge le caractère. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il met quatre sucres dans sa tasse en surveillant la porte, de peur que Malloy le voie : « Les durs boivent noir. Moi je bois noir… en public. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Autour du poêle, il te confie qu'il n'a pas fermé l'œil depuis l'arrestation : « Chaque bruit, je crois que c'est eux. Le café, ça aide. Un peu. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il sort une boîte de biscuits de l'épicerie, « confisqués », précise-t-il, et la partage avec toi.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "sante": 3,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il te tend la tasse d'une main et garde l'autre sur la crosse. Le café déborde sur ses doigts ; il serre les dents pour ne pas crier.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "interroger_sur_odriscoll": [
+      {
+        "texte": "Il s'anime d'un coup : « Ils sont des centaines ! Enfin, des dizaines. Enfin, assez. Et celui du Smithfield's, c'est un éclaireur, j'en suis sûr. »"
+      },
+      {
+        "texte": "Il baisse la voix : « Le prisonnier parle en dormant. Il a dit jeudi, et il a parlé du sifflet du train. Le shérif dit que c'est rien. Moi je crois que c'est tout. »"
+      },
+      {
+        "texte": "« Tu veux m'aider à les coincer ? » Ses yeux brillent : « On pourrait arrêter celui du Smithfield's, toi et moi. Le shérif n'aurait plus qu'à signer. Soixante-quinze dollars, moitié-moitié ! »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il plisse les yeux : « Pourquoi tu poses toutes ces questions ? Tu es avec eux ? » Sa main se crispe sur la crosse.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il frissonne : « Pas si fort. Ils ont des oreilles partout. Le gamin des rues, par exemple : il vend ce qu'il entend à qui le paie. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "monter_garde_prison": [
+      {
+        "texte": "Tu passes la nuit avec lui devant la cellule. Il parle sans arrêt : ses rêves, les romans à quatre sous, la danseuse du Keane's. Vers l'aube, il s'endort sur ton épaule.",
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il t'explique son plan de défense : trois fusils chargés, des sacs de farine aux fenêtres, et lui, en héros, sur le toit. Tu lui fais remarquer que le toit est en tôle.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Un chat renverse un seau dehors. L'adjoint tire deux coups à travers la porte avant que tu puisses l'arrêter. Le chat survit. La porte, non.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te dévisage : « Tu veux garder la cellule ? Pour libérer l'Irlandais, c'est ça ? » Il te tient en joue jusqu'à ce que tu sortes.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te confie le fusil et, pour la première fois, ose fermer les yeux : « Réveille-moi s'ils viennent. Non : réveille-moi juste avant, que j'aie l'air prêt. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      }
+    ],
+    "defier_au_tir_bouteilles": [
+      {
+        "texte": "Derrière la voie ferrée, il aligne six bouteilles sur une barrière. Il en brise deux, tu en brises cinq. Il prétend avoir eu le soleil dans les yeux.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il tire le premier, trop vite, et touche la barrière, puis un corbeau qui passait par là. Il le revendique comme un coup voulu.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te bat, cette fois, et sautille de joie autour de toi : « J'te l'avais dit ! La Foudre de Valentine ! »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu le laisses gagner. Il le sent, te lance un regard noir, puis sourit malgré lui : « La prochaine fois, tu tires pour de vrai. Promis ? »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« De nuit ? » Il tire sur des bouteilles qu'il ne voit pas, rate tout, et réveille la gérante de l'hôtel, qui lui vide un pot de chambre sur la tête.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il accepte, mais tire en surveillant tes mains plus que les bouteilles : « Je te tourne pas le dos. Le shérif dit qu'on tourne jamais le dos à un homme recherché. »",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "enseigner_a_degainer": [
+      {
+        "texte": "Tu lui montres comment laisser la main pendre, détendue, près de l'étui. Il essaie dix fois. La onzième, il ne se tire pas dans la jambe : c'est un progrès.",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« Plus lent, c'est plus rapide », lui répètes-tu. Il te regarde comme si tu parlais chinois, mais il obéit, et ses tirs s'améliorent nettement.",
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il écoute tes conseils avec méfiance : « Pourquoi tu m'aides ? Pour que je dégaine pas à temps le jour où tu braqueras la banque ? »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Après une heure d'exercice, il dégaine propre, sans trembler. Il en a les larmes aux yeux : « Le shérif m'a jamais appris ça. Il dit toujours qu'on verra plus tard. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Vous vous entraînez à la lueur d'une lanterne. Il dégaine, fait tomber la lanterne, et vous passez dix minutes à piétiner la paille enflammée devant l'écurie.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "raconter_ses_exploits": [
+      {
+        "texte": "Tu lui racontes une attaque de diligence déjouée. Il t'écoute bouche bée, en oubliant de cligner des yeux : « Et après ? Et après ?! »",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il t'interrompt sans arrêt pour noter dans son carnet : « Je peux l'utiliser ? Pour mon histoire à moi. En changeant les noms. Enfin, en mettant le mien. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu racontes un peu trop bien comment tu as détroussé un banquier. Il blêmit, sort lentement son carnet et note ton signalement.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il boit tes paroles et finit par murmurer : « Un jour, c'est moi qu'on racontera comme ça. » Puis, plus bas : « Tu crois que j'en suis capable ? »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu lui racontes une histoire de fantômes du désert. Il fait le brave, mais il garde la lampe allumée jusqu'à l'aube.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te raconte les siens en retour. Ils sont tous inventés. Tu fais semblant d'y croire, et il le sait, et il t'en est reconnaissant.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      }
+    ]
+  }
+}

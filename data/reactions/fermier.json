@@ -1,0 +1,1299 @@
+{
+  "id": "fermier",
+  "description": "Un homme sec d'une quarantaine d'années, salopette rapiécée et chapeau de paille effrangé, qui tourne et retourne entre ses doigts une lettre à l'en-tête de la banque de Valentine. Ses mains crevassées et sa nuque brûlée de soleil racontent vingt ans de labour.",
+  "personnalite": "Jonas Dunbar, fermier des collines au nord de Valentine, marié à Martha, père de Ruth, Caleb et du petit Abe. Honnête, fier, à bout de forces : il a emprunté 120 $ à la banque pour des semences, en doit 310 avec les intérêts, et la saisie tombe samedi. Les O'Driscoll lui ont volé ses deux chevaux de labour et brûlé sa grange. Il refuse la charité mais accepterait n'importe quel travail. Plus le délai approche, plus il pense à des folies : la prime de l'O'Driscoll, la poudre des tonneaux, la banque.",
+  "repliques": [
+    "Trois cent dix dollars. Pour cent vingt d'emprunt. C'est pas un prêt, ça, c'est un vol avec une signature au bas.",
+    "*relit la lettre de la banque pour la vingtième fois, les lèvres serrées*",
+    "Les O'Driscoll ont pris mes deux chevaux de labour. Comment je laboure, moi, maintenant ? Avec mes dents ?",
+    "Martha m'attend avec de bonnes nouvelles. J'ai pas de bonnes nouvelles.",
+    "Soixante-quinze dollars pour l'O'Driscoll... *regarde le panneau des avis, puis son vieux fusil à un coup*",
+    "Vous auriez pas besoin d'un homme à tout faire, m'sieur ? Je sais tout faire. Sauf payer mes dettes.",
+    "Mon grand-père a défriché cette terre à la hache. Je la laisserai pas à un homme en gilet de soie."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 5,
+      "lieu": "ecurie",
+      "activite": "dort dans sa carriole, à côté de sa mule, pour économiser la pension"
+    },
+    {
+      "de": 5,
+      "a": 8,
+      "lieu": "rue_principale",
+      "activite": "attend devant la banque, chapeau à la main, bien avant l'ouverture"
+    },
+    {
+      "de": 8,
+      "a": 10,
+      "lieu": "banque",
+      "activite": "supplie le directeur de lui accorder un délai"
+    },
+    {
+      "de": 10,
+      "a": 12,
+      "lieu": "magasin_general",
+      "activite": "vend ses œufs et ses pommes de terre à l'épicier, qui marchande au cent près"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "eglise",
+      "activite": "prie à voix basse au dernier rang"
+    },
+    {
+      "de": 13,
+      "a": 16,
+      "lieu": "rue_principale",
+      "activite": "propose ses bras à tous les commerçants, pour n'importe quel travail"
+    },
+    {
+      "de": 16,
+      "a": 18,
+      "lieu": "armurerie",
+      "activite": "demande le prix d'un fusil à répétition qu'il n'a pas les moyens d'acheter"
+    },
+    {
+      "de": 18,
+      "a": 21,
+      "lieu": "saloon_smithfield",
+      "activite": "fait durer un seul whisky toute la soirée, les yeux rivés sur l'O'Driscoll"
+    },
+    {
+      "de": 21,
+      "a": 24,
+      "lieu": "ecurie",
+      "activite": "refait ses comptes à la lanterne, assis sur le marchepied de sa carriole"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il tourne son chapeau entre ses mains : « Jonas Dunbar. J'ai une ferme dans les collines, au nord. Enfin, pour l'instant. Jusqu'à samedi. »"
+      },
+      {
+        "texte": "Il te tend la lettre de la banque, les yeux rouges : « Vingt pour cent par mois. Le directeur m'a dit que c'était l'usage. L'usage de qui ? »"
+      },
+      {
+        "texte": "Il désigne la banque d'un coup de menton : « J'attends depuis l'aube qu'il me reçoive. Il m'a vu par la fenêtre. Il a tiré le rideau. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Assis sur le marchepied de sa carriole, il fixe la banque sans cligner : « Tu sais combien de marches il y a pour entrer là-dedans ? Quatre. Je les ai comptées. » Ça ne te dit rien de bon.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il baisse la voix : « Un homme de la banque est venu dans mes collines le mois dernier. Il ramassait des cailloux dans mon ruisseau. Pourquoi un banquier voudrait des cailloux ? »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il recule, la main sur le manche de son couteau de poche : « J'ai rien, l'ami. Rien que des dettes. Si c'est ça que tu veux, sers-toi. »",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il jette un regard au panneau des avis de recherche, puis à toi, et hésite longuement. Tu vois les chiffres danser dans ses yeux. Puis il secoue la tête : « Non. J'suis pas comme ça. Pas encore. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il crache dans la poussière : « L'éleveur Whitmore m'a proposé de racheter ma terre pour une bouchée de pain. Le lendemain du passage des O'Driscoll. Drôle de hasard, hein ? »"
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il porte deux doigts à son chapeau de paille : « M'sieur. » Puis il retourne à sa lettre, comme si elle allait finir par changer d'avis."
+      },
+      {
+        "texte": "Il te rend ton salut avec un sourire fatigué qui ne monte pas jusqu'aux yeux : « Belle journée pour ceux qui ont encore une maison. »"
+      },
+      {
+        "texte": "Il te serre la main de ses deux mains calleuses : « Ah, te voilà ! Martha sera contente de savoir qu'il reste des gens bien à Valentine. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il fait mine de ne pas te voir et serre sa sacoche contre lui. Il a entendu parler de toi, et rien de bon.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Il sursaute, la main vers sa carriole où dort un vieux fusil : « Ah... c'est toi. J'ai cru que c'étaient les O'Driscoll. Ils viennent la nuit, d'habitude. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il soulève à peine son chapeau, la mâchoire serrée : « M'sieur. » Le mot claque comme une porte qu'on ferme.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il lève les yeux vers les nuages, la pluie ruisselant sur son chapeau : « Trois mois que je la prie, celle-là. Elle arrive juste quand il est trop tard. »",
+        "si": [
+          "pluie"
+        ]
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Il encaisse sans broncher, le regard dur : « J'ai été insulté par un banquier ce matin, l'ami. T'arrives deuxième, et t'es moins bien habillé. »"
+      },
+      {
+        "texte": "Il serre les poings, puis les rouvre lentement : « Si je me bats, je finis en cellule. Si je finis en cellule, je perds la ferme. Alors non. » Il s'éloigne."
+      },
+      {
+        "texte": "Il n'en peut plus. Il te tombe dessus avec la rage d'un homme qui a tout perdu et te colle un uppercut de laboureur qui te fait voir les collines.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -8,
+          "etat": "hostile",
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te regarde, déçu : « On m'avait dit que t'étais un homme droit. Faut croire que tout le monde ment, dans cette ville. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il attrape une fourche dans sa carriole et la pointe vers toi : « Encore un mot. Un seul. » Il tremble, mais pas de peur.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "hostile",
+          "relation": -1
+        }
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Il blêmit mais ne recule pas : « J'ai des gosses qui m'attendent. Tu me fais peur, mais pas autant que de rentrer les mains vides. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il lève les mains : « J'ai pas d'argent, j'ai pas d'arme qui vaille, j'ai qu'une mule et des dettes. Prends la mule si tu veux. Elle mord. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il jette un regard affolé vers le bureau du shérif, mais personne ne sort. À Valentine, un fermier qu'on bouscule, ça n'intéresse personne.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il recule jusqu'à sa carriole et en tire un vieux fusil à un coup, rouillé, qu'il pointe vers toi d'une main tremblante : « Pars. Je t'en prie, pars. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "hostile",
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te regarde sans comprendre : « Pourquoi tu fais ça ? Je croyais qu'on... » Il ne finit pas sa phrase et baisse les yeux.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -3
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Il fixe {outil}, puis te regarde droit dans les yeux : « Vas-y. Ma femme touchera rien, mais le banquier non plus. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il lève les mains, tremblant : « Je ferai ce que tu veux. Mais je t'en supplie, pas devant la banque. Il serait trop content. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Un cri de femme éclate devant l'hôtel. L'adjoint du shérif arrive au pas de course, la main déjà sur la crosse. Tu ranges {outil} juste à temps.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il recule dans l'ombre de l'écurie ; la mule brait, et il disparaît par la porte du fond en abandonnant sa carriole.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il tombe à genoux dans la boue : « Pitié. J'ai trois enfants. Ruth, Caleb et le petit Abe. » Il répète leurs prénoms comme une prière.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -3
+        }
+      }
+    ],
+    "soudoyer": [
+      {
+        "texte": "Il regarde tes billets, puis toi : « Pour faire quoi ? » Tu ne réponds pas ; il les prend quand même, les joues en feu : « Je ferai ce que tu veux, tant que personne n'y laisse la peau. »",
+        "effets": {
+          "argent": -10,
+          "honneur": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il repousse ta main : « Je suis pauvre, pas à vendre. Mon père disait que c'est la seule différence qui reste à un homme comme moi. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il empoche tes vingt dollars et jure qu'il ne t'a jamais vu. Pour la première fois de la semaine, il sourit : « Tu sais, je vois mal de loin. Et de près aussi. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -20,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il prend l'argent et te serre la main longuement : « Je sais que c'est pas vraiment un pot-de-vin. Je sais ce que tu fais. Merci. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -15,
+          "honneur": 1,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Il hésite, l'argent à la main : « Si c'est pour faire du mal à quelqu'un, non. » Puis il compte : quinze dollars. Il ferme les yeux et les empoche.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -15,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il prend les billets en tremblant : « Je ferai le guet, si c'est ça. Mais je veux pas savoir ce que tu fais. » Il ne dormira pas de la nuit.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -10,
+          "relation": 1
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Il relit sans fin une lettre à l'en-tête de la banque de Valentine. Ses lèvres bougent : il refait ses comptes, et chaque fois le total le fait pâlir."
+      },
+      {
+        "texte": "Il s'arrête devant le panneau des avis de recherche et reste longtemps face au visage de l'O'Driscoll. Soixante-quinze dollars. Sa main se crispe sur sa ceinture vide.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il fait lentement le tour de la banque en comptant ses pas, puis s'arrête devant les tonneaux du magasin général et lit l'étiquette du petit tonneau rouge : « POUDRE NOIRE ».",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Ses bottes sont ressemelées avec du cuir de selle, ses manches reprisées par une main patiente. Sur sa sacoche, une petite fleur brodée : Martha, sans doute."
+      },
+      {
+        "texte": "Il propose ses bras à tous ceux qui passent : l'épicier, le boucher, le maréchal-ferrant. Le Suédois est le seul à lui répondre, d'un hochement de tête : demain, peut-être."
+      },
+      {
+        "texte": "Le dimanche, la banque est fermée. Il passe la matinée assis sur ses marches, son chapeau sur les genoux, comme s'il gardait la porte.",
+        "si": [
+          "dimanche"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu le dessines assis sur le marchepied de sa carriole, la lettre de la banque sur les genoux. Le dessin a quelque chose de triste que tu n'as pas fait exprès."
+      },
+      {
+        "texte": "Il te demande s'il peut garder le dessin pour Martha : « Elle m'a jamais vu en portrait. On n'a jamais eu les moyens du photographe. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu ajoutes au fond les collines, la ferme et une grange intacte. Il regarde longtemps, la gorge serrée : « C'est comme ça qu'elle était. Avant. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "À la lumière de sa lanterne, ses traits creusés ressemblent à ceux des vieux pionniers de la Bible familiale. Il ne remarque même pas que tu le dessines.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il retire son chapeau, aplatit ses cheveux d'une main mouillée et se tient droit comme à un enterrement. Le flash part ; il n'a pas cillé."
+      },
+      {
+        "texte": "Il recule, gêné : « J'ai pas de quoi payer une photographie, l'ami. » Quand tu lui dis que c'est gratuit, il sourit pour la première fois de la journée.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il pose devant la banque, le doigt pointé vers la porte, l'air faussement triomphant : « Comme ça, Martha croira que j'ai gagné. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il met la main devant l'objectif : « Tu travailles pour la banque, c'est ça ? Pour prouver que j'étais en ville et pas sur mes terres ? »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu le charges sur ton épaule. Il proteste, rouge de honte : « Repose-moi ! J'suis pas un sac de patates ! J'en vends, mais j'en suis pas un ! »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Toute la rue vous regarde passer. L'épicier ricane sur son seuil. Le fermier se tait, humilié, les yeux fixés sur la boue.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il se débat, te martèle le dos de ses poings de laboureur et finit par te mordre l'oreille. Tu le lâches dans la boue.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu le portes jusqu'à sa carriole, où il s'assoit sans un mot. Au bout d'un moment : « Ma Martha ferait pareil. Elle porte tout, Martha. »",
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Il va de boutique en boutique proposer ses œufs et ses bras. L'épicier lui prend ses œufs à moitié prix ; le reste de la rue lui ferme la porte au nez."
+      },
+      {
+        "texte": "Il entre à l'armurerie, demande le prix d'un fusil à répétition et ressort les mains vides. Sur le trottoir, il compte ses pièces : deux dollars et onze cents.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il marche jusqu'à la banque, colle son front à la vitre noire et reste là dix minutes. Puis il va tâter la serrure de la porte de derrière, et s'enfuit en courant, effrayé de lui-même.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il se retourne, te voit et presse le pas vers le bureau du shérif. Il y entre et n'en ressort pas tant que tu traînes dans la rue.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il entre à l'église, s'agenouille au dernier rang et prie à voix basse. Tu distingues « samedi », « Martha » et « pardonne-moi ce que je vais faire »."
+      },
+      {
+        "texte": "Au Smithfield's, il s'assoit à deux tables de l'O'Driscoll balafré et ne le quitte pas des yeux. Sa main tremble sur son verre. L'O'Driscoll, lui, l'a remarqué.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing l'envoie contre la roue de sa carriole. Il se relève, la lèvre fendue, sans riposter : « Ça aussi, je l'ajouterai à la note. »",
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il encaisse et riposte d'un crochet de laboureur qui te fait tituber. Puis il recule, horrifié de lui-même.",
+        "effets": {
+          "sante": -8,
+          "prime": 5,
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il tombe dans la boue devant la banque. Le directeur l'observe par la fenêtre, un léger sourire aux lèvres, et tire le rideau.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il s'effondre contre sa mule, qui te mord l'épaule. Personne n'a rien vu, sauf la mule, qui s'en souviendra.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -3,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il ne lève même pas les mains pour se protéger. Il te regarde avec un étonnement d'enfant, la joue rouge : « Toi aussi ? »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -4
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Il s'effondre sans un bruit sur le marchepied de sa carriole. Sa lettre de la banque s'envole et va se coller dans la boue.",
+        "effets": {
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il tombe dans la rue sous les yeux du vétéran mendiant, qui se met à crier « Shérif ! Shérif ! » de toute la force de ses poumons.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu l'assommes dans l'ombre de l'écurie. Il se réveillera à l'aube avec une bosse et la certitude que les O'Driscoll l'ont suivi jusqu'en ville.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Ton coup le sonne sans l'endormir. Il titube, s'agrippe à la mule et te regarde, hébété : « Pourquoi ? J'ai rien. Personne veut rien de moi, même pas toi. »",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -2,
+          "relation": -3
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu te jettes sur lui, {outil} en main. Il pare d'un bras ; le sang coule sur sa manche reprisée et il recule en hurlant qu'on appelle le shérif.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -3,
+          "prime": 20,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Il saisit sa fourche dans la carriole et pare comme un homme qui a déjà défendu sa ferme. Il te pique la cuisse avant de s'enfuir.",
+        "effets": {
+          "sante": -10,
+          "etat": "en_fuite",
+          "prime": 10,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Le maréchal-ferrant, attiré par les cris, te ceinture par-derrière et te jette dans la boue. Le fermier s'enfuit en tenant son bras blessé.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -10,
+          "etat": "blesse",
+          "honneur": -3,
+          "prime": 20
+        }
+      },
+      {
+        "texte": "Il s'écroule, blessé, contre sa carriole et murmure le nom de Martha. La mule tire sur sa longe en hennissant de panique.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -4,
+          "prime": 10,
+          "relation": -5
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle le touche en pleine poitrine. Il tombe à genoux, la lettre de la banque toujours à la main. Samedi, il n'y aura plus personne à expulser.",
+        "effets": {
+          "etat": "mort",
+          "honneur": -5,
+          "prime": 100
+        }
+      },
+      {
+        "texte": "Touché à la jambe, il s'effondre dans la boue en criant. Des volets claquent dans toute la rue, et le shérif Malloy sort, fusil en main.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -4,
+          "prime": 40,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Ta balle siffle à son oreille. Il plonge sous sa carriole, coupe la longe de la mule et s'enfuit vers les collines sans un regard en arrière.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "honneur": -2,
+          "prime": 10,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Il s'écroule devant la banque. Le croque-mort arrive le premier, le mesure d'un regard expert et soupire : « Un mètre soixante-quinze. Et personne pour payer, je parie. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "mort",
+          "honneur": -5,
+          "prime": 120
+        }
+      },
+      {
+        "texte": "Il te voit dégainer, empoigne son vieux fusil à un coup et tire en même temps que toi. Il tombe ; sa chevrotine t'a labouré le flanc.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "mort",
+          "honneur": -5,
+          "prime": 100,
+          "sante": -20
+        }
+      },
+      {
+        "texte": "Touché à l'épaule, il tombe assis contre la roue de sa carriole. Il ne crie pas : il ferme les yeux, comme soulagé de ne plus avoir à décider.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -4,
+          "prime": 40,
+          "relation": -5
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil}, qui le frappe à l'épaule. Il se retourne, se frotte le bras et soupire, plus las qu'en colère : « C'est la semaine, on dirait. »",
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il voit venir {outil} et l'esquive d'un pas de côté, comme on évite une ruade. Il ne dit rien et s'éloigne vers sa carriole.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lances {outil} sous les yeux de l'épicier, qui ricane : « Le pauvre bougre, même le ciel lui tombe dessus. » Le fermier serre les dents.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il ramasse un œuf dans son panier et te le renvoie en pleine figure. C'était son dernier œuf. Il le regrette aussitôt.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu lui arraches le vieux fusil à un coup qu'il portait à la bretelle. La crosse est fendue, rafistolée au fil de fer. Il ne proteste pas : « De toute façon, il tire à gauche. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il n'a qu'un couteau de poche à manche de corne, gravé de ses initiales : J.D. « C'était à mon père. Rends-le-moi, je t'en prie. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu le surprends près de la banque, le fusil à la main. Il te le laisse prendre sans résister et s'assoit dans la boue : « Merci. Je crois que j'allais faire une bêtise. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il lutte pour garder son fusil, le coup part dans la boue, et le recul vous envoie tous deux à terre. Tu te relèves avec l'arme ; lui reste assis, vaincu.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -3,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te tend son fusil de lui-même : « Garde-le jusqu'à samedi. J'ai trop de mauvaises idées quand je l'ai sous la main. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "detrousser": [
+      {
+        "texte": "Dans ses poches : deux dollars et onze cents, un avis de saisie et un dessin d'enfant représentant une maison, une vache et quatre bonshommes.",
+        "effets": {
+          "argent": 2,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Sous sa chemise, une bourse cousue contient l'alliance de sa femme, qu'il est venu vendre. Elle ne vaut presque rien ; tu le sais, lui aussi.",
+        "effets": {
+          "argent": 3,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Le vétéran mendiant te voit faire et s'écrie : « Même nous, on vole pas les pauvres ! » Toute la rue se retourne vers toi.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 2,
+          "honneur": -3,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Il te saisit le poignet avec une force de laboureur : « Ça, c'est l'argent des semences. Tu le prendras sur mon cadavre. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "hostile",
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il dort dans sa carriole, la main sur sa sacoche. Tu la lui prends doucement : douze dollars en petites pièces, une saison de patience. Il ne se réveille pas.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 12,
+          "honneur": -4
+        }
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il regarde {outil} sans le prendre : « J'demande pas la charité. » Puis il pense à Martha, et le prend quand même, en évitant ton regard.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il retourne {outil} entre ses mains calleuses : « Je pourrai peut-être le revendre à l'épicier. Un dollar de moins sur la dette. » Il te remercie d'un hochement de tête.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il serre {outil} contre lui : « Quand on aura sauvé la ferme, tu viendras manger chez nous. Martha fait la meilleure tarte aux pommes du comté. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il hésite, méfiant : « Qu'est-ce que tu veux en échange ? » Il tient {outil} à bout de bras, comme un serpent qui pourrait mordre.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il secoue la tête : « Je suis fermier, pas pistolero. Si je perds, Martha perd la ferme et un mari. Si je gagne, je perds la ferme et ma liberté. »"
+      },
+      {
+        "texte": "Il accepte, livide, son vieux fusil à un coup à la main. Le shérif Malloy s'interpose avant le premier pas : « Pas dans ma rue. Toi, rentre chez toi. Et toi, laisse ce pauvre homme tranquille. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il accepte, parce qu'il n'a plus rien à perdre. Il épaule trop lentement ; tu tires le premier. Il tombe au milieu de la rue, et Valentine ne te l'oubliera pas.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "mort",
+          "honneur": -5,
+          "prime": 75
+        }
+      },
+      {
+        "texte": "Il te regarde longtemps, puis rit, d'un rire cassé : « Un duel ? Ce serait plus simple, hein. Plus simple que samedi. » Il s'éloigne sans répondre.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te prend le bras, sérieux : « Si tu veux te battre, bats-toi contre le banquier. Lui, il tue des familles sans jamais sortir son pistolet. »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu lui lies les mains. Il ne lutte pas, il demande seulement : « Tu me livres au banquier ? Il paierait peut-être. »",
+        "effets": {
+          "etat": "ligote",
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Des passants s'arrêtent, mais personne n'intervient. Le gamin des rues court prévenir le shérif. Le fermier, ligoté, fixe la banque d'un œil vide.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "honneur": -2,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il se débat comme un veau qu'on marque, te donne un coup de tête et manque de s'échapper. Tu serres le dernier nœud à genoux sur son dos.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "sante": -5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu le ligotes à la roue de sa carriole. Il murmure : « Bon. Au moins, cette nuit, je pourrai pas faire de bêtise. » Il a l'air presque soulagé.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "relation": -1
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Le nœud coulant lui tombe sur les épaules et le jette à terre. Il reste allongé dans la boue : « Vas-y. Traîne-moi. J'en suis plus à ça près. »",
+        "effets": {
+          "etat": "ligote",
+          "honneur": -2,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il voit venir la corde et l'esquive d'instinct, comme un homme qui a passé sa vie à rattraper des veaux échappés : « Pas mal. Mais tu lances trop bas. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Le vacher, qui passait, siffle d'admiration : « Joli ! » Puis il voit la tête du fermier, à plat ventre dans la boue, et son sourire s'efface.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "honneur": -2,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Le lasso se prend dans le harnais de la mule, qui part au trot en traînant la carriole. Le fermier court derrière en jurant ; toi, tu restes avec une corde vide.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "payer_un_verre": [
+      {
+        "texte": "Il hésite, puis accepte un whisky au Smithfield's. Au deuxième verre, il te montre la lettre de la banque ; au troisième, un portrait de ses enfants découpé dans un almanach.",
+        "effets": {
+          "argent": -2,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il refuse d'abord : « Je bois pas l'argent des autres. » Puis il accepte une bière tiède, qu'il fait durer une heure entière.",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le whisky frelaté lui monte vite à la tête. Il frappe le comptoir : « J'vais aller le voir, ce banquier, et j'vais... » Il ne finit pas, et pose la tête sur ses bras.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il lève son verre : « À Martha. À la ferme. Et à toi, l'étranger, le seul à m'avoir regardé dans les yeux cette semaine. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "L'ivrogne de la rue s'invite à votre table et se met à parler d'or au coude d'un ruisseau, au nord. Le fermier pâlit : « Sous un rocher en forme d'enclume ? Mais... c'est chez moi. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": 1
+        }
+      }
+    ],
+    "demander_ses_ennuis": [
+      {
+        "texte": "Il raconte tout d'une traite : la sécheresse, l'emprunt de cent vingt dollars pour les semences, les intérêts qui ont plus que doublé la somme, et samedi, l'huissier."
+      },
+      {
+        "texte": "Il regarde ses bottes : « Les O'Driscoll sont passés en mai. Ils ont pris les deux chevaux de labour et brûlé la grange. Pas de chevaux, pas de récolte. Pas de récolte, pas de remboursement. »"
+      },
+      {
+        "texte": "Il te confie, très bas, qu'il a pensé à tenter sa chance contre l'O'Driscoll du Smithfield's, pour la prime : « Soixante-quinze dollars. Avec mon vieux fusil, j'ai une chance sur dix. Peut-être. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il hésite, puis te parle comme à un pasteur : « J'ai eu une idée terrible, cette nuit. Avec la poudre des tonneaux du magasin. Dis-moi que je suis pas un monstre. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il se ferme : « Mes affaires te regardent pas. Les vautours tournent assez autour de moi comme ça. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il parle de Martha, de leurs trois gosses, de la tombe de sa mère derrière la maison : « S'ils prennent la ferme, ils prennent aussi la tombe. Tu comprends ? »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "accompagner_chez_banquier": [
+      {
+        "texte": "Le directeur vous reçoit debout, sans vous offrir de chaise : « Un contrat est un contrat. » Le fermier ressort voûté, plus petit qu'il n'est entré.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Ta présence armée rend le directeur nerveux. Il accorde un délai d'une semaine du bout des lèvres, en lorgnant ton holster. Derrière son guichet, le caissier est blanc comme un linge.",
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu parles calmement, longuement. Le directeur finit par ramener le taux à un niveau presque honnête, en pinçant les lèvres. À la sortie, le fermier te broie la main.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 2,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "À peine entré, le caissier timide reconnaît ton visage et plonge sous son guichet en criant au braquage. Le fermier et toi ressortez en courant.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Le directeur te dévisage, puis sourit au fermier : « Vous fréquentez de drôles de gens, Dunbar. Ça ne plaidera pas en votre faveur. » Le délai est refusé.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "La banque est fermée. Le fermier frappe quand même à la vitre, longtemps, puis appuie son front contre la porte : « Il dort bien, lui, au moins. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "payer_dette_ferme": [
+      {
+        "texte": "Tu poses trois cent dix dollars sur le comptoir. Le directeur compte les billets deux fois, déçu. Le fermier pleure sans bruit, le chapeau sur le cœur.",
+        "effets": {
+          "argent": -310,
+          "honneur": 3,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Tu ne peux couvrir que les intérêts du mois : soixante dollars. Ça repousse la saisie de quatre semaines. « Quatre semaines, dit le fermier, c'est une coupe de foin. »",
+        "effets": {
+          "argent": -60,
+          "honneur": 2,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu paies tout. Il te prend dans ses bras, te soulève de terre et jure que tant qu'il vivra, il y aura une assiette pour toi à sa table et une place dans sa grange.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -310,
+          "honneur": 3,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Le directeur prend ton argent sans poser de questions sur sa provenance. Le fermier, lui, regarde le panneau des avis de recherche, puis toi, et se tait.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -310,
+          "honneur": 2,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Tu paies, mais tu exiges que la ferme passe à ton nom. Le fermier signe, la main tremblante. Il vient seulement de changer de créancier.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -310,
+          "honneur": -2,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Grâce au barman de Keane, la moitié de Valentine connaît la nouvelle avant midi. Le directeur de la banque, lui, ne te salue plus.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -310,
+          "honneur": 3,
+          "relation": 3
+        }
+      }
+    ],
+    "proposer_coup_banque": [
+      {
+        "texte": "Il recule comme si tu l'avais giflé : « Je suis un honnête homme ! » Puis, plus bas, sans te regarder : « ... Combien de temps pour ouvrir le coffre ? »",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il refuse net : « Si je meurs dans ce braquage, Martha perd la ferme et un mari. Si je survis, elle a un mari pendu. » Il s'éloigne vite.",
+        "effets": {
+          "honneur": -1,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il fixe la banque longtemps, puis hoche la tête : « J'ai mon vieux fusil. Et j'ai vu de la poudre noire dans les tonneaux du magasin. Quand ? »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te regarde, stupéfait : « Toi ? On dit que t'es un homme droit... Si même les hommes droits en sont là, c'est que le monde est tordu. » Il refuse quand même.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il recule : « Tu veux m'afficher sur le panneau à côté de toi ? J'ai trois gosses. » Il ne va pas prévenir le shérif pour autant. Il se contente de partir.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il accepte, à une condition : « On prend trois cent dix dollars. Pas un cent de plus. Je suis pas un voleur, je reprends ce qu'il m'a volé. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": 2
+        }
+      }
+    ],
+    "acheter_produits_ferme": [
+      {
+        "texte": "Il te vend une douzaine d'œufs et un sac de pommes de terre pour un dollar, en s'excusant presque : « L'épicier m'en donnait cinquante cents. »",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il glisse une pomme de terre de plus dans ton sac quand il croit que tu ne regardes pas. Un fermier ne sait pas faire autrement.",
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il refuse ton argent : « Pas toi. » Tu insistes ; il finit par accepter, mais te donne en plus un pot de confiture de Martha.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu lui achètes tout son panier pour cinq dollars. Il compte les pièces trois fois, la gorge nouée : « Ce soir, je pourrai regarder Martha en face. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -5,
+          "honneur": 1,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "L'épicier te fusille du regard depuis son seuil : tu viens de lui souffler une affaire. Le fermier, lui, sourit pour la première fois de la journée.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      }
+    ],
+    "offrir_un_verre": [
+      {
+        "texte": "Il prend le verre que tu lui offres et le fait tourner longtemps entre ses doigts : « Le dernier que j'ai bu, c'était à la naissance du petit Abe. » Il le boit à petites gorgées.",
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il secoue la tête : « Garde ton argent pour quelqu'un qui en a besoin. » Il marque un temps : « Moi, par exemple. Mais pas en whisky. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Au Smithfield's, le whisky lui délie la langue : il te parle de l'éleveur Whitmore, si pressé d'acheter sa terre, et du directeur de la banque, qui dîne chez Whitmore tous les dimanches.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il refuse : « Je bois pas avec n'importe qui. » Il jauge tes mains, ta ceinture, puis pose une pièce sur le comptoir pour payer sa propre bière.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Par cette chaleur, il accepte une bière fraîche et la boit d'un trait, les yeux fermés : « Ça, c'est la première bonne chose de la semaine. »",
+        "si": [
+          "chaleur"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      }
+    ]
+  }
+}

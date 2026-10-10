@@ -1,0 +1,601 @@
+{
+  "id": "poule",
+  "description": "Une poule rousse et dodue aux plumes ébouriffées, la crête de travers comme un chapeau de saloon. Elle a toujours l'air de préparer une évasion, et elle en prépare effectivement une.",
+  "personnalite": "Évadée chronique, têtue, curieuse et vaniteuse. Elle appartient à la vieille Mme Hensley, qui l'appelle Henrietta, mais elle passe plus de temps dans la rue principale que dans son poulailler. Elle picore tout ce qui brille, pond n'importe où et n'a peur de rien, sauf du chien errant.",
+  "repliques": [
+    "*Cot cot codêêêt !*",
+    "*picore un bouton de cuivre sur le trottoir*",
+    "*se faufile par un trou de la palissade*",
+    "*te fixe d'un œil rond, puis de l'autre*"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 5,
+      "lieu": "maisons",
+      "activite": "dort perchée dans le poulailler de Mme Hensley"
+    },
+    {
+      "de": 5,
+      "a": 8,
+      "lieu": "maisons",
+      "activite": "caquette au lever du jour et pond, parfois, dans une botte"
+    },
+    {
+      "de": 8,
+      "a": 11,
+      "lieu": "rue_principale",
+      "activite": "s'est encore échappée et picore le crottin de la rue principale"
+    },
+    {
+      "de": 11,
+      "a": 13,
+      "lieu": "pension",
+      "activite": "s'invite à la cuisine de la pension à l'heure du repas"
+    },
+    {
+      "de": 13,
+      "a": 17,
+      "lieu": "maisons",
+      "activite": "ramenée par un voisin, gratte la terre de la cour en complotant"
+    },
+    {
+      "de": 17,
+      "a": 19,
+      "lieu": "rue_principale",
+      "activite": "tente une nouvelle évasion, poursuivie par le chien errant"
+    },
+    {
+      "de": 19,
+      "a": 24,
+      "lieu": "maisons",
+      "activite": "dort sur son perchoir, un œil à demi ouvert"
+    }
+  ],
+  "reactions": {
+    "acheter": [
+      {
+        "texte": "Tu marchandes la poule avec {outil}. Après dix minutes, elle change de mains pour un dollar et un « Bonne chance pour la garder » plein de sous-entendus.",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Tu tends un dollar : {outil} empoche la pièce et te met la poule dans les bras. À peine glissée sous ton coude, elle te pince le menton, se dégage et file vers la rue principale. Pas de remboursement.",
+        "effets": {
+          "argent": -1,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu achètes la poule. Le temps de remonter la rue, Mme Hensley te barre le chemin : « C'est Henrietta ! On me l'a prise ce matin ! » Tu viens de payer une poule volée.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "On te regarde de travers pendant tout le marchandage, et pour finir {outil} te fait payer le double : « Avec ta réputation, l'ami, je préfère être payé deux fois. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "La poule saute d'elle-même dans tes bras pendant que tu comptes la monnaie. Le marché est conclu avant même que {outil} ait annoncé son prix.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu te jettes sur la poule, {outil} en main. Elle s'envole dans une explosion de plumes, te griffe le nez au passage et atterrit sur le toit d'un porche.",
+        "effets": {
+          "sante": -2,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Un coup net, et la poule s'effondre dans la boue. Derrière une fenêtre, un cri de vieille dame : « Henrietta ! Assassin ! »",
+        "effets": {
+          "etat": "mort",
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu touches la poule à l'aile. Elle s'enfuit en zigzag, boitillante, en caquetant des insultes en langue de poule.",
+        "effets": {
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "La poule ne recule pas : elle fonce sur toi, ailes déployées, et te laboure les tibias à coups de bec. Tu bats en retraite sous les rires des enfants Doyle.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -3
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Ta boucle tombe pile sur la poule. Tu la ramènes, furieuse, à travers la boue. Sans doute la prisonnière la plus humiliante de toute ta carrière.",
+        "effets": {
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Tu lances le lasso. La poule s'accroupit, la boucle passe au-dessus d'elle et attrape le chapeau d'un passant. La poule, elle, est déjà loin.",
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu attrapes la poule au lasso sous les yeux de Tommy, le vacher, qui siffle d'admiration : « Joli lancer ! Mais au rodéo, on fait ça sur des veaux, vous savez. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "ligote"
+        }
+      }
+    ],
+    "chasser": [
+      {
+        "texte": "Tu chasses la poule entre les maisons, {outil} en main. Elle passe sous les palissades, traverse un poulailler et ressort par une fenêtre ouverte. Tu abandonnes, couvert de plumes.",
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu coinces la poule contre la palissade. Elle ne s'échappera plus jamais. Ce soir, quelqu'un mangera du poulet, et ce quelqu'un, c'est toi.",
+        "effets": {
+          "etat": "mort",
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Mme Hensley sort sur son porche, balai brandi : « Si tu touches à une plume d'Henrietta, je te scalpe ! » La poule profite de la diversion pour filer.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "La nuit, la poule dort perchée et ne voit rien venir. Tu la tiens. Mais ses petits gloussements de sommeil te font hésiter...",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote"
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines la poule dans {outil} : la crête de travers, l'œil rond et méfiant, une patte levée prête à la fuite. Elle a plus de caractère que la moitié de la ville."
+      },
+      {
+        "texte": "Perchée sur ta botte, la poule pose pendant que tu la dessines dans {outil}. Elle tourne la tête de profil à intervalles réguliers. Elle sait ce qu'elle fait.",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Tu commences à dessiner la poule dans {outil}. Elle s'enfuit au bout de trois traits. Tu finis de mémoire : une boule de plumes avec un air insolent.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Tu donnes un coup de pied à la poule. Elle s'envole en caquetant, plus vexée que blessée, et revient te picorer les lacets pour se venger.",
+        "effets": {
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Ton coup atteint la poule, qui roule dans la boue et se relève en boitant, les plumes en bataille.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu frappes la poule devant les maisons. Les enfants Doyle te montrent du doigt en criant « Méchant monsieur ! » et leur mère te lance un regard à faire tourner le lait.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "La poule esquive ton coup et contre-attaque à coups de bec dans le mollet. Elle ne lâche pas. C'est toi qui recules.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -3
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} sur la poule. Elle esquive d'un bond, caquette d'indignation et s'enfuit à toutes pattes vers la rue principale.",
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu atteins la poule avec {outil}. Elle culbute, se relève dans un nuage de plumes et s'éloigne en zigzag, sonnée.",
+        "effets": {
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Tu lances {outil} près de la poule. Elle accourt, persuadée que c'est à manger, picore l'objet avec acharnement, puis te lance un regard de reproche.",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Une poule rousse picore la boue avec une concentration de prospecteur. De temps en temps, elle relève la tête, vérifie qu'on ne la surveille pas, et avance d'un pas vers la liberté."
+      },
+      {
+        "texte": "La poule a trouvé un nouveau trou dans la palissade de Mme Hensley. Elle regarde à gauche, à droite, puis se faufile dehors avec la discrétion d'un O'Driscoll en cavale.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Perchée sur une barrière, la poule dort, une patte repliée, la tête sous l'aile. Même endormie, elle a l'air de comploter.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "La poule te fixe d'un œil rond, gonfle ses plumes et gratte la terre comme un taureau avant la charge. À côté d'elle, Lucifer est un agneau.",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Clic. La poule tourne la tête au dernier moment. Sur la plaque, on ne voit qu'un croupion indigné et trois plumes en l'air."
+      },
+      {
+        "texte": "Mme Hensley accourt en te voyant installer {outil} : « Attendez ! » Elle lisse les plumes de sa poule, lui redresse la crête et pose fièrement à côté. Portrait de famille.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La poule prend la pose, une patte en avant, le poitrail bombé. Le cliché est digne d'un concours agricole de Saint Denis.",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "pister": [
+      {
+        "texte": "Tu suis les traces de pattes en étoile dans la boue. Elles passent sous trois palissades, traversent la rue principale et s'arrêtent devant la boucherie. Cette poule a des tendances suicidaires."
+      },
+      {
+        "texte": "La piste est facile : une plume ici, une crotte là, un enfant qui pointe le doigt et un vieillard qui crie « Par là ! ». Toute la ville l'a vue passer.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu pistes la poule à la lanterne et tu la retrouves perchée sur le toit de la pension, contre la cheminée. Comment est-elle montée là ? Personne ne le saura jamais.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu cales la poule sous ton bras comme un ballot. Elle caquette sans arrêt, te pince les doigts et laisse un souvenir tiède sur ta manche."
+      },
+      {
+        "texte": "La poule s'installe sur ton épaule comme sur un perchoir, parfaitement à l'aise. Vous remontez la rue principale ensemble sous les regards médusés.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu attrapes la poule ; elle se débat, te griffe le cou et s'échappe d'un battement d'ailes furieux, en te laissant une poignée de plumes.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -2,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu suis la poule. Elle visite le crottin de la rue, le seuil de l'épicerie, la véranda de la pension, puis revient au point de départ. Tu as fait le tour de Valentine pour rien."
+      },
+      {
+        "texte": "La poule te mène droit à la cuisine de la pension, où elle chipe une croûte de pain sur la table du repas. Elle sait exactement où aller à midi.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu suis la poule dans le noir jusqu'à son perchoir, au fond du poulailler de Mme Hensley. Elle s'installe, te regarde et ferme les yeux. Bonne nuit, la fugueuse.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "La poule te suit autant que tu la suis. Vous vous promenez comme deux vieux amis, elle picorant, toi sifflotant.",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La détonation fait exploser un nuage de plumes. La poule s'abat dans la boue. Dans une maison, quelqu'un pousse un hurlement : « Henrietta ! »",
+        "effets": {
+          "etat": "mort",
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Ta balle soulève la boue à un pouce de la poule. Elle détale en caquetant si fort que tous les chiens de la ville se mettent à aboyer.",
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu tires dans le noir. La balle arrache trois plumes de la queue de la poule et va trouer un seau sur un porche. La poule disparaît, les fenêtres s'allument.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 5
+        }
+      }
+    ],
+    "caresser": [
+      {
+        "texte": "Tu caresses la poule. Elle supporte trois secondes, te donne un coup de bec dans le pouce pour la forme, et se remet à picorer.",
+        "effets": {
+          "sante": -1
+        }
+      },
+      {
+        "texte": "La poule se blottit contre ta jambe et glousse doucement pendant que tu lui lisses les plumes. Une amie pour la vie, ou au moins jusqu'à la prochaine évasion.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu tends la main ; la poule t'attaque comme un aigle, ailes déployées, bec en avant. Tu recules en secouant ta main ensanglantée.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -3
+        }
+      }
+    ],
+    "nourrir": [
+      {
+        "texte": "Tu émiettes {outil} devant la poule. Elle se jette dessus, dévore tout en gloussant de plaisir, puis te regarde comme pour dire « C'est tout ? »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "La poule mange dans ta main et te suit ensuite pas à pas, persuadée que tu es une machine à pommes. Elle n'a pas tort.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "La poule t'arrache le morceau des doigts, avec un peu de doigt au passage, et file le manger plus loin. Elle ne pardonne pas, elle se sert.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -1,
+          "relation": 1
+        }
+      }
+    ],
+    "rattraper_poule": [
+      {
+        "texte": "Tu cours après la poule. Elle vire à droite, tu glisses à gauche. Tu finis à plat ventre dans la boue, et elle te regarde du haut d'un tonneau en caquetant de joie.",
+        "effets": {
+          "sante": -2,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Trois tours de la place, un plongeon digne d'un rodéo et une collision avec le crieur de journaux plus tard, tu tiens enfin la poule contre ta poitrine. Les badauds applaudissent."
+      },
+      {
+        "texte": "Tu poursuis la poule jusqu'à l'enclos. Elle se faufile sous la barrière... et se retrouve nez à nez avec Lucifer, le taureau. Elle revient vers toi en courant et, cette fois, se laisse attraper.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Courir après une poule dans le noir, c'est courir après une idée. Ses gloussements viennent de droite, puis de gauche, puis de derrière toi. Tu rentres bredouille, un œuf écrasé dans la poche.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "La poule croit à un jeu et se laisse attraper au premier virage en gloussant de plaisir. Elle aime visiblement qu'on s'occupe d'elle.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "ramasser_oeufs": [
+      {
+        "texte": "Tu fouilles le nid improvisé de la poule, dans un tas de foin derrière la pension : trois œufs, dont un encore tiède. Elle te fixe d'un œil accusateur."
+      },
+      {
+        "texte": "Le nid est vide : la poule a encore pondu ailleurs. On retrouvera ses œufs dans un mois, dans une botte, un tonneau ou le chapeau de quelqu'un."
+      },
+      {
+        "texte": "Mme Hensley sort, te prend les œufs des mains et te tend une tranche de pain beurrée : « Les œufs sont à moi, le pain est pour toi. Partage équitable. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu chipes les œufs et tu les gobes crus derrière la palissade. La poule t'a vu. Elle n'oubliera pas.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "sante": 5,
+          "honneur": -1,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu glisses la main sous la poule pour prendre ses œufs. Elle te laboure le dos de la main à coups de bec. Bilan : un œuf cassé et trois trous dans la peau.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -3,
+          "relation": -1
+        }
+      }
+    ],
+    "rapporter_poule": [
+      {
+        "texte": "Tu rapportes la poule à Mme Hensley. La vieille dame la serre contre elle en l'appelant « ma petite Henrietta » et te glisse une part de tarte aux pommes.",
+        "effets": {
+          "honneur": 1,
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu ramènes la poule au poulailler. Le temps de refermer la porte, elle est déjà ressortie par un trou que tu n'avais pas vu. Mme Hensley soupire : « Elle fait toujours ça. »",
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu remontes la rue avec la poule sous le bras. Le petit Billy Pruitt en fait aussitôt une manchette : « Un étranger sauve Henrietta ! Lisez tout ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "C'est la troisième fois que tu ramènes Henrietta. Mme Hensley te tricote sur-le-champ une écharpe immonde que tu porteras toute ta vie, par politesse.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Mme Hensley regarde ton visage, puis l'avis de recherche dans le journal posé sur sa table : « Un bandit qui rapporte les poules, on aura tout vu. Entre boire un café. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      }
+    ],
+    "tordre_cou_poule": [
+      {
+        "texte": "Un geste sec, un craquement, et la poule ne s'échappera plus jamais. Tu as de quoi faire un bon bouillon, et une vieille dame à éviter pendant quelques jours.",
+        "effets": {
+          "etat": "mort",
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "La poule se débat avec une énergie surnaturelle, t'échappe des mains et file en caquetant, le cou un peu tordu mais l'honneur intact.",
+        "effets": {
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Tu tords le cou de la poule devant les maisons. Mme Hensley pousse un cri déchirant et court au bureau du shérif en hurlant : « Il a tué Henrietta ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "mort",
+          "honneur": -2,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Tu attrapes la poule par le cou... et tu n'y arrives pas. Elle te regarde, tu la regardes. Tu la reposes par terre en marmonnant que tu n'avais pas si faim.",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Tu tords le cou de la poule endormie et tu la fais rôtir plus tard sur un feu, derrière l'écurie. Elle est délicieuse. Tu te sens vaguement coupable à chaque bouchée.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "mort",
+          "honneur": -1,
+          "sante": 15
+        }
+      }
+    ]
+  }
+}

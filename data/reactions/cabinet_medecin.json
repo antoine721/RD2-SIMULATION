@@ -1,0 +1,266 @@
+{
+  "id": "cabinet_medecin",
+  "description": "Une petite pièce aux volets mi-clos qui sent l'éther, l'iode et le whisky. Des fioles colorées s'alignent sur des étagères poussiéreuses, une scie à amputer pend au mur près d'un diplôme encadré de travers, et une table d'examen tachée occupe le centre.",
+  "repliques": [
+    "Une fiole tinte sur une étagère.",
+    "Une odeur d'éther s'échappe par la porte entrouverte.",
+    "Un gémissement monte de derrière le rideau."
+  ],
+  "reactions": {
+    "entrer": [
+      {
+        "texte": "La clochette tinte et l'odeur d'éther te monte à la tête. « Asseyez-vous, j'arrive ! » crie le docteur, d'une voix qui semble sortir d'une bouteille.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La porte n'est pas fermée à clé. Le docteur dort dans son fauteuil, la bouche ouverte, pendant qu'une lampe à pétrole agonise sur le bureau.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Un vacher attend sur le banc, une main bandée dans l'autre. Il te regarde et murmure : « Surtout, ne prends pas le tonique vert. »"
+      },
+      {
+        "texte": "Le docteur tire aussitôt les rideaux derrière toi. « Entrez, entrez. Et ne restez pas devant la fenêtre. »",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Par la vitre, tu vois le docteur recoudre une arcade, la langue entre les dents, avec une concentration de dentellière.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Les volets sont clos, mais une lueur filtre. On entend un bouchon sauter, puis un long soupir.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "La plaque de cuivre sur la porte annonce : « Dr T. Barlow — Médecine, chirurgie, dents ». Quelqu'un a ajouté à la craie : « et whisky »."
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines les rangées de fioles, la scie au mur, la table tachée. Sur le papier, le cabinet ressemble à une salle de torture très bien rangée."
+      },
+      {
+        "texte": "La lampe brûle encore derrière le rideau. Tu dessines la fenêtre éclairée et l'ombre du docteur penchée sur un livre, ou sur une bouteille.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu croques le bocal où flotte un serpent à sonnette dans le formol. Il a l'air de te regarder dessiner."
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu photographies la vitrine pleine de fioles colorées. Sur la plaque, elles deviennent toutes grises et inquiétantes."
+      },
+      {
+        "texte": "Le docteur se précipite dans le cadre pour poser devant sa porte, menton haut. « Pour la réclame ! Mettez bien l'enseigne ! »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Trop sombre. La plaque ne garde que la silhouette de la scie à amputer, éclairée par la lampe. C'est bien assez.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la vitrine : la vitre éclate et une bouffée d'éther se répand dans la rue. Le docteur sort en hurlant au vandalisme.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Ton projectile fait tomber une étagère entière. Le fracas des fioles dure longtemps, et l'odeur plus longtemps encore.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu lances {outil} par la fenêtre ouverte ; il renverse la lampe à pétrole. Le pétrole et l'éther s'enflamment d'un coup, et le cabinet flambe comme une torche.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 50,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Tu lances {outil}, qui rebondit sur la porte. Le docteur entrouvre, regarde, et referme à double tour.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle traverse la vitrine et fait exploser une rangée de flacons. Un liquide vert ruisselle sous la porte et un cri indigné monte de l'intérieur.",
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu tires sur l'enseigne ; elle se décroche à moitié et pend au bout d'une chaîne en grinçant.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Ta balle perce un bidon d'éther près de la lampe. Il y a un souffle sourd, puis les flammes sortent par toutes les fenêtres.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 50,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Une femme sort du cabinet en courant, la tête à moitié bandée, et file chercher le shérif.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      }
+    ],
+    "chaparder_une_fiole": [
+      {
+        "texte": "Tu glisses une fiole de laudanum dans ta poche pendant que le docteur a le dos tourné. Il ne s'en apercevra qu'au prochain inventaire, c'est-à-dire jamais.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu prends une fiole au hasard et la débouches : ça sent l'urine de cheval. Tu la reposes très vite."
+      },
+      {
+        "texte": "Le docteur se retourne au moment où ta main est sur l'étagère. « Celle-là, c'est de l'arsenic. Je vous conseille plutôt la bleue. » Il te la vend quand même.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Dans le noir, tu remplis tes poches de fioles. En sortant, tu renverses un bocal de sangsues ; le docteur se réveille en criant au voleur.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 3,
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu voles une fiole de morphine pour tes blessures. Une gorgée, et la douleur s'efface comme la buée sur une vitre.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": 10,
+          "honneur": -1
+        }
+      }
+    ],
+    "respirer_l_ether": [
+      {
+        "texte": "Tu respires le flacon. La pièce se met à tourner, les fioles à chanter, et tu te retrouves assis par terre à rire tout seul.",
+        "effets": {
+          "sante": -2
+        }
+      },
+      {
+        "texte": "Une bouffée de trop : tu te réveilles sur le plancher une heure plus tard, le docteur penché sur toi. « Ça fera deux dollars. »",
+        "effets": {
+          "argent": -2,
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Dans le cabinet obscur, l'éther te montre un instant les visages de ceux que tu as tués, alignés sur les étagères comme des bocaux.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -3
+        }
+      },
+      {
+        "texte": "L'éther engourdit la douleur de tes blessures. Pendant une heure, tu ne sens plus rien, ni le bien ni le mal.",
+        "effets": {
+          "sante": 5
+        }
+      }
+    ],
+    "s_allonger_sur_la_table_d_examen": [
+      {
+        "texte": "La table est dure et tachée de vieux sang. Au plafond, quelqu'un a gravé : « J'ai survécu à Barlow ». C'est rassurant, d'une certaine façon.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu t'endors sur la table. Au matin, le docteur, encore ivre, commence à t'ausculter avant de remarquer que tu n'es pas malade.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "À peine allongé, tu vois le docteur s'approcher avec une scie. « Ah, pardon. Je vous prenais pour le monsieur de dix heures. »"
+      },
+      {
+        "texte": "Le docteur te chasse de la table d'un geste : un vacher arrive, porté par deux amis, la jambe tordue dans le mauvais sens.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "examiner_le_diplome": [
+      {
+        "texte": "Le diplôme vient du « Collège médical de Philadelphie, 1859 ». Le nom de la ville est mal orthographié. Deux fois."
+      },
+      {
+        "texte": "Derrière le cadre, tu trouves un second document plié : un brevet de chirurgien de l'armée, signé sur un champ de bataille. Celui-là a l'air vrai."
+      },
+      {
+        "texte": "À la lueur de la lampe, tu remarques que le nom sur le diplôme a été gratté puis réécrit d'une encre plus fraîche.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Quand tu redresses le cadre, une photo glisse de derrière : un jeune homme en uniforme, sourire intact, mains parfaitement stables.",
+        "si": [
+          "jour"
+        ]
+      }
+    ]
+  }
+}

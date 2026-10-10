@@ -1,0 +1,1159 @@
+{
+  "id": "crieur",
+  "description": "Un gamin de quinze ans maigre comme un piquet, perché sur une caisse à savon au milieu de la rue principale. Casquette de tweed trop grande, taches de rousseur, doigts noirs d'encre, une pile de journaux sous le bras et une voix de clairon qui couvre les meuglements de l'enclos.",
+  "personnalite": "Billy Pruitt, quinze ans, fils d'une blanchisseuse des maisons. Effronté, débrouillard, curieux de tout, il exagère chaque nouvelle et rêve de les écrire au lieu de les crier : un jour, il sera reporter au Saint Denis Times. Il adore les héros, a une peur bleue des O'Driscoll, partage son casse-croûte avec le chien errant (qu'il appelle Scoop) et lit chaque soir le journal au vétéran, dont les yeux ont mal vieilli.",
+  "repliques": [
+    "Édition spéciale ! Un O'Driscoll sous les verrous ! Le shérif Malloy frappe un grand coup !",
+    "Le juge arrive par le train de jeudi ! Finn Mulligan, voleur de chevaux, finira-t-il au bout d'une corde ?",
+    "Saint Denis s'éclaire à l'électricité ! Lisez tout, cinq cents seulement !",
+    "Prime de soixante-quinze dollars ! Un O'Driscoll, mort ou vif ! Voyez le panneau devant le bureau du shérif !",
+    "Élections à New Hanover : le candidat promet de pendre tous les voleurs de chevaux avant Noël !",
+    "Une voiture sans chevaux aperçue sur le boulevard de Saint Denis ! Le progrès arrive, mesdames et messieurs !",
+    "Rodéo de Lucifer ce dimanche ! Qui tiendra huit secondes sur le taureau de M. Whitmore ?",
+    "Un ivrogne de Valentine jure avoir vu de l'or dans les collines ! La ruée, c'est pour demain ?",
+    "Guerre aux Philippines ! La dépêche est arrivée ce matin par le télégraphe !",
+    "*met ses mains en porte-voix, prend une inspiration énorme et fait sursauter un cheval*",
+    "Scoop ! Pas sur les journaux, sale bête !"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 5,
+      "lieu": "maisons",
+      "activite": "dort sur une paillasse chez sa mère, la blanchisseuse"
+    },
+    {
+      "de": 5,
+      "a": 7,
+      "lieu": "gare",
+      "activite": "attend le premier train et récupère les paquets de journaux de Saint Denis"
+    },
+    {
+      "de": 7,
+      "a": 12,
+      "lieu": "rue_principale",
+      "activite": "crie les nouvelles du matin, perché sur sa caisse à savon"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "boucherie",
+      "activite": "mange un bout de saucisse offert par le boucher et en donne la moitié au chien errant"
+    },
+    {
+      "de": 13,
+      "a": 16,
+      "lieu": "rue_principale",
+      "activite": "vend l'édition de l'après-midi aux passants et aux cavaliers"
+    },
+    {
+      "de": 16,
+      "a": 17,
+      "lieu": "gare",
+      "activite": "traîne au guichet du télégraphiste pour grappiller des nouvelles fraîches"
+    },
+    {
+      "de": 17,
+      "a": 20,
+      "lieu": "saloon_keane",
+      "activite": "vend ses derniers journaux entre les tables jusqu'à ce que le barman le chasse"
+    },
+    {
+      "de": 20,
+      "a": 21,
+      "lieu": "rue_principale",
+      "activite": "lit le journal à voix haute au vétéran, assis sur le banc"
+    },
+    {
+      "de": 21,
+      "a": 24,
+      "lieu": "maisons",
+      "activite": "dîne avec sa mère, recopie ses « articles » dans un carnet, puis s'endort"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il se penche de sa caisse, ravi d'avoir un auditoire : « T'as entendu ? Malloy a coffré un O'Driscoll hier soir, vol de chevaux. Moi je dis que les autres vont venir le chercher, et ce jour-là je serai là pour l'écrire. »"
+      },
+      {
+        "texte": "Il remonte sa casquette d'un coup de pouce : « Un jour, j'écrirai pour le Saint Denis Times, m'sieur. Billy Pruitt, envoyé spécial. Ça sonne, hein ? »"
+      },
+      {
+        "texte": "Il désigne le chien maigre d'un coup de menton : « Lui, c'est Scoop. Il est à personne. Si tu cherches un compagnon, il est pas cher : un bout de saucisse et il t'aime pour la vie. »"
+      },
+      {
+        "texte": "Il te dévisage, déplie son journal à la page des avis de recherche, regarde le portrait gravé, puis te regarde encore. « Vous ressemblez à quelqu'un. Mais c'est sûrement pas vous. Sûrement pas. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Ses yeux brillent : « C'est vous, hein ? Celui dont tout le monde parle au saloon ? » Il sort un crayon mâchonné : « Je peux vous poser des questions ? Pour un article. Un vrai. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il bâille à s'en décrocher la mâchoire : « Plus d'édition à cette heure, m'sieur. Revenez demain, le train de six heures apporte les nouvelles de Saint Denis. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "« Toi, je te garde toujours le premier exemplaire, celui qui sent encore l'encre. » Il te glisse un journal plié sous le bras avec un clin d'œil de conspirateur.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il recule d'un pas sur sa caisse, qui vacille : « J'ai rien vu, j'ai rien entendu, et j'écris rien sur personne. C'est promis, m'sieur. »",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il soulève sa casquette d'un geste de comédien : « Bien le bonjour, étranger ! Bienvenue à Valentine, la ville où il se passe jamais rien, sauf tous les jours ! »"
+      },
+      {
+        "texte": "« Salut, m'sieur ! Journal ? Non ? Tant pis, salut quand même ! » Il hurle déjà la manchette suivante avant que tu aies fini de hocher la tête.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il sursaute dans l'ombre, puis te reconnaît à moitié : « Ah, 'soir. Faut pas traîner dehors si tard, les O'Driscoll aiment la nuit. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "« Hé ! Mon lecteur préféré ! » Il saute de sa caisse et te serre la main à deux mains, tout fier qu'on le voie avec toi.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il fait semblant de ne pas te voir et crie plus fort, en direction du bureau du shérif : « ... ET L'ADJOINT EST À DEUX PAS D'ICI, MESDAMES ET MESSIEURS ! »",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il se redresse comme un petit soldat : « Bonjour, monsieur ! » Puis, aux passants : « Vous savez qui c'est, ça ? Un homme bien, voilà qui ! »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Il te toise de toute sa petite taille : « Cause toujours, cow-boy. Ma voix porte jusqu'au bureau du shérif. Tu veux que je te fasse de la réclame ? »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il gonfle la poitrine et crie à la rue entière : « OYEZ ! UN ÉTRANGER CHERCHE LA BAGARRE À UN GAMIN DE QUINZE ANS ! QUEL COURAGE ! » Des têtes se tournent, quelqu'un ricane.",
+        "effets": {
+          "honneur": -1,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il fronce les sourcils, plus déçu que vexé : « Je croyais que vous étiez quelqu'un de bien. J'avais même gardé votre histoire pour la première page. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "« Fais le malin. Ta tête vaut plus cher que toute ma pile de journaux. » Il tapote l'avis de recherche plié dans sa poche, l'air de rien.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Sans public, il perd sa langue. Il serre ses journaux contre lui et file vers les maisons sans répondre.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Il avale sa salive, sa voix énorme réduite à un filet : « D'ac... d'accord, m'sieur. Je dirai rien. Sur rien. » Deux journaux glissent de son bras dans la boue.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il recule, trébuche sur sa caisse à savon et s'étale dans la boue. Les passants rient ; lui ne rit pas.",
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te regarde droit dans les yeux, la lèvre tremblante : « Vas-y. Tout le monde regarde. Demain, c'est toi qui seras dans le journal. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« J'ai rien vu ! Je connais pas votre tête ! » Terrorisé, il arrache lui-même la page des avis de recherche et la roule en boule dans son poing.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il ramasse une pierre, le bras qui tremble : « Approchez pas ! J'en ai fait fuir, des chiens plus gros que vous ! »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Ses yeux s'écarquillent devant {outil}. Il lâche toute sa pile et lève les mains : « Prenez l'argent ! J'ai quarante cents ! Prenez tout ! »",
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il blêmit, puis ouvre la bouche en grand et pousse un hurlement qui fait trembler les vitres de la banque : « AU SECOURS ! SHÉRIF ! »",
+        "effets": {
+          "honneur": -2,
+          "prime": 10,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Personne dans la rue pour l'entendre. Il se plaque contre le mur, {outil} à quelques pouces du nez, et murmure : « Je dirai rien. Je le jure sur ma mère. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il ne comprend pas : « Vous ? Vous faites ça ? » Il te regarde comme on regarde une idole tomber dans la boue, puis s'enfuit en pleurant.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "« Je savais que c'était vous ! » Il détale en criant à pleins poumons : « LE BANDIT DE L'AVIS DE RECHERCHE EST DANS LA RUE PRINCIPALE ! »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Un coup sec derrière l'oreille : le gamin s'effondre sur sa pile de journaux. Les feuilles s'envolent dans la rue comme des pigeons affolés.",
+        "effets": {
+          "honneur": -3,
+          "prime": 10,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Tu l'assommes en pleine rue. Une femme crie, l'épicier sort sur le pas de sa porte, et quelqu'un court déjà chercher le shérif Malloy.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -3,
+          "prime": 15,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il s'écroule sans un bruit dans la boue. Seul le chien errant vient lui lécher le visage en gémissant.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -3,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Réflexe de gamin des rues : il plonge sous ton bras et file entre deux chevaux en hurlant « À L'ASSASSIN ! ».",
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "relation": -2,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu frappes avec {outil}. Le gamin hurle et tombe en se tenant le bras, son sang tachant les colonnes du journal. Toute la rue s'arrête.",
+        "effets": {
+          "honneur": -4,
+          "prime": 50,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il esquive le premier coup, te jette sa pile de journaux au visage et s'enfuit en zigzag entre les chariots en appelant le shérif.",
+        "effets": {
+          "honneur": -3,
+          "prime": 25,
+          "relation": -5,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Des dizaines de témoins. Le vétéran se dresse sur sa béquille en rugissant « Lâche ce gosse ! », et l'adjoint sort déjà du bureau du shérif, la main sur son arme.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -4,
+          "prime": 50,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "L'attaque est brève et sale. Le gamin reste recroquevillé dans la boue, sous la lanterne du saloon, et ne crie même plus.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -5,
+          "prime": 25,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il t'attendait, une pierre dans le poing. Elle t'ouvre l'arcade avant que {outil} ne l'atteigne à l'épaule.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "honneur": -3,
+          "prime": 25,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La détonation claque dans la rue principale. Le gamin s'effondre sur sa caisse à savon, et ses journaux s'envolent comme des oiseaux blessés. Un silence terrible tombe sur Valentine.",
+        "effets": {
+          "honneur": -5,
+          "prime": 150,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "La balle lui arrache sa casquette et lui entaille le cuir chevelu. Il tombe à genoux en hurlant, le visage en sang, mais vivant.",
+        "effets": {
+          "honneur": -4,
+          "prime": 75,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Ta balle le manque et fait éclater une vitre du magasin général. Le gamin a déjà disparu entre deux maisons, et sa voix énorme sonne l'alarme dans toute la ville.",
+        "effets": {
+          "honneur": -3,
+          "prime": 50,
+          "relation": -5,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Le coup de feu réveille la moitié de la ville. Quand les lanternes s'allument, il ne reste dans la boue qu'un petit corps et une casquette trop grande.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -5,
+          "prime": 150,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Tu abats le seul qui t'avait reconnu. Mais l'adjoint jaillit du bureau du shérif en dégainant trop vite, comme toujours, et sa balle t'érafle le flanc.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "honneur": -5,
+          "prime": 150,
+          "sante": -20,
+          "relation": -5,
+          "etat": "mort"
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu attrapes son poignet et lui arraches son lance-pierre. Il te regarde, outré : « Hé ! C'est pour les rats ! Et pour les O'Driscoll ! »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu le fouilles : un crayon mâchonné, un canif sans lame et trois billes. Il lève les yeux au ciel : « Je suis crieur, m'sieur, pas pistolero. »"
+      },
+      {
+        "texte": "Il avait une pierre dans chaque main. Tu les lui fais lâcher ; il te mord la main jusqu'au sang et s'enfuit en courant.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -2,
+          "relation": -1,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il te tend son lance-pierre lui-même, en riant : « Garde-le, va. Mais si tu descends un O'Driscoll avec, je veux l'exclusivité. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Le nœud coulant s'abat sur ses épaules. Il tombe de sa caisse dans une gerbe de boue et de papier journal, en braillant comme un veau qu'on marque.",
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il se baisse au dernier moment : la boucle passe au-dessus de sa casquette. Il te tire la langue et file derrière le saloon de Keane.",
+        "effets": {
+          "relation": -1,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu le traînes sur trois mètres de boue sous les yeux de toute la ville. Le vacher de l'enclos siffle, admiratif ; une dame se signe.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il se laisse prendre en riant : « Pas mal ! Tu me montres comment on fait ? Le vacher dit que je tiendrais pas un veau. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu lui lies les mains derrière le dos. Il se débat, puis hurle la nouvelle à pleins poumons : « ENLÈVEMENT EN PLEINE RUE ! LISEZ LES DÉTAILS DEMAIN ! »",
+        "effets": {
+          "honneur": -3,
+          "prime": 10,
+          "relation": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Tu le ligotes dans l'ombre, derrière le magasin général. Il ne crie pas : il tremble et répète qu'il n'a que quarante cents.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -3,
+          "prime": 10,
+          "relation": -4,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Il se tortille comme une anguille et glisse hors des cordes avant que tu serres le nœud. « C'est le gamin des rues qui m'a appris ! » lance-t-il en filant.",
+        "effets": {
+          "relation": -2,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu le laisses ligoté contre l'abreuvoir, une page de journal dans la bouche pour qu'il se taise enfin. Sur le banc, le vétéran crache par terre en te regardant.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -3,
+          "prime": 10,
+          "relation": -4,
+          "etat": "ligote"
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il éclate de rire, puis comprend que tu es sérieux : « Un duel ? Avec quoi, mon lance-pierre ? » Il recule, blanc comme son papier.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il gonfle la poitrine : « Midi pile, au milieu de la rue ! » Puis il réfléchit. « Non, en fait. Ma mère me tuerait avant toi. »",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Des passants s'attroupent pour voir un homme armé défier un gamin. Quelqu'un te traite de lâche ; le pasteur, sur les marches de l'église, secoue lentement la tête.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« C'est une blague pour mon article, hein ? » Il sort son crayon : « Le héros de Valentine défie le crieur... Non, personne le croira. »",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Une gifle le fait vaciller sur sa caisse. Il porte la main à sa joue rouge et serre les dents pour ne pas pleurer : « Ça, ça ira dans le journal. »",
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Ton poing l'envoie rouler dans la boue avec toute sa pile. Le boucher sort de sa boutique en s'essuyant les mains sur son tablier sanglant, et il ne rit plus du tout.",
+        "effets": {
+          "honneur": -3,
+          "prime": 5,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il esquive en se baissant, plus vif qu'un chat, te balance un coup de pied dans le tibia et détale.",
+        "effets": {
+          "sante": -2,
+          "honneur": -1,
+          "prime": 5,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il t'attendait : il te lance un journal roulé en plein visage et te mord le poignet quand tu l'attrapes.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -3,
+          "honneur": -1,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Pas de témoins, juste le chien errant qui gronde entre vos jambes et le vétéran qui crie de loin : « Lâche ce gosse, lâche ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil}. Il plonge derrière sa caisse à savon, qui encaisse le coup à sa place. « T'ES CINGLÉ ?! » hurle-t-il, et toute la rue l'entend.",
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Touché à l'épaule, il bascule de sa caisse dans la boue. Il se relève en se tenant le bras, les larmes aux yeux mais la voix intacte : « AU SECOURS ! »",
+        "effets": {
+          "honneur": -3,
+          "prime": 10,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il esquive d'un bond. Le projectile roule dans la boue à ses pieds ; il le fixe, te fixe, puis hurle : « SHÉRIF ! »",
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Le projectile manque sa tête d'un pouce et fracasse la vitrine de la banque. Le caissier, qui attendait un braquage depuis des semaines, se jette sous son comptoir en hurlant.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 10,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu le croques debout sur sa caisse, la bouche grande ouverte, une pile de journaux sous le bras. Il se penche par-dessus ton épaule : « Vous m'avez fait le nez trop gros. Mais la casquette, c'est ressemblant. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il prend la pose, menton levé et main sur le cœur, comme les généraux gravés dans les journaux. Il ne tient pas trente secondes sans crier une manchette."
+      },
+      {
+        "texte": "Il te demande s'il peut garder la page : « Quand je serai reporter à Saint Denis, je l'accrocherai au-dessus de mon bureau. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "À la lueur des fenêtres du saloon, tu dessines le gamin endormi sur le banc, sur sa pile d'invendus, le chien errant roulé contre ses jambes.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il se fige, fasciné : « C'est un vrai ? Comme ceux des reporters ? » Le magnésium claque ; il cligne des yeux, ébloui et ravi.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il bondit devant l'objectif en brandissant sa pile : « Écrivez « Billy Pruitt, crieur officiel de Valentine » en dessous ! »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il pose, puis te dévisage longuement par-dessus l'appareil. Tu jurerais qu'il compare ton visage à celui qui est gravé dans son journal.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il te supplie de lui apprendre à s'en servir : « Un reporter avec un appareil photo, tu te rends compte ? Je serais le premier de tout New Hanover ! »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Quinze ans, des genoux cagneux, une casquette qui lui tombe sur les yeux et des doigts noirs d'encre. Il crie les nouvelles avec une voix de prédicateur et vérifie toutes les cinq minutes que personne n'a volé sa caisse à savon."
+      },
+      {
+        "texte": "Quand il croit que personne ne regarde, il glisse une croûte de pain au chien errant, puis une pièce dans le képi du vétéran."
+      },
+      {
+        "texte": "Entre deux manchettes, il griffonne dans un carnet écorné. Tu aperçois un titre souligné deux fois : « Mes nouvelles à moi »."
+      },
+      {
+        "texte": "Assis sous la lanterne du saloon, il lit à mi-voix un vieux numéro du Saint Denis Times, en remuant les lèvres, comme on prie.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il t'observe aussi. Ses yeux vont de ton visage au panneau des avis de recherche, puis reviennent, et il serre son journal un peu plus fort.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu le charges sur ton épaule comme un sac de farine. Il gigote, hurle, et ses journaux pleuvent dans la boue : « POSEZ-MOI ! ENLÈVEMENT ! »",
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il pèse à peine plus qu'un veau. Il se tortille, te plante un genou dans les côtes et retombe sur ses pieds comme un chat.",
+        "effets": {
+          "sante": -2,
+          "relation": -1,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il éclate de rire, perché sur ton épaule : « Plus haut ! D'ici je vois jusqu'à la gare ! ÉDITION SPÉCIALE : LE CRIEUR VOLE ! »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il s'est endormi sur le banc. Tu le portes jusqu'aux maisons ; sa mère ouvre la porte en chemise de nuit et te remercie d'un regard.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu le suis de loin. Il fait le tour de la ville au pas de course : la gare, le saloon, puis le bureau du shérif, où il colle son oreille à la fenêtre pour grappiller une nouvelle."
+      },
+      {
+        "texte": "Il te repère au bout de deux rues et se retourne, poings sur les hanches : « Vous me suivez pour un article ? Parce que d'habitude, c'est moi qui fais ça. »"
+      },
+      {
+        "texte": "Tu le suis jusqu'à la boucherie. Le boucher lui tend un bout de saucisse ; dans la ruelle, il en donne la moitié au chien errant et l'autre au vétéran. Il ne garde rien pour lui.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il se faufile jusqu'à la gare et colle son nez à la vitre du télégraphiste, qui tape une dépêche. Il recopie les mots sur sa manche, à la lueur de la lampe.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il t'a repéré et file droit vers le bureau du shérif. Tu le rattrapes devant la porte ; il bafouille, hors d'haleine : « J'allais... j'allais juste vendre un journal à l'adjoint. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il tourne {outil} entre ses doigts noirs d'encre, ébahi : « Pour moi ? Personne m'a jamais rien donné, à part des taloches. »",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il fronce les sourcils : « Ma mère dit qu'il faut jamais rien accepter des étrangers. » Il accepte quand même, en jetant un œil inquiet vers les maisons.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il recule : « C'est volé ? Je veux pas finir en cellule avec l'O'Driscoll. » Il finit par accepter, et jure de ne rien dire « à personne, même pas au journal ».",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« T'es le meilleur, toi. » Il range ton cadeau sous sa caisse à savon comme un trésor et te tend en échange le journal du jour, plié avec soin.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il en reste muet, ce qui ne lui arrive jamais. Puis il bondit sur sa caisse et crie à toute la rue : « UN HOMME GÉNÉREUX DANS NOS MURS ! »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      }
+    ],
+    "vendre@outil": [
+      {
+        "texte": "Il regarde {cible} avec envie, puis retourne ses poches : trois pièces de cinq cents, un bouton et une bille. « C'est tout ce que j'ai. Revenez quand je serai reporter. »"
+      },
+      {
+        "texte": "Il secoue la tête : « Je peux pas, m'sieur. Ma mère me tuerait. Et je gagne quinze cents les bons jours. »"
+      },
+      {
+        "texte": "Il recule d'un pas : « D'où ça sort, ça ? Je veux pas d'ennuis avec le shérif Malloy, moi. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il réfléchit très fort : « Je peux pas payer... mais je te donne le journal gratis pendant un an ? » Il crache dans sa main et la tend pour toper.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Pour que l'adjoint me trouve avec un truc à vous dans les mains ? » Il siffle entre ses dents. « Non merci, j'ai lu ce qui arrive aux complices. »",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "acheter@outil": [
+      {
+        "texte": "Il éclate de rire : « Tu veux acheter {cible} ? Ici, c'est que du papier et de l'encre, m'sieur. Le magasin général est juste en face. »"
+      },
+      {
+        "texte": "Il plisse les yeux, calculateur : « Je vends pas {cible}, mais pour un dollar je cours te trouver le meilleur prix de la ville. » Il revient essoufflé : « L'épicier fait pas crédit. Jamais. Même pas à sa mère. »",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il griffonne « Bon pour {cible} » dans la marge d'un journal et signe Billy Pruitt. « Montre ça à l'épicier. Il te rira au nez, mais rien que pour voir sa tête, ça vaut le coup. »"
+      },
+      {
+        "texte": "Il baisse la voix : « Pour toi, je peux te dégoter {cible}, et pas au prix de l'épicier. Le gamin des rues connaît des gens. Non, me demande pas qui. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Tout est fermé à cette heure, m'sieur, même le magasin général. Mais il me reste deux journaux d'hier, si ça te dit. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "acheter_journal": [
+      {
+        "texte": "Il te tend la New Hanover Gazette, encore humide d'encre : « Page deux, l'O'Driscoll arrêté ; page trois, les primes ; page quatre, la réclame du docteur pour son tonique miracle ! »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Garde la monnaie, petit. » Il regarde ton dollar comme une pépite : « Un dollar entier ? Monsieur, vous aurez toujours le premier exemplaire ! »",
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Le Saint Denis Times de la veille, arrivé par le train : grève des dockers, un ballon au-dessus du parc, la guerre aux Philippines et une pleine page de réclames pour des corsets. « Les nouvelles de la grande ville, m'sieur ! »"
+      },
+      {
+        "texte": "Il te tend le journal sans te regarder. En page trois, sous « RECHERCHÉ », un portrait gravé qui te ressemble, la mâchoire un peu trop carrée. Le gamin compte ta monnaie deux fois, les mains moites.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "« Page une, m'sieur ! C'est vous, là ! » Un entrefilet raconte qu'un voyageur a tenu tête aux O'Driscoll. Il refuse ta pièce : « Celui-là, c'est la maison qui l'offre. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il fouille sa besace et en sort le dernier exemplaire, tout froissé : « Édition d'hier. Moitié prix. Les nouvelles sont toujours vraies. Enfin, la plupart. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "racheter_tous_journaux": [
+      {
+        "texte": "Il empoche l'argent, puis plisse les yeux : « Vous allez en faire quoi ? Allumer un feu ? Tapisser une cabane ? » Il hausse les épaules. « Bah, le train en apporte d'autres demain matin. »",
+        "effets": {
+          "argent": -3,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te regarde, ahuri : « Toute la pile ? Mais ça fait trois dollars ! » Il compte les exemplaires deux fois, encaisse, et reste planté au milieu de la rue, bras ballants, sans rien à crier.",
+        "effets": {
+          "argent": -3,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il comprend tout de suite et te tend la pile, page trois sur le dessus, ton portrait sous le mot « RECHERCHÉ ». « Vous pouvez acheter tous les journaux de Valentine. Le télégraphe, lui, il en fera imprimer d'autres. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -3
+        }
+      },
+      {
+        "texte": "« Vous voulez les distribuer gratis ? » Tu hoches la tête. Il bondit sur sa caisse : « JOURNAL GRATUIT, OFFERT PAR UN HOMME DE BIEN ! » La pile disparaît en deux minutes.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -3,
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il te vend ses invendus avec un soupir de soulagement : « Merci, m'sieur. Maintenant je peux rentrer. » Il file vers les maisons en serrant ses pièces dans son poing.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": 2
+        }
+      }
+    ],
+    "payer_annonce_crieur": [
+      {
+        "texte": "Tu lui glisses un dollar et lui souffles ton annonce. Il monte sur sa caisse et gonfle les poumons : « OYEZ ! UN VOYAGEUR ARMÉ CHERCHE DU TRAVAIL ! HONNÊTE, OU PRESQUE ! S'ADRESSER AU SALOON ! »",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu lui fais crier une déclaration d'amour à la danseuse du saloon de Keane. Il s'exécute, rouge jusqu'aux oreilles ; aux fenêtres du saloon, des rires éclatent et quelqu'un siffle.",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il n'a même pas besoin de ton texte : « OYEZ ! L'ÉTRANGER QUI A TENU TÊTE AUX O'DRISCOLL EST À VALENTINE ! SERREZ-LUI LA MAIN ! » Des passants viennent te saluer.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -1,
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu le paies pour annoncer que le bandit recherché a filé vers Strawberry. Il hurle la fausse nouvelle avec un aplomb parfait, puis te glisse : « Mentir, c'est un dollar de plus. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu lui dictes une insulte à l'adresse du shérif Malloy. Il pâlit : « Pas ça, m'sieur. Malloy me ferait balayer sa prison jusqu'à Noël. » Il te rend ta pièce.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« À cette heure-ci ? » Il hurle quand même ton annonce dans la rue déserte. Une fenêtre de l'hôtel s'ouvre, et la gérante lui lance une bottine.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      }
+    ],
+    "envoyer_porter_message": [
+      {
+        "texte": "Il plie ton billet en quatre et le glisse dans sa casquette : « Livré en dix minutes ou remboursé ! » Il revient en huit, hors d'haleine : « Fait. Et non, je l'ai pas lu. Presque pas. »",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il revient avec la réponse griffonnée au dos de ton billet, et un supplément gratuit : « Le télégraphiste dit qu'une dépêche est arrivée pour le chasseur de primes. Mais tu sais pas ça de moi. »",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il refuse ta pièce : « Entre collègues, on se rend service. » Il part en courant, le chien errant sur les talons.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il hésite devant la rue noire : « Les O'Driscoll traînent, la nuit... » Puis il serre ton message contre lui et file en rasant les murs. Il revient pâle, mais fier.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il lit le nom sur le billet et devient livide : « Au Smithfield's ? Je mets pas les pieds là-dedans pour moins de deux dollars. » Tu paies. Il y va.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      }
+    ],
+    "questionner_temoin_rue": [
+      {
+        "texte": "« Qui est passé ? Tout le monde, m'sieur. Mais un inconnu balafré est entré au Smithfield's ce matin, le même que sur le panneau, si vous voulez mon avis. Son cheval est attaché juste là. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il tend la main, paume ouverte : « Les nouvelles, ça se vend. » Tu y poses une pièce, et il déballe tout : le chasseur de primes qui guette à la fenêtre du Smithfield's, l'adjoint qui astique son revolver, le caissier qui ferme ses volets à midi.",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« La nuit ? Je suis pas censé être dehors. Mais j'ai vu des cavaliers sans lanterne passer derrière l'écurie, vers la prison. Trois. Peut-être quatre. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te regarde longuement : « Qui est passé dans la rue ? Vous, m'sieur. Et l'adjoint vous a vu aussi. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il te prend par la manche et baisse la voix : « Entre nous : l'O'Driscoll du Smithfield's a acheté de la dynamite au magasin général hier. Personne d'autre le sait. Même pas le journal. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1017 @@
+{
+  "id": "telegraphiste",
+  "description": "Elmer Dobbs, un petit homme maigre aux manches retenues par des élastiques, visière verte sur le front et lunettes rondes qui glissent sans cesse sur son nez pointu. Ses doigts tachés d'encre pianotent en morse sur tout ce qu'ils touchent, même loin du manipulateur.",
+  "personnalite": "Curieux comme une pie, bavard à voix basse, vaniteux de tout savoir avant tout le monde. Lâche devant la violence, avide devant l'argent, il lit chaque télégramme qui passe sous ses doigts et ne résiste jamais au plaisir d'en laisser fuiter un morceau. Il vend les nouvelles au crieur de journaux et échange les ragots avec le barman de Keane.",
+  "repliques": [
+    "*tac-tac-taaac-tac* … Ah ! Saint Denis répond.",
+    "Je ne lis jamais les télégrammes des autres. Je les… vérifie.",
+    "Dix cents le mot, monsieur. Les adieux coûtent cher : soyez bref.",
+    "L'Irlandais du Smithfield's ? Soixante-quinze dollars. C'est moi qui ai reçu l'avis.",
+    "Le banquier a encore télégraphié à Saint Denis. Mauvais signe pour les fermiers.",
+    "Pettigrew a encore réglé l'horloge. Trois fois aujourd'hui.",
+    "Il ne se passe rien dans ce pays sans que ça passe par mes doigts."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 7,
+      "lieu": "pension",
+      "activite": "dort, des doubles de télégrammes glissés sous l'oreiller"
+    },
+    {
+      "de": 7,
+      "a": 12,
+      "lieu": "gare",
+      "activite": "tape et reçoit les télégrammes au bureau du télégraphe"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "saloon_keane",
+      "activite": "déjeune au comptoir en échangeant des ragots avec le barman"
+    },
+    {
+      "de": 13,
+      "a": 18,
+      "lieu": "gare",
+      "activite": "reçoit les dépêches de Saint Denis et les avis de primes"
+    },
+    {
+      "de": 18,
+      "a": 19,
+      "lieu": "rue_principale",
+      "activite": "souffle les nouvelles du jour au crieur de journaux contre quelques pièces"
+    },
+    {
+      "de": 19,
+      "a": 21,
+      "lieu": "saloon_keane",
+      "activite": "boit une bière au bout du comptoir en tendant l'oreille"
+    },
+    {
+      "de": 21,
+      "a": 24,
+      "lieu": "pension",
+      "activite": "relit en cachette les doubles des télégrammes à la chandelle"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il se penche par-dessus le guichet, l'œil brillant : « Vous savez ce que le banquier a télégraphié ce matin ? Non ? Moi non plus, évidemment. » Il te fait un clin d'œil appuyé."
+      },
+      {
+        "texte": "Il ne lève pas la tête de son manipulateur : « Une seconde… tac… tac-tac… Saint Denis dit qu'il pleut. Ils disent toujours qu'il pleut. Que puis-je pour vous ? »"
+      },
+      {
+        "texte": "Il ferme la porte du bureau et chuchote : « La danseuse de Keane a écrit à un théâtre de Saint Denis. Elle a reçu une réponse. Je ne vous dirai pas laquelle. » Un temps. « C'est oui. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il pose vivement la main sur la feuille qu'il recopiait. Tu as juste le temps d'y lire ton propre signalement.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il est encore au bureau, à la lueur d'une lampe, à recopier des télégrammes qui ne sont pas les siens. Il sursaute : « Je… je classe. Je classe ! »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "« On parle de vous jusqu'à Rhodes, vous savez. Un télégramme de l'adjoint vous mentionnait. En bien ! » Il rougit d'en avoir trop dit.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il soulève sa visière verte : « Bonjour, bonjour ! Pas de télégramme pour vous aujourd'hui. Enfin, pas encore. »"
+      },
+      {
+        "texte": "Il te salue sans quitter son appareil : « Je vous réponds en morse, tenez : tac-taaac-tac. Ça veut dire bonjour. À peu près. »"
+      },
+      {
+        "texte": "« Ah, mon ami ! » Il te fait signe d'approcher : « J'ai quelque chose pour vous, si vous avez un moment. Et quelques cents. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te voit, avale sa salive et se met à taper très vite sur son manipulateur, les yeux rivés sur toi.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il te salue à travers la vitre du bureau, une tasse de café froid à la main, l'air d'un hibou dérangé.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "« Fouineur ? Moi ? » Il ajuste ses lunettes, vexé. « Je suis un professionnel de l'information, monsieur. Je sais même ce que vous avez mangé hier. » Il bluffe, mais à peine.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il se contente de sourire et griffonne quelque chose sur un bloc : « Je retiens. Tout. Toujours. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il recule et pose la main sur la clé du manipulateur : « Un mot de plus et j'envoie votre signalement à tous les bureaux jusqu'à Blackwater. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il ricane nerveusement : « Vous savez combien de télégrammes parlent de vous ? Moi, oui. Et j'ai gardé les doubles. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il hausse les épaules et lance assez fort pour tout le quai : « Le monsieur veut se battre avec le télégraphe ! » Deux voyageurs ricanent.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu t'appuies sur son guichet en le fixant. Ses lunettes s'embuent : « D'accord ! Le shérif a demandé un marshal à Saint Denis pour emmener son prisonnier. Jeudi. Par le train. » Il se mord la langue trop tard.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il se recroqueville derrière son appareil : « Je n'ai rien lu, je ne lis jamais rien, je tape, c'est tout ! » Une feuille pliée dépasse de sa manche.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il tremble si fort que le manipulateur claque tout seul sous ses doigts. Quelque part à Rhodes, quelqu'un reçoit un message incompréhensible.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il comprend vite que tu bluffes : « Vous n'êtes pas de ce genre-là, on me l'a télégraphié. » Il se détend, un peu trop.",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Seul dans le bureau, il blêmit et te tend sans un mot une liasse de télégrammes du jour : « Prenez. Tout. Mais ne me faites pas de mal. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "soudoyer": [
+      {
+        "texte": "Il fait disparaître les billets avec une dextérité de joueur de poker : « Le docteur a commandé six caisses de “tonique” à Saint Denis. Le fournisseur est une distillerie. »",
+        "effets": {
+          "argent": -10,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il compte l'argent, le recompte : « Pour ça ? Le banquier a demandé la saisie de la ferme d'un pauvre bougre qui lui doit huit cents dollars. Le papier arrive lundi. »",
+        "effets": {
+          "argent": -10,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il refuse la moitié des billets : « Entre amis, prix d'ami. » Puis il te confie que le shérif Malloy a demandé des renforts à Saint Denis contre les O'Driscoll, et qu'on ne lui a pas répondu.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il prend l'argent et souffle : « L'avis à votre nom part pour Rhodes à 15 h. Je peux… avoir une panne de ligne jusqu'à demain. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -20,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il empoche l'argent avec un sourire de fouine, et dès que tu as tourné les talons, tu le vois trotter vers le bureau du shérif.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -10,
+          "prime": 5
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Tu pointes {outil} sur lui. Il lève les mains et parle à toute allure : « Le wagon postal de samedi transporte la paie des ranchs pour la banque, je n'ai rien dit, je n'ai rien dit ! »",
+        "effets": {
+          "relation": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il fixe {outil}, puis son appareil : « Si je meurs, le prochain qui s'assiéra ici ne saura pas lire le code de Saint Denis. Personne n'y gagne. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il glisse sous la grille un télégramme froissé : l'avis de recherche envoyé sur toi ce matin. « Je ne l'ai pas encore porté au shérif. Je pourrais le perdre. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il se met à pleurer sans bruit et te tend la clé de l'armoire à télégrammes : « Tout est là. Les secrets de toute la ville. Prenez-les, mais rangez ça. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il crie si fort que le chef de gare accourt, sifflet aux lèvres, avant de s'arrêter net devant {outil}.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "relation": -2
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Il n'avait pour toute arme qu'un coupe-papier. Tu le lui ôtes des doigts ; il te regarde comme si tu lui avais arraché un bras.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il brandissait un minuscule Derringer à deux coups sorti de son tiroir. Tu le lui arraches ; il lève les mains, les lunettes de travers.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lui saisis le poignet : il lâche son crayon et un double de télégramme qu'il essayait de cacher. Ça parle du banquier et d'une saisie.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lui arraches le tisonnier du poêle qu'il brandissait à deux mains. Il bredouille : « J'ai cru… j'ai cru à un O'Driscoll ! »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Il s'affale le front sur la clé du manipulateur, qui envoie un long « taaaaaaaac » ininterrompu jusqu'à Saint Denis.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il tombe de son tabouret dans un nuage de feuillets ; le chef de gare accourt en sifflant de toutes ses forces.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il s'effondre sur ses doubles de télégrammes. Le bureau est à toi, avec tous les secrets de Valentine, jusqu'au matin.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il tente de taper un appel au secours avant ton coup. Il a le temps d'envoyer « S… O… » avant de s'écrouler.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -1
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Il encaisse le coup et ses lunettes volent dans un coin. Il les cherche à quatre pattes : « Je vais tout raconter… dès que je vois quelque chose. »",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il retombe sur son tabouret et se met à taper un message, le nez en sang. Tu ne sais pas à qui il écrit, et c'est bien ça le problème.",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te regarde, la joue rouge, incrédule : « Je vous ai donné les meilleures nouvelles de la ville… » Il te tourne le dos.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il riposte d'un coup de registre en pleine figure, étonnamment lourd, puis plonge sous le bureau.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -3,
+          "relation": -1
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Il se protège avec sa chaise, que tu fends en deux avec {outil}. Il s'enfuit par la fenêtre du bureau en y laissant ses lunettes.",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Touché, il s'écroule contre l'armoire à télégrammes, et des centaines de feuillets volent dans le bureau comme des oiseaux affolés.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 20,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Il hurle si fort que tout le quai l'entend. Le chef de gare siffle, une femme crie, et quelqu'un court déjà chercher le shérif Malloy.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 25,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Il te plante un coupe-papier dans l'avant-bras avant de tomber sous tes coups.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -8,
+          "etat": "blesse",
+          "prime": 15,
+          "honneur": -2
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle le cueille au milieu d'une phrase en morse. Il glisse de sa chaise ; le dernier message de Valentine reste inachevé.",
+        "effets": {
+          "etat": "mort",
+          "prime": 100,
+          "honneur": -5
+        }
+      },
+      {
+        "texte": "Ta balle fracasse le manipulateur à un pouce de sa main. Il bondit par la fenêtre et court vers le bureau du shérif en hurlant.",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 15,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Touché à l'épaule, il se traîne sous le bureau en gémissant qu'il connaît des secrets, plein de secrets, qu'il peut tout dire.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 35,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Il tire en même temps que toi avec son petit Derringer. Sa balle t'effleure la joue ; la tienne le cloue contre l'armoire.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -15,
+          "etat": "blesse",
+          "prime": 30,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Dans la pénombre, ta balle traverse la vitre du bureau. Tu entends la lampe tomber, puis des pas précipités qui s'enfuient vers la voie.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 10,
+          "honneur": -1
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Il voit arriver {outil} et se jette sous le bureau ; l'appareil télégraphique, lui, n'a pas cette chance.",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il reçoit {outil} sur le front et bascule à la renverse de son tabouret, les jambes en l'air.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il attrape {outil} au vol, ébahi par sa propre adresse : « Vous avez vu ça ? Il faut que je le télégraphie à ma mère ! »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Les voyageurs s'écartent ; il ramasse {outil}, l'examine, et le range dans une case marquée « À REMETTRE AU SHÉRIF ».",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "La corde se referme sur ses bras maigres et l'arrache de son tabouret. Une nuée de feuillets s'envole derrière lui.",
+        "effets": {
+          "etat": "ligote",
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il se débat en piaillant : « Lâchez-moi ! J'ai un télégramme urgent pour le shérif ! Enfin… j'en aurai un ! »",
+        "effets": {
+          "etat": "ligote",
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu le traînes hors du bureau sous les yeux du quai. Le chef de gare consulte sa montre, note l'heure de l'enlèvement et court chez le shérif.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Tu le cueilles à la sortie de la pension. Il tombe le nez dans la boue de la rue principale en marmonnant des prières.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 5
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu l'attaches à sa chaise avec {outil}. Il te supplie de lui laisser au moins une main libre pour le manipulateur, « en cas d'urgence ».",
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Ficelé, il ne tient pas trente secondes sans parler : il te raconte les dettes du fermier, les rêves de la danseuse et les toniques du docteur.",
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Un voyageur te voit faire et file au bureau du shérif. Le télégraphiste, ligoté, a l'air presque ravi qu'il se passe enfin quelque chose.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 15,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu le ligotes et le bâillonnes avec un télégramme froissé. Ses yeux te supplient au-dessus des lettres « STOP ».",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 15,
+          "honneur": -2
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Il tape un télégramme d'une main et en recopie un autre de l'autre, en remuant les lèvres. Le double disparaît ensuite dans sa poche intérieure."
+      },
+      {
+        "texte": "Il colle l'oreille contre la cloison qui le sépare du guichet du chef de gare, l'air de rien, la plume suspendue en l'air."
+      },
+      {
+        "texte": "À la fenêtre de la pension, une chandelle brûle tard. Il y relit des liasses de télégrammes en souriant tout seul.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Chaque fois que quelqu'un entre dans la gare, il le détaille par-dessus ses lunettes, comme s'il l'inscrivait dans un registre secret.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Il pose la visière bien droite et les doigts sur le manipulateur : « Ajoutez des éclairs autour de l'appareil. Pour l'électricité. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu le dessines dans {outil}, penché sur un télégramme qui n'est pas le sien, les yeux plissés de gourmandise."
+      },
+      {
+        "texte": "Il regarde ton croquis et rit : « Vous m'avez fait le nez plus long. Parce que je le fourre partout, hein ? » Il le prend plutôt bien.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il se cache derrière un registre ouvert : « Pas de portrait ! Les portraits, ça finit toujours sur les avis de recherche. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il se recoiffe en hâte avec un peu de salive et prend la pose devant son appareil, l'air d'un ministre.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il tend la main vers {outil}, fasciné : « On dit à Saint Denis qu'un jour on enverra les images par le fil. Vous imaginez ? Je verrais tout ! »"
+      },
+      {
+        "texte": "Il détourne le visage : « Une photographie de moi avec vous ? Si le shérif la voit, je suis complice. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "L'éclair du magnésium l'aveugle ; il tape trois lettres au hasard et, à l'autre bout du fil, Rhodes répond « RÉPÉTEZ ».",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu le charges sur ton épaule. Il pèse moins qu'un sac de courrier et ne cesse de parler : « Si vous m'emmenez quelque part, dites-moi au moins où. Il faut que je sache. »"
+      },
+      {
+        "texte": "Il se débat et te mord l'oreille. Des feuillets s'échappent de ses poches à chaque pas, semant ses secrets derrière vous.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -2
+        }
+      },
+      {
+        "texte": "Il pend, inerte, sur ton épaule, mais tu sens sa main fouiller ta poche de veste. Même à moitié assommé, il reste curieux.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu traverses le quai avec le télégraphiste sur l'épaule. Le chef de gare sort sa montre et note l'heure.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Il quitte la gare à 18 h et file droit vers le crieur de journaux, à qui il glisse les nouvelles du jour à l'oreille contre quelques pièces."
+      },
+      {
+        "texte": "Au saloon de Keane, il s'installe près du barman ; ils échangent des ragots à voix basse comme deux conspirateurs.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il rentre à la pension en rasant les murs, un paquet de doubles de télégrammes serré contre la poitrine.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te repère, presse le pas et s'engouffre dans le bureau du shérif. Par la vitre, tu le vois parler en faisant de grands gestes.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il éclate d'un rire aigu : « Un duel ? Avec moi ? Je ne sais tirer qu'en morse. »"
+      },
+      {
+        "texte": "Il accepte, livide, puis demande dix minutes pour télégraphier son testament à sa mère. On ne le revoit plus de la journée."
+      },
+      {
+        "texte": "Il sort un minuscule Derringer de sa manche et tire avant le signal. Raté. Ta riposte lui arrache le pistolet et il s'effondre en se tenant la main.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "« Vous ne tireriez pas sur un homme qui ne sait pas tenir un pistolet, monsieur. » Il a raison, et il le sait.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il examine {outil} sous tous les angles, puis le glisse dans un tiroir : « Merci. Je vous dois une nouvelle. Une petite. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il soupèse {outil} : « Intéressant. Qui vous l'a donné ? Où l'avez-vous eu ? Combien ça vaut ? » Il note chacune de tes réponses.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il accepte {outil} et te glisse en échange un télégramme plié : « Lisez ça dehors. Ça concerne la banque. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il refuse d'y toucher : « Si on trouve ça chez moi, je finis sur le panneau, juste à côté de vous. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "envoyer_telegramme": [
+      {
+        "texte": "Il compte les mots sur ses doigts : « Onze mots, un dollar et dix cents. » Puis il tape ton message en le relisant à voix haute, lentement, en savourant chaque phrase.",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "« Saint Denis ? Rhodes ? Blackwater ? » Ses doigts volent sur la clé et l'appareil grésille. « Parti ! Il sera là-bas avant votre cheval. »",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il refuse ton argent : « Pour vous, c'est gratuit. Mais dites-moi, qui est cette Mary à qui vous écrivez ? »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il tape ton message, mais ses yeux font l'aller-retour entre ton visage et l'avis de recherche épinglé derrière lui.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il rouvre le bureau en grognant, une lampe à la main : « Tarif de nuit, monsieur, c'est le double. Les nouvelles ne dorment jamais, et moi non plus, apparemment. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      }
+    ],
+    "demander_courrier": [
+      {
+        "texte": "Il fouille une case pleine de papiers jaunes : « Rien pour vous. Mais il y a un télégramme pour le shérif, si ça vous intéresse. » Il le rentre aussitôt."
+      },
+      {
+        "texte": "Il te tend un télégramme plié, déjà décacheté : « Tenez. Je n'ai lu que le début. Et la fin. Condoléances, au fait. »"
+      },
+      {
+        "texte": "« Je l'ai gardé pour vous, je savais que vous passeriez. » Une vieille connaissance te donne rendez-vous à Rhodes ; il est aussi curieux que toi de savoir qui c'est.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il fait semblant de chercher : « Rien, rien du tout. » Derrière lui, dans la case, un télégramme porte ton signalement.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "« Le bureau est fermé… » Il entrouvre quand même : « Mais rien n'est arrivé pour vous. Je l'aurais su. Je sais tout. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "lire_telegrammes_d_autrui": [
+      {
+        "texte": "Il ferme le volet, glisse tes dollars dans son gilet et étale trois télégrammes : le caissier demande sa mutation à Saint Denis « pour raisons de santé », le docteur commande de l'éther, le banquier menace un fermier de saisie.",
+        "effets": {
+          "argent": -5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Celui-là, c'est l'Irlandais du Smithfield's. Un seul mot, venu de Strawberry : “JEUDI.” » Il te regarde par-dessus ses lunettes. « Jeudi, c'est le jour où le marshal vient chercher le prisonnier. »",
+        "effets": {
+          "argent": -10,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te montre un télégramme de la veuve à sa sœur : elle a vendu les bijoux de son mari pour s'acheter un fusil. Il repousse ton argent : « Ça, je ne le vends pas. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te montre le télégramme que le shérif Malloy a envoyé sur toi à Saint Denis : prime, signalement, robe du cheval. « Cinq dollars de plus et je dis que je ne l'ai jamais reçu. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -10
+        }
+      },
+      {
+        "texte": "Il hésite, l'argent dans la main : « Vous ? Ça m'étonne de vous. » Puis il te montre quand même un télégramme du chasseur de primes : il demande si la prime de l'O'Driscoll est payable mort ou vif.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -5,
+          "relation": 1
+        }
+      }
+    ],
+    "envoyer_faux_telegramme": [
+      {
+        "texte": "Il blêmit : « Un faux ? Signé du shérif ? » Puis, après un long silence, il tend la main : « Vingt dollars. Et je tape avec des gants. »",
+        "effets": {
+          "argent": -20,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il refuse en secouant la tête si fort que ses lunettes tombent : « On retrouve toujours qui a tapé. Chaque télégraphiste a sa main, monsieur, comme une signature. »"
+      },
+      {
+        "texte": "Il ricane et tape ton faux message avec un plaisir évident : « Annoncer au banquier une inspection du siège de Saint Denis demain matin ? Je donnerais cher pour voir sa tête. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il tape un faux télégramme annonçant ta mort à Strawberry : « Vous voilà officiellement décédé, monsieur. Ça fait drôle, hein ? » Ta prime, elle, ne bouge pas.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -15,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il fait mine d'obéir, mais tu reconnais le rythme : tac-tac-tac, taaac-taaac-taaac, tac-tac-tac. Un appel au secours. Il ne se doute pas que tu connais le morse.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "demander_primes": [
+      {
+        "texte": "Il déplie une dépêche : « L'O'Driscoll qui boit au Smithfield's ? Soixante-quinze dollars. Le chasseur de primes le sait aussi : il est passé hier relire l'avis. »"
+      },
+      {
+        "texte": "« Les O'Driscoll valent de plus en plus cher, et les fermiers de moins en moins. » Il te tend une liste de noms et de sommes recopiés au crayon."
+      },
+      {
+        "texte": "Il te regarde longtemps, puis murmure : « Vous voulez la vôtre ? Elle est sur ce papier. Elle a augmenté depuis ce matin. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il baisse la voix : « Une prime vient de tomber pour un voleur de bétail caché près de la Dakota. Personne ne l'a encore vue, à part moi. Et vous, maintenant. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Vous comptez nettoyer la région, hein ? » Il te recopie de sa plus belle écriture les trois plus grosses primes du comté.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "demander_arrivees": [
+      {
+        "texte": "Il consulte un carnet : « Deux voyageurs à 9 h 30 : un représentant en corsets et une dame en deuil. Elle avait télégraphié son arrivée à la veuve. Sa sœur, je parie. »"
+      },
+      {
+        "texte": "« Le chasseur de primes est descendu du train de Rhodes. Il m'a demandé si un Irlandais recevait des télégrammes. J'ai dit non. » Il sourit. « C'était oui. »"
+      },
+      {
+        "texte": "« Les arrivées ? Un marshal de Saint Denis arrive jeudi. Je dis ça… pour vous. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il bâille derrière la vitre : « Personne n'arrive la nuit, à part les ivrognes et les mauvaises nouvelles. Et les mauvaises nouvelles, c'est moi qui les reçois. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il ferme son carnet d'un coup sec : « Les arrivées, c'est le chef de gare. Moi, je ne sais rien. » Il ment très mal.",
+        "si": [
+          "hostile"
+        ]
+      }
+    ]
+  }
+}

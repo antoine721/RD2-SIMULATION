@@ -2,7 +2,7 @@
 
 > Généré automatiquement par `lister_actions.py` — ne pas modifier à la main.
 
-**1403 actions**, calculées à partir de 84 verbes et 57 entités.
+**1403 actions**, calculées à partir de 430 verbes et 57 entités.
 
 ## Déplacement (34)
 

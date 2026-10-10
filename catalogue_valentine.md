@@ -1,0 +1,2695 @@
+# Actions possibles à Valentine
+
+> Généré automatiquement par `lister_actions.py` — ne pas modifier à la main.
+
+**2663 actions**, calculées à partir de 430 verbes et 90 entités.
+
+## Déplacement (96)
+
+- marcher
+- courir
+- s'accroupir
+- sauter
+- fuir
+- nager dans l'abreuvoir
+- nager dans le puits
+- nager dans la baignoire de l'hôtel
+- nager dans le ruisseau
+- escalader le train
+- escalader le château d'eau
+- se cacher derrière le chariot de marchandises
+- se cacher derrière les tonneaux
+- se cacher derrière le château d'eau
+- se cacher derrière un lit de l'hôtel
+- se cacher derrière une tombe
+- suivre le shérif Malloy
+- suivre l'adjoint du shérif
+- suivre le prisonnier
+- suivre le barman de Keane
+- suivre le pianiste
+- suivre un joueur de poker
+- suivre une danseuse de saloon
+- suivre le barman du Smithfield's
+- suivre un chasseur de primes
+- suivre un O'Driscoll
+- suivre l'armurier
+- suivre l'épicier
+- suivre le directeur de la banque
+- suivre le caissier
+- suivre le palefrenier
+- suivre le maréchal-ferrant
+- suivre le docteur
+- suivre le croque-mort
+- suivre le boucher
+- suivre la gérante de l'hôtel
+- suivre le chef de gare
+- suivre le télégraphiste
+- suivre le pasteur
+- suivre l'éleveur de bétail
+- suivre un vacher
+- suivre le crieur de journaux
+- suivre un gamin des rues
+- suivre un vétéran mendiant
+- suivre un ivrogne
+- suivre un fermier de passage
+- suivre une veuve
+- suivre ton cheval
+- suivre un cheval attaché
+- suivre un cheval à vendre
+- suivre un chien errant
+- suivre le chat du saloon
+- suivre une vache
+- suivre le taureau
+- suivre un cochon
+- suivre une poule
+- suivre un rat
+- suivre un corbeau
+- entrer dans l'église
+- entrer dans la gare
+- entrer dans l'écurie
+- entrer dans l'armurerie
+- entrer dans le magasin général
+- entrer dans la banque de Valentine
+- entrer dans le saloon de Keane
+- entrer dans le bureau du shérif
+- entrer dans l'hôtel
+- entrer dans la boucherie
+- entrer dans la forge
+- entrer dans le cabinet du docteur
+- entrer dans les pompes funèbres
+- entrer dans le saloon Smithfield's
+- entrer dans la pension de famille
+- entrer dans les maisons
+- monter dans la diligence
+- monter dans le chariot de marchandises
+- monter dans le train
+- conduire la diligence
+- conduire le chariot de marchandises
+- conduire le train
+- retenir son souffle sous l'eau de la baignoire de l'hôtel
+- se cacher parmi les carcasses de la boucherie
+- se glisser sous la bâche du chariot de marchandises
+- faire l'aller-retour jusqu'à Strawberry dans la diligence
+- grimper sur l'impériale de la diligence
+- monter au clocher de l'église
+- attendre le train sur le quai de la gare
+- monter l'escalier de l'hôtel sur la pointe des pieds
+- descendre au fond du puits avec le lasso
+- traverser le ruisseau à gué
+- entrer à cheval dans le saloon de Keane
+- monter à l'étage du saloon de Keane
+- passer à travers la vitrine du saloon Smithfield's
+- se glisser à l'intérieur d'un des tonneaux
+- voyager sans billet dans le train
+- sauter du train en marche
+
+## Cheval & animaux (75)
+
+- monter sur ton cheval
+- monter sur un cheval attaché
+- monter sur un cheval à vendre
+- descendre de cheval
+- galoper
+- faire cabrer son cheval
+- siffler pour appeler son cheval
+- caresser ton cheval
+- caresser un cheval attaché
+- caresser un cheval à vendre
+- caresser un chien errant
+- caresser le chat du saloon
+- caresser une vache
+- caresser un cochon
+- caresser une poule
+- caresser un rat
+- caresser un corbeau
+- nourrir ton cheval avec une pomme
+- nourrir un cheval attaché avec une pomme
+- nourrir un cheval à vendre avec une pomme
+- nourrir un chien errant avec une pomme
+- nourrir le chat du saloon avec une pomme
+- nourrir une vache avec une pomme
+- nourrir le taureau avec une pomme
+- nourrir un cochon avec une pomme
+- nourrir une poule avec une pomme
+- nourrir un rat avec une pomme
+- nourrir un corbeau avec une pomme
+- brosser ton cheval avec la brosse
+- brosser un cheval attaché avec la brosse
+- brosser un cheval à vendre avec la brosse
+- dresser un cheval à vendre
+- dresser un corbeau
+- atteler ton cheval à la diligence
+- atteler ton cheval au chariot de marchandises
+- atteler un cheval attaché à la diligence
+- atteler un cheval attaché au chariot de marchandises
+- atteler un cheval à vendre à la diligence
+- atteler un cheval à vendre au chariot de marchandises
+- suivre la piste d'une poule
+- suivre la piste d'un rat
+- suivre la piste d'un corbeau
+- mener son cheval boire à l'abreuvoir
+- dételer l'attelage de la diligence
+- dételer l'attelage du chariot de marchandises
+- agiter le bout du lasso devant le chat du saloon
+- emmener le chat du saloon chasser les rats
+- appeler le chat du saloon d'un « pss-pss »
+- offrir une soucoupe de lait au chat du saloon
+- calmer ton cheval en lui parlant doucement
+- calmer un cheval attaché en lui parlant doucement
+- calmer un cheval à vendre en lui parlant doucement
+- faire boire ton cheval
+- faire boire un cheval attaché
+- faire boire un cheval à vendre
+- examiner les dents d'un cheval à vendre
+- détacher un cheval attaché de la barre d'attache
+- examiner la marque au fer d'un cheval attaché
+- adopter un chien errant
+- siffler un chien errant pour qu'il te suive
+- donner un nom à un chien errant
+- chevaucher un cochon
+- laver un cochon à grands seaux d'eau
+- faire briller une pièce pour attirer un corbeau
+- apprendre un mot à un corbeau
+- courir après une poule pour la rattraper
+- apprivoiser un rat
+- offrir un rat au chat du saloon
+- abreuver son cheval au ruisseau
+- marquer une vache au fer rouge
+- marquer le taureau au fer rouge
+- rabattre une vache vers le troupeau
+- rabattre le taureau vers le troupeau
+- donner un nom à ton cheval
+- traire une vache
+
+## Combat (823)
+
+- frapper le shérif Malloy à mains nues
+- frapper l'adjoint du shérif à mains nues
+- frapper le prisonnier à mains nues
+- frapper le barman de Keane à mains nues
+- frapper le pianiste à mains nues
+- frapper un joueur de poker à mains nues
+- frapper une danseuse de saloon à mains nues
+- frapper le barman du Smithfield's à mains nues
+- frapper un chasseur de primes à mains nues
+- frapper un O'Driscoll à mains nues
+- frapper l'armurier à mains nues
+- frapper l'épicier à mains nues
+- frapper le directeur de la banque à mains nues
+- frapper le caissier à mains nues
+- frapper le palefrenier à mains nues
+- frapper le maréchal-ferrant à mains nues
+- frapper le docteur à mains nues
+- frapper le croque-mort à mains nues
+- frapper le boucher à mains nues
+- frapper la gérante de l'hôtel à mains nues
+- frapper le chef de gare à mains nues
+- frapper le télégraphiste à mains nues
+- frapper le pasteur à mains nues
+- frapper l'éleveur de bétail à mains nues
+- frapper un vacher à mains nues
+- frapper le crieur de journaux à mains nues
+- frapper un gamin des rues à mains nues
+- frapper un vétéran mendiant à mains nues
+- frapper un ivrogne à mains nues
+- frapper un fermier de passage à mains nues
+- frapper une veuve à mains nues
+- frapper ton cheval à mains nues
+- frapper un cheval attaché à mains nues
+- frapper un cheval à vendre à mains nues
+- frapper un chien errant à mains nues
+- frapper le chat du saloon à mains nues
+- frapper une vache à mains nues
+- frapper le taureau à mains nues
+- frapper un cochon à mains nues
+- frapper une poule à mains nues
+- frapper un rat à mains nues
+- frapper un corbeau à mains nues
+- attaquer le shérif Malloy avec le revolver
+- attaquer le shérif Malloy avec le fusil
+- attaquer le shérif Malloy avec le couteau
+- attaquer l'adjoint du shérif avec le revolver
+- attaquer l'adjoint du shérif avec le fusil
+- attaquer l'adjoint du shérif avec le couteau
+- attaquer le prisonnier avec le revolver
+- attaquer le prisonnier avec le fusil
+- attaquer le prisonnier avec le couteau
+- attaquer le barman de Keane avec le revolver
+- attaquer le barman de Keane avec le fusil
+- attaquer le barman de Keane avec le couteau
+- attaquer le pianiste avec le revolver
+- attaquer le pianiste avec le fusil
+- attaquer le pianiste avec le couteau
+- attaquer un joueur de poker avec le revolver
+- attaquer un joueur de poker avec le fusil
+- attaquer un joueur de poker avec le couteau
+- attaquer une danseuse de saloon avec le revolver
+- attaquer une danseuse de saloon avec le fusil
+- attaquer une danseuse de saloon avec le couteau
+- attaquer le barman du Smithfield's avec le revolver
+- attaquer le barman du Smithfield's avec le fusil
+- attaquer le barman du Smithfield's avec le couteau
+- attaquer un chasseur de primes avec le revolver
+- attaquer un chasseur de primes avec le fusil
+- attaquer un chasseur de primes avec le couteau
+- attaquer un O'Driscoll avec le revolver
+- attaquer un O'Driscoll avec le fusil
+- attaquer un O'Driscoll avec le couteau
+- attaquer l'armurier avec le revolver
+- attaquer l'armurier avec le fusil
+- attaquer l'armurier avec le couteau
+- attaquer l'épicier avec le revolver
+- attaquer l'épicier avec le fusil
+- attaquer l'épicier avec le couteau
+- attaquer le directeur de la banque avec le revolver
+- attaquer le directeur de la banque avec le fusil
+- attaquer le directeur de la banque avec le couteau
+- attaquer le caissier avec le revolver
+- attaquer le caissier avec le fusil
+- attaquer le caissier avec le couteau
+- attaquer le palefrenier avec le revolver
+- attaquer le palefrenier avec le fusil
+- attaquer le palefrenier avec le couteau
+- attaquer le maréchal-ferrant avec le revolver
+- attaquer le maréchal-ferrant avec le fusil
+- attaquer le maréchal-ferrant avec le couteau
+- attaquer le docteur avec le revolver
+- attaquer le docteur avec le fusil
+- attaquer le docteur avec le couteau
+- attaquer le croque-mort avec le revolver
+- attaquer le croque-mort avec le fusil
+- attaquer le croque-mort avec le couteau
+- attaquer le boucher avec le revolver
+- attaquer le boucher avec le fusil
+- attaquer le boucher avec le couteau
+- attaquer la gérante de l'hôtel avec le revolver
+- attaquer la gérante de l'hôtel avec le fusil
+- attaquer la gérante de l'hôtel avec le couteau
+- attaquer le chef de gare avec le revolver
+- attaquer le chef de gare avec le fusil
+- attaquer le chef de gare avec le couteau
+- attaquer le télégraphiste avec le revolver
+- attaquer le télégraphiste avec le fusil
+- attaquer le télégraphiste avec le couteau
+- attaquer le pasteur avec le revolver
+- attaquer le pasteur avec le fusil
+- attaquer le pasteur avec le couteau
+- attaquer l'éleveur de bétail avec le revolver
+- attaquer l'éleveur de bétail avec le fusil
+- attaquer l'éleveur de bétail avec le couteau
+- attaquer un vacher avec le revolver
+- attaquer un vacher avec le fusil
+- attaquer un vacher avec le couteau
+- attaquer le crieur de journaux avec le revolver
+- attaquer le crieur de journaux avec le fusil
+- attaquer le crieur de journaux avec le couteau
+- attaquer un gamin des rues avec le revolver
+- attaquer un gamin des rues avec le fusil
+- attaquer un gamin des rues avec le couteau
+- attaquer un vétéran mendiant avec le revolver
+- attaquer un vétéran mendiant avec le fusil
+- attaquer un vétéran mendiant avec le couteau
+- attaquer un ivrogne avec le revolver
+- attaquer un ivrogne avec le fusil
+- attaquer un ivrogne avec le couteau
+- attaquer un fermier de passage avec le revolver
+- attaquer un fermier de passage avec le fusil
+- attaquer un fermier de passage avec le couteau
+- attaquer une veuve avec le revolver
+- attaquer une veuve avec le fusil
+- attaquer une veuve avec le couteau
+- attaquer ton cheval avec le revolver
+- attaquer ton cheval avec le fusil
+- attaquer ton cheval avec le couteau
+- attaquer un cheval attaché avec le revolver
+- attaquer un cheval attaché avec le fusil
+- attaquer un cheval attaché avec le couteau
+- attaquer un cheval à vendre avec le revolver
+- attaquer un cheval à vendre avec le fusil
+- attaquer un cheval à vendre avec le couteau
+- attaquer un chien errant avec le revolver
+- attaquer un chien errant avec le fusil
+- attaquer un chien errant avec le couteau
+- attaquer le chat du saloon avec le revolver
+- attaquer le chat du saloon avec le fusil
+- attaquer le chat du saloon avec le couteau
+- attaquer une vache avec le revolver
+- attaquer une vache avec le fusil
+- attaquer une vache avec le couteau
+- attaquer le taureau avec le revolver
+- attaquer le taureau avec le fusil
+- attaquer le taureau avec le couteau
+- attaquer un cochon avec le revolver
+- attaquer un cochon avec le fusil
+- attaquer un cochon avec le couteau
+- attaquer une poule avec le revolver
+- attaquer une poule avec le fusil
+- attaquer une poule avec le couteau
+- attaquer un rat avec le revolver
+- attaquer un rat avec le fusil
+- attaquer un rat avec le couteau
+- attaquer un corbeau avec le revolver
+- attaquer un corbeau avec le fusil
+- attaquer un corbeau avec le couteau
+- tirer sur l'église avec le revolver
+- tirer sur l'église avec le fusil
+- tirer sur la gare avec le revolver
+- tirer sur la gare avec le fusil
+- tirer sur l'écurie avec le revolver
+- tirer sur l'écurie avec le fusil
+- tirer sur l'armurerie avec le revolver
+- tirer sur l'armurerie avec le fusil
+- tirer sur le magasin général avec le revolver
+- tirer sur le magasin général avec le fusil
+- tirer sur la banque de Valentine avec le revolver
+- tirer sur la banque de Valentine avec le fusil
+- tirer sur le saloon de Keane avec le revolver
+- tirer sur le saloon de Keane avec le fusil
+- tirer sur le bureau du shérif avec le revolver
+- tirer sur le bureau du shérif avec le fusil
+- tirer sur l'hôtel avec le revolver
+- tirer sur l'hôtel avec le fusil
+- tirer sur la boucherie avec le revolver
+- tirer sur la boucherie avec le fusil
+- tirer sur la forge avec le revolver
+- tirer sur la forge avec le fusil
+- tirer sur le cabinet du docteur avec le revolver
+- tirer sur le cabinet du docteur avec le fusil
+- tirer sur les pompes funèbres avec le revolver
+- tirer sur les pompes funèbres avec le fusil
+- tirer sur le saloon Smithfield's avec le revolver
+- tirer sur le saloon Smithfield's avec le fusil
+- tirer sur la pension de famille avec le revolver
+- tirer sur la pension de famille avec le fusil
+- tirer sur les maisons avec le revolver
+- tirer sur les maisons avec le fusil
+- tirer sur le shérif Malloy avec le revolver
+- tirer sur le shérif Malloy avec le fusil
+- tirer sur l'adjoint du shérif avec le revolver
+- tirer sur l'adjoint du shérif avec le fusil
+- tirer sur le prisonnier avec le revolver
+- tirer sur le prisonnier avec le fusil
+- tirer sur le barman de Keane avec le revolver
+- tirer sur le barman de Keane avec le fusil
+- tirer sur le pianiste avec le revolver
+- tirer sur le pianiste avec le fusil
+- tirer sur un joueur de poker avec le revolver
+- tirer sur un joueur de poker avec le fusil
+- tirer sur une danseuse de saloon avec le revolver
+- tirer sur une danseuse de saloon avec le fusil
+- tirer sur le barman du Smithfield's avec le revolver
+- tirer sur le barman du Smithfield's avec le fusil
+- tirer sur un chasseur de primes avec le revolver
+- tirer sur un chasseur de primes avec le fusil
+- tirer sur un O'Driscoll avec le revolver
+- tirer sur un O'Driscoll avec le fusil
+- tirer sur l'armurier avec le revolver
+- tirer sur l'armurier avec le fusil
+- tirer sur l'épicier avec le revolver
+- tirer sur l'épicier avec le fusil
+- tirer sur le directeur de la banque avec le revolver
+- tirer sur le directeur de la banque avec le fusil
+- tirer sur le caissier avec le revolver
+- tirer sur le caissier avec le fusil
+- tirer sur le palefrenier avec le revolver
+- tirer sur le palefrenier avec le fusil
+- tirer sur le maréchal-ferrant avec le revolver
+- tirer sur le maréchal-ferrant avec le fusil
+- tirer sur le docteur avec le revolver
+- tirer sur le docteur avec le fusil
+- tirer sur le croque-mort avec le revolver
+- tirer sur le croque-mort avec le fusil
+- tirer sur le boucher avec le revolver
+- tirer sur le boucher avec le fusil
+- tirer sur la gérante de l'hôtel avec le revolver
+- tirer sur la gérante de l'hôtel avec le fusil
+- tirer sur le chef de gare avec le revolver
+- tirer sur le chef de gare avec le fusil
+- tirer sur le télégraphiste avec le revolver
+- tirer sur le télégraphiste avec le fusil
+- tirer sur le pasteur avec le revolver
+- tirer sur le pasteur avec le fusil
+- tirer sur l'éleveur de bétail avec le revolver
+- tirer sur l'éleveur de bétail avec le fusil
+- tirer sur un vacher avec le revolver
+- tirer sur un vacher avec le fusil
+- tirer sur le crieur de journaux avec le revolver
+- tirer sur le crieur de journaux avec le fusil
+- tirer sur un gamin des rues avec le revolver
+- tirer sur un gamin des rues avec le fusil
+- tirer sur un vétéran mendiant avec le revolver
+- tirer sur un vétéran mendiant avec le fusil
+- tirer sur un ivrogne avec le revolver
+- tirer sur un ivrogne avec le fusil
+- tirer sur un fermier de passage avec le revolver
+- tirer sur un fermier de passage avec le fusil
+- tirer sur une veuve avec le revolver
+- tirer sur une veuve avec le fusil
+- tirer sur ton cheval avec le revolver
+- tirer sur ton cheval avec le fusil
+- tirer sur un cheval attaché avec le revolver
+- tirer sur un cheval attaché avec le fusil
+- tirer sur un cheval à vendre avec le revolver
+- tirer sur un cheval à vendre avec le fusil
+- tirer sur un chien errant avec le revolver
+- tirer sur un chien errant avec le fusil
+- tirer sur le chat du saloon avec le revolver
+- tirer sur le chat du saloon avec le fusil
+- tirer sur une vache avec le revolver
+- tirer sur une vache avec le fusil
+- tirer sur le taureau avec le revolver
+- tirer sur le taureau avec le fusil
+- tirer sur un cochon avec le revolver
+- tirer sur un cochon avec le fusil
+- tirer sur une poule avec le revolver
+- tirer sur une poule avec le fusil
+- tirer sur un rat avec le revolver
+- tirer sur un rat avec le fusil
+- tirer sur un corbeau avec le revolver
+- tirer sur un corbeau avec le fusil
+- tirer sur l'abreuvoir avec le revolver
+- tirer sur l'abreuvoir avec le fusil
+- tirer sur le panneau des avis de recherche avec le revolver
+- tirer sur le panneau des avis de recherche avec le fusil
+- tirer sur la diligence avec le revolver
+- tirer sur la diligence avec le fusil
+- tirer sur le chariot de marchandises avec le revolver
+- tirer sur le chariot de marchandises avec le fusil
+- tirer sur les tonneaux avec le revolver
+- tirer sur les tonneaux avec le fusil
+- tirer sur le banc avec le revolver
+- tirer sur le banc avec le fusil
+- tirer sur le puits avec le revolver
+- tirer sur le puits avec le fusil
+- tirer sur le train avec le revolver
+- tirer sur le train avec le fusil
+- tirer sur le château d'eau avec le revolver
+- tirer sur le château d'eau avec le fusil
+- tirer sur le piano avec le revolver
+- tirer sur le piano avec le fusil
+- tirer sur la table de poker avec le revolver
+- tirer sur la table de poker avec le fusil
+- tirer sur une bouteille de whisky avec le revolver
+- tirer sur une bouteille de whisky avec le fusil
+- tirer sur le coffre-fort de la banque avec le revolver
+- tirer sur le coffre-fort de la banque avec le fusil
+- tirer sur la cellule de la prison avec le revolver
+- tirer sur la cellule de la prison avec le fusil
+- tirer sur la baignoire de l'hôtel avec le revolver
+- tirer sur la baignoire de l'hôtel avec le fusil
+- tirer sur un lit de l'hôtel avec le revolver
+- tirer sur un lit de l'hôtel avec le fusil
+- tirer sur la cloche de l'église avec le revolver
+- tirer sur la cloche de l'église avec le fusil
+- tirer sur une tombe avec le revolver
+- tirer sur une tombe avec le fusil
+- tirer sur le ruisseau avec le revolver
+- tirer sur le ruisseau avec le fusil
+- lancer le couteau sur l'église
+- lancer un bâton de dynamite sur l'église
+- lancer une pomme sur l'église
+- lancer une bouteille de whisky sur l'église
+- lancer le couteau sur la gare
+- lancer un bâton de dynamite sur la gare
+- lancer une pomme sur la gare
+- lancer une bouteille de whisky sur la gare
+- lancer le couteau sur l'écurie
+- lancer un bâton de dynamite sur l'écurie
+- lancer une pomme sur l'écurie
+- lancer une bouteille de whisky sur l'écurie
+- lancer le couteau sur l'armurerie
+- lancer un bâton de dynamite sur l'armurerie
+- lancer une pomme sur l'armurerie
+- lancer une bouteille de whisky sur l'armurerie
+- lancer le couteau sur le magasin général
+- lancer un bâton de dynamite sur le magasin général
+- lancer une pomme sur le magasin général
+- lancer une bouteille de whisky sur le magasin général
+- lancer le couteau sur la banque de Valentine
+- lancer un bâton de dynamite sur la banque de Valentine
+- lancer une pomme sur la banque de Valentine
+- lancer une bouteille de whisky sur la banque de Valentine
+- lancer le couteau sur le saloon de Keane
+- lancer un bâton de dynamite sur le saloon de Keane
+- lancer une pomme sur le saloon de Keane
+- lancer une bouteille de whisky sur le saloon de Keane
+- lancer le couteau sur le bureau du shérif
+- lancer un bâton de dynamite sur le bureau du shérif
+- lancer une pomme sur le bureau du shérif
+- lancer une bouteille de whisky sur le bureau du shérif
+- lancer le couteau sur l'hôtel
+- lancer un bâton de dynamite sur l'hôtel
+- lancer une pomme sur l'hôtel
+- lancer une bouteille de whisky sur l'hôtel
+- lancer le couteau sur la boucherie
+- lancer un bâton de dynamite sur la boucherie
+- lancer une pomme sur la boucherie
+- lancer une bouteille de whisky sur la boucherie
+- lancer le couteau sur la forge
+- lancer un bâton de dynamite sur la forge
+- lancer une pomme sur la forge
+- lancer une bouteille de whisky sur la forge
+- lancer le couteau sur le cabinet du docteur
+- lancer un bâton de dynamite sur le cabinet du docteur
+- lancer une pomme sur le cabinet du docteur
+- lancer une bouteille de whisky sur le cabinet du docteur
+- lancer le couteau sur les pompes funèbres
+- lancer un bâton de dynamite sur les pompes funèbres
+- lancer une pomme sur les pompes funèbres
+- lancer une bouteille de whisky sur les pompes funèbres
+- lancer le couteau sur le saloon Smithfield's
+- lancer un bâton de dynamite sur le saloon Smithfield's
+- lancer une pomme sur le saloon Smithfield's
+- lancer une bouteille de whisky sur le saloon Smithfield's
+- lancer le couteau sur la pension de famille
+- lancer un bâton de dynamite sur la pension de famille
+- lancer une pomme sur la pension de famille
+- lancer une bouteille de whisky sur la pension de famille
+- lancer le couteau sur les maisons
+- lancer un bâton de dynamite sur les maisons
+- lancer une pomme sur les maisons
+- lancer une bouteille de whisky sur les maisons
+- lancer le couteau sur le shérif Malloy
+- lancer un bâton de dynamite sur le shérif Malloy
+- lancer une pomme sur le shérif Malloy
+- lancer une bouteille de whisky sur le shérif Malloy
+- lancer le couteau sur l'adjoint du shérif
+- lancer un bâton de dynamite sur l'adjoint du shérif
+- lancer une pomme sur l'adjoint du shérif
+- lancer une bouteille de whisky sur l'adjoint du shérif
+- lancer le couteau sur le prisonnier
+- lancer un bâton de dynamite sur le prisonnier
+- lancer une pomme sur le prisonnier
+- lancer une bouteille de whisky sur le prisonnier
+- lancer le couteau sur le barman de Keane
+- lancer un bâton de dynamite sur le barman de Keane
+- lancer une pomme sur le barman de Keane
+- lancer une bouteille de whisky sur le barman de Keane
+- lancer le couteau sur le pianiste
+- lancer un bâton de dynamite sur le pianiste
+- lancer une pomme sur le pianiste
+- lancer une bouteille de whisky sur le pianiste
+- lancer le couteau sur un joueur de poker
+- lancer un bâton de dynamite sur un joueur de poker
+- lancer une pomme sur un joueur de poker
+- lancer une bouteille de whisky sur un joueur de poker
+- lancer le couteau sur une danseuse de saloon
+- lancer un bâton de dynamite sur une danseuse de saloon
+- lancer une pomme sur une danseuse de saloon
+- lancer une bouteille de whisky sur une danseuse de saloon
+- lancer le couteau sur le barman du Smithfield's
+- lancer un bâton de dynamite sur le barman du Smithfield's
+- lancer une pomme sur le barman du Smithfield's
+- lancer une bouteille de whisky sur le barman du Smithfield's
+- lancer le couteau sur un chasseur de primes
+- lancer un bâton de dynamite sur un chasseur de primes
+- lancer une pomme sur un chasseur de primes
+- lancer une bouteille de whisky sur un chasseur de primes
+- lancer le couteau sur un O'Driscoll
+- lancer un bâton de dynamite sur un O'Driscoll
+- lancer une pomme sur un O'Driscoll
+- lancer une bouteille de whisky sur un O'Driscoll
+- lancer le couteau sur l'armurier
+- lancer un bâton de dynamite sur l'armurier
+- lancer une pomme sur l'armurier
+- lancer une bouteille de whisky sur l'armurier
+- lancer le couteau sur l'épicier
+- lancer un bâton de dynamite sur l'épicier
+- lancer une pomme sur l'épicier
+- lancer une bouteille de whisky sur l'épicier
+- lancer le couteau sur le directeur de la banque
+- lancer un bâton de dynamite sur le directeur de la banque
+- lancer une pomme sur le directeur de la banque
+- lancer une bouteille de whisky sur le directeur de la banque
+- lancer le couteau sur le caissier
+- lancer un bâton de dynamite sur le caissier
+- lancer une pomme sur le caissier
+- lancer une bouteille de whisky sur le caissier
+- lancer le couteau sur le palefrenier
+- lancer un bâton de dynamite sur le palefrenier
+- lancer une pomme sur le palefrenier
+- lancer une bouteille de whisky sur le palefrenier
+- lancer le couteau sur le maréchal-ferrant
+- lancer un bâton de dynamite sur le maréchal-ferrant
+- lancer une pomme sur le maréchal-ferrant
+- lancer une bouteille de whisky sur le maréchal-ferrant
+- lancer le couteau sur le docteur
+- lancer un bâton de dynamite sur le docteur
+- lancer une pomme sur le docteur
+- lancer une bouteille de whisky sur le docteur
+- lancer le couteau sur le croque-mort
+- lancer un bâton de dynamite sur le croque-mort
+- lancer une pomme sur le croque-mort
+- lancer une bouteille de whisky sur le croque-mort
+- lancer le couteau sur le boucher
+- lancer un bâton de dynamite sur le boucher
+- lancer une pomme sur le boucher
+- lancer une bouteille de whisky sur le boucher
+- lancer le couteau sur la gérante de l'hôtel
+- lancer un bâton de dynamite sur la gérante de l'hôtel
+- lancer une pomme sur la gérante de l'hôtel
+- lancer une bouteille de whisky sur la gérante de l'hôtel
+- lancer le couteau sur le chef de gare
+- lancer un bâton de dynamite sur le chef de gare
+- lancer une pomme sur le chef de gare
+- lancer une bouteille de whisky sur le chef de gare
+- lancer le couteau sur le télégraphiste
+- lancer un bâton de dynamite sur le télégraphiste
+- lancer une pomme sur le télégraphiste
+- lancer une bouteille de whisky sur le télégraphiste
+- lancer le couteau sur le pasteur
+- lancer un bâton de dynamite sur le pasteur
+- lancer une pomme sur le pasteur
+- lancer une bouteille de whisky sur le pasteur
+- lancer le couteau sur l'éleveur de bétail
+- lancer un bâton de dynamite sur l'éleveur de bétail
+- lancer une pomme sur l'éleveur de bétail
+- lancer une bouteille de whisky sur l'éleveur de bétail
+- lancer le couteau sur un vacher
+- lancer un bâton de dynamite sur un vacher
+- lancer une pomme sur un vacher
+- lancer une bouteille de whisky sur un vacher
+- lancer le couteau sur le crieur de journaux
+- lancer un bâton de dynamite sur le crieur de journaux
+- lancer une pomme sur le crieur de journaux
+- lancer une bouteille de whisky sur le crieur de journaux
+- lancer le couteau sur un gamin des rues
+- lancer un bâton de dynamite sur un gamin des rues
+- lancer une pomme sur un gamin des rues
+- lancer une bouteille de whisky sur un gamin des rues
+- lancer le couteau sur un vétéran mendiant
+- lancer un bâton de dynamite sur un vétéran mendiant
+- lancer une pomme sur un vétéran mendiant
+- lancer une bouteille de whisky sur un vétéran mendiant
+- lancer le couteau sur un ivrogne
+- lancer un bâton de dynamite sur un ivrogne
+- lancer une pomme sur un ivrogne
+- lancer une bouteille de whisky sur un ivrogne
+- lancer le couteau sur un fermier de passage
+- lancer un bâton de dynamite sur un fermier de passage
+- lancer une pomme sur un fermier de passage
+- lancer une bouteille de whisky sur un fermier de passage
+- lancer le couteau sur une veuve
+- lancer un bâton de dynamite sur une veuve
+- lancer une pomme sur une veuve
+- lancer une bouteille de whisky sur une veuve
+- lancer le couteau sur ton cheval
+- lancer un bâton de dynamite sur ton cheval
+- lancer une pomme sur ton cheval
+- lancer une bouteille de whisky sur ton cheval
+- lancer le couteau sur un cheval attaché
+- lancer un bâton de dynamite sur un cheval attaché
+- lancer une pomme sur un cheval attaché
+- lancer une bouteille de whisky sur un cheval attaché
+- lancer le couteau sur un cheval à vendre
+- lancer un bâton de dynamite sur un cheval à vendre
+- lancer une pomme sur un cheval à vendre
+- lancer une bouteille de whisky sur un cheval à vendre
+- lancer le couteau sur un chien errant
+- lancer un bâton de dynamite sur un chien errant
+- lancer une pomme sur un chien errant
+- lancer une bouteille de whisky sur un chien errant
+- lancer le couteau sur le chat du saloon
+- lancer un bâton de dynamite sur le chat du saloon
+- lancer une pomme sur le chat du saloon
+- lancer une bouteille de whisky sur le chat du saloon
+- lancer le couteau sur une vache
+- lancer un bâton de dynamite sur une vache
+- lancer une pomme sur une vache
+- lancer une bouteille de whisky sur une vache
+- lancer le couteau sur le taureau
+- lancer un bâton de dynamite sur le taureau
+- lancer une pomme sur le taureau
+- lancer une bouteille de whisky sur le taureau
+- lancer le couteau sur un cochon
+- lancer un bâton de dynamite sur un cochon
+- lancer une pomme sur un cochon
+- lancer une bouteille de whisky sur un cochon
+- lancer le couteau sur une poule
+- lancer un bâton de dynamite sur une poule
+- lancer une pomme sur une poule
+- lancer une bouteille de whisky sur une poule
+- lancer le couteau sur un rat
+- lancer un bâton de dynamite sur un rat
+- lancer une pomme sur un rat
+- lancer une bouteille de whisky sur un rat
+- lancer le couteau sur un corbeau
+- lancer un bâton de dynamite sur un corbeau
+- lancer une pomme sur un corbeau
+- lancer une bouteille de whisky sur un corbeau
+- lancer le couteau sur l'abreuvoir
+- lancer un bâton de dynamite sur l'abreuvoir
+- lancer une pomme sur l'abreuvoir
+- lancer une bouteille de whisky sur l'abreuvoir
+- lancer le couteau sur le panneau des avis de recherche
+- lancer un bâton de dynamite sur le panneau des avis de recherche
+- lancer une pomme sur le panneau des avis de recherche
+- lancer une bouteille de whisky sur le panneau des avis de recherche
+- lancer le couteau sur la diligence
+- lancer un bâton de dynamite sur la diligence
+- lancer une pomme sur la diligence
+- lancer une bouteille de whisky sur la diligence
+- lancer le couteau sur le chariot de marchandises
+- lancer un bâton de dynamite sur le chariot de marchandises
+- lancer une pomme sur le chariot de marchandises
+- lancer une bouteille de whisky sur le chariot de marchandises
+- lancer le couteau sur les tonneaux
+- lancer un bâton de dynamite sur les tonneaux
+- lancer une pomme sur les tonneaux
+- lancer une bouteille de whisky sur les tonneaux
+- lancer le couteau sur le banc
+- lancer un bâton de dynamite sur le banc
+- lancer une pomme sur le banc
+- lancer une bouteille de whisky sur le banc
+- lancer le couteau sur le puits
+- lancer un bâton de dynamite sur le puits
+- lancer une pomme sur le puits
+- lancer une bouteille de whisky sur le puits
+- lancer le couteau sur le train
+- lancer un bâton de dynamite sur le train
+- lancer une pomme sur le train
+- lancer une bouteille de whisky sur le train
+- lancer le couteau sur le château d'eau
+- lancer un bâton de dynamite sur le château d'eau
+- lancer une pomme sur le château d'eau
+- lancer une bouteille de whisky sur le château d'eau
+- lancer le couteau sur le piano
+- lancer un bâton de dynamite sur le piano
+- lancer une pomme sur le piano
+- lancer une bouteille de whisky sur le piano
+- lancer le couteau sur la table de poker
+- lancer un bâton de dynamite sur la table de poker
+- lancer une pomme sur la table de poker
+- lancer une bouteille de whisky sur la table de poker
+- lancer le couteau sur une bouteille de whisky
+- lancer un bâton de dynamite sur une bouteille de whisky
+- lancer une pomme sur une bouteille de whisky
+- lancer le couteau sur le coffre-fort de la banque
+- lancer un bâton de dynamite sur le coffre-fort de la banque
+- lancer une pomme sur le coffre-fort de la banque
+- lancer une bouteille de whisky sur le coffre-fort de la banque
+- lancer le couteau sur la cellule de la prison
+- lancer un bâton de dynamite sur la cellule de la prison
+- lancer une pomme sur la cellule de la prison
+- lancer une bouteille de whisky sur la cellule de la prison
+- lancer le couteau sur la baignoire de l'hôtel
+- lancer un bâton de dynamite sur la baignoire de l'hôtel
+- lancer une pomme sur la baignoire de l'hôtel
+- lancer une bouteille de whisky sur la baignoire de l'hôtel
+- lancer le couteau sur un lit de l'hôtel
+- lancer un bâton de dynamite sur un lit de l'hôtel
+- lancer une pomme sur un lit de l'hôtel
+- lancer une bouteille de whisky sur un lit de l'hôtel
+- lancer le couteau sur la cloche de l'église
+- lancer un bâton de dynamite sur la cloche de l'église
+- lancer une pomme sur la cloche de l'église
+- lancer une bouteille de whisky sur la cloche de l'église
+- lancer le couteau sur une tombe
+- lancer un bâton de dynamite sur une tombe
+- lancer une pomme sur une tombe
+- lancer une bouteille de whisky sur une tombe
+- lancer le couteau sur le ruisseau
+- lancer un bâton de dynamite sur le ruisseau
+- lancer une pomme sur le ruisseau
+- lancer une bouteille de whisky sur le ruisseau
+- attraper le shérif Malloy avec le lasso
+- attraper l'adjoint du shérif avec le lasso
+- attraper le prisonnier avec le lasso
+- attraper le barman de Keane avec le lasso
+- attraper le pianiste avec le lasso
+- attraper un joueur de poker avec le lasso
+- attraper une danseuse de saloon avec le lasso
+- attraper le barman du Smithfield's avec le lasso
+- attraper un chasseur de primes avec le lasso
+- attraper un O'Driscoll avec le lasso
+- attraper l'armurier avec le lasso
+- attraper l'épicier avec le lasso
+- attraper le directeur de la banque avec le lasso
+- attraper le caissier avec le lasso
+- attraper le palefrenier avec le lasso
+- attraper le maréchal-ferrant avec le lasso
+- attraper le docteur avec le lasso
+- attraper le croque-mort avec le lasso
+- attraper le boucher avec le lasso
+- attraper la gérante de l'hôtel avec le lasso
+- attraper le chef de gare avec le lasso
+- attraper le télégraphiste avec le lasso
+- attraper le pasteur avec le lasso
+- attraper l'éleveur de bétail avec le lasso
+- attraper un vacher avec le lasso
+- attraper le crieur de journaux avec le lasso
+- attraper un gamin des rues avec le lasso
+- attraper un vétéran mendiant avec le lasso
+- attraper un ivrogne avec le lasso
+- attraper un fermier de passage avec le lasso
+- attraper une veuve avec le lasso
+- attraper ton cheval avec le lasso
+- attraper un cheval attaché avec le lasso
+- attraper un cheval à vendre avec le lasso
+- attraper un chien errant avec le lasso
+- attraper le chat du saloon avec le lasso
+- attraper une vache avec le lasso
+- attraper le taureau avec le lasso
+- attraper un cochon avec le lasso
+- attraper une poule avec le lasso
+- attraper un rat avec le lasso
+- attraper un corbeau avec le lasso
+- ligoter le shérif Malloy avec le lasso
+- ligoter l'adjoint du shérif avec le lasso
+- ligoter le prisonnier avec le lasso
+- ligoter le barman de Keane avec le lasso
+- ligoter le pianiste avec le lasso
+- ligoter un joueur de poker avec le lasso
+- ligoter une danseuse de saloon avec le lasso
+- ligoter le barman du Smithfield's avec le lasso
+- ligoter un chasseur de primes avec le lasso
+- ligoter un O'Driscoll avec le lasso
+- ligoter l'armurier avec le lasso
+- ligoter l'épicier avec le lasso
+- ligoter le directeur de la banque avec le lasso
+- ligoter le caissier avec le lasso
+- ligoter le palefrenier avec le lasso
+- ligoter le maréchal-ferrant avec le lasso
+- ligoter le docteur avec le lasso
+- ligoter le croque-mort avec le lasso
+- ligoter le boucher avec le lasso
+- ligoter la gérante de l'hôtel avec le lasso
+- ligoter le chef de gare avec le lasso
+- ligoter le télégraphiste avec le lasso
+- ligoter le pasteur avec le lasso
+- ligoter l'éleveur de bétail avec le lasso
+- ligoter un vacher avec le lasso
+- ligoter le crieur de journaux avec le lasso
+- ligoter un gamin des rues avec le lasso
+- ligoter un vétéran mendiant avec le lasso
+- ligoter un ivrogne avec le lasso
+- ligoter un fermier de passage avec le lasso
+- ligoter une veuve avec le lasso
+- désarmer le shérif Malloy
+- désarmer l'adjoint du shérif
+- désarmer le prisonnier
+- désarmer le barman de Keane
+- désarmer le pianiste
+- désarmer un joueur de poker
+- désarmer une danseuse de saloon
+- désarmer le barman du Smithfield's
+- désarmer un chasseur de primes
+- désarmer un O'Driscoll
+- désarmer l'armurier
+- désarmer l'épicier
+- désarmer le directeur de la banque
+- désarmer le caissier
+- désarmer le palefrenier
+- désarmer le maréchal-ferrant
+- désarmer le docteur
+- désarmer le croque-mort
+- désarmer le boucher
+- désarmer la gérante de l'hôtel
+- désarmer le chef de gare
+- désarmer le télégraphiste
+- désarmer le pasteur
+- désarmer l'éleveur de bétail
+- désarmer un vacher
+- désarmer le crieur de journaux
+- désarmer un gamin des rues
+- désarmer un vétéran mendiant
+- désarmer un ivrogne
+- désarmer un fermier de passage
+- désarmer une veuve
+- assommer le shérif Malloy
+- assommer l'adjoint du shérif
+- assommer le prisonnier
+- assommer le barman de Keane
+- assommer le pianiste
+- assommer un joueur de poker
+- assommer une danseuse de saloon
+- assommer le barman du Smithfield's
+- assommer un chasseur de primes
+- assommer un O'Driscoll
+- assommer l'armurier
+- assommer l'épicier
+- assommer le directeur de la banque
+- assommer le caissier
+- assommer le palefrenier
+- assommer le maréchal-ferrant
+- assommer le docteur
+- assommer le croque-mort
+- assommer le boucher
+- assommer la gérante de l'hôtel
+- assommer le chef de gare
+- assommer le télégraphiste
+- assommer le pasteur
+- assommer l'éleveur de bétail
+- assommer un vacher
+- assommer le crieur de journaux
+- assommer un gamin des rues
+- assommer un vétéran mendiant
+- assommer un ivrogne
+- assommer un fermier de passage
+- assommer une veuve
+- provoquer le shérif Malloy en duel
+- provoquer l'adjoint du shérif en duel
+- provoquer le prisonnier en duel
+- provoquer le barman de Keane en duel
+- provoquer le pianiste en duel
+- provoquer un joueur de poker en duel
+- provoquer une danseuse de saloon en duel
+- provoquer le barman du Smithfield's en duel
+- provoquer un chasseur de primes en duel
+- provoquer un O'Driscoll en duel
+- provoquer l'armurier en duel
+- provoquer l'épicier en duel
+- provoquer le directeur de la banque en duel
+- provoquer le caissier en duel
+- provoquer le palefrenier en duel
+- provoquer le maréchal-ferrant en duel
+- provoquer le docteur en duel
+- provoquer le croque-mort en duel
+- provoquer le boucher en duel
+- provoquer la gérante de l'hôtel en duel
+- provoquer le chef de gare en duel
+- provoquer le télégraphiste en duel
+- provoquer le pasteur en duel
+- provoquer l'éleveur de bétail en duel
+- provoquer un vacher en duel
+- provoquer le crieur de journaux en duel
+- provoquer un gamin des rues en duel
+- provoquer un vétéran mendiant en duel
+- provoquer un ivrogne en duel
+- provoquer un fermier de passage en duel
+- provoquer une veuve en duel
+- faire sauter l'armurerie avec un bâton de dynamite
+- faire sauter le magasin général avec un bâton de dynamite
+- faire sauter l'abreuvoir avec un bâton de dynamite
+- faire sauter le panneau des avis de recherche avec un bâton de dynamite
+- faire sauter la diligence avec un bâton de dynamite
+- faire sauter les tonneaux avec un bâton de dynamite
+- faire sauter le banc avec un bâton de dynamite
+- faire sauter le château d'eau avec un bâton de dynamite
+- faire sauter le piano avec un bâton de dynamite
+- faire sauter la table de poker avec un bâton de dynamite
+- faire sauter une bouteille de whisky avec un bâton de dynamite
+- faire sauter le coffre-fort de la banque avec un bâton de dynamite
+- faire sauter la cellule de la prison avec un bâton de dynamite
+- faire sauter la cloche de l'église avec un bâton de dynamite
+- faire sauter une tombe avec un bâton de dynamite
+- apprendre à dégainer à l'adjoint du shérif
+- noyer un ennemi dans la baignoire de l'hôtel
+- enfermer le directeur de la banque dans le coffre-fort
+- enfermer le caissier dans le coffre-fort
+- fracasser une bouteille de whisky sur le crâne de son voisin de comptoir
+- bourrer un chiffon dans une bouteille de whisky pour en faire une bouteille incendiaire
+- ordonner à un chien errant de mordre ton ennemi
+- plonger la tête d'un ivrogne dans l'abreuvoir
+- apprendre à dégainer auprès du pasteur
+- pousser le piano contre la porte
+- déclencher une bagarre générale dans le saloon de Keane
+- déclencher une bagarre générale dans le saloon Smithfield's
+- renverser la table de poker
+
+## Social (720)
+
+- saluer le shérif Malloy
+- saluer l'adjoint du shérif
+- saluer le prisonnier
+- saluer le barman de Keane
+- saluer le pianiste
+- saluer un joueur de poker
+- saluer une danseuse de saloon
+- saluer le barman du Smithfield's
+- saluer un chasseur de primes
+- saluer un O'Driscoll
+- saluer l'armurier
+- saluer l'épicier
+- saluer le directeur de la banque
+- saluer le caissier
+- saluer le palefrenier
+- saluer le maréchal-ferrant
+- saluer le docteur
+- saluer le croque-mort
+- saluer le boucher
+- saluer la gérante de l'hôtel
+- saluer le chef de gare
+- saluer le télégraphiste
+- saluer le pasteur
+- saluer l'éleveur de bétail
+- saluer un vacher
+- saluer le crieur de journaux
+- saluer un gamin des rues
+- saluer un vétéran mendiant
+- saluer un ivrogne
+- saluer un fermier de passage
+- saluer une veuve
+- parler au shérif Malloy
+- parler à l'adjoint du shérif
+- parler au prisonnier
+- parler au barman de Keane
+- parler au pianiste
+- parler à un joueur de poker
+- parler à une danseuse de saloon
+- parler au barman du Smithfield's
+- parler à un chasseur de primes
+- parler à un O'Driscoll
+- parler à l'armurier
+- parler à l'épicier
+- parler au directeur de la banque
+- parler au caissier
+- parler au palefrenier
+- parler au maréchal-ferrant
+- parler au docteur
+- parler au croque-mort
+- parler au boucher
+- parler à la gérante de l'hôtel
+- parler au chef de gare
+- parler au télégraphiste
+- parler au pasteur
+- parler à l'éleveur de bétail
+- parler à un vacher
+- parler au crieur de journaux
+- parler à un gamin des rues
+- parler à un vétéran mendiant
+- parler à un ivrogne
+- parler à un fermier de passage
+- parler à une veuve
+- provoquer le shérif Malloy
+- provoquer l'adjoint du shérif
+- provoquer le prisonnier
+- provoquer le barman de Keane
+- provoquer le pianiste
+- provoquer un joueur de poker
+- provoquer une danseuse de saloon
+- provoquer le barman du Smithfield's
+- provoquer un chasseur de primes
+- provoquer un O'Driscoll
+- provoquer l'armurier
+- provoquer l'épicier
+- provoquer le directeur de la banque
+- provoquer le caissier
+- provoquer le palefrenier
+- provoquer le maréchal-ferrant
+- provoquer le docteur
+- provoquer le croque-mort
+- provoquer le boucher
+- provoquer la gérante de l'hôtel
+- provoquer le chef de gare
+- provoquer le télégraphiste
+- provoquer le pasteur
+- provoquer l'éleveur de bétail
+- provoquer un vacher
+- provoquer le crieur de journaux
+- provoquer un gamin des rues
+- provoquer un vétéran mendiant
+- provoquer un ivrogne
+- provoquer un fermier de passage
+- provoquer une veuve
+- intimider le shérif Malloy
+- intimider l'adjoint du shérif
+- intimider le prisonnier
+- intimider le barman de Keane
+- intimider le pianiste
+- intimider un joueur de poker
+- intimider une danseuse de saloon
+- intimider le barman du Smithfield's
+- intimider un chasseur de primes
+- intimider un O'Driscoll
+- intimider l'armurier
+- intimider l'épicier
+- intimider le directeur de la banque
+- intimider le caissier
+- intimider le palefrenier
+- intimider le maréchal-ferrant
+- intimider le docteur
+- intimider le croque-mort
+- intimider le boucher
+- intimider la gérante de l'hôtel
+- intimider le chef de gare
+- intimider le télégraphiste
+- intimider le pasteur
+- intimider l'éleveur de bétail
+- intimider un vacher
+- intimider le crieur de journaux
+- intimider un gamin des rues
+- intimider un vétéran mendiant
+- intimider un ivrogne
+- intimider un fermier de passage
+- intimider une veuve
+- menacer le shérif Malloy avec le revolver
+- menacer le shérif Malloy avec le fusil
+- menacer le shérif Malloy avec le couteau
+- menacer l'adjoint du shérif avec le revolver
+- menacer l'adjoint du shérif avec le fusil
+- menacer l'adjoint du shérif avec le couteau
+- menacer le prisonnier avec le revolver
+- menacer le prisonnier avec le fusil
+- menacer le prisonnier avec le couteau
+- menacer le barman de Keane avec le revolver
+- menacer le barman de Keane avec le fusil
+- menacer le barman de Keane avec le couteau
+- menacer le pianiste avec le revolver
+- menacer le pianiste avec le fusil
+- menacer le pianiste avec le couteau
+- menacer un joueur de poker avec le revolver
+- menacer un joueur de poker avec le fusil
+- menacer un joueur de poker avec le couteau
+- menacer une danseuse de saloon avec le revolver
+- menacer une danseuse de saloon avec le fusil
+- menacer une danseuse de saloon avec le couteau
+- menacer le barman du Smithfield's avec le revolver
+- menacer le barman du Smithfield's avec le fusil
+- menacer le barman du Smithfield's avec le couteau
+- menacer un chasseur de primes avec le revolver
+- menacer un chasseur de primes avec le fusil
+- menacer un chasseur de primes avec le couteau
+- menacer un O'Driscoll avec le revolver
+- menacer un O'Driscoll avec le fusil
+- menacer un O'Driscoll avec le couteau
+- menacer l'armurier avec le revolver
+- menacer l'armurier avec le fusil
+- menacer l'armurier avec le couteau
+- menacer l'épicier avec le revolver
+- menacer l'épicier avec le fusil
+- menacer l'épicier avec le couteau
+- menacer le directeur de la banque avec le revolver
+- menacer le directeur de la banque avec le fusil
+- menacer le directeur de la banque avec le couteau
+- menacer le caissier avec le revolver
+- menacer le caissier avec le fusil
+- menacer le caissier avec le couteau
+- menacer le palefrenier avec le revolver
+- menacer le palefrenier avec le fusil
+- menacer le palefrenier avec le couteau
+- menacer le maréchal-ferrant avec le revolver
+- menacer le maréchal-ferrant avec le fusil
+- menacer le maréchal-ferrant avec le couteau
+- menacer le docteur avec le revolver
+- menacer le docteur avec le fusil
+- menacer le docteur avec le couteau
+- menacer le croque-mort avec le revolver
+- menacer le croque-mort avec le fusil
+- menacer le croque-mort avec le couteau
+- menacer le boucher avec le revolver
+- menacer le boucher avec le fusil
+- menacer le boucher avec le couteau
+- menacer la gérante de l'hôtel avec le revolver
+- menacer la gérante de l'hôtel avec le fusil
+- menacer la gérante de l'hôtel avec le couteau
+- menacer le chef de gare avec le revolver
+- menacer le chef de gare avec le fusil
+- menacer le chef de gare avec le couteau
+- menacer le télégraphiste avec le revolver
+- menacer le télégraphiste avec le fusil
+- menacer le télégraphiste avec le couteau
+- menacer le pasteur avec le revolver
+- menacer le pasteur avec le fusil
+- menacer le pasteur avec le couteau
+- menacer l'éleveur de bétail avec le revolver
+- menacer l'éleveur de bétail avec le fusil
+- menacer l'éleveur de bétail avec le couteau
+- menacer un vacher avec le revolver
+- menacer un vacher avec le fusil
+- menacer un vacher avec le couteau
+- menacer le crieur de journaux avec le revolver
+- menacer le crieur de journaux avec le fusil
+- menacer le crieur de journaux avec le couteau
+- menacer un gamin des rues avec le revolver
+- menacer un gamin des rues avec le fusil
+- menacer un gamin des rues avec le couteau
+- menacer un vétéran mendiant avec le revolver
+- menacer un vétéran mendiant avec le fusil
+- menacer un vétéran mendiant avec le couteau
+- menacer un ivrogne avec le revolver
+- menacer un ivrogne avec le fusil
+- menacer un ivrogne avec le couteau
+- menacer un fermier de passage avec le revolver
+- menacer un fermier de passage avec le fusil
+- menacer un fermier de passage avec le couteau
+- menacer une veuve avec le revolver
+- menacer une veuve avec le fusil
+- menacer une veuve avec le couteau
+- soudoyer le shérif Malloy
+- soudoyer l'adjoint du shérif
+- soudoyer un joueur de poker
+- soudoyer un chasseur de primes
+- soudoyer l'épicier
+- soudoyer le directeur de la banque
+- soudoyer le croque-mort
+- soudoyer le chef de gare
+- soudoyer le télégraphiste
+- soudoyer l'éleveur de bétail
+- soudoyer un fermier de passage
+- donner le revolver au shérif Malloy
+- donner le fusil au shérif Malloy
+- donner le couteau au shérif Malloy
+- donner le lasso au shérif Malloy
+- donner un bâton de dynamite au shérif Malloy
+- donner un crochet de serrurier au shérif Malloy
+- donner une pomme au shérif Malloy
+- donner la brosse au shérif Malloy
+- donner l'appareil photo au shérif Malloy
+- donner le journal intime au shérif Malloy
+- donner une cigarette au shérif Malloy
+- donner la canne à pêche au shérif Malloy
+- donner le rasoir au shérif Malloy
+- donner le revolver à l'adjoint du shérif
+- donner le fusil à l'adjoint du shérif
+- donner le couteau à l'adjoint du shérif
+- donner le lasso à l'adjoint du shérif
+- donner un bâton de dynamite à l'adjoint du shérif
+- donner un crochet de serrurier à l'adjoint du shérif
+- donner une pomme à l'adjoint du shérif
+- donner la brosse à l'adjoint du shérif
+- donner l'appareil photo à l'adjoint du shérif
+- donner le journal intime à l'adjoint du shérif
+- donner une cigarette à l'adjoint du shérif
+- donner la canne à pêche à l'adjoint du shérif
+- donner le rasoir à l'adjoint du shérif
+- donner le revolver au prisonnier
+- donner le fusil au prisonnier
+- donner le couteau au prisonnier
+- donner le lasso au prisonnier
+- donner un bâton de dynamite au prisonnier
+- donner un crochet de serrurier au prisonnier
+- donner une pomme au prisonnier
+- donner la brosse au prisonnier
+- donner l'appareil photo au prisonnier
+- donner le journal intime au prisonnier
+- donner une cigarette au prisonnier
+- donner la canne à pêche au prisonnier
+- donner le rasoir au prisonnier
+- donner le revolver au barman de Keane
+- donner le fusil au barman de Keane
+- donner le couteau au barman de Keane
+- donner le lasso au barman de Keane
+- donner un bâton de dynamite au barman de Keane
+- donner un crochet de serrurier au barman de Keane
+- donner une pomme au barman de Keane
+- donner la brosse au barman de Keane
+- donner l'appareil photo au barman de Keane
+- donner le journal intime au barman de Keane
+- donner une cigarette au barman de Keane
+- donner la canne à pêche au barman de Keane
+- donner le rasoir au barman de Keane
+- donner le revolver au pianiste
+- donner le fusil au pianiste
+- donner le couteau au pianiste
+- donner le lasso au pianiste
+- donner un bâton de dynamite au pianiste
+- donner un crochet de serrurier au pianiste
+- donner une pomme au pianiste
+- donner la brosse au pianiste
+- donner l'appareil photo au pianiste
+- donner le journal intime au pianiste
+- donner une cigarette au pianiste
+- donner la canne à pêche au pianiste
+- donner le rasoir au pianiste
+- donner le revolver à un joueur de poker
+- donner le fusil à un joueur de poker
+- donner le couteau à un joueur de poker
+- donner le lasso à un joueur de poker
+- donner un bâton de dynamite à un joueur de poker
+- donner un crochet de serrurier à un joueur de poker
+- donner une pomme à un joueur de poker
+- donner la brosse à un joueur de poker
+- donner l'appareil photo à un joueur de poker
+- donner le journal intime à un joueur de poker
+- donner une cigarette à un joueur de poker
+- donner la canne à pêche à un joueur de poker
+- donner le rasoir à un joueur de poker
+- donner le revolver à une danseuse de saloon
+- donner le fusil à une danseuse de saloon
+- donner le couteau à une danseuse de saloon
+- donner le lasso à une danseuse de saloon
+- donner un bâton de dynamite à une danseuse de saloon
+- donner un crochet de serrurier à une danseuse de saloon
+- donner une pomme à une danseuse de saloon
+- donner la brosse à une danseuse de saloon
+- donner l'appareil photo à une danseuse de saloon
+- donner le journal intime à une danseuse de saloon
+- donner une cigarette à une danseuse de saloon
+- donner la canne à pêche à une danseuse de saloon
+- donner le rasoir à une danseuse de saloon
+- donner le revolver au barman du Smithfield's
+- donner le fusil au barman du Smithfield's
+- donner le couteau au barman du Smithfield's
+- donner le lasso au barman du Smithfield's
+- donner un bâton de dynamite au barman du Smithfield's
+- donner un crochet de serrurier au barman du Smithfield's
+- donner une pomme au barman du Smithfield's
+- donner la brosse au barman du Smithfield's
+- donner l'appareil photo au barman du Smithfield's
+- donner le journal intime au barman du Smithfield's
+- donner une cigarette au barman du Smithfield's
+- donner la canne à pêche au barman du Smithfield's
+- donner le rasoir au barman du Smithfield's
+- donner le revolver à un chasseur de primes
+- donner le fusil à un chasseur de primes
+- donner le couteau à un chasseur de primes
+- donner le lasso à un chasseur de primes
+- donner un bâton de dynamite à un chasseur de primes
+- donner un crochet de serrurier à un chasseur de primes
+- donner une pomme à un chasseur de primes
+- donner la brosse à un chasseur de primes
+- donner l'appareil photo à un chasseur de primes
+- donner le journal intime à un chasseur de primes
+- donner une cigarette à un chasseur de primes
+- donner la canne à pêche à un chasseur de primes
+- donner le rasoir à un chasseur de primes
+- donner le revolver à un O'Driscoll
+- donner le fusil à un O'Driscoll
+- donner le couteau à un O'Driscoll
+- donner le lasso à un O'Driscoll
+- donner un bâton de dynamite à un O'Driscoll
+- donner un crochet de serrurier à un O'Driscoll
+- donner une pomme à un O'Driscoll
+- donner la brosse à un O'Driscoll
+- donner l'appareil photo à un O'Driscoll
+- donner le journal intime à un O'Driscoll
+- donner une cigarette à un O'Driscoll
+- donner la canne à pêche à un O'Driscoll
+- donner le rasoir à un O'Driscoll
+- donner le revolver à l'armurier
+- donner le fusil à l'armurier
+- donner le couteau à l'armurier
+- donner le lasso à l'armurier
+- donner un bâton de dynamite à l'armurier
+- donner un crochet de serrurier à l'armurier
+- donner une pomme à l'armurier
+- donner la brosse à l'armurier
+- donner l'appareil photo à l'armurier
+- donner le journal intime à l'armurier
+- donner une cigarette à l'armurier
+- donner la canne à pêche à l'armurier
+- donner le rasoir à l'armurier
+- donner le revolver à l'épicier
+- donner le fusil à l'épicier
+- donner le couteau à l'épicier
+- donner le lasso à l'épicier
+- donner un bâton de dynamite à l'épicier
+- donner un crochet de serrurier à l'épicier
+- donner une pomme à l'épicier
+- donner la brosse à l'épicier
+- donner l'appareil photo à l'épicier
+- donner le journal intime à l'épicier
+- donner une cigarette à l'épicier
+- donner la canne à pêche à l'épicier
+- donner le rasoir à l'épicier
+- donner le revolver au directeur de la banque
+- donner le fusil au directeur de la banque
+- donner le couteau au directeur de la banque
+- donner le lasso au directeur de la banque
+- donner un bâton de dynamite au directeur de la banque
+- donner un crochet de serrurier au directeur de la banque
+- donner une pomme au directeur de la banque
+- donner la brosse au directeur de la banque
+- donner l'appareil photo au directeur de la banque
+- donner le journal intime au directeur de la banque
+- donner une cigarette au directeur de la banque
+- donner la canne à pêche au directeur de la banque
+- donner le rasoir au directeur de la banque
+- donner le revolver au caissier
+- donner le fusil au caissier
+- donner le couteau au caissier
+- donner le lasso au caissier
+- donner un bâton de dynamite au caissier
+- donner un crochet de serrurier au caissier
+- donner une pomme au caissier
+- donner la brosse au caissier
+- donner l'appareil photo au caissier
+- donner le journal intime au caissier
+- donner une cigarette au caissier
+- donner la canne à pêche au caissier
+- donner le rasoir au caissier
+- donner le revolver au palefrenier
+- donner le fusil au palefrenier
+- donner le couteau au palefrenier
+- donner le lasso au palefrenier
+- donner un bâton de dynamite au palefrenier
+- donner un crochet de serrurier au palefrenier
+- donner une pomme au palefrenier
+- donner la brosse au palefrenier
+- donner l'appareil photo au palefrenier
+- donner le journal intime au palefrenier
+- donner une cigarette au palefrenier
+- donner la canne à pêche au palefrenier
+- donner le rasoir au palefrenier
+- donner le revolver au maréchal-ferrant
+- donner le fusil au maréchal-ferrant
+- donner le couteau au maréchal-ferrant
+- donner le lasso au maréchal-ferrant
+- donner un bâton de dynamite au maréchal-ferrant
+- donner un crochet de serrurier au maréchal-ferrant
+- donner une pomme au maréchal-ferrant
+- donner la brosse au maréchal-ferrant
+- donner l'appareil photo au maréchal-ferrant
+- donner le journal intime au maréchal-ferrant
+- donner une cigarette au maréchal-ferrant
+- donner la canne à pêche au maréchal-ferrant
+- donner le rasoir au maréchal-ferrant
+- donner le revolver au docteur
+- donner le fusil au docteur
+- donner le couteau au docteur
+- donner le lasso au docteur
+- donner un bâton de dynamite au docteur
+- donner un crochet de serrurier au docteur
+- donner une pomme au docteur
+- donner la brosse au docteur
+- donner l'appareil photo au docteur
+- donner le journal intime au docteur
+- donner une cigarette au docteur
+- donner la canne à pêche au docteur
+- donner le rasoir au docteur
+- donner le revolver au croque-mort
+- donner le fusil au croque-mort
+- donner le couteau au croque-mort
+- donner le lasso au croque-mort
+- donner un bâton de dynamite au croque-mort
+- donner un crochet de serrurier au croque-mort
+- donner une pomme au croque-mort
+- donner la brosse au croque-mort
+- donner l'appareil photo au croque-mort
+- donner le journal intime au croque-mort
+- donner une cigarette au croque-mort
+- donner la canne à pêche au croque-mort
+- donner le rasoir au croque-mort
+- donner le revolver au boucher
+- donner le fusil au boucher
+- donner le couteau au boucher
+- donner le lasso au boucher
+- donner un bâton de dynamite au boucher
+- donner un crochet de serrurier au boucher
+- donner une pomme au boucher
+- donner la brosse au boucher
+- donner l'appareil photo au boucher
+- donner le journal intime au boucher
+- donner une cigarette au boucher
+- donner la canne à pêche au boucher
+- donner le rasoir au boucher
+- donner le revolver à la gérante de l'hôtel
+- donner le fusil à la gérante de l'hôtel
+- donner le couteau à la gérante de l'hôtel
+- donner le lasso à la gérante de l'hôtel
+- donner un bâton de dynamite à la gérante de l'hôtel
+- donner un crochet de serrurier à la gérante de l'hôtel
+- donner une pomme à la gérante de l'hôtel
+- donner la brosse à la gérante de l'hôtel
+- donner l'appareil photo à la gérante de l'hôtel
+- donner le journal intime à la gérante de l'hôtel
+- donner une cigarette à la gérante de l'hôtel
+- donner la canne à pêche à la gérante de l'hôtel
+- donner le rasoir à la gérante de l'hôtel
+- donner le revolver au chef de gare
+- donner le fusil au chef de gare
+- donner le couteau au chef de gare
+- donner le lasso au chef de gare
+- donner un bâton de dynamite au chef de gare
+- donner un crochet de serrurier au chef de gare
+- donner une pomme au chef de gare
+- donner la brosse au chef de gare
+- donner l'appareil photo au chef de gare
+- donner le journal intime au chef de gare
+- donner une cigarette au chef de gare
+- donner la canne à pêche au chef de gare
+- donner le rasoir au chef de gare
+- donner le revolver au télégraphiste
+- donner le fusil au télégraphiste
+- donner le couteau au télégraphiste
+- donner le lasso au télégraphiste
+- donner un bâton de dynamite au télégraphiste
+- donner un crochet de serrurier au télégraphiste
+- donner une pomme au télégraphiste
+- donner la brosse au télégraphiste
+- donner l'appareil photo au télégraphiste
+- donner le journal intime au télégraphiste
+- donner une cigarette au télégraphiste
+- donner la canne à pêche au télégraphiste
+- donner le rasoir au télégraphiste
+- donner le revolver au pasteur
+- donner le fusil au pasteur
+- donner le couteau au pasteur
+- donner le lasso au pasteur
+- donner un bâton de dynamite au pasteur
+- donner un crochet de serrurier au pasteur
+- donner une pomme au pasteur
+- donner la brosse au pasteur
+- donner l'appareil photo au pasteur
+- donner le journal intime au pasteur
+- donner une cigarette au pasteur
+- donner la canne à pêche au pasteur
+- donner le rasoir au pasteur
+- donner le revolver à l'éleveur de bétail
+- donner le fusil à l'éleveur de bétail
+- donner le couteau à l'éleveur de bétail
+- donner le lasso à l'éleveur de bétail
+- donner un bâton de dynamite à l'éleveur de bétail
+- donner un crochet de serrurier à l'éleveur de bétail
+- donner une pomme à l'éleveur de bétail
+- donner la brosse à l'éleveur de bétail
+- donner l'appareil photo à l'éleveur de bétail
+- donner le journal intime à l'éleveur de bétail
+- donner une cigarette à l'éleveur de bétail
+- donner la canne à pêche à l'éleveur de bétail
+- donner le rasoir à l'éleveur de bétail
+- donner le revolver à un vacher
+- donner le fusil à un vacher
+- donner le couteau à un vacher
+- donner le lasso à un vacher
+- donner un bâton de dynamite à un vacher
+- donner un crochet de serrurier à un vacher
+- donner une pomme à un vacher
+- donner la brosse à un vacher
+- donner l'appareil photo à un vacher
+- donner le journal intime à un vacher
+- donner une cigarette à un vacher
+- donner la canne à pêche à un vacher
+- donner le rasoir à un vacher
+- donner le revolver au crieur de journaux
+- donner le fusil au crieur de journaux
+- donner le couteau au crieur de journaux
+- donner le lasso au crieur de journaux
+- donner un bâton de dynamite au crieur de journaux
+- donner un crochet de serrurier au crieur de journaux
+- donner une pomme au crieur de journaux
+- donner la brosse au crieur de journaux
+- donner l'appareil photo au crieur de journaux
+- donner le journal intime au crieur de journaux
+- donner une cigarette au crieur de journaux
+- donner la canne à pêche au crieur de journaux
+- donner le rasoir au crieur de journaux
+- donner le revolver à un gamin des rues
+- donner le fusil à un gamin des rues
+- donner le couteau à un gamin des rues
+- donner le lasso à un gamin des rues
+- donner un bâton de dynamite à un gamin des rues
+- donner un crochet de serrurier à un gamin des rues
+- donner une pomme à un gamin des rues
+- donner la brosse à un gamin des rues
+- donner l'appareil photo à un gamin des rues
+- donner le journal intime à un gamin des rues
+- donner une cigarette à un gamin des rues
+- donner la canne à pêche à un gamin des rues
+- donner le rasoir à un gamin des rues
+- donner le revolver à un vétéran mendiant
+- donner le fusil à un vétéran mendiant
+- donner le couteau à un vétéran mendiant
+- donner le lasso à un vétéran mendiant
+- donner un bâton de dynamite à un vétéran mendiant
+- donner un crochet de serrurier à un vétéran mendiant
+- donner une pomme à un vétéran mendiant
+- donner la brosse à un vétéran mendiant
+- donner l'appareil photo à un vétéran mendiant
+- donner le journal intime à un vétéran mendiant
+- donner une cigarette à un vétéran mendiant
+- donner la canne à pêche à un vétéran mendiant
+- donner le rasoir à un vétéran mendiant
+- donner le revolver à un ivrogne
+- donner le fusil à un ivrogne
+- donner le couteau à un ivrogne
+- donner le lasso à un ivrogne
+- donner un bâton de dynamite à un ivrogne
+- donner un crochet de serrurier à un ivrogne
+- donner une pomme à un ivrogne
+- donner la brosse à un ivrogne
+- donner l'appareil photo à un ivrogne
+- donner le journal intime à un ivrogne
+- donner une cigarette à un ivrogne
+- donner la canne à pêche à un ivrogne
+- donner le rasoir à un ivrogne
+- donner le revolver à un fermier de passage
+- donner le fusil à un fermier de passage
+- donner le couteau à un fermier de passage
+- donner le lasso à un fermier de passage
+- donner un bâton de dynamite à un fermier de passage
+- donner un crochet de serrurier à un fermier de passage
+- donner une pomme à un fermier de passage
+- donner la brosse à un fermier de passage
+- donner l'appareil photo à un fermier de passage
+- donner le journal intime à un fermier de passage
+- donner une cigarette à un fermier de passage
+- donner la canne à pêche à un fermier de passage
+- donner le rasoir à un fermier de passage
+- donner le revolver à une veuve
+- donner le fusil à une veuve
+- donner le couteau à une veuve
+- donner le lasso à une veuve
+- donner un bâton de dynamite à une veuve
+- donner un crochet de serrurier à une veuve
+- donner une pomme à une veuve
+- donner la brosse à une veuve
+- donner l'appareil photo à une veuve
+- donner le journal intime à une veuve
+- donner une cigarette à une veuve
+- donner la canne à pêche à une veuve
+- donner le rasoir à une veuve
+- chanter
+- danser
+- partager un café brûlé avec le shérif Malloy
+- partager un café brûlé avec l'adjoint du shérif
+- interroger le shérif Malloy sur le gang O'Driscoll
+- interroger l'adjoint du shérif sur le gang O'Driscoll
+- raconter ses exploits à l'adjoint du shérif
+- plaider la cause du fermier endetté auprès du directeur de la banque
+- humilier le directeur de la banque devant tout le monde
+- offrir une tournée générale au comptoir du barman de Keane
+- glisser une pièce au barman de Keane contre une rumeur
+- payer un verre au barman de Keane
+- payer un verre au pianiste
+- payer un verre à un joueur de poker
+- payer un verre à une danseuse de saloon
+- payer un verre à un ivrogne
+- payer un verre à un fermier de passage
+- offrir un verre au barman de Keane
+- offrir un verre au pianiste
+- offrir un verre à un joueur de poker
+- offrir un verre à une danseuse de saloon
+- offrir un verre à un ivrogne
+- offrir un verre à un fermier de passage
+- glisser un billet au barman du Smithfield's contre un renseignement
+- faire tourner une bouteille de whisky parmi les habitués
+- rassurer le caissier
+- prévenir un chasseur de primes que l'O'Driscoll prépare une évasion
+- demander l'heure au chef de gare
+- demander au chef de gare qui est arrivé par le dernier train
+- demander au télégraphiste qui est arrivé par le dernier train
+- demander au chef de gare de retarder le départ du train
+- sonner la cloche de l'église
+- sonner le tocsin avec la cloche de l'église
+- sonner le glas avec la cloche de l'église
+- demander au crieur de journaux qui est passé dans la rue
+- demander à un vétéran mendiant qui est passé dans la rue
+- demander au croque-mort qui il a enterré cette semaine
+- inviter une danseuse de saloon à danser
+- aider une danseuse de saloon à partir pour Saint Denis
+- demander à une danseuse de saloon ce qui se trame au saloon
+- défendre une danseuse de saloon contre un client trop insistant
+- faire une offrande à l'église
+- faire une offrande au pasteur
+- signaler des voleurs de bétail à l'éleveur de bétail
+- contester la pesée de l'épicier
+- demander à un fermier de passage ce qui le tracasse
+- accompagner un fermier de passage chez le banquier pour plaider sa cause
+- prendre un gamin des rues sous son aile
+- ôter son chapeau devant la gérante de l'hôtel
+- interroger un ivrogne sur son filon d'or
+- aider un ivrogne à se relever de la boue
+- frapper à la porte de la pension de famille
+- frapper à la porte des maisons
+- écouter aux portes de la pension de famille
+- écouter aux portes des maisons
+- demander l'hospitalité dans les maisons
+- confisquer la flasque du docteur
+- interroger le prisonnier sur le gang O'Driscoll
+- interroger un O'Driscoll sur le gang O'Driscoll
+- demander au prisonnier de te faire entrer chez les O'Driscoll
+- demander à un O'Driscoll de te faire entrer chez les O'Driscoll
+- dénoncer un O'Driscoll au shérif
+- épier un O'Driscoll en douce
+- comparer les portraits du panneau des avis de recherche aux visages des passants
+- se confesser au pasteur
+- demander de l'aide au pasteur
+- interroger le pasteur sur son passé de pistolero
+- prêter serment de tempérance devant le pasteur
+- glisser un mot à la logeuse de la pension de famille
+- glisser un pourboire au pianiste
+- rapporter une poule à sa propriétaire
+- apporter un repas chaud au prisonnier
+- lâcher un rat au milieu du saloon
+- s'accouder au comptoir du saloon de Keane
+- interroger le télégraphiste sur les primes
+- déposer des fleurs sur une tombe
+- se recueillir sur une tombe
+- cracher sur une tombe
+- grimper sur les tonneaux pour haranguer la foule
+- apprendre à dégainer à un vacher
+- raconter tes exploits à un vacher
+- remettre un vacher dans le droit chemin
+- faire l'aumône à un vétéran mendiant
+- payer un verre à un vétéran mendiant
+- faire le salut militaire à un vétéran mendiant
+- présenter ses condoléances à une veuve
+- demander à une veuve comment son mari est mort
+- promettre à une veuve de venger son mari
+- raccompagner une veuve jusque chez elle
+
+## Économie & crime (355)
+
+- acheter le revolver au barman de Keane
+- acheter le revolver au barman du Smithfield's
+- acheter le revolver à l'armurier
+- acheter le revolver à l'épicier
+- acheter le revolver au palefrenier
+- acheter le revolver au maréchal-ferrant
+- acheter le revolver au docteur
+- acheter le revolver au boucher
+- acheter le revolver à la gérante de l'hôtel
+- acheter le revolver au chef de gare
+- acheter le revolver à l'éleveur de bétail
+- acheter le revolver au crieur de journaux
+- acheter le fusil au barman de Keane
+- acheter le fusil au barman du Smithfield's
+- acheter le fusil à l'armurier
+- acheter le fusil à l'épicier
+- acheter le fusil au palefrenier
+- acheter le fusil au maréchal-ferrant
+- acheter le fusil au docteur
+- acheter le fusil au boucher
+- acheter le fusil à la gérante de l'hôtel
+- acheter le fusil au chef de gare
+- acheter le fusil à l'éleveur de bétail
+- acheter le fusil au crieur de journaux
+- acheter le couteau au barman de Keane
+- acheter le couteau au barman du Smithfield's
+- acheter le couteau à l'armurier
+- acheter le couteau à l'épicier
+- acheter le couteau au palefrenier
+- acheter le couteau au maréchal-ferrant
+- acheter le couteau au docteur
+- acheter le couteau au boucher
+- acheter le couteau à la gérante de l'hôtel
+- acheter le couteau au chef de gare
+- acheter le couteau à l'éleveur de bétail
+- acheter le couteau au crieur de journaux
+- acheter un bâton de dynamite au barman de Keane
+- acheter un bâton de dynamite au barman du Smithfield's
+- acheter un bâton de dynamite à l'armurier
+- acheter un bâton de dynamite à l'épicier
+- acheter un bâton de dynamite au palefrenier
+- acheter un bâton de dynamite au maréchal-ferrant
+- acheter un bâton de dynamite au docteur
+- acheter un bâton de dynamite au boucher
+- acheter un bâton de dynamite à la gérante de l'hôtel
+- acheter un bâton de dynamite au chef de gare
+- acheter un bâton de dynamite à l'éleveur de bétail
+- acheter un bâton de dynamite au crieur de journaux
+- acheter un crochet de serrurier au barman de Keane
+- acheter un crochet de serrurier au barman du Smithfield's
+- acheter un crochet de serrurier à l'armurier
+- acheter un crochet de serrurier à l'épicier
+- acheter un crochet de serrurier au palefrenier
+- acheter un crochet de serrurier au maréchal-ferrant
+- acheter un crochet de serrurier au docteur
+- acheter un crochet de serrurier au boucher
+- acheter un crochet de serrurier à la gérante de l'hôtel
+- acheter un crochet de serrurier au chef de gare
+- acheter un crochet de serrurier à l'éleveur de bétail
+- acheter un crochet de serrurier au crieur de journaux
+- acheter une pomme au barman de Keane
+- acheter une pomme au barman du Smithfield's
+- acheter une pomme à l'armurier
+- acheter une pomme à l'épicier
+- acheter une pomme au palefrenier
+- acheter une pomme au maréchal-ferrant
+- acheter une pomme au docteur
+- acheter une pomme au boucher
+- acheter une pomme à la gérante de l'hôtel
+- acheter une pomme au chef de gare
+- acheter une pomme à l'éleveur de bétail
+- acheter une pomme au crieur de journaux
+- acheter une cigarette au barman de Keane
+- acheter une cigarette au barman du Smithfield's
+- acheter une cigarette à l'armurier
+- acheter une cigarette à l'épicier
+- acheter une cigarette au palefrenier
+- acheter une cigarette au maréchal-ferrant
+- acheter une cigarette au docteur
+- acheter une cigarette au boucher
+- acheter une cigarette à la gérante de l'hôtel
+- acheter une cigarette au chef de gare
+- acheter une cigarette à l'éleveur de bétail
+- acheter une cigarette au crieur de journaux
+- acheter la canne à pêche au barman de Keane
+- acheter la canne à pêche au barman du Smithfield's
+- acheter la canne à pêche à l'armurier
+- acheter la canne à pêche à l'épicier
+- acheter la canne à pêche au palefrenier
+- acheter la canne à pêche au maréchal-ferrant
+- acheter la canne à pêche au docteur
+- acheter la canne à pêche au boucher
+- acheter la canne à pêche à la gérante de l'hôtel
+- acheter la canne à pêche au chef de gare
+- acheter la canne à pêche à l'éleveur de bétail
+- acheter la canne à pêche au crieur de journaux
+- acheter un cheval à vendre au barman de Keane
+- acheter un cheval à vendre au barman du Smithfield's
+- acheter un cheval à vendre à l'armurier
+- acheter un cheval à vendre à l'épicier
+- acheter un cheval à vendre au palefrenier
+- acheter un cheval à vendre au maréchal-ferrant
+- acheter un cheval à vendre au docteur
+- acheter un cheval à vendre au boucher
+- acheter un cheval à vendre à la gérante de l'hôtel
+- acheter un cheval à vendre au chef de gare
+- acheter un cheval à vendre à l'éleveur de bétail
+- acheter un cheval à vendre au crieur de journaux
+- acheter une vache au barman de Keane
+- acheter une vache au barman du Smithfield's
+- acheter une vache à l'armurier
+- acheter une vache à l'épicier
+- acheter une vache au palefrenier
+- acheter une vache au maréchal-ferrant
+- acheter une vache au docteur
+- acheter une vache au boucher
+- acheter une vache à la gérante de l'hôtel
+- acheter une vache au chef de gare
+- acheter une vache à l'éleveur de bétail
+- acheter une vache au crieur de journaux
+- acheter un cochon au barman de Keane
+- acheter un cochon au barman du Smithfield's
+- acheter un cochon à l'armurier
+- acheter un cochon à l'épicier
+- acheter un cochon au palefrenier
+- acheter un cochon au maréchal-ferrant
+- acheter un cochon au docteur
+- acheter un cochon au boucher
+- acheter un cochon à la gérante de l'hôtel
+- acheter un cochon au chef de gare
+- acheter un cochon à l'éleveur de bétail
+- acheter un cochon au crieur de journaux
+- acheter une poule au barman de Keane
+- acheter une poule au barman du Smithfield's
+- acheter une poule à l'armurier
+- acheter une poule à l'épicier
+- acheter une poule au palefrenier
+- acheter une poule au maréchal-ferrant
+- acheter une poule au docteur
+- acheter une poule au boucher
+- acheter une poule à la gérante de l'hôtel
+- acheter une poule au chef de gare
+- acheter une poule à l'éleveur de bétail
+- acheter une poule au crieur de journaux
+- acheter une bouteille de whisky au barman de Keane
+- acheter une bouteille de whisky au barman du Smithfield's
+- acheter une bouteille de whisky à l'armurier
+- acheter une bouteille de whisky à l'épicier
+- acheter une bouteille de whisky au palefrenier
+- acheter une bouteille de whisky au maréchal-ferrant
+- acheter une bouteille de whisky au docteur
+- acheter une bouteille de whisky au boucher
+- acheter une bouteille de whisky à la gérante de l'hôtel
+- acheter une bouteille de whisky au chef de gare
+- acheter une bouteille de whisky à l'éleveur de bétail
+- acheter une bouteille de whisky au crieur de journaux
+- vendre le revolver au barman de Keane
+- vendre le revolver au barman du Smithfield's
+- vendre le revolver à l'armurier
+- vendre le revolver à l'épicier
+- vendre le revolver au palefrenier
+- vendre le revolver au maréchal-ferrant
+- vendre le revolver au docteur
+- vendre le revolver au boucher
+- vendre le revolver à la gérante de l'hôtel
+- vendre le revolver au chef de gare
+- vendre le revolver à l'éleveur de bétail
+- vendre le revolver au crieur de journaux
+- vendre le fusil au barman de Keane
+- vendre le fusil au barman du Smithfield's
+- vendre le fusil à l'armurier
+- vendre le fusil à l'épicier
+- vendre le fusil au palefrenier
+- vendre le fusil au maréchal-ferrant
+- vendre le fusil au docteur
+- vendre le fusil au boucher
+- vendre le fusil à la gérante de l'hôtel
+- vendre le fusil au chef de gare
+- vendre le fusil à l'éleveur de bétail
+- vendre le fusil au crieur de journaux
+- vendre le couteau au barman de Keane
+- vendre le couteau au barman du Smithfield's
+- vendre le couteau à l'armurier
+- vendre le couteau à l'épicier
+- vendre le couteau au palefrenier
+- vendre le couteau au maréchal-ferrant
+- vendre le couteau au docteur
+- vendre le couteau au boucher
+- vendre le couteau à la gérante de l'hôtel
+- vendre le couteau au chef de gare
+- vendre le couteau à l'éleveur de bétail
+- vendre le couteau au crieur de journaux
+- vendre l'appareil photo au barman de Keane
+- vendre l'appareil photo au barman du Smithfield's
+- vendre l'appareil photo à l'armurier
+- vendre l'appareil photo à l'épicier
+- vendre l'appareil photo au palefrenier
+- vendre l'appareil photo au maréchal-ferrant
+- vendre l'appareil photo au docteur
+- vendre l'appareil photo au boucher
+- vendre l'appareil photo à la gérante de l'hôtel
+- vendre l'appareil photo au chef de gare
+- vendre l'appareil photo à l'éleveur de bétail
+- vendre l'appareil photo au crieur de journaux
+- vendre le rasoir au barman de Keane
+- vendre le rasoir au barman du Smithfield's
+- vendre le rasoir à l'armurier
+- vendre le rasoir à l'épicier
+- vendre le rasoir au palefrenier
+- vendre le rasoir au maréchal-ferrant
+- vendre le rasoir au docteur
+- vendre le rasoir au boucher
+- vendre le rasoir à la gérante de l'hôtel
+- vendre le rasoir au chef de gare
+- vendre le rasoir à l'éleveur de bétail
+- vendre le rasoir au crieur de journaux
+- détrousser un joueur de poker
+- détrousser un O'Driscoll
+- détrousser l'épicier
+- détrousser le directeur de la banque
+- détrousser le croque-mort
+- détrousser un vacher
+- détrousser un ivrogne
+- détrousser un fermier de passage
+- détrousser une veuve
+- voler une bouteille de whisky
+- braquer la gare
+- braquer l'armurerie
+- braquer le magasin général
+- braquer la banque de Valentine
+- braquer les pompes funèbres
+- braquer la diligence
+- braquer le train
+- fouiller l'armurerie
+- fouiller le magasin général
+- fouiller la pension de famille
+- fouiller les maisons
+- fouiller la diligence
+- fouiller le chariot de marchandises
+- fouiller les tonneaux
+- fouiller le train
+- fouiller le coffre-fort de la banque
+- fouiller un lit de l'hôtel
+- fouiller une tombe
+- crocheter l'armurerie avec un crochet de serrurier
+- crocheter le magasin général avec un crochet de serrurier
+- crocheter les pompes funèbres avec un crochet de serrurier
+- crocheter les maisons avec un crochet de serrurier
+- crocheter le coffre-fort de la banque avec un crochet de serrurier
+- crocheter la cellule de la prison avec un crochet de serrurier
+- capturer un O'Driscoll pour toucher la prime
+- se rendre aux autorités
+- payer sa prime
+- fouiller la vase au fond de l'abreuvoir
+- signaler un crime au shérif Malloy
+- signaler un crime à l'adjoint du shérif
+- voler à l'étalage dans l'armurerie
+- voler à l'étalage dans le magasin général
+- acheter des munitions pour le revolver à l'armurier
+- acheter des munitions pour le fusil à l'armurier
+- marchander avec l'armurier
+- marchander avec l'épicier
+- arracher les barreaux de la banque de Valentine avec le lasso et son cheval
+- repérer les lieux de la banque de Valentine avant un coup
+- emprunter de l'argent au directeur de la banque
+- rembourser la dette du fermier auprès du directeur de la banque
+- faire chanter le directeur de la banque
+- soutirer la combinaison du coffre-fort au directeur de la banque
+- soutirer la combinaison du coffre-fort au caissier
+- demander au barman de Keane de noter ça sur une ardoise
+- décrocher un fusil du râtelier du bureau du shérif
+- chaparder une fiole dans le cabinet du docteur
+- proposer au caissier de devenir ton complice
+- glisser le revolver entre les barreaux de la cellule de la prison
+- glisser le fusil entre les barreaux de la cellule de la prison
+- glisser le couteau entre les barreaux de la cellule de la prison
+- glisser le lasso entre les barreaux de la cellule de la prison
+- glisser un bâton de dynamite entre les barreaux de la cellule de la prison
+- glisser un crochet de serrurier entre les barreaux de la cellule de la prison
+- glisser une pomme entre les barreaux de la cellule de la prison
+- glisser la brosse entre les barreaux de la cellule de la prison
+- glisser l'appareil photo entre les barreaux de la cellule de la prison
+- glisser le journal intime entre les barreaux de la cellule de la prison
+- glisser une cigarette entre les barreaux de la cellule de la prison
+- glisser la canne à pêche entre les barreaux de la cellule de la prison
+- glisser le rasoir entre les barreaux de la cellule de la prison
+- arracher les barreaux de la cellule de la prison avec le lasso et ton cheval
+- éprouver la solidité des barreaux de la cellule de la prison
+- se faire enfermer dans la cellule de la prison
+- saboter une roue de la diligence avec le couteau
+- saboter une roue du chariot de marchandises avec le couteau
+- chaparder des provisions dans le chariot de marchandises
+- dissimuler le revolver sous la bâche du chariot de marchandises
+- dissimuler le fusil sous la bâche du chariot de marchandises
+- dissimuler le couteau sous la bâche du chariot de marchandises
+- dissimuler le lasso sous la bâche du chariot de marchandises
+- dissimuler un bâton de dynamite sous la bâche du chariot de marchandises
+- dissimuler un crochet de serrurier sous la bâche du chariot de marchandises
+- dissimuler une pomme sous la bâche du chariot de marchandises
+- dissimuler la brosse sous la bâche du chariot de marchandises
+- dissimuler l'appareil photo sous la bâche du chariot de marchandises
+- dissimuler le journal intime sous la bâche du chariot de marchandises
+- dissimuler une cigarette sous la bâche du chariot de marchandises
+- dissimuler la canne à pêche sous la bâche du chariot de marchandises
+- dissimuler le rasoir sous la bâche du chariot de marchandises
+- faire équipe avec un chasseur de primes pour la prime de l'O'Driscoll
+- demander à voir le carnet de primes d'un chasseur de primes
+- se livrer à un chasseur de primes
+- subtiliser la montre à gousset du chef de gare
+- marchander le prix d'un cheval à vendre
+- faire tourner la molette du coffre-fort de la banque en écoutant les crans
+- composer une combinaison sur la molette du coffre-fort de la banque
+- fouiller le nid d'un corbeau
+- racheter toute la pile de journaux du crieur de journaux
+- vendre un cadavre au croque-mort
+- forcer le coffre de fonds de la diligence avec le revolver
+- forcer le coffre de fonds de la diligence avec le fusil
+- chaparder un sac d'avoine dans l'écurie
+- mettre le feu à l'écurie
+- chercher asile dans l'église
+- vider le tronc des pauvres de l'église
+- marchander le prix d'une bête avec l'éleveur de bétail
+- revendre du bétail volé à l'éleveur de bétail
+- demander crédit à l'épicier
+- payer la dette d'un fermier de passage à la banque
+- proposer à un fermier de passage de braquer la banque avec toi
+- payer un gamin des rues pour un renseignement
+- engager un gamin des rues comme guetteur
+- pincer un gamin des rues la main dans le sac
+- couper le fil du télégraphe de la gare avec le couteau
+- fouiller les malles de la consigne de la gare
+- examiner la pépite d'un ivrogne
+- acheter la carte du filon d'un ivrogne
+- démasquer un joueur de poker en pleine partie
+- proposer à un joueur de poker de plumer les pigeons ensemble
+- cacher de l'argent sous le matelas d'un lit de l'hôtel
+- cambrioler les maisons
+- voler le linge qui sèche devant les maisons
+- négocier ta part de l'or des O'Driscoll avec le prisonnier
+- négocier ta part de l'or des O'Driscoll avec un O'Driscoll
+- proposer à un O'Driscoll ton aide pour faire évader le prisonnier
+- échanger son cheval contre un autre chez le palefrenier
+- arracher un avis de recherche du panneau des avis de recherche
+- promettre au prisonnier du faire évader
+- faire évader le prisonnier
+- réclamer une prime auprès du shérif Malloy
+- rafler le pot sur la table de poker
+- voler une vache dans l'enclos
+- voler le taureau dans l'enclos
+- payer le télégraphiste pour lire les télégrammes des autres
+- faire envoyer un faux télégramme par le télégraphiste
+- décrocher les wagons du train
+- faire sauter le coffre du wagon postal du train avec un bâton de dynamite
+- entraîner un vacher dans un mauvais coup
+- réclamer la récompense promise par une veuve
+
+## Survie (91)
+
+- manger une pomme
+- boire une bouteille de whisky
+- boire l'eau de l'abreuvoir
+- boire l'eau du puits
+- boire l'eau de la baignoire de l'hôtel
+- boire l'eau du ruisseau
+- dormir dans un lit de l'hôtel
+- dormir à la belle étoile
+- chasser une poule avec le revolver
+- chasser une poule avec le fusil
+- chasser une poule avec le couteau
+- chasser un rat avec le revolver
+- chasser un rat avec le fusil
+- chasser un rat avec le couteau
+- chasser un corbeau avec le revolver
+- chasser un corbeau avec le fusil
+- chasser un corbeau avec le couteau
+- pêcher dans l'abreuvoir avec la canne à pêche
+- pêcher dans le puits avec la canne à pêche
+- pêcher dans la baignoire de l'hôtel avec la canne à pêche
+- pêcher dans le ruisseau avec la canne à pêche
+- se laver dans l'abreuvoir
+- se laver dans le puits
+- se laver dans la baignoire de l'hôtel
+- se laver dans le ruisseau
+- se raser avec le rasoir
+- fumer une cigarette
+- charger le shérif Malloy sur son épaule
+- charger l'adjoint du shérif sur son épaule
+- charger le prisonnier sur son épaule
+- charger le barman de Keane sur son épaule
+- charger le pianiste sur son épaule
+- charger un joueur de poker sur son épaule
+- charger une danseuse de saloon sur son épaule
+- charger le barman du Smithfield's sur son épaule
+- charger un chasseur de primes sur son épaule
+- charger un O'Driscoll sur son épaule
+- charger l'armurier sur son épaule
+- charger l'épicier sur son épaule
+- charger le directeur de la banque sur son épaule
+- charger le caissier sur son épaule
+- charger le palefrenier sur son épaule
+- charger le maréchal-ferrant sur son épaule
+- charger le docteur sur son épaule
+- charger le croque-mort sur son épaule
+- charger le boucher sur son épaule
+- charger la gérante de l'hôtel sur son épaule
+- charger le chef de gare sur son épaule
+- charger le télégraphiste sur son épaule
+- charger le pasteur sur son épaule
+- charger l'éleveur de bétail sur son épaule
+- charger un vacher sur son épaule
+- charger le crieur de journaux sur son épaule
+- charger un gamin des rues sur son épaule
+- charger un vétéran mendiant sur son épaule
+- charger un ivrogne sur son épaule
+- charger un fermier de passage sur son épaule
+- charger une veuve sur son épaule
+- charger le chat du saloon sur son épaule
+- charger un cochon sur son épaule
+- charger une poule sur son épaule
+- charger un rat sur son épaule
+- charger un corbeau sur son épaule
+- se tremper la tête dans l'abreuvoir
+- prendre un bain chaud dans la baignoire de l'hôtel
+- faire la sieste sur le banc
+- demander au boucher où chasser
+- se rafraîchir dans la glacière de la boucherie
+- vider une bouteille de whisky d'une traite, au goulot
+- renifler le goulot d'une bouteille de whisky
+- se servir un café sur le poêle du bureau du shérif
+- demander à dormir en cellule dans le bureau du shérif
+- respirer le flacon d'éther du cabinet du docteur
+- s'allonger sur la table d'examen du cabinet du docteur
+- se rafraîchir sous la fuite du château d'eau
+- dormir dans le foin de l'écurie
+- acheter des provisions de route à l'épicier
+- cautériser ses plaies au fer rouge dans la forge
+- se réchauffer près des braises de la forge
+- faire une sieste sur un lit de l'hôtel
+- se réchauffer près du poêle du magasin général
+- partager le repas commun de la pension de famille
+- ramasser les œufs d'une poule
+- tordre le cou à une poule
+- remplir sa gourde au puits
+- remplir sa gourde au ruisseau
+- remonter le seau du puits
+- piéger un rat avec une pomme comme appât
+- attraper des écrevisses dans le ruisseau
+- cuver son whisky dans la sciure du saloon Smithfield's
+- mettre en perce un des tonneaux
+
+## Entretien & inventaire (89)
+
+- ramasser une bouteille de whisky
+- lâcher le revolver
+- lâcher le fusil
+- lâcher le couteau
+- lâcher le lasso
+- lâcher un bâton de dynamite
+- lâcher un crochet de serrurier
+- lâcher une pomme
+- lâcher la brosse
+- lâcher l'appareil photo
+- lâcher le journal intime
+- lâcher une cigarette
+- lâcher la canne à pêche
+- lâcher le rasoir
+- équiper le revolver
+- équiper le fusil
+- nettoyer le revolver
+- nettoyer le fusil
+- nettoyer la baignoire de l'hôtel
+- nettoyer une tombe
+- aiguiser le couteau
+- ouvrir le coffre-fort de la banque
+- ouvrir la cellule de la prison
+- fermer le coffre-fort de la banque
+- fermer la cellule de la prison
+- détruire l'armurerie
+- détruire le magasin général
+- détruire l'abreuvoir
+- détruire le panneau des avis de recherche
+- détruire la diligence
+- détruire les tonneaux
+- détruire le banc
+- détruire le château d'eau
+- détruire le piano
+- détruire la table de poker
+- détruire une bouteille de whisky
+- détruire le coffre-fort de la banque
+- détruire la cellule de la prison
+- détruire la cloche de l'église
+- détruire une tombe
+- laver son linge dans la baignoire de l'hôtel
+- réparer le banc
+- chasser les mouches de la boucherie
+- fouiller les sacoches de ton cheval
+- fouiller les sacoches d'un cheval attaché
+- cacher le revolver dans le coffre-fort de la banque
+- cacher le fusil dans le coffre-fort de la banque
+- cacher le couteau dans le coffre-fort de la banque
+- cacher le lasso dans le coffre-fort de la banque
+- cacher un bâton de dynamite dans le coffre-fort de la banque
+- cacher un crochet de serrurier dans le coffre-fort de la banque
+- cacher une pomme dans le coffre-fort de la banque
+- cacher la brosse dans le coffre-fort de la banque
+- cacher l'appareil photo dans le coffre-fort de la banque
+- cacher le journal intime dans le coffre-fort de la banque
+- cacher une cigarette dans le coffre-fort de la banque
+- cacher la canne à pêche dans le coffre-fort de la banque
+- cacher le rasoir dans le coffre-fort de la banque
+- s'essuyer les bottes sur le paillasson de l'hôtel
+- chasser les punaises d'un lit de l'hôtel
+- accorder le piano
+- soulever le couvercle du piano
+- se débarrasser du revolver dans le puits
+- se débarrasser du revolver dans le ruisseau
+- se débarrasser du fusil dans le puits
+- se débarrasser du fusil dans le ruisseau
+- se débarrasser du couteau dans le puits
+- se débarrasser du couteau dans le ruisseau
+- se débarrasser du lasso dans le puits
+- se débarrasser du lasso dans le ruisseau
+- se débarrasser d'un bâton de dynamite dans le puits
+- se débarrasser d'un bâton de dynamite dans le ruisseau
+- se débarrasser d'un crochet de serrurier dans le puits
+- se débarrasser d'un crochet de serrurier dans le ruisseau
+- se débarrasser d'une pomme dans le puits
+- se débarrasser d'une pomme dans le ruisseau
+- se débarrasser de la brosse dans le puits
+- se débarrasser de la brosse dans le ruisseau
+- se débarrasser de l'appareil photo dans le puits
+- se débarrasser de l'appareil photo dans le ruisseau
+- se débarrasser du journal intime dans le puits
+- se débarrasser du journal intime dans le ruisseau
+- se débarrasser d'une cigarette dans le puits
+- se débarrasser d'une cigarette dans le ruisseau
+- se débarrasser de la canne à pêche dans le puits
+- se débarrasser de la canne à pêche dans le ruisseau
+- se débarrasser du rasoir dans le puits
+- se débarrasser du rasoir dans le ruisseau
+- faire rouler les tonneaux dans la rue
+
+## Loisirs & culture (326)
+
+- jouer du piano
+- s'asseoir à la table de poker pour jouer
+- lire le journal intime
+- lire le panneau des avis de recherche
+- lire une tombe
+- écrire dans le journal intime
+- dessiner le revolver dans le journal intime
+- dessiner le fusil dans le journal intime
+- dessiner le couteau dans le journal intime
+- dessiner le lasso dans le journal intime
+- dessiner un bâton de dynamite dans le journal intime
+- dessiner un crochet de serrurier dans le journal intime
+- dessiner une pomme dans le journal intime
+- dessiner la brosse dans le journal intime
+- dessiner l'appareil photo dans le journal intime
+- dessiner une cigarette dans le journal intime
+- dessiner la canne à pêche dans le journal intime
+- dessiner le rasoir dans le journal intime
+- dessiner l'église dans le journal intime
+- dessiner la gare dans le journal intime
+- dessiner l'écurie dans le journal intime
+- dessiner l'armurerie dans le journal intime
+- dessiner le magasin général dans le journal intime
+- dessiner la banque de Valentine dans le journal intime
+- dessiner le saloon de Keane dans le journal intime
+- dessiner le bureau du shérif dans le journal intime
+- dessiner l'hôtel dans le journal intime
+- dessiner la boucherie dans le journal intime
+- dessiner la forge dans le journal intime
+- dessiner le cabinet du docteur dans le journal intime
+- dessiner les pompes funèbres dans le journal intime
+- dessiner le saloon Smithfield's dans le journal intime
+- dessiner la pension de famille dans le journal intime
+- dessiner les maisons dans le journal intime
+- dessiner le shérif Malloy dans le journal intime
+- dessiner l'adjoint du shérif dans le journal intime
+- dessiner le prisonnier dans le journal intime
+- dessiner le barman de Keane dans le journal intime
+- dessiner le pianiste dans le journal intime
+- dessiner un joueur de poker dans le journal intime
+- dessiner une danseuse de saloon dans le journal intime
+- dessiner le barman du Smithfield's dans le journal intime
+- dessiner un chasseur de primes dans le journal intime
+- dessiner un O'Driscoll dans le journal intime
+- dessiner l'armurier dans le journal intime
+- dessiner l'épicier dans le journal intime
+- dessiner le directeur de la banque dans le journal intime
+- dessiner le caissier dans le journal intime
+- dessiner le palefrenier dans le journal intime
+- dessiner le maréchal-ferrant dans le journal intime
+- dessiner le docteur dans le journal intime
+- dessiner le croque-mort dans le journal intime
+- dessiner le boucher dans le journal intime
+- dessiner la gérante de l'hôtel dans le journal intime
+- dessiner le chef de gare dans le journal intime
+- dessiner le télégraphiste dans le journal intime
+- dessiner le pasteur dans le journal intime
+- dessiner l'éleveur de bétail dans le journal intime
+- dessiner un vacher dans le journal intime
+- dessiner le crieur de journaux dans le journal intime
+- dessiner un gamin des rues dans le journal intime
+- dessiner un vétéran mendiant dans le journal intime
+- dessiner un ivrogne dans le journal intime
+- dessiner un fermier de passage dans le journal intime
+- dessiner une veuve dans le journal intime
+- dessiner ton cheval dans le journal intime
+- dessiner un cheval attaché dans le journal intime
+- dessiner un cheval à vendre dans le journal intime
+- dessiner un chien errant dans le journal intime
+- dessiner le chat du saloon dans le journal intime
+- dessiner une vache dans le journal intime
+- dessiner le taureau dans le journal intime
+- dessiner un cochon dans le journal intime
+- dessiner une poule dans le journal intime
+- dessiner un rat dans le journal intime
+- dessiner un corbeau dans le journal intime
+- dessiner l'abreuvoir dans le journal intime
+- dessiner le panneau des avis de recherche dans le journal intime
+- dessiner la diligence dans le journal intime
+- dessiner le chariot de marchandises dans le journal intime
+- dessiner les tonneaux dans le journal intime
+- dessiner le banc dans le journal intime
+- dessiner le puits dans le journal intime
+- dessiner le train dans le journal intime
+- dessiner le château d'eau dans le journal intime
+- dessiner le piano dans le journal intime
+- dessiner la table de poker dans le journal intime
+- dessiner une bouteille de whisky dans le journal intime
+- dessiner le coffre-fort de la banque dans le journal intime
+- dessiner la cellule de la prison dans le journal intime
+- dessiner la baignoire de l'hôtel dans le journal intime
+- dessiner un lit de l'hôtel dans le journal intime
+- dessiner la cloche de l'église dans le journal intime
+- dessiner une tombe dans le journal intime
+- dessiner le ruisseau dans le journal intime
+- photographier l'église avec l'appareil photo
+- photographier la gare avec l'appareil photo
+- photographier l'écurie avec l'appareil photo
+- photographier l'armurerie avec l'appareil photo
+- photographier le magasin général avec l'appareil photo
+- photographier la banque de Valentine avec l'appareil photo
+- photographier le saloon de Keane avec l'appareil photo
+- photographier le bureau du shérif avec l'appareil photo
+- photographier l'hôtel avec l'appareil photo
+- photographier la boucherie avec l'appareil photo
+- photographier la forge avec l'appareil photo
+- photographier le cabinet du docteur avec l'appareil photo
+- photographier les pompes funèbres avec l'appareil photo
+- photographier le saloon Smithfield's avec l'appareil photo
+- photographier la pension de famille avec l'appareil photo
+- photographier les maisons avec l'appareil photo
+- photographier le shérif Malloy avec l'appareil photo
+- photographier l'adjoint du shérif avec l'appareil photo
+- photographier le prisonnier avec l'appareil photo
+- photographier le barman de Keane avec l'appareil photo
+- photographier le pianiste avec l'appareil photo
+- photographier un joueur de poker avec l'appareil photo
+- photographier une danseuse de saloon avec l'appareil photo
+- photographier le barman du Smithfield's avec l'appareil photo
+- photographier un chasseur de primes avec l'appareil photo
+- photographier un O'Driscoll avec l'appareil photo
+- photographier l'armurier avec l'appareil photo
+- photographier l'épicier avec l'appareil photo
+- photographier le directeur de la banque avec l'appareil photo
+- photographier le caissier avec l'appareil photo
+- photographier le palefrenier avec l'appareil photo
+- photographier le maréchal-ferrant avec l'appareil photo
+- photographier le docteur avec l'appareil photo
+- photographier le croque-mort avec l'appareil photo
+- photographier le boucher avec l'appareil photo
+- photographier la gérante de l'hôtel avec l'appareil photo
+- photographier le chef de gare avec l'appareil photo
+- photographier le télégraphiste avec l'appareil photo
+- photographier le pasteur avec l'appareil photo
+- photographier l'éleveur de bétail avec l'appareil photo
+- photographier un vacher avec l'appareil photo
+- photographier le crieur de journaux avec l'appareil photo
+- photographier un gamin des rues avec l'appareil photo
+- photographier un vétéran mendiant avec l'appareil photo
+- photographier un ivrogne avec l'appareil photo
+- photographier un fermier de passage avec l'appareil photo
+- photographier une veuve avec l'appareil photo
+- photographier ton cheval avec l'appareil photo
+- photographier un cheval attaché avec l'appareil photo
+- photographier un cheval à vendre avec l'appareil photo
+- photographier un chien errant avec l'appareil photo
+- photographier le chat du saloon avec l'appareil photo
+- photographier une vache avec l'appareil photo
+- photographier le taureau avec l'appareil photo
+- photographier un cochon avec l'appareil photo
+- photographier une poule avec l'appareil photo
+- photographier un rat avec l'appareil photo
+- photographier un corbeau avec l'appareil photo
+- photographier l'abreuvoir avec l'appareil photo
+- photographier le panneau des avis de recherche avec l'appareil photo
+- photographier la diligence avec l'appareil photo
+- photographier le chariot de marchandises avec l'appareil photo
+- photographier les tonneaux avec l'appareil photo
+- photographier le banc avec l'appareil photo
+- photographier le puits avec l'appareil photo
+- photographier le train avec l'appareil photo
+- photographier le château d'eau avec l'appareil photo
+- photographier le piano avec l'appareil photo
+- photographier la table de poker avec l'appareil photo
+- photographier une bouteille de whisky avec l'appareil photo
+- photographier le coffre-fort de la banque avec l'appareil photo
+- photographier la cellule de la prison avec l'appareil photo
+- photographier la baignoire de l'hôtel avec l'appareil photo
+- photographier un lit de l'hôtel avec l'appareil photo
+- photographier la cloche de l'église avec l'appareil photo
+- photographier une tombe avec l'appareil photo
+- photographier le ruisseau avec l'appareil photo
+- observer le revolver
+- observer le fusil
+- observer le couteau
+- observer le lasso
+- observer un bâton de dynamite
+- observer un crochet de serrurier
+- observer une pomme
+- observer la brosse
+- observer l'appareil photo
+- observer le journal intime
+- observer une cigarette
+- observer la canne à pêche
+- observer le rasoir
+- observer l'église
+- observer la gare
+- observer l'écurie
+- observer l'armurerie
+- observer le magasin général
+- observer la banque de Valentine
+- observer le saloon de Keane
+- observer le bureau du shérif
+- observer l'hôtel
+- observer la boucherie
+- observer la forge
+- observer le cabinet du docteur
+- observer les pompes funèbres
+- observer le saloon Smithfield's
+- observer la pension de famille
+- observer les maisons
+- observer le shérif Malloy
+- observer l'adjoint du shérif
+- observer le prisonnier
+- observer le barman de Keane
+- observer le pianiste
+- observer un joueur de poker
+- observer une danseuse de saloon
+- observer le barman du Smithfield's
+- observer un chasseur de primes
+- observer un O'Driscoll
+- observer l'armurier
+- observer l'épicier
+- observer le directeur de la banque
+- observer le caissier
+- observer le palefrenier
+- observer le maréchal-ferrant
+- observer le docteur
+- observer le croque-mort
+- observer le boucher
+- observer la gérante de l'hôtel
+- observer le chef de gare
+- observer le télégraphiste
+- observer le pasteur
+- observer l'éleveur de bétail
+- observer un vacher
+- observer le crieur de journaux
+- observer un gamin des rues
+- observer un vétéran mendiant
+- observer un ivrogne
+- observer un fermier de passage
+- observer une veuve
+- observer ton cheval
+- observer un cheval attaché
+- observer un cheval à vendre
+- observer un chien errant
+- observer le chat du saloon
+- observer une vache
+- observer le taureau
+- observer un cochon
+- observer une poule
+- observer un rat
+- observer un corbeau
+- observer l'abreuvoir
+- observer le panneau des avis de recherche
+- observer la diligence
+- observer le chariot de marchandises
+- observer les tonneaux
+- observer le banc
+- observer le puits
+- observer le train
+- observer le château d'eau
+- observer le piano
+- observer la table de poker
+- observer une bouteille de whisky
+- observer le coffre-fort de la banque
+- observer la cellule de la prison
+- observer la baignoire de l'hôtel
+- observer un lit de l'hôtel
+- observer la cloche de l'église
+- observer une tombe
+- observer le ruisseau
+- s'asseoir sur le banc
+- s'asseoir sur un lit de l'hôtel
+- défier l'adjoint du shérif au tir sur bouteilles
+- admirer les vitrines de l'armurerie
+- admirer les vitrines du magasin général
+- essayer une arme au stand de tir de l'armurerie
+- s'entraîner sur les cibles de l'armurerie avec le revolver
+- s'entraîner sur les cibles de l'armurerie avec le fusil
+- écouter l'armurier raconter la guerre
+- écouter un vétéran mendiant raconter la guerre
+- chanter à tue-tête dans la baignoire de l'hôtel
+- regarder passer la ville depuis le banc
+- graver ses initiales sur le banc avec le couteau
+- graver ses initiales sur le château d'eau avec le couteau
+- régler sa montre sur l'horloge de la banque de Valentine
+- défier le barman du Smithfield's au bras de fer
+- défier un chasseur de primes au bras de fer
+- défier le maréchal-ferrant au bras de fer
+- parier sur un bras de fer organisé par le barman du Smithfield's
+- écouter le boucher raconter une histoire de chasse
+- lire l'ardoise des prix de la boucherie
+- consulter le registre d'écrou du bureau du shérif
+- examiner le diplôme encadré du cabinet du docteur
+- graver un message sur le mur de la cellule de la prison avec le couteau
+- guetter les environs du haut du train
+- guetter les environs du haut du château d'eau
+- lancer un bâton à un chien errant
+- graver son nom sur la cloche de l'église avec le couteau
+- se rouler dans la boue avec un cochon
+- parier sur le poids d'un cochon
+- applaudir le numéro d'une danseuse de saloon
+- prier à genoux dans l'église
+- assister à l'office dans l'église
+- parier avec l'éleveur de bétail sur le rodéo de Lucifer
+- apprendre à lire à un gamin des rues avec le journal intime
+- consulter le tableau des horaires de la gare
+- feuilleter le registre de l'hôtel
+- chanter « Clementine » avec un ivrogne
+- miser contre un joueur de poker à sa table
+- défier un joueur de poker à une seule main, quitte ou double
+- demander à un joueur de poker un tour de cartes
+- sauter sur un lit de l'hôtel
+- feuilleter le catalogue de vente par correspondance du magasin général
+- se peser sur la bascule du magasin général
+- recopier une prime du panneau des avis de recherche dans le journal intime
+- griffonner une moustache sur un portrait du panneau des avis de recherche
+- demander un morceau au pianiste
+- chanter accompagné par le pianiste
+- jouer à quatre mains avec le pianiste
+- graver ses initiales sur le piano avec le couteau
+- s'allonger dans un cercueil des pompes funèbres
+- regarder le hors-la-loi exposé dans la vitrine des pompes funèbres
+- jeter une pièce dans le puits en faisant un vœu
+- crier dans le puits pour écouter l'écho
+- faire des ricochets sur le ruisseau
+- jouer aux dés dans l'arrière-salle du saloon Smithfield's
+- faire une partie de dames avec le shérif Malloy
+- parier sur la partie en cours à la table de poker
+- inspecter le paquet de cartes de la table de poker
+- chevaucher le taureau au rodéo
+- narguer le taureau par-dessus la barrière
+- tirer le sifflet du train
+- défier un vacher au lancer de lasso
+- chanter une chanson de soldat avec un vétéran mendiant
+
+## Métiers & services (88)
+
+- monter la garde devant la prison avec le shérif Malloy
+- monter la garde devant la prison avec l'adjoint du shérif
+- faire graver le revolver par l'armurier
+- faire graver le fusil par l'armurier
+- faire graver le couteau par l'armurier
+- faire réparer le revolver par l'armurier
+- faire réparer le fusil par l'armurier
+- commander une arme sur mesure à l'armurier
+- faire estimer le revolver par l'armurier
+- faire estimer le fusil par l'armurier
+- faire estimer le couteau par l'armurier
+- faire la queue devant les guichets de la banque de Valentine
+- commander un whisky au barman de Keane
+- commander un whisky au barman du Smithfield's
+- louer une chambre à l'étage au barman de Keane
+- proposer au barman de Keane de tenir le comptoir pour la soirée
+- proposer ses services de videur au barman du Smithfield's
+- vendre une carcasse de gibier au boucher
+- vendre des peaux au boucher
+- commander un morceau de viande au boucher
+- demander des restes de viande au boucher
+- aider le boucher à découper une carcasse
+- déposer de l'argent au guichet du caissier
+- retirer de l'argent au guichet du caissier
+- désembourber la diligence
+- désembourber le chariot de marchandises
+- aider à décharger le chariot de marchandises
+- faire la tournée des fermes avec le chariot de marchandises
+- prendre une leçon de traque auprès d'un chasseur de primes
+- abaisser le bras verseur du château d'eau
+- acheter un billet de train au chef de gare
+- proposer au chef de gare de porter les bagages des voyageurs
+- acheter un journal au crieur de journaux
+- payer le crieur de journaux pour crier une annonce
+- envoyer le crieur de journaux porter un message
+- se faire mesurer par le croque-mort pour un cercueil
+- commander un cercueil aux pompes funèbres
+- commander un cercueil au croque-mort
+- organiser un enterrement avec le croque-mort
+- escorter la diligence jusqu'à Strawberry
+- proposer à l'éleveur de bétail de convoyer son troupeau
+- commander un article du catalogue à l'épicier
+- proposer à l'épicier de surveiller sa boutique
+- acheter des œufs et des pommes de terre à un fermier de passage
+- actionner le soufflet de la forge
+- battre le fer sur l'enclume de la forge
+- charger un gamin des rues d'une course
+- louer une chambre à l'hôtel
+- louer une chambre à la gérante de l'hôtel
+- faire tinter la sonnette du comptoir de l'hôtel
+- commander un bain chaud à la gérante de l'hôtel
+- confier ses armes à la gérante de l'hôtel
+- se faire réveiller à l'aube par la gérante de l'hôtel
+- faire ferrer son cheval par le maréchal-ferrant
+- commander une pièce forgée au maréchal-ferrant
+- faire rafistoler le revolver par le maréchal-ferrant
+- faire rafistoler le fusil par le maréchal-ferrant
+- faire rafistoler le couteau par le maréchal-ferrant
+- proposer ses bras au maréchal-ferrant pour la journée
+- se faire arracher une dent par le maréchal-ferrant
+- se faire arracher une dent par le docteur
+- se faire soigner par le docteur
+- se faire extraire une balle par le docteur
+- se faire examiner par le docteur
+- acheter un tonique au docteur
+- laisser son cheval en pension chez le palefrenier
+- demander conseil sur les chevaux au palefrenier
+- faire soigner son cheval par le palefrenier
+- proposer au palefrenier de curer les box contre quelques pièces
+- faire bénir le revolver par le pasteur
+- faire bénir le fusil par le pasteur
+- faire bénir le couteau par le pasteur
+- faire bénir le lasso par le pasteur
+- faire bénir un bâton de dynamite par le pasteur
+- faire bénir un crochet de serrurier par le pasteur
+- faire bénir une pomme par le pasteur
+- faire bénir la brosse par le pasteur
+- faire bénir l'appareil photo par le pasteur
+- faire bénir le journal intime par le pasteur
+- faire bénir une cigarette par le pasteur
+- faire bénir la canne à pêche par le pasteur
+- faire bénir le rasoir par le pasteur
+- louer un lit dans la pension de famille
+- chercher de l'or à la batée dans le ruisseau
+- prêter serment d'adjoint devant le shérif Malloy
+- envoyer un télégramme par le télégraphiste
+- demander au télégraphiste s'il y a un télégramme pour toi
+- offrir une jambe de bois à un vétéran mendiant

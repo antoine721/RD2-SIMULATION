@@ -1,0 +1,480 @@
+{
+  "id": "coffre_fort",
+  "description": "Un monstre d'acier noir haut comme un homme, adossé au mur derrière les guichets, fabriqué à Chicago par Brandt & Fils. Une molette de laiton poli, une poignée en croix, et sur la porte un paysage de montagnes peint et cerné de filets d'or, comme un tabernacle dédié à l'argent.",
+  "repliques": [
+    "*clac* — la poignée en croix ne bouge pas d'un pouce.",
+    "La molette de laiton luit dans la pénombre.",
+    "Le coffre reste muet, lourd comme une promesse."
+  ],
+  "reactions": {
+    "crocheter": [
+      {
+        "texte": "Tu glisses {outil} dans la serrure de secours, sous la molette. Vingt minutes de sueur, puis un clic merveilleux : la porte d'acier pivote sur des liasses de billets et des sacs de pièces d'or.",
+        "effets": {
+          "argent": 180,
+          "prime": 100,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "La serrure est une merveille de Chicago à six goupilles. Ton crochet se brise net à l'intérieur ; le coffre, lui, n'a même pas remarqué ta présence."
+      },
+      {
+        "texte": "Dans le silence de la banque endormie, tu entends chaque goupille tomber en place. Au bout d'une heure, la porte s'ouvre : cent soixante dollars en billets, et personne pour te voir.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 160,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu crochètes en plein jour, accroupi derrière le guichet, pendant que le caissier ligoté te souffle « Plus à gauche... ». La porte cède, mais une cliente entre et se met à hurler.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 120,
+          "prime": 150,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Ton crochet travaille vite : l'habitude. La porte s'ouvre sur les sacs d'or, mais dans la rue tu entends déjà la voix de Malloy : « Il est dans la banque ! Bouclez la ruelle ! »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 150,
+          "prime": 200,
+          "honneur": -3
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines la masse d'acier noir, la molette de laiton et le paysage de montagnes peint sur la porte. Dans {outil}, ce coffre a l'air d'un autel."
+      },
+      {
+        "texte": "Tu fais un croquis technique dans {outil} : position des gonds, épaisseur de la porte, serrure de secours sous la molette. Un dessin qui vaudrait une fortune pour un O'Driscoll.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Le directeur te surprend à dessiner son coffre et se plante devant, bras croisés : « Le dessin est interdit dans cette banque. La pensée aussi, à vrai dire. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "À la lueur de ta lanterne, tu notes chaque détail du coffre. L'ombre de la molette tremble sur le mur comme le cadran d'une horloge.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "detruire": [
+      {
+        "texte": "Tu t'acharnes sur la porte d'acier à coups de crosse et de botte. Tu y laisses une égratignure, ton orgueil et deux phalanges endolories.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu t'attaques aux gonds avec une barre de fer trouvée dans la ruelle. Après une heure de vacarme, un gond cède : la porte pend de travers, entrouverte d'un pouce.",
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le fracas de tes coups attire tout Valentine. Le caissier siffle, le directeur hurle, et l'adjoint arrive l'arme au poing alors que le coffre n'a pas bougé d'un millimètre.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 25
+        }
+      },
+      {
+        "texte": "Tu cognes toute la nuit avec une masse empruntée à la forge. Au petit matin, la porte s'effondre dans un bruit de cloche fêlée : le coffre est éventré, les billets en vrac sur le marbre.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "argent": 150,
+          "prime": 50,
+          "honneur": -3
+        }
+      }
+    ],
+    "faire_sauter": [
+      {
+        "texte": "Tu cales {outil} contre la charnière et tu allumes la mèche. L'explosion souffle les vitres de la rue, fait sonner la cloche de l'église toute seule, et le coffre s'ouvre en vomissant billets roussis et pièces d'or.",
+        "effets": {
+          "etat": "detruit",
+          "argent": 200,
+          "prime": 200,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Trop de dynamite : le souffle te projette contre le guichet. Quand la fumée se dissipe, la moitié des billets brûle comme des feuilles mortes, et tu remplis tes poches de ce qui reste.",
+        "effets": {
+          "etat": "detruit",
+          "argent": 60,
+          "prime": 200,
+          "sante": -25,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Pas assez de dynamite : une détonation sourde, un nuage de suie, et la porte d'acier est à peine noircie. Dehors, des cris. Tout Valentine sait maintenant où tu es.",
+        "effets": {
+          "prime": 100,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "L'explosion déchire la nuit de Valentine. Des lampes s'allument partout, mais le coffre est ouvert : tu fourres l'or dans tes sacoches et tu sautes en selle avant que Malloy ait enfilé ses bottes.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "argent": 180,
+          "prime": 150,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "La banque est pleine de clients quand tu allumes la mèche. Tout le monde se jette à terre, le coffre éclate, une pluie de billets retombe sur les fermiers, et tu ramasses ta part sous les balles de l'adjoint.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "argent": 150,
+          "prime": 300,
+          "sante": -30,
+          "honneur": -5
+        }
+      }
+    ],
+    "fermer": [
+      {
+        "texte": "Tu pousses la lourde porte d'acier ; elle pivote lentement sur ses gonds huilés et se referme dans un claquement sourd. La molette tourne d'elle-même d'un cran."
+      },
+      {
+        "texte": "Tu fermes le coffre sous les yeux du caissier, qui te regarde comme si tu avais sauvé la banque : « Merci. Monsieur Whitlock le laisse toujours ouvert pendant son déjeuner. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu refermes le coffre resté entrouvert et tu fais tourner la molette pour brouiller la combinaison. Les O'Driscoll devront se lever tôt.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Au moment où la porte se referme, un petit grelot tinte quelque part dans le mur. Le coffre est relié à quelque chose : au bureau du directeur, peut-être, ou à l'imagination du caissier.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "fouiller": [
+      {
+        "texte": "Des liasses de billets ficelées par centaines, des sacs de pièces d'or estampillés « New Hanover », et une pile d'actes de propriété : les fermes saisies. Tu remplis tes sacoches.",
+        "effets": {
+          "argent": 200,
+          "prime": 150,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Sous les sacs d'or, tu trouves un registre à couverture noire : les vrais taux du directeur, deux fois plus hauts que la loi. Tu empoches aussi quarante dollars, pour la peine.",
+        "effets": {
+          "argent": 40,
+          "prime": 20,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu ne prends que les actes de propriété des fermes saisies, et tu les brûles un à un dans le poêle. Demain, une dizaine de familles retrouveront leur terre.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 3,
+          "prime": 50
+        }
+      },
+      {
+        "texte": "À la lueur d'une allumette, tu vides le coffre en silence : cent cinquante dollars en billets, une montre en or et une lettre parfumée de Saint Denis adressée à « mon cher Horace ».",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 150,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Le coffre est presque vide : le directeur a expédié l'or à Saint Denis par la diligence de ce matin. Il ne reste que trente dollars en pièces et la fierté blessée d'un voleur arrivé trop tard.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 30,
+          "prime": 100,
+          "honneur": -2
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la porte d'acier. Le choc résonne comme un gong dans toute la banque ; le coffre, lui, ne sourcille pas."
+      },
+      {
+        "texte": "Le caissier pousse un cri en voyant {outil} voler vers le coffre : « Pas sur le coffre ! Il a coûté plus cher que la ville ! »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le projectile ricoche sur la molette de laiton et revient te frôler le chapeau. Le coffre-fort a de la repartie."
+      },
+      {
+        "texte": "Dans la banque obscure, tu lances {outil} contre le coffre par pure rage. Le bruit roule dans la rue vide, et un chien se met à aboyer près de la boucherie.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Un monstre d'acier noir de Chicago : molette de laiton, poignée en croix, montagnes peintes cernées d'or. Sur la plaque du fabricant, on lit « Incrochetable », gravé en lettres fières."
+      },
+      {
+        "texte": "La molette compte cent graduations, usées surtout autour du 32, du 17 et du 60. Le directeur a les doigts gras, et les doigts gras laissent des traces."
+      },
+      {
+        "texte": "La porte est entrouverte pendant le déjeuner du directeur : des liasses de billets, des sacs de toile, une pile de papiers timbrés. Le caissier tousse pour que tu regardes ailleurs.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Dans l'obscurité, le coffre n'est qu'une masse plus noire que la nuit. Seule la molette de laiton luit sous la lune, comme un œil qui te surveille.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Sous la molette, une petite serrure de secours, presque invisible. Pour un crochet de serrurier habile, c'est une invitation.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "ouvrir": [
+      {
+        "texte": "Tu tires sur la poignée en croix : rien. Le coffre est verrouillé, et la molette n'obéit qu'à la bonne combinaison."
+      },
+      {
+        "texte": "La porte est entrouverte : le directeur la laisse ainsi pendant ses heures de bureau, par paresse. Tu la tires et contemples une fortune, pendant que le caissier retient son souffle.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu tires de toutes tes forces sur la poignée, en vain. Dans le silence, ton souffle résonne contre l'acier : il te faudrait la combinaison, un crochet ou de la dynamite.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le directeur, tremblant, ouvre le coffre lui-même avant que tu le lui demandes : « Tenez, tenez, prenez ce que vous voulez et partez ! » Tu remplis tes sacoches.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 150,
+          "prime": 150,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Tu essaies la poignée par acquit de conscience... et elle tourne. Quelqu'un a oublié de brouiller la combinaison ; la porte s'ouvre sur des piles de billets bien rangées.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "L'éclair du magnésium fait briller la molette de laiton et les filets d'or de la porte. Sur la plaque, le coffre a l'air invincible."
+      },
+      {
+        "texte": "Le directeur pose devant son coffre comme un chasseur devant un grizzli : « Prenez-moi bien avec. C'est moi qui ai la combinaison. » Il ignore à quel point la phrase est utile.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu photographies le coffre de près : la molette, la serrure de secours, les gonds. Une fois développés, ces clichés vaudront un plan de braquage.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Dans le reflet de la porte d'acier, ton cliché a aussi capturé le caissier en train de faire le signe de croix."
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle ricoche sur la porte d'acier avec un miaulement aigu et va se loger dans le plafond. Une pluie de plâtre tombe sur le marbre ; le coffre n'a pas une égratignure.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu vises la molette. La balle l'arrache, mais le mécanisme reste bloqué : désormais, même le directeur ne pourra plus ouvrir son coffre. Il s'arrache les favoris de désespoir.",
+        "effets": {
+          "prime": 10
+        }
+      },
+      {
+        "texte": "La balle ricoche et te revient dans le bras. Tu tombes à genoux en jurant, tandis que le coffre-fort, lui, ne bouge pas.",
+        "effets": {
+          "sante": -20
+        }
+      },
+      {
+        "texte": "Le coup de feu fait plonger tous les clients. Le caissier siffle, l'adjoint accourt, et tu restes planté devant un coffre intact, l'arme encore fumante.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 20
+        }
+      }
+    ],
+    "ecouter_les_crans": [
+      {
+        "texte": "Tu colles l'oreille contre l'acier froid et tu tournes la molette, très lentement. Clic... clic... Mais l'horloge murale tic-taque si fort que tu ne distingues plus rien."
+      },
+      {
+        "texte": "Dans la banque silencieuse, chaque cran sonne clair. Un cran plus sourd, puis un autre ; au bout d'une heure, la porte s'ouvre avec un soupir sur cent cinquante dollars bien rangés.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 150,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu as à peine l'oreille contre l'acier que le directeur entre : « Vous cherchez quelque chose ? » Tu fais mine de chercher une pièce tombée. Il ne te croit pas une seconde.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Au troisième cran, le mécanisme frémit sous tes doigts ; au quatrième, la poignée cède. Les sacs d'or sont à toi, mais le caissier ligoté dans son coin a tout vu.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 170,
+          "prime": 100,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Tu trouves la combinaison au toucher, tu ouvres la porte... et tu la refermes aussitôt. Tu voulais seulement savoir si tu en étais capable. Le caissier, médusé, n'ose rien dire.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "composer_la_combinaison": [
+      {
+        "texte": "Tu composes 32 – 17 – 60 – 4. Un claquement net, la poignée tourne, et la porte d'acier s'ouvre sur des liasses de billets et des sacs d'or. Ça valait bien quelques menaces.",
+        "effets": {
+          "argent": 200,
+          "prime": 150,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Tu composes des nombres au hasard : ton âge, la date du jour, le prix d'un whisky. Le coffre reste de marbre. Enfin, d'acier."
+      },
+      {
+        "texte": "Tu composes la combinaison dans le noir, en comptant les crans au toucher. Au dernier chiffre, un grelot tinte dans le mur : celle qu'on t'a donnée était un piège.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 50
+        }
+      },
+      {
+        "texte": "Tu composes les chiffres sous le regard exorbité du directeur, ligoté dans son fauteuil. La porte s'ouvre, et il gémit comme si on lui arrachait un enfant.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 200,
+          "prime": 200,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "La combinaison fonctionne, mais tu entends déjà les éperons de l'adjoint dans la rue. Tu fourres ce que tu peux dans ta chemise et tu files par la fenêtre de derrière.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 90,
+          "prime": 150,
+          "honneur": -3
+        }
+      }
+    ],
+    "cacher_dans_le_coffre": [
+      {
+        "texte": "Tu glisses {outil} au fond du coffre, derrière les sacs d'or. Le meilleur coffre de New Hanover garde désormais tes affaires, et le directeur n'en sait rien."
+      },
+      {
+        "texte": "Le caissier te regarde ranger {outil} dans le coffre et murmure : « Ce n'est pas réglementaire. Mais je ne dirai rien. » Il note quand même quelque chose dans son registre.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu caches {outil} sous une pile d'actes de propriété. Si un jour on fouille ta chambre, on ne trouvera rien ; si un jour on fouille le coffre, on verra bien.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu déposes {outil} juste à côté du registre noir du directeur. Si le shérif ouvre un jour ce coffre, c'est le banquier qui devra s'expliquer.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ]
+  }
+}

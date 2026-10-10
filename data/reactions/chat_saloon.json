@@ -1,0 +1,628 @@
+{
+  "id": "chat_saloon",
+  "description": "Un énorme chat roux d'une vingtaine de livres, l'oreille gauche déchirée en dentelle et la queue en panache, qui trône sur le comptoir comme un juge sur son estrade. Ses yeux jaunes ne se ferment jamais tout à fait.",
+  "personnalite": "Sultan, seigneur du saloon de Keane : chasseur de rats impitoyable, paresseux le jour, redoutable la nuit. Il choisit lui-même qui a le droit de le caresser : la danseuse, le pianiste quand il est à jeun, et de rares étrangers au cœur honnête. Il déteste le joueur de poker et guette sa manche gauche comme un trou à souris.",
+  "repliques": [
+    "*s'étire sur le comptoir et renverse un verre, sans le moindre remords*",
+    "*fixe la manche du joueur de poker, la queue frémissante*",
+    "*dépose un rat mort aux pieds du barman, fier comme un général*",
+    "*ronronne comme une locomotive sur les genoux de la danseuse*",
+    "*crache sur un vacher qui a voulu le caresser*",
+    "*dort sur le couvercle du piano, une patte dans le vide*",
+    "Mrrraou."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 5,
+      "lieu": "saloon_keane",
+      "activite": "chasse les rats dans la réserve, entre les tonneaux"
+    },
+    {
+      "de": 5,
+      "a": 7,
+      "lieu": "boucherie",
+      "activite": "mendie des rognures chez le boucher et terrorise ses rats"
+    },
+    {
+      "de": 7,
+      "a": 13,
+      "lieu": "saloon_keane",
+      "activite": "dort au soleil sur le couvercle du piano"
+    },
+    {
+      "de": 13,
+      "a": 15,
+      "lieu": "rue_principale",
+      "activite": "patrouille sous les trottoirs de bois"
+    },
+    {
+      "de": 15,
+      "a": 24,
+      "lieu": "saloon_keane",
+      "activite": "surveille la salle depuis le comptoir"
+    }
+  ],
+  "reactions": {
+    "caresser": [
+      {
+        "texte": "Tu tends la main. Il la renifle, te juge, puis détourne la tête avec un mépris souverain et va s'asseoir trois tabourets plus loin."
+      },
+      {
+        "texte": "Il se laisse faire trois secondes, ronronne une fois, puis te mord la main sans méchanceté, comme on signe un contrat : « Ça suffit. »",
+        "effets": {
+          "sante": -1
+        }
+      },
+      {
+        "texte": "Il se frotte contre ta botte et saute sur tes genoux en ronronnant comme une locomotive. Au comptoir, le barman en lâche son verre : « Il ne fait ça avec personne ! »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Après une longue inspection, il pousse sa grosse tête contre ta paume. Tu viens d'être choisi.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il fait le gros dos, crache, et ses griffes zèbrent le dos de ta main. Les bêtes sentent ces choses-là.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "sante": -3,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il recule, les oreilles plaquées, et feule si fort que deux joueurs de poker lèvent les yeux de leurs cartes.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "En pleine chasse, il t'ignore complètement : sa tête est tournée vers un trou dans la plinthe, et plus rien d'autre n'existe.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "nourrir": [
+      {
+        "texte": "Il renifle {outil}, lève vers toi des yeux pleins de pitié, et pousse le fruit hors du comptoir d'une patte dédaigneuse."
+      },
+      {
+        "texte": "Il considère {outil} comme une insulte personnelle et te tourne le dos. Un chat de saloon mange du rat, du jambon, et à la rigueur du hareng.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Par amitié, il lèche poliment le morceau de pomme que tu lui tends, puis le laisse là, comme on laisse un compliment maladroit.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il dédaigne ton offrande et dépose à la place, à tes pieds, un rat fraîchement tué. Visiblement, c'est toi qu'il trouve mal nourri.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Vif comme l'éclair, il file sous le comptoir avant que tu aies levé {outil}, et te fixe de là avec des yeux jaunes qui promettent une vengeance.",
+        "effets": {
+          "honneur": -1,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il te saute au bras, toutes griffes dehors, t'arrache une manche et disparaît par la fenêtre ouverte.",
+        "effets": {
+          "sante": -8,
+          "honneur": -1,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu frappes ; il s'effondre sans un miaulement. Un silence de cimetière tombe sur le saloon, et la danseuse éclate en sanglots.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -3,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Tu l'atteins à la patte. Il s'enfuit en boitant vers la réserve, et désormais, chaque fois que tu entreras, il sera là, à te regarder.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il t'attendait sur la poutre au-dessus de toi : vingt livres de chat roux te tombent sur la tête, toutes griffes dehors.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle fait exploser une bouteille sur l'étagère. Le chat, lui, est déjà perché sur une poutre et te regarde comme on regarde un amateur.",
+        "effets": {
+          "honneur": -1,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "La balle l'effleure ; il pousse un hurlement, traverse la salle comme une flèche rousse et disparaît dans la rue. On ne le reverra pas avant deux jours.",
+        "effets": {
+          "honneur": -2,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Le gros chat roux s'effondre sur le comptoir. Le barman, blême, murmure : « Dix ans qu'il chassait les rats ici. » Cette nuit, les rats, eux, font la fête.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -3,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Dans la pénombre, tu tires sur une ombre rousse... et tu abats un gros rat qui filait le long de la plinthe. Le chat, assis juste à côté, te lance un regard vexé : c'était son rat.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "La détonation attire l'adjoint, qui trouve inadmissible qu'un homme recherché tire sur le chat du saloon. Le barman aussi. Le chat, lui, a déjà filé.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Il esquive {outil} d'un bond paresseux, comme s'il l'avait vu venir depuis une semaine, et va se rasseoir plus loin pour se lécher la patte."
+      },
+      {
+        "texte": "Touché au flanc, il pousse un miaulement indigné et file sous le piano, d'où il te fixe sans ciller.",
+        "effets": {
+          "honneur": -1,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il ne fuit pas. Il te fixe, saute sur la table voisine et pousse ton verre dans le vide, très lentement, sans te quitter des yeux.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il bondit sur l'objet, croyant à une proie, et le pourchasse sous les tables avant de comprendre sa méprise. Il te jette un regard noir : on ne se moque pas d'un chasseur.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Il esquive ta main comme un boxeur et te rend la politesse d'un coup de griffes en travers du poignet.",
+        "effets": {
+          "sante": -3,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu l'envoies rouler du comptoir. Il retombe sur ses pattes, te regarde longuement, puis s'en va. Tu sens que ce n'est pas fini entre vous.",
+        "effets": {
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "« Hé ! » La danseuse se lève d'un bond : « Touche encore à Sultan, et c'est toi qui dormiras dans l'abreuvoir ! » Le chat se réfugie dans ses jupes.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il te saute sur le dos et te laboure les épaules jusqu'à ce que tu tournes sur toi-même comme une toupie, sous les rires du comptoir.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -8
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Tu lances {outil} et la boucle retombe sur lui ; il s'en extrait d'un tortillement et s'éloigne, la queue haute, comme si rien ne s'était passé."
+      },
+      {
+        "texte": "Tu l'attrapes. Il se change aussitôt en boule de griffes et de fureur, et tu le relâches avant qu'il ne te scalpe.",
+        "effets": {
+          "sante": -5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Ta boucle fauche trois verres et le chapeau d'un joueur ; le chat, lui, contemple la scène du haut du piano.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il se laisse prendre... puis se roule sur la corde, la mâchonne et la ronge en te fixant droit dans les yeux.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines dans {outil} sa silhouette ronde endormie sur le piano. Il ouvre un œil, juge ton travail, et se rendort."
+      },
+      {
+        "texte": "Il s'assoit face à toi, raide comme une statue égyptienne, et pose aussi longtemps qu'il faut. Puis il marche sur ta page encore fraîche."
+      },
+      {
+        "texte": "Tu le dessines à l'affût, aplati devant un trou de la plinthe, les pupilles immenses. Le meilleur dessin de tout ton journal.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il vient se coucher sur ton carnet ouvert, ce qui met fin à la séance mais, venant de lui, est un très grand honneur.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Il fait sa ronde : le comptoir, le piano, la table de poker, puis il s'arrête devant la manche gauche du joueur en brocart et la fixe, intrigué."
+      },
+      {
+        "texte": "Une ombre rousse traverse la salle sans un bruit. Trois secondes plus tard, un couinement bref derrière le comptoir. Il revient, se lèche les babines et se recouche.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Étalé de tout son long dans un carré de soleil sur le couvercle du piano, il ronfle comme un vieux juge à l'audience.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il refuse les caresses d'un vacher, puis celles d'un éleveur, puis grimpe sur les genoux de la danseuse et s'y installe comme sur un trône."
+      },
+      {
+        "texte": "Son oreille gauche est déchirée en dentelle : on raconte qu'il a affronté un raton laveur dans la réserve, et que le raton laveur n'est jamais revenu."
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il fixe {outil} avec le dédain d'un sénateur. Sur la plaque, il aura l'air d'un notable."
+      },
+      {
+        "texte": "Au moment de l'éclair, il bâille. Tu obtiens le portrait d'une gueule rose grande ouverte, bordée de crocs."
+      },
+      {
+        "texte": "L'éclair de magnésium le fait bondir jusqu'à la lampe du plafond, d'où il refuse de redescendre pendant une heure.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il pose sur le comptoir, à côté d'un rat mort qu'il a lui-même disposé pour l'occasion. Un trophée de chasse en bonne et due forme.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu le soulèves : il est bien plus lourd qu'il n'en a l'air, et bien plus griffu. Il se débat et retombe sur ses pattes.",
+        "effets": {
+          "sante": -3,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il se laisse porter sur ton épaule comme un col de fourrure, ronronne contre ton oreille, et toise la salle de là-haut avec satisfaction.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il devient tout mou, comme un sac de farine, et pèse soudain le double. C'est sa manière de protester."
+      },
+      {
+        "texte": "À peine touché, il te mord le pouce jusqu'au sang et file sous le comptoir.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -4,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu le suis jusqu'à la boucherie, où il se poste devant le trou d'un rat avec une patience de chasseur de primes."
+      },
+      {
+        "texte": "Il te mène dans la réserve du saloon, entre les tonneaux, et s'immobilise. Un rat sort. Il ne rentrera jamais.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il traverse la rue principale sans se presser, se fait gratter la tête par le boucher, ignore royalement le chien errant et s'endort sous le perron de l'hôtel.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il s'arrête, se retourne et te fixe : « Tu me suis ? » semble-t-il dire. Puis il disparaît par un trou de la palissade, bien trop petit pour toi."
+      }
+    ],
+    "agiter_une_corde": [
+      {
+        "texte": "Il fait semblant de ne rien voir, puis sa queue se met à battre, puis il bondit et s'acharne sur la corde comme sur un serpent à sonnette.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il regarde la corde danser, puis toi, avec l'air de dire : « J'ai vingt livres et dix ans. Sérieusement ? »"
+      },
+      {
+        "texte": "Il saute si haut pour attraper la corde qu'il atterrit sur la table de poker et éparpille le pot. Les joueurs hurlent ; toi, tu ris.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il joue comme un chaton, se roule sur le dos, te mordille les doigts et en oublie complètement sa dignité de seigneur du saloon.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il attrape la corde, puis la main qui tient la corde.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -3
+        }
+      }
+    ],
+    "emmener_chasser_les_rats": [
+      {
+        "texte": "Tu l'emmènes à la boucherie. Le boucher, ravi, lui ouvre la réserve : dix minutes plus tard, trois rats sont alignés sur le seuil, et le boucher te glisse un dollar.",
+        "effets": {
+          "argent": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te suit jusqu'au magasin général, renifle le seuil, puis s'assoit et refuse d'entrer : l'épicier ne lui a jamais rien donné, et il a de la mémoire."
+      },
+      {
+        "texte": "Dans la réserve du saloon, à la lueur d'une lampe, il chasse avec une précision d'artilleur. Au matin, le barman compte les cadavres et te paie une bière.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Vous faites équipe : tu soulèves les tonneaux, il fait le reste. Le gros rat qui vivait sous la boucherie depuis l'hiver ne verra pas le printemps.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il bâille, s'étire et te fait comprendre qu'on ne chasse pas en plein jour. Il retourne dormir sur le piano.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il te suit... puis se poste devant toi comme devant un trou à rats, la queue battante. Mieux vaut ne pas insister.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "appeler_le_chat": [
+      {
+        "texte": "Il tourne une oreille vers toi. Une seule. Le reste du chat ne bouge pas."
+      },
+      {
+        "texte": "Il te regarde, cligne lentement des yeux, et vient s'asseoir... juste hors de portée de ta main."
+      },
+      {
+        "texte": "Il arrive au trot, la queue dressée comme un drapeau, et se frotte contre tes bottes en ronronnant.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il est en chasse et t'ignore royalement. Puis un rat traverse la salle, et il disparaît comme un boulet roux tiré par un canon.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Contre toute attente, il descend du piano, traverse le saloon sous les yeux médusés des habitués et s'installe sur tes genoux.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te fixe, bâille, et se met à faire sa toilette avec une insolence manifestement destinée à toi.",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "offrir_du_lait": [
+      {
+        "texte": "Le barman te fait payer la soucoupe le prix d'un whisky : « Du lait du matin, monsieur. » Le chat la lape jusqu'à la dernière goutte et s'en va sans un regard. Ça compte quand même.",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il boit, se lèche les moustaches, puis vient poser sa tête contre ton menton. Chez lui, c'est une déclaration d'amitié éternelle.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il laisse la soucoupe pour plus tard : il y a d'abord des rats à tuer. À l'aube, la soucoupe est vide et un rat t'attend sur ta chaise.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il lape le lait très vite, sans te quitter des yeux. On ne sait jamais, avec les gens comme toi.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il renverse la soucoupe d'une patte, très lentement, en te regardant droit dans les yeux. Le lait coule entre les lattes du plancher.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Réveillé par le tintement de la soucoupe sur le comptoir, il boit, puis se rendort aussitôt sur le piano, le museau tout blanc.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      }
+    ]
+  }
+}

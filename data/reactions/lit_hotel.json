@@ -1,0 +1,377 @@
+{
+  "id": "lit_hotel",
+  "description": "Un lit en fer forgé aux barreaux peints en blanc, avec un matelas de crin un peu creusé au milieu, une courtepointe à fleurs et un oreiller qui sent la lavande. Le sommier grince au moindre mouvement.",
+  "repliques": [
+    "Le sommier grince.",
+    "*Les draps sentent la lavande, et vaguement la poudre.*"
+  ],
+  "reactions": {
+    "dessiner": [
+      {
+        "texte": "Tu dessines le lit dans {outil} : les barreaux de fer, la courtepointe à fleurs, le creux du matelas. Ça a l'air plus confortable sur le papier qu'en vrai."
+      },
+      {
+        "texte": "À la lueur de la lampe, tu dessines le lit défait dans {outil}. Le dessin a quelque chose de triste, comme toutes les chambres où personne ne reste.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu dessines le lit dans {outil} et, en dessous, tu notes un prénom et une adresse : quelqu'un, loin d'ici, pour qui tu voudrais être un homme meilleur.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "dormir": [
+      {
+        "texte": "Tu t'écroules sur le matelas tout habillé. Le sommier proteste, puis le sommeil t'emporte comme une crue. Tu te réveilles des heures plus tard, reposé et affamé.",
+        "effets": {
+          "sante": 30
+        }
+      },
+      {
+        "texte": "Une punaise te dévore les chevilles toute la nuit. Tu dors quand même, par entêtement, et tu te réveilles couvert de piqûres mais remis sur pied.",
+        "effets": {
+          "sante": 20
+        }
+      },
+      {
+        "texte": "Tu dors d'une traite jusqu'au chant du coq, bercé par le piano lointain du saloon et les ronflements de la chambre voisine. Au réveil, la lumière filtre à travers les rideaux de dentelle.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 30
+        }
+      },
+      {
+        "texte": "Tu dors en plein jour, volets tirés. Les charrettes, les sabots et le crieur de journaux se mêlent à tes rêves. Tu te réveilles au crépuscule, la bouche pâteuse.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 20
+        }
+      },
+      {
+        "texte": "Tu dors une chaise calée sous la poignée et le revolver sous l'oreiller. Au moindre craquement, tu es debout, l'arme braquée sur l'ombre d'un portemanteau.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Tu dors mal. Des visages défilent derrière tes paupières : ceux que tu as volés, ceux que tu as blessés. Tu te réveilles en sueur, les draps entortillés autour des jambes.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "sante": 10
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} sur le lit. Le matelas l'avale dans un « pouf » de crin et de poussière. Ce n'était pas l'effet dramatique espéré."
+      },
+      {
+        "texte": "Tu envoies {outil} sur le lit ; ça rebondit sur le sommier, traverse la chambre et brise le pot de chambre. Personne ne voudra ramasser ça."
+      },
+      {
+        "texte": "Tu lances {outil} sur le lit en pleine nuit. Le sommier hurle comme un chat écrasé et le voisin tambourine à la cloison : « Y en a qui dorment ! »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Un lit en fer écaillé, une courtepointe raccommodée, un oreiller rebondi. Sur la table de nuit, une bible, une bougie et un écriteau : « Ni bottes, ni armes, ni dames dans les lits. La Direction. »"
+      },
+      {
+        "texte": "Le matelas garde la forme exacte du dernier client : un homme large, couché sur le côté gauche, qui a laissé un mégot et trois cheveux roux sur l'oreiller."
+      },
+      {
+        "texte": "Tu étudies le lit avec l'œil d'un homme traqué : la fenêtre est à deux pas, le toit de la véranda juste en dessous. De quoi filer en caleçon s'il le faut.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Le clair de lune découpe les barreaux du lit sur le mur, comme ceux d'une cellule. Tu penses à l'O'Driscoll qui dort, lui, derrière de vrais barreaux au bureau du shérif.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Le magnésium éclaire la chambre d'un coup. Sur la plaque, le lit bien tiré ressemble à une gravure de catalogue de Saint Denis."
+      },
+      {
+        "texte": "Tu photographies le lit et la fenêtre ouverte sur la rue principale. Sur le cliché, à l'arrière-plan, le chien errant lève la patte contre un tonneau.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le flash surprend une famille de punaises en promenade sur l'oreiller. Tu tiens la preuve : tu pourras réclamer un rabais à la gérante.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "s_asseoir": [
+      {
+        "texte": "Tu t'assois sur le bord du lit. Le sommier grince si fort qu'on doit l'entendre jusqu'à la gare. Tu retires tes bottes en soupirant d'aise.",
+        "effets": {
+          "sante": 2
+        }
+      },
+      {
+        "texte": "Tu t'assois, tu t'allonges « juste une minute », et tu te réveilles une heure plus tard avec le motif de la courtepointe imprimé sur la joue.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Assis sur le lit, tu relis une vieille lettre cornée à la lumière de la fenêtre. Pour un instant, Valentine, les O'Driscoll et la poussière n'existent plus.",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Tu t'assois face à la porte, le revolver sur les genoux, et tu comptes les pas dans le couloir. Ce lit-là, c'est un poste de guet, pas un repos.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle traverse le matelas et soulève un nuage de crin. Des plumes de l'oreiller retombent comme de la neige. Au rez-de-chaussée, la gérante pousse un cri strident.",
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu cribles le lit de balles. Les barreaux sonnent comme une cloche d'église et le matelas éventré saigne sa laine. Ce lit-là est bon pour le croque-mort des meubles.",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Tu tires sur une forme sous les draps : ce n'était qu'un traversin. Toutes les portes de l'étage s'ouvrent en même temps et quelqu'un hurle d'aller chercher le shérif Malloy.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu tires sous le lit, sur un serpent à sonnette lové contre le pot de chambre. Il ne bougera plus. La gérante, blême, te remercie du bout des lèvres et oublie de facturer le trou dans le plancher.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      }
+    ],
+    "se_cacher": [
+      {
+        "texte": "Tu te glisses sous le lit, le nez dans la poussière et les moutons. Des bottes passent, s'arrêtent, repartent. Tu retiens un éternuement héroïque."
+      },
+      {
+        "texte": "Tu te caches sous le lit au moment où l'adjoint entre, revolver au poing. Il fouille l'armoire, regarde par la fenêtre... mais pas sous le lit. Trop jeune pour connaître ce coup-là.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu plonges sous le lit, mais ton éperon accroche la courtepointe et l'entraîne avec toi. Une voix rocailleuse soupire : « Sors de là, l'ami. Même mon chien se cache mieux. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tapi derrière le lit dans le noir, tu sens soudain quelque chose de poilu te frôler la main. Le rat de la boucherie a eu la même idée que toi.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "fouiller": [
+      {
+        "texte": "Tu soulèves le matelas : un dollar d'argent, une épingle à cheveux et une lettre d'amour jamais envoyée, signée « ta Lucy ». Le dollar, tu le gardes.",
+        "effets": {
+          "argent": 1
+        }
+      },
+      {
+        "texte": "Sous l'oreiller, un vieux revolver rouillé sans barillet et un mouchoir brodé. Le client d'avant devait dormir aussi mal que toi."
+      },
+      {
+        "texte": "Tu fouilles le lit d'une chambre voisine pendant que son occupant est au saloon. Dans la doublure, un rouleau de billets. En ressortant, tu croises la gérante, dont le regard tombe sur ta poche bombée.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 12,
+          "honneur": -2,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Tu fouilles le lit à tâtons dans le noir et tu te plantes dans le doigt une aiguille à tricoter oubliée. Tu étouffes un juron dans l'oreiller.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -1
+        }
+      }
+    ],
+    "faire_la_sieste": [
+      {
+        "texte": "Tu t'étends sur la courtepointe, les bottes croisées sur les barreaux. Une heure de sieste, et la piste te pèse moins sur les épaules.",
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Tu t'assoupis si profondément que tu ronfles plus fort que les poseurs de rails de la pension. Tu te réveilles reposé, un bouton de courtepointe imprimé sur la joue.",
+        "effets": {
+          "sante": 12
+        }
+      },
+      {
+        "texte": "Sieste d'après-midi, fenêtre ouverte. Dans la rue, le crieur annonce les primes de la semaine, une poule s'échappe en caquetant et quelqu'un la poursuit en jurant. Tu t'endors en souriant.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Tu fermes les yeux une minute. Un pas lourd dans le couloir te fait bondir, revolver au poing : c'est la gérante, les bras chargés de serviettes. Elle ne dit rien, mais elle n'oubliera pas.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": 3
+        }
+      },
+      {
+        "texte": "Tu fais la sieste avec tes bottes boueuses sur les draps propres. À ton réveil, la gérante est là, bras croisés : « Lavage des draps : un dollar. Ce n'est pas négociable. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "sante": 10,
+          "argent": -1
+        }
+      }
+    ],
+    "cacher_magot_matelas": [
+      {
+        "texte": "Tu découds un coin du matelas, tu glisses tes billets dans le crin et tu recouds grossièrement. Personne ne pensera à chercher là... sauf tout le monde."
+      },
+      {
+        "texte": "Tu glisses tes économies sous le matelas, puis tu changes d'avis, puis tu les mets dans ta botte, puis de nouveau sous le matelas. La méfiance, c'est épuisant."
+      },
+      {
+        "texte": "Tu caches ton argent avant de sortir. Au retour, une petite main a fouillé : il manque deux dollars, et une empreinte de pied d'enfant crasseuse orne la courtepointe. Le gamin des rues est passé par la fenêtre.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "En glissant ton butin sous le matelas, tu tombes sur un autre magot, plus ancien, oublié par un client. Un voleur en a volé un autre : tu gardes les deux.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 8,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu caches ton argent sous le matelas à la lueur d'une bougie, puis tu dors dessus toute la nuit comme un dragon sur son or. Au matin, tout est encore là.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "sauter_sur_le_lit": [
+      {
+        "texte": "Tu sautes sur le lit comme un gamin. Le sommier grince, couine, gémit, et un pied finit par céder. Tu te retrouves assis par terre, ravi."
+      },
+      {
+        "texte": "Boing, boing, boing. Au rez-de-chaussée, la lampe du hall se balance au rythme de tes bonds. La gérante monte l'escalier quatre à quatre : « Un dollar pour le sommier, et vous descendez de là ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Tu sautes sur le lit en pleine nuit. Le voisin, persuadé qu'il se passe tout autre chose, tape au mur : « Un peu de décence, sacrebleu ! »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tes éperons accrochent la courtepointe et la déchirent de haut en bas. Tu la retournes discrètement du côté propre et tu sors en sifflotant.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ],
+    "chasser_punaises": [
+      {
+        "texte": "Tu retournes le matelas et tu écrases les punaises une à une du talon. Tu en comptes quarante-trois avant d'abandonner le décompte ; elles, en revanche, n'ont pas fini de te dévorer."
+      },
+      {
+        "texte": "Tu signales les punaises à la gérante. Elle te fixe comme si tu avais insulté sa mère : « Il n'y a pas de punaises dans mon hôtel. Il y a des clients qui en apportent. »"
+      },
+      {
+        "texte": "Tu traînes le matelas sur le balcon et tu le bats à coups de chapeau. Un nuage de poussière et de bestioles s'abat sur la rue principale ; en bas, le crieur de journaux t'insulte en toussant.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "À la bougie, tu traques les punaises dans les coutures. Tu en grilles une à la flamme, puis deux, puis tu manques de mettre le feu au lit.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -2
+        }
+      },
+      {
+        "texte": "Tu ramasses une poignée de punaises dans un mouchoir, pour les glisser plus tard dans le lit d'un ennemi. La vengeance se mange froide, et elle pique.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ]
+  }
+}

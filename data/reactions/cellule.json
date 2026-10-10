@@ -1,0 +1,424 @@
+{
+  "id": "cellule",
+  "description": "Une cage de fer forgé au fond du bureau du shérif, aux barreaux épais comme le pouce rivetés dans la pierre. Une paillasse grouillante de puces, un seau, et une petite fenêtre à barreaux qui donne sur la ruelle. La serrure, elle, a connu des jours meilleurs.",
+  "repliques": [
+    "Les barreaux grincent.",
+    "Le seau de la cellule empeste jusque dans la rue.",
+    "Quelque chose gratte le mortier, tout doucement."
+  ],
+  "reactions": {
+    "crocheter": [
+      {
+        "texte": "Tu glisses {outil} dans la vieille serrure. Clic, clic... clac. La porte s'entrouvre en grinçant ; le prisonnier retient son souffle.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu n'as pas fait deux tours de crochet que Malloy te saisit le poignet : « Joli travail. Dommage qu'il soit fini. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 25,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Dans le noir, à deux pas de Malloy qui ronfle près du poêle, la serrure résiste longtemps, puis cède d'un coup. Le prisonnier chuchote : « Que saint Patrick te bénisse ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "La pointe de {outil} se brise net dans la serrure. Le prisonnier gémit : « Non, non, non ! Ils vont voir qu'on y a touché ! »"
+      },
+      {
+        "texte": "La serrure cède. Tu regardes la porte entrouverte, puis le prisonnier, puis le portrait du juge accroché au mur... et tu refermes doucement.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines la cage, ses rivets, la paillasse, et l'ombre du prisonnier agrippé aux barreaux. Un dessin triste comme une ballade irlandaise."
+      },
+      {
+        "texte": "Tu notes chaque détail dans {outil} : la serrure usée, la fenêtre côté ruelle, le mortier qui s'effrite autour du troisième barreau. Un vrai plan d'évasion."
+      },
+      {
+        "texte": "Malloy jette un œil par-dessus ton épaule : « Vous faites des plans d'architecte, étranger ? » Il referme ta page du bout du doigt.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "detruire": [
+      {
+        "texte": "Tu secoues la porte de toutes tes forces ; un barreau se descelle, mais la cage tient bon. Le vacarme résonne dans tout le bureau.",
+        "effets": {
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Malloy te met en joue avant le second coup de pied : « Encore un, et vous dormez dedans. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "À force de coups, le mortier cède et la grille de la fenêtre tombe dans la ruelle. Malloy se réveille en sursaut, trop tard : la cellule est ouverte aux quatre vents.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 30,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu t'acharnes sur le fer jusqu'à t'en ouvrir les jointures. Le fer a gagné ; le prisonnier applaudit quand même.",
+        "effets": {
+          "sante": -5
+        }
+      }
+    ],
+    "faire_sauter": [
+      {
+        "texte": "BOUM. Le mur de la cellule s'effondre dans un nuage de poussière. Quand il retombe, il ne reste qu'un trou béant... et des traces de pas qui filent vers le nord.",
+        "effets": {
+          "etat": "detruit",
+          "prime": 75,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "La mèche grésille. Malloy se jette à terre, l'adjoint hurle, la déflagration souffle les vitres. Tu te relèves sonné, les oreilles sifflantes.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "sante": -25,
+          "prime": 100,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "L'explosion réveille tout Valentine. Les lampes s'allument une à une dans la rue principale, et le prisonnier cavale déjà en braillant une chanson.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 75,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Trop de dynamite : toute la façade du bureau est soufflée, et une pluie d'avis de recherche retombe sur la rue comme de la neige.",
+        "effets": {
+          "etat": "detruit",
+          "sante": -15,
+          "prime": 100,
+          "honneur": -4
+        }
+      }
+    ],
+    "fermer": [
+      {
+        "texte": "Tu claques la porte de la cellule. Le loquet retombe avec un bruit sec. Le prisonnier : « Hé ! Elle était déjà fermée, crétin ! »"
+      },
+      {
+        "texte": "Malloy hoche la tête : « Bien. Au moins, quelqu'un ici pense à fermer cette fichue porte. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu refermes la porte doucement, sans un bruit. Vu de l'extérieur, rien ne trahit qu'elle a été ouverte cette nuit.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "ouvrir": [
+      {
+        "texte": "Tu tires sur la porte : verrouillée, évidemment. Le prisonnier ricane : « Si c'était si facile, je serais déjà au Mexique ! »"
+      },
+      {
+        "texte": "Malloy fait tinter le trousseau à sa ceinture : « Ces clés-là ne quittent jamais ma ceinture, l'étranger. Désolé. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Malloy ronfle tout habillé sur son lit de camp, près du poêle. Tu décroches le trousseau du clou, au-dessus de sa tête : la clé tourne, la porte s'ouvre, et le prisonnier n'ose pas y croire.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Un coup d'épaule bien placé, et la vieille serrure cède dans un craquement. Le prisonnier siffle d'admiration.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "prime": 20,
+          "honneur": -1
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre les barreaux ; ça rebondit avec un tintement de cloche et roule dans la cellule. Le prisonnier s'en empare aussitôt : « Merci ! »"
+      },
+      {
+        "texte": "Malloy sursaute derrière son bureau : « Encore un coup comme ça et vous rejoignez votre cible derrière la grille. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le projectile passe entre deux barreaux et va s'écraser contre le mur du fond, à un pouce de la tête du prisonnier."
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Des barreaux d'un pouce d'épaisseur, rivetés dans la pierre. Mais autour du troisième, le mortier s'effrite : quelqu'un gratte, la nuit."
+      },
+      {
+        "texte": "La serrure est vieille et grossière. Un bon crochet de serrurier en viendrait à bout en deux minutes."
+      },
+      {
+        "texte": "La petite fenêtre donne sur la ruelle. Ses barreaux sont scellés dans du bois pourri : une corde et un cheval suffiraient."
+      },
+      {
+        "texte": "Malloy somnole sur son lit de camp, le fusil à portée de main. Les clés de la cellule pendent à un clou, juste au-dessus de sa tête.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Malloy porte le trousseau à sa ceinture et ne quitte jamais la cellule des yeux plus d'une minute.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "L'éclair illumine la cage : barreaux, paillasse, seau, et le prisonnier qui fait le pitre au premier plan."
+      },
+      {
+        "texte": "Malloy grogne : « Une photo de ma prison pour les journaux de Saint Denis ? Dites-leur qu'elle n'a jamais laissé filer personne. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Ta plaque révèle un détail que tu n'avais pas vu : des traits gravés sur le mur, et une petite croix sous un dessin d'arbre."
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle ricoche sur un barreau avec un bruit de cloche et se loge dans une poutre. Le prisonnier plonge sous sa paillasse.",
+        "effets": {
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Tu tires dans la serrure : elle saute en morceaux et la porte pend de travers sur ses gonds.",
+        "effets": {
+          "etat": "detruit",
+          "prime": 30,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Ton coup de feu fait bondir Malloy et l'adjoint, arme au poing : « Les mains en l'air ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 25,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "La détonation claque dans la nuit. Des chiens aboient, une lampe s'allume à l'hôtel. La serrure, elle, n'a qu'une éraflure.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10
+        }
+      }
+    ],
+    "glisser_entre_barreaux": [
+      {
+        "texte": "Tu glisses {outil} entre deux barreaux. Une main tachée de son s'en empare et le fait disparaître sous la paillasse.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Malloy lève les yeux juste à temps : « Qu'est-ce que vous lui passez, là ? » Il confisque l'objet et te jauge longuement.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Par la fenêtre côté ruelle, tu fais passer {outil}. Le prisonnier chuchote : « T'es un frère. Jeudi, souviens-toi : jeudi. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "L'objet tombe de l'autre côté, hors de portée du prisonnier. Il s'étire, s'aplatit, jure en gaélique... et finit par l'attraper du bout du pied."
+      }
+    ],
+    "arracher_barreaux": [
+      {
+        "texte": "Tu noues {outil} aux barreaux de la fenêtre et éperonnes ton cheval. Dans un fracas de bois pourri, la grille entière s'arrache du mur.",
+        "effets": {
+          "etat": "detruit",
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "La corde se tend, ton cheval hennit et tire... puis le nœud lâche. Tu roules dans la boue de la ruelle.",
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "À peine la corde nouée, l'adjoint sort en courant, colt au poing, et tire en l'air : « Halte ! Halte ou je tire ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 40,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "La grille cède d'un coup et rebondit derrière ton cheval jusqu'à la rue principale, réveillant la moitié de Valentine.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Les barreaux tiennent ; c'est ton cheval qui renâcle et refuse de tirer davantage. Derrière la grille, le prisonnier s'égosille : « Pousse, bon sang, pousse ! »"
+      }
+    ],
+    "eprouver_barreaux": [
+      {
+        "texte": "Tu secoues les barreaux un à un. Le troisième bouge à peine, mais il bouge : le mortier s'effrite sous tes doigts."
+      },
+      {
+        "texte": "Malloy te regarde faire sans lever le nez de son café : « Ils sont solides. Je les ai fait reposer après la dernière évasion. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Du bon fer de Pennsylvanie, épais comme ton pouce. Sans dynamite ou un bon cheval, personne ne sortira d'ici."
+      },
+      {
+        "texte": "Un barreau de la fenêtre grince sous ta main. De l'intérieur, le prisonnier souffle : « Je l'ai travaillé toute la semaine. Encore deux nuits. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "graver_mur_cellule": [
+      {
+        "texte": "Tu graves tes initiales sous des dizaines d'autres : des noms, des dates, une potence, un cœur percé d'une flèche."
+      },
+      {
+        "texte": "Tu graves un trèfle et le mot « jeudi ». Le prisonnier le contemple longuement, puis te fait un clin d'œil.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Malloy frappe la table du plat de la main : « Du vandalisme dans mon bureau ? Ce mur a vu plus de canailles que vous de levers de soleil. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Sous la paillasse, ta lame accroche une gravure plus ancienne : « 1887. J'ai creusé quarante nuits. Ils m'ont pendu la quarante et unième. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "se_faire_enfermer": [
+      {
+        "texte": "Malloy hausse un sourcil, puis t'ouvre la grille : « Une nuit au frais, si ça vous chante. » Le prisonnier se pousse sur la paillasse : « Bienvenue chez moi, l'ami ! »"
+      },
+      {
+        "texte": "Malloy n'en revient pas : « Un homme recherché qui vient frapper à ma porte ? » La clé tourne dans ton dos bien plus vite que prévu.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Allongé sur la paillasse, tu écoutes le prisonnier chuchoter jusqu'à l'aube : l'or, la cascade, le chêne foudroyé, et Ciaran qui viendra jeudi.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Malloy refuse net : « C'est une prison, pas un hôtel. Allez voir la gérante : 50 cents le bain, et les draps sont propres. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu passes une nuit infecte sur une paillasse pleine de puces. Au matin, tu te grattes jusqu'au sang, mais tu connais tout le plan d'évasion.",
+        "effets": {
+          "sante": -5
+        }
+      }
+    ]
+  }
+}

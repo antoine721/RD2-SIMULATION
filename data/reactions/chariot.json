@@ -1,0 +1,735 @@
+{
+  "id": "chariot",
+  "description": "Un lourd chariot à ridelles, peint en vert il y a bien longtemps, chargé de caisses de conserves, de sacs de farine et de tonnelets sous une bâche goudronnée. Deux mules grises, Prudence et Patience, somnolent dans les brancards ; sur la planche du siège, une inscription peinte à la main : « Magasin général – Pas de crédit ».",
+  "repliques": [
+    "Une des mules brait à fendre l'âme.",
+    "Les caisses de conserves s'entrechoquent dans un bruit de fer-blanc.",
+    "La bâche claque au vent sur le chargement."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 6,
+      "lieu": "magasin_general",
+      "activite": "rangé dans la ruelle derrière le magasin général, bâche tendue sur les caisses"
+    },
+    {
+      "de": 6,
+      "a": 8,
+      "lieu": "gare",
+      "activite": "charge à la gare les caisses arrivées de Saint Denis par le train"
+    },
+    {
+      "de": 8,
+      "a": 11,
+      "lieu": "magasin_general",
+      "activite": "décharge devant le magasin ; l'épicier compte chaque caisse deux fois"
+    },
+    {
+      "de": 11,
+      "a": 17,
+      "lieu": "rue_principale",
+      "activite": "stationne dans la rue principale, chargé pour la tournée des fermes"
+    },
+    {
+      "de": 17,
+      "a": 24,
+      "lieu": "magasin_general",
+      "activite": "rangé derrière le magasin général, les mules dételées à l'ombre"
+    }
+  ],
+  "reactions": {
+    "atteler@outil": [
+      {
+        "texte": "Tu détaches Patience et passes le collier à {cible}. L'autre mule, Prudence, te lance un regard de profond mépris et refuse d'avancer d'un pas tant que sa compagne n'est pas revenue."
+      },
+      {
+        "texte": "L'épicier sort du magasin en trombe : « Qui t'a permis de toucher à mon attelage ? Cinquante cents de l'heure, payés d'avance ! » Tu paies en soupirant, et il mord la pièce pour vérifier.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Dans la ruelle derrière le magasin, tu attelles {cible} au chariot sans allumer de lanterne. Les caisses de conserves tintent à chaque mouvement, et une fenêtre s'éclaire à l'étage.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Entre les brancards, {cible} renâcle, piaffe, puis se résigne. Un cheval de selle réduit à tirer des sacs de farine : il te le fera payer à la prochaine pomme."
+      },
+      {
+        "texte": "L'épicier te regarde faire et, miracle, ne réclame rien : « Tu me ramènes le chariot avant midi. Et pas une boîte de haricots ne manque, compris ? »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "conduire": [
+      {
+        "texte": "Tu grimpes sur le siège et fais claquer les rênes. Les mules avancent au pas, puis au pas, puis encore au pas : aucune force au monde ne les fera trotter."
+      },
+      {
+        "texte": "L'épicier court derrière toi en agitant son tablier : « Au voleur ! Trente dollars de marchandises ! Shérif ! » Toute la rue principale se retourne sur ton passage.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu fais sortir le chariot de la ruelle dans le noir. Les essieux couinent si fort qu'un chien aboie devant chaque maison ; tu finis par l'abandonner au bord du ruisseau, chargement compris.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "L'épicier te confie les rênes pour livrer la pension : « Six sacs de farine, et tu me rapportes le reçu. Pas de détour par le saloon ! » Il te fait signer un papier avant de te laisser partir.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu quittes la ville derrière deux mules et un chargement de mélasse, le chapeau enfoncé jusqu'aux yeux. Personne ne cherche un hors-la-loi sur le siège d'un chariot d'épicerie.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Dans le virage devant le saloon de Keane, une caisse glisse du chargement et éclate en mille boîtes de haricots qui roulent dans la boue. Les gamins se jettent dessus comme sur de l'or.",
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines le chariot et ses deux mules endormies dans les brancards. Sur ta page, la bâche a des plis de drapé antique et les mules l'air de deux sénateurs qui s'ennuient."
+      },
+      {
+        "texte": "Tu croques l'épicier perché sur la ridelle, son carnet de comptes à la main, et, par malice, tu lui dessines une pièce de monnaie à la place du cœur.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Au clair de lune, le chariot bâché ressemble à une baleine échouée dans la ruelle. Tu traces ses contours, et tu jurerais avoir vu la bâche respirer.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu passes une heure à recopier les étiquettes des caisses : « Café moulu », « Pêches au sirop – Saint Denis », « Mélasse », « Clous ». Ton journal ressemble désormais à un catalogue."
+      }
+    ],
+    "fouiller": [
+      {
+        "texte": "Sous la bâche : sacs de farine, caisses de conserves, un tonnelet de pétrole pour les lampes, des boîtes de cartouches et un rouleau de barbelé pour l'éleveur. Rien qui se glisse dans une poche sans qu'on le remarque."
+      },
+      {
+        "texte": "L'épicier te surprend la main dans une caisse : « Ça se paie, ça ! Même regarder, ça se paie ! » Il note ton signalement dans son carnet, juste en dessous de ses mauvais payeurs.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu fouilles à tâtons et trouves une boîte de pêches au sirop, un paquet de tabac et une caisse de toniques du docteur marquée « Fragile – Miraculeux ». Les pêches, tu les manges sur place.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Entre deux sacs, tu tombes nez à nez avec le gamin des rues, roulé en boule sous la bâche : « Chut ! Je dors ici. Toi, tu fouilles ; moi, je n'ai rien vu. On est quittes ? »"
+      },
+      {
+        "texte": "Sous le siège, une commande d'un fermier qui promet de payer « à la récolte ». En travers, l'épicier a écrit « REFUSÉ » en grosses lettres. Tu remets le papier en place, le cœur serré.",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Tu fais glisser trois boîtes de conserves et un paquet de café sous ta veste. L'épicier ne s'en rendra compte qu'à l'inventaire... et il fait l'inventaire tous les soirs.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 2,
+          "honneur": -1
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre le chariot. Le projectile rebondit sur une caisse de conserves avec un bruit de cloche fêlée, et les deux mules se réveillent en brayant."
+      },
+      {
+        "texte": "Tu lances {outil}, qui crève un sac de farine : un nuage blanc enveloppe le chariot et l'épicier, qui en ressort comme un fantôme furieux : « Un dollar ! Tu me dois un dollar ! » Tu paies pour avoir la paix.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lances {outil} dans l'obscurité de la ruelle. Un « aïe ! » étouffé monte de sous la bâche, puis une petite silhouette détale vers la rue de l'Église.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu lances {outil} par-dessus la ridelle, et le projectile disparaît entre les sacs. Pour remettre la main dessus, il faudra fouiller tout le chargement sous l'œil de l'épicier."
+      },
+      {
+        "texte": "Tu lances {outil} sur le chariot. L'épicier, qui t'avait à l'œil, ramasse le projectile et le range derrière son comptoir : « Confisqué. Tu pourras le racheter, au prix du marché. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "monter_dans": [
+      {
+        "texte": "Tu t'assois sur le siège du conducteur, entre un fouet usé et une boîte à cigares pleine de reçus. Les mules tournent la tête, attendant un ordre qu'elles n'ont aucune intention de suivre."
+      },
+      {
+        "texte": "L'épicier tape sur la ridelle avec sa règle : « Descends de là ! Le chariot, c'est pas un banc public. Le banc public, il est là-bas, et lui, il est gratuit. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu t'installes sur les sacs de farine, sous la bâche. C'est plus moelleux qu'un lit de pension et ça ne coûte rien ; tu t'endors bercé par les ronflements des mules.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Allongé entre les caisses, invisible depuis la rue, tu entends l'adjoint passer en demandant à tout le monde si on t'a vu. Le chariot sent le café moulu et la sécurité.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu grimpes à l'arrière parmi le chargement. Une caisse marquée « Dynamite – Défense de fumer » te fait écraser ta cigarette avec une rapidité remarquable."
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Un chariot à ridelles aux roues couvertes de boue séchée. Une roue avant est voilée et grince à chaque tour ; à l'ombre de l'essieu, le chien errant s'est fait une niche et te regarde d'un œil."
+      },
+      {
+        "texte": "L'épicier fait le tour de son chariot en comptant les caisses à mi-voix, puis recommence depuis le début. Il soupçonne visiblement chaque passant, toi compris.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le chariot est rangé dans la ruelle derrière le magasin. Sous la bâche, quelque chose bouge et respire : un pied nu dépasse entre deux sacs de farine.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu repères les bonnes prises : la caisse de cartouches mal clouée, la boîte à cigares où l'épicier range la monnaie des livraisons, et le moment où il rentre servir un client.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Un chariot bâché, des caisses assez grandes pour un homme, et des mules qui quittent la ville chaque jour sans que personne regarde dedans. Une idée commence à germer.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Prudence et Patience mâchonnent la bâche avec application. Sous la planche du siège, quelqu'un a gravé au canif : « Radin ». L'épicier ne l'a jamais remarqué, ou fait semblant."
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu photographies le chariot avec {outil}. Au moment du déclic, une mule brait et l'autre bâille : la plaque gardera pour l'éternité deux bouches grandes ouvertes."
+      },
+      {
+        "texte": "L'épicier se plante devant l'objectif, bras croisés : « Une photographie de mon chariot ? Ça vaut bien dix cents de droits. » Tu ne paies pas ; il te note dans son carnet.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Le magnésium illumine la ruelle : sur le cliché, on distingue le chariot... et, entre deux sacs, la frimousse effarée du gamin des rues.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu cadres les caisses empilées, les étiquettes de Saint Denis, la bâche en plis : une nature morte de la vie dans l'Ouest. Le crieur de journaux trouve ça « artistique », et ce n'est pas un compliment."
+      }
+    ],
+    "se_cacher": [
+      {
+        "texte": "Tu plonges derrière la grande roue arrière, accroupi dans la boue. Entre les rayons, tu vois passer des bottes, puis les sabots des mules qui piétinent nerveusement."
+      },
+      {
+        "texte": "L'adjoint passe à deux pas, la main sur son étui, en scrutant la rue. Une mule choisit ce moment pour soulager sa vessie juste à côté de toi : tu ne bouges pas d'un pouce, et il passe son chemin.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tapi derrière le chariot dans la ruelle obscure, tu n'es plus qu'une ombre parmi les ombres. Seul le chien errant, couché sous l'essieu, sait que tu es là... et il remue la queue.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "L'épicier te surprend accroupi derrière ses caisses : « Tu te caches de quoi ? D'un créancier ? Je les comprends, moi, les créanciers. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Des balles claquent dans la rue : tu te jettes derrière le chariot. Un sac de farine éclate au-dessus de ta tête et te poudre comme un boulanger, mais les caisses de conserves arrêtent le plomb."
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Tu tires avec {outil} dans le chargement. La balle perce un tonnelet de mélasse, qui se vide en un long filet brun dans la boue ; l'épicier hurle comme si tu avais tiré sur sa mère.",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Au coup de feu, les mules s'emballent et entraînent le chariot au galop dans la rue principale, semant caisses et sacs jusqu'à l'église. Le shérif Malloy te regarde, soupire, et sort son carnet.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Le coup de feu claque dans la ruelle. Un « Tirez pas ! » terrifié jaillit de sous la bâche, et le gamin des rues détale pieds nus, plus vite qu'un lièvre.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu vises avec {outil} une boîte de conserve posée sur la ridelle : elle saute dans une gerbe de haricots. Le chien errant, ravi, se précipite pour lécher les dégâts."
+      },
+      {
+        "texte": "À peine ta balle partie, une décharge de chevrotine te répond depuis la fenêtre du magasin général. Quelques plombs se logent dans ta cuisse ; quelqu'un, là-haut, tient à ses conserves.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -15
+        }
+      }
+    ],
+    "desembourber": [
+      {
+        "texte": "Les roues du chariot sont prises dans la boue jusqu'au moyeu. Tu pousses, les mules tirent, l'épicier encourage de loin sans se salir ; quand ça cède enfin, il te remercie d'un « Bien. », et c'est tout.",
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Après l'effort, l'épicier fouille longuement sa poche et en sort... une pomme un peu talée : « Tiens. Ne le dis à personne. » Tu la croques avant qu'il change d'avis.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2,
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu glisses des planches sous les roues au clair de lune et pousses de toutes tes forces. Le chariot sort de l'ornière ; toi, tu y laisses une botte.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu cales ton épaule contre la ridelle et pousses. Le chariot bascule, une caisse tombe, et c'est finalement le maréchal-ferrant qui, sans un mot, soulève l'arrière d'une seule main.",
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu aides à désembourber le chariot, et dans l'effort une boîte de tabac tombe « toute seule » dans ta poche.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 1,
+          "honneur": -1
+        }
+      }
+    ],
+    "deteler_attelage": [
+      {
+        "texte": "Tu détaches les traits et retires les colliers. Prudence et Patience, libérées, partent d'un même pas vers l'abreuvoir, puis vers les géraniums de la pension.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "L'épicier jaillit du magasin : « Mes mules ! Et qui va les rattraper, toi ? Un dollar pour le dérangement ! » Tu paies pour avoir la paix.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu mènes les deux mules à l'ombre et leur donnes à boire. L'épicier hoche la tête : « Au moins une personne dans cette ville qui prend soin de mon matériel. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu dételles les mules dans le noir et les conduis à l'écurie. Le palefrenier, réveillé, te regarde faire puis grommelle : « Enfin quelqu'un qui pense aux bêtes. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu dételles Patience et l'entraînes vers la sortie de la ville. La mule te suit trois pas, puis s'arrête net et brait à réveiller les morts du cimetière.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      }
+    ],
+    "saboter_roue": [
+      {
+        "texte": "Avec {outil}, tu fais sauter la clavette de la roue arrière. À la première ornière de la tournée, le chariot s'affalera, et l'épicier perdra une journée et quelques caisses.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "L'épicier te surprend accroupi sous son chariot, {outil} à la main : « Tu veux ruiner un honnête commerçant ? Shérif ! SHÉRIF ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu entailles discrètement les rayons d'une roue avec {outil}. Demain, sur la route des fermes, le chariot cassera loin de tout... là où rôdent les O'Driscoll.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu sors {outil}... puis tu penses aux familles des fermes isolées qui attendent leur farine. Tu resserres plutôt la clavette qui avait du jeu.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Le moyeu est si encrassé de boue qu'il te faut dix minutes pour atteindre la clavette avec {outil}. Le chien errant te regarde faire, la tête penchée, comme un complice.",
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ],
+    "decharger_chariot": [
+      {
+        "texte": "Tu passes une heure à porter caisses et sacs dans la réserve du magasin. L'épicier compte chaque colis, puis te tend un dollar comme on s'arrache une dent.",
+        "effets": {
+          "argent": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Sous le soleil, tu décharges six sacs de farine et une caisse de clous. L'épicier te paie... en bons d'achat valables uniquement dans son magasin, et pas le dimanche.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "L'épicier, qui t'a à la bonne, te paie un dollar entier et y ajoute une poignée de bonbons à la menthe : « Si tu le racontes, je nie tout. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Pendant que tu portes une caisse, l'épicier lit le journal du crieur, puis te dévisage : « Finis de décharger, et on n'en parle plus. Gratuitement, bien sûr. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "L'épicier te fait décharger à la lanterne. Une caisse sans étiquette sent l'huile à fusil : « Des cartouches. Si les O'Driscoll savent que j'en ai, ils viendront. » Il te paie deux dollars pour tenir ta langue.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Une caisse t'échappe des mains et éclate sur les marches : vingt pots de confiture de Saint Denis. L'épicier ne dit rien, sort son carnet et calcule ce que tu lui dois.",
+        "effets": {
+          "argent": -2,
+          "relation": -1
+        }
+      }
+    ],
+    "chaparder_chargement": [
+      {
+        "texte": "Tu glisses la main sous la bâche et la ressors avec une boîte de pêches au sirop et un paquet de tabac. Personne n'a rien vu, cette fois.",
+        "effets": {
+          "sante": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Ta main est à peine sous la bâche qu'une règle en bois s'abat dessus : l'épicier, surgi de nulle part. « Voleur ! Shérif ! Au voleur ! » Toute la rue te regarde.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Dans la ruelle obscure, tu remplis tes poches de conserves, de biscuits et de café. De sous la bâche, une petite voix chuchote : « Laisse-m'en un peu, l'ami. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu prends un sac de farine... et le déposes devant la porte de la veuve, qui n'a plus grand monde pour remplir son garde-manger. Voler un radin pour nourrir une veuve : le pasteur hésiterait sur le sermon.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Un homme recherché qui vole des haricots : le gamin des rues t'a vu et se tord de rire. « Ta prime vient de baisser, l'ami ! »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu ouvres une caisse au hasard : des boutons de culotte, par centaines. Tu en bourres ta poche par principe, sans trop savoir pourquoi.",
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ],
+    "tournee_des_fermes": [
+      {
+        "texte": "Tu mènes le chariot de ferme en ferme le long des collines : farine, pétrole, clous. Les fermiers paient en pièces usées ; l'épicier recompte tout au retour et te laisse deux dollars.",
+        "effets": {
+          "argent": 2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Dans une ferme isolée, une femme t'accueille le fusil à la main : les O'Driscoll sont passés la semaine dernière et ont tout pris. Tu lui laisses un sac de farine à crédit ; l'épicier va hurler.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": 2,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Retour de tournée à la nuit tombée : trois cavaliers sortent des bois et tournent autour du chariot. Des O'Driscoll. Ils emportent la caisse de cartouches et te laissent la vie, cette fois.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -10,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu livres les fermes en gardant pour toi un dollar par livraison. L'épicier, qui recompte tout, s'en aperçoit au troisième reçu et te regarde comme un rat dans son garde-manger.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 3,
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Sur la piste, un chasseur de primes croise le chariot et te dévisage longuement. Tu soutiens son regard par-dessus tes sacs de farine ; il passe son chemin, pas tout à fait convaincu.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 2
+        }
+      },
+      {
+        "texte": "Au retour, l'épicier te paie trois dollars et, chose inouïe, un café : « T'es le seul à revenir avec la caisse complète. » Venant de lui, c'est presque une déclaration d'amour.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 3,
+          "relation": 2
+        }
+      }
+    ],
+    "se_glisser_sous_bache": [
+      {
+        "texte": "Tu te glisses sous la bâche entre deux sacs de farine. Il fait chaud, ça sent le café moulu et le pétrole, et une boîte de conserve te rentre dans les côtes."
+      },
+      {
+        "texte": "Recroquevillé sous la bâche, tu sens le chariot partir pour la tournée. À la sortie de la ville, l'adjoint arrête l'épicier, jette un œil distrait au chargement... et le laisse passer.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu soulèves la bâche pour te faufiler dessous : le chien errant a déjà élu domicile sur les sacs. Il grogne, puis te fait de la place en soupirant.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "À peine caché, tu entends l'épicier charger une caisse... directement sur ta jambe. Tu retiens un cri ; il trouve que le chargement est « bien mou aujourd'hui ».",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Sous la bâche, tu découvres un trou percé dans la ridelle, juste à hauteur d'œil. Quelqu'un s'est déjà caché ici avant toi, et plus d'une fois."
+      }
+    ],
+    "dissimuler_sous_bache@outil": [
+      {
+        "texte": "Tu glisses {cible} entre deux sacs de farine, tout au fond du chargement. Il faudrait vider le chariot entier pour mettre la main dessus."
+      },
+      {
+        "texte": "Tu enfonces {cible} sous la bâche pendant que l'épicier a le dos tourné. La mule Prudence, elle, a tout vu, et te fixe d'un œil lourd de reproches.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu enveloppes {cible} dans un vieux sac de jute, que tu enfouis sous une caisse de clous. Demain, le chariot emportera ton secret vers les fermes sans le savoir.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu caches {cible} sous la bâche juste avant que l'adjoint vienne te fouiller. Il te palpe de la tête aux pieds, ne trouve rien et repart, déçu ; reste à tout récupérer avant la tournée.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu glisses {cible} dans une caisse entrouverte. Trop tard, tu lis l'étiquette : « Livraison – Bureau du shérif »."
+      },
+      {
+        "texte": "Tu dissimules {cible} sous les sacs, et tu notes au passage la boîte à cigares où l'épicier range la monnaie des livraisons.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ]
+  }
+}

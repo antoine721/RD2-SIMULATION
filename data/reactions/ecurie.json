@@ -1,0 +1,319 @@
+{
+  "id": "ecurie",
+  "description": "Une grande grange de planches grises au toit pentu, avec une porte coulissante et une enseigne peinte à la main : « ÉCURIE — PENSION — VENTE DE CHEVAUX ». Un fer à cheval est cloué à l'envers au-dessus de l'entrée ; dedans, six box, un grenier à foin et une odeur épaisse de paille, de cuir et de crottin.",
+  "repliques": [
+    "Un cheval hennit dans un box.",
+    "La porte coulissante grince sur son rail.",
+    "Ça sent le foin chaud et le crottin."
+  ],
+  "reactions": {
+    "entrer": [
+      {
+        "texte": "Tu pousses la grande porte coulissante. L'odeur te saute à la gorge : foin chaud, cuir, crottin. Six têtes se tournent vers toi au-dessus des portes de box."
+      },
+      {
+        "texte": "Il fait noir comme dans un four. Une lanterne pend à un clou, mèche baissée ; quelque part, un cheval mâche son foin, et au grenier, quelqu'un ronfle.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Des rais de soleil passent entre les planches et font danser la poussière de paille. Le palefrenier ne s'arrête pas de travailler : « Ferme derrière toi, ça fait des courants d'air. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu te glisses entre les box, à l'abri des regards de la rue. Le palefrenier te jauge : « Les chevaux se fichent de ta prime. Moi aussi, tant que tu paies. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Au fond, le Morgan couche les oreilles dès que tu passes la porte. « Les chevaux sentent les sales types », marmonne le palefrenier sans lever la tête.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Une vieille jument de pension tend le cou pour te renifler au passage. Le palefrenier, du haut de l'échelle : « Elle fait ça qu'aux gens bien. Te monte pas la tête. »",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Une grange grise aux planches disjointes, avec un fer à cheval cloué à l'envers au-dessus de la porte, « pour que la chance tombe sur les chevaux », dit le palefrenier."
+      },
+      {
+        "texte": "Sur le côté, un petit paddock boueux et un abreuvoir. Le Morgan à vendre y tourne en rond en lançant des ruades dans le vide."
+      },
+      {
+        "texte": "Des chevaux passent la tête aux fenêtres des box. Au-dessus, la poulie du grenier hisse une balle de foin, et des brins volent jusque dans la rue.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Une seule lanterne brille à la lucarne du grenier. Dans l'obscurité, on entend les chevaux mâcher et, parfois, la voix basse du palefrenier qui leur parle.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu repères les deux sorties : la porte de derrière, qui donne sur l'enclos, et la lucarne du grenier. Une écurie, c'est aussi un endroit d'où l'on fuit vite.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines la grange de biais, avec sa poulie, sa lucarne et les têtes de chevaux aux fenêtres. Le palefrenier, sur le seuil, a l'air d'un piquet de clôture."
+      },
+      {
+        "texte": "Le croquis prend une page entière de {outil} : l'enseigne peinte, les box, la fourche plantée dans le tas de fumier. Il manque l'odeur, heureusement."
+      },
+      {
+        "texte": "À la lueur de la lune, tu esquisses la silhouette noire de l'écurie. Une seule fenêtre éclairée, au grenier, comme un œil à demi ouvert.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu t'installes sur un tonneau pour dessiner. Un vieux cheval de pension vient poser sa tête par-dessus ton épaule pour regarder {outil} de plus près.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Le flash fait hennir tout l'intérieur. Sur la plaque, l'enseigne sera parfaitement nette ; le palefrenier, furieux sur le seuil, beaucoup moins."
+      },
+      {
+        "texte": "Un gamin des rues se glisse dans le cadre au dernier moment, perché sur l'abreuvoir, et te fait un pied de nez immortel."
+      },
+      {
+        "texte": "Belle lumière : les planches grises, la porte grande ouverte, une jument blanche dans l'encadrement. Tu tiens la photo de la journée.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Trop sombre. Ta plaque ne montrera qu'un rectangle noir et un point de lumière au grenier.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle traverse les planches avec un bruit sec. À l'intérieur, c'est la panique : ruades, hennissements, et la voix du palefrenier qui hurle à la mort.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le coup de feu claque dans la nuit. La lucarne du grenier s'ouvre à la volée et le canon d'une vieille carabine en sort : « Le prochain qui tire sur mes chevaux, je le descends ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu perces l'enseigne d'un trou bien net, entre « PENSION » et « VENTE ». L'adjoint du shérif sort en courant du bureau, la main déjà sur son arme.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Tu tires pour faire diversion. Les chevaux affolés défoncent la porte du paddock et se répandent dans la rue principale, semant la pagaille entre toi et la loi.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la façade. Il rebondit sur les planches avec un bruit sourd, et six têtes de chevaux surgissent aux fenêtres des box, oreilles couchées."
+      },
+      {
+        "texte": "Ton lancer fracasse la lanterne accrochée à la porte. Quelques flammèches tombent dans la paille ; tu les piétines juste à temps, le cœur battant.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Dans le noir, {outil} passe par la lucarne du grenier. Un juron étouffé, un bruit de chute dans le foin, puis la voix du palefrenier : « Qui va là ?! »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu vises l'enseigne et décroches le fer à cheval porte-bonheur, qui tombe dans la boue. Le palefrenier le ramasse, livide : « Tu sais ce que t'as fait ? Sept ans de malheur, pour les chevaux. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ],
+    "dormir_dans_le_foin": [
+      {
+        "texte": "Tu grimpes au grenier et creuses ton nid dans le foin. Le palefrenier ronfle à l'autre bout ; sous toi, les chevaux mâchent toute la nuit. Tu dors comme un enfant.",
+        "effets": {
+          "sante": 15
+        }
+      },
+      {
+        "texte": "Tu te glisses discrètement par la lucarne. À l'aube, une fourche pique le foin à un pouce de ta jambe : « Debout. C'est un dollar, ou une matinée à curer les box. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 10,
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Une sieste dans le foin tiède, entre les rais de soleil et le bourdonnement des mouches. En dessous, le Morgan frappe sa cloison à chacun de tes ronflements.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Enfoui dans le foin, tu entends les bottes de l'adjoint dans l'allée : « Personne là-haut ? » Le palefrenier répond « Que des chevaux », sans vraiment mentir.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Tu te réveilles avec du foin partout et une souris dans ta botte. Ta bourse, elle, a été allégée par le gamin des rues, qui dormait là aussi.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "sante": 10,
+          "argent": -3
+        }
+      }
+    ],
+    "chaparder_avoine": [
+      {
+        "texte": "Tu soulèves un sac d'avoine et le cales sous ton bras. Au fond, le Morgan te regarde faire et hennit fort, comme pour te dénoncer.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Personne ne t'a vu. Ton cheval, lui, mangera comme un roi cette semaine.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le palefrenier te surprend, le sac sur l'épaule : « Pose ça. Ou paie-le. Ou cours vite. » Tu poses. Il garde sa fourche levée jusqu'à ce que tu sois dans la rue.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu prends le sac, hésites, puis laisses deux dollars sur le tonneau à la place. Voler un homme qui nourrit des chevaux, ça ne se fait pas.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -2,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu files par la porte de derrière, le sac sur l'épaule. Une voix crie « Au voleur ! », et ta prime s'alourdit d'un sac d'avoine.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      }
+    ],
+    "incendier_ecurie": [
+      {
+        "texte": "Tu jettes une allumette dans la paille. Les flammes montent en un instant, et les hennissements des chevaux enfermés te glacent le sang. Le palefrenier se jette dans la fumée pour ouvrir les box.",
+        "effets": {
+          "etat": "detruit",
+          "honneur": -5,
+          "prime": 100
+        }
+      },
+      {
+        "texte": "Le feu dévore l'écurie dans la nuit. Toute la ville accourt avec des seaux ; le palefrenier sort le dernier cheval, les cheveux roussis, juste avant que le toit s'effondre. Quelqu'un t'a vu partir en courant.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -5,
+          "prime": 150
+        }
+      },
+      {
+        "texte": "Une fumée noire monte de la paille. Le vacher crie au feu, les seaux passent de main en main depuis le puits, et l'incendie est étouffé avant de prendre. Tous les regards se tournent vers toi.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "normal",
+          "honneur": -3,
+          "prime": 50
+        }
+      },
+      {
+        "texte": "L'allumette se consume entre tes doigts jusqu'à te brûler. Tu la laisses tomber dans la boue. Il y a des choses qu'on ne fait pas, même dans l'Ouest.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu mets le feu à la paille pour attirer la loi loin de toi. Les chevaux affolés jaillissent dans la rue au milieu des flammes… et ta prime double.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -5,
+          "prime": 150
+        }
+      }
+    ]
+  }
+}

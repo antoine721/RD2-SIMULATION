@@ -1,0 +1,561 @@
+{
+  "id": "puits",
+  "description": "Un puits de pierres sèches au bord de la rue de l'Église, coiffé d'un petit toit de bardeaux et d'un treuil qui grince. Un seau cerclé de fer pend au bout d'une corde râpée ; trente pieds plus bas, l'eau noire brille comme un œil. On dit qu'une pièce d'or dort au fond depuis la fondation de la ville.",
+  "repliques": [
+    "Le treuil grince sous le vent.",
+    "Plic. Une goutte tombe du seau dans le noir.",
+    "Tout au fond, quelque chose brille un instant... ou bien c'est la lune."
+  ],
+  "reactions": {
+    "boire_eau": [
+      {
+        "texte": "Tu bois à même le seau : l'eau est glacée, avec un goût de pierre et de fer. Elle te descend jusqu'aux bottes et chasse la poussière de la piste.",
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Une ménagère qui attendait son tour te regarde boire au seau commun d'un œil outré : « On a des louches, à Valentine. On n'est pas des chevaux. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Tu remontes le seau dans le noir et bois à longues gorgées. Quelque chose de petit et de vivant te chatouille la lèvre ; tu préfères ne pas savoir quoi.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "L'eau du puits est la meilleure de la ville, et de loin meilleure que le whisky frelaté du Smithfield's. Tu en bois jusqu'à sentir ton ventre clapoter.",
+        "effets": {
+          "sante": 15
+        }
+      },
+      {
+        "texte": "Tu bois vite, une main sur ton arme, l'œil sur la rue principale où passe l'adjoint. Même l'eau a un goût de fuite.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines le puits, son petit toit de bardeaux, le treuil et la corde râpée. Derrière, le clocher de l'église pointe vers le ciel comme un doigt accusateur."
+      },
+      {
+        "texte": "Pendant que tu dessines, deux fillettes venues tirer de l'eau se penchent sur ton carnet en gloussant : « T'as oublié le seau ! Et le monsieur, il a pas de nez ! »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Au clair de lune, tu dessines la margelle et le trou noir au milieu. Plus tu noircis le centre de la page, plus il semble profond, comme si le dessin aussi avait un fond.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu passes une heure à recopier les initiales gravées dans les pierres de la margelle : des cœurs, des dates, et un « T.H. 1871 » à demi effacé, entouré d'une pièce dessinée au couteau."
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} dans le puits. Il faut compter jusqu'à trois avant d'entendre le « plouf » tout en bas, suivi d'un long écho qui remonte comme un soupir."
+      },
+      {
+        "texte": "Tu lances {outil} par-dessus la margelle. Le pasteur, qui passait, s'arrête net : « C'est l'eau de toute la rue, mon fils. On n'y jette pas ses péchés. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu lances {outil} dans le noir du puits. Le bruit de l'eau tarde, puis vient un « clang » métallique, comme si le projectile avait heurté quelque chose, tout au fond.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu lances {outil} vers le puits, mais le projectile ricoche sur la margelle et roule dans la boue de la rue. Le puits, visiblement, n'en voulait pas."
+      },
+      {
+        "texte": "Tu lances {outil} dans le puits en ricanant. Demain matin, toute la rue de l'Église boira une eau au drôle de goût, et quelqu'un finira par savoir que c'est toi.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ],
+    "nager": [
+      {
+        "texte": "Tu enjambes la margelle et te laisses glisser le long de la corde jusqu'à l'eau. Elle est si froide que ton cœur s'arrête une seconde ; tu barbotes dans un cercle de ciel minuscule, très loin au-dessus de toi.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Ta tête émerge de l'eau au moment où une ménagère fait descendre le seau. Son hurlement ameute la moitié de la rue, et il faut trois hommes et une corde pour te remonter, sous les huées.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Personne ne t'a vu descendre. Remonter, c'est une autre affaire : pierres glissantes, corde râpée... tu passes une heure à grelotter dans l'eau noire avant de t'en sortir.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -15
+        }
+      },
+      {
+        "texte": "Tu plonges pour repêcher le seau tombé au fond, que les ménagères pleuraient depuis ce matin. Tu remontes bleu de froid, le seau à la main, sous les applaudissements de la rue de l'Église.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1,
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Ton pied touche le fond vaseux : quelque chose de rond et de froid roule sous ta botte. Une pièce ? Un caillou ? Le froid te chasse avant que tu puisses vérifier.",
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Tu te caches dans le puits, accroché à la corde, le nez au ras de l'eau. Là-haut, l'adjoint s'appuie sur la margelle pour reprendre son souffle, puis repart sans baisser les yeux.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Les pierres de la margelle sont creusées par des générations de seaux. Penché au-dessus, tu vois ton propre reflet trembler tout au fond, minuscule."
+      },
+      {
+        "texte": "Une file de ménagères attend son tour au puits en échangeant les nouvelles : l'O'Driscoll coffré hier soir, la danseuse qui rêve de Saint Denis, le prix scandaleux du bain à l'hôtel.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Au fond du puits, quelque chose brille sous la lune, rond et doré. La pièce de la légende ? Ou juste un reflet que Valentine se raconte depuis trente ans ?",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Sur le poteau du treuil, une plaque de fer-blanc clouée : « Eau publique – Interdit d'y laver le linge – Par ordre du shérif ». Quelqu'un a ajouté au couteau : « et les cochons »."
+      },
+      {
+        "texte": "Un puits profond, un peu à l'écart, à deux pas du cimetière : l'endroit rêvé pour faire disparaître ce qui doit disparaître. Tu chasses l'idée... ou pas.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Du puits, on surveille toute la rue de l'Église et le carrefour de la rue principale. Une bonne place pour faire semblant de boire en guettant le bureau du shérif.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "pecher": [
+      {
+        "texte": "Tu laisses descendre ta ligne au fond du puits. Après une longue attente, ça mord : tu remontes une vieille botte, puis une grenouille indignée qui saute dans la rue."
+      },
+      {
+        "texte": "Un attroupement se forme autour de toi, et le gamin des rues prend les paris sur ce que tu vas sortir. Tu remontes un fer à cheval rouillé ; il empoche les mises.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Ta ligne s'accroche à quelque chose de lourd. Tu tires doucement et ramènes un vieux revolver rouillé, barillet plein. Quelqu'un, un jour, a voulu s'en débarrasser.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu pêches avec {outil} jusqu'à ce que la ligne casse sur une pierre. Le pasteur, qui t'observait depuis le perron, secoue la tête : « Même les apôtres pêchaient dans un lac, mon fils. »"
+      },
+      {
+        "texte": "L'hameçon accroche une pièce de cuivre, puis une autre : les vœux de toute une ville. Tu les rejettes au fond une à une ; on ne vole pas les espoirs des gens.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Au bout de ta ligne, une pièce d'or ternie ! La légende ! Elle se décroche à deux pieds de la margelle et retombe dans le noir. Le puits garde son trésor."
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu photographies le puits avec {outil}, le clocher en arrière-plan. Une belle carte postale de l'Ouest, à ceci près qu'un chien lève la patte contre la margelle au moment du déclic."
+      },
+      {
+        "texte": "Deux ménagères prennent la pose de chaque côté du puits, seau à la main, très dignes. Il faut tenir dix secondes sans bouger ; la plus jeune éternue à la huitième.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Ton éclair de magnésium illumine le fond du puits une fraction de seconde. Sur la plaque développée, on croira voir, tout au fond, un éclat rond et doré.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu cadres le treuil et le seau qui pend, à contre-jour. Le pasteur s'approche : « Photographiez donc l'église, plutôt. Elle a besoin de dons pour son toit. »"
+      }
+    ],
+    "se_laver": [
+      {
+        "texte": "Tu remontes le seau et te le renverses sur la tête. L'eau glacée te coupe le souffle, et la boue de la piste ruisselle en rigoles brunes jusqu'au milieu de la rue.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Torse nu au puits, en plein jour, à deux pas de l'église : une dame en noir te frappe d'un coup d'ombrelle, et le pasteur te rappelle que l'hôtel fait des bains à cinquante cents.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu te laves à grands seaux sous la lune, en grelottant. C'est gratuit, contrairement à la baignoire de l'hôtel, mais tu claques des dents jusqu'à l'aube.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu trempes ta chemise sale et tes bottes directement dans le seau, puis le redescends au fond. Toute la rue boira ta crasse demain matin.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu te passes de l'eau sur le visage et la nuque. Pour la première fois depuis des jours, tu ne sens plus le cheval ; juste un peu le puits.",
+        "effets": {
+          "sante": 5
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Tu tires avec {outil} : la balle tinte contre la margelle et ricoche en sifflant vers le clocher. Le pasteur sort sur le perron, le visage fermé, la main là où pendait autrefois son colt.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu tires avec {outil} dans le puits : la détonation s'y engouffre et ressort décuplée, comme un coup de canon. Toute la rue se jette à terre, et l'adjoint accourt, l'arme déjà au poing.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu tires avec {outil} dans le noir du puits. Un écho interminable, puis le « clang » d'une balle sur du métal, tout au fond. Il y a quelque chose, en bas.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Ta balle coupe net la corde du treuil : le seau dégringole au fond dans un fracas de fer. Les ménagères de la rue de l'Église devront s'en passer jusqu'à ce que quelqu'un le repêche.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu tires avec {outil} sur le seau, qui saute ; la balle, elle, rebondit sur la pierre et te revient dans la cuisse. La pierre ne pardonne rien.",
+        "effets": {
+          "sante": -20
+        }
+      }
+    ],
+    "remplir_sa_gourde": [
+      {
+        "texte": "Tu remplis ta gourde au seau : une eau claire et froide qui gardera la fraîcheur de la pierre jusqu'au soir.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu fais la queue derrière trois ménagères pour remplir ta gourde. Le temps que ton tour arrive, tu en sais plus que le barman de Keane sur les secrets de Valentine.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu remplis ta gourde à tâtons dans le noir, et une bonne partie de l'eau finit dans ta botte. Tant pis : elle est bonne.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu remplis ta gourde à ras bord, et tu en remplirais une deuxième si tu l'avais. Avec une prime sur la tête, on ne sait jamais combien de temps on passera loin des villes.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      }
+    ],
+    "se_debarrasser_dans_eau@outil": [
+      {
+        "texte": "Tu laisses tomber {cible} dans le puits. Un « plouf » lointain, des cercles sur l'eau noire, puis plus rien : le puits garde ses secrets mieux qu'un notaire."
+      },
+      {
+        "texte": "Tu fais passer {cible} par-dessus la margelle, mais une fillette venue tirer de l'eau a tout vu. Elle te fixe, puis court vers l'église en appelant le pasteur.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Dans la nuit noire, tu jettes {cible} au fond du puits. L'objet rejoint la pièce d'or de la légende, les vœux des enfants et tout ce que Valentine a voulu oublier depuis trente ans.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu jettes {cible} dans le puits : une pièce à conviction de moins. Si l'adjoint vient fouiller tes affaires, il ne trouvera rien d'intéressant.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu laisses tomber {cible} dans le puits sans même regarder. Demain, quelqu'un tirera un seau d'eau au goût étrange et ne saura jamais pourquoi.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ],
+    "remonter_seau": [
+      {
+        "texte": "Tu tournes la manivelle : le treuil grince, la corde se tend, et le seau remonte en débordant d'une eau si claire qu'on y voit les veines du bois."
+      },
+      {
+        "texte": "Tu remontes le seau pour une vieille dame qui n'a plus la force de tourner la manivelle. Elle te bénit trois fois et te pince la joue.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Le seau remonte plus lourd que d'habitude. Dedans, avec l'eau, une grenouille énorme te dévisage, outrée qu'on l'ait dérangée.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le treuil se coince à mi-course. Tu forces, la manivelle t'échappe et revient te cogner les phalanges dans un claquement sec.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu remontes seau après seau pour remplir l'abreuvoir de la rue principale, à sec depuis ce matin. Les chevaux de la ville te doivent une fière chandelle.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Au fond du seau, avec l'eau, brille une petite pièce de cuivre : le vœu de quelqu'un, remonté par hasard. Tu la rejettes au fond, par superstition."
+      }
+    ],
+    "jeter_piece_voeu": [
+      {
+        "texte": "Tu lances un dollar par-dessus la margelle en faisant un vœu. La pièce tournoie, brille un instant, puis disparaît sans un bruit. Rien ne se passe, mais tu te sens un peu plus léger.",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Le gamin des rues te regarde faire et soupire : « Tu sais combien de pains ça fait, au fond de ce puits ? » Puis il te raconte la légende de la pièce d'or du vieux Tobias, chercheur d'or, jetée là en 1871 le jour où il a trouvé son filon.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "La légende dit qu'à minuit les vœux comptent double. Tu jettes ta pièce et, au moment où elle touche l'eau, la cloche de l'église sonne un coup, un seul.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Tu fais le vœu que le coffre de la diligence soit plein jeudi. Ça ne coûte qu'un dollar, et le diable aussi écoute au fond des puits.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Tu souhaites que la veuve obtienne enfin justice contre les O'Driscoll. Ta pièce touche l'eau, et pour une fois le treuil se tait.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Tu fais le vœu qu'on oublie ton visage. Au même instant, le crieur de journaux passe au bout de la rue en annonçant ta prime à pleins poumons. Le puits a de l'humour.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      }
+    ],
+    "descendre_dans_le_puits": [
+      {
+        "texte": "Tu attaches {outil} au treuil et descends, les pieds calés contre les pierres suintantes. Au fond, de l'eau jusqu'à la taille, de la vase, des pièces de cuivre par dizaines... et un froid qui te mord les os.",
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Tu descends à la seule lueur d'une allumette serrée entre tes dents. Au fond, ta main fouille la vase et se referme sur une pièce lourde : vingt dollars en or, frappés en 1871. Celle du vieux Tobias.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 20,
+          "sante": -10
+        }
+      },
+      {
+        "texte": "À mi-descente, une ménagère se penche et hurle « Au voleur de puits ! ». Tu remontes sous les regards de toute la rue ; l'adjoint note ton nom pour « trouble à l'eau publique ».",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Dans une niche entre les pierres, à mi-hauteur, quelqu'un a caché une boîte en fer enveloppée de toile cirée. Dedans : des lettres d'amour jamais envoyées et une alliance trop petite pour un homme."
+      },
+      {
+        "texte": "Au fond, tu ramasses une pleine poignée de pièces de cuivre : les vœux des enfants de la ville. Tu les déposes dans le tronc de l'église ; le pasteur te serre la main longuement, sans un mot.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 2,
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Le puits est la meilleure cachette de Valentine : tu attends au fond, de l'eau aux genoux, que le chasseur de primes ait fini de fouiller la rue. Il passe deux fois à côté de la margelle.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Ton pied dérape à mi-hauteur et tu tombes les six derniers pieds dans l'eau glacée. C'est le maréchal-ferrant qui finit par te hisser d'une seule main, sans un mot.",
+        "effets": {
+          "sante": -20
+        }
+      }
+    ],
+    "crier_dans_puits": [
+      {
+        "texte": "Tu cries ton nom dans le puits. L'écho te le renvoie trois fois, de plus en plus grave, jusqu'à ressembler à la voix d'un inconnu."
+      },
+      {
+        "texte": "Ton « Ohé ! » résonne dans le puits et fait sursauter le pasteur, qui lâche son recueil de cantiques. Les enfants, eux, trouvent l'idée excellente et crient avec toi pendant une heure.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu cries dans le puits et, après l'écho, il te semble entendre une réponse, faible, venue du fond. Le vent, sans doute. Sans doute.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu hurles des jurons dans le puits pour le plaisir de l'écho. Le pasteur sort de l'église : « Le Seigneur entend aussi ce qui sort des puits, mon fils. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu cries « Je suis innocent ! » dans le puits. L'écho, peu convaincu, te répond « ...cent... cent... cent... », comme le montant de ta prime.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ]
+  }
+}

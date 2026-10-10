@@ -1,0 +1,302 @@
+{
+  "id": "saloon_keane",
+  "description": "Un saloon à deux étages en planches peintes, dont la fausse façade proclame « KEANE'S SALOON » en lettres d'or écaillées. Derrière la porte battante : un long comptoir en acajou venu de Saint Denis, un miroir piqué, un piano criblé de vieilles balles et un escalier qui grimpe vers les chambres de l'étage.",
+  "repliques": [
+    "La porte battante claque deux fois, puis se balance.",
+    "Des éclats de rire et un piano faux s'échappent par les fenêtres.",
+    "L'enseigne grince au vent."
+  ],
+  "reactions": {
+    "entrer": [
+      {
+        "texte": "Tu pousses la porte battante. Odeur de sciure, de cigare et de whisky de Saint Denis. Le barman lève les yeux de son verre : « Bienvenue chez Keane ! »"
+      },
+      {
+        "texte": "La porte battante s'ouvre sur un mur de bruit : rires, jurons, cartes qui claquent, et un piano qui joue faux avec beaucoup de conviction. Une danseuse te sourit depuis l'escalier.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "La salle est presque vide. Un rayon de soleil poussiéreux tombe sur le comptoir en acajou, le gros chat roux dort sur le piano, et le pianiste répète une gamme, à jeun.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "À ton entrée, les conversations meurent. Un client repose son verre, un autre glisse la main vers sa ceinture, et le barman range discrètement la caisse. Ton visage est sur le panneau, dehors.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Le barman t'appelle d'un bout à l'autre de la salle et deux clients se poussent pour te faire une place au comptoir. À Valentine, ta réputation entre avant toi.",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Quelques clients respectables se lèvent, laissent une pièce sur la table et sortent par la porte de derrière. Le pianiste attaque, par pure coïncidence, une marche funèbre.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Le barman te pointe du doigt avant que la porte ait fini de se balancer : « Toi ! Interdit de séjour chez Keane ! » Deux clients costauds se lèvent pour appuyer son argument.",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle fait voler en éclats une vitre de la façade. À l'intérieur, le piano s'arrête, quelqu'un hurle, et une dizaine de chapeaux plongent sous les tables.",
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu tires dans l'enseigne : le K de KEANE'S pend maintenant de travers. Le barman sort sur le perron, livide : « Tu sais combien coûte un peintre à Valentine ? »",
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "La détonation déchire la nuit. À l'intérieur, les lampes s'éteignent une à une, et la porte du bureau du shérif, juste à côté, s'ouvre avec fracas.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 15,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Le coup de feu fait cabrer les chevaux attachés devant le saloon. L'adjoint du shérif jaillit du bureau voisin, le revolver déjà au poing, beaucoup trop vite.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la façade. Une fenêtre vole en éclats et une voix furieuse jaillit de l'intérieur : « Qui a fait ça ? »",
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Ton projectile heurte la porte battante, qui te le renvoie gentiment aux pieds en se balançant. Deux ivrognes assis sur le perron applaudissent."
+      },
+      {
+        "texte": "Tu lances {outil} vers le balcon de l'étage. Une fenêtre s'ouvre, un client en caleçon long passe la tête et t'injurie en trois langues.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Ton geste attire tous les regards du perron. Quelqu'un plisse les yeux, compare ton visage à l'affiche, et file vers le bureau du shérif.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Deux étages de planches peintes, une fausse façade et une enseigne dorée : KEANE'S SALOON. Des chevaux attendent à la barre d'attache en chassant les mouches de la queue."
+      },
+      {
+        "texte": "Sur le chambranle de la porte battante, tu remarques une vieille trace de balle bouchée au mastic et repeinte. Le saloon « respectable » ne l'a pas toujours été."
+      },
+      {
+        "texte": "Les fenêtres brillent d'une lumière jaune et chaude. Des silhouettes passent derrière les rideaux, un éclat de rire déborde dans la rue, puis un accord faux.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le barman balaie la sciure sur le perron. Au balcon de l'étage, une robe à volants sèche au soleil, tournée vers la route de Saint Denis.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines la façade, son enseigne dorée et ses chevaux à la barre. Un gamin des rues s'arrête pour regarder par-dessus ton épaule et te demande si tu travailles pour la police."
+      },
+      {
+        "texte": "Assis sur le trottoir d'en face, tu croques la porte battante. Le temps de finir, elle a laissé passer onze clients, deux ivrognes et un chat."
+      },
+      {
+        "texte": "Tu dessines les fenêtres éclairées et les silhouettes derrière les rideaux. Dans {outil}, le saloon ressemble à une lanterne posée dans la boue.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu installes ton appareil dans la boue de la rue. Le barman et trois clients se précipitent sur le perron pour figurer sur la photo, raides comme des piquets."
+      },
+      {
+        "texte": "Le flash au magnésium illumine la façade comme un éclair. Un cheval se cabre à la barre d'attache, et quelqu'un crie « Les O'Driscoll ! » avant de comprendre.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "En plein soleil, la façade est parfaite. Ce n'est qu'au tirage que tu remarqueras l'homme flou qui sortait par la porte de derrière.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "entrer_a_cheval": [
+      {
+        "texte": "Tu pousses la porte battante avec le poitrail de ton cheval. Les clients plongent, les verres volent, et le barman hurle : « Pas le cheval ! Pas sur le plancher ciré ! »",
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Ton cheval se cogne à la poutre du plafond, recule et renverse deux chaises et un joueur de dominos. Tu ressors à reculons sous les huées.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Les ivrognes acclament ton entrée comme un numéro de cirque. Ton cheval boit dans un seau de bière, et le pianiste, ravi, attaque une charge de cavalerie.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le barman, médusé, finit par éclater de rire : « Bon. Il prend un whisky aussi, ton cheval ? » Tu ressors avec dignité, en t'excusant pour le crottin.",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Entrer à cheval a au moins un avantage : tout le monde te voit. Et tout le monde reconnaît ton visage de l'affiche. Quelqu'un court déjà chercher Malloy.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      }
+    ],
+    "monter_a_l_etage": [
+      {
+        "texte": "L'escalier grince à chaque marche. En haut, un couloir étroit, cinq portes, une odeur de lavande et de tabac froid. Derrière l'une d'elles, quelqu'un ronfle comme une scie de long."
+      },
+      {
+        "texte": "Le barman te rattrape par la manche au milieu de l'escalier : « L'étage, c'est pour les clients qui ont une clé. Une chambre, c'est un dollar. »"
+      },
+      {
+        "texte": "Dans le couloir obscur, une porte s'entrouvre : une femme en peignoir te dévisage. « Tu n'es pas le monsieur de Saint Denis qu'on m'avait promis. » La porte se referme.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Une chambre est restée ouverte, le lit défait. Sur la table de nuit, un horaire des trains pour Saint Denis, annoté au crayon, et un flacon de parfum vide.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Du haut de l'escalier, la fenêtre du palier offre une vue parfaite sur la rue, le bureau du shérif et le panneau des avis de recherche. Une bonne place pour voir venir les ennuis.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "s_accouder_comptoir": [
+      {
+        "texte": "Tu t'accoudes à l'acajou poli par vingt ans de coudes. Le barman pose un sous-bock devant toi sans un mot : il attend que tu parles, et toi, qu'il commence."
+      },
+      {
+        "texte": "Dans le miroir piqué derrière le comptoir, tu vois toute la salle sans te retourner : le joueur de poker qui ajuste sa manche, le chat sur le piano, la porte battante."
+      },
+      {
+        "texte": "Coincé entre un vacher qui chante et un voyageur de commerce qui vend des corsets, tu apprends en dix minutes trois rumeurs et une recette de ragoût.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le comptoir est encore humide de serpillière. Le barman, désœuvré, te raconte l'histoire de l'acajou, venu par bateau puis par train, jusqu'à ce que tu le supplies d'arrêter.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Dans le miroir, deux clients échangent un regard et un troisième déplie un avis de recherche. Le barman essuie le même verre de plus en plus vite.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "declencher_bagarre_generale": [
+      {
+        "texte": "Tu renverses le verre d'un vacher costaud. Dix secondes plus tard, tout le saloon se bat : chaises qui volent, bouteilles qui éclatent, et le pianiste qui joue plus fort pour couvrir le vacarme.",
+        "effets": {
+          "prime": 5,
+          "honneur": -1,
+          "sante": -15
+        }
+      },
+      {
+        "texte": "La bagarre dégénère : quelqu'un passe à travers la fenêtre, le barman se terre sous le comptoir et le lustre se balance dangereusement. Tu en ressors avec un œil au beurre noir et un chapeau qui n'est pas le tien.",
+        "effets": {
+          "prime": 5,
+          "honneur": -1,
+          "sante": -20
+        }
+      },
+      {
+        "texte": "La salle est pleine et ivre : une bousculade suffit. En une minute, le saloon de Keane ressemble au Smithfield's d'en face. L'adjoint arrive, dégaine trop vite et tire dans le plafond.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "sante": -20
+        }
+      },
+      {
+        "texte": "Il n'y a que trois clients et le chat. Ta bagarre générale se résume à un échange de gifles avec un vieux joueur de dominos, qui gagne.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Personne ne veut se battre avec toi : on t'offre un verre à la place. Ta bagarre générale finit en tournée générale, et c'est toi qui paies.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -8
+        }
+      }
+    ]
+  }
+}
