@@ -91,7 +91,12 @@ def _conditions_remplies(conditions: list[str], joueur: dict) -> bool:
     return True
 
 
-def generer(verbes: dict, entites: dict, situation: dict | None = None) -> list[Action]:
+def generer(
+    verbes: dict,
+    entites: dict,
+    situation: dict | None = None,
+    verifier_conditions: bool = True,
+) -> list[Action]:
     """Toutes les actions possibles.
 
     Sans situation : le catalogue théorique complet (conditions ignorées).
@@ -99,7 +104,7 @@ def generer(verbes: dict, entites: dict, situation: dict | None = None) -> list[
     """
     actions = []
     for vid, verbe in verbes.items():
-        if situation is not None and not _conditions_remplies(
+        if situation is not None and verifier_conditions and not _conditions_remplies(
             verbe.get("conditions", []), situation["joueur"]
         ):
             continue

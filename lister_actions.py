@@ -7,6 +7,7 @@ Exemples :
     python3 lister_actions.py --entite ton_cheval            # tout ce qu'on peut faire avec une entité
     python3 lister_actions.py --situation situations/camp.json   # ce qui est possible maintenant
     python3 lister_actions.py --sortie catalogue_actions.md  # écrire dans un fichier
+    python3 lister_actions.py --ville data/villes/valentine.json --entite sherif_malloy
 """
 
 import argparse
@@ -14,18 +15,24 @@ import sys
 from pathlib import Path
 
 from simulation.catalogue import charger, charger_situation, en_markdown, generer, resume, verifier
+from simulation.ville import actions_ville, charger_ville, entites_jouables
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Liste toutes les actions possibles.")
     parser.add_argument("--situation", type=Path, help="fichier JSON décrivant l'état du monde")
+    parser.add_argument("--ville", type=Path, help="fichier JSON d'une ville (data/villes/...)")
     parser.add_argument("--entite", help="ne garder que les actions impliquant cette entité")
     parser.add_argument("--resume", action="store_true", help="afficher seulement les totaux")
     parser.add_argument("--sortie", type=Path, help="écrire le résultat dans ce fichier")
     args = parser.parse_args(argv)
 
-    verbes, entites = charger()
-    problemes = verifier(verbes, entites)
+    if args.ville and args.situation:
+        parser.error("--ville et --situation ne vont pas ensemble")
+    verbes, base = charger()
+    ville = charger_ville(args.ville) if args.ville else None
+    entites = entites_jouables(ville, base) if ville else base
+    problemes = verifier(verbes, {**base, **entites})
     for probleme in problemes:
         print(f"⚠ {probleme}", file=sys.stderr)
     if problemes:
@@ -33,6 +40,8 @@ def main(argv: list[str] | None = None) -> int:
 
     situation = None
     titre = "Catalogue complet des actions possibles"
+    if ville:
+        titre = f"Actions possibles à {ville['nom']}"
     if args.situation:
         try:
             situation = charger_situation(args.situation, entites)
@@ -42,7 +51,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.entite and args.entite not in entites:
         parser.error(f"entité inconnue : {args.entite}")
 
-    actions = generer(verbes, entites, situation)
+    actions = actions_ville(ville, verbes, base) if ville else generer(verbes, entites, situation)
     if args.entite:
         actions = [a for a in actions if args.entite in (a.cible, a.outil)]
         titre += f" impliquant {entites[args.entite]['nom']}"
