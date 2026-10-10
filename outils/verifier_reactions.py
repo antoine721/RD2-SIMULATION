@@ -194,6 +194,11 @@ def a_faire(eid: str, ville: dict, verbes: dict, base: dict) -> str:
     chemin = DOSSIER_REACTIONS / f"{eid}.json"
     donnees = json.loads(chemin.read_text(encoding="utf-8")) if chemin.exists() else None
     _, _, cles = contexte(eid, donnees, ville, verbes, base)
+    deja = set((donnees or {}).get("reactions", {}))
+    titre = "CLÉS DE « reactions » À ÉCRIRE"
+    if deja:
+        cles = {cle: actions for cle, actions in cles.items() if cle not in deja}
+        titre = f"CLÉS MANQUANTES ({len(deja)} déjà écrites)"
     lignes = [
         f"ENTITÉ  {eid} — {entite['nom']} ({entite['categorie']}"
         + (f", métier : {entite['metier']}" if "metier" in entite else "") + ")",
@@ -201,7 +206,7 @@ def a_faire(eid: str, ville: dict, verbes: dict, base: dict) -> str:
         f"TAGS    {', '.join(entite['tags'])}",
         f"FICHIER {chemin}",
         "",
-        f"CLÉS DE « reactions » À ÉCRIRE ({len(cles)}) — au moins {MIN_VARIANTES} variantes chacune :",
+        f"{titre} : {len(cles)} — au moins {MIN_VARIANTES} variantes chacune :",
     ]
     for cle in sorted(cles):
         exemples = cles[cle]

@@ -10,7 +10,18 @@ import json
 from pathlib import Path
 
 from simulation.catalogue import charger
-from simulation.ville import actions_ville, charger_reactions, charger_ville, cles_reactions
+from simulation.ville import (
+    DOSSIER_EVENEMENTS,
+    DOSSIER_TEMOINS,
+    FICHIER_JOUEUR,
+    JOURS,
+    actions_joueur,
+    actions_ville,
+    charger_dossier,
+    charger_reactions,
+    charger_ville,
+    cles_reactions,
+)
 
 RACINE = Path(__file__).resolve().parent
 MODELE = RACINE / "carte" / "modele.html"
@@ -27,6 +38,33 @@ def _rang(categorie: str) -> int:
     return ORDRE_CATEGORIES.index(categorie) if categorie in ORDRE_CATEGORIES else len(ORDRE_CATEGORIES)
 
 
+def _groupes(cles: dict, verbes: dict) -> list[dict]:
+    groupes = []
+    for cle, liste in cles.items():
+        verbe = verbes[cle.removesuffix("@outil")]
+        groupes.append({
+            "cle": cle,
+            "categorie": verbe["categorie"],
+            "conditions": verbe.get("conditions", []),
+            "options": [{"texte": a.texte, "cible": a.cible, "outil": a.outil} for a in liste],
+        })
+    groupes.sort(key=lambda g: (_rang(g["categorie"]), g["options"][0]["texte"]))
+    return groupes
+
+
+def _joueur(ville: dict, verbes: dict, base: dict) -> dict:
+    donnees = json.loads(FICHIER_JOUEUR.read_text(encoding="utf-8")) if FICHIER_JOUEUR.exists() else {}
+    verbes = {**verbes, **donnees.get("nouveaux_verbes", {})}
+    cles: dict = {}
+    for a in actions_joueur(ville, verbes, base):
+        cles.setdefault(a.verbe, []).append(a)
+    return {
+        "description": donnees.get("description", "Un voyageur armé, de passage à Valentine."),
+        "actions": _groupes(cles, verbes),
+        "reactions": donnees.get("reactions", {}),
+    }
+
+
 def donnees_carte() -> dict:
     verbes, base = charger()
     ville = charger_ville()
@@ -35,16 +73,7 @@ def donnees_carte() -> dict:
 
     entites = {}
     for eid, entite in ville["entites"].items():
-        groupes = []
-        for cle, liste in cles_reactions(eid, actions).items():
-            verbe = verbes[cle.removesuffix("@outil")]
-            groupes.append({
-                "cle": cle,
-                "categorie": verbe["categorie"],
-                "conditions": verbe.get("conditions", []),
-                "options": [{"texte": a.texte, "cible": a.cible, "outil": a.outil} for a in liste],
-            })
-        groupes.sort(key=lambda g: (_rang(g["categorie"]), g["options"][0]["texte"]))
+        groupes = _groupes(cles_reactions(eid, actions), verbes)
         fiche = {"id": eid, **{k: entite[k] for k in CHAMPS_VILLE if k in entite}}
         fiche.update({k: reactions.get(eid, {}).get(k) for k in CHAMPS_REACTIONS})
         fiche["reactions"] = fiche["reactions"] or {}
@@ -53,14 +82,30 @@ def donnees_carte() -> dict:
 
     noms = {eid: e["nom"] for eid, e in base.items()}
     noms.update({eid: e["nom"] for eid, e in ville["entites"].items()})
+    evenements = {}
+    for theme in charger_dossier(DOSSIER_EVENEMENTS).values():
+        for evid, ev in theme["evenements"].items():
+            evenements[evid] = {"id": evid, "theme": theme["theme"], **ev}
+    temoins = {}
+    for groupe in charger_dossier(DOSSIER_TEMOINS).values():
+        temoins.update(groupe)
+    joueur = _joueur(ville, verbes, base)
     return {
         "ville": {k: ville[k] for k in ("nom", "annee", "taille")},
+        "jours": JOURS,
         "lieux": ville["lieux"],
         "entites": entites,
         "noms": noms,
+        "evenements": evenements,
+        "temoins": temoins,
+        "joueur": joueur,
         "stats": {
-            "actions": sum(len(g["options"]) for e in entites.values() for g in e["actions"]),
-            "variantes": sum(len(v) for e in entites.values() for v in e["reactions"].values()),
+            "actions": sum(len(g["options"]) for e in entites.values() for g in e["actions"])
+            + sum(len(g["options"]) for g in joueur["actions"]),
+            "variantes": sum(len(v) for e in entites.values() for v in e["reactions"].values())
+            + sum(len(v) for v in joueur["reactions"].values()),
+            "evenements": len(evenements),
+            "temoins": sum(len(l) for t in temoins.values() for l in t.values()),
         },
     }
 

@@ -25,6 +25,8 @@
   --bien: #3b7443;
   --nuit: #0f1b2b;
   --bulle: #fbfaf3;
+  --brume: #f2f1ea;
+  --chaleur: #e8a33c;
   --f-titre: "Rye", "Georgia", serif;
   --f-texte: "Barlow Semi Condensed", "Arial Narrow", "Helvetica Neue", system-ui, sans-serif;
   --f-registre: "Courier Prime", "Courier New", ui-monospace, monospace;
@@ -34,7 +36,7 @@
     --papier: #22241e; --fond: #191a16; --panneau: #20211b; --encre: #e7e3cf; --encre-douce: #aaa68f;
     --trait: #57564a; --boue: #3a3528; --bati: #2e2f28; --eau: #6a9fbd; --accent: #86bddd; --sur-accent: #10202b;
     --loi: #7fa9d6; --horsla: #e07a6c; --commerce: #d6a64a; --animal: #a7b36b; --objet: #b59d82;
-    --danger: #e06a5c; --bien: #7cbf84; --nuit: #000000; --bulle: #2b2c25;
+    --danger: #e06a5c; --bien: #7cbf84; --nuit: #000000; --bulle: #2b2c25; --brume: #9a9a90; --chaleur: #c9852c;
     color-scheme: dark;
   }
 }
@@ -42,7 +44,7 @@
   --papier: #22241e; --fond: #191a16; --panneau: #20211b; --encre: #e7e3cf; --encre-douce: #aaa68f;
   --trait: #57564a; --boue: #3a3528; --bati: #2e2f28; --eau: #6a9fbd; --accent: #86bddd; --sur-accent: #10202b;
   --loi: #7fa9d6; --horsla: #e07a6c; --commerce: #d6a64a; --animal: #a7b36b; --objet: #b59d82;
-  --danger: #e06a5c; --bien: #7cbf84; --nuit: #000000; --bulle: #2b2c25;
+  --danger: #e06a5c; --bien: #7cbf84; --nuit: #000000; --bulle: #2b2c25; --brume: #9a9a90; --chaleur: #c9852c;
   color-scheme: dark;
 }
 
@@ -191,6 +193,34 @@ button.plein { background: var(--accent); border-color: var(--accent); color: va
 @media (prefers-reduced-motion: reduce) {
   .ent, .bulle, .nuit-voile { transition: none; }
 }
+
+/* Monde : météo, joueur, événements */
+.pluie-voile line { stroke: var(--eau); stroke-width: 1.2; opacity: .55; }
+.brume-voile { fill: var(--brume); pointer-events: none; transition: opacity 1.2s; }
+.chaleur-voile { fill: var(--chaleur); pointer-events: none; transition: opacity 1.2s; }
+.eclair { fill: #ffffff; pointer-events: none; opacity: 0; }
+.eclair.flash { animation: eclair .6s ease-out; }
+@keyframes eclair { 0% { opacity: .55 } 15% { opacity: 0 } 25% { opacity: .35 } 100% { opacity: 0 } }
+.ent.joueur .forme { fill: var(--accent); stroke: var(--encre); stroke-width: 2.5; }
+.ent.joueur text { font-weight: 700; fill: var(--accent); }
+.ent .alerte { fill: none; stroke: var(--commerce); stroke-width: 3; opacity: 0; }
+.ent.agite .alerte, .batiment.agite rect.mur { animation: alerte 1.2s ease-in-out 5; }
+@keyframes alerte { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
+.batiment.agite rect.mur { stroke: var(--commerce); stroke-width: 4; }
+.monde { font-family: var(--f-registre); font-size: 13px; color: var(--encre-douce); }
+.monde b { color: var(--encre); }
+.evenement-carte { border: 1px solid var(--commerce); border-left: 4px solid var(--commerce); background: var(--papier); padding: 10px 12px; display: flex; flex-direction: column; gap: 8px; }
+.evenement-carte .theme { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--commerce); font-weight: 700; }
+.evenement-carte h3 { margin: 0; font-family: var(--f-titre); font-weight: 400; font-size: 19px; color: var(--encre); text-transform: none; letter-spacing: 0; }
+.evenement-carte .choix { display: flex; flex-direction: column; gap: 5px; }
+.evenement-carte .choix button { text-align: left; font-weight: 500; background: var(--panneau); }
+.temoins { display: flex; flex-direction: column; gap: 3px; font-size: 14px; color: var(--encre-douce); }
+.temoins b { color: var(--encre); font-weight: 600; }
+.journal .evt b { color: var(--commerce); }
+/* Lieu bondé : on n'affiche l'étiquette qu'au survol ou pour l'élément choisi. */
+.ent.serre text { opacity: 0; transition: opacity .2s; }
+.ent.serre:hover text, .ent.serre:focus text, .ent.serre.choisi text, .ent.serre.joueur text { opacity: 1; }
+.ent.serre:hover, .ent.serre:focus { outline: none; }
 </style>
 
 <div class="appli">
@@ -201,11 +231,15 @@ button.plein { background: var(--accent); border-color: var(--accent); color: va
       <div class="stat"><dt>Argent</dt><dd id="s-argent">25 $</dd></div>
       <div class="stat"><dt>Prime</dt><dd id="s-prime">0 $</dd></div>
       <div class="stat"><dt>Santé</dt><dd id="s-sante">100</dd></div>
+      <div class="stat"><dt>Jour</dt><dd id="s-jour">lundi</dd></div>
+      <div class="stat"><dt>Ciel</dt><dd id="s-meteo">beau</dd></div>
     </dl>
     <div class="horloge">
+      <button id="toi" type="button" class="plein">Toi</button>
       <label for="heure">Heure</label>
       <input type="range" id="heure" min="0" max="23" step="1" value="9">
       <output id="heure-txt" for="heure">9 h 00</output>
+      <button id="attendre" type="button">+1 h</button>
       <button id="lecture" type="button" aria-pressed="false">Lecture</button>
       <button id="recommencer" type="button">Recommencer</button>
     </div>
@@ -214,6 +248,7 @@ button.plein { background: var(--accent); border-color: var(--accent); color: va
     <div class="carte-cadre">
       <svg id="carte" role="img" aria-label="Plan de Valentine vu de haut"></svg>
       <div class="legende-carte" aria-hidden="true">
+        <span style="color:var(--accent)"><i style="background:var(--accent)"></i>Toi</span>
         <span style="color:var(--encre)"><i></i>Habitant</span>
         <span style="color:var(--loi)"><i></i>Loi</span>
         <span style="color:var(--horsla)"><i></i>Hors-la-loi</span>
@@ -234,14 +269,22 @@ button.plein { background: var(--accent); border-color: var(--accent); color: va
 <script>
 const D = __DONNEES__;
 const SVGNS = "http://www.w3.org/2000/svg";
-const CLE_STOCKAGE = "valentine-1899-partie";
-const ORDRE_CATEGORIES = ["habitant", "animal", "objet"];
+const CLE_STOCKAGE = "valentine-1899-partie-v2";
+const JOUEUR = "_joueur";
+const ORDRE_CATEGORIES = ["joueur", "habitant", "animal", "objet"];
 const NOM_CATEGORIE = { habitant: "Habitant", animal: "Animal", objet: "Objet", batiment: "Bâtiment" };
 const NOM_ETAT = { normal: "", mort: "Mort", blesse: "Blessé", hostile: "Hostile", en_fuite: "En fuite", ligote: "Ligoté", detruit: "Détruit" };
+const NOM_METEO = { beau: "beau temps", chaleur: "canicule", pluie: "pluie", orage: "orage", brouillard: "brouillard" };
+const INDISPONIBLE = ["mort", "en_fuite", "ligote", "detruit"];
+const VIVANTS = ["habitant", "animal"];
 
 // ---------- État de la partie ----------
 function nouvellePartie() {
-  return { heure: 9, honneur: 0, argent: 25, prime: 0, sante: 100, entites: {}, journal: [] };
+  return {
+    heure: 9, jour: 0, meteo: "beau", lieu: "rue_principale", aCheval: false, monture: null,
+    honneur: 0, argent: 25, prime: 0, sante: 100,
+    entites: {}, drapeaux: [], vus: [], derniers: {}, journal: [], enCours: null,
+  };
 }
 function chargerPartie() {
   try { const t = localStorage.getItem(CLE_STOCKAGE); return t ? Object.assign(nouvellePartie(), JSON.parse(t)) : null; }
@@ -254,9 +297,12 @@ let S = chargerPartie() || nouvellePartie();
 let selection = null;
 let derniereReponse = null;
 
+const heureTotale = () => S.jour * 24 + S.heure;
+const nomJour = () => D.jours[S.jour % 7];
 function etatDe(id) { return (S.entites[id] && S.entites[id].etat) || "normal"; }
 function relationDe(id) { return (S.entites[id] && S.entites[id].relation) || 0; }
 function memoire(id) { return S.entites[id] || (S.entites[id] = { etat: "normal", relation: 0 }); }
+const disponible = id => !INDISPONIBLE.includes(etatDe(id));
 
 // ---------- Texte ----------
 function accorder(t) {
@@ -290,42 +336,171 @@ function h(tag, props, ...enfants) {
   for (const c of enfants.flat()) if (c !== null && c !== undefined && c !== false) n.append(c.nodeType ? c : String(c));
   return n;
 }
+const hasard = liste => liste[Math.floor(Math.random() * liste.length)];
+function melanger(liste) {
+  const l = [...liste];
+  for (let i = l.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [l[i], l[j]] = [l[j], l[i]]; }
+  return l;
+}
 
-// ---------- Temps et lieux ----------
+// ---------- Temps, lieux, monde ----------
 const estNuit = () => S.heure >= 21 || S.heure < 6;
+function heureDans(hh, plage) {
+  const [de, a] = plage;
+  return de < a ? hh >= de && hh < a : hh >= de || hh < a;
+}
 function creneau(e) {
   return e.routine ? e.routine.find(r => S.heure >= r.de && S.heure < r.a) : null;
 }
 function lieuActuel(e) {
+  if (e.id === JOUEUR) return S.lieu;
+  if (S.aCheval && e.id === S.monture) return S.lieu;
   const m = S.entites[e.id];
   if (m && m.lieuFige) return m.lieuFige;
   const c = creneau(e);
   return c && D.lieux[c.lieu] ? c.lieu : e.lieu;
 }
+function conditionMonde(c) {
+  if (c.includes(":")) {
+    const [p, id] = c.split(":");
+    switch (p) {
+      case "present": return S.lieu === id;
+      case "mort": return etatDe(id) === "mort";
+      case "vivant": return etatDe(id) !== "mort";
+      case "ami": return relationDe(id) >= 3;
+      case "hostile": return etatDe(id) === "hostile" || relationDe(id) <= -3;
+      default: return false;
+    }
+  }
+  switch (c) {
+    case "honneur_haut": return S.honneur >= 3;
+    case "honneur_bas": return S.honneur <= -3;
+    case "est_recherche": return S.prime > 0;
+    case "nuit": return estNuit();
+    case "jour": return !estNuit();
+    case "dedans": return D.lieux[S.lieu] && D.lieux[S.lieu].type === "batiment";
+    case "dehors": return !(D.lieux[S.lieu] && D.lieux[S.lieu].type === "batiment");
+    case "a_cheval": return S.aCheval;
+    case "pluie": return S.meteo === "pluie" || S.meteo === "orage";
+    case "orage": return S.meteo === "orage";
+    case "brouillard": return S.meteo === "brouillard";
+    case "chaleur": return S.meteo === "chaleur";
+    case "dimanche": return S.jour % 7 === 6;
+    default: return false;
+  }
+}
+function conditionVraie(c, id) {
+  if (c === "hostile") return etatDe(id) === "hostile" || relationDe(id) <= -3;
+  if (c === "ami") return relationDe(id) >= 3;
+  return conditionMonde(c);
+}
+function changerMeteo() {
+  if (S.meteo === "brouillard" && S.heure >= 10) { S.meteo = "beau"; return; }
+  if (Math.random() > .12) return;
+  const poids = { beau: 6, chaleur: S.heure >= 11 && S.heure < 18 ? 2 : 0, pluie: 2, orage: 1, brouillard: S.heure >= 4 && S.heure < 9 ? 2 : 0 };
+  let total = 0; for (const k in poids) total += poids[k];
+  let r = Math.random() * total;
+  for (const k in poids) { r -= poids[k]; if (r < 0) { S.meteo = k; return; } }
+}
+
+// ---------- Événements ----------
+function evenementPossible(ev) {
+  if (ev.unique && S.vus.includes(ev.id)) return false;
+  if (!ev.unique && S.derniers[ev.id] !== undefined && heureTotale() - S.derniers[ev.id] < 12) return false;
+  if (ev.heures && !heureDans(S.heure, ev.heures)) return false;
+  if (ev.jours && ev.jours.length && !ev.jours.includes(nomJour())) return false;
+  if (ev.meteo && ev.meteo.length && !ev.meteo.includes(S.meteo)) return false;
+  if (!(ev.si || []).every(conditionMonde)) return false;
+  if (!(ev.drapeaux || []).every(d => d.startsWith("!") ? !S.drapeaux.includes(d.slice(1)) : S.drapeaux.includes(d))) return false;
+  return (ev.acteurs || []).every(disponible);
+}
+function appliquerConsequences(cons) {
+  if (!cons) return;
+  for (const d of cons.drapeaux || []) {
+    const nom = d.slice(1);
+    if (d[0] === "+" && !S.drapeaux.includes(nom)) S.drapeaux.push(nom);
+    if (d[0] === "-") S.drapeaux = S.drapeaux.filter(x => x !== nom);
+  }
+  for (const [id, ch] of Object.entries(cons.entites || {})) {
+    const m = memoire(id);
+    if (ch.relation) m.relation = borne(m.relation + ch.relation, -5, 5);
+    if (ch.lieu !== undefined) { if (ch.lieu) m.lieuFige = ch.lieu; else delete m.lieuFige; }
+    if (ch.etat) changerEtat(id, ch.etat);
+  }
+  if (cons.joueur) appliquerJoueur(cons.joueur);
+}
+function declencher(ev) {
+  S.derniers[ev.id] = heureTotale();
+  if (ev.unique) S.vus.push(ev.id);
+  appliquerConsequences(ev.consequences);
+  S.journal.unshift({ type: "evt", h: S.heure, titre: ev.titre, texte: ev.texte });
+  if (ev.choix && ev.choix.length) S.enCours = ev.id;
+  agiter([...(ev.acteurs || []), ev.lieu]);
+}
+function tourDesEvenements() {
+  let n = 0;
+  for (const ev of melanger(Object.values(D.evenements))) {
+    if (n >= 2) break;
+    if (ev.apres || !evenementPossible(ev)) continue;
+    if (ev.choix && S.enCours) continue;
+    if (Math.random() < ev.chance) { declencher(ev); n++; }
+  }
+}
+function reactionEnChaine(verbe, cible) {
+  for (const ev of melanger(Object.values(D.evenements))) {
+    if (!ev.apres || !ev.apres.verbes.includes(verbe)) continue;
+    if (ev.apres.cibles && ev.apres.cibles.length && !ev.apres.cibles.includes(cible)) continue;
+    if (!evenementPossible(ev)) continue;
+    if (Math.random() < ev.chance) { declencher(ev); return; }
+  }
+}
+function choisirIssue(ev, c) {
+  if (c.effets) appliquerJoueur(c.effets);
+  appliquerConsequences(c.consequences);
+  S.enCours = null;
+  S.journal.unshift({ type: "evt", h: S.heure, titre: c.texte, texte: c.resultat });
+  derniereReponse = { id: "_evenement", action: `${ev.titre} — ${c.texte}`, texte: c.resultat, effets: c.effets || {}, temoins: [] };
+  apresAction();
+}
+function avancer(heures) {
+  for (let i = 0; i < heures; i++) {
+    S.heure += 1;
+    if (S.heure >= 24) { S.heure = 0; S.jour += 1; }
+    changerMeteo();
+    S.sante = Math.min(100, S.sante + 2);
+    tourDesEvenements();
+  }
+  S.journal.length = Math.min(S.journal.length, 60);
+}
+
+// ---------- Positions ----------
 function positions() {
   const parLieu = {};
-  for (const e of Object.values(D.entites)) {
+  const tous = [{ id: JOUEUR, categorie: "joueur", lieu: S.lieu }, ...Object.values(D.entites)];
+  for (const e of tous) {
     if (e.categorie === "batiment") continue;
     (parLieu[lieuActuel(e)] ||= []).push(e);
   }
   const pos = {};
   for (let [lid, liste] of Object.entries(parLieu)) {
     const l = D.lieux[lid];
-    const [x, y, w, hh] = l.rect;
-    const haut = l.type === "batiment" ? 30 : 10;
-    const z = { x: x + 8, y: y + haut, w: w - 16, h: hh - haut - 8 };
+    if (!l) continue;
     for (const e of liste.filter(e => e.pos && lieuActuel(e) === e.lieu)) pos[e.id] = { x: e.pos[0], y: e.pos[1] };
     liste = liste.filter(e => !pos[e.id]);
     if (!liste.length) continue;
+    const [x, y, w, hh] = l.rect;
+    const haut = l.type === "batiment" ? 30 : 10;
+    const z = { x: x + 8, y: y + haut, w: w - 16, h: hh - haut - 8 };
     liste.sort((a, b) => ORDRE_CATEGORIES.indexOf(a.categorie) - ORDRE_CATEGORIES.indexOf(b.categorie) || a.id.localeCompare(b.id));
     const n = liste.length;
     let cols = Math.max(1, Math.min(n, Math.round(Math.sqrt(n * z.w / Math.max(z.h, 1)))));
     while (cols > 1 && z.w / cols < 78 && z.h / Math.ceil(n / (cols - 1)) >= 44) cols--;
     while (cols < n && z.h / Math.ceil(n / cols) < 44 && z.w / (cols + 1) >= 50) cols++;
     const lignes = Math.ceil(n / cols);
+    const serre = z.w / cols < 62 || z.h / lignes < 40;
     liste.forEach((e, i) => {
       const c = i % cols, r = Math.floor(i / cols);
-      pos[e.id] = { x: z.x + z.w * (c + .5) / cols, y: z.y + z.h * (r + .5) / lignes };
+      pos[e.id] = { x: z.x + z.w * (c + .5) / cols, y: z.y + z.h * (r + .5) / lignes, serre };
     });
   }
   return pos;
@@ -336,12 +511,15 @@ const svg = document.getElementById("carte");
 const [LARGEUR, HAUTEUR] = D.ville.taille;
 let vue = { x: 0, y: 0, w: LARGEUR, h: HAUTEUR };
 const noeuds = {};
-let couchesEntites, voileNuit, coucheBulles;
+let voileNuit, voilePluie, voileBrume, voileChaleur, eclair, coucheBulles;
 
 function dessinerFond() {
   const defs = el("defs", {}, svg);
   const motif = el("pattern", { id: "hachures", width: 8, height: 8, patternUnits: "userSpaceOnUse", patternTransform: "rotate(45)" }, defs);
   el("line", { x1: 0, y1: 0, x2: 0, y2: 8, stroke: "var(--trait)", "stroke-width": 1, opacity: .45 }, motif);
+  const pluie = el("pattern", { id: "gouttes", width: 24, height: 24, patternUnits: "userSpaceOnUse", patternTransform: "rotate(15)", class: "pluie-voile" }, defs);
+  el("line", { x1: 4, y1: 0, x2: 4, y2: 9 }, pluie);
+  el("line", { x1: 16, y1: 12, x2: 16, y2: 21 }, pluie);
   el("rect", { x: 0, y: 0, width: LARGEUR, height: HAUTEUR, fill: "var(--papier)" }, svg);
   const grille = el("g", { class: "grille" }, svg);
   for (let x = 0; x <= LARGEUR; x += 50) el("line", { x1: x, y1: 0, x2: x, y2: HAUTEUR }, grille);
@@ -350,7 +528,7 @@ function dessinerFond() {
   for (const [lid, l] of Object.entries(D.lieux)) {
     if (l.type !== "zone") continue;
     const [x, y, w, hh] = l.rect;
-    const g = el("g", {}, svg);
+    const g = el("g", { "data-lieu": lid }, svg);
     if (lid === "voie_ferree") {
       for (let tx = 6; tx < w; tx += 18) el("line", { class: "traverse", x1: x + tx, y1: y + 4, x2: x + tx, y2: y + hh - 4 }, g);
       el("line", { class: "rail", x1: x, y1: y + 10, x2: x + w, y2: y + 10 }, g);
@@ -360,7 +538,7 @@ function dessinerFond() {
       el("rect", { class: "zone-eau", x, y: y + 20, width: w, height: hh - 20 }, g);
       for (let k = 0; k < 3; k++) {
         let d = `M ${x} ${y + 40 + k * 22}`;
-        for (let vx = 0; vx < w; vx += 40) d += ` q 10 -7 20 0 t 20 0`;
+        for (let vx = 0; vx < w; vx += 40) d += " q 10 -7 20 0 t 20 0";
         el("path", { class: "vague", d }, g);
       }
       el("text", { class: "nom-zone", x: x + 16, y: y + 12 }, g).textContent = l.nom;
@@ -398,45 +576,65 @@ function dessinerFond() {
   }
 }
 
+function noeudEntite(e, parent) {
+  const classes = ["ent", e.categorie, e.faction || ""].join(" ");
+  const g = el("g", { class: classes, "data-id": e.id, tabindex: 0, role: "button", "aria-label": `${etiquette(e)} : ${e.nom}` }, parent);
+  if (e.categorie === "habitant" || e.categorie === "joueur") {
+    el("circle", { class: "alerte", r: 21 }, g);
+    el("circle", { class: "anneau", r: 17 }, g);
+    el("circle", { class: "forme", r: e.categorie === "joueur" ? 12 : 11 }, g);
+  } else if (e.categorie === "animal") {
+    el("circle", { class: "alerte", r: 16 }, g);
+    el("circle", { class: "anneau", r: 13 }, g);
+    el("circle", { class: "forme", r: 7.5 }, g);
+  } else {
+    el("rect", { class: "alerte", x: -16, y: -16, width: 32, height: 32, transform: "rotate(45)" }, g);
+    el("rect", { class: "anneau", x: -13, y: -13, width: 26, height: 26, transform: "rotate(45)" }, g);
+    el("rect", { class: "forme", x: -7, y: -7, width: 14, height: 14, transform: "rotate(45)" }, g);
+  }
+  el("line", { class: "marque croix-mort", x1: -6, y1: -6, x2: 6, y2: 6 }, g);
+  el("line", { class: "marque croix-mort", x1: 6, y1: -6, x2: -6, y2: 6 }, g);
+  el("text", { y: e.categorie === "habitant" || e.categorie === "joueur" ? 26 : 22 }, g).textContent = etiquette(e);
+  el("title", {}, g).textContent = e.nom;
+  noeuds[e.id] = g;
+}
+
 function dessinerEntites() {
   voileNuit = el("rect", { class: "nuit-voile", x: 0, y: 0, width: LARGEUR, height: HAUTEUR, opacity: 0 }, svg);
-  couchesEntites = el("g", {}, svg);
-  for (const e of Object.values(D.entites)) {
-    if (e.categorie === "batiment") continue;
-    const classes = ["ent", e.categorie, e.faction || ""].join(" ");
-    const g = el("g", { class: classes, "data-id": e.id, tabindex: 0, role: "button", "aria-label": `${etiquette(e)} : ${e.nom}` }, couchesEntites);
-    if (e.categorie === "habitant") {
-      el("circle", { class: "anneau", r: 17 }, g);
-      el("circle", { class: "forme", r: 11 }, g);
-    } else if (e.categorie === "animal") {
-      el("circle", { class: "anneau", r: 13 }, g);
-      el("circle", { class: "forme", r: 7.5 }, g);
-    } else {
-      el("rect", { class: "anneau", x: -13, y: -13, width: 26, height: 26, transform: "rotate(45)" }, g);
-      el("rect", { class: "forme", x: -7, y: -7, width: 14, height: 14, transform: "rotate(45)" }, g);
-    }
-    el("line", { class: "marque croix-mort", x1: -6, y1: -6, x2: 6, y2: 6 }, g);
-    el("line", { class: "marque croix-mort", x1: 6, y1: -6, x2: -6, y2: 6 }, g);
-    const t = el("text", { y: e.categorie === "habitant" ? 26 : 22 }, g);
-    t.textContent = etiquette(e);
-    el("title", {}, g).textContent = e.nom;
-    noeuds[e.id] = g;
-  }
+  voileChaleur = el("rect", { class: "chaleur-voile", x: 0, y: 0, width: LARGEUR, height: HAUTEUR, opacity: 0 }, svg);
+  const couche = el("g", {}, svg);
+  for (const e of Object.values(D.entites)) if (e.categorie !== "batiment") noeudEntite(e, couche);
+  noeudEntite({ id: JOUEUR, categorie: "joueur", nom: "toi", etiquette: "Toi" }, couche);
+  voilePluie = el("rect", { x: 0, y: 0, width: LARGEUR, height: HAUTEUR, fill: "url(#gouttes)", opacity: 0, "pointer-events": "none" }, svg);
+  voileBrume = el("rect", { class: "brume-voile", x: 0, y: 0, width: LARGEUR, height: HAUTEUR, opacity: 0 }, svg);
+  eclair = el("rect", { class: "eclair", x: 0, y: 0, width: LARGEUR, height: HAUTEUR }, svg);
   coucheBulles = el("g", {}, svg);
 }
 
 function majCarte() {
   const pos = positions();
-  for (const e of Object.values(D.entites)) {
-    const n = noeuds[e.id];
-    if (!n) continue;
-    const etat = etatDe(e.id);
-    n.classList.toggle("choisi", selection === e.id);
+  for (const [id, n] of Object.entries(noeuds)) {
+    const etat = etatDe(id);
+    n.classList.toggle("choisi", selection === id);
     for (const k of ["mort", "blesse", "hostile", "en_fuite", "ligote", "detruit"]) n.classList.toggle(k, etat === k);
-    if (e.categorie !== "batiment" && pos[e.id]) n.style.transform = `translate(${pos[e.id].x}px, ${pos[e.id].y}px)`;
+    if (pos[id]) n.style.transform = `translate(${pos[id].x}px, ${pos[id].y}px)`;
+    n.classList.toggle("serre", Boolean(pos[id] && pos[id].serre));
   }
   const o = estNuit() ? .42 : (S.heure === 20 || S.heure === 6) ? .2 : (S.heure === 19 || S.heure === 7) ? .08 : 0;
-  voileNuit.setAttribute("opacity", o);
+  voileNuit.setAttribute("opacity", S.meteo === "orage" ? Math.max(o, .25) : o);
+  voilePluie.setAttribute("opacity", S.meteo === "pluie" ? .55 : S.meteo === "orage" ? .8 : 0);
+  voileBrume.setAttribute("opacity", S.meteo === "brouillard" ? .5 : 0);
+  voileChaleur.setAttribute("opacity", S.meteo === "chaleur" ? .12 : 0);
+}
+function agiter(ids) {
+  for (const id of ids) {
+    const n = noeuds[id];
+    if (!n) continue;
+    n.classList.remove("agite");
+    void n.getBBox();
+    n.classList.add("agite");
+    setTimeout(() => n.classList.remove("agite"), 6200);
+  }
 }
 
 function appliquerVue() { svg.setAttribute("viewBox", `${vue.x} ${vue.y} ${vue.w} ${vue.h}`); }
@@ -453,22 +651,16 @@ function pointCarte(evt) {
 }
 
 // ---------- Bulles ----------
-function montrerBulle() {
-  if (document.hidden) return;
-  const pos = positions();
-  const candidats = Object.values(D.entites).filter(e => e.repliques && e.repliques.length && pos[e.id]
-    && !["mort", "en_fuite", "detruit"].includes(etatDe(e.id)));
-  if (!candidats.length || coucheBulles.childNodes.length >= 3) return;
-  const e = candidats[Math.floor(Math.random() * candidats.length)];
-  const texte = e.repliques[Math.floor(Math.random() * e.repliques.length)];
+function bulle(id, texte) {
+  const p = positions()[id];
+  if (!p) return;
   const mots = texte.split(/\s+/), lignes = [];
   let ligne = "";
   for (const m of mots) {
     if ((ligne + " " + m).trim().length > 30 && ligne) { lignes.push(ligne); ligne = m; } else ligne = (ligne + " " + m).trim();
   }
   lignes.push(ligne);
-  if (lignes.length > 3) { lignes.length = 3; lignes[2] += "…"; }
-  const p = pos[e.id];
+  if (lignes.length > 4) { lignes.length = 4; lignes[3] += "…"; }
   const larg = Math.max(...lignes.map(l => l.length)) * 6.3 + 18, haut = lignes.length * 16 + 10;
   const bx = Math.min(Math.max(p.x - larg / 2, 4), LARGEUR - larg - 4), by = Math.max(p.y - 22 - haut, 4);
   const g = el("g", { class: "bulle" }, coucheBulles);
@@ -476,33 +668,33 @@ function montrerBulle() {
   el("path", { d: `M ${p.x - 5} ${by + haut - .5} L ${p.x} ${by + haut + 8} L ${p.x + 5} ${by + haut - .5} Z` }, g);
   lignes.forEach((l, i) => { el("text", { x: bx + 9, y: by + 18 + i * 16 }, g).textContent = l; });
   requestAnimationFrame(() => g.classList.add("visible"));
-  setTimeout(() => { g.classList.remove("visible"); setTimeout(() => g.remove(), 400); }, 4600);
+  setTimeout(() => { g.classList.remove("visible"); setTimeout(() => g.remove(), 400); }, 5000);
+}
+function bulleAuHasard() {
+  if (document.hidden || coucheBulles.childNodes.length >= 3) return;
+  const pos = positions();
+  const candidats = Object.values(D.entites).filter(e => e.repliques && e.repliques.length && pos[e.id]
+    && !["mort", "en_fuite", "detruit"].includes(etatDe(e.id)));
+  if (!candidats.length) return;
+  const e = hasard(candidats);
+  bulle(e.id, hasard(e.repliques));
 }
 
 // ---------- Règles ----------
 function conditionsVerbeOk(conditions) {
-  const drapeaux = { a_de_l_argent: S.argent > 0, est_recherche: S.prime > 0, a_cheval: false };
+  const drapeaux = { a_de_l_argent: S.argent > 0, est_recherche: S.prime > 0, a_cheval: S.aCheval };
   for (const c of conditions) {
     const neg = c.startsWith("!"), nom = c.replace("!", "");
-    if (Boolean(drapeaux[nom]) === neg) return { ok: false, raison: nom === "a_de_l_argent" ? "sans argent" : nom === "est_recherche" ? "si recherché" : "à cheval" };
+    if (Boolean(drapeaux[nom]) === neg) {
+      const raisons = { a_de_l_argent: "sans argent", est_recherche: "si recherché", a_cheval: neg ? "descends de cheval" : "à cheval" };
+      return { ok: false, raison: raisons[nom] || nom };
+    }
   }
   return { ok: true };
 }
-function conditionVraie(c, id) {
-  const rel = relationDe(id), etat = etatDe(id);
-  switch (c) {
-    case "honneur_haut": return S.honneur >= 3;
-    case "honneur_bas": return S.honneur <= -3;
-    case "est_recherche": return S.prime > 0;
-    case "nuit": return estNuit();
-    case "jour": return !estNuit();
-    case "hostile": return etat === "hostile" || rel <= -3;
-    case "ami": return rel >= 3;
-    default: return false;
-  }
-}
 function choisirVariante(variantes, id) {
-  const possibles = variantes.filter(v => (v.si || []).every(c => conditionVraie(c, id)));
+  const test = id === JOUEUR ? conditionMonde : c => conditionVraie(c, id);
+  const possibles = variantes.filter(v => (v.si || []).every(test));
   const liste = possibles.length ? possibles : variantes.filter(v => !(v.si || []).length);
   let total = 0;
   const poids = liste.map(v => (total += 1 + 2 * (v.si || []).length));
@@ -511,25 +703,73 @@ function choisirVariante(variantes, id) {
 }
 const borne = (v, a, b) => Math.max(a, Math.min(b, v));
 
-function appliquerEffets(id, effets) {
+function changerEtat(id, etat) {
   const m = memoire(id);
+  const e = D.entites[id];
+  m.etat = etat;
+  if (["mort", "ligote"].includes(etat) && e && e.categorie !== "batiment") m.lieuFige = lieuActuel(e);
+  if (etat === "normal") delete m.lieuFige;
+  if (etat === "mort" && S.monture === id) { S.aCheval = false; S.monture = null; }
+}
+function appliquerJoueur(effets) {
+  const primeAvant = S.prime;
   if (effets.honneur) S.honneur = borne(S.honneur + effets.honneur, -10, 10);
   if (effets.argent) S.argent = Math.max(0, S.argent + effets.argent);
   if (effets.prime) S.prime = Math.max(0, S.prime + effets.prime);
   if (effets.sante) S.sante = borne(S.sante + effets.sante, 0, 100);
-  if (effets.relation) m.relation = borne(m.relation + effets.relation, -5, 5);
-  if (effets.etat) {
-    m.etat = effets.etat;
-    const e = D.entites[id];
-    if (["mort", "ligote"].includes(effets.etat) && e.categorie !== "batiment") m.lieuFige = lieuActuel(e);
-    if (effets.etat === "normal") delete m.lieuFige;
+  // Au-delà de 50 $ de prime, la loi te considère comme un ennemi.
+  if (primeAvant < 50 && S.prime >= 50) {
+    for (const e of Object.values(D.entites)) if (e.faction === "loi") memoire(e.id).relation = Math.min(relationDe(e.id), -3);
   }
 }
+function appliquerEffets(id, effets) {
+  appliquerJoueur(effets);
+  if (id === JOUEUR) return;
+  const m = memoire(id);
+  if (effets.relation) m.relation = borne(m.relation + effets.relation, -5, 5);
+  if (effets.etat) changerEtat(id, effets.etat);
+}
 
-function agir(id, cle, option) {
-  const e = D.entites[id];
+function categorieTemoin(action, effets, cible) {
+  const v = action.cle.replace("@outil", "");
+  if (effets.etat === "mort" && cible && VIVANTS.includes(cible.categorie)) return "meurtre";
+  if (/vol|detrouss|braqu|crochet|chapard|cambriol|fouiller|rafler|piller|subtilis/.test(v)) return "vol";
+  if (action.categorie === "Combat" || ["blesse", "hostile", "ligote"].includes(effets.etat) || (effets.sante || 0) < 0) return "violence";
+  if ((effets.prime || 0) > 0) return "crime";
+  if ((effets.honneur || 0) > 0) return "bonte";
+  return Math.random() < .3 ? "insolite" : null;
+}
+function reactionsTemoins(id, action, effets) {
+  const cible = D.entites[id];
+  const categorie = categorieTemoin(action, effets, cible);
+  if (!categorie) return [];
+  const lieu = id === JOUEUR ? S.lieu : lieuActuel(cible);
+  const presents = Object.values(D.entites).filter(e => e.id !== id && VIVANTS.includes(e.categorie)
+    && D.temoins[e.id] && disponible(e.id) && lieuActuel(e) === lieu);
+  return melanger(presents).slice(0, 2).map(e => {
+    const texte = hasard(D.temoins[e.id][categorie]);
+    setTimeout(() => bulle(e.id, texte), 400);
+    return { nom: majuscule(e.nom), texte };
+  });
+}
+
+function reglesSpeciales(cle, option) {
+  const v = cle.replace("@outil", "");
+  if (v === "monter_a_cheval" && option.cible) { S.aCheval = true; S.monture = option.cible; }
+  if (v === "descendre_de_cheval") { S.aCheval = false; S.monture = null; }
+  if (v === "entrer" && option.cible && D.lieux[option.cible]) S.lieu = option.cible;
+  if (v === "payer_prime" && S.argent >= S.prime) { S.argent -= S.prime; S.prime = 0; }
+  if (v === "se_rendre") { S.prime = 0; S.lieu = "bureau_sherif"; }
+  if (/^dormir|sieste/.test(v)) avancer(/sieste/.test(v) ? 2 : 8);
+}
+
+function agir(id, action, option) {
+  const e = id === JOUEUR ? null : D.entites[id];
+  const cle = action.cle;
   let variante;
   const etat = etatDe(id);
+  if (e && e.categorie !== "batiment") S.lieu = lieuActuel(e);
+  if (e && e.categorie === "batiment") S.lieu = id;
   if (cle === "_fouiller_corps") {
     const butin = 1 + Math.floor(Math.random() * 12);
     variante = { texte: `Tu retournes les poches de ${e.nom}. Tu trouves ${butin} $ et une photo jaunie.`, effets: { argent: butin, honneur: -1 } };
@@ -538,22 +778,28 @@ function agir(id, cle, option) {
   } else if (etat === "mort" || etat === "detruit") {
     variante = { texte: etat === "mort" ? `${majuscule(e.nom)} ne bouge plus. Les mouches arrivent déjà.` : `Il ne reste que des débris de ${e.nom}.` };
   } else {
-    const variantes = e.reactions[cle];
+    const variantes = (id === JOUEUR ? D.joueur.reactions : e.reactions)[cle];
     variante = variantes && variantes.length ? choisirVariante(variantes, id) : { texte: `${majuscule(option.texte)} : rien de particulier ne se passe.` };
   }
   let texte = variante.texte.replaceAll("{cible}", nomDe(option.cible)).replaceAll("{outil}", nomDe(option.outil));
   texte = majuscule(accorder(texte));
   const effets = variante.effets || {};
   appliquerEffets(id, effets);
-  if (/^dormir/.test(cle)) S.heure = (S.heure + 8) % 24;
-  let suite = "";
+  reglesSpeciales(cle, option);
+  const temoins = reactionsTemoins(id, action, effets);
+  derniereReponse = { id, action: majuscule(option.texte), texte, effets, temoins };
+  S.journal.unshift({ type: "action", h: S.heure, titre: majuscule(option.texte), texte });
+  reactionEnChaine(cle.replace("@outil", ""), id);
+  apresAction();
+}
+function apresAction() {
   if (S.sante <= 0) {
-    suite = "Tu t'effondres dans la boue. Tu te réveilles chez le docteur, qui t'a soulagé de 10 $.";
-    S.sante = 40; S.argent = Math.max(0, S.argent - 10);
+    const t = "Tu t'effondres dans la boue. Tu te réveilles chez le docteur, qui t'a soulagé de 10 $.";
+    S.sante = 40; S.argent = Math.max(0, S.argent - 10); S.lieu = "cabinet_medecin"; S.aCheval = false; S.monture = null;
+    if (derniereReponse) derniereReponse.suite = t;
+    S.journal.unshift({ type: "action", h: S.heure, titre: "Évanoui", texte: t });
   }
-  derniereReponse = { id, action: majuscule(option.texte), texte, effets, suite };
-  S.journal.unshift({ h: S.heure, action: majuscule(option.texte), texte: suite ? texte + " " + suite : texte });
-  S.journal.length = Math.min(S.journal.length, 40);
+  S.journal.length = Math.min(S.journal.length, 60);
   sauver();
   rafraichir();
 }
@@ -571,7 +817,7 @@ function puceEffets(effets) {
   const sortie = [];
   const fmt = { honneur: v => `${v > 0 ? "+" : ""}${v} honneur`, argent: v => `${v > 0 ? "+" : "−"}${Math.abs(v)} $`,
     prime: v => `prime ${v > 0 ? "+" : "−"}${Math.abs(v)} $`, sante: v => `santé ${v > 0 ? "+" : ""}${v}`, relation: v => `relation ${v > 0 ? "+" : ""}${v}` };
-  for (const [k, v] of Object.entries(effets)) {
+  for (const [k, v] of Object.entries(effets || {})) {
     if (k === "etat") { sortie.push(h("span", { class: "effet moins" }, "→ " + (NOM_ETAT[v] || "rétabli"))); continue; }
     if (!fmt[k] || !v) continue;
     const bon = k === "prime" ? v < 0 : v > 0;
@@ -579,14 +825,30 @@ function puceEffets(effets) {
   }
   return sortie.length ? h("div", { class: "effets" }, sortie) : null;
 }
-function blocReponse() {
-  if (!derniereReponse || derniereReponse.id !== selection) return null;
+function blocReponse(pour) {
+  if (!derniereReponse || derniereReponse.id !== pour) return null;
   const r = derniereReponse;
   return h("div", { class: "reponse", role: "status" },
     h("span", { class: "quoi" }, r.action),
     h("p", { class: "texte" }, r.texte),
     r.suite ? h("p", { class: "texte" }, r.suite) : null,
-    puceEffets(r.effets));
+    puceEffets(r.effets),
+    r.temoins && r.temoins.length ? h("div", { class: "temoins" }, r.temoins.map(t => h("span", {}, h("b", {}, t.nom), " ", t.texte))) : null);
+}
+function blocEvenement() {
+  if (!S.enCours || !D.evenements[S.enCours]) return blocReponse("_evenement");
+  const ev = D.evenements[S.enCours];
+  const choix = ev.choix.filter(c => (c.si || []).every(conditionMonde));
+  return h("section", { class: "evenement-carte", "aria-live": "polite" },
+    h("span", { class: "theme" }, `${ev.theme} · ${D.lieux[ev.lieu] ? D.lieux[ev.lieu].nom : ""}`),
+    h("h3", {}, ev.titre),
+    h("p", {}, ev.texte),
+    h("div", { class: "choix" },
+      choix.map(c => {
+        const cout = c.effets && c.effets.argent < 0 ? -c.effets.argent : 0;
+        return h("button", { type: "button", disabled: cout > S.argent, onclick: () => choisirIssue(ev, c) }, c.texte + (cout ? ` (${cout} $)` : ""));
+      }),
+      h("button", { type: "button", onclick: () => { S.enCours = null; sauver(); rafraichir(); } }, "Laisser faire")));
 }
 function actionsDisponibles(e) {
   const etat = etatDe(e.id);
@@ -599,43 +861,59 @@ function actionsDisponibles(e) {
   if (etat === "ligote") return [{ cle: "_detacher", categorie: "Combat", conditions: [], options: [{ texte: `détacher ${e.nom}` }] }, ...e.actions];
   return e.actions;
 }
-function ligneAction(e, a) {
+function ligneAction(id, a) {
   const verif = conditionsVerbeOk(a.conditions);
   const opts = a.options.map(o => ({ ...o, texte: accorder(o.texte) }));
+  const raison = verif.ok ? null : h("span", { class: "raison" }, verif.raison);
   if (opts.length === 1) {
     return h("li", { class: "action-ligne" },
-      h("button", { class: "action", type: "button", disabled: !verif.ok, onclick: () => agir(e.id, a.cle, opts[0]) }, majuscule(opts[0].texte)),
-      verif.ok ? null : h("span", { class: "raison" }, verif.raison));
+      h("button", { class: "action", type: "button", disabled: !verif.ok, onclick: () => agir(id, a, opts[0]) }, majuscule(opts[0].texte)), raison);
   }
-  const id = `opt-${e.id}-${a.cle}`.replace(/[^\w-]/g, "_");
-  const sel = h("select", { id, "aria-label": "Variante de l'action" }, opts.map((o, i) => h("option", { value: i }, majuscule(o.texte))));
+  const sid = `opt-${id}-${a.cle}`.replace(/[^\w-]/g, "_");
+  const sel = h("select", { id: sid, "aria-label": "Variante de l'action" }, opts.map((o, i) => h("option", { value: i }, majuscule(o.texte))));
   return h("li", { class: "action-ligne" }, sel,
-    h("button", { class: "faire plein", type: "button", disabled: !verif.ok, onclick: () => agir(e.id, a.cle, opts[+sel.value]) }, "Faire"),
-    verif.ok ? null : h("span", { class: "raison" }, verif.raison));
+    h("button", { class: "faire plein", type: "button", disabled: !verif.ok, onclick: () => agir(id, a, opts[+sel.value]) }, "Faire"), raison);
 }
+function blocsActions(id, actions) {
+  const parCategorie = {};
+  for (const a of actions) (parCategorie[a.categorie] ||= []).push(a);
+  return Object.entries(parCategorie).map(([cat, liste], i) =>
+    h("details", { class: "categorie-actions", open: i < 2 ? "" : null },
+      h("summary", {}, `${cat} (${liste.length})`),
+      h("ul", {}, liste.map(a => ligneAction(id, a)))));
+}
+function retour() { return h("button", { class: "retour", type: "button", onclick: () => choisir(null) }, "← Toute la ville"); }
 function ficheEntite(e) {
   const etat = etatDe(e.id);
   const [rel, relClasse] = libelleRelation(relationDe(e.id));
   const c = creneau(e);
-  const lieu = D.lieux[lieuActuel(e)];
-  const parCategorie = {};
-  for (const a of actionsDisponibles(e)) (parCategorie[a.categorie] ||= []).push(a);
-  const blocs = Object.entries(parCategorie).map(([cat, liste], i) =>
-    h("details", { class: "categorie-actions", open: i < 2 ? "" : null },
-      h("summary", {}, `${cat} (${liste.length})`),
-      h("ul", {}, liste.map(a => ligneAction(e, a)))));
+  const lid = e.categorie === "batiment" ? e.id : lieuActuel(e);
+  const actions = actionsDisponibles(e);
   return h("div", { class: "fiche" },
-    h("button", { class: "retour", type: "button", onclick: () => choisir(null) }, "← Toute la ville"),
+    retour(),
     h("div", { class: "pastilles" },
       h("span", { class: "pastille" }, e.metier || NOM_CATEGORIE[e.categorie]),
       etat !== "normal" ? h("span", { class: "pastille etat-" + etat }, NOM_ETAT[etat]) : null,
-      e.categorie === "habitant" || e.categorie === "animal" ? h("span", { class: "pastille " + relClasse }, rel) : null),
+      VIVANTS.includes(e.categorie) ? h("span", { class: "pastille " + relClasse }, rel) : null,
+      lid === S.lieu ? h("span", { class: "pastille rel-pos" }, "Tu es ici") : null),
     h("h2", {}, majuscule(e.nom)),
-    h("p", { class: "ou" }, lieu ? lieu.nom : "", c && etat === "normal" ? ` · ${c.activite}` : ""),
-    blocReponse(),
+    h("p", { class: "ou" }, D.lieux[lid] ? D.lieux[lid].nom : "", c && etat === "normal" ? ` · ${c.activite}` : ""),
+    blocReponse(e.id),
     e.description ? h("p", { class: "desc" }, e.description) : null,
     e.personnalite ? h("p", { class: "perso" }, e.personnalite) : null,
-    h("div", {}, h("h3", {}, `Que veux-tu faire ? (${e.actions.length} actions)`), blocs));
+    h("div", {}, h("h3", {}, `Que veux-tu faire ? (${actions.length} actions)`), blocsActions(e.id, actions)));
+}
+function ficheJoueur() {
+  return h("div", { class: "fiche" },
+    retour(),
+    h("div", { class: "pastilles" },
+      h("span", { class: "pastille" }, S.aCheval ? `À cheval (${nomDe(S.monture)})` : "À pied"),
+      S.prime > 0 ? h("span", { class: "pastille etat-hostile" }, `Recherché · ${S.prime} $`) : null),
+    h("h2", {}, "Toi"),
+    h("p", { class: "ou" }, `${D.lieux[S.lieu] ? D.lieux[S.lieu].nom : ""} · ${nomJour()} ${S.heure} h · ${NOM_METEO[S.meteo]}`),
+    blocReponse(JOUEUR),
+    h("p", { class: "desc" }, D.joueur.description),
+    h("div", {}, h("h3", {}, `Seul ou avec ton inventaire (${D.joueur.actions.length} actions)`), blocsActions(JOUEUR, D.joueur.actions)));
 }
 function ficheVille() {
   const groupes = { habitant: [], animal: [], objet: [], batiment: [] };
@@ -643,23 +921,25 @@ function ficheVille() {
   const titres = { habitant: "Habitants", animal: "Animaux", objet: "Objets", batiment: "Bâtiments" };
   return h("div", { class: "fiche index-ville" },
     h("h2", {}, "Valentine, ville d'éleveurs"),
-    h("p", { class: "desc" }, "Rue de boue, odeur de bétail, deux saloons et un shérif fatigué. Les O'Driscoll rôdent. Clique sur un rond, un losange ou un bâtiment pour voir tout ce que tu peux faire."),
+    h("p", { class: "desc" }, "Rue de boue, odeur de bétail, deux saloons et un shérif fatigué. Les O'Driscoll préparent quelque chose avant le train du juge, jeudi. Clique sur un rond, un losange ou un bâtiment, ou fais avancer l'heure pour voir la ville vivre."),
+    h("p", { class: "monde" }, "Tu es : ", h("b", {}, D.lieux[S.lieu] ? D.lieux[S.lieu].nom : ""), ` · ${nomJour()} ${S.heure} h · ${NOM_METEO[S.meteo]}`),
     h("div", { class: "chiffres" },
-      h("div", {}, h("b", {}, Object.keys(D.entites).length), h("span", {}, "éléments")),
       h("div", {}, h("b", {}, D.stats.actions.toLocaleString("fr-FR")), h("span", {}, "actions")),
-      h("div", {}, h("b", {}, D.stats.variantes.toLocaleString("fr-FR")), h("span", {}, "réactions"))),
+      h("div", {}, h("b", {}, D.stats.variantes.toLocaleString("fr-FR")), h("span", {}, "réactions")),
+      h("div", {}, h("b", {}, D.stats.evenements.toLocaleString("fr-FR")), h("span", {}, "événements"))),
     ...Object.entries(groupes).map(([cat, liste]) => h("div", {},
       h("h3", {}, `${titres[cat]} (${liste.length})`),
       h("ul", {}, liste.map(e => h("li", {}, h("button", { type: "button", onclick: () => choisir(e.id) }, cat === "habitant" ? e.metier : majuscule(e.nom))))))));
 }
 function blocJournal() {
   if (!S.journal.length) return null;
-  return h("div", {}, h("h3", {}, "Journal"),
-    h("ol", { class: "journal" }, S.journal.map(j => h("li", {}, h("span", { class: "h" }, `${j.h} h`), h("b", {}, j.action), ". ", j.texte))));
+  return h("div", {}, h("h3", {}, "Journal de la ville"),
+    h("ol", { class: "journal" }, S.journal.map(j => h("li", { class: j.type }, h("span", { class: "h" }, `${j.h} h`), h("b", {}, j.titre), ". ", j.texte))));
 }
 function rafraichirRegistre() {
-  const e = selection ? D.entites[selection] : null;
-  registre.replaceChildren(e ? ficheEntite(e) : ficheVille(), blocJournal() || "");
+  const e = selection && selection !== JOUEUR ? D.entites[selection] : null;
+  const fiche = selection === JOUEUR ? ficheJoueur() : e ? ficheEntite(e) : ficheVille();
+  registre.replaceChildren(...[blocEvenement(), fiche, blocJournal()].filter(Boolean));
 }
 function rafraichirStats() {
   const ecrire = (id, txt, classe) => { const n = document.getElementById(id); n.textContent = txt; n.className = classe || ""; };
@@ -667,6 +947,8 @@ function rafraichirStats() {
   ecrire("s-argent", `${S.argent} $`);
   ecrire("s-prime", `${S.prime} $`, S.prime > 0 ? "mauvais" : "");
   ecrire("s-sante", S.sante, S.sante < 40 ? "mauvais" : "");
+  ecrire("s-jour", nomJour());
+  ecrire("s-meteo", NOM_METEO[S.meteo]);
   document.getElementById("heure").value = S.heure;
   document.getElementById("heure-txt").textContent = `${S.heure} h 00`;
 }
@@ -683,10 +965,7 @@ dessinerEntites();
 appliquerVue();
 
 let glisse = null, aGlisse = false;
-svg.addEventListener("pointerdown", ev => {
-  glisse = { x: ev.clientX, y: ev.clientY, vue: { ...vue } };
-  aGlisse = false;
-});
+svg.addEventListener("pointerdown", ev => { glisse = { x: ev.clientX, y: ev.clientY, vue: { ...vue } }; aGlisse = false; });
 svg.addEventListener("pointermove", ev => {
   if (!glisse) return;
   const dx = ev.clientX - glisse.x, dy = ev.clientY - glisse.y;
@@ -708,21 +987,27 @@ svg.addEventListener("keydown", ev => {
   const cible = ev.target.closest("[data-id]");
   if (cible && (ev.key === "Enter" || ev.key === " ")) { ev.preventDefault(); choisir(cible.dataset.id); }
 });
-svg.addEventListener("wheel", ev => {
-  ev.preventDefault();
-  const p = pointCarte(ev);
-  zoomer(ev.deltaY > 0 ? 1.15 : 1 / 1.15, p.x, p.y);
-}, { passive: false });
+svg.addEventListener("wheel", ev => { ev.preventDefault(); const p = pointCarte(ev); zoomer(ev.deltaY > 0 ? 1.15 : 1 / 1.15, p.x, p.y); }, { passive: false });
 document.getElementById("zoom-plus").onclick = () => zoomer(1 / 1.3);
 document.getElementById("zoom-moins").onclick = () => zoomer(1.3);
 document.getElementById("zoom-zero").onclick = () => { vue = { x: 0, y: 0, w: LARGEUR, h: HAUTEUR }; appliquerVue(); };
+document.getElementById("toi").onclick = () => choisir(JOUEUR);
 
-document.getElementById("heure").addEventListener("input", ev => { S.heure = +ev.target.value; sauver(); rafraichir(); });
+function passerHeures(n) {
+  const meteoAvant = S.meteo;
+  avancer(n);
+  if (S.meteo === "orage" || (S.meteo !== meteoAvant && S.meteo === "orage")) { eclair.classList.remove("flash"); void eclair.getBBox(); eclair.classList.add("flash"); }
+  sauver();
+  rafraichir();
+}
+document.getElementById("heure").addEventListener("change", ev => passerHeures((+ev.target.value - S.heure + 24) % 24));
+document.getElementById("heure").addEventListener("input", ev => { document.getElementById("heure-txt").textContent = `→ ${ev.target.value} h`; });
+document.getElementById("attendre").onclick = () => passerHeures(1);
 let minuterie = null;
 document.getElementById("lecture").addEventListener("click", ev => {
   const b = ev.currentTarget;
   if (minuterie) { clearInterval(minuterie); minuterie = null; b.textContent = "Lecture"; b.setAttribute("aria-pressed", "false"); return; }
-  minuterie = setInterval(() => { S.heure = (S.heure + 1) % 24; sauver(); rafraichir(); }, 1800);
+  minuterie = setInterval(() => passerHeures(1), 2200);
   b.textContent = "Pause"; b.setAttribute("aria-pressed", "true");
 });
 let confirmation = false;
@@ -745,6 +1030,6 @@ function ajusterNomsBatiments() {
 ajusterNomsBatiments();
 if (document.fonts) document.fonts.ready.then(ajusterNomsBatiments);
 rafraichir();
-setInterval(montrerBulle, 2200);
-setTimeout(montrerBulle, 600);
+setInterval(bulleAuHasard, 2400);
+setTimeout(bulleAuHasard, 600);
 </script>

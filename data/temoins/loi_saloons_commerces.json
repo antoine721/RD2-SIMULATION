@@ -1,0 +1,541 @@
+{
+  "sherif_malloy": {
+    "meurtre": [
+      "*dégaine plus vite que ses soixante ans ne le laissaient croire* « Les mains en l'air. Tout de suite. »",
+      "« Trente ans d'insigne, et chaque fois je me dis que c'est le dernier. » *arme le chien* « Ne bouge pas. »",
+      "« Eli ! Les menottes ! » *sa main ne tremble pas* « Toi, tu as fini de te promener dans ma ville. »",
+      "*s'agenouille près du corps, puis lève vers toi un regard de pierre* « Tu viens de te trouver une place au bout d'une corde. »",
+      "« Lâche ça. Je suis vieux, je boite, mais à cette distance, je ne rate pas. »"
+    ],
+    "violence": [
+      "*pose sa tasse de café froid sans se presser* « Ça suffit. La prochaine fois, c'est la cellule. »",
+      "« Pas dans ma ville. Tu veux te battre ? Va voir les O'Driscoll, ils sont demandeurs. »",
+      "*s'interpose en boitant, la main sur la crosse* « Recule. Je ne le dirai pas deux fois. »",
+      "« Cinq dollars d'amende. Et la prochaine fois, c'est une nuit avec Finn Mulligan. Il ronfle. »"
+    ],
+    "vol": [
+      "« Repose ça. Lentement. Je t'ai vu, et je suis trop fatigué pour courir après toi. »",
+      "*tend la main, paume ouverte* « Tu rends ça maintenant, ou tu le rends au juge jeudi. À toi de voir. »",
+      "« J'ai déjà un voleur en cellule et une seule paillasse. Rends ça et file. »",
+      "*soupire et sort son carnet* « Nom, prénom. Et ne me raconte pas que c'était à toi. »"
+    ],
+    "crime": [
+      "« Trente ans que je vois des types comme toi. Ils finissent tous au bout d'une corde ou au fond d'un trou. »",
+      "*plisse les yeux* « Je note. Je note tout, étranger. Ma mémoire est meilleure que mes jambes. »",
+      "« Encore un comme ça, et tu prends le train de jeudi pour Saint Denis avec l'autre. »",
+      "« Eli, ne dégaine pas. » *te fixe* « Toi, tu as deux minutes pour m'expliquer ce que tu fabriques. »"
+    ],
+    "bonte": [
+      "*hoche la tête, la moustache frémissante* « Bien. Valentine a besoin de gens comme ça. Plus que d'étoiles. »",
+      "« Je me méfie des héros. Mais ça, c'était correct. »",
+      "*lève sa tasse de café froid dans ta direction* « Il reste des gens convenables. J'avais fini par en douter. »",
+      "« Si tu restes en ville, je pourrais avoir besoin d'un homme comme toi. Pas un mot à Eli. »"
+    ],
+    "insolite": [
+      "*regarde sa tasse de café, puis toi* « Je ne dors pas assez pour voir ce genre de chose. »",
+      "« Trente ans d'insigne. Je croyais avoir tout vu. »",
+      "*se frotte les yeux* « Il n'y a pas de loi contre ça. Malheureusement. »",
+      "« Eli, note : comportement bizarre, pas illégal. Et range ce revolver. »"
+    ]
+  },
+  "adjoint": {
+    "meurtre": [
+      "*dégaine si vite que le Colt lui échappe presque* « P-plus un geste ! Je suis Eli, la Foudre de Valentine ! »",
+      "« Il... il est mort ? Vraiment mort ? » *devient vert, puis braque son Colt* « Les mains en l'air ! »",
+      "« Shérif ! SHÉRIF ! » *recule en tremblant, l'arme pointée sur toi* « Bouge pas ou je tire, je te jure que je tire ! »",
+      "*la voix déraille* « Tu viens de faire une grosse erreur. La plus grosse. Je vais t'arrêter. Tout seul. »"
+    ],
+    "violence": [
+      "*dégaine* « Halte ! Au nom de la loi ! Enfin, au nom du shérif Malloy ! »",
+      "« Recule ! Recule, ou c'est la cellule ! » *sa main tremble sur la crosse*",
+      "« Une bagarre ! Enfin ! » *se reprend aussitôt* « Je veux dire : arrêtez ça tout de suite ! »",
+      "*s'avance en roulant des épaules, le chapeau sur les yeux* « On se calme, ou on va voir comment je dégaine. »"
+    ],
+    "vol": [
+      "« Hé ! Je t'ai vu ! » *le Colt jaillit de l'étui* « Rends ça, voleur ! »",
+      "*sort son carnet et lèche son crayon* « Vol à la... à la tire. Ça s'écrit comment, “tire” ? »",
+      "« Un voleur ! Sous mes yeux ! » *rayonne* « Le shérif va enfin me prendre au sérieux. »",
+      "« Pose ça. Doucement. Ou la Foudre de Valentine va frapper. »"
+    ],
+    "crime": [
+      "*dégaine trop vite et se cogne le coude* « Aïe ! Euh... Tu es en état d'arrestation ! Peut-être ! »",
+      "« Je le savais ! Je savais que t'étais pas net ! Je l'ai dit au shérif, il m'a pas cru ! »",
+      "« Ça, c'est contraire à... à un tas de lois. Je vais vérifier lesquelles. »",
+      "*plisse les yeux comme dans les romans à quatre sous* « Toi et moi, on va avoir une petite discussion, étranger. »"
+    ],
+    "bonte": [
+      "« Ça, c'était chic. Vraiment chic. » *touche le bord de son chapeau trop grand*",
+      "« Un vrai héros de roman ! Tu crois qu'ils écriront sur toi, ou sur moi qui étais là ? »",
+      "*rengaine son Colt, un peu déçu* « Bon. Pas d'arrestation aujourd'hui, alors. »",
+      "« Le shérif dit qu'on juge un homme à ce qu'il fait quand personne ne regarde. Moi, je regardais. »"
+    ],
+    "insolite": [
+      "*porte la main à la crosse, hésite* « C'est... c'est interdit, ça ? Faut que je demande au shérif. »",
+      "« Hé ! Qu'est-ce que tu fabriques ? » *te fixe longuement* « Je te tiens à l'œil. »",
+      "*sursaute* « Refais jamais ça près de moi. J'ai failli te tirer dessus. »",
+      "« Dans les romans, les types bizarres, c'est toujours eux les coupables. Je dis ça, je dis rien. »"
+    ]
+  },
+  "prisonnier": {
+    "meurtre": [
+      "« Sainte Marie... Tu l'as tué raide ! » *se signe trois fois derrière les barreaux*",
+      "*recule au fond de la cellule* « Moi, j'ai rien vu ! Je dormais, je le jure sur la tête de ma mère ! »",
+      "« Bon. Maintenant que t'as fini, tu veux pas chercher les clés ? Elles doivent être sur lui. »",
+      "« Et c'est moi qu'on veut pendre pour trois chevaux ? Y a pas de justice dans ce pays ! »",
+      "*siffle entre ses dents manquantes* « Même Ciaran l'aurait pas fait aussi proprement. »"
+    ],
+    "violence": [
+      "*secoue les barreaux en hurlant* « Vas-y ! Cogne ! Cogne-le encore ! »",
+      "« Hé, doucement ! Si tu l'assommes, qui c'est qui m'apporte mes haricots ? »",
+      "*se colle aux barreaux, ravi* « Un dollar sur l'étranger ! Quelqu'un tient le pari ? Personne ? »",
+      "« Ça, c'est un coup à l'irlandaise ! T'aurais pas du sang de Cork, toi ? »"
+    ],
+    "vol": [
+      "« Bien joué ! Et pendant que t'y es, les clés sont au clou, juste là. »",
+      "*clin d'œil édenté* « T'as les doigts agiles. On ferait une belle paire, toi et moi. »",
+      "« Amateur. Moi, c'est des chevaux entiers que je prends. Enfin... que je prenais. »",
+      "« Je dirai rien au shérif. Mais mon silence, ça se paie, l'ami. En clés, de préférence. »"
+    ],
+    "crime": [
+      "« Ha ! Voilà quelqu'un qui me comprend ! Tu veux pas t'occuper de mes barreaux, aussi ? »",
+      "« Hé, shérif ! Lui, tu l'enfermes pas ? Ah non, c'est vrai : y a qu'une cellule, et j'y suis. »",
+      "*applaudit entre les barreaux* « Bienvenue chez les O'Driscoll, l'ami ! Y a toujours de la place. »",
+      "« Si le juge te voit faire ça jeudi, on montera à la potence ensemble. Ça me fera de la compagnie. »"
+    ],
+    "bonte": [
+      "*renifle* « T'es un bon gars, toi. Et un bon gars, ça laisse pas un pauvre Irlandais au juge, pas vrai ? »",
+      "« Ça me rappelle ma mère. Elle donnait tout. Moi, je prenais tout. On s'équilibrait. »",
+      "« Et pour Finn, rien ? Même pas une gentillesse de rien du tout ? »",
+      "*ricane* « Saint Patrick en personne ! Si tu cherches une âme à sauver, la mienne est juste derrière ces barreaux. »"
+    ],
+    "insolite": [
+      "*arrête de gratter le mortier* « J'en ai vu, des fous, mais toi tu les bats tous. »",
+      "« Refais-le ! Refais-le, j'ai rien d'autre à regarder que des murs ! »",
+      "*colle son visage aux barreaux* « C'est une coutume de ton pays, ça ? Chez nous, on boit, c'est plus simple. »",
+      "« Ma grand-mère disait que la lune rend les gens bizarres. Et y a même pas de lune. »"
+    ]
+  },
+  "barman_keane": {
+    "meurtre": [
+      "*lâche son verre, qui éclate sur le comptoir* « Seigneur ! Pas chez Keane ! Pas sur l'acajou ! »",
+      "*plonge derrière le comptoir* « Le shérif ! Et le croque-mort ! Dans cet ordre-là ! »",
+      "« Des années sans un mort chez Keane... Des années ! » *fixe le corps, livide*",
+      "*chuchote, le verre tremblant* « Je n'ai rien vu. Mais demain, toute la ville le saura. »"
+    ],
+    "violence": [
+      "« Pas chez moi ! Allez vous battre au Smithfield's, ils ont l'habitude ! »",
+      "*serre son verre contre lui* « Attention au miroir ! Il vient de Saint Denis, il a coûté douze dollars ! »",
+      "« Voilà, ça commence. On se croirait chez le voisin d'en face. » *met les bouteilles à l'abri*",
+      "*griffonne déjà au crayon* « Ça, Malloy l'apprendra avant le dîner. »"
+    ],
+    "vol": [
+      "*essuie son verre un peu plus fort* « Je n'ai rien vu. Mais je me souviens de tout. »",
+      "« Hé ! On ne se sert pas dans les poches des clients ! Keane's est un établissement respectable ! »",
+      "*hausse un sourcil* « Joli tour de main. Le joueur de poker va être jaloux. »",
+      "« Je ne dirai rien... pour l'instant. Une bouteille de mon meilleur, et j'oublie jusqu'à demain. »"
+    ],
+    "crime": [
+      "*se penche par-dessus le comptoir* « Toi, tu viens de me vendre une rumeur. Gratuite, pour une fois. »",
+      "« Oh là là. Je connais quelqu'un qui va adorer cette histoire. Et il porte une étoile. »",
+      "*la moustache tremble* « Pas d'ennuis ici, je vous en prie. J'ai déjà assez à faire avec les vachers. »",
+      "« Tu sais combien de temps une histoire met à traverser Valentine ? Moins que toi pour finir ton verre. »"
+    ],
+    "bonte": [
+      "« Ah ! Voilà qui fera une belle histoire. Pour une fois que j'en ai une gentille à raconter ! »",
+      "*pose un verre devant toi* « Celui-là, c'est la maison qui l'offre. Ne le dis à personne. »",
+      "« Ça, c'est un geste de gentleman. On en voit peu, même chez Keane. »",
+      "*s'essuie l'œil avec son torchon* « Je vais raconter ça à tout le monde. Avec quelques détails en plus. »"
+    ],
+    "insolite": [
+      "*cesse d'essuyer son verre pour la première fois depuis des années* « Ça, alors. »",
+      "« J'en vois passer, des choses étranges, derrière ce comptoir. Mais ça, c'est le haut du panier. »",
+      "*sort le crayon de derrière son oreille* « Tu permets que je note ? C'est pour la rumeur de demain. »",
+      "« Encore un qui a goûté au tord-boyaux du Smithfield's, j'imagine. »"
+    ]
+  },
+  "pianiste": {
+    "meurtre": [
+      "*ses mains s'abattent sur le clavier dans un accord atroce, puis plus rien* « Mon Dieu... Mon Dieu... »",
+      "*se cache derrière le piano, livide* « Je ne vois rien. Je n'entends rien. Je ne sais rien. »",
+      "« J'ai fui La Nouvelle-Orléans pour ne plus voir ça... » *referme le couvercle du piano d'une main tremblante*",
+      "*fixe le corps, puis toi* « Repose en paix, cher. » *murmure* « Et toi, va-t'en, pour l'amour du ciel. »"
+    ],
+    "violence": [
+      "*continue de jouer, de plus en plus vite, comme pour couvrir le bruit des coups*",
+      "*plaque un accord dramatique à chaque coup* « Pardon, cher. C'est l'habitude. »",
+      "« Pas le piano ! Frappez qui vous voulez, mais pas le piano ! »",
+      "*rentre la tête dans les épaules et joue un nocturne, très fort*"
+    ],
+    "vol": [
+      "*détourne les yeux et joue un peu plus fort* « Je n'ai rien vu, cher. Je ne vois jamais rien. »",
+      "*plaque trois notes moqueuses* « Léger comme un pickpocket du Vieux Carré. »",
+      "« À La Nouvelle-Orléans, on fait ça avec plus d'élégance. Mais l'intention y est. »",
+      "*soupire* « Les gens volent, les gens oublient. Seule la musique reste... et les dettes. »"
+    ],
+    "crime": [
+      "*s'arrête au milieu d'une mesure* « Je n'ai rien vu. J'ai bien assez de soucis avec ma propre histoire. »",
+      "*joue doucement une marche funèbre* « Pour plus tard, cher. On ne sait jamais. »",
+      "« Ne me demandez pas de témoigner. Les témoins, on finit toujours par les retrouver. »",
+      "*vide son verre d'un trait, ce qui n'arrangera pas la suite du morceau*"
+    ],
+    "bonte": [
+      "*joue quelques notes douces, une berceuse créole* « Pour toi, cher. Celle-là est gratuite. »",
+      "« Il reste de la grâce dans ce monde. Pas beaucoup, mais il en reste. »",
+      "*sourit pour la première fois de la soirée* « Ça mérite du Gottschalk, pas du Camptown Races. »",
+      "*lève son verre vers toi, les yeux humides* « À ceux qui font le bien sans qu'on le leur demande. »"
+    ],
+    "insolite": [
+      "*plaque un accord interrogatif* « Je vais mettre ça en musique. Quelque chose de bizarre, en mineur. »",
+      "« À La Nouvelle-Orléans, on voyait ça pendant Mardi gras. Mais c'était Mardi gras. »",
+      "*regarde son verre, puis toi* « Je n'en suis qu'au deuxième, pourtant. »",
+      "*accompagne la scène d'une petite valse moqueuse, sans rater une note*"
+    ]
+  },
+  "joueur_poker": {
+    "meurtre": [
+      "*glisse discrètement le pot dans sa poche pendant que tout le monde regarde le corps*",
+      "*a disparu sous la table ; seule sa chevalière dépasse* « Je ne suis pas là. Je n'ai jamais été là. »",
+      "« Messieurs, je crois que la partie est terminée. » *ramasse les mises. Toutes les mises.*",
+      "*pâlit, la main sur le derringer qu'il n'ose pas sortir* « Oh, mon Dieu. Oh, pas sur le gilet. »",
+      "*essuie une goutte de sang sur son brocart* « Celui-là ne me devra plus jamais rien. Hélas. »"
+    ],
+    "violence": [
+      "*profite de la bagarre pour retourner discrètement la carte de son voisin*",
+      "« Dix dollars sur l'étranger. Quelqu'un ? » *bat les cartes d'une seule main, sans regarder*",
+      "*recule sa chaise, manchettes à l'abri* « Faites, faites. Mais loin du brocart, je vous prie. »",
+      "*profite du chaos pour échanger un deux contre un as dans la main d'un fermier*"
+    ],
+    "vol": [
+      "*sourit en connaisseur* « Joli. Un peu lent du poignet, mais joli. »",
+      "« Ah, un collègue ! Je te paie un verre si tu me montres comment tu tiens tes doigts. »",
+      "*vérifie aussitôt sa chevalière, puis sa montre, puis sa manche gauche* « Tout est là. Félicitations quand même. »",
+      "« Moi, je préfère que mes victimes signent. C'est plus élégant, et c'est presque légal. »"
+    ],
+    "crime": [
+      "*lève un sourcil, amusé* « Tu joues gros, l'ami. J'aime ça. Assieds-toi, on en parle autour d'une main. »",
+      "« Personne n'a rien vu, n'est-ce pas, messieurs ? » *fait glisser une pièce vers chacun*",
+      "*bat les cartes d'une main* « Un homme sans scrupules. On pourrait faire des affaires, toi et moi. »",
+      "« Si le shérif demande, j'étais à ma table. Comme toujours. Et toi aussi, si tu veux. »"
+    ],
+    "bonte": [
+      "« Touchant. Vraiment touchant. » *essuie une larme imaginaire, puis reprend la donne*",
+      "*profite de l'émotion générale pour jeter un œil à la main de son voisin*",
+      "« La générosité, l'ami, c'est une mise sans espoir de gain. Mauvaise stratégie. Belle quand même. »",
+      "*applaudit du bout des doigts* « Bravo. S'il te reste de l'argent à donner, ma table est là. »"
+    ],
+    "insolite": [
+      "« Fascinant. » *profite que tous les regards soient tournés pour glisser un as dans sa manche*",
+      "*cesse de battre les cartes, une seconde seulement* « J'ai tout vu sur le Mississippi. Pas ça. »",
+      "« Dix contre un qu'il recommence. Qui tient le pari ? »",
+      "*lisse sa fine moustache* « Tout le monde regarde par là ? Parfait. »"
+    ]
+  },
+  "danseuse": {
+    "meurtre": [
+      "*étouffe un cri dans ses mains, puis se reprend* « Quelqu'un, allez chercher le docteur. Ou le croque-mort. »",
+      "*recule contre le mur, blanche sous le fard* « J'ai quitté le Kansas pour ne plus jamais voir ça. »",
+      "« Saint Denis. Demain. Je prends le premier train, je le jure. »",
+      "*serre les bras contre elle sans te quitter des yeux* « Ne t'approche pas de moi. »"
+    ],
+    "violence": [
+      "« Hé, les cow-boys ! Si vous cassez des verres, c'est encore moi qui ramasse ! »",
+      "*hausse les épaules* « Encore un qui croit qu'on règle tout avec les poings. Ils se ressemblent tous. »",
+      "*s'écarte en relevant sa jupe* « Pas sur mes plumes ! Elles coûtent plus cher que ta chemise ! »",
+      "« Bravo, champion. Tu veux une médaille, ou juste un verre ? »"
+    ],
+    "vol": [
+      "*sourire en coin* « Discret. Mais pas autant que tu le crois, cow-boy. »",
+      "« Je n'ai rien vu. Mais avec une main si légère, tu peux bien laisser un pourboire à la fille. »",
+      "*serre son petit sac contre elle* « Toi, tu ne t'approches pas de mes économies. »",
+      "« Tu fais ça mieux que Crane avec ses cartes. Et ce n'est pas un compliment. »"
+    ],
+    "crime": [
+      "« Je connais les types comme toi. Ils finissent toujours par filer sans payer. »",
+      "*soupire en recousant une plume* « Encore des ennuis. Valentine n'en manque jamais. »",
+      "« Ne compte pas sur moi pour mentir au shérif. Je mens déjà assez pour gagner ma vie. »",
+      "*lève les yeux au ciel* « Les hommes. Toujours à faire les intéressants. »"
+    ],
+    "bonte": [
+      "« Ça alors. Un homme qui donne sans rien demander. Je croyais que ça n'existait que dans les romans. »",
+      "*son sourire de scène devient un vrai sourire, juste une seconde*",
+      "« Pas mal, cow-boy. Tu remontes dans mon estime. Remarque, il y avait de la marge. »",
+      "*te regarde autrement* « Celle-là, je la raconterai à Saint Denis. Pas sous le nom de Miss Rose. »"
+    ],
+    "insolite": [
+      "*éclate de rire* « Ça, c'est un numéro ! Keane devrait te payer pour le refaire tous les soirs. »",
+      "« J'ai vu des clients faire des choses bizarres. Mais à jeun, c'est une première. »",
+      "*hausse un sourcil sous ses plumes* « Tu cherches du travail sur scène ? »",
+      "« Au Kansas, on t'aurait enfermé dans la grange. Ici, on t'offre un verre. »"
+    ]
+  },
+  "barman_smithfield": {
+    "meurtre": [
+      "*sort Clementine de sous le comptoir, sans la pointer* « Le corps, tu le sors toi-même. J'suis pas croque-mort. »",
+      "« Encore un. » *jette de la sciure fraîche sur la flaque* « Ça fera un dollar pour le nettoyage. »",
+      "*crache dans un verre et l'essuie* « J'ai rien vu. J'vois jamais rien. Ça m'a gardé vivant depuis la guerre. »",
+      "« Pas de shérif ici. Le premier qui va le chercher boit plus jamais chez moi. »"
+    ],
+    "violence": [
+      "« Joli crochet. » *fait glisser un verre vers toi* « Celui-là est pour la maison. Le suivant, tu le paies. »",
+      "*s'accoude, l'air intéressé* « Si t'en veux encore, bras de fer samedi. Je prends ma part sur les paris. »",
+      "« Pas sur mon comptoir. Dehors, dans la boue, comme tout le monde. »",
+      "*hausse les épaules* « Il l'avait cherché. Ils le cherchent tous, ici. »"
+    ],
+    "vol": [
+      "« Ce qui se passe au Smithfield's reste au Smithfield's. Mais ma caisse, tu y touches pas. »",
+      "*grogne* « Ici, les gens viennent se faire plumer par mon whisky. Pas par toi. »",
+      "*main sous le comptoir* « Fais les poches que tu veux. Touche aux miennes et c'est Clementine qui te répond. »",
+      "« Pas vu. Mais maintenant, t'as soif. Et ton verre coûte double. »"
+    ],
+    "crime": [
+      "« Les ennuis, j'en ai déjà assez. T'en rajoutes, tu dégages. »",
+      "*essuie un verre avec son chiffon douteux* « La loi, j'm'en fous. Mon comptoir, j'm'en fous pas. »",
+      "« Si Malloy pose des questions, t'étais à Rhodes. Et tu me dois un whisky. »",
+      "*hoche la tête, à peine* « Ça te regarde. Mais fais pas fuir mes clients. »"
+    ],
+    "bonte": [
+      "« Pff. Va faire ta charité ailleurs. Ici, c'est un saloon, pas une mission. »",
+      "*renifle* « Les pleurnichards, ça me file des boutons. Les gentils, c'est pire. »",
+      "*te jauge longuement* « T'es soit un saint, soit un idiot. Dans les deux cas, tu paies ton verre. »",
+      "« Ça va te passer. Bois un coup, ça aide. »"
+    ],
+    "insolite": [
+      "« Tu bois ou tu dégages ? Parce que ça, c'est ni l'un ni l'autre. »",
+      "*regarde son tonneau, puis toi* « Tiens. Le mélange du jour est plus costaud que je pensais. »",
+      "*hausse un sourcil broussailleux et retourne à son verre sale*",
+      "« J'ai vu pire pendant la guerre. Pas beaucoup pire, mais pire. »"
+    ]
+  },
+  "chasseur_primes": {
+    "meurtre": [
+      "*ouvre son carnet sans se presser* « Meurtre devant témoins. Cent dollars sur ta tête, au bas mot. »",
+      "« Vivant, il payait peut-être plein tarif. Mort, il ne paie plus rien. Gâchis. »",
+      "*pose la main sur la toile cirée de sa carabine* « Continue comme ça et tu vaudras plus que l'Irlandais. »",
+      "*lève les yeux de son café froid* « Je t'ai vu. Je retiens les visages. C'est mon métier. »",
+      "« Il valait combien, lui ? » *note quelque chose* « Rien ? Alors tu as tué pour rien. »"
+    ],
+    "violence": [
+      "*ne lève pas les yeux de son café* « Garde gauche trop basse. Tu te feras tuer comme ça. »",
+      "« Trois coups pour le mettre à terre. Il m'en faut un. »",
+      "*note dans son carnet* « Coups et blessures. Cinq dollars de prime, dix peut-être. Pas de quoi me lever. »",
+      "« Pas mon affaire. Tant que tu restes hors de ma ligne de tir. »"
+    ],
+    "vol": [
+      "*écrit trois mots dans son carnet* « Vol. Dix dollars. Je reviendrai quand ce sera plus. »",
+      "« Tu viens de te mettre un prix sur la tête. Petit. Mais c'est un début. »",
+      "*sans lever les yeux* « Je ne chasse pas le menu fretin. Reviens quand tu vaudras cinquante dollars. »",
+      "« Doigts rapides. J'ai vu un homme pendu pour moins que ça, à Helena. »"
+    ],
+    "crime": [
+      "*tourne une page de son carnet* « Je ne suis pas la loi. Je suis l'addition. »",
+      "« Continue. Chaque dollar sur ta tête m'intéresse. »",
+      "*sort un crayon* « Ton nom, pour le carnet. Non ? Pas grave. Les affiches le trouveront. »",
+      "« Malloy t'a vu ? Non ? Moi, si. Ça suffit. »"
+    ],
+    "bonte": [
+      "« La bonté ne paie pas. » *boit une gorgée de café froid* « Mais c'est noté. »",
+      "*hausse les épaules* « Zéro dollar. Pour toi comme pour moi. »",
+      "« Une bonne action de plus. Ça n'efface jamais une affiche. »",
+      "*te regarde une seconde de trop* « Rare. Presque aussi rare qu'un O'Driscoll honnête. »"
+    ],
+    "insolite": [
+      "*ne bronche pas* « Tant que ce n'est pas l'Irlandais qui bouge, ça ne m'intéresse pas. »",
+      "« Étrange. Pas illégal. Pas rentable. Donc pas mon problème. »",
+      "*note dans son carnet* « Comportement imprévisible. Plus dur à prendre vivant. »",
+      "*lève les yeux, les rabaisse* « Le Montana est plein de fous. Ils ne valent rien non plus. »"
+    ]
+  },
+  "odriscoll": {
+    "meurtre": [
+      "*un lent sourire tire sa balafre* « Propre. T'as du sang-froid. Ça m'intéresse. »",
+      "« Pas mal, pour un étranger. Jeudi, j'aurai peut-être besoin d'une main sûre comme la tienne. »",
+      "*ne bouge pas, la main sur son Schofield* « Le jour où tu vises un trèfle, je te retrouve. »",
+      "*lève son verre vers toi* « À sa santé. Enfin, à ce qu'il en reste. »",
+      "« Un de moins. Ce pays est trop peuplé, de toute façon. »"
+    ],
+    "violence": [
+      "*sourit enfin* « Quelqu'un qui sait se servir de ses poings, dans ce trou. Enfin. »",
+      "« Encore. Il bouge encore. »",
+      "*se cale contre le mur, ravi* « Ça vaut mieux que le whisky de Hollis. »",
+      "« Tu cognes comme un O'Driscoll. Viens me voir quand t'auras fini. »"
+    ],
+    "vol": [
+      "*ricane* « Petit joueur. Moi, je vise plus gros. Une cellule, par exemple. »",
+      "« Joli. T'as les doigts de mon cousin. Lui aussi, il prenait ce qui lui plaisait. »",
+      "*tapote la table* « T'as l'air d'aimer l'argent facile. J'ai peut-être un travail pour toi. »",
+      "« Partage, l'ami. Chez les O'Driscoll, on partage. Enfin, c'est ce qu'on dit. »"
+    ],
+    "crime": [
+      "*la balafre se plisse* « Tu te fiches du shérif, hein ? On a peut-être des choses à se dire. »",
+      "« La loi d'ici, c'est un vieux boiteux et un gamin qui tremble. Tu l'as compris aussi. »",
+      "*crache dans la sciure* « Pas mal. Mais si tu attires l'étoile ici avant jeudi, c'est moi que tu gênes. »",
+      "« Viens boire un coup, l'ami. J'aime les gens qui n'ont peur de rien. »"
+    ],
+    "bonte": [
+      "*crache par terre* « Pauvre idiot. Un cœur tendre, ça se perce plus facilement. »",
+      "« Va donc à l'église, le saint. Ici, on boit. »",
+      "*détourne les yeux, la mâchoire serrée* « T'aurais fait un bon fermier. Ils finissent tous mal, les bons fermiers. »",
+      "« La charité. » *ricane* « On verra si elle t'aide, le jour où quelqu'un te visera. »"
+    ],
+    "insolite": [
+      "*plisse les yeux sous son chapeau* « Qu'est-ce que tu regardes ? Ah non, c'est toi qu'on regarde. »",
+      "« T'es fou ou tu fais semblant ? Les fous, ça peut servir. »",
+      "*la main file sur la crosse, par réflexe* « Refais ça près de moi, et je te troue. »",
+      "« Ça doit être le whisky frelaté. Ou alors t'es Anglais. »"
+    ]
+  },
+  "armurier": {
+    "meurtre": [
+      "*empoigne le Spencer sous le comptoir* « Halte ! Lâche ton arme, soldat, ou tu goûtes au Spencer ! »",
+      "« J'ai enterré assez d'hommes à Petersburg pour une vie entière. Tu n'en ajouteras pas ici. »",
+      "*se fige, la mâchoire serrée* « Abattu comme un chien. À Gettysburg, on fusillait pour moins que ça. »",
+      "« Comment ? » *porte la main à son oreille gauche* « Non. J'ai bien vu. Qu'on aille chercher Malloy ! »"
+    ],
+    "violence": [
+      "« Garde-à-vous ! Pas de bagarre près de ma poudre, bon sang ! »",
+      "*observe d'un œil d'instructeur* « Mauvaise garde, mauvais appui. Une recrue. »",
+      "« Si tu dois cogner, sors. Une étincelle ici, et on vole tous jusqu'à Saint Denis. »",
+      "*pose la main sur le comptoir, tout près du Spencer* « Ça suffit. Repos. »"
+    ],
+    "vol": [
+      "« Repose ça, voleur. Je compte mes cartouches une à une, comme au régiment. »",
+      "*fronce ses sourcils gris* « Un voleur sous mon nez. Je croyais avoir tout vu à la guerre. »",
+      "« Au régiment, c'était le fouet pour ça. Ici, c'est le shérif. Choisis. »",
+      "*plisse les yeux* « Je suis sourd d'une oreille, pas aveugle. Rends ça. »"
+    ],
+    "crime": [
+      "« Un homme sans honneur, c'est un fusil sans percuteur : ça ne sert à rien. »",
+      "*se redresse, droit comme un fusil réglementaire* « Pas de ça ici. J'ai servi mon pays. Je sers encore la loi. »",
+      "« Tu ne m'achèteras plus une cartouche. Pas une. »",
+      "*ouvre son registre* « Je ne vends pas aux voyous. Ton nom ? »"
+    ],
+    "bonte": [
+      "*hoche sèchement la tête* « Bien fait, soldat. Il reste de l'honneur sur cette terre. »",
+      "« Ça, c'est un geste d'homme. On aurait eu besoin de gars comme toi au régiment. »",
+      "*effleure sa médaille de l'Union* « Mon capitaine aurait fait pareil. Il est tombé à Petersburg. »",
+      "« Pour la peine, ta prochaine boîte de cartouches est à moitié prix. Pas un mot à l'épicier. »"
+    ],
+    "insolite": [
+      "« Comment ? » *tend l'oreille droite* « Non. Finalement, je ne veux pas savoir. »",
+      "*examine la scène comme une arme mal remontée* « Ça ne tient pas debout. »",
+      "« Même les recrues de l'Ohio ne faisaient pas ça. Et c'étaient des recrues de l'Ohio. »",
+      "*retourne à son établi en grommelant* « Les civils. »"
+    ]
+  },
+  "epicier": {
+    "meurtre": [
+      "*plonge derrière le comptoir, la clé du tiroir-caisse serrée dans le poing* « Au meurtre ! Malloy ! MALLOY ! »",
+      "« Mon Dieu... Et la farine qu'il venait de payer ? Je... je la garde, alors ? »",
+      "*tremble de tout son corps* « Pas sur mon plancher ! Je l'ai lavé dimanche ! »",
+      "« Au secours ! Et fermez la porte, ça va attirer les voleurs ! »"
+    ],
+    "violence": [
+      "« Pas dans ma boutique ! Vous allez casser les bocaux ! Les bocaux, ça coûte ! »",
+      "*brandit sa règle de bois* « Dehors ! Dehors, ou j'appelle le shérif ! Et je facture la casse ! »",
+      "*protège sa balance de son corps maigre* « Pas la balance ! Elle est juste, elle ! »",
+      "« Je note tout ! Un pot de mélasse renversé : quinze cents ! »"
+    ],
+    "vol": [
+      "« Hé ! Ça se paie, ça ! Au voleur ! AU VOLEUR ! »",
+      "*brandit sa règle* « Je l'ai vu ! J'ai tout vu ! Pire que le gamin des rues ! »",
+      "« On tourne le dos deux secondes et on se fait dépouiller ! Malloy va m'entendre ! »",
+      "*porte vivement la main à la clé pendue à son cou* « Pas ma clé ! Personne ne touche à ma clé ! »"
+    ],
+    "crime": [
+      "« Je le savais. Je l'ai su dès que tu as passé la porte. On ne me la fait pas, à moi. »",
+      "*remonte son pince-nez* « Je vais déposer une plainte. Une de plus. Malloy adore mes plaintes. »",
+      "« Et ensuite ? On va me demander crédit ? C'est la fin de la civilisation ! »",
+      "*ferme le tiroir-caisse à double tour* « On ne sait jamais, avec les gens comme toi. »"
+    ],
+    "bonte": [
+      "*remonte son pince-nez, incrédule* « Donner ? Gratuitement ? Ça cache quelque chose. »",
+      "« Tant de générosité... Tu ne voudrais pas m'acheter quelque chose, pendant que tu es d'humeur ? »",
+      "« Un jour, tu seras pauvre. Et ce jour-là, ne compte pas sur moi pour te faire crédit. »",
+      "« C'est bien beau, la charité. Mais à la fin, qui paie ? Toujours les commerçants. »"
+    ],
+    "insolite": [
+      "*fronce les sourcils* « Vous êtes sûr que ça va ? Je ne vends pas de remède pour ça. »",
+      "*pèse la scène du regard, deux fois* « Non. Ça ne vaut rien. »",
+      "« Si vous cassez quelque chose en faisant ça, c'est vous qui payez. »",
+      "*remonte son pince-nez* « Encore un qui a bu les toniques du docteur. »"
+    ]
+  },
+  "banquier": {
+    "meurtre": [
+      "*se cache derrière le premier venu* « Prenez-le, lui ! Je suis bien trop précieux pour Valentine ! »",
+      "« Il... il avait un compte chez nous ? » *s'éponge le front* « Wendell, gelez son compte ! »",
+      "*blêmit, la chaîne de montre tremblant sur sa panse* « Pas moi ! Pas moi ! Je suis un Whitlock ! »",
+      "« Un assassin, en pleine ville ! Et Malloy qui sommeille ! Voilà où passent nos impôts ! »",
+      "*recule jusqu'à la porte* « Je... je ne vous ai jamais vu. Je ne connais personne. Bonne journée. »"
+    ],
+    "violence": [
+      "« Barbarie ! Voilà pourquoi aucun homme sérieux n'investit dans ce territoire ! »",
+      "*recule en tenant ses lunettes* « Pas le visage ! Ce sont des lunettes à neuf dollars ! »",
+      "« Je vous ferai saisir pour ça, monsieur ! Votre cheval, votre selle, vos bottes ! »",
+      "*brandit sa canne à pommeau d'argent, de loin* « Le shérif sera informé. Par écrit. »"
+    ],
+    "vol": [
+      "« Un voleur ! » *serre sa chaîne de montre* « On ne vole pas en présence d'un Whitlock ! »",
+      "*observe par-dessus ses lunettes* « Amateur. Dans mon métier, on fait d'abord signer. »",
+      "« Wendell, fermez le coffre ! Fermez tout ! »",
+      "*porte la main à son gousset* « Touchez à ma montre, et je vous fais pendre. »"
+    ],
+    "crime": [
+      "*plisse les yeux* « Voilà un homme qui n'a pas de crédit chez nous. Et qui n'en aura jamais. »",
+      "« Je me souviendrai de votre visage, monsieur. J'ai une excellente mémoire des mauvais payeurs. »",
+      "*baisse la voix* « Discret, au moins. Vous ne chercheriez pas du travail, par hasard ? »",
+      "« Le juge en sera informé. Et mon frère le révérend priera pour vous. Moyennant un don. »"
+    ],
+    "bonte": [
+      "*renifle* « Touchant. Mais ça ne rapporte rien. »",
+      "« Si vous avez de l'argent à jeter, déposez-le plutôt chez nous. Trois pour cent, garantis. »",
+      "*se tamponne le nez* « La charité encourage la paresse, monsieur. Les fermiers en sont la preuve. »",
+      "« Encore un sentimental. Ils finissent tous à mon guichet, à mendier un prêt. »"
+    ],
+    "insolite": [
+      "*vous toise par-dessus ses lunettes cerclées d'or* « Vous êtes saoul, ou simplement de passage ? »",
+      "« Valentine attire décidément une clientèle singulière. »",
+      "*consulte sa montre en or* « J'ai des saisies à signer. Je n'ai pas de temps pour ce spectacle. »",
+      "*hausse un sourcil* « Je ne prêterais pas un cent à quelqu'un qui fait ça. »"
+    ]
+  },
+  "caissier": {
+    "meurtre": [
+      "*se jette sous le guichet* « C'est le braquage ! Je le savais ! Je le savais depuis des semaines ! »",
+      "*souffle dans son sifflet de police, si fort que ses lunettes tombent*",
+      "« M-mon Dieu... Il est... Il est mort ? » *s'évanouit contre la grille du guichet*",
+      "*cherche son derringer sous le comptoir, le trouve, le laisse tomber* « Je ne sais pas m'en servir ! »",
+      "« Trente-deux... Non ! Je ne dirai rien ! Rien ! » *se plaque les deux mains sur la bouche*"
+    ],
+    "violence": [
+      "*se cache derrière son registre* « Arrêtez ! S'il vous plaît, arrêtez ! Je vais appeler... quelqu'un ! »",
+      "*compte des billets à toute vitesse pour se calmer* « Un, deux, trois... un, deux... »",
+      "« Pas de bagarre dans la banque ! Monsieur Whitlock va dire que c'est ma faute ! »",
+      "*porte son sifflet à ses lèvres, hésite, n'ose pas siffler*"
+    ],
+    "vol": [
+      "« Au... au voleur ? » *si bas que personne ne l'entend* « Au voleur... »",
+      "*serre la caisse contre lui de ses doigts tachés d'encre* « Pas la caisse ! On me la retiendra sur mes gages ! »",
+      "*souffle enfin dans son sifflet de police. Un tout petit coup.*",
+      "« Je l'ai vu ! J'ai tout noté ! » *brandit une feuille où il a écrit “voleur” trois fois*"
+    ],
+    "crime": [
+      "*tremble derrière ses lunettes* « Je n'ai rien vu ! Enfin si, mais je ne dirai rien ! Enfin si, au shérif ! »",
+      "« Il faut prévenir le shérif. Quelqu'un doit le faire. Pas moi. Quelqu'un. »",
+      "*note l'heure exacte dans son registre, la plume tremblante*",
+      "« C'est comme ça que ça commence, les braquages. Je l'ai lu dans le journal. »"
+    ],
+    "bonte": [
+      "*rougit jusqu'aux oreilles* « C'est... c'est très bien, ce que vous avez fait. Monsieur Whitlock ne le ferait jamais. »",
+      "« Oh. » *sourit timidement* « Il reste donc des gens honnêtes. Je le dirai au petit, il le criera dans la rue. »",
+      "*remonte ses lunettes, ému* « Je... je vais compter ça comme une bonne journée. »",
+      "« Si tout le monde était comme vous, je pourrais dormir sans caler une chaise sous ma poignée. »"
+    ],
+    "insolite": [
+      "*sursaute si fort que sa visière tombe* « Qu'est-ce que... Mais pourquoi ? »",
+      "« C'est une diversion ? C'est une diversion, n'est-ce pas ? Pour le braquage ? »",
+      "*se réfugie derrière la grille du guichet et observe, les yeux ronds*",
+      "« Je... je ne sais pas dans quelle colonne du registre je dois mettre ça. »"
+    ]
+  }
+}
