@@ -1,0 +1,486 @@
+{
+  "ivrogne": {
+    "meurtre": [
+      "*dessoûle d'un coup et lâche sa bouteille* « Seigneur... Il bouge plus. Il bouge plus du tout. »",
+      "« J'ai rien vu ! J'suis saoul ! Demandez à n'importe qui, j'suis toujours saoul ! »",
+      "*se signe avec sa bouteille* « À Leadville, au moins, on se tuait pour de l'or. Toi, c'était pour quoi ? »",
+      "*se tasse derrière l'abreuvoir et chante « Clementine » tout bas, d'une voix qui tremble*",
+      "« Faut qu'j'arrête de boire. Non. Faut qu'je boive plus. Beaucoup plus. »"
+    ],
+    "violence": [
+      "« Ha ! Un crochet du gauche ! Plus haut, la garde, freluquet ! »",
+      "*retrousse ses manches* « Bagarre ! Attendez-moi, j'arrive... dès que j'retrouve mes jambes. »",
+      "« Hé, hé ! On frappe pas un homme à terre ! Sauf si c'est le banquier. »",
+      "*applaudit en manquant de tomber* « Comme à Leadville en 79 ! Qui parie ? J'parie ma pépite ! »",
+      "*hic* « Arrête, tu vas l'abîmer... Il m'devait un verre, celui-là. »"
+    ],
+    "vol": [
+      "*cligne de l'œil* « J'ai rien vu. Mais si y a une bouteille dans le lot, on partage. »",
+      "« Au voleur ! Au... non, laisse. Moi aussi, j'ai volé des poules, en 82. »",
+      "*serre sa bourse de cuir contre sa poitrine* « Pas ma pépite. Tout ce que tu veux, mais pas ma pépite. »",
+      "« Hé ! C'est pas joli, ça ! ...Combien t'en tires ? »",
+      "*ricane* « Habile. Mais à Leadville, on pendait pour moins que ça, mon gars. »"
+    ],
+    "crime": [
+      "« Oh là. Malloy va pas aimer ça. Moi, j'm'en fiche, j'aime plus rien depuis 1881. »",
+      "*hic* « Tu fais quoi, là ? Non, me dis pas. J'veux pouvoir jurer que j'savais pas. »",
+      "« Si t'as besoin d'un complice, j'prends un dollar et deux bouteilles. Non : trois bouteilles. »",
+      "*se tapote le nez* « Motus. Le vieux Pépite a la mémoire d'une passoire. Surtout contre un verre. »",
+      "« T'es pire qu'un banquier, toi ! ...Non. Personne est pire qu'un banquier. »"
+    ],
+    "bonte": [
+      "*renifle, les yeux mouillés* « Ça... ça me rappelle ma pauvre mère. Elle aussi, elle était bonne. »",
+      "« T'es un brave, toi. Le jour où j'trouve mon filon, t'auras ta part. Promis. Juré. *hic* »",
+      "*entonne « Oh my darling... », puis s'interrompt* « Pardon. Ça m'émeut, les braves gens. »",
+      "« Eh ben ! Y a encore des chrétiens à Valentine ! Faut fêter ça. T'aurais pas un dollar ? »",
+      "*te tend sa bouteille presque vide* « Tiens, à ta santé, l'ami. Une gorgée. Pas plus, hein. »"
+    ],
+    "insolite": [
+      "*se frotte les yeux, regarde sa bouteille, puis la jette par-dessus son épaule* « Bon. Ça, c'est un signe. »",
+      "« J'en ai vu, des choses, à Leadville. Un ours qui jouait aux cartes. Mais ça, jamais. »",
+      "*hic* « Personne me croira. Remarque, personne me croit jamais. »",
+      "*penche la tête de côté pour mieux comprendre, et tombe dans la boue*",
+      "« Toi aussi, tu cherches de l'or ? Pas là, nigaud ! Sous le rocher en forme d'enclume ! »"
+    ]
+  },
+  "fermier": {
+    "meurtre": [
+      "*blêmit et serre son chapeau à deux mains* « Seigneur Dieu... Il avait peut-être des petits, lui aussi. »",
+      "« Comme les O'Driscoll. Exactement comme eux. Je croyais que tu valais mieux, l'ami. »",
+      "*recule pas à pas sans te quitter des yeux, la main crispée sur la lettre de la banque*",
+      "« Je vais chez Malloy. Tire-moi dans le dos si tu veux. Martha saura pourquoi. »",
+      "*s'agenouille près du corps et lui ferme les yeux d'une main crevassée qui tremble*"
+    ],
+    "violence": [
+      "« Arrête ! Il en a eu son compte ! Un homme, ça se relève pas toujours, tu sais. »",
+      "*s'interpose, les mains ouvertes* « Doucement, doucement. Y a déjà assez de malheur dans cette ville. »",
+      "*serre les poings, puis les rouvre* « Pas d'histoires. Si je me bats, je perds la ferme. »",
+      "« C'est comme ça qu'ils ont pris mes chevaux. À coups de crosse. Je connais ce bruit-là. »",
+      "*détourne les yeux vers la banque* « Au moins, toi, tu cognes en face. »"
+    ],
+    "vol": [
+      "« Hé ! Ça t'appartient pas, ça ! Moi aussi on m'a tout pris, et ça m'a pas rendu voleur ! »",
+      "*se mord la lèvre* « Je devrais le dire au shérif. Mais lui, il dit jamais rien au banquier. »",
+      "« Rends-le. Ce que tu prends, c'est la récolte de quelqu'un, l'ami. Je sais ce que ça fait. »",
+      "*regarde le butin, puis la lettre de la banque, et secoue la tête comme pour chasser une idée*",
+      "« Trois cent dix dollars... Combien t'en as pris, là ? Non. Me le dis pas. »"
+    ],
+    "crime": [
+      "« Je t'ai rien vu faire. J'ai assez d'ennuis avec la loi des banquiers. »",
+      "*fronce les sourcils* « C'est pas honnête, ça. Mon père disait : on se couche propre, ou on se couche pas. »",
+      "« Tu cherches les ennuis, l'ami. Dans cette ville, ils finissent toujours par venir. »",
+      "*fait un pas vers toi, presque tenté* « Si t'as besoin d'un homme pour ce genre de travail... Non. Oublie. »",
+      "« Martha me pardonnerait pas d'avoir regardé sans rien dire. » *Il ne dit rien.*"
+    ],
+    "bonte": [
+      "*ôte son chapeau de paille* « Que Dieu te le rende, l'ami. Ça fait du bien de voir ça. »",
+      "« Y a encore des gens bien. Faudra que je le raconte à Martha et aux petits. »",
+      "*s'essuie les yeux d'un revers de manche* « Pardon. C'est la poussière. Ou alors j'avais oublié. »",
+      "« Si t'as besoin de bras, un jour, demande Jonas Dunbar. Pour un homme comme toi, je travaille pour rien. »",
+      "*sourit pour la première fois de la semaine* « Le banquier devrait prendre des leçons. »"
+    ],
+    "insolite": [
+      "*se gratte la nuque sous son chapeau* « Ça, on le fait pas chez nous, dans les collines. »",
+      "« Le petit Abe ferait pareil. Mais lui, il a six ans. »",
+      "*relève les yeux de sa lettre, te fixe, puis s'y replonge* « Chacun ses misères. »",
+      "« Je dois être plus fatigué que je crois. J'ai bien vu ça, hein ? »",
+      "*étouffe un rire, le premier depuis des jours* « T'es un drôle de numéro, l'ami. »"
+    ]
+  },
+  "veuve": {
+    "meurtre": [
+      "*ne crie pas, ne bouge pas* « Elias est mort comme ça. Sur un perron, en un battement de cœur. »",
+      "« Vous avez une âme, monsieur ? Alors priez pour elle. Moi, je ne le ferai pas. »",
+      "*se signe lentement, sans détourner les yeux du corps* « Que Dieu le juge. Et que le shérif vous pende. »",
+      "« Si c'était un O'Driscoll, je vous remercie. Sinon, vous êtes l'un d'eux. »",
+      "*serre dans son poing l'alliance d'Elias et recule, droite comme un cierge, jusqu'au mur*"
+    ],
+    "violence": [
+      "« Assez. J'ai vu assez d'hommes frapper des gens sans défense pour une vie entière. »",
+      "*ne détourne pas les yeux* « Les O'Driscoll riaient, eux aussi, en frappant. »",
+      "*relève son voile et vous dévisage* « Je retiendrai votre visage, monsieur. »",
+      "« Gardez vos poings pour ceux qui le méritent. Je sais où boit l'un d'eux. »",
+      "*s'avance d'un pas, raide* « Ça suffit. Vous m'entendez ? Ça suffit. »"
+    ],
+    "vol": [
+      "« Un voleur. On a volé jusqu'au médaillon sur la tombe de mon mari. Vous êtes de cette espèce ? »",
+      "*serre son réticule contre sa poitrine, le regard de glace* « Je vous ai vu. Et je n'oublie rien. »",
+      "« Rendez-le. Ce n'est pas à vous. Rien de ce qu'on prend ne nous appartient jamais. »",
+      "« Elias disait qu'un voleur finit toujours par voler une vie. Il avait raison. Il en est mort. »",
+      "*vous regarde comme on regarde une affiche du shérif, en mémorisant chaque trait*"
+    ],
+    "crime": [
+      "« Malloy le saura. Il ne fera rien, comme d'habitude, mais il le saura. »",
+      "*pince les lèvres* « Dieu voit tout, monsieur. Et moi, je vois beaucoup. »",
+      "« Vous ressemblez de plus en plus aux hommes que je cherche. Prenez garde. »",
+      "*rabat son voile sur ses yeux et s'éloigne sans un mot, d'un pas qui ne se hâte pas*",
+      "« Vous jouez avec la loi. Les O'Driscoll aussi, au début. Voyez ce qu'ils sont devenus. »"
+    ],
+    "bonte": [
+      "*incline la tête, à peine* « C'est bien. Elias aurait fait la même chose. »",
+      "« Il reste donc des hommes honnêtes à Valentine. Je commençais à en douter. »",
+      "*soulève son voile un instant ; ses yeux sont rouges, mais secs* « Merci, pour lui. »",
+      "« Un homme qui fait cela pourrait peut-être m'aider. Venez me trouver au cimetière, le matin. »",
+      "*esquisse quelque chose qui ressemble à un sourire, puis se reprend* « Dieu vous voit, monsieur. »"
+    ],
+    "insolite": [
+      "*vous fixe derrière son voile, sans un mot, pendant un très long moment*",
+      "« Mon mari en aurait ri. Je ne ris plus, monsieur. Mais lui, il en aurait ri. »",
+      "« Vous avez sûrement vos raisons. Je ne veux pas les connaître. »",
+      "*hausse un sourcil sous le crêpe noir, puis reprend son chemin*",
+      "« Le deuil rend patiente, monsieur. Pas à ce point-là. »"
+    ]
+  },
+  "ton_cheval": {
+    "meurtre": [
+      "*se cabre au coup de feu, puis revient vers toi en tremblant et cherche ta main du bout du nez*",
+      "*renifle l'odeur du sang, les naseaux dilatés, et recule d'un pas sans te quitter des yeux*",
+      "*piaffe, les oreilles couchées, prêt à partir au galop dès que tu seras en selle*"
+    ],
+    "violence": [
+      "*couche les oreilles et s'ébroue, comme pour te dire d'arrêter*",
+      "*tire sur sa bride en hennissant, nerveux, sans quitter la bagarre des yeux*",
+      "*se rapproche et te pousse l'épaule du museau : on s'en va ?*"
+    ],
+    "vol": [
+      "*détourne la tête, l'air de ne pas vouloir être complice*",
+      "*fouille le butin du bout du nez, au cas où il y aurait une pomme dedans*",
+      "*gratte le sol, impatient : il connaît la suite, et la suite, c'est le galop*"
+    ],
+    "crime": [
+      "*pousse un long soupir par les naseaux, résigné à ton caractère*",
+      "*dresse les oreilles vers le bureau du shérif, puis te regarde*",
+      "*se place entre toi et la rue, comme pour te cacher derrière son grand corps*"
+    ],
+    "bonte": [
+      "*hennit doucement et vient poser sa tête contre ton épaule*",
+      "*s'ébroue, content, la crinière dansante, fier de son cavalier*",
+      "*te mordille gentiment la manche, en guise de compliment*"
+    ],
+    "insolite": [
+      "*penche la tête et te regarde comme on regarde un cavalier tombé sur la tête*",
+      "*broute tranquillement : il en a vu d'autres, avec toi*",
+      "*retrousse la lèvre supérieure dans une grimace qui ressemble fort à un rire*"
+    ]
+  },
+  "cheval_attache": {
+    "meurtre": [
+      "*se cabre au bout de sa longe, l'œil blanc, et manque d'arracher la barre d'attache*",
+      "*rue dans le vide, les sacoches battant ses flancs zébrés de cravache*",
+      "*se fige, tremblant de tout son corps, comme un cheval qui a déjà trop entendu de coups de feu*"
+    ],
+    "violence": [
+      "*couche les oreilles et montre les dents à quiconque passe derrière lui*",
+      "*tire sur sa longe à s'en écorcher l'encolure*",
+      "*se tasse contre la barre, les flancs frémissants, comme s'il attendait la cravache*"
+    ],
+    "vol": [
+      "*regarde la scène sans broncher : son maître fait bien pire*",
+      "*tend le cou vers le butin, puis renifle ses propres sacoches gonflées*",
+      "*gratte la boue du sabot, comme pour rappeler qu'on oublie de le voler, lui*"
+    ],
+    "crime": [
+      "*hennit vers la porte du Smithfield's, pour prévenir son maître... ou pour le narguer*",
+      "*s'ébroue et détourne la tête, trop las pour s'en mêler*",
+      "*mâchonne son mors en fixant la scène d'un œil vide*"
+    ],
+    "bonte": [
+      "*dresse une oreille, surpris : on peut donc être doux, dans ce monde*",
+      "*tend le cou vers toi, hésite, puis souffle doucement par les naseaux*",
+      "*cesse un instant de tirer sur sa longe, l'œil moins blanc*"
+    ],
+    "insolite": [
+      "*penche la tête, intrigué, une oreille en avant et l'autre en arrière*",
+      "*lâche un hennissement bref et saccadé, comme un rire nerveux*",
+      "*cesse de mâcher son mors pour mieux regarder*"
+    ]
+  },
+  "cheval_a_vendre": {
+    "meurtre": [
+      "*frappe la cloison de son box à s'en briser les sabots, fou de terreur*",
+      "*se cabre dans son box et hennit à réveiller tout Valentine*",
+      "*se colle au fond du box, les naseaux dilatés, et ne bouge plus*"
+    ],
+    "violence": [
+      "*couche les oreilles et montre les dents : il connaît les hommes qui frappent*",
+      "*rue contre la porte de son box, comme pour se joindre à la bagarre*",
+      "*tourne en rond dans son box, l'œil furieux, en martelant le sol*"
+    ],
+    "vol": [
+      "*passe la tête par-dessus la porte et te fixe, comme le palefrenier quand il compte ses sacs d'avoine*",
+      "*hennit très fort, comme un chien de garde qui aurait raté sa vocation*",
+      "*s'ébroue avec mépris et retourne à son foin*"
+    ],
+    "crime": [
+      "*frappe la cloison de trois coups secs, comme un juge son marteau*",
+      "*te tourne la croupe, ce qui, chez lui, n'est pas un compliment*",
+      "*mâchonne la porte de son box en te jaugeant : brute, ou pas brute ?*"
+    ],
+    "bonte": [
+      "*dresse les oreilles vers toi, pour la première fois sans les coucher*",
+      "*passe la tête par-dessus la porte et souffle doucement dans ta direction*",
+      "*cesse de frapper la cloison et te suit des yeux, songeur*"
+    ],
+    "insolite": [
+      "*penche la tête de côté, une mèche de crinière dans l'œil, perplexe*",
+      "*hennit en secouant l'encolure, comme s'il se moquait de toi*",
+      "*fait deux fois le tour de son box pour mieux voir*"
+    ]
+  },
+  "chien_errant": {
+    "meurtre": [
+      "*détale la queue entre les pattes et file se cacher sous le banc en gémissant*",
+      "*s'approche du corps, le renifle, puis lève le museau et hurle à la mort*",
+      "*aboie, aboie, aboie, de loin, le poil hérissé, sans oser approcher*"
+    ],
+    "violence": [
+      "*gronde, le poil hérissé, en reculant à petits pas*",
+      "*aboie après toi, puis se sauve dès que tu le regardes*",
+      "*se couche à plat ventre, les oreilles en arrière, et attend que ça passe*"
+    ],
+    "vol": [
+      "*remue la queue : si tu voles, peut-être qu'il y a à manger dedans*",
+      "*te suit à distance, le museau en l'air, au cas où tu laisserais tomber quelque chose*",
+      "*aboie une fois, pour la forme, puis se gratte l'oreille déchirée*"
+    ],
+    "crime": [
+      "*incline la tête, perplexe, et gémit doucement*",
+      "*trotte vers le bureau du shérif, puis s'arrête à mi-chemin, pas sûr de son rôle*",
+      "*renifle tes bottes d'un air de reproche*"
+    ],
+    "bonte": [
+      "*remue la queue si fort que tout son arrière-train ondule*",
+      "*vient s'asseoir à tes pieds et te regarde comme un héros*",
+      "*aboie de joie et tourne trois fois sur lui-même*"
+    ],
+    "insolite": [
+      "*penche la tête d'un côté, puis de l'autre, son oreille déchirée en l'air*",
+      "*aboie une fois, surpris, puis s'assoit pour regarder la suite*",
+      "*se roule dans la boue à son tour, par solidarité*"
+    ]
+  },
+  "chat_saloon": {
+    "meurtre": [
+      "*lève un œil jaune, constate le désordre, et le referme*",
+      "*saute du comptoir, renifle la flaque sous le corps et décide que ça ne le regarde pas*",
+      "*se lèche la patte avec application : lui aussi tue tous les soirs, et sans faire tant de bruit*"
+    ],
+    "violence": [
+      "*bâille à se décrocher la mâchoire pendant que les coups pleuvent*",
+      "*se pousse d'un pouce pour éviter une chaise volante, sans même se lever*",
+      "*fouette l'air de sa queue, agacé qu'on fasse du bruit pendant sa sieste*"
+    ],
+    "vol": [
+      "*regarde le voleur avec le mépris d'un chat qui, lui, attrape ce qu'il mange*",
+      "*fait tomber un verre du comptoir, exactement au moment où il ne fallait pas*",
+      "*cligne lentement des yeux : il a vu le joueur de poker faire bien mieux*"
+    ],
+    "crime": [
+      "*s'étire, tourne le dos à la scène et se rendort sur le couvercle du piano*",
+      "*fixe tes mains comme il fixe la manche du joueur de poker*",
+      "*ronronne, et personne ne sait si c'est de l'approbation ou du mépris*"
+    ],
+    "bonte": [
+      "*daigne se frotter contre ta botte, une seule fois, puis repart comme si de rien n'était*",
+      "*te regarde longuement, puis consent à cligner des yeux : un rare honneur*",
+      "*renifle ta main, réfléchit, puis s'en va : il t'inscrira sur sa liste plus tard*"
+    ],
+    "insolite": [
+      "*te fixe d'un air profondément consterné, puis va s'asseoir dos à toi*",
+      "*lâche un « Mrraou » sarcastique et reprend sa toilette*",
+      "*fait tomber un verre du comptoir, pour montrer que lui aussi sait faire des choses absurdes*"
+    ]
+  },
+  "vache": {
+    "meurtre": [
+      "*cesse de ruminer, une seconde entière, puis reprend*",
+      "*meugle longuement, d'une voix grave de glas, en fixant le corps*",
+      "*recule dans le troupeau en faisant tinter sa cloche, l'œil rond*"
+    ],
+    "violence": [
+      "*rumine en regardant la bagarre comme un spectacle de foire*",
+      "*lâche une bouse fumante avec une grande dignité, en guise de commentaire*",
+      "*fait tinter sa cloche et lance un « Meuuuuh » réprobateur*"
+    ],
+    "vol": [
+      "*rumine sans un regard : tant qu'on ne vole pas son foin, ça ne la concerne pas*",
+      "*tend le mufle vers le butin, au cas où ce serait une pomme*",
+      "*fixe la scène sans ciller, témoin muet qui ne dira jamais rien à Malloy*"
+    ],
+    "crime": [
+      "*rumine, imperturbable, et chasse une mouche d'un coup de queue*",
+      "*lève lentement la tête, te regarde, et retourne à son herbe*",
+      "*meugle à contretemps, ce qui ressemble beaucoup à de la désapprobation*"
+    ],
+    "bonte": [
+      "*vient renifler ta main de son mufle humide et y laisse un peu de bave en remerciement*",
+      "*pousse un « Meuuuuh » doux et chaud comme du lait tiède*",
+      "*fait tinter sa cloche en hochant la tête, presque d'accord*"
+    ],
+    "insolite": [
+      "*arrête de ruminer, ce qui, pour Marguerite, est le comble de la stupéfaction*",
+      "*te fixe longtemps de ses grands yeux humides, avec une sagesse infinie et beaucoup de pitié*",
+      "*rumine plus lentement, comme pour mieux digérer ce qu'elle vient de voir*"
+    ]
+  },
+  "taureau": {
+    "meurtre": [
+      "*sent l'odeur du sang, mugit et charge la barrière, qui vole en éclats*",
+      "*gratte la terre, les naseaux fumants, et fonce droit sur toi, corne cassée en avant*",
+      "*mugit à faire trembler les vitres de la rue principale et charge tout ce qui bouge*"
+    ],
+    "violence": [
+      "*baisse sa corne cassée et charge la barrière en direction des combattants*",
+      "*souffle comme une locomotive, la tête basse : la bagarre l'échauffe*",
+      "*traverse l'enclos au galop et s'arrête net à un pas de toi, les naseaux fumants*"
+    ],
+    "vol": [
+      "*te fixe de son œil noir, comme s'il inscrivait ton visage dans un registre*",
+      "*charge la barrière, histoire de rappeler qui fait la loi dans l'enclos*",
+      "*souffle bruyamment par les naseaux, rancunier pour le compte d'autrui*"
+    ],
+    "crime": [
+      "*charge la barrière, qui craque dangereusement*",
+      "*mugit et baisse la corne, prêt à rendre la justice lui-même*",
+      "*tourne autour de toi en resserrant le cercle à chaque passage*"
+    ],
+    "bonte": [
+      "*cesse de gratter la terre et te regarde un peu moins comme un problème à régler*",
+      "*souffle plus doucement, mais garde la corne pointée vers toi, par principe*",
+      "*charge quand même, mais deux fois moins vite : chez Lucifer, c'est presque de la tendresse*"
+    ],
+    "insolite": [
+      "*charge, parce que tout ce qu'il ne comprend pas, il le charge*",
+      "*penche la tête, intrigué, puis gratte la terre : décidément, il n'aime pas ça*",
+      "*fonce droit sur toi, pile au dernier moment et te renifle, perplexe*"
+    ]
+  },
+  "cochon": {
+    "meurtre": [
+      "*pousse un cri strident et file se rouler dans la boue jusqu'au fond de l'enclos*",
+      "*couine à percer les tympans, comme si c'était lui qu'on menait chez le boucher*",
+      "*se fige, le groin frémissant, puis s'enfouit dans la boue jusqu'aux oreilles*"
+    ],
+    "violence": [
+      "*grogne d'excitation et trotte autour de la bagarre en couinant*",
+      "*se roule dans la boue, ravi : quand les hommes se battent, personne ne pense au jambon*",
+      "*couine et se cache derrière l'abreuvoir, ce qui ne cache pas grand-chose*"
+    ],
+    "vol": [
+      "*fouille le sol du groin, à la recherche de ce que tu aurais pu faire tomber*",
+      "*grogne de jalousie : s'il y avait eu quelque chose à manger, c'est lui qui l'aurait volé*",
+      "*suit le butin des yeux, le groin en l'air, dans l'espoir d'une épluchure*"
+    ],
+    "crime": [
+      "*grogne d'un air entendu, comme un complice qui n'a rien vu*",
+      "*mâchonne une vieille botte, indifférent à la loi des hommes*",
+      "*couine une fois, pour le principe, puis retourne à sa boue*"
+    ],
+    "bonte": [
+      "*grogne de contentement et vient frotter son flanc boueux contre tes jambes*",
+      "*remue sa queue en tire-bouchon en poussant de petits grognements heureux*",
+      "*te renifle les poches avec espoir : la bonté, ça se mange peut-être*"
+    ],
+    "insolite": [
+      "*s'arrête de manger, ce qui ne lui arrive jamais, pour te regarder*",
+      "*penche la tête, grogne, et retourne à sa boue : ça ne se mange pas*",
+      "*se roule dans la boue à son tour, par pure solidarité*"
+    ]
+  },
+  "poule": {
+    "meurtre": [
+      "*s'envole en caquetant comme une folle et atterrit sur le toit d'un chariot*",
+      "*pond un œuf de pure terreur, là, au milieu de la rue, et s'enfuit à toutes pattes*",
+      "*caquette à s'en étrangler et file se cacher sous le trottoir de bois, plumes en bataille*"
+    ],
+    "violence": [
+      "*caquette à pleine gorge, plumes hérissées, comme si c'était elle qu'on plumait*",
+      "*profite de la bagarre pour picorer les miettes tombées des poches*",
+      "*bat des ailes et court en rond, la crête de travers*"
+    ],
+    "vol": [
+      "*fixe le butin d'un œil rond, puis de l'autre : y a-t-il quelque chose qui brille ?*",
+      "*se précipite sur une pièce tombée et s'enfuit avec, en concurrente déloyale*",
+      "*caquette d'un air outré, elle qui vole des boutons de cuivre tous les jours*"
+    ],
+    "crime": [
+      "*s'éclipse par un trou de la palissade : pas de témoin, pas d'ennuis*",
+      "*caquette très fort, comme une commère sur le pas de sa porte*",
+      "*te fixe d'un œil rond, puis de l'autre, comme pour bien retenir ta figure*"
+    ],
+    "bonte": [
+      "*vient picorer près de tes bottes, sans crainte, comme une vieille amie*",
+      "*glousse doucement et pond un œuf à tes pieds, en guise de cadeau*",
+      "*ébouriffe ses plumes, flattée, comme si c'était pour elle*"
+    ],
+    "insolite": [
+      "*penche la tête, te fixe d'un œil, puis de l'autre, puis du premier encore*",
+      "*lâche un « Cot cot codêêêt ! » indigné et repart picorer*",
+      "*profite de la distraction générale pour s'évader une fois de plus*"
+    ]
+  },
+  "rat": {
+    "meurtre": [
+      "*file sous le plancher, puis ressort renifler les bottes du mort avec un intérêt indécent*",
+      "*se dresse sur ses pattes arrière, les moustaches frémissantes, puis détale*",
+      "*couine d'un air indigné : il y a des règles, même chez les rats*"
+    ],
+    "violence": [
+      "*observe la bagarre depuis un trou du plancher, comme un sénateur depuis sa loge*",
+      "*profite du tumulte pour chiper un bout de lard sur le comptoir*",
+      "*file entre les jambes des combattants et en fait trébucher un*"
+    ],
+    "vol": [
+      "*te regarde avec le respect qu'on doit à un confrère*",
+      "*se lisse les moustaches d'un air entendu : joli coup, mais lui fait ça tous les jours*",
+      "*file vers le butin, au cas où il y aurait du fromage dedans*"
+    ],
+    "crime": [
+      "*se lisse les moustaches avec dédain, en vieux routier de l'illégalité*",
+      "*couine et disparaît sous le plancher : pas vu, pas pris*",
+      "*grignote un bout de lard en te fixant droit dans les yeux, sans te juger*"
+    ],
+    "bonte": [
+      "*te regarde avec méfiance : chez les humains, la bonté cache toujours un piège à rats*",
+      "*couine, outré qu'on puisse donner quelque chose sans rien voler en échange*",
+      "*s'approche à petits pas, au cas où il resterait des miettes de générosité*"
+    ],
+    "insolite": [
+      "*se dresse sur ses pattes arrière pour mieux voir, la queue en point d'interrogation*",
+      "*couine de stupeur et file raconter ça à toute la boucherie*",
+      "*se lisse les moustaches avec dédain : les humains ne cesseront jamais de l'étonner*"
+    ]
+  },
+  "corbeau": {
+    "meurtre": [
+      "*se pose sur une poutre au-dessus du corps et croasse : « Payez d'avance ! »*",
+      "*attend que tout le monde s'éloigne pour arracher les boutons de cuivre du mort*",
+      "*fixe longuement ton visage, la tête penchée : il s'en souviendra, et tous les corbeaux du comté aussi*"
+    ],
+    "violence": [
+      "*plonge au milieu de la bagarre et s'envole avec une pièce tombée d'une poche*",
+      "*croasse trois fois, comme au passage d'un cortège : il prend de l'avance*",
+      "*sautille autour des combattants, attiré par l'éclat d'une boucle de ceinturon*"
+    ],
+    "vol": [
+      "*fond sur le butin, en arrache ce qui brille le plus et file vers le cimetière*",
+      "*fixe le butin, la tête penchée : il y a toujours quelque chose qui brille*",
+      "*croasse d'un air approbateur, en connaisseur*"
+    ],
+    "crime": [
+      "*croasse « Payez d'avance ! » au pire moment, et toutes les têtes se tournent vers toi*",
+      "*mémorise ton visage, la tête penchée, et s'envole le raconter aux autres corbeaux*",
+      "*fait claquer son bec sur une pièce volée, en complice*"
+    ],
+    "bonte": [
+      "*dépose devant toi un bouton de nacre volé, en échange de bons procédés*",
+      "*penche la tête et te regarde autrement : ton visage rejoint la liste de ses amis*",
+      "*croasse doucement, presque un roucoulement, ce qui est rare chez un corbeau*"
+    ],
+    "insolite": [
+      "*croasse d'une voix rauque : « Payez d'avance ! » Personne ne sait pourquoi.*",
+      "*profite de ta distraction pour picorer un bouton de ta veste, puis s'envole*",
+      "*sautille de plus en plus près, fasciné, la tête penchée*"
+    ]
+  }
+}
