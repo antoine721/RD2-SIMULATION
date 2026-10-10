@@ -1,0 +1,1331 @@
+{
+  "id": "banquier",
+  "description": "Un homme replet au gilet de soie bordeaux, une chaîne de montre en or tendue sur la panse et des favoris gris peignés avec soin. Il regarde le monde par-dessus des lunettes cerclées d'or, comme on examine une créance douteuse. Ses chaussures cirées brillent comme des miroirs au milieu de la boue de Valentine.",
+  "personnalite": "Horace P. Whitlock, directeur de la banque. Arrogant, avide, méprisant envers les fermiers qu'il étrangle à coups d'intérêts usuraires, mielleux avec les riches comme l'éleveur. Lâche dès qu'une arme est pointée sur lui. Il tient un second registre, noir, où figurent ses vrais taux, et fréquente la nuit des gens qu'un honnête banquier ne devrait pas connaître.",
+  "repliques": [
+    "Les intérêts n'ont jamais tué personne, mon ami. La faillite, si.",
+    "Pruitt ! Recomptez-moi cette caisse, il manque un cent.",
+    "Ces fermiers signent sans lire, puis ils pleurent quand je lis à leur place.",
+    "*sort sa montre en or, la compare à l'horloge murale et soupire*",
+    "Un dépôt ? Une hypothèque ? Ne me faites pas perdre mon temps.",
+    "La terre finit toujours chez celui qui sait compter.",
+    "Vendredi, midi. Pas une minute de plus. La loi est la loi.",
+    "Malloy me doit bien un peu de zèle, avec ce que la banque verse à la ville."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 7,
+      "lieu": "maisons",
+      "activite": "dort dans la plus belle maison de Valentine, volets clos"
+    },
+    {
+      "de": 7,
+      "a": 8,
+      "lieu": "hotel",
+      "activite": "prend son petit-déjeuner à l'hôtel, toujours à la même table"
+    },
+    {
+      "de": 8,
+      "a": 12,
+      "lieu": "banque",
+      "activite": "reçoit les clients et examine les demandes de prêt"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "hotel",
+      "activite": "déjeune d'un steak saignant en laissant le coffre entrouvert"
+    },
+    {
+      "de": 13,
+      "a": 16,
+      "lieu": "banque",
+      "activite": "signe des actes de saisie et dicte des lettres de relance"
+    },
+    {
+      "de": 16,
+      "a": 17,
+      "lieu": "rue_principale",
+      "activite": "fait la tournée de ses débiteurs, canne à pommeau d'argent à la main"
+    },
+    {
+      "de": 17,
+      "a": 18,
+      "lieu": "enclos",
+      "activite": "parle affaires avec l'éleveur en riant très fort"
+    },
+    {
+      "de": 18,
+      "a": 19,
+      "lieu": "banque",
+      "activite": "ferme le coffre et vérifie la caisse du caissier"
+    },
+    {
+      "de": 19,
+      "a": 22,
+      "lieu": "saloon_keane",
+      "activite": "fume un cigare et joue au poker avec les notables"
+    },
+    {
+      "de": 22,
+      "a": 23,
+      "lieu": "saloon_smithfield",
+      "activite": "passe discrètement par la ruelle du Smithfield's, le col relevé"
+    },
+    {
+      "de": 23,
+      "a": 24,
+      "lieu": "maisons",
+      "activite": "recopie ses comptes dans le registre noir, puis se couche"
+    }
+  ],
+  "reactions": {
+    "assommer": [
+      {
+        "texte": "Ta crosse s'abat sur sa nuque. Il s'effondre sur le marbre dans un froissement de soie, et sa montre en or glisse hors du gilet au bout de sa chaîne.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu le cueilles dans la ruelle derrière la banque, alors qu'il rentre chez lui. Un seul coup, et il s'affale sur le trottoir de planches sans le moindre témoin.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu frappes trop bas : il titube, hurle « Pruitt ! Le shérif ! » et court se réfugier derrière les grilles des guichets.",
+        "effets": {
+          "etat": "hostile",
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il te reconnaît à l'instant où tu lèves le bras — « Je savais que votre tête me disait quelque chose ! » — mais ton coup le fait taire avant la fin de sa phrase.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il s'écroule sur son propre bureau, le nez dans un acte de saisie encore humide. Le caissier, derrière sa grille, n'esquisse pas un geste pour l'aider.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -1
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu te jettes sur lui avec {outil}. Il lève son grand registre comme un bouclier : la reliure de cuir encaisse le premier coup, pas le second.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 15,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il recule si vite qu'il renverse l'encrier sur son gilet : « Pas le visage ! Prenez l'argent, pas le visage ! » Il finit roulé en boule sous son bureau, une entaille au bras.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 15,
+          "honneur": -2,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Il t'attendait : un derringer à crosse de nacre jaillit de sa manche et claque avant que tu l'atteignes. La balle t'éraffle les côtes.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -25,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Tu lèves {outil}, puis tu croises le regard du caissier, blême derrière sa grille. Ton coup manque de conviction : le directeur s'enfuit dans la rue en criant au meurtre.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu frappes avec {outil}, une fois, trop fort. Il glisse le long du coffre-fort et ne se relève pas ; sa montre continue de faire tic-tac dans sa poche.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "mort",
+          "prime": 100,
+          "honneur": -4
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Ta corde siffle et lui tombe sur les épaules. Tu tires : il part à plat ventre sur le marbre ciré, glisse sur trois mètres et s'arrête contre un crachoir de cuivre.",
+        "effets": {
+          "etat": "ligote",
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu l'attrapes au milieu de la rue principale, devant la moitié de Valentine. Les fermiers qui attendaient devant la banque éclatent de rire en le voyant traîné dans la boue en haut-de-forme.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 5,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Le nœud se referme sur son haut-de-forme au lieu de ses épaules. Le chapeau s'envole, le directeur aussi — vers la porte, en hurlant « Au voleur ! ».",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Dans l'obscurité, ta corde le cueille au coin de la rue de l'Église. Il se débat et s'étrangle d'indignation : « Vous savez qui je suis ? Vous savez combien je vaux ? »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 5,
+          "relation": -3
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu lui tords le poignet : un petit derringer à crosse de nacre tombe de sa manche et rebondit sur le marbre. « C'est... c'est pour les rats », bafouille-t-il.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu le fouilles d'un geste vif, mais il n'a qu'un coupe-papier en argent. Il le brandit comme un fleuret, ridicule : « Je vous préviens, j'ai pratiqué l'escrime à Boston. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il sort le derringer de son tiroir, mais tu lui frappes la main avant qu'il arme le chien. L'arme glisse sous un guichet, et le voilà les mains en l'air, plus pâle que ses guêtres.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "normal",
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu lui retires son derringer avec un sourire courtois et tu le poses sur le bureau, hors de sa portée. « Gardons ça entre gentlemen, monsieur le directeur. » Il ravale sa rage.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu croques sa panse ronde, sa chaîne de montre et ses lunettes en équilibre sur le nez. Dans {outil}, il ressemble à un crapaud en gilet de soie."
+      },
+      {
+        "texte": "Il s'aperçoit que tu le dessines et prend la pose, une main sur le revers : « Soignez le profil, je vous prie. C'est mon meilleur. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu le dessines en gros cochon couché sur un tas d'actes de propriété. Le caissier jette un œil par-dessus ton épaule et étouffe un rire nerveux.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu notes ses manies dans {outil} : chaque fois qu'il passe devant le coffre, il tapote la poche de son gilet, comme pour vérifier qu'un papier y est toujours."
+      }
+    ],
+    "detrousser": [
+      {
+        "texte": "Tes doigts plongent dans son gilet : une montre en or gravée « H.P.W. » et un portefeuille gonflé de billets. Il ne remarque rien, trop occupé à sermonner un fermier.",
+        "effets": {
+          "argent": 45,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Dans sa poche intérieure, un petit papier plié : quatre nombres griffonnés à l'encre violette, et le mot « coffre ». Plus quelques dollars, par habitude.",
+        "effets": {
+          "argent": 12,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il sent ta main et pivote : « Pruitt ! Un pickpocket ! » Deux clients se retournent, le caissier saisit son sifflet, et tu files avec quelques pièces seulement.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 5,
+          "prime": 10,
+          "relation": -3,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il s'est assoupi dans son fauteuil du saloon de Keane, cigare éteint aux lèvres. Tu lui soulages le portefeuille de soixante dollars ; il ronfle de plus belle.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 60,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il te frappe la main avec sa canne à pommeau d'argent : « Ne me touchez pas, vagabond ! » La douleur te remonte jusqu'au coude.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "relation": -1
+        }
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il prend {outil} du bout des doigts, l'examine à travers ses lunettes et le pose sur son bureau : « Je le note comme garantie. Pas comme cadeau. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il repousse {outil} sans même le regarder : « La banque ne fait pas dans la brocante. Allez voir l'épicier, il est assez radin pour vous en offrir un cent. »"
+      },
+      {
+        "texte": "Il accepte {outil} avec un sourire de crocodile : « Voilà qui est délicat. Je m'en souviendrai le jour où vous aurez besoin d'un prêt. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il contemple {outil}, puis ton visage, longuement, comme s'il le comparait à une affiche : « Vous êtes bien généreux, pour un homme dont on connaît le prix. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il soupèse {outil}, fronce le nez et sort un carnet : « Évalué à... soyons généreux... trente cents. Je vous fais un reçu ? »"
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il éclate d'un rire aigu qui sonne faux : « Un duel ? Je suis banquier, monsieur. Je ruine les gens, je ne leur tire pas dessus. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il blêmit, sort un mouchoir de soie et s'éponge le front : « Je... je désigne un représentant. Pruitt ! » Derrière sa grille, le caissier manque de s'évanouir."
+      },
+      {
+        "texte": "Il te toise : « Un homme d'honneur comme vous, abattre un citoyen désarmé ? Malloy serait ravi de vous pendre. » Il a raison, et il le sait.",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Contre toute attente, il accepte. Dans la rue, ses mains tremblent tant que son derringer part tout seul dans la boue ; tu le désarmes devant une foule hilare.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -3,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "« Un duel ? Avec un homme recherché ? » Il sourit et lance vers la rue : « Shérif ! Il y a un client pour vous ! »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "hostile",
+          "relation": -2
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing s'enfonce dans sa panse molle. Il se plie en deux, ses lunettes volent et il siffle : « Vous me le paierez... avec intérêts. »",
+        "effets": {
+          "etat": "hostile",
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Un crochet du droit l'envoie s'étaler sur le sol de marbre. Dans la file d'attente, les fermiers échangent des regards et cachent mal leur sourire.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "relation": -3,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu le frappes en plein jour, devant la vitrine. Le caissier souffle de toutes ses forces dans son sifflet, et l'adjoint du shérif arrive en courant, la main déjà sur son arme.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Personne ne voit ton poing s'écraser sur sa mâchoire dans la ruelle obscure. Il tombe à genoux dans la boue et pleurniche comme un enfant, sa canne roulant loin de lui.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu le gifles du revers de la main, comme on corrige un malappris. « Ça, c'est pour les fermes. » Il se tient la joue, sidéré, incapable de répondre.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -3
+        }
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu poses tes deux mains à plat sur son bureau et tu te penches. Il recule dans son fauteuil jusqu'à faire craquer le dossier : « Que... que voulez-vous ? Tout se discute. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il soutient ton regard trois secondes, puis tapote nerveusement sa montre : « Mes amis de Saint Denis ont le bras très long, monsieur. Très long. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il sait qui tu es : on en parle au saloon. Il pousse un tiroir vers toi : « Prenez ceci, et oublions votre visite. » Dedans, quinze dollars bien alignés.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 15,
+          "relation": -2,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il rit jaune : « Allons, allons, entre amis, on ne se fait pas les gros yeux. » Mais il s'empresse de baisser ton taux d'un point, au cas où.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Intimidez donc. Votre tête vaut de l'argent, et l'argent, c'est mon métier. » Il griffonne quelque chose sur un papier, sans doute pour le télégraphiste.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu fais craquer tes jointures une à une. Il transpire à grosses gouttes et appelle d'une voix de fausset : « Pruitt, apportez donc un verre d'eau à monsieur... et à moi. »",
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} vers lui. Il plonge derrière son bureau avec une agilité surprenante pour sa corpulence, et le projectile s'écrase contre le portrait du président McKinley.",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Le projectile l'atteint à l'épaule. Il pousse un cri de goret, sa plume s'envole et l'encre éclabousse un acte d'hypothèque tout juste signé.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Dans la pénombre, le projectile le manque de peu et rebondit sur le trottoir de planches. Il détale vers sa maison en tenant son haut-de-forme à deux mains.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il esquive {outil} d'un pas de côté et pointe sur toi un doigt boudiné : « Ce sera ajouté à votre ardoise, monsieur. Avec intérêts. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lui lances {outil} en pleine figure. Il s'écroule contre un guichet, le nez en sang, et ses lunettes cerclées d'or éclatent sur le marbre.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -1,
+          "relation": -3
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu le ligotes à son propre fauteuil de cuir. Il gigote comme un porcelet : « C'est un fauteuil anglais ! Vous allez rayer le cuir ! »",
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu lui lies poignets et chevilles, puis tu lui fourres son mouchoir de soie dans la bouche. Ses yeux roulent vers le coffre-fort, puis vers toi, pleins de haine.",
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu le ficelles dans la ruelle et tu l'adosses à un tonneau. Au matin, Valentine découvrira son directeur saucissonné, et plus d'un fermier rira dans sa barbe.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu l'attaches solidement pendant que le caissier te supplie de ne pas trop serrer. « Juste le temps qu'il signe ce papier », lui réponds-tu. Le directeur, lui, ne dit plus rien.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 10
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Tu pointes {outil} sur sa chaîne de montre. Il lève lentement les mains : « Doucement, doucement. Tout se négocie. Même ça. »",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il regarde {outil}, puis la porte, puis la grille du caissier : « Pruitt, ne faites rien de stupide. » Le caissier n'avait aucune intention de bouger.",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il fond comme une chandelle : « Le coffre ! La combinaison ! Je vous donne tout, mais pas le visage ! » Il bafouille quatre nombres que tu retiens par cœur.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "« Vous ne ferez qu'alourdir votre prime », souffle-t-il, une goutte de sueur au bout du nez. Pourtant il recule jusqu'au mur et vide le tiroir de son bureau dans ton chapeau.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 20,
+          "prime": 15,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il sort à son tour son derringer. Deux canons, deux hommes, un sol de marbre trop propre ; le caissier se glisse sous son guichet en priant à voix basse.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "hostile",
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu poses {outil} sur la pile d'actes de saisie. « On va parler du fermier, vous et moi. » Il déglutit, puis sort la créance de son tiroir d'une main tremblante.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Il trône derrière un bureau d'acajou et compte des billets d'un doigt mouillé de salive. Au mur, une carte des Heartlands hérissée d'épingles rouges : les fermes hypothéquées."
+      },
+      {
+        "texte": "Il jette un œil au coffre-fort chaque fois qu'un client entre, et il garde la main droite près de son tiroir. Un derringer, sûrement."
+      },
+      {
+        "texte": "Par la fenêtre éclairée de sa maison, tu le vois aligner des pièces d'or à la lampe à pétrole et les noter dans un second registre, à couverture noire. Pas celui de la banque.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Un fermier aux mains calleuses le supplie, chapeau tordu entre les doigts. Le directeur ne lève même pas les yeux : « La loi est la loi, monsieur. Vendredi, midi. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il traverse la rue principale en évitant chaque flaque avec un dédain de héron. Dans la boue de Valentine, ses chaussures cirées sont presque une provocation."
+      }
+    ],
+    "parler": [
+      {
+        "texte": "Il ne lève pas les yeux : « Un prêt ? Douze pour cent par mois, garantie exigée. Si c'est pour pleurer, le pasteur est au bout de la rue. »"
+      },
+      {
+        "texte": "« Horace P. Whitlock, directeur. » Il ne te tend pas la main. « Vous n'êtes pas d'ici. Les gens qui ne sont pas d'ici ont rarement de quoi me payer. »"
+      },
+      {
+        "texte": "Il t'offre un cigare et baisse la voix : « Entre nous, l'éleveur va vendre la moitié de son troupeau. Achetez des terres maintenant, et remerciez-moi plus tard. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il pose discrètement la main sur son tiroir : « Votre visage me dit quelque chose. Le panneau du shérif, peut-être ? Soyez bref, monsieur, j'ai beaucoup de travail. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« On dit que vous êtes un homme droit. » Il ricane. « Les hommes droits finissent pauvres, ici. Revenez me voir quand vous serez lassé de la vertu. »",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Tu le croises sur le trottoir, sa canne à la main. « La banque est fermée. Les affaires se traitent à la lumière du jour, comme les honnêtes gens. » Il presse le pas.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il tapote une pile de papiers : « Des fermes. Les O'Driscoll les pillent, les fermiers ne paient plus, et moi je ramasse. Ce n'est pas de la cruauté, c'est de l'arithmétique. »"
+      },
+      {
+        "texte": "Il te désigne la porte du bout de sa plume : « Dehors. Je ne parle pas aux gens qui me regardent comme ça. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il bombe le torse et pose la main sur le coffre-fort comme un chasseur sur un ours abattu. Le magnésium éclate. « Vous m'en ferez un tirage, pour le hall. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il lève la main devant son visage : « Pas de portrait sans autorisation ! Les journaux de Saint Denis se feraient un plaisir de l'imprimer sous un titre infâme. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu le photographies sortant par la porte de derrière de la banque, une sacoche sous le bras, à une heure où personne ne dépose d'argent. Ce cliché pourrait valoir cher.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Sur la plaque, on verra son meilleur profil, et derrière lui, un peu flou, le caissier qui fait le signe de croix.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu essaies de le soulever : il pèse le poids d'un veau bien nourri. Il se débat en hurlant « Lâchez-moi, rustre ! » et ses guêtres te martèlent les reins.",
+        "effets": {
+          "sante": -5,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu le jettes sur ton épaule comme un sac de farine. Son haut-de-forme tombe dans la boue, et il pleure davantage pour le chapeau que pour sa dignité.",
+        "effets": {
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu le portes à travers la rue déserte, ficelé comme un rôti. Une fenêtre s'allume à l'hôtel, puis s'éteint aussitôt : personne ne veut voir le directeur dans cet état.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il se débat si fort qu'il te mord l'oreille. Tu le lâches sur le trottoir, et il détale en boitillant vers le bureau du shérif.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "« Combien de veuves avez-vous jetées à la rue cette semaine ? » Il rougit jusqu'aux favoris : « Sortez. Sortez avant que je fasse saisir votre cheval. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu lui pinces le ventre en souriant. Il recule comme piqué par un serpent : « Ne... touchez... pas... à la soie ! »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu le traites de vautour à voix haute. Dans la file d'attente, un vieux fermier murmure « Bien dit », puis se tait quand le directeur note son nom dans un carnet.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il te regarde de haut : « Un pouilleux comme vous ? Je pourrais racheter votre vie entière avec ma montre. » Il la sort, d'ailleurs, et la fait tourner au bout de sa chaîne.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il frappe son bureau du plat de la main : « Pruitt ! Allez chercher le shérif ! » Le caissier ne bouge pas : il fait soudain semblant d'être sourd.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "hostile",
+          "relation": -2
+        }
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il répond d'un hochement de tête à peine perceptible, comme s'il calculait le coût de chaque centimètre."
+      },
+      {
+        "texte": "« Bonjour, bonjour. » Il te jauge de bas en haut : bottes, revolver, chapeau. Tu vois presque les chiffres défiler derrière ses lunettes."
+      },
+      {
+        "texte": "Il se lève à moitié de son fauteuil, honneur rarissime : « Ah, mon meilleur client ! Un cigare ? Pas celui-là, celui-là est pour l'éleveur. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il soulève son haut-de-forme avec une politesse glaciale : « Monsieur le héros. Valentine vous adore, paraît-il. Valentine n'a pas de compte chez moi. »",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Il fait semblant de ne pas te voir et se plonge dans son registre, mais sa main droite a filé vers son tiroir.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu le salues dans la rue obscure : il sursaute, serre sa canne et presse le pas sans répondre, les yeux rivés sur ses chaussures cirées.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "soudoyer": [
+      {
+        "texte": "Il fait glisser tes billets dans un tiroir sans les compter devant toi : « Je n'ai rien vu, rien entendu. Et je vous ferai un taux d'ami. »",
+        "effets": {
+          "argent": -20,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il recompte les billets deux fois et en renifle un : « Vingt dollars ? Pour moi ? Vous plaisantez. Doublez, et nous parlerons. » Il te rend la liasse avec mépris.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il empoche d'un clin d'œil : « Ce n'est pas un pot-de-vin, c'est une commission. » En échange, il te souffle l'heure du prochain transfert d'or par diligence.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -20,
+          "relation": 2,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il prend l'argent, le regarde, puis te regarde : « Tiens donc. Même les saints ont un prix. » Il empoche, ravi, et tu te sens un peu plus sale.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -20,
+          "relation": 1,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "« Le silence d'un banquier coûte cher. Surtout celui d'un banquier qui lit les avis de recherche. » Il empoche quarante dollars et promet d'oublier ta figure.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -40,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il jette un regard affolé vers le caissier : « Pas ici, malheureux ! Ce soir, au saloon de Keane, table du fond. » Il ne prend rien, mais il viendra.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu le suis jusqu'à l'hôtel. Il déjeune seul d'un steak saignant et laisse cinq cents de pourboire à la serveuse, qu'il appelle « ma petite »."
+      },
+      {
+        "texte": "Il ne rentre pas chez lui : il fait un détour par la ruelle du Smithfield's et échange quelques mots avec un homme au chapeau rabattu, avant de repartir le col relevé.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il remarque ta filature, accélère, puis se retourne d'un coup : « Si c'est pour un prêt, prenez rendez-vous ! » Il s'engouffre dans la banque et verrouille derrière lui.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il fait sa tournée : il réclame un remboursement à l'épicier, puis discute affaires avec l'éleveur près de l'enclos, en riant fort. Avec les riches, il rit toujours fort.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il se sait suivi et entre droit au bureau du shérif. À travers la porte, tu l'entends glapir : « Malloy, cet individu me suit depuis la banque ! »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La détonation fait trembler les grilles des guichets. Le directeur s'effondre sur le marbre, les bras en croix au milieu de ses billets éparpillés.",
+        "effets": {
+          "etat": "mort",
+          "prime": 120,
+          "honneur": -5
+        }
+      },
+      {
+        "texte": "Ta balle lui traverse l'épaule. Il s'agrippe au coffre-fort et glisse au sol en suppliant : « Pas moi ! Prenez Pruitt ! Prenez n'importe qui ! »",
+        "effets": {
+          "etat": "blesse",
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Tu le manques : la balle fait éclater le cadran de l'horloge murale. Le directeur s'enfuit par la fenêtre de derrière avec une agilité de chat obèse.",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 30,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Son derringer claque en même temps que {outil}. Il tombe, touché au ventre ; toi, tu sens une brûlure à la cuisse. L'horloge, elle, continue de tourner.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "sante": -30,
+          "prime": 50,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Un coup de feu déchire la nuit de Valentine. Le directeur s'écroule sur le seuil de sa maison, et des lampes s'allument tout le long de la rue tandis qu'on appelle Malloy.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "mort",
+          "prime": 100,
+          "honneur": -5
+        }
+      }
+    ],
+    "emprunter_argent": [
+      {
+        "texte": "Il trempe sa plume dans l'encrier : « Trente dollars, remboursables dans un mois, à vingt pour cent. Signez ici, ici et ici. Votre cheval sert de garantie. »",
+        "effets": {
+          "argent": 30,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il referme son registre d'un coup sec : « La banque ne prête pas aux hommes dont la tête est mise à prix. Les pendus ne remboursent pas. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Votre réputation vous précède. » Il t'accorde cinquante dollars à un taux presque décent, et ce « presque » lui arrache visiblement le cœur.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 50,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il éclate de rire : « Vous prêter ? À vous ? Autant jeter mes billets dans le ruisseau. » Il fait signe au caissier de te raccompagner.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il ouvre un tiroir sans même sortir de formulaire : « Cent dollars, entre gentlemen. Vous me rendrez un service, un jour. » Ce n'est pas une question.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 100,
+          "relation": 1,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "« La banque est fermée. » Mais l'intérêt l'emporte : il te prête dix dollars de sa poche à cinquante pour cent, sur le trottoir, à la lueur d'une lanterne.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 10
+        }
+      }
+    ],
+    "plaider_pour_le_fermier": [
+      {
+        "texte": "Il t'écoute en se curant les ongles avec un coupe-papier : « Touchant. Vraiment. Mais les sentiments n'ont pas de colonne dans mon registre. Vendredi, midi, la ferme est à la banque. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Ton plaidoyer fait se retourner tous les clients du hall. Mal à l'aise sous ces regards, il grogne : « Bon. Un mois de délai. Un seul. Et que ça ne s'ébruite pas. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 2,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il soupire comme un homme qu'on dépouille : « Pour vous, je repousse la saisie après la moisson. Mais vous me devez une faveur. Une grosse. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Vous ? Plaider pour un fermier ? » Il rit si fort que ses lunettes glissent au bout de son nez. « Le jour où les loups défendront les moutons, je fermerai boutique. »",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Tu lui parles des enfants du fermier et de la récolte ruinée par les O'Driscoll. Il hoche la tête, compatissant, puis ajoute dix pour cent de frais « pour le dérangement ».",
+        "effets": {
+          "honneur": 1,
+          "relation": -1
+        }
+      }
+    ],
+    "racheter_la_dette": [
+      {
+        "texte": "Tu poses quatre-vingts dollars sur son bureau. Il compte, recompte, et déchire la créance à contrecœur, comme on s'arrache une dent. Dehors, le fermier pleure dans son chapeau.",
+        "effets": {
+          "argent": -80,
+          "honneur": 3,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Quatre-vingts dollars ? » Il sourit. « Plus les intérêts de retard, les frais de plume et l'usure de mon encrier : cent dix. » Tu paies, et il note tout à l'encre rouge.",
+        "effets": {
+          "argent": -110,
+          "honneur": 3
+        }
+      },
+      {
+        "texte": "Il considère tes billets avec suspicion : « D'où vient cet argent, je me le demande ? » Mais il les prend quand même : l'argent n'a pas d'odeur, surtout quand il entre.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -80,
+          "honneur": 2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il marmonne « Encore un saint qui me vole mes fermes », mais il signe la quittance. Dans la file, quelqu'un applaudit, puis toute la file applaudit.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -80,
+          "honneur": 3,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu le tires du lit pour lui payer la dette. En chemise de nuit et bonnet, il signe la quittance à la bougie en maugréant contre « ces cow-boys sans horaires ».",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -80,
+          "honneur": 3,
+          "relation": -1
+        }
+      }
+    ],
+    "faire_chanter": [
+      {
+        "texte": "Tu lui parles du registre noir caché dans son bureau, celui où les taux sont deux fois plus hauts que la loi. Il devient gris : « Combien ? » Tu repars avec cinquante dollars.",
+        "effets": {
+          "argent": 50,
+          "honneur": -2,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "« Les inspecteurs de l'État adoreraient voir comment vous gonflez vos intérêts. » Il s'assied lourdement : « Vingt-cinq dollars par mois. Pas un cent de plus. Et vous oubliez. »",
+        "effets": {
+          "argent": 25,
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu ne veux pas son argent : tu veux les créances. Il les sort une à une du tiroir et les déchire sous tes yeux, les doigts crispés de rage. Trois familles garderont leur terre.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 2,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Il ricane : « Des preuves ? Vous n'avez rien. Et moi, je dîne avec le shérif jeudi. » Il bluffe peut-être, mais sa main est déjà sur la sonnette de son bureau.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "hostile",
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu lui murmures ce que tu as vu l'autre soir, dans la ruelle du Smithfield's. Il te fourre une liasse dans la main : « Je n'ai jamais parlé à cet homme. Jamais, vous m'entendez ? »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 60,
+          "honneur": -2,
+          "relation": -4
+        }
+      }
+    ],
+    "humilier": [
+      {
+        "texte": "D'une pichenette, tu fais sauter son haut-de-forme et tu le poses sur la tête du chien errant. Toute la rue éclate de rire ; il ne sait plus s'il doit hurler ou courir après son chapeau.",
+        "effets": {
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Devant les fermiers qui attendent, tu lis à voix haute le taux qu'il leur applique. Les murmures deviennent des huées, et il se réfugie derrière sa porte vitrée, écarlate.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -5,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu le fais danser en tirant dans la boue autour de ses pieds. Ses guêtres blanches deviennent brunes, et sa dignité ne s'en remettra jamais.",
+        "effets": {
+          "relation": -5,
+          "honneur": -1,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Tu le traînes jusqu'à l'abreuvoir et tu lui plonges la tête dedans, deux fois. Il ressort en crachant, les favoris pleins de foin et de bave de cheval.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "hostile",
+          "relation": -5,
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Au saloon de Keane, tu racontes à toute la salle comment il a pleurniché devant ton revolver. Le barman en aura fait le tour de la ville avant le petit-déjeuner.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -4
+        }
+      }
+    ],
+    "soutirer_la_combinaison": [
+      {
+        "texte": "Il serre les dents : « Jamais. » Puis tu sors ton couteau pour te curer les ongles, et il souffle d'une voix brisée : « Trente-deux... dix-sept... soixante... quatre. »",
+        "effets": {
+          "prime": 10,
+          "relation": -4,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "« Le coffre a une serrure à horloge, imbécile. Il ne s'ouvre pas avant huit heures demain matin. » Il ment : la sueur perle sous ses favoris.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il rit nerveusement : « Entre amis, voyons, on ne parle pas de ça. » Mais en vérifiant le coffre, il murmure les chiffres, et tu as l'oreille fine.",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Il te donne une combinaison sans hésiter. Trop vite. Si tu la composes, un grelot caché sonnera peut-être quelque part... ou peut-être pas.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "« La combinaison ? Lisez-la sur votre avis de recherche, c'est là que vous finirez. » Il crache, puis cède quand tu armes le chien : « 32... 17... 60... 4. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 15,
+          "relation": -4,
+          "honneur": -1
+        }
+      }
+    ],
+    "enfermer_dans_le_coffre": [
+      {
+        "texte": "Tu le pousses dans son propre coffre-fort, entre les sacs d'or et les actes de saisie, et tu refermes la lourde porte. À travers l'acier, sa voix étouffée promet de te faire pendre.",
+        "effets": {
+          "etat": "ligote",
+          "prime": 20,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il s'agrippe au chambranle d'acier : « Il n'y a pas d'air là-dedans ! » Tu laisses la porte entrouverte d'un doigt. Pas par pitié : par prudence.",
+        "effets": {
+          "etat": "ligote",
+          "prime": 15,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu l'enfermes, mais tu glisses un crayon dans l'embrasure pour qu'il respire. « Tu sortiras quand quelqu'un se souviendra de la combinaison. » Le caissier s'en souvient très bien. Il hésite.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 15,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "La porte se referme sur lui avec un bruit de tombeau. Il passera la nuit avec son argent bien-aimé, et au matin il en ressortira blanc comme un linge.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il se débat, te griffe le visage et manque de t'enfermer à sa place. Tu le repousses d'un coup d'épaule et tu claques la porte, les joues en sang.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "sante": -5,
+          "prime": 20,
+          "honneur": -1
+        }
+      }
+    ]
+  }
+}

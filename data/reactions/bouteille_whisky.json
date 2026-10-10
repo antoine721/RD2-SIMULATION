@@ -1,0 +1,531 @@
+{
+  "id": "bouteille_whisky",
+  "description": "Une bouteille de verre brun, poisseuse, dont l'étiquette « Old Kentucky Finest » se décolle à moitié. Ce qu'elle contient sort du tonneau du barman : un liquide trouble qui sent la térébenthine, le tabac à chiquer et le regret.",
+  "repliques": [
+    "*la bouteille tangue sur le comptoir poisseux*",
+    "Une mouche se noie dans le goulot."
+  ],
+  "reactions": {
+    "acheter": [
+      {
+        "texte": "Tu poses un dollar et la bouteille est à toi. L'étiquette dit « Old Kentucky », l'odeur dit tout autre chose.",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Tu paies deux dollars, et {outil} t'assure que c'est « du bon ». Le bouchon a déjà été ouvert, et le niveau ne monte pas jusqu'au col.",
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "À cette heure-ci, la bouteille coûte le double : « Prix de nuit. » Tu paies en maugréant, et l'on te la tend enveloppée dans un vieux journal.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Le vendeur prend ton argent du bout des doigts et regarde ailleurs pendant que tu ranges la bouteille, comme s'il voulait pouvoir jurer ne t'avoir jamais vu.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "« Pour toi ? » On te sort de sous le comptoir une bouteille cachetée, une vraie, pas du tonneau. « Celle-là, je la vends pas aux crapules. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      }
+    ],
+    "boire": [
+      {
+        "texte": "Tu bois au goulot. Ça descend comme du fil barbelé chauffé au rouge. Tu tousses, tu pleures, et tu en reprends.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Une gorgée, et ta vue se trouble. Ce whisky a été coupé avec quelque chose qui ferait galoper une mule morte.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu bois longuement. Le monde devient plus doux, plus chaud, plus flou. Quelque part, quelqu'un chante faux, et tu te rends compte que c'est toi.",
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Tu finis la bouteille à la lueur d'une lampe, assis sur le perron. Les étoiles tournent, la rue tangue, et ton cheval te regarde avec une désapprobation évidente.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Tu bois, tu rotes, tu jettes un regard mauvais à la ronde. Les tables autour de toi se vident discrètement.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Boire au goulot avant midi : un vieux sur le perron hoche la tête avec respect. De l'autre côté de la rue, le pasteur se signe.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines la bouteille, son étiquette à moitié décollée et la mouche noyée dans le goulot. C'est la nature morte la plus triste de Valentine."
+      },
+      {
+        "texte": "Tu croques la bouteille posée sur le comptoir, avec en arrière-plan la grosse main du barman qui ne s'en éloigne jamais vraiment."
+      },
+      {
+        "texte": "À la lueur de la lampe, le verre brun brille comme de l'ambre. Sur ta page, cette piquette a presque l'air précieuse.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "detruire": [
+      {
+        "texte": "Tu fracasses la bouteille contre le bord du comptoir. Il te reste en main un goulot aux dents de verre, et une odeur de térébenthine envahit la salle.",
+        "effets": {
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "La bouteille éclate sur le plancher ; le liquide fait mousser la sciure. Le barman, impassible : « Un dollar. » Tu paies.",
+        "effets": {
+          "etat": "detruit",
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Tu jettes la bouteille contre le mur. Les derniers ivrognes te regardent avec horreur, comme si tu venais d'abattre un chien.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Tu vides la bouteille dans le crachoir avant de la briser : « Ce truc-là finira par tuer quelqu'un. » Le pasteur serait fier de toi ; le barman beaucoup moins.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": 1
+        }
+      }
+    ],
+    "faire_sauter": [
+      {
+        "texte": "Tu cales {outil} contre la bouteille et allumes la mèche. L'explosion change le whisky en boule de feu bleue : il était vraiment coupé au pétrole.",
+        "effets": {
+          "etat": "detruit",
+          "honneur": -1,
+          "prime": 15
+        }
+      },
+      {
+        "texte": "Tu fais sauter la bouteille au milieu de la rue. Une pluie de verre et de whisky enflammé retombe sur la boue ; un cheval se cabre, une vitre éclate.",
+        "effets": {
+          "etat": "detruit",
+          "prime": 10
+        }
+      },
+      {
+        "texte": "La nuit s'illumine d'un éclair bleu : le frelaté s'embrase comme une torche. Des cris, des chevaux affolés, et quelque part la voix de Malloy qui jure.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 15
+        }
+      },
+      {
+        "texte": "Tu fais sauter la bouteille juste à côté du comptoir, pour rire. Le barman sort de la fumée, les sourcils roussis, son canon scié à la main.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "sante": -20,
+          "prime": 15
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} : la bouteille éclate en mille éclats bruns. Un ivrogne regarde le liquide couler du comptoir avec des larmes dans les yeux.",
+        "effets": {
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Raté. La bouteille vacille, tourne sur elle-même... et reste debout. Le barman applaudit lentement, trois fois.",
+        "effets": {
+          "etat": "normal"
+        }
+      },
+      {
+        "texte": "Dans la pénombre, ton jet frappe la bouteille de biais : elle glisse le long du comptoir et termine sa course dans les mains d'un habitué ravi.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "lancer@outil": [
+      {
+        "texte": "La bouteille tournoie dans l'air et se fracasse sur {cible} dans une gerbe de verre et de whisky. L'odeur de térébenthine flotte longtemps.",
+        "effets": {
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Tu lances la bouteille vers {cible}. Elle rebondit sans se briser, roule dans la boue et s'arrête, intacte, comme pour te narguer.",
+        "effets": {
+          "etat": "normal"
+        }
+      },
+      {
+        "texte": "Le verre explose en touchant {cible}. Le frelaté dégouline en traînées brunes ; on raconte qu'il ronge la peinture, et c'est peut-être vrai.",
+        "effets": {
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Dans la nuit, tu entends la bouteille se briser quelque part vers {cible}, suivie d'un juron et d'un chien qui aboie.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Tu lances la bouteille vers {cible} en ricanant. Ceux qui t'ont vu secouent la tête : quel gâchis de whisky, même de ce whisky-là.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -1
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "L'étiquette promet « Old Kentucky Finest, distillé avec soin ». Le liquide, trouble, charrie de minuscules filaments de tabac."
+      },
+      {
+        "texte": "En penchant la bouteille vers la lumière, tu vois le dépôt au fond : une boue noire qui ne doit rien au fût de chêne."
+      },
+      {
+        "texte": "Au soleil qui passe par la vitrine fendue, le whisky prend une teinte presque verte. Ce n'est pas bon signe.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Une mouche tourne autour du goulot, s'y pose, goûte... et tombe raide dans la bouteille.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu photographies la bouteille sur le comptoir, la lumière à travers le verre. Une nature morte digne d'un salon de Saint Denis, si l'on oublie l'odeur."
+      },
+      {
+        "texte": "L'éclair de magnésium fait sursauter le barman, qui pose aussitôt une main protectrice sur la bouteille : « Pas de réclame sans mon accord. »"
+      },
+      {
+        "texte": "Dans la pénombre, la plaque ne capte qu'un reflet doré et la main d'un ivrogne qui se tend vers la bouteille.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "ramasser": [
+      {
+        "texte": "Tu prends la bouteille par le goulot. Elle te colle aux doigts comme une mauvaise réputation."
+      },
+      {
+        "texte": "Tu la ramasses. Derrière le comptoir, le barman te regarde sans ciller : « Elle est pas gratuite, celle-là. »"
+      },
+      {
+        "texte": "Tu ramasses la bouteille abandonnée sur une table : il en reste un bon tiers, et un mégot qui flotte dedans.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu la prends d'un geste sûr, en la soupesant comme une arme. Deux habitués s'éloignent prudemment du comptoir.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle fait exploser la bouteille. Le whisky gicle sur le comptoir et dans la barbe du barman, qui ne bouge pas d'un pouce : « Un dollar. Et un dollar pour la barbe. »",
+        "effets": {
+          "etat": "detruit",
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Tu rates. La balle se loge dans le tonneau derrière, qui se met à pisser du frelaté sur le plancher. La bouteille, elle, n'a pas bougé.",
+        "effets": {
+          "etat": "normal"
+        }
+      },
+      {
+        "texte": "Tu tires sur la bouteille posée sur un poteau, devant le saloon. Elle éclate dans un reflet de lune ; des fenêtres s'allument tout le long de la rue.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu poses la bouteille sur la barrière et l'abats d'une seule balle. Le gamin des rues, qui regardait, siffle d'admiration.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "detruit"
+        }
+      }
+    ],
+    "voler": [
+      {
+        "texte": "Tu glisses la bouteille sous ton manteau pendant que le barman sépare deux ivrognes. Personne n'a rien vu.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu attrapes la bouteille et files vers la porte... « Hé ! » Le barman bondit, mais la porte battante claque déjà derrière toi.",
+        "effets": {
+          "honneur": -1,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "À peine as-tu la bouteille en main que le canon scié du barman apparaît au-dessus du comptoir : « Repose. » Tu reposes.",
+        "effets": {
+          "etat": "normal"
+        }
+      },
+      {
+        "texte": "En fin de soirée, dans la pénombre, tu emportes la bouteille comme un trophée. Dehors, tu la débouches et la lèves vers la lune.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu voles la bouteille sous le nez du chasseur de primes, qui note quelque chose dans son carnet. Sans doute : « Vol de whisky. Deux dollars. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5
+        }
+      }
+    ],
+    "vider_cul_sec": [
+      {
+        "texte": "Tu renverses la tête et bois sans respirer. Les habitués comptent à voix haute. À vingt, la bouteille est vide ; à vingt et un, tu es par terre.",
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Tu vides la bouteille d'une traite et la reposes à l'envers sur le comptoir. Le barman, pour la première fois de la semaine, hausse un sourcil admiratif.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "À mi-bouteille, le frelaté remonte. Tu cours dehors et rends tout dans l'abreuvoir, sous le regard dégoûté d'un cheval.",
+        "effets": {
+          "sante": -15
+        }
+      },
+      {
+        "texte": "Tu finis la bouteille au goulot sous les vivats. Ensuite, tout devient noir. Tu te réveilles dans la sciure, sans ton chapeau, avec le vague souvenir d'avoir chanté.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Tu vides la bouteille sans broncher. Les habitués te regardent avec un respect tout neuf ; le pasteur, s'il l'apprend, avec un chagrin certain.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      }
+    ],
+    "fracasser_sur_crane": [
+      {
+        "texte": "Tu abats la bouteille sur le crâne de ton voisin. Le verre éclate, le whisky gicle, et l'homme s'effondre dans la sciure avec un soupir presque soulagé.",
+        "effets": {
+          "etat": "detruit",
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "La bouteille rebondit sur la tête de ton voisin sans se briser. Il se retourne lentement, se frotte le crâne : « Du verre épais, ça. » Puis il te cogne.",
+        "effets": {
+          "sante": -15
+        }
+      },
+      {
+        "texte": "Le fracas déclenche une réaction en chaîne : le blessé tombe sur une table, la table sur un muletier, le muletier sur le comptoir. Bagarre générale.",
+        "effets": {
+          "etat": "detruit",
+          "sante": -10,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Dans la pénombre, tu fracasses la bouteille sur ton voisin... qui dormait peut-être déjà. Personne ne remarque la différence.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu brises la bouteille sur la tête d'une brute qui malmenait un vieillard. La salle applaudit ; même le barman te sert un verre, de mauvaise grâce.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": 1
+        }
+      }
+    ],
+    "renifler_goulot": [
+      {
+        "texte": "Tu renifles : térébenthine, jus de chique, poivre, et quelque chose comme une vieille selle. Tes yeux pleurent."
+      },
+      {
+        "texte": "L'odeur te prend aux narines et remonte jusqu'au cerveau. Tu as l'impression d'avoir déjà bu trois verres.",
+        "effets": {
+          "sante": -1
+        }
+      },
+      {
+        "texte": "Sous l'alcool, tu reconnais nettement le pétrole de lampe. Le barman, voyant ta grimace : « C'est pour la couleur. »"
+      },
+      {
+        "texte": "Tu renifles la bouteille, et un ivrogne se penche pour renifler aussi, avec dévotion : « Ah... le parfum du paradis. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "bouteille_incendiaire": [
+      {
+        "texte": "Tu bourres un chiffon dans le goulot et le laisses s'imbiber. Le frelaté est si chargé en pétrole que le tissu sent déjà la lampe."
+      },
+      {
+        "texte": "Le barman te voit faire et pâlit : « Pas dans mon saloon. Le dernier qui a fait ça, on l'a enterré en deux morceaux. »"
+      },
+      {
+        "texte": "Tu prépares la bouteille dans l'ombre derrière le saloon. Si quelqu'un te surprenait maintenant, tu aurais du mal à expliquer que c'est contre les loups.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu fabriques ta bouteille incendiaire en souriant. Au fond de la salle, le balafré t'observe avec intérêt, comme on regarde un futur collègue.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu fabriques la bouteille en te répétant que c'est pour te défendre contre les O'Driscoll. Tu espères que c'est vrai.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "faire_tourner_bouteille": [
+      {
+        "texte": "La bouteille passe de main en main. Chacun boit au goulot, s'essuie la barbe et te tape dans le dos. Vingt amis pour un dollar.",
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "La bouteille fait le tour de la salle et revient vide, avec en prime trois histoires d'O'Driscoll, une d'or dans les collines et une chanson irlandaise que personne ne connaît en entier."
+      },
+      {
+        "texte": "La bouteille ne revient jamais. Tu la vois disparaître au fond de la salle, serrée contre la poitrine d'un vieux comme un nouveau-né."
+      },
+      {
+        "texte": "Tard dans la nuit, la bouteille tourne au rythme d'une chanson à boire. Même le chasseur de primes finit par lever sa tasse de café dans ta direction.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "On boit ta tournée, on te remercie... et l'un des buveurs, en te rendant la bouteille, te souffle : « Le type au carnet te regarde. File par derrière. »",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ]
+  }
+}

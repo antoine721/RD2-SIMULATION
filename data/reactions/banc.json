@@ -1,0 +1,395 @@
+{
+  "id": "banc",
+  "description": "Un long banc de planches grisées par les hivers, adossé à la façade entre le magasin général et la banque. Des initiales gravées au couteau partout, une latte qui branle à droite, une couverture pliée au bout gauche, et en dessous un vieux sac de grain où dort le chien errant.",
+  "repliques": [
+    "Le banc grince.",
+    "Une latte branlante claque sous le poids de quelqu'un.",
+    "Sous le banc, quelque chose ronfle."
+  ],
+  "reactions": {
+    "s_asseoir": [
+      {
+        "texte": "Le banc grince sous ton poids. D'ici, tu vois toute la rue principale : la boue, les chevaux, les portes battantes du saloon, et le shérif Malloy qui fait sa ronde d'un pas fatigué.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu t'assois à côté du vétéran. Il te jette un regard de biais : « Ce bout-là, c'est le mien. Mais t'as l'air fatigué. Reste. »",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "La latte de droite cède à moitié sous toi. Tu te rattrapes de justesse ; sur sa caisse, le crieur éclate de rire : « Faut s'asseoir à gauche, m'sieur ! Tout le monde sait ça ! »"
+      },
+      {
+        "texte": "L'épicier sort sur le pas de sa porte et te toise : « Le banc, c'est pour les clients. » Tu ne bouges pas. Il rentre en marmonnant.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le bois est froid et humide. Sous les planches, le chien errant soupire et se rendort ; au loin, le pianiste du Keane attaque une valse, faux.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "À peine assis, tu vois l'adjoint sortir du bureau du shérif et regarder dans ta direction, la main sur la crosse. Ce n'est pas le meilleur endroit pour souffler.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Un banc de pin gravé de partout : « J.M. 1887 », un cœur percé d'une flèche, et deux lettres, « O'D », rayées rageusement d'un coup de couteau."
+      },
+      {
+        "texte": "Au bout gauche, une couverture pliée et un képi retourné : la place du vétéran. Personne d'autre n'ose s'y asseoir."
+      },
+      {
+        "texte": "Le banc voit passer tout Valentine : les fermiers qui sortent de la banque tête basse, les cow-boys qui entrent au saloon tête haute.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Sous le banc, deux yeux brillent dans le noir : le chien errant a fait son lit sur un vieux sac de grain.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines le banc, la façade du magasin général derrière, la boue de la rue devant. Sur le papier, la scène a l'air paisible. Presque."
+      },
+      {
+        "texte": "Tu croques le banc avec ses habitués : le vétéran au bout, le chien en dessous, le crieur debout sur sa caisse juste à côté. Le cœur de la rue principale tient dans une page."
+      },
+      {
+        "texte": "Dans la pénombre, le banc n'est qu'une forme sous la lanterne du saloon. Tu dessines surtout les ombres.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu installes l'appareil devant le banc. Le vétéran se redresse, le crieur se jette dans le cadre, le chien s'assoit : tout le monde veut être sur la photo."
+      },
+      {
+        "texte": "Un banc vide, une flaque, la façade de la banque. La plaque gardera l'image d'une ville qui attend quelque chose."
+      },
+      {
+        "texte": "Le magnésium éclaire le banc d'un coup ; le chien errant s'enfuit en aboyant, et une fenêtre de l'hôtel s'ouvre sur un juron.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "detruire": [
+      {
+        "texte": "Tu arraches une latte, puis deux, à coups de botte. Le banc s'effondre dans la boue, et le vétéran avec lui, qui te maudit depuis le sol.",
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Le bois est plus solide qu'il n'en a l'air. Tu te fais mal au pied, et le banc n'y gagne qu'une latte fendue.",
+        "effets": {
+          "sante": -3
+        }
+      },
+      {
+        "texte": "Toute la rue te regarde réduire le banc en bois d'allumage. L'épicier sort en hurlant : « C'est mon banc ! Tu vas me le payer ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Personne ne te voit démolir le banc. Au matin, le vétéran et le chien n'ont plus nulle part où s'asseoir.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "etat": "detruit"
+        }
+      }
+    ],
+    "faire_sauter": [
+      {
+        "texte": "La mèche grésille, et le banc saute dans un fracas de planches et de boue. Les vitres du magasin général volent en éclats ; à la banque voisine, le caissier se jette sous son comptoir en criant au braquage.",
+        "effets": {
+          "honneur": -2,
+          "prime": 25,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "L'explosion projette des échardes partout, et l'une d'elles te taillade la joue. Le crieur, sidéré, hurle déjà la manchette : « ATTENTAT CONTRE UN BANC ! »",
+        "effets": {
+          "sante": -10,
+          "honneur": -2,
+          "prime": 25,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Il y avait du monde autour. Le vétéran est projeté dans la boue, le chien hurle, et l'adjoint sort du bureau du shérif en tirant en l'air.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -3,
+          "prime": 50,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "La déflagration réveille toute la ville. Quand on accourt avec des lanternes, il ne reste qu'un trou fumant et quelques planches noircies.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 25,
+          "etat": "detruit"
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle traverse une latte et va se ficher dans la façade du magasin général. L'épicier sort, furieux, et compte le trou comme une dette.",
+        "effets": {
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Les échardes volent. Sous le banc, le chien errant détale en couinant.",
+        "effets": {
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Les passants se jettent à terre. Dans la banque voisine, le caissier tire le rideau en hurlant au braquage.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Ton coup de feu claque dans la rue endormie. Une lanterne s'allume au bureau du shérif.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre le banc. Ça cogne le dossier avec un bruit sourd et retombe dans la boue."
+      },
+      {
+        "texte": "Ton projectile frappe le banc en plein milieu. Dessous, le chien errant pousse un aboiement indigné et va bouder plus loin."
+      },
+      {
+        "texte": "Le choc résonne dans la rue déserte. Une fenêtre de l'hôtel s'ouvre : « Y en a qui dorment ! »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le vétéran, assis au bout, ne bronche même pas : « Si tu vises le banc, tu me rates. Si tu vises moi, tu rates le banc. Tu sais pas viser, fiston. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "sieste_sur_banc": [
+      {
+        "texte": "Tu rabats ton chapeau sur tes yeux et t'allonges sur le banc. Les bruits de la rue s'éloignent : les sabots, le crieur, le marteau de la forge. Tu te réveilles une heure plus tard, reposé.",
+        "effets": {
+          "sante": 15
+        }
+      },
+      {
+        "texte": "Tu te réveilles avec le chien errant couché sur tes pieds et le crieur qui te secoue : « M'sieur ! Le shérif demande qui c'est, le type qui ronfle devant la banque ! »",
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Le soleil tape, les mouches bourdonnent. À côté de toi, le vétéran ronfle aussi : deux vieux soldats au repos devant le magasin général.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 15
+        }
+      },
+      {
+        "texte": "Tu dors à la belle étoile sur le bois dur. Au matin, tu as le dos en compote, et le gamin des rues te rend ta bourse avec un grand sourire : « Je l'ai gardée pour toi. Enfin, presque tout. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 10,
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Tu t'endors à peine qu'une ombre se penche sur toi. Tu ouvres les yeux sur le canon tremblant de l'adjoint : « Bou... bouge pas ! » Tu bondis et tu files avant qu'il ait fini sa phrase.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu te réveilles les poches retournées. Le gamin des rues ne vole pas les honnêtes gens, paraît-il ; les autres, si.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "sante": 10,
+          "argent": -5
+        }
+      }
+    ],
+    "regarder_passer_ville": [
+      {
+        "texte": "Tu t'installes et tu regardes. Un fermier sort de la banque, les épaules basses ; l'adjoint fait tourner son revolver devant le bureau du shérif ; la danseuse du Keane fume à sa fenêtre en regardant vers la gare.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu remarques ce que personne ne remarque : le balafré du Smithfield's sort trois fois en une heure pour regarder la prison. Et le chasseur de primes sort à chaque fois juste après lui."
+      },
+      {
+        "texte": "Le vétéran te commente le spectacle comme un général sa bataille : « Lui, il doit de l'argent au banquier. Lui, il trompe sa femme. Lui... lui, c'est un O'Driscoll. Regarde pas. »"
+      },
+      {
+        "texte": "Le train de midi siffle. Le chef de gare sort sa montre, la regarde, la secoue, la regarde encore. Le crieur s'égosille, Lucifer meugle dans son enclos : Valentine vit.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "La rue est vide, sauf les lanternes des saloons : des rires au Keane, une bagarre au Smithfield's. Puis un cavalier sans lanterne passe au pas, vers le bureau du shérif.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Un passant s'arrête devant le panneau des avis de recherche, lit, et se retourne lentement vers le banc. Tu baisses ton chapeau.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "graver_initiales": [
+      {
+        "texte": "Avec {outil}, tu graves tes initiales dans le dossier, entre « J.M. 1887 » et un cœur percé d'une flèche. Désormais, tu fais un peu partie de Valentine."
+      },
+      {
+        "texte": "Le vétéran regarde ton travail : « Moi, j'ai gravé les miennes sur un arbre, en Géorgie, en 64. L'arbre a brûlé avec Atlanta. »"
+      },
+      {
+        "texte": "L'épicier sort en trombe : « Hé ! C'est du vandalisme ! » Il voit la lame dans ta main et rentre plus vite qu'il n'est sorti.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Au lieu de tes initiales, tu graves une tête de mort. Le crieur la regarde, frissonne, et la montre à tout le monde.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu graves à tâtons, à la lueur de la lanterne du saloon. Au matin, tes lettres sont de travers, et le crieur a déjà ajouté « ÉTAIT ICI » en dessous.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "reparer_banc": [
+      {
+        "texte": "Tu recloues la latte branlante avec une pierre et deux clous tordus. Le banc ne grince plus. Le vétéran teste, se cale, et grogne : « Pas mal. Pour un civil. »",
+        "effets": {
+          "honneur": 1,
+          "etat": "normal"
+        }
+      },
+      {
+        "texte": "Tu rassembles les planches éparpillées et reconstruis le banc, latte après latte. Le vétéran s'y assoit avec précaution : « Il a une jambe plus courte que les autres. Comme moi. On va bien s'entendre. »",
+        "effets": {
+          "honneur": 1,
+          "etat": "normal"
+        }
+      },
+      {
+        "texte": "Tu empruntes un marteau à la forge. Le maréchal-ferrant te suit, regarde, puis redresse lui-même le pied tordu d'un seul geste. Le banc est plus solide qu'avant.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": 1,
+          "etat": "normal"
+        }
+      },
+      {
+        "texte": "Tu travailles à la lueur d'une lanterne. Le chien errant te regarde faire, couché dans la boue, et vient renifler chaque clou.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1,
+          "etat": "normal"
+        }
+      },
+      {
+        "texte": "Le crieur n'en revient pas : « Vous ? Vous réparez des choses, maintenant ? Faut que je l'écrive ! » Même l'épicier sort te remercier. Il ne t'offre rien, mais il remercie.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": 1,
+          "etat": "normal"
+        }
+      }
+    ]
+  }
+}

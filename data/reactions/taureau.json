@@ -1,0 +1,544 @@
+{
+  "id": "taureau",
+  "description": "Un taureau noir comme du charbon, massif comme une locomotive, la corne gauche cassée en pointe de lance et le dos zébré de vieilles cicatrices. Ses naseaux fument dans l'air froid et il frappe la terre de l'enclos d'un sabot impatient.",
+  "personnalite": "Lucifer, la fierté et la terreur du ranch Whitmore. Colérique, rusé et rancunier : il se souvient des visages et charge ceux qui l'ont humilié. Il a envoyé plus d'un vacher chez le docteur et un chez le croque-mort. Seule une pomme bien rouge peut l'adoucir, un peu.",
+  "repliques": [
+    "*souffle bruyamment par les naseaux*",
+    "*gratte la terre du sabot en te fixant*",
+    "*charge la barrière, qui craque dangereusement*",
+    "*mugit si fort que les chevaux de la rue principale sursautent*",
+    "*rumine en te regardant comme un problème à régler*"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 6,
+      "lieu": "enclos",
+      "activite": "dort couché dans la paille, une oreille aux aguets"
+    },
+    {
+      "de": 6,
+      "a": 24,
+      "lieu": "enclos",
+      "activite": "arpente son coin d'enclos, seul, à l'écart du troupeau"
+    }
+  ],
+  "reactions": {
+    "attaquer": [
+      {
+        "texte": "Tu le frappes avec {outil} : autant frapper une locomotive. Lucifer pivote et t'envoie voler par-dessus la barrière.",
+        "effets": {
+          "sante": -25,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Ton coup porte. Le taureau vacille, saigne, et recule dans un coin de l'enclos en soufflant de rage.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu frappes au bon endroit, derrière la nuque. Le colosse noir s'effondre dans un fracas de planches, et l'éleveur hurle qu'on lui a tué cent dollars de taureau.",
+        "effets": {
+          "etat": "mort",
+          "prime": 25,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il encaisse, mugit et charge. Sa corne cassée te laboure la cuisse avant que le vacher ne détourne son attention en agitant son chapeau.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -30,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il t'attendait. Avant même que tu lèves {outil}, il te cueille d'un coup de tête qui te brise une côte.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -40
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Ton lasso se referme sur ses cornes. Lucifer donne un coup de tête : la corde t'arrache du sol et tu roules dans la boue.",
+        "effets": {
+          "sante": -15,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Le nœud glisse sur sa corne cassée et retombe. Il te regarde, souffle, et tu as l'impression très nette qu'il se moque de toi."
+      },
+      {
+        "texte": "Tu le prends au lasso et tiens bon, talons plantés dans la terre. Les badauds applaudissent ; l'éleveur, lui, calcule déjà combien il pourrait te payer pour ses convois.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il fonce sur toi, corde au cou, et te traîne dans tout l'enclos jusqu'à ce que la corde casse.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -20
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu traces la masse noire, la corne cassée, les naseaux fumants. Même sur le papier, il a l'air de vouloir te tuer."
+      },
+      {
+        "texte": "Tu le dessines en plein élan, comme il a dû charger le dernier imbécile qui a voulu le monter."
+      },
+      {
+        "texte": "Il s'approche de la barrière pour te regarder faire. À chaque coup de crayon, il gratte la terre. Tu termines vite.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Dans le noir, seuls ses yeux luisent. Tu dessines deux points brillants et une ombre : c'est assez ressemblant.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing s'écrase sur son mufle. Lucifer secoue la tête, recule d'un pas... et charge. Tu te réveilles de l'autre côté de la barrière.",
+        "effets": {
+          "sante": -30,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu le frappes au flanc. Il ne bronche pas, puis tourne lentement la tête vers toi, et tu comprends ton erreur.",
+        "effets": {
+          "sante": -10,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Le vacher te tire en arrière par la ceinture juste avant la charge : « Vous êtes fou ? Il a tué un homme, celui-là ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu n'as pas le temps de frapper : sa corne cassée accroche ta chemise et te projette dans l'auge de l'enclos.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -20
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} sur sa croupe. Lucifer pivote, mugit et défonce deux planches de la barrière pour te rejoindre.",
+        "effets": {
+          "sante": -15,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu lances {outil}, qui rebondit sur son front comme sur une enclume. Il ne cligne même pas des yeux."
+      },
+      {
+        "texte": "Tu lances {outil} ; il charge la barrière si fort que tout le troupeau panique et que l'éleveur accourt en hurlant.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Touché, il saigne et se retire dans un coin de l'enclos en soufflant, les yeux rouges de haine.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1
+        }
+      }
+    ],
+    "nourrir": [
+      {
+        "texte": "Il hésite, renifle {outil} du bout des naseaux, puis l'arrache de ta main avec une délicatesse inattendue.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il dévore {outil} et tend le cou pour en réclamer une autre. Le vacher n'en revient pas : « Il a jamais laissé personne l'approcher ! »",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il pose son énorme tête sur la barrière et te laisse lui gratter le front. On jurerait un gros chien noir.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il fait voler {outil} d'un coup de tête et charge la barrière ; une planche te heurte le bras. Visiblement, il n'a pas oublié.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Il arpente son coin d'enclos, seul. Les vaches s'écartent sur son passage comme la foule devant le shérif."
+      },
+      {
+        "texte": "Ses cicatrices racontent toutes une histoire : coups de fouet, cornes de rivaux, et la balle d'un voleur de bétail qui n'a pas eu le temps de tirer deux fois."
+      },
+      {
+        "texte": "Sa corne gauche est cassée en pointe : on dit qu'il l'a brisée sur la côte d'un vacher qui l'avait monté pour un pari.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il ne dort pas. Ses yeux luisent dans l'ombre de l'enclos, et ils te suivent.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Sur la plaque, il ne reste qu'une tache noire et floue : il a chargé au moment du déclic.",
+        "effets": {
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Le magnésium éclate. Lucifer charge l'appareil, et toi derrière ; la barrière tient, de justesse.",
+        "effets": {
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il pose de profil, majestueux, comme s'il savait. L'éleveur t'achète un tirage un dollar.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 1
+        }
+      },
+      {
+        "texte": "Dans le noir, l'éclair le rend fou furieux. Il défonce une planche et tu passes la nuit perché sur la barrière.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -5,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu le suis le long de la barrière. Il s'arrête, tourne la tête et te fixe. Tu décides que tu n'avais pas vraiment besoin de le suivre."
+      },
+      {
+        "texte": "Il fait le tour de l'enclos, renifle chaque vache, puis vient se planter face à toi, de l'autre côté des planches.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu le suis de trop près. Il fait volte-face et te charge ; tu escalades la barrière en y laissant une botte.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle s'enfonce dans son épaule massive. Il mugit, saigne, et charge la barrière, qui cède ; tu sautes de côté au dernier moment.",
+        "effets": {
+          "etat": "blesse",
+          "sante": -10,
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il tombe à genoux, puis sur le flanc, dans un tremblement qui secoue tout l'enclos. L'éleveur hurle comme si on lui avait tué un fils.",
+        "effets": {
+          "etat": "mort",
+          "prime": 30,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu le manques. Fou de rage, il défonce la barrière et s'échappe dans la rue principale ; les chevaux ruent, les passants hurlent.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 15,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il charge droit sur toi. Ta balle l'arrête à trois pas, mais sa corne t'a déjà ouvert la cuisse.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "mort",
+          "sante": -30,
+          "prime": 10
+        }
+      }
+    ],
+    "chevaucher_taureau": [
+      {
+        "texte": "Tu enjambes la barrière et sautes sur son dos. Un, deux, trois... à quatre, il te catapulte dans le ciel de Valentine. Tu retombes dans le fumier, une côte en moins.",
+        "effets": {
+          "sante": -30,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il ne bouge pas. Tu es sur son dos, et il ne bouge pas. Puis il fonce droit dans la barrière, et tu passes au travers.",
+        "effets": {
+          "sante": -40,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu tiens jusqu'à neuf. Au dixième coup de reins, tu passes par-dessus ses cornes. La foule applaudit quand même ; l'éleveur garde ses cinquante dollars.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -20
+        }
+      },
+      {
+        "texte": "Tu tiens. Cinq, six, sept... dix ! La foule hurle, l'éleveur paie cinquante dollars en grimaçant, et Tommy le vacher te regarde comme un dieu vivant.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 50,
+          "honneur": 1,
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Personne pour compter, personne pour applaudir. Lucifer te désarçonne contre la barrière dans le noir, et tu restes une heure à regarder les étoiles en gémissant.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -35
+        }
+      },
+      {
+        "texte": "Il te laisse monter, rue pour la forme, puis trottine autour de l'enclos comme un vieux cheval de ferme. L'éleveur crie à la tricherie et refuse de payer.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il t'a reconnu. Il te jette au sol d'un coup de reins et te piétine avant que le vacher ne l'éloigne en hurlant.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -50
+        }
+      }
+    ],
+    "narguer_taureau": [
+      {
+        "texte": "Tu agites ton chapeau par-dessus la barrière. Lucifer charge ; les planches éclatent à un pouce de ton nez. Tu recules, le cœur battant.",
+        "effets": {
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il te regarde, souffle, et se détourne avec un dédain royal. Tu as l'air bien ridicule à agiter ton chapeau devant un taureau qui t'ignore."
+      },
+      {
+        "texte": "Les badauds s'attroupent et parient sur toi. Tu tiens ; la barrière, non. Tu détales à toutes jambes, poursuivi par une tonne de rancune.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -10,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu le provoques dans le noir. Tu n'entends que son souffle, puis le craquement du bois, et tu cours sans savoir d'où il va surgir.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -10,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il franchit la barrière basse d'un bond et te charge en pleine rue. Ton seul salut est l'abreuvoir, où tu plonges tête la première.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -15,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "marquer_au_fer": [
+      {
+        "texte": "Tu approches le fer rouge. Lucifer sent la chaleur, se retourne et te charge : le fer vole, et toi aussi.",
+        "effets": {
+          "sante": -25,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il porte déjà le W couronné, ancien et boursouflé. Y ajouter ta marque serait à la fois un vol et un suicide. Tu reposes le fer."
+      },
+      {
+        "texte": "Il faut quatre hommes, deux lassos et l'éleveur qui jure pour l'immobiliser. Le fer siffle, Lucifer mugit ; Whitmore te donne cinq dollars, et le taureau ne t'oubliera jamais.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu brûles ta marque sur son flanc pendant qu'il somnole. À son réveil, il défonce la moitié de l'enclos pour te retrouver.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "voler_betail": [
+      {
+        "texte": "Tu ouvres la barrière. Lucifer sort, te regarde, et part au galop... vers la rue principale, pas vers les collines. Ton vol tourne à la catastrophe publique.",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 15,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il refuse de bouger. Tu tires sur la corde ; il tire plus fort. Tu finis dans le fumier, la corde arrachée des mains.",
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Le vacher te voit et hurle, mais personne n'ose approcher pour t'arrêter : tu emmènes Lucifer, et tout Valentine s'écarte sur ton passage.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 20,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu le mènes sous la lune avec une pomme au bout d'un bâton. Ça marche une heure ; puis il te charge et retourne seul à l'enclos.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -15,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il te suit comme un chien jusqu'au ruisseau. Tu viens de voler le taureau le plus dangereux du comté, et il a l'air ravi.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": 1
+        }
+      }
+    ],
+    "rabattre_betail": [
+      {
+        "texte": "Il se laisse rabattre vers le troupeau en grondant, tête basse, comme un roi qu'on reconduit à son palais."
+      },
+      {
+        "texte": "Tu siffles et agites les bras. Lucifer fait volte-face et charge ; tu plonges sous la barrière juste à temps.",
+        "effets": {
+          "sante": -20,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu le ramènes avec un sang-froid de vieux convoyeur. L'éleveur ôte le cigare de sa bouche, impressionné, et le vacher applaudit.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Sa corne cassée te frôle le ventre. Tu fuis jusqu'à la rue principale, Lucifer sur les talons, et il ne rebrousse chemin qu'à l'abreuvoir.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -15
+        }
+      }
+    ]
+  }
+}

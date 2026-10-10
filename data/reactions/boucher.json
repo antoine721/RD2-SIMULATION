@@ -1,0 +1,1221 @@
+{
+  "id": "boucher",
+  "description": "Un gros homme rougeaud aux avant-bras comme des jambons, le tablier raide de sang séché et un fendoir passé à la ceinture. Il lui manque le petit doigt de la main gauche, et quand il rit, les carcasses tremblent sur leurs crochets.",
+  "personnalite": "Gus, le boucher de Valentine. Jovial, bavard, généreux en histoires de chasse qu'il enjolive à chaque récit (son petit doigt, il l'a perdu tour à tour contre un loup, un cougar et un ours). Paie comptant la viande, les peaux et les carcasses, mais repère une peau trouée au premier coup d'œil. Courtise maladroitement Mme Whitlock, la gérante de l'hôtel voisin, en lui gardant ses meilleurs morceaux. Déteste les rats, les O'Driscoll qui ont vidé sa glacière l'hiver dernier, et les chasseurs qui gâchent une bête d'une balle mal placée.",
+  "repliques": [
+    "Peaux, carcasses, gibier ! Je paie comptant et je pose pas de questions !",
+    "Ce cerf-là ? Une balle dans l'œil, à trois cents pas. Bon, deux cents. Bon...",
+    "*abat son fendoir sur le billot : CHLAC !*",
+    "Madame Whitlock ! Je vous ai gardé le filet ! ... Elle a claqué la porte. Elle m'aime bien.",
+    "Sale rat ! Reviens ici que je te fasse en saucisse !",
+    "Une peau trouée, c'est une peau à moitié prix, mon gars.",
+    "*chasse les mouches avec un torchon rouge*",
+    "Les O'Driscoll m'ont volé une demi-vache, l'hiver dernier. J'ai pas oublié.",
+    "Lucifer, le taureau de l'éleveur ? Un jour, je l'aurai en steaks, et je paierai la tournée."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 5,
+      "lieu": "boucherie",
+      "activite": "ronfle à l'étage, au-dessus des carcasses"
+    },
+    {
+      "de": 5,
+      "a": 6,
+      "lieu": "enclos",
+      "activite": "choisit une bête chez l'éleveur en lui tâtant les flancs"
+    },
+    {
+      "de": 6,
+      "a": 12,
+      "lieu": "boucherie",
+      "activite": "découpe, pèse et rachète le gibier des chasseurs"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "saloon_keane",
+      "activite": "dévore un steak et raconte sa dernière chasse au barman"
+    },
+    {
+      "de": 13,
+      "a": 18,
+      "lieu": "boucherie",
+      "activite": "fume des jambons, gratte les peaux et guette la sortie de Mme Whitlock"
+    },
+    {
+      "de": 18,
+      "a": 19,
+      "lieu": "berge",
+      "activite": "rince son tablier et ses couteaux dans le ruisseau"
+    },
+    {
+      "de": 19,
+      "a": 22,
+      "lieu": "saloon_smithfield",
+      "activite": "boit une bière et parie sur les bras de fer"
+    },
+    {
+      "de": 22,
+      "a": 24,
+      "lieu": "boucherie",
+      "activite": "aiguise ses couteaux à la lanterne avant de monter se coucher"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il essuie ses mains rouges sur son tablier, ce qui ne les rend pas plus propres : « Tu chasses, l'ami ? J'achète tout ce qui a des poils, des plumes ou des sabots. Le reste, je le mange. »"
+      },
+      {
+        "texte": "« T'as vu l'ours qu'on a ramené l'an passé ? Neuf cents livres ! » Il écarte les bras et renverse un seau d'abats. « Bon, sept cents. Mais il était méchant comme neuf cents. »"
+      },
+      {
+        "texte": "Il baisse la voix et lorgne vers l'hôtel : « Mme Whitlock m'a parlé, ce matin. Elle a dit “ôtez ce tablier de mon trottoir”. Mais elle l'a dit à moi, tu comprends ? »"
+      },
+      {
+        "texte": "« Les O'Driscoll ? » Il plante son fendoir dans le billot. « L'hiver dernier, ils m'ont vidé la glacière : une demi-vache et trois jambons. Le jour où l'un d'eux finit sur mes crochets, je le vends au prix du porc. »"
+      },
+      {
+        "texte": "Il aiguise ses couteaux à la lueur d'une lanterne, au milieu des carcasses qui tournent doucement : « Tu veux un secret ? La nuit, elles me racontent comment elles sont mortes. » Il éclate de rire.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il continue de découper sans te regarder : « Ta tête est sur le panneau, mon gars. Moi, j'achète des peaux, pas des têtes. Mais ne traîne pas trop devant ma vitrine. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "« Mon chasseur préféré ! » Il te tend une saucisse sèche de sa réserve personnelle. « Sanglier et poivre. Ça ressusciterait un mort, le croque-mort me le reproche assez. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il ne lâche pas son fendoir : « J'ai rien à te dire, et j'ai beaucoup à découper. Fiche le camp de ma sciure. »",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il lève son fendoir en guise de salut, faisant voler une gouttelette rouge : « Salut, l'ami ! Belle journée pour tuer quelque chose ! »"
+      },
+      {
+        "texte": "Il retire son chapeau taché et imite la courbette du pasteur : « Monsieur ! » Puis il rit : « Je m'entraîne pour Mme Whitlock. Ça rend comment ? »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Bonsoir, bonsoir ! » Il te fait signe avec une jambe de chevreuil, comme on agite un mouchoir. « Fermé, mais jamais pour un honnête homme. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te serre la main à t'en broyer les phalanges, puis s'aperçoit qu'il vient de te la tremper dans le sang : « Oh. Pardon. Ça porte bonheur, chez nous. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te rend ton salut d'un hochement de tête, sans lâcher sa scie : « Salut. » Pour un homme aussi bavard, c'est presque un avertissement.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Il éclate d'un rire énorme qui fait trembler les carcasses : « T'es drôle, toi ! Répète, que je la raconte au Smithfield's ce soir ! »"
+      },
+      {
+        "texte": "« Gros lard, moi ? » Il se tapote la panse. « Ça, c'est vingt ans de côtes de bœuf. Toi, t'es quoi ? Deux semaines de haricots en boîte ? »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Tu insultes ma viande ? » Il porte la main à son cœur, mortellement blessé. « Insulte ma mère, insulte mon chapeau, mais pas mes saucisses ! »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il fait sauter son fendoir d'une main à l'autre, sans sourire cette fois : « Continue, et je te pends à côté du cochon. On verra la différence à la pesée. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il pose sa lanterne et retrousse ses manches gluantes : « Il est tard, j'ai bu trois bières et j'ai envie de cogner quelque chose qui soit pas déjà mort. Tu tombes bien. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu bombes le torse. Il bombe le sien, qui est trois fois plus large et couvert de sang : « Tu disais ? »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il pose doucement son fendoir sur le billot, sans le lâcher : « J'ai désossé un bœuf de mille livres ce matin, mon gars. Toi, tu fais quoi, cent soixante ? Ce serait vite fait. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il recule d'un pas, prudent : « Je veux pas d'histoires. Prends un jambon et va-t'en. » Il pousse vers toi un jambon fumé enveloppé dans du papier journal.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Seul dans sa boutique, la lanterne vacille. Il garde le sourire, mais sa main cherche le crochet le plus proche : « Doucement, l'ami. Tout ce qui pend ici a fait le malin avant toi. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te dévisage un moment, puis te tape sur l'épaule à te déboîter la clavicule : « Ha ! Elle était bonne, celle-là ! Tu m'as presque eu ! »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Tu pointes {outil} sur lui. Il lève les mains, le fendoir toujours dans la droite : « Doucement ! J'ai pas d'argent, j'ai que des abats. Tu veux du foie ? »",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il ouvre son tiroir-caisse sans discuter et te tend une liasse grasse de billets tachés : « Six dollars. Lave-les, ils sentent le cochon. »",
+        "effets": {
+          "argent": 6,
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il ne lève pas les mains. Il lance son fendoir, qui se plante dans le chambranle à un pouce de ton oreille : « Le prochain, je vise mieux. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "hostile",
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "« Hé, shérif ! » Il a crié par la porte ouverte avant que tu réagisses. Dans la rue, l'adjoint sursaute et porte déjà la main à son étui.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il recule entre les carcasses suspendues et disparaît derrière elles. Quand tu les écartes, la porte de derrière bat et la ruelle est vide.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 5,
+          "relation": -3
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Il pare ton premier coup avec un quartier de bœuf, encaisse le second au bras et rugit comme un taureau : « Tu veux de la viande ? Je vais t'en faire ! » Son poing te cueille au menton.",
+        "effets": {
+          "etat": "blesse",
+          "sante": -15,
+          "prime": 15,
+          "honneur": -3,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Il s'effondre contre son billot en renversant la balance en fonte. Les mouches, indifférentes, continuent leur bal au-dessus du sang, le sien cette fois.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 20,
+          "honneur": -4,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Il t'attendait : son fendoir siffle et t'entaille l'avant-bras avant que {outil} ne le touche au flanc. Il recule en grognant, une main sur la plaie.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -20,
+          "etat": "blesse",
+          "prime": 15,
+          "honneur": -3,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Il glisse sur la sciure gorgée de sang et s'étale de tout son long, puis se relève en titubant et s'enfuit par la porte de derrière, une côtelette encore à la main.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 10,
+          "honneur": -3,
+          "relation": -4
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La détonation résonne entre les murs de planches. Gus s'effondre au milieu des carcasses, qui se balancent longtemps au-dessus de lui comme des pendus.",
+        "effets": {
+          "etat": "mort",
+          "prime": 100,
+          "honneur": -5,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "La balle le touche à l'épaule. Il rugit, arrache un crochet du mur et te le lance : le fer te laboure la joue avant qu'il ne s'écroule derrière son billot.",
+        "effets": {
+          "etat": "blesse",
+          "sante": -15,
+          "prime": 50,
+          "honneur": -4,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Tu tires avec {outil}, mais ta balle se perd dans une carcasse de cerf ; il en profite pour plonger par la fenêtre de derrière et filer vers le bureau du shérif en hurlant.",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 30,
+          "honneur": -3,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Il tire le premier, avec le vieux fusil de chasse caché sous le comptoir. La chevrotine te cueille au flanc ; ta propre balle part se perdre dans le plafond.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -35,
+          "etat": "hostile",
+          "prime": 20,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Il tombe à genoux, le fendoir lui glisse des doigts. « Toi... je t'aurais acheté tes peaux... » Toute la rue principale a entendu le coup de feu.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "mort",
+          "prime": 150,
+          "honneur": -5,
+          "relation": -5
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing rebondit sur sa joue comme sur un jambon. Il cligne des yeux, puis te rend la politesse : tu te retrouves assis dans la sciure.",
+        "effets": {
+          "sante": -12,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il encaisse, recule d'un pas et éclate de rire : « Bonne droite ! Ma mère frappait plus fort, et elle pesait cent livres ! » Il ne te rend pas le coup. Pas cette fois.",
+        "effets": {
+          "prime": 5,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il esquive avec une agilité de chat et t'enfonce son poing dans l'estomac. Tu craches ton déjeuner sur la sciure ; il secoue la tête : « Encore du ménage. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -15,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il a bu ; ton coup l'envoie dans les carcasses, qui s'entrechoquent comme des cloches. Il reste assis par terre, sonné, une jambe de chevreuil dans les bras.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il pare ton coup du plat de la main, plus surpris que fâché : « Hé ! C'est la chaleur ? Viens dans la glacière, ça va te remettre les idées en place. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Tu cognes. Il vacille, te regarde avec étonnement... et ne tombe pas. « T'es sûr ? » demande-t-il, avant de s'écrouler enfin sur un sac de sciure.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -2,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Il tombe comme un bœuf à l'abattoir, le nez dans le seau d'abats. Les mouches, au-dessus, semblent applaudir.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -2,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Ton coup glisse sur son crâne de taureau. Il se retourne, t'attrape par le col et te projette contre le mur, entre deux carcasses.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -15,
+          "etat": "hostile",
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il s'effondre sans bruit au pied de son billot. À cette heure, seul le rat de la boucherie est témoin, et il en profite pour filer avec une saucisse.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -2,
+          "relation": -4
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Ta corde se referme autour de sa panse. Il tire d'un coup sec et c'est toi qui viens à lui en glissant sur la sciure : « Tu pêches au gros, toi ! »",
+        "effets": {
+          "sante": -5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "La boucle s'abat sur ses épaules et le fait trébucher contre une carcasse. Il se débat en jurant, empêtré entre {outil} et un quartier de bœuf.",
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il se laisse attraper en riant : « Pas mal ! Le vacher te prendrait dans son équipe ! » Puis il fait mine de te traîner jusqu'au billot.",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "La corde siffle et l'attrape par le cou ; il lâche sa lanterne, qui roule dans la sciure. Il tombe à genoux en étouffant un juron, les doigts sous la boucle.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -3,
+          "relation": -4
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Il faut tout {outil} pour faire le tour de sa bedaine. Ficelé comme un rôti, il soupire : « Si tu voulais du rôti, il suffisait de demander. »",
+        "effets": {
+          "etat": "ligote",
+          "prime": 15,
+          "honneur": -2,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Il se débat comme un bœuf qu'on mène à l'abattoir, puis finit pendu à son propre crochet à jambons, les pieds ne touchant plus tout à fait le sol.",
+        "effets": {
+          "etat": "ligote",
+          "prime": 15,
+          "honneur": -3,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Tu le ligotes à son billot à la lueur de sa lanterne. Il ne crie pas : il sait que personne ne vient à la boucherie la nuit, à part les rats.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -3,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Il te mord la main avant que tu aies serré le dernier nœud, mais tu tiens bon. Ficelé, il te promet de te débiter « en morceaux de premier choix ».",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "sante": -5,
+          "prime": 15,
+          "honneur": -2,
+          "relation": -5
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu lui tords le poignet : le fendoir tombe et se plante dans le plancher, à un pouce de ta botte. « Fais attention, il coupe ! » dit-il, sincèrement inquiet pour toi.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il te laisse prendre son couteau à désosser sans résister, puis en tire un autre de sa botte, puis un troisième de son tablier : « J'en ai douze, l'ami. On continue ? »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Vous roulez dans la sciure ; tu finis par lui arracher son fendoir, mais il t'a entaillé le dos de la main au passage.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -8,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu le surprends en train d'aiguiser un couteau et le lui fais lâcher d'un geste. Il lève les mains : « Je préparais le jambon de demain, rien de plus ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "« Un duel ? Au pistolet ? » Il rit. « Je tire comme un manche à balai. Au fendoir, à vingt pas, d'accord. Tu lances le premier ? »"
+      },
+      {
+        "texte": "Il sort dans la rue en s'essuyant les mains. Les passants s'écartent... Au dernier moment, il dégaine une saucisse et te la pointe sous le nez : « Pan. » Tout le monde rit, sauf toi.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il décroche le vieux fusil de chasse du mur et sort dans la boue de la rue principale : « Va pour le duel. Mais je te préviens, j'ai jamais raté un cerf. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "hostile",
+          "relation": -2
+        }
+      },
+      {
+        "texte": "« Toi et moi ? » Il pose une main poisseuse sur ton épaule. « On a mangé trop de côtelettes ensemble pour s'entretuer. Allez, viens boire une bière. »",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Il fronce les sourcils : « Je me bats pas avec les gars dont la tête est mise à prix. Je préfère les livrer au poids. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Il découpe une carcasse de cerf avec la précision d'un horloger, en fredonnant une chanson à boire. Il lui manque le petit doigt de la main gauche : un loup, dit-il ; un hachoir, dit le barman."
+      },
+      {
+        "texte": "Son tablier, jadis blanc, a la couleur d'un vieux bordeaux. Des mouches tournent autour de sa tête comme une couronne qu'il ne remarque plus."
+      },
+      {
+        "texte": "Un rat file entre ses bottes. Le fendoir s'abat à la vitesse de l'éclair... et rate, comme toujours. « Toi, je t'aurai ! » rugit-il."
+      },
+      {
+        "texte": "Il guette par la vitrine la porte de l'hôtel, un paquet ficelé à la main. Quand Mme Whitlock sort, il se recoiffe vivement avec ses doigts sanglants.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Assis sur son billot, il compte la recette à la lanterne : chaque pièce passe entre ses doigts rouges et en ressort marquée d'une empreinte.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Il s'arrête devant l'hôtel, ajuste son chapeau, ôte son tablier... puis le remet et repart vers le saloon, les épaules basses."
+      },
+      {
+        "texte": "Il se retourne, te voit et rit : « Tu me suis ? C'est le parfum qui t'attire ? Viens, je te paie une bière chez Keane, j'ai une histoire de grizzly. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu le suis jusqu'à l'enclos, où il tâte longuement les flancs d'un bœuf en marchandant avec l'éleveur. Lucifer, le taureau, le regarde de travers.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il descend au ruisseau rincer son tablier. L'eau devient noire sous la lune, et il chante une berceuse à mi-voix.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il fait mine de ne pas te voir, mais passe par le bureau du shérif en chemin. Il en ressort sans regarder dans ta direction.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu essaies de le charger sur ton épaule. Tu tiens deux secondes avant que tes genoux ne cèdent ; vous finissez tous les deux dans la sciure, lui hilare.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Au prix d'un effort surhumain, tu le soulèves. Il gigote comme un cochon qu'on mène à l'abattoir : « Pose-moi ! J'ai des clients ! »",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il s'est foulé la cheville en glissant sur la sciure ; tu le traînes plus que tu ne le portes jusqu'au cabinet du docteur. Il te promet un jambon entier.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il est saoul et lourd comme un bœuf. Tu le hisses jusqu'à son lit, à l'étage de la boutique ; il ronfle avant même que tu l'aies posé.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 1
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil}. Il se baisse, et c'est une carcasse de cerf qui encaisse le choc et se met à tourner sur son crochet comme un pendu ivre.",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Le projectile lui heurte le front. Il porte la main à sa tête, regarde ses doigts : « Ha ! Pour une fois, c'est mon sang à moi ! »",
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il attrape {outil} au vol de sa grosse main de boucher et le soupèse : « Tu me le vends ? Non ? Alors je le garde. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il esquive et te renvoie aussitôt un jarret de porc en pleine poitrine. Tu recules, le souffle coupé, et il hurle de rire.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "relation": -2
+        }
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il pose fièrement avec un cerf à dix cors sur les épaules, le fendoir en l'air : « Envoie-la au journal de Saint Denis : le roi des bouchers de New Hanover ! »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il veut absolument poser sous la tête d'ours accrochée au mur. Pendant la pose, une mouche se promène sur son nez ; il ne bronche pas, en professionnel."
+      },
+      {
+        "texte": "« Fais-en deux ! Une pour moi, une pour Mme Whitlock. » Il se lisse la moustache au saindoux. « Tu crois qu'elle la gardera ? »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "L'éclair de magnésium illumine la boucherie : les carcasses suspendues ressemblent un instant à une rangée de pendus. Gus se signe, puis éclate de rire.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu le croques dans {outil}, fendoir levé, mouches en auréole. Il regarde par-dessus ton épaule : « Fais-moi plus mince. Non, plus. Encore. Voilà. »"
+      },
+      {
+        "texte": "Il ne tient pas en place trois secondes et raconte une histoire d'élan pendant toute la séance. Ton croquis finit avec trois bras et une bouche grande ouverte."
+      },
+      {
+        "texte": "Il te demande le dessin et l'accroche entre la tête d'ours et l'ardoise des prix : « Maintenant j'ai une galerie, comme à Saint Denis ! »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "À la lueur de la lanterne, tu dessines ses mains énormes en train d'aiguiser un couteau. C'est le plus beau dessin de ton carnet, et le plus inquiétant.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il prend {outil} et le retourne dans ses grosses mains rouges : « Pour moi ? T'es un brave ! » En échange, il te fourre un chapelet de saucisses dans la poche.",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« Je peux le revendre ou je dois le garder ? » Il rit, puis range ton présent sur l'étagère, entre un bocal de saindoux et une mâchoire de loup.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il est ému. Il s'essuie les mains (ce qui n'arrange rien) et te serre dans ses bras. Tu sens le cerf faisandé pour le reste de la journée.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il refuse {outil} en secouant la tête : « Les cadeaux d'un homme recherché, ça finit toujours devant le juge. Garde ça. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il prend {outil} sans un merci, le renifle comme un chien renifle un os, et le jette dans le seau des invendus.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "acheter@outil": [
+      {
+        "texte": "Il se gratte la tête avec le manche de son fendoir : « Pour {cible}, t'es pas à la bonne adresse, l'ami. Ici, tout ce qui se vend est déjà mort. Une côtelette, plutôt ? »"
+      },
+      {
+        "texte": "Il te cède {cible} pour trois dollars, après avoir marchandé pour le principe : « J'ai fait une affaire, ou c'est toi ? On saura jamais. »",
+        "effets": {
+          "argent": -3
+        }
+      },
+      {
+        "texte": "« Pour toi, c'est le prix d'ami. » Il te laisse {cible} contre un dollar et une promesse : lui rapporter la peau du prochain cougar.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il entrouvre la porte en caleçon, une lanterne à la main : « On est fermés ! Reviens au chant du coq, avec ton argent et ton appétit. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te fait payer {cible} le double, sans te regarder dans les yeux : « Prix du jour. Tu discutes, ça augmente. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -6
+        }
+      }
+    ],
+    "vendre@outil": [
+      {
+        "texte": "Il soupèse {cible} d'une main poisseuse : « Ça se mange pas, ça se dépèce pas... mais ça me plaît. » Il t'en donne trois dollars sans discuter.",
+        "effets": {
+          "argent": 3
+        }
+      },
+      {
+        "texte": "« C'est pas de la viande, ça. » Il hésite pourtant, se gratte la panse et sort deux dollars du tiroir : « Pour décorer l'étal. Les clients aiment ce qui brille. »",
+        "effets": {
+          "argent": 2
+        }
+      },
+      {
+        "texte": "Il te paie {cible} cinq dollars, bien plus que ça ne vaut : « T'en auras besoin plus que moi, mais si tu dois vendre, autant que ce soit à un ami. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il recule les mains levées : « Je rachète pas ce qui a peut-être servi à un mauvais coup, mon gars. Va voir le barman du Smithfield's, lui il a pas de principes. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il examine {cible} à la lanterne et te paie en pièces collantes : deux dollars, et une saucisse pour la route.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 2
+        }
+      }
+    ],
+    "vendre_carcasse_gibier": [
+      {
+        "texte": "Il hisse ta bête sur la balance en fonte, siffle, tâte le flanc : « Belle pièce ! Une seule balle, propre. Quatre dollars, et je te garde le foie si tu veux. »",
+        "effets": {
+          "argent": 4,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il retourne la carcasse, compte trois trous de chevrotine et fait la grimace : « T'as tiré dessus ou tu l'as mitraillée ? Un dollar... allez, deux. »",
+        "effets": {
+          "argent": 2
+        }
+      },
+      {
+        "texte": "Il soulève une patte, renifle, recule : « Elle a quel âge, ta bête ? Elle sent comme l'arrière-boutique du croque-mort. » Il t'en donne un dollar, pour les chiens.",
+        "effets": {
+          "argent": 1
+        }
+      },
+      {
+        "texte": "« Pour toi, je compte pas les trous ! » Il te paie six dollars sans même peser, et suspend la bête au plus beau crochet de la vitrine.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 6,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il descend en chemise de nuit, lanterne à la main, et grogne en voyant ta carcasse : « T'aurais pu attendre le jour, elle allait pas s'enfuir. » Il te paie quand même trois dollars.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 3
+        }
+      },
+      {
+        "texte": "Il paie, mais en dessous du prix : « Deux dollars. Le reste, c'est pour mon silence. Le bureau du shérif est à deux portes d'ici, et j'ai la langue bien pendue. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 2
+        }
+      },
+      {
+        "texte": "« Ça, c'est du travail de chasseur ! Pas une balle perdue, pas un poil abîmé. » Il te donne cinq dollars et te serre la main, gluante d'admiration.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 5,
+          "relation": 1
+        }
+      }
+    ],
+    "vendre_peaux_gibier": [
+      {
+        "texte": "Il étale tes peaux sur l'étal et les inspecte à la loupe, comme un bijoutier : « Celle-ci est parfaite. Celle-là, un trou de balle en plein dos. Cinq dollars le tout. »",
+        "effets": {
+          "argent": 5
+        }
+      },
+      {
+        "texte": "Il compte tes peaux, en met une de côté : « Celle-là, je la garde pour moi, en échange d'un tuyau : il y a des castors gros comme des cochons au ruisseau. » Il te paie quatre dollars.",
+        "effets": {
+          "argent": 4
+        }
+      },
+      {
+        "texte": "« Une peau de loup sans une égratignure ! » Il la caresse comme un chat. « Sept dollars. Et je dirai à tout le monde que c'est moi qui l'ai tué. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 7,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il retourne tes peaux une à une en reniflant : « Mal grattées, mal séchées, et celle-là, c'est du chien. Deux dollars, et sois content. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 2
+        }
+      },
+      {
+        "texte": "Il soupèse le paquet à la lanterne et paie sans chicaner : « La nuit, je marchande pas, je dors à moitié. Profites-en. » Quatre dollars.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 4
+        }
+      },
+      {
+        "texte": "« Des peaux, ça n'a pas de visage. » Il paie sans poser de questions, mais compte la monnaie en lorgnant la porte. Trois dollars.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 3
+        }
+      }
+    ],
+    "commander_morceau_viande": [
+      {
+        "texte": "Il décroche un quartier de bœuf, l'abat sur le billot et tranche d'un seul coup de fendoir : « Une belle bavette, l'ami ! Un dollar, et elle te tient au corps jusqu'à Saint Denis. »",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "« Côtes, filet, langue ou cervelle ? » Il te présente chaque morceau en l'appelant par son petit nom. Tu repars avec une côtelette et l'impression d'avoir adopté quelque chose.",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il te glisse en plus, sans rien dire, une saucisse fumée et un os à moelle : « Pour le chien errant. Il me suit partout depuis que je l'ai nourri, maintenant c'est ton tour. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Fermé ! » Puis il réfléchit, redescend et te tend un morceau de lard dans du papier journal : « Pour un dollar, j'ouvre. Pour deux, je souris. » Il sourit.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Il te sert le morceau le plus nerveux de l'étal en appuyant du pouce sur la balance : « Deux dollars. C'est la pesée, j'y peux rien. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Il choisit pour toi le plus beau filet, celui qu'il réservait à Mme Whitlock : « Tu le mérites. Et puis, elle me l'aurait encore refusé. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      }
+    ],
+    "demander_coin_de_chasse": [
+      {
+        "texte": "Il trace une carte dans la sciure avec la pointe de son couteau : « Les cerfs, au nord de la voie ferrée, à l'aube. Les lapins, partout. Les ennuis, du côté des fermes isolées : là-bas, ce sont les O'Driscoll qui chassent. »"
+      },
+      {
+        "texte": "« Des castors ? Au ruisseau, au sud, derrière les maisons. » Il baisse la voix. « Et si tu vois un renard roux avec une oreille coupée, il est à moi. Il me vole des poules depuis deux ans. »"
+      },
+      {
+        "texte": "« Les collines où l'ivrogne voit de l'or ? » Il rit. « Moi, j'y ai surtout vu des cougars. C'est un cougar qui m'a pris ce doigt-là. » La semaine dernière, c'était un loup.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il ferme la porte et chuchote : « Mon coin secret : le lac au nord-ouest, après les collines. Un élan blanc y boit au crépuscule, personne ne l'a jamais eu. Rapporte-moi sa peau, je te la paie vingt dollars. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« La nuit ? » Il secoue la tête. « La nuit, ce sont les loups qui chassent, et ils demandent pas leur chemin. Dors à l'hôtel ; la veuve est aimable si tu t'essuies les pieds. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te toise : « Avec ta tête ? Va donc chasser le rat dans ma réserve, ça me rendra service. Ou l'O'Driscoll du panneau, il rapporte plus qu'un cerf. »",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "ecouter_histoire_chasse": [
+      {
+        "texte": "Il pose son fendoir, s'adosse au billot et commence : « C'était l'hiver 91, la neige jusqu'aux hanches... » Une heure plus tard, l'ours mesure douze pieds et il l'a tué avec une louche.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Un bison ! Le dernier des Heartlands, peut-être. » Ses yeux se voilent. « Je l'ai tenu au bout de mon fusil... et j'ai pas tiré. Le répète pas, ça ferait mauvais genre pour un boucher. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il mime la traque d'un cougar à quatre pattes dans la sciure, renverse un seau et fait fuir le rat. À la fin, tu ne sais plus très bien qui a mangé qui.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Assis sur une caisse à la lueur de la lanterne, il raconte la nuit où les loups ont encerclé son campement. À chaque hurlement qu'il imite, les carcasses semblent frissonner sur leurs crochets.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te raconte la chasse au grand alligator des bayous de Lemoyne, qu'il n'a jamais vue mais dont il connaît chaque détail : « Le pire, c'est qu'il avait l'air d'un banquier. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il commence une histoire, puis s'arrête et te regarde de travers : « Non. Toi, tu serais capable d'aller le tuer, mon vieux cerf. Une autre fois. »",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "demander_restes_viande": [
+      {
+        "texte": "Il remplit un cornet de papier d'os, de couennes et de bouts de gras : « Pour le chien errant ? Il est passé ce matin, il te cherche peut-être. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Des restes ? Y a pas de restes chez Gus, tout se mange ! » Il te tend quand même un os à moelle, en grommelant que c'était pour sa soupe."
+      },
+      {
+        "texte": "Il ajoute au cornet un vrai morceau de bœuf : « Pour le vétéran, sur le trottoir. Dis-lui que ça vient du boucher, il refusera si c'est de la charité. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te tend un seau entier d'abats : « Prends tout. Sinon, c'est les rats qui finissent le travail, et eux, ils disent jamais merci. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te regarde, puis ton ventre : « C'est pour un chien, ou pour toi ? » Il te donne un quignon de lard sans attendre la réponse.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "aider_a_decouper": [
+      {
+        "texte": "Il te tend un tablier raide de sang et une scie : « Le long de l'échine, droit, sans trembler. » Une heure plus tard, tu as mal aux bras et tu as gagné un dollar.",
+        "effets": {
+          "argent": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu tiens la patte pendant qu'il tranche. Le fendoir passe à un cheveu de tes doigts : « T'inquiète, je rate jamais. » Il agite sa main à quatre doigts en riant.",
+        "effets": {
+          "argent": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu glisses sur la sciure et atterris assis dans le seau d'abats. Gus rit tellement qu'il doit s'asseoir aussi. Il te paie quand même, pour le spectacle.",
+        "effets": {
+          "argent": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Vous travaillez côte à côte en chantant faux une chanson à boire. Il te paie deux dollars et un jambon : « T'as l'étoffe d'un boucher, l'ami. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 2,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il te surveille du coin de l'œil tout du long, puis compte ses couteaux à la fin : « Onze... douze. Bien. » Il te paie un dollar, sans te serrer la main.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 1
+        }
+      },
+      {
+        "texte": "À la lanterne, vous dépecez un cerf apporté par un chasseur pressé. Les mouches dorment ; seul le rat vous regarde faire. Il te paie un dollar et une bière.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 1,
+          "relation": 1
+        }
+      }
+    ]
+  }
+}

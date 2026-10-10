@@ -1,0 +1,323 @@
+{
+  "id": "hotel",
+  "description": "Un bâtiment de deux étages en planches peintes en vert pâle, coincé entre le bureau du shérif et la boucherie. Un balcon court au-dessus du trottoir ; l'enseigne HOTEL s'écaille, mais ses vitres sont les plus propres de Valentine.",
+  "repliques": [
+    "L'escalier grince.",
+    "La sonnette du comptoir tinte : ding.",
+    "*Une fenêtre s'ouvre à l'étage, et une bassine d'eau de bain se vide dans la ruelle.*"
+  ],
+  "reactions": {
+    "entrer": [
+      {
+        "texte": "La clochette au-dessus de la porte tinte. Odeur de cire, de lavande et de café réchauffé ; derrière le comptoir, Mme Whitlock regarde tes bottes avant ton visage."
+      },
+      {
+        "texte": "Le hall est désert. Sur le comptoir : la sonnette, le registre ouvert et un écriteau calligraphié, PAS D'ARMES DÉGAINÉES — PAS DE BOUE — PAS DE CRÉDIT."
+      },
+      {
+        "texte": "La porte est verrouillée. Tu frappes ; une lampe s'allume, des pas descendent l'escalier qui grince, et une voix sèche demande à travers le battant : « Qui va là, à cette heure ? »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "À peine as-tu passé le seuil qu'une voix claque : « LE PAILLASSON ! » Tu recules d'un pas, frottes tes bottes, et entres une seconde fois sous un regard de glace.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Dans le hall, un client lit le journal de Saint Denis. Il lève les yeux, compare ton visage à la page des primes, plie le journal et remonte prudemment l'escalier.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Une bouffée de viande crue entre avec toi depuis la boucherie voisine. Mme Whitlock agite un éventail en soupirant : « Fermez vite, voulez-vous. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Deux étages de planches vert pâle, un balcon au-dessus du trottoir, des rideaux de dentelle à chaque fenêtre. Les vitres sont si propres qu'on y voit la boue sur ses propres bottes."
+      },
+      {
+        "texte": "Sur la porte, une plaque de cuivre astiquée : HOTEL — CHAMBRES 1 $ — BAINS 50 ¢ — Mme AMBROSE WHITLOCK, PROPRIÉTAIRE. Le cuivre brille plus que l'étoile du shérif."
+      },
+      {
+        "texte": "Sur le côté, une fenêtre de l'étage donne droit sur la cour de la prison voisine. Ses rideaux sont tirés, et même cousus, dirait-on."
+      },
+      {
+        "texte": "La plupart des fenêtres sont noires. Au rez-de-chaussée, une lampe brûle derrière le comptoir, et une ombre passe et repasse devant le portrait d'un homme moustachu.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Une fenêtre du premier s'ouvre : quelqu'un secoue un tapis. De la boucherie voisine, un nuage de mouches profite de l'occasion pour s'inviter.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines dans {outil} la façade de l'hôtel : le balcon, l'enseigne écaillée, la mouche qui s'y pose. Le boucher, à côté, insiste pour figurer dans un coin."
+      },
+      {
+        "texte": "Ton croquis montre le hall vu de la porte : le tapis rouge, le comptoir, l'escalier, et le portrait de feu M. Whitlock, dont les yeux semblent te suivre jusque sur le papier."
+      },
+      {
+        "texte": "Tu croques l'hôtel à la lueur des lampes à pétrole. Une seule fenêtre reste allumée au premier : une silhouette y fait les cent pas, lampe à la main.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Pendant que tu dessines, Mme Whitlock sort balayer le trottoir trois fois de suite. Pour être sur le dessin, ou pour que le trottoir y soit propre.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu cadres la façade avec {outil}. Au moment du déclic, Mme Whitlock apparaît sur le seuil, raide comme la justice, et le boucher surgit dans le coin gauche, hilare, un jambon à la main."
+      },
+      {
+        "texte": "Une plaque nette et sévère : balcon, enseigne, rideaux de dentelle. On dirait une carte postale de l'Est, si l'on ignore le cheval qui fait ses besoins juste devant."
+      },
+      {
+        "texte": "Ta photographie de nuit ne montre qu'une fenêtre éclairée, floue, suspendue dans le noir comme un œil qui veille.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Un client te demande de le prendre aussi, au balcon. Il pose la main sur le cœur comme un sénateur. Tu ne le reverras jamais.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la façade : un carreau du rez-de-chaussée vole en éclats. À l'intérieur, une voix d'institutrice crie que ce sera mis sur ta note.",
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le projectile rebondit sur l'enseigne HOTEL, qui oscille et perd encore un peu de peinture. Une fenêtre s'ouvre à l'étage et un client en caleçon te traite de vaurien."
+      },
+      {
+        "texte": "Ton lancer atterrit sur le balcon, au pied d'une chaise à bascule. Un vieux client ramasse l'objet, le contemple longuement, et le garde."
+      },
+      {
+        "texte": "L'objet heurte un volet. Des lumières s'allument à toutes les fenêtres, une à une, et le canon d'un fusil de chasse apparaît au balcon.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle fait exploser un carreau du rez-de-chaussée. Un cri, des pas précipités, puis la voix de Mme Whitlock : « Ce carreau sera sur votre note ! »",
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu perces l'enseigne d'une balle, en plein dans le O de HOTEL. Juste à côté, l'adjoint du shérif jaillit de son bureau, la main sur son étui.",
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "La balle se fiche dans le chambranle de la porte, à côté d'un ancien impact que Mme Whitlock a soigneusement entouré à la peinture et daté : 1896.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Un coup de feu dans la nuit : toutes les lampes de l'hôtel s'éteignent d'un coup, et le canon d'un fusil glisse entre deux volets du premier.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tes balles trouent la façade. Dans le bureau voisin, le shérif Malloy repose sa tasse de café et soupire : « Encore lui. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 15,
+          "honneur": -2
+        }
+      }
+    ],
+    "louer_chambre_hotel": [
+      {
+        "texte": "La clé de laiton est lourde, le chiffre 3 gravé dessus. La chambre sent le savon noir : un lit de fer, une cruche, une bassine et, au mur, un canevas brodé : DIEU VOIT TES BOTTES.",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Ta chambre donne sur la rue principale : l'abreuvoir, le panneau des avis de recherche, et le boucher qui suspend une carcasse. Le lit est dur, les draps sentent la lavande.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "On te loue la dernière chambre libre, sous les combles. L'escalier grince à chaque marche, et la lucarne donne sur la cour de la prison, où le prisonnier fredonne une complainte irlandaise.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "On te donne la chambre la plus proche de l'escalier de service. Hasard ou prudence ? Personne ne te le dira.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "La chambre 1, avec balcon sur la rue principale : un bouquet de fleurs séchées, un pot de chambre en porcelaine fleurie et pas une punaise, un luxe rare à Valentine.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      }
+    ],
+    "feuilleter_registre_hotel": [
+      {
+        "texte": "En belle anglaise, les clients de la semaine : un représentant en toniques, un photographe de Saint Denis, et un « J. Smith » qui a signé d'une croix."
+      },
+      {
+        "texte": "Tu remontes les pages jusqu'en 1894 : un trait à l'encre noire barre toute une page, « Fermé pour deuil ». Les dix jours suivants sont vides."
+      },
+      {
+        "texte": "Le hall est vide, la gérante dort. À la lueur de la lampe, tu lis : chambre 4, « M. Brown », réglé en pièces neuves. En marge, d'une écriture fine : « éperons — boue — accent irlandais ».",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Mme Whitlock te reprend le registre des mains : « Ceci n'est pas un journal, monsieur. Ce qui est écrit ici reste ici, comme à confesse. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "À la page du jour, quelqu'un a recopié d'une main tremblante ton signalement, tel qu'il figure sur le panneau des avis de recherche. Avec un point d'interrogation.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "monter_escalier_grincant": [
+      {
+        "texte": "Première marche : silence. Deuxième : silence. Troisième : un gémissement de porte de prison. D'en bas monte une voix : « Je vous entends, monsieur. »"
+      },
+      {
+        "texte": "Tu poses les pieds au ras du mur, là où le bois ne chante pas. Une vieille ruse : feu M. Whitlock devait rentrer tard, lui aussi."
+      },
+      {
+        "texte": "Tu enjambes la septième marche, la plus bavarde. Arrivé en haut sans un bruit, tu tombes nez à nez avec Mme Whitlock en bonnet de nuit, lampe levée.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu atteins le palier sans un craquement. Par la fenêtre du couloir, tu vois l'adjoint du shérif faire les cent pas devant l'hôtel. Bien joué, pour l'instant.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "L'escalier grince sous chaque pas comme un vieux violon. En haut, un client sort la tête de sa chambre : « C'est vous, le pas de loup ? On dirait un troupeau. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "essuyer_bottes_paillasson": [
+      {
+        "texte": "Le paillasson porte, brodé en lettres rouges, un seul mot : ESSUYEZ. Pas « bienvenue ». Juste ESSUYEZ. Tu obéis, et derrière la vitre, une tête approuve une fois."
+      },
+      {
+        "texte": "Il faut cinq bonnes minutes pour venir à bout de la boue des Heartlands. Le paillasson en ressort plus sale que tes bottes, et l'on t'en apporte un second.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Le boucher, qui passait, s'arrête, médusé : « Tu fais ça, toi ? Faut que j'essaie. Ça marche, avec elle ? »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Même à cette heure, tu t'essuies les pieds. Une voix descend de l'étage, adoucie : « Merci. Ce n'est pas si difficile, n'est-ce pas ? »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu frottes consciencieusement tes semelles sur le crin. Mme Whitlock, derrière la vitre, hoche la tête comme une maîtresse d'école qui accorde un bon point.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "sonner_sonnette_comptoir": [
+      {
+        "texte": "Ding. Mme Whitlock surgit de l'arrière-boutique comme un diable de sa boîte : « Une fois suffit, monsieur. J'ai l'ouïe d'une chouette. »"
+      },
+      {
+        "texte": "Ding, ding, ding. Il tombe un peu de plâtre du plafond, et d'en haut une voix d'homme ensommeillé : « Y a le feu ? »"
+      },
+      {
+        "texte": "Le ding résonne dans l'hôtel endormi. Une porte s'ouvre en haut de l'escalier, et la gérante descend en robe de chambre, l'air d'un juge tiré du lit.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu tapes sur la sonnette comme un forgeron sur l'enclume. Elle disparaît d'un coup sous le comptoir, confisquée par une main sèche, sans un mot.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "La sonnette tinte. Personne. Puis tu remarques le billet glissé dessous : « Partie à la boucherie. Ne touchez à rien. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ]
+  }
+}

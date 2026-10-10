@@ -1,0 +1,1040 @@
+{
+  "id": "croque_mort",
+  "description": "Un homme long et maigre comme un manche de pelle, en redingote noire élimée et haut-de-forme cabossé. Un mètre ruban pend à son cou ; ses yeux pâles te détaillent des bottes au chapeau, comme s'il calculait déjà la longueur de la planche.",
+  "personnalite": "Mortimer Pembrook, croque-mort de Valentine. Lugubre, poli, d'un humour noir imperturbable. Il mesure tout le monde du regard « au cas où » et ne craint pas la mort : c'est son gagne-pain. Il craint surtout les mauvais payeurs. Il achète les cadavres, grave les stèles lui-même, et cache un cœur tendre pour la veuve Hartley et pour Edgar, le corbeau du cimetière.",
+  "repliques": [
+    "Belle journée pour un enterrement. Comme toutes les autres.",
+    "Un mètre quatre-vingt-deux... Pardon, déformation professionnelle.",
+    "Les O'Driscoll sont une plaie pour la ville, mais une bénédiction pour les affaires.",
+    "Le docteur soigne, moi je termine le travail.",
+    "Edgar ! Rends-moi ce clou, sale voleur.",
+    "Le chêne, c'est pour l'éternité. Le pin, c'est pour ceux qui ont des héritiers radins.",
+    "Approchez, je ne mords pas. Mes clients non plus."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 6,
+      "lieu": "pompes_funebres",
+      "activite": "dort à l'étage, dans un cercueil capitonné « pour le confort »"
+    },
+    {
+      "de": 6,
+      "a": 7,
+      "lieu": "cimetiere",
+      "activite": "nourrit Edgar le corbeau et inspecte les fosses"
+    },
+    {
+      "de": 7,
+      "a": 12,
+      "lieu": "pompes_funebres",
+      "activite": "rabote des planches de pin et cloue des cercueils"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "saloon_keane",
+      "activite": "déjeune seul d'un ragoût en mesurant les clients du regard"
+    },
+    {
+      "de": 13,
+      "a": 17,
+      "lieu": "pompes_funebres",
+      "activite": "reçoit les familles et prend des mesures"
+    },
+    {
+      "de": 17,
+      "a": 19,
+      "lieu": "cimetiere",
+      "activite": "creuse une fosse « d'avance »"
+    },
+    {
+      "de": 19,
+      "a": 21,
+      "lieu": "saloon_smithfield",
+      "activite": "sirote le whisky frelaté qu'il appelle « mon meilleur fournisseur » en attendant la bagarre du soir"
+    },
+    {
+      "de": 21,
+      "a": 24,
+      "lieu": "pompes_funebres",
+      "activite": "tient ses registres à la lampe à pétrole"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il fait glisser son mètre ruban entre ses doigts : « Bonjour, monsieur. Un mètre quatre-vingt, épaules larges... Pardon, l'habitude. Que puis-je pour vous, en attendant ? »"
+      },
+      {
+        "texte": "Il soupire : « Les O'Driscoll ont fait plus pour mon commerce que trente ans de choléra. Trois cercueils ce mois-ci. Et ce pauvre Elias Hartley... » Il ôte son chapeau en prononçant le nom."
+      },
+      {
+        "texte": "Il lève sa lanterne vers ton visage : « On se promène près des morts à cette heure ? Soit vous êtes poète, soit vous êtes client. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il jette un œil vers le panneau des avis de recherche, puis vers toi, et sort un carnet : « Rien de personnel. Je prends simplement vos mesures pendant que vous tenez encore debout. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il baisse la voix : « Entre nous, l'O'Driscoll du Smithfield's m'a demandé mes tarifs pour un cercueil. Pas pour lui, je crois. Si j'étais le shérif Malloy, je dormirais d'un œil. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il recule d'un pas et te toise : « Les hommes comme vous me font vivre, monsieur. Je ne sais jamais si je dois vous remercier ou prier pour vos victimes. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il esquisse un sourire funèbre : « On dit que vous aidez les gens. Mauvais pour mes affaires, excellent pour votre âme. Je vous ferai un prix, le jour venu. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il lève le nez vers les nuages, ravi : « La pluie ! Terre meuble, fosses faciles, et la grippe qui suit. Une vraie bénédiction. »",
+        "si": [
+          "pluie"
+        ]
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il soulève son haut-de-forme cabossé avec une lenteur de cortège : « Monsieur. Toujours vivant, à ce que je vois. Tant mieux. Ou tant pis. »"
+      },
+      {
+        "texte": "Il incline la tête ; ses yeux descendent jusqu'à tes bottes et remontent : « Un mètre quatre-vingt-trois. Je note. »"
+      },
+      {
+        "texte": "Une silhouette noire se détache entre les tombes et lève la main : « N'ayez pas peur. Les morts ne saluent pas, eux. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te serre la main, doigts froids comme du marbre : « Mon ami ! Je vous ai mis de côté une belle planche de chêne. Pour dans très longtemps, bien sûr. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il ne rend pas le salut. Il murmure seulement, pour lui-même : « Pin. Pas de capiton. »",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il sort de l'église en même temps que toi et soulève son chapeau : « Le pasteur s'occupe des âmes, moi du reste. Bon dimanche, monsieur. »",
+        "si": [
+          "dimanche"
+        ]
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Tu te moques de son chapeau. Il l'ôte, l'examine longuement et soupire : « Il a enterré trois shérifs, ce chapeau. Il vous enterrera aussi. »"
+      },
+      {
+        "texte": "Tu lui lances qu'il ne sera jamais à son propre enterrement. Il hoche la tête, très sérieux : « C'est exact. C'est pour ça que je l'ai déjà payé. »"
+      },
+      {
+        "texte": "Tu le traites de charognard. Il sort calmement son mètre ruban et te mesure de haut en bas : « Les mal élevés, je les enterre plus profond. Par sécurité. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il ne répond pas. Il ouvre son registre et inscrit ton signalement dans la colonne intitulée « Bientôt ».",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu ricanes devant sa vitrine. Il te rejoint, regarde l'O'Driscoll exposé, puis toi : « Lui aussi trouvait ma boutique amusante. Il y est entré par la grande porte. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu te penches sur lui, menaçant. Il ne cille pas : « Monsieur, je passe mes journées avec des morts. Vous êtes, de loin, le moins effrayant de mes clients. »"
+      },
+      {
+        "texte": "Tu fais craquer tes jointures. Il pâlit à peine, il est déjà si pâle : « Si vous me cassez quelque chose, qui vous enterrera ? Réfléchissez-y. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il recule contre un cercueil debout : « Je n'ai rien vu, rien entendu. Les morts ne parlent pas, et moi non plus. Surtout pas au shérif. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Sa pomme d'Adam fait l'aller-retour : « Bien, bien. L'O'Driscoll du Smithfield's m'a demandé à quelle heure Malloy fait sa ronde du soir. Voilà, c'est tout ce que je sais. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Dans l'ombre du cimetière, il lève sa pelle comme une crosse : « J'ai enterré plus costaud que vous, monsieur. » Il sourit. C'est une plaisanterie, sans doute.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Tu pointes {outil} sur lui. Il lève les mains, lentement : « Attention. Si le coup part, je devrai m'enterrer moi-même, et je déteste travailler gratuitement. »",
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il regarde {outil}, puis toi : « Bel objet. Vous savez combien de mes clients en possédaient un ? Tous. » Il ne bouge pas d'un pouce.",
+        "effets": {
+          "honneur": -1,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il crie vers la rue : « Shérif ! Monsieur Malloy ! » Des volets claquent et un gamin file vers le bureau du shérif.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il t'envoie sa pelle à la figure et détale entre les cercueils debout, le haut-de-forme de travers.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "relation": -2,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il pose un doigt osseux sur {outil} et l'écarte doucement : « Rangez ça, mon ami. Vous valez mieux que mes clients. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "soudoyer": [
+      {
+        "texte": "Tu glisses quelques billets sous un cercueil. Il les compte sans les regarder : « Un cercueil fermé, bien cloué, sans nom sur la croix. Personne ne posera de questions. »",
+        "effets": {
+          "argent": -20,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il empoche l'argent et se penche : « Pour ce prix, je vous dis ce que j'ai trouvé dans les poches de l'O'Driscoll de ma vitrine : une carte des fermes isolées du comté, avec des croix dessus. La ferme Hartley en avait une. »",
+        "effets": {
+          "argent": -10,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il ouvre un cercueil debout et t'invite d'un geste : « Le shérif passe à cinq heures. Entrez là-dedans et retenez votre souffle. Vous ne seriez pas le premier. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -15,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il repousse tes billets du bout des doigts : « Gardez ça pour Mme Hartley. Elle en a plus besoin que moi, et vous êtes un honnête homme. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il prend l'argent, le fourre dans sa redingote et s'incline : « Merci pour l'acompte sur vos funérailles. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "argent": -10
+        }
+      }
+    ],
+    "detrousser": [
+      {
+        "texte": "Tu plonges la main dans sa redingote : un mètre ruban, trois clous, un bout de craie et une bourse de cuir. « La recette des enterrements de la semaine ! » gémit-il.",
+        "effets": {
+          "argent": 12,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu le fouilles en pleine rue. Il ne résiste pas, mais ses yeux deviennent deux cailloux : « Moi, je dépouille les morts. Vous, les vivants. Lequel de nous deux ira en enfer ? » Une passante crie au voleur.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 8,
+          "honneur": -2,
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Dans l'obscurité, tu lui arraches un petit sachet de velours qui tinte : des dents en or. « Mes économies pour la vieillesse ! » souffle-t-il.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 15,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il sent ta main dans sa poche et soupire, plus déçu que fâché : « Même vous... Prenez, prenez. Je l'inscrirai sur votre ardoise mortuaire. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 5,
+          "honneur": -1,
+          "relation": -4
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Un coup sec derrière l'oreille : il bascule dans un cercueil ouvert et retombe les bras croisés sur la poitrine, comme s'il s'était entraîné toute sa vie.",
+        "effets": {
+          "honneur": -1,
+          "relation": -2,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il s'écroule raide dans la boue de la rue. Un vacher qui passait lâche sa corde et court prévenir le shérif.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il pare à moitié avec son haut-de-forme, mais tu frappes plus fort. En s'effondrant, il marmonne : « Pin... sans capiton... »",
+        "effets": {
+          "honneur": -1,
+          "relation": -2,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Personne ne le voit tomber entre deux tombes. Quand il rouvrira les yeux, Edgar le corbeau sera perché sur sa poitrine, à lui picorer les boutons.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -2,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu le frappes avec {outil}. Il se plie en deux et s'agrippe à un cercueil debout, qui bascule et l'écrase à moitié : « Au moins... je suis... sur place... »",
+        "effets": {
+          "honneur": -2,
+          "prime": 10,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il esquive avec une souplesse de pantin et te renvoie un coup de pelle en plein ventre. Le croque-mort sait se défendre.",
+        "effets": {
+          "sante": -15,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Le coup l'atteint au cœur. Il tombe sans un cri, et la seule oraison funèbre est le croassement d'un corbeau. Valentine n'a plus de croque-mort.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -5,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Il s'effondre devant sa boutique. Des cris montent de la rue principale : « Ils ont tué le croque-mort ! Mais qui va l'enterrer, lui ? »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -5,
+          "prime": 100,
+          "relation": -5,
+          "etat": "mort"
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle le touche à l'épaule. Il recule en titubant contre sa vitrine : « Pas la vitrine... elle est réservée aux O'Driscoll... »",
+        "effets": {
+          "honneur": -3,
+          "prime": 25,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il tombe à la renverse dans un cercueil ouvert, dont le couvercle se rabat presque sur lui. Une mort d'une économie remarquable.",
+        "effets": {
+          "honneur": -5,
+          "prime": 100,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "La balle se loge dans un cercueil de pin. Il saute par-dessus son comptoir et détale vers le bureau du shérif en tenant son chapeau.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 15,
+          "relation": -4,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Le coup de feu claque dans le cimetière désert. Il s'écroule dans la fosse qu'il venait de creuser « d'avance ». Elle n'aura pas attendu longtemps.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -5,
+          "relation": -5,
+          "etat": "mort"
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Il attrape {outil} au vol d'une main osseuse et l'examine : « Je garde ça pour ma collection. On ne lance rien sur les gens, monsieur. Sauf la terre, à la fin. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Le projectile le frappe à la tempe. Il chancelle, se rattrape à son comptoir et ouvre son registre : « Vous, je vous facture le dérangement. »",
+        "effets": {
+          "honneur": -1,
+          "relation": -2,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Tu lances {outil} ; il se baisse avec souplesse et l'objet fracasse un vase de fleurs mortuaires. Des passants s'arrêtent et te dévisagent.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il renvoie le tout d'un coup de pelle, comme un joueur de baseball de Saint Denis. L'objet te revient en plein front.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "relation": -1
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "La boucle tombe sur ses épaules osseuses ; il bascule tout d'une pièce, comme une planche. Allongé dans la poussière, bras le long du corps, il soupire : « Position classique. Au moins, je suis à l'aise. »",
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu le traînes sur quelques mètres dans la boue de la rue principale. Son haut-de-forme roule jusqu'à l'abreuvoir. Les passants n'osent pas rire... pas tout à fait.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il voit la corde arriver et lève un doigt sentencieux : « Le chanvre, c'est le métier du bourreau. Moi, je suis dans les planches. » La boucle le manque d'un cheveu.",
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu lui attaches les poignets et les chevilles. Il se laisse faire, raide comme une planche : « Croisez-moi au moins les mains sur la poitrine. Question de dignité. »",
+        "effets": {
+          "honneur": -1,
+          "relation": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Tu le ligotes à une croix du cimetière. « Edgar ! » appelle-t-il. Le corbeau se pose sur la corde et commence, très lentement, à picorer le nœud.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Il te regarde serrer les nœuds, incrédule : « Vous ? Moi qui vous avais mis de côté du chêne... Ce sera du pin, maintenant. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -4,
+          "etat": "ligote"
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu lui arraches son mètre ruban. Il a l'air plus nu que s'il avait perdu un revolver : « Rendez-le-moi, je vous en prie. Je ne sais plus combien vous mesurez. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il n'a pas d'arme, seulement sa pelle. Tu la lui prends des mains ; il te regarde la soupeser : « Attention, elle a beaucoup de travail en retard. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il brandissait un marteau de menuisier ; tu le lui fais sauter des doigts. Il recule entre ses cercueils debout, mains levées : « Pas le visage ! Je n'ai personne pour me maquiller. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1,
+          "etat": "normal"
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu croques sa silhouette maigre, haut-de-forme et mètre ruban. Il jette un œil par-dessus ton épaule : « Le nez est trop court. Mais la mine est juste : sinistre. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il pose, une main sur un cercueil, l'autre sur le cœur : « Faites-moi beau. Ce portrait servira pour ma réclame, ou pour ma stèle. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Pendant que tu le dessines, il te dévisage, lèvres en mouvement. Quand tu as fini, il prend ton crayon et note des chiffres dans la marge : tes mesures.",
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il se fige, droit comme un défunt exposé : « Ne bougez pas, vous. Moi, je ne bouge jamais. » Le cliché est parfait, et parfaitement lugubre."
+      },
+      {
+        "texte": "Il ferme les yeux et croise les mains sur la poitrine : « Les portraits de défunts, c'est la grande mode à Saint Denis. Je m'entraîne. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le flash de magnésium illumine le cimetière. Il cligne des yeux, ébloui : « Doucement ! Vous allez réveiller mes clients ! »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu le charges sur ton épaule ; il est léger comme une botte de foin. « Ah, c'est donc ça, de l'autre côté. Pas désagréable. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il se débat comme un chat maigre et te martèle le dos à coups de haut-de-forme.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Des enfants éclatent de rire en voyant passer le croque-mort sur ton épaule, raide comme une planche. Il leur adresse un petit signe digne de la main.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "« Si vous m'emmenez au cimetière, prévenez-moi : j'ai une fosse de prête. Je préférerais qu'elle serve à quelqu'un d'autre. »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu le suis jusqu'au cimetière. Il s'arrête devant chaque tombe, ôte son chapeau, murmure un nom, puis jette une miette de pain à un corbeau qui le suit de croix en croix."
+      },
+      {
+        "texte": "Il entre au Smithfield's, s'assoit dans un coin et lève son whisky frelaté vers les bagarreurs : « À mes futurs clients. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il sent ta présence, se retourne et déroule son mètre : « Puisque vous êtes là... Tenez-vous droit, s'il vous plaît. »"
+      },
+      {
+        "texte": "Il frappe chez la veuve Hartley, un bouquet de fleurs des champs à la main. Il ressort sans les fleurs, le chapeau contre la poitrine, et se mouche bruyamment.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Par cette chaleur, il court de maison en maison avec des pains de glace enveloppés de toile : « En été, mes clients n'ont pas la patience d'attendre. »",
+        "si": [
+          "chaleur"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Long, maigre, en noir de la tête aux pieds. Ses doigts tambourinent sur le mètre ruban à son cou. Quand il te regarde, ses lèvres bougent : il compte."
+      },
+      {
+        "texte": "À la lueur de la lampe, il tient son registre en marmonnant : « Trois de pin, un de chêne, et l'O'Driscoll en vitrine, gratuit... la publicité, ça n'a pas de prix. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il redresse le cercueil debout de sa vitrine, où un O'Driscoll mort grimace sous l'écriteau « Voleur de chevaux », et lui ajuste le foulard avec soin.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il brosse la poussière d'un cercueil de chêne avec la tendresse qu'on réserve d'ordinaire à un cheval de prix."
+      },
+      {
+        "texte": "Dans le brouillard du cimetière, on ne voit de lui que le haut-de-forme qui flotte entre les croix, et on entend le bruit régulier de sa pelle.",
+        "si": [
+          "brouillard"
+        ]
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing l'atteint au menton ; il se plie comme un mètre pliant et se redresse, imperturbable : « Mâchoire solide. Je vous ferai un cercueil renforcé. »",
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il s'écroule contre sa vitrine. Un passant crie : « On cogne le croque-mort ! » Personne n'ose s'approcher, comme si c'était contagieux.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il rend le coup avec une sécheresse inattendue : une main osseuse, en plein nez. Tu vois des étoiles.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -8,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il encaisse, te regarde avec un chagrin infini et remet son chapeau d'aplomb : « Je croyais qu'on s'entendait bien, vous et moi. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -3
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il éclate d'un rire sépulcral : « Un duel ? Monsieur, quel que soit le gagnant, c'est moi qui gagne. Je refuse par principe commercial. »"
+      },
+      {
+        "texte": "Il te tend une carte bordée de noir : « Si vous tenez à vous battre, allez au Smithfield's, ils sont plusieurs à attendre ça. Puis revenez me voir. L'un de vous deux. »",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Il tire un vieux Colt d'un tiroir, tremblant. Le coup part bien trop tôt, la balle te frôle la joue, et il s'enfuit vers le cimetière en lâchant l'arme.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "relation": -2,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "« À midi, devant ma boutique ? Excellent choix, ça m'évitera de porter le perdant. » Il rentre chercher son mètre ruban, et ne ressort pas.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il prend {outil} du bout des doigts et range l'objet dans un tiroir étiqueté « Effets des défunts » : « Je vous le garde au chaud. Pour plus tard. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il retourne {outil} entre ses mains osseuses : « Un cadeau ? Personne ne fait de cadeau au croque-mort. D'habitude, on me laisse tout à la fin. »",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il accepte {outil} et te glisse en échange une carte bordée de noir : « Remise de vingt pour cent sur vos obsèques. Valable à vie, et même après. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il repousse {outil} : « Je n'accepte rien des vivants qui me veulent du mal. Ça leur porte malheur. »",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "se_faire_mesurer": [
+      {
+        "texte": "Il déroule son mètre avec une joie mal contenue : « Un mètre quatre-vingt-trois, épaules quarante-huit. Je vous garde au registre, on ne sait jamais. » C'est gratuit, précise-t-il. Pour l'instant.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il mesure, regarde l'avis de recherche cloué en face, et mesure encore : « Je vais prévoir un peu plus large. Pour les impacts. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il note les chiffres et souligne deux fois ton nom : « Je vous mets en haut de la liste. Ne le prenez pas mal, c'est statistique. »",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Il mesure en hochant la tête : « Les braves gens partent toujours trop tôt. Je vous taillerai du chêne, mais tâchez de me faire attendre. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il roule son mètre sans noter le chiffre : « Pas vous. Je ne veux pas de votre taille dans mon registre. Ça me porterait la poisse. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "commander_cercueil": [
+      {
+        "texte": "Il sort son registre avec gourmandise : « Pin, huit dollars. Chêne, quinze. Capitonné, vingt, mais on y dort comme un bébé. Pour qui est-ce ? » Tu repars avec un reçu bordé de noir.",
+        "effets": {
+          "argent": -8,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Pour vous-même ? Sage précaution. » Il encaisse d'avance et commence à graver une plaque de cuivre, en laissant le prénom en blanc.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -15,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il lève un sourcil : « Commander le cercueil avant le client... Vous avez un sens de l'organisation remarquable. Je ne veux rien savoir. » Il encaisse quand même.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -10
+        }
+      },
+      {
+        "texte": "Il te fait le chêne au prix du pin : « Entre amis. Et dites au défunt que c'est de la part de Pembrook. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -8,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il ouvre en chemise de nuit, une bougie à la main : « Une commande à minuit ? Les meilleures. Le client ne se plaindra pas de l'attente. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -10
+        }
+      }
+    ],
+    "vendre_cadavre": [
+      {
+        "texte": "Il retourne le corps du bout de sa canne, inspecte les dents, les bottes, les poches : « Deux dollars. Les bottes sont trouées, sinon j'aurais dit trois. »",
+        "effets": {
+          "argent": 2
+        }
+      },
+      {
+        "texte": "Il compte les pièces sans lever les yeux : « Je ne demande jamais d'où viennent mes clients. Ni qui me les apporte. C'est pour ça qu'on m'aime. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 3
+        }
+      },
+      {
+        "texte": "Il reconnaît le foulard vert : « Un O'Driscoll ! Le comté paie mieux pour ceux-là. Cinq dollars, et je lui offre la vitrine pour la semaine. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il jette vite un drap sur le corps : « En plein jour, monsieur ? Par la porte de derrière, la prochaine fois. La clientèle est sensible. » Il paie quand même.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 2,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il ouvre la porte de derrière avant même que tu frappes : « J'ai entendu les coups de feu. Entrez, entrez, il refroidit. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 3,
+          "relation": 1
+        }
+      }
+    ],
+    "organiser_enterrement": [
+      {
+        "texte": "Il déplie un catalogue jauni : corbillard à deux chevaux noirs, le pasteur, un cantique, des fleurs. « Quinze dollars tout compris. Les pleureuses sont en supplément. »",
+        "effets": {
+          "argent": -15,
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il retient une larme : « Enterrer dignement un inconnu... Vous êtes rare, monsieur. Je ne vous compte que le bois. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -8,
+          "honneur": 2,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il te regarde longuement : « Vous enterrez souvent les gens que vous... connaissez ? Non, ne répondez pas. Le pasteur sera là à dix heures. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -15,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "« Je m'occupe de tout. Le pasteur dira quelques mots, et Mme Hartley viendra sûrement. Elle vient à tous les enterrements, depuis... enfin. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -12,
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Un enterrement de nuit, sans pasteur et sans nom ? Ce sera le double. Et j'aurai la mémoire très courte. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -30,
+          "honneur": -1,
+          "relation": 1
+        }
+      }
+    ],
+    "demander_derniers_morts": [
+      {
+        "texte": "Il ouvre son registre : « Un garçon de l'enclos piétiné par Lucifer, le taureau. Un tricheur trop chanceux, au Smithfield's. Et l'O'Driscoll de ma vitrine. Semaine calme. »"
+      },
+      {
+        "texte": "Il tourne les pages d'un doigt mouillé : « Elias Hartley, il y a trois semaines. Une balle dans le dos, sur son propre perron. Les O'Driscoll lui ont pris ses chevaux et sa vie, dans cet ordre. »"
+      },
+      {
+        "texte": "Il baisse la voix : « Le docteur m'a envoyé deux clients ce mois-ci, avec ses toniques. Je ne dis rien, ça fait marcher le commerce. Mais vous, n'en buvez jamais. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il referme le registre d'un coup sec : « Les noms de mes clients, je ne les donne qu'aux familles. Et vous n'êtes pas encore de la famille. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il pose sa lampe sur le registre : « Ce que je ne note pas, c'est que le chasseur de primes du Smithfield's est passé deux fois demander si l'O'Driscoll était déjà chez moi. Il a l'air pressé. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ]
+  }
+}

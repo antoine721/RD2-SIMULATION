@@ -1,0 +1,492 @@
+{
+  "id": "tonneaux",
+  "description": "Une pyramide de tonneaux de chêne cerclés de fer, devant le magasin général, à deux pas de la banque. Ils portent au fer rouge « FARINE », « CLOUS », « PÉTROLE », « MÉLASSE » ou « WHISKY — KEANE'S » ; un plus petit, peint en rouge, avertit en lettres blanches : « POUDRE NOIRE — NE PAS FUMER ».",
+  "repliques": [
+    "*Un tonneau craque sous le soleil.*",
+    "Ça sent la farine, le pétrole et la mélasse.",
+    "*Un rat file entre les tonneaux.*"
+  ],
+  "reactions": {
+    "dessiner": [
+      {
+        "texte": "Tu dessines la pile de tonneaux devant la vitrine du magasin général. Le petit tonneau rouge, au milieu, attire l'œil comme une tache de sang."
+      },
+      {
+        "texte": "L'épicier sort sur son seuil et te regarde dessiner, méfiant : « Si c'est pour un catalogue, je veux ma commission. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "À la lueur d'une lanterne, les tonneaux forment des silhouettes rondes et menaçantes, comme des hommes accroupis qui attendent quelque chose.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu recopies avec soin toutes les inscriptions au fer : FARINE, CLOUS, PÉTROLE, MÉLASSE, WHISKY, POUDRE NOIRE. Tout l'inventaire d'une ville de l'Ouest."
+      }
+    ],
+    "detruire": [
+      {
+        "texte": "Tu défonces le tonneau de farine à coups de botte. Un nuage blanc t'enveloppe des pieds à la tête : te voilà fantôme de meunier.",
+        "effets": {
+          "etat": "detruit",
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le tonneau de mélasse éclate : une coulée noire et sucrée envahit la rue, et toutes les mouches de la vallée arrivent en moins d'une minute.",
+        "effets": {
+          "etat": "detruit",
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "L'épicier jaillit de sa boutique, un manche à balai à la main : « Douze dollars de marchandise ! Douze ! Shérif ! » Il ne fait jamais crédit, et encore moins de cadeaux.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -2,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Les douves cèdent une à une dans le noir. Au matin, l'épicier trouvera des clous partout dans la rue, et trois chevaux boiteront avant midi.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Le chêne cerclé de fer résiste. Tu t'acharnes, tu t'ouvres la main sur un cercle rouillé, et le tonneau n'a même pas une fissure.",
+        "effets": {
+          "sante": -3
+        }
+      }
+    ],
+    "faire_sauter": [
+      {
+        "texte": "La dynamite allume le tonneau de poudre noire. L'explosion souffle la vitrine du magasin général, et une pluie de farine, de clous et de mélasse retombe sur Valentine.",
+        "effets": {
+          "etat": "detruit",
+          "honneur": -3,
+          "prime": 50,
+          "sante": -10
+        }
+      },
+      {
+        "texte": "La déflagration enflamme le tonneau de pétrole. Une colonne de feu monte devant le magasin, et toute la rue fait la chaîne avec des seaux depuis l'abreuvoir.",
+        "effets": {
+          "etat": "detruit",
+          "honneur": -3,
+          "prime": 40
+        }
+      },
+      {
+        "texte": "L'explosion illumine la rue comme en plein jour. Les vitres tremblent jusqu'à la gare, et l'on crie « Les O'Driscoll ! » dans toutes les maisons.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -2,
+          "prime": 30
+        }
+      },
+      {
+        "texte": "Dans le nuage de farine et de fumée, tu disparais. Quand l'adjoint arrive, toussant et blanc comme un spectre, il ne reste que des débris et la rumeur de ton nom.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 30
+        }
+      },
+      {
+        "texte": "L'épicier sort de sa boutique, enfariné, la moustache fumante. Il ne dit rien. Il tire un carnet de sa poche et commence à aligner des chiffres.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -2,
+          "prime": 40
+        }
+      },
+      {
+        "texte": "Le souffle arrache la porte de la banque voisine. Dans la fumée, tu entends le caissier hurler qu'on les braque, enfin, comme il l'avait toujours dit.",
+        "effets": {
+          "etat": "detruit",
+          "honneur": -3,
+          "prime": 50
+        }
+      }
+    ],
+    "fouiller": [
+      {
+        "texte": "Tu soulèves le couvercle du tonneau de farine et y plonges le bras. Tes doigts rencontrent une flasque de whisky cachée là : la cave secrète de l'ivrogne."
+      },
+      {
+        "texte": "Le tonneau marqué CLOUS est plein de clous. Le tonneau marqué FARINE est plein de farine. Valentine a au moins ça d'honnête."
+      },
+      {
+        "texte": "L'épicier te tombe dessus avant que tu aies refermé le couvercle : « On touche avec les yeux ! Ici, rien n'est gratuit, et rien n'est à crédit ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Au fond du tonneau vide, un paquet ciré. Dedans : vingt dollars et un mot griffonné au crayon : « Pour la clé de la cellule. Avant jeudi. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 20,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu remplis discrètement un sac de farine au tonneau, pour le revendre ailleurs. L'épicier, si radin qu'il recompte ses clous, s'en apercevra ce soir.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 2,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Dans le petit tonneau rouge, de la poudre noire, fine et sèche. Il y a là de quoi souffler la moitié de la rue. Ou la porte d'un coffre-fort."
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil}, qui rebondit sur les tonneaux avec un bruit sourd de chêne plein. L'épicier lève les yeux de son comptoir, soupçonneux."
+      },
+      {
+        "texte": "Le projectile frappe le petit tonneau rouge. Toute la rue retient son souffle une seconde. Rien ne se passe. Quelqu'un rit nerveusement."
+      },
+      {
+        "texte": "L'épicier sort en trombe : « Si tu abîmes ma marchandise, tu la paies ! Comptant ! Je fais pas crédit ! »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Ce que tu lances cogne contre un tonneau creux, et quelque chose remue à l'intérieur : « Aïe ! » Le gamin des rues y dormait.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Six tonneaux de chêne et un petit tonneau rouge. Sur ce dernier, en lettres blanches : « POUDRE NOIRE — NE PAS FUMER ». Quelqu'un a écrasé un mégot juste à côté."
+      },
+      {
+        "texte": "L'épicier compte ses tonneaux chaque matin, deux fois, du doigt. Ce matin, il en trouve un de moins et fusille du regard la rue entière.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Une silhouette maigre vient soulever un couvercle, boit une gorgée à une flasque cachée là et repart en titubant. L'ivrogne a sa cave personnelle.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Les tonneaux font une cachette parfaite : assez hauts pour un homme accroupi, assez épais pour arrêter une balle. Sauf le rouge. Surtout pas le rouge."
+      },
+      {
+        "texte": "Les tonneaux sont à vingt pas de la porte de la banque. Si ça tourne mal par ici, c'est le seul abri de la rue. Tu le gardes en tête.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "L'orage gronde. L'épicier sort en courant bâcher le tonneau de poudre, l'œil sur les éclairs, en marmonnant des prières qu'il ne connaît qu'à moitié.",
+        "si": [
+          "orage"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu cadres la pile de tonneaux devant la vitrine. L'épicier se glisse dans le champ, croise les bras et prend la pose : « Mets bien l'enseigne, c'est de la réclame. »"
+      },
+      {
+        "texte": "Le flash de magnésium crépite à un mètre du tonneau de poudre. Tu réalises une seconde trop tard ce que tu viens de faire. Rien n'explose. Cette fois.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Sur la plaque, les tonneaux ressortent comme une rangée de ventres ronds. Le petit tonneau rouge, lui, ressort noir comme une menace."
+      },
+      {
+        "texte": "Le gamin des rues surgit de derrière un tonneau au moment du flash et tire la langue. Il te réclame aussitôt un cent pour son portrait.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "se_cacher": [
+      {
+        "texte": "Tu t'accroupis derrière les tonneaux. Ça sent la mélasse et le pétrole, et ton genou s'enfonce dans un tas de farine renversée."
+      },
+      {
+        "texte": "L'adjoint passe à trois pas, revolver au poing, scrutant la rue. Il s'arrête juste devant les tonneaux, crache, et repart. Tu recommences à respirer.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Derrière les tonneaux, tu tombes nez à nez avec l'ivrogne, accroupi lui aussi : « Chut. Moi aussi je me cache. De qui, j'sais plus. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "L'épicier ouvre sa porte, te voit accroupi derrière ses tonneaux et soupire : « Si tu te caches de quelqu'un, fais-le derrière les tonneaux de quelqu'un d'autre. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu te plaques contre le plus gros tonneau. Puis tu lis l'inscription sous ta joue, POUDRE NOIRE, et tu changes de tonneau, très, très doucement."
+      },
+      {
+        "texte": "Accroupi derrière les tonneaux, tu as une vue parfaite sur la porte de la banque. À travers la vitre, le caissier regarde dans ta direction et pâlit.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle perce le tonneau de farine : un jet blanc jaillit et poudre les bottes d'un passant, qui s'éloigne en éternuant.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "La balle traverse le tonneau de pétrole. Une odeur âcre envahit la rue, une flaque luisante rampe vers une lanterne... L'épicier jaillit avec un seau puisé à l'abreuvoir.",
+        "effets": {
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu touches le petit tonneau rouge. Une demi-seconde de silence, puis l'explosion te soulève de terre et te jette dans la boue, sous une pluie de clous et de farine.",
+        "effets": {
+          "etat": "detruit",
+          "honneur": -2,
+          "prime": 30,
+          "sante": -25
+        }
+      },
+      {
+        "texte": "Le whisky de Keane gicle du tonneau percé. L'épicier sort en hurlant, et au bout de la rue, le shérif Malloy se met à marcher vers toi, sans se presser.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu tires dans un tonneau qui sonne creux. Un cri en sort, et le gamin des rues jaillit du couvercle comme un diable de sa boîte avant de détaler.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5
+        }
+      }
+    ],
+    "rouler_tonneau": [
+      {
+        "texte": "Tu couches le tonneau de clous et le pousses : il dévale la rue en grondant, rebondit sur un trottoir et s'arrête pile contre la porte du saloon de Keane.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le tonneau de mélasse roule droit sur le crieur de journaux, qui saute de côté en lâchant ses gazettes : « Extra ! Extra ! Un fou à Valentine ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu lances un tonneau de farine sur l'adjoint qui te poursuit. Il le fauche comme une quille, dans un grand nuage blanc.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le tonneau roule dans la nuit avec un bruit de tonnerre. Dans les maisons, on croit à un orage, puis à une attaque, et tu entends des fusils qu'on arme derrière les volets.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu tends la main vers le petit tonneau rouge, puis tu te ravises. Faire rouler de la poudre noire sur des cailloux, même les O'Driscoll n'oseraient pas."
+      },
+      {
+        "texte": "Tu roules les tonneaux un par un jusque dans la réserve du magasin, pour rendre service. L'épicier te regarde faire, méfiant, et ne te donne rien. Pas même un merci.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      }
+    ],
+    "se_glisser_dans_tonneau": [
+      {
+        "texte": "Tu te glisses dans un tonneau vide qui sent le vieux whisky et rabats le couvercle. Dans le noir, tu n'entends plus que ton cœur et un rat qui gratte quelque part."
+      },
+      {
+        "texte": "Recroquevillé dans le tonneau, tu entends l'adjoint s'asseoir sur le couvercle pour souffler. Il reste là dix minutes, à rouler une cigarette et à te chercher du regard.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "C'était le tonneau de farine, presque vide. Tu en ressors blanc des cheveux aux bottes, comme un fantôme. Un cheval qui passait fait un écart.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "À peine caché, tu sens le tonneau basculer : l'épicier le fait rouler vers sa réserve en grommelant qu'il est bien lourd, pour un tonneau vide.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le tonneau est déjà occupé : le gamin des rues y dort, roulé en boule. Il ouvre un œil : « Celui-là est à moi. Le vide, c'est celui d'à côté. Un cent. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "mettre_en_perce": [
+      {
+        "texte": "Tu fais sauter la bonde du tonneau marqué WHISKY. Un jet ambré en jaillit ; c'est du vrai, pas le frelaté du Smithfield's. Tu bois à même le jet.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu perces le mauvais tonneau : une mélasse noire et épaisse coule lentement dans la boue. Un chien errant vient la lécher, ravi.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "L'épicier te surprend la bouche sous le jet : « Ce whisky est pour le saloon de Keane ! Tu me le paies ou j'appelle le shérif ! » Tu paies.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -3,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu tires un plein chapeau de whisky au tonneau de Keane. L'ivrogne sort de l'ombre, une tasse en fer-blanc à la main, comme s'il attendait ce moment depuis toujours.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu perces le tonneau de pétrole. L'odeur te prend à la gorge ; une flaque luisante s'étend vers les tonneaux voisins. Il vaudrait mieux ne pas fumer, maintenant.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu remplis une bouteille au tonneau de whisky et la revends au barman du Smithfield's, qui la coupera à l'eau. Tout le monde y gagne, sauf Keane.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 3,
+          "honneur": -1
+        }
+      }
+    ],
+    "haranguer_depuis_tonneaux": [
+      {
+        "texte": "Tu grimpes sur les tonneaux et prends la parole. Deux passants s'arrêtent, un chien aboie, l'ivrogne applaudit. C'est un début."
+      },
+      {
+        "texte": "Du haut des tonneaux, tu dénonces les taux de la banque voisine. Un fermier de passage hoche la tête, l'épicier s'esclaffe, et derrière sa vitre, le directeur tire son rideau.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Les gens t'écoutent vraiment. Quand tu parles des O'Driscoll qui brûlent les fermes, une veuve en noir, au fond, serre les poings et hoche la tête.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu commences ton discours, puis tu vois l'adjoint fendre la foule en te dévisageant. Tu termines ta phrase en sautant des tonneaux et en courant.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu harangues une rue vide. Seul l'ivrogne, couché dans la boue, t'écoute jusqu'au bout et lance : « Bravo ! Je vote pour toi ! On vote pour quoi ? »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le couvercle cède sous ton poids et tu t'enfonces jusqu'à la taille dans la farine. Ton discours s'achève dans un éclat de rire général.",
+        "effets": {
+          "sante": -2
+        }
+      },
+      {
+        "texte": "Le dimanche, à la sortie de l'office, ton sermon improvisé fait concurrence à celui du pasteur. Il t'écoute, les bras croisés, l'ombre d'un sourire de vieux pistolero aux lèvres.",
+        "si": [
+          "dimanche"
+        ]
+      }
+    ]
+  }
+}

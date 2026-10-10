@@ -1,0 +1,274 @@
+{
+  "id": "boucherie",
+  "description": "Une échoppe de planches au bout est de la rue principale, collée à l'hôtel, sous un auvent où pendent des lapins par les pattes et une carcasse de cerf ouverte. Sur la vitrine, en lettres rouges qui coulent un peu : VIANDES — ON ACHÈTE PEAUX & GIBIER. Une odeur de sang et de fumée de hickory traîne sur le trottoir.",
+  "repliques": [
+    "*Les crochets cliquettent dans le courant d'air.*",
+    "Le fendoir s'abat : CHLAC.",
+    "*Un nuage de mouches bourdonne sous l'auvent.*"
+  ],
+  "reactions": {
+    "entrer": [
+      {
+        "texte": "La porte s'ouvre sur un mur d'odeurs : sang, sciure, fumée de hickory. Des carcasses se balancent à hauteur de visage, et un nuage de mouches t'accueille avant le boucher."
+      },
+      {
+        "texte": "Tes bottes s'enfoncent dans la sciure humide. Sur le comptoir, une balance en fonte et un billot creusé par les ans ; au mur, une tête d'ours qui semble te sourire."
+      },
+      {
+        "texte": "Une clochette tinte, couverte par le bruit du fendoir. « Entre, entre ! Attention à la tête, le cochon pend bas ! » Trop tard : tu as la joue contre un jambon.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La boucherie est fermée. Par la fente du volet, tu vois une lanterne aller et venir entre les carcasses, et tu entends quelqu'un chanter une berceuse.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le boucher lève les yeux de sa découpe, te reconnaît, et glisse un foie de veau sur le journal plié du comptoir, juste à l'endroit où s'étale ta prime.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Le rat qui grignotait sous l'étal te regarde entrer, juge que tu ne vaux pas la peine de fuir, et retourne à sa saucisse.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Sous l'auvent pendent des lapins, des faisans et une carcasse de cerf ouverte. Dedans, des crochets de fer, des chaînes, et une ardoise couverte de prix à la craie."
+      },
+      {
+        "texte": "Collée à l'hôtel, la boucherie lui envoie son ombre, ses odeurs et ses mouches. Sur le trottoir, une ligne tracée à la craie marque la frontière, et ce n'est pas le boucher qui l'a tracée."
+      },
+      {
+        "texte": "Derrière, une glacière en rondins à demi enterrée garde sous la sciure des blocs de glace arrivés par le train."
+      },
+      {
+        "texte": "Un nuage de mouches danse dans la lumière de la vitrine. Le chien errant attend devant la porte avec la patience d'un fidèle à la messe.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Les volets sont clos, mais une odeur de hickory s'échappe toujours du fumoir. Un rat traverse le trottoir, une couenne dans la gueule.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines dans {outil} la façade de la boucherie : l'auvent, les lapins pendus par les pattes, les lettres rouges qui coulent. Les mouches, impossibles à saisir, deviennent une pluie de points."
+      },
+      {
+        "texte": "Ton croquis de l'intérieur tient de la gravure de l'Enfer : crochets, carcasses, sciure rouge. Seul le boucher, souriant au milieu, gâche l'effet."
+      },
+      {
+        "texte": "À la lueur de la lanterne, les carcasses suspendues projettent sur le mur des ombres géantes. Ton dessin te donne des frissons, et tu n'as pas fini les pattes.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le chien errant vient s'asseoir devant la porte pendant que tu dessines, l'œil rivé sur un jarret. Le voilà sur le dessin, pour toujours.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu cadres la boucherie avec {outil} : l'auvent, les carcasses, les lettres rouges. Le boucher se jette dans le champ, un cerf sur les épaules, juste avant le déclic."
+      },
+      {
+        "texte": "Sur la plaque, on lit nettement l'ardoise : « Lapin 1 $ — Cerf 4 $ — Peau parfaite : on discute ». Le boucher en commande trois tirages."
+      },
+      {
+        "texte": "Les mouches bougent trop : sur ta plaque, l'auvent semble enveloppé d'un brouillard grouillant. C'est peut-être la photographie la plus honnête de Valentine.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "L'éclair de magnésium révèle un instant les carcasses alignées derrière la vitrine, comme une rangée de pendus. Un rat ébloui se fige au premier plan.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la boucherie : il traverse l'auvent et fait tomber une rangée de lapins dans la boue. Le boucher sort en hurlant, fendoir au poing.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le projectile fracasse la vitrine peinte : VIANDES devient VIAN. Les mouches s'engouffrent par le trou, ravies.",
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Ton lancer atteint la carcasse de cerf suspendue sous l'auvent, qui se met à tourner lentement. Le chien errant s'assoit et attend qu'elle tombe."
+      },
+      {
+        "texte": "L'objet heurte le volet avec un bruit sourd. À l'étage, une lumière s'allume, et une voix ensommeillée promet de faire de toi du pâté de tête.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle traverse la vitrine et se fiche dans un jambon, qui se balance en signe de protestation. Le boucher sort, furieux : « Il était réservé, ce jambon ! »",
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu fais sauter un crochet de l'auvent : un chapelet de lapins tombe dans la boue. Le chien errant n'en croit pas sa chance.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Ta balle perce la glacière, derrière : un filet d'eau glacée coule dans la ruelle. Le boucher mettra trois jours à s'en apercevoir, et une semaine à te pardonner.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le coup de feu claque dans la nuit. Un volet s'ouvre à l'étage, un vieux fusil de chasse en sort, et le boucher crie : « Montre-toi, voleur de saucisses ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Les balles trouent les planches. Deux portes plus loin, au bureau du shérif, des bottes se mettent à courir dans ta direction.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -2
+        }
+      }
+    ],
+    "chasser_mouches_boucherie": [
+      {
+        "texte": "Tu agites ton chapeau dans tous les sens. Les mouches s'envolent, font deux fois le tour de l'auvent et reviennent se poser exactement au même endroit."
+      },
+      {
+        "texte": "Tu brûles un peu de sauge sur le pas de la porte, une recette de vieux trappeur. Pendant une minute, plus une mouche. Puis elles reviennent avec leurs cousines."
+      },
+      {
+        "texte": "Tu fais claquer un torchon comme un fouet. Une mouche tombe. Le boucher applaudit : « Une ! Plus que dix mille ! »"
+      },
+      {
+        "texte": "Le boucher t'observe en riant : « Laisse, l'ami ! Elles sont là depuis plus longtemps que moi. Elles paient pas de loyer, mais elles tiennent compagnie. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La nuit, les mouches dorment sur les poutres. Tu en délogues quelques-unes ; elles bourdonnent, endormies et outrées, comme des clients de l'hôtel réveillés trop tôt.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "se_cacher_entre_carcasses": [
+      {
+        "texte": "Tu te glisses entre deux quartiers de bœuf suspendus. Le froid de la viande te colle aux joues ; dehors, des bottes passent sans s'arrêter."
+      },
+      {
+        "texte": "Une carcasse se met à tourner sur son crochet et te découvre à moitié. Tu la retiens d'une main, nez à nez avec un cochon qui semble sourire."
+      },
+      {
+        "texte": "Tu te faufiles entre les carcasses. L'adjoint du shérif passe la tête par la porte, grimace à cause de l'odeur et repart sans regarder plus loin.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Dans le noir, entre les carcasses, quelque chose te frôle la jambe. Ce n'est que le rat. Enfin, tu l'espères.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le boucher te voit te cacher entre ses cerfs, hausse les épaules et continue de découper : « Je vois rien, je dis rien. Mais touche pas au jambon. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "lire_ardoise_prix": [
+      {
+        "texte": "À la craie, d'une écriture énorme : « ON ACHÈTE : LAPIN 1 $ — DINDE 2 $ — CERF 4 $ — PEAU DE LOUP 6 $ — OURS : VENEZ ME VOIR ». En dessous, plus petit : « Pas de crédit, pas de rats »."
+      },
+      {
+        "texte": "La colonne « ON VEND » : bavette, côtelettes, lard, saucisses, langue de bœuf. Tout en bas, quelqu'un a ajouté d'une fine écriture au crayon : « Et des mouches, gratuitement. — C.W. »"
+      },
+      {
+        "texte": "Une ligne rajoutée en capitales : « PEAU DE COUGAR : 10 $. CELUI QUI M'A PRIS MON DOIGT. » Impossible de dire si c'est une offre ou une vengeance."
+      },
+      {
+        "texte": "Le boucher vient corriger un prix sous tes yeux, efface « CERF 4 $ », écrit « CERF 5 $ » : « Pour toi, parce que t'as une tête de chasseur. Les autres, quatre. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Au clair de lune, tu déchiffres une ligne à moitié effacée : « Récompense : 5 $ pour le rat ». Le rat, lui, est toujours là, et il a l'air de lire par-dessus ton épaule.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "se_rafraichir_glaciere": [
+      {
+        "texte": "Tu te glisses dans la glacière enterrée, entre les blocs de glace et la sciure. Le froid te mord la nuque ; pour la première fois depuis des jours, tu ne transpires plus.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "La glace arrive par le train, en blocs taillés dans les lacs du Nord. Tu en appliques un éclat sur tes bleus : un vrai remède de boucher.",
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Le boucher te surprend la joue posée sur un bloc de glace : « C'est pour les jambons, ça ! Bon... Cinq minutes. Et tu lèches pas la glace. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Dans la glacière obscure, ton souffle fume. Sous la sciure, tes doigts trouvent un jambon soigneusement emballé, avec une étiquette : « Mme W. — NE PAS VENDRE ».",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 3
+        }
+      }
+    ]
+  }
+}

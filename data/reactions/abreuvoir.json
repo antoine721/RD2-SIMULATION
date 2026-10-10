@@ -1,0 +1,505 @@
+{
+  "id": "abreuvoir",
+  "description": "Un long bac de planches de pin cerclé de fer, posé entre deux poteaux d'attache au bord de la rue principale. L'eau y est verte et tiède, avec des brins de foin, une mouche noyée et, souvent, la tête de l'ivrogne du quartier.",
+  "repliques": [
+    "*Un cheval y boit à grand bruit.*",
+    "L'eau clapote contre les planches.",
+    "*Une bulle remonte de la vase avec un blop.*"
+  ],
+  "reactions": {
+    "boire_eau": [
+      {
+        "texte": "Tu bois à pleines mains. L'eau a un goût de bois mouillé, de foin et de cheval. Ça désaltère, et c'est à peu près tout ce qu'on peut en dire.",
+        "effets": {
+          "sante": 2
+        }
+      },
+      {
+        "texte": "À peine as-tu bu que tu remarques, au fond, un dentier, un fer à cheval et quelque chose qui bouge. Ton estomac se tord jusqu'au soir.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Un cheval attaché boit à côté de toi, museau contre ta joue, et te bave dans le cou. Sur le trottoir, le gamin des rues est plié de rire.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 2
+        }
+      },
+      {
+        "texte": "L'eau est fraîche sous la lune. Tu bois longtemps, jusqu'à ce qu'une voix pâteuse s'élève de l'autre côté du bac : « Hé ! C'est mon tour ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 3
+        }
+      },
+      {
+        "texte": "Une dame qui sort de l'hôtel s'arrête, scandalisée : « Un homme comme vous, boire à l'abreuvoir ! La gérante vend de l'eau propre, vous savez. Cinq cents le pichet. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "sante": 2
+        }
+      },
+      {
+        "texte": "Sous le soleil de plomb, l'eau est presque chaude et sent la soupe d'algues. Tu bois quand même : c'est ça ou t'écrouler dans la poussière.",
+        "si": [
+          "chaleur"
+        ],
+        "effets": {
+          "sante": 1
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines l'abreuvoir avec, en fond, la façade du saloon de Keane et deux chevaux attachés. Un vrai décor de roman à dix cents."
+      },
+      {
+        "texte": "Pendant que tu dessines, trois chevaux, un chien errant et l'ivrogne viennent y boire tour à tour. Tu les ajoutes tous ; ta page devient une arche de Noé.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La lune se reflète dans l'eau noire de l'abreuvoir. Ton dessin a quelque chose de paisible que Valentine n'a jamais en plein jour.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu passes un long moment à rendre le reflet de l'eau. Le crayon ne sait pas dessiner l'odeur ; c'est peut-être mieux comme ça."
+      }
+    ],
+    "detruire": [
+      {
+        "texte": "Tu arraches les planches à coups de botte. L'eau verte se répand dans la rue et transforme la boue en marécage. Les chevaux attachés piaffent, assoiffés.",
+        "effets": {
+          "etat": "detruit",
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Les cercles de fer tiennent bon. Tu t'acharnes, tu glisses, et tu finis assis dans l'abreuvoir, trempé jusqu'aux os. Quelqu'un applaudit derrière une fenêtre."
+      },
+      {
+        "texte": "À peine la première planche cède-t-elle que le palefrenier surgit, furieux : « Et les bêtes, elles boivent quoi ? Tes larmes ? » L'adjoint arrive juste derrière lui.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -2,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Tu défonces l'abreuvoir dans le noir. Au matin, toute la rue sera un lac de boue, et le shérif Malloy cherchera longtemps qui a fait ça.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le vacarme attire l'adjoint, qui te reconnaît d'après l'avis de recherche et dégaine beaucoup trop vite. Sa balle fait sauter une écharde qui t'entaille la joue.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 5,
+          "sante": -5
+        }
+      }
+    ],
+    "faire_sauter": [
+      {
+        "texte": "Un geyser d'eau verte jaillit plus haut que le saloon et retombe en pluie de planches, de vase et de foin. Tous les chevaux de la rue cassent leur longe.",
+        "effets": {
+          "etat": "detruit",
+          "honneur": -2,
+          "prime": 30
+        }
+      },
+      {
+        "texte": "La mèche touche l'eau et s'éteint avec un petit pschitt ridicule. Le bâton de dynamite flotte un moment, puis coule. Le gamin des rues hurle de rire."
+      },
+      {
+        "texte": "L'explosion fait voler les vitres du saloon de Keane. Le barman sort en hurlant, le shérif Malloy accourt, et une pluie de vase retombe sur la danseuse en robe de soie.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -3,
+          "prime": 40
+        }
+      },
+      {
+        "texte": "La déflagration réveille toute la ville. Dans les maisons, on allume les lampes et on crie aux O'Driscoll. De l'abreuvoir, il ne reste qu'un trou fumant plein d'eau.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -2,
+          "prime": 25
+        }
+      },
+      {
+        "texte": "Dans la confusion qui suit l'explosion, chevaux affolés et cris de toutes parts, personne ne fait attention à toi. C'était peut-être le but.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 20
+        }
+      },
+      {
+        "texte": "Tu étais trop près : une planche cerclée de fer te frappe l'épaule et tu te retrouves assis dans la boue, sourd d'une oreille, couvert de vase.",
+        "effets": {
+          "etat": "detruit",
+          "sante": -15,
+          "prime": 30
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil}, qui disparaît dans l'eau verte avec un plouf sonore. Un cheval attaché lève la tête, te toise avec mépris et se remet à boire."
+      },
+      {
+        "texte": "Le projectile rebondit sur le rebord de l'abreuvoir et va rouler aux pieds de l'ivrogne, qui le ramasse comme un cadeau du ciel."
+      },
+      {
+        "texte": "Les éclaboussures trempent le crieur de journaux et sa pile de gazettes. « Édition spéciale : un idiot attaque l'abreuvoir ! » hurle-t-il, furieux.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Plouf. Puis rien. Puis une voix sort de l'ombre, derrière l'abreuvoir : « Merci, mais j'ai déjà dîné. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "nager": [
+      {
+        "texte": "Tu enjambes le rebord et t'allonges dans l'abreuvoir : tes bottes dépassent d'un côté, ton chapeau de l'autre. Un cheval te regarde avec une profonde tristesse."
+      },
+      {
+        "texte": "Toute la rue s'arrête pour te voir faire la planche dans l'abreuvoir. Le pasteur secoue la tête, le gamin te lance un cent, et l'épicier te demande de payer l'eau.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu barbotes dans l'eau froide sous les étoiles. Le chien errant vient boire à côté de ta tête, et vous vous regardez longuement, sans vous juger.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "L'adjoint passe en courant à ta recherche. Tu plonges la tête sous l'eau verte et retiens ton souffle. Il s'arrête, fait boire son cheval à un pied de ton nez, puis repart.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -2
+        }
+      },
+      {
+        "texte": "Ton pied s'enfonce dans quelque chose de visqueux, au fond. Tu ressors en hurlant, une sangsue grosse comme un pouce collée au mollet.",
+        "effets": {
+          "sante": -3
+        }
+      }
+    ],
+    "pecher": [
+      {
+        "texte": "Tu lances ta ligne dans l'abreuvoir sous l'œil incrédule des passants. Au bout de dix minutes, tu remontes une vieille botte. Elle contient un têtard."
+      },
+      {
+        "texte": "Le vacher s'arrête : « Ça mord ? » Tu remontes un fer à cheval rouillé. Il hoche la tête, très sérieux : « Gros poisson. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Ta ligne accroche quelque chose de lourd. Tu tires : c'est une flasque, encore à moitié pleine. L'ivrogne surgit de l'ombre pour la réclamer, la main tendue.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "L'hameçon se prend dans la crinière d'un cheval qui boit. Il se cabre, arrache sa longe, et la moitié de la rue lui court après.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu ne prends rien, mais à force de remuer la vase, tu rends l'eau imbuvable. Le palefrenier te maudit jusqu'à la troisième génération.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Planches de pin noircies, cercles de fer rouillés, eau verte. Sur le bord, on a gravé au couteau « AMOS + JAKE 1878 » et, plus bas, d'une autre main : « PÉPITE = MENTEUR »."
+      },
+      {
+        "texte": "Le cheval attaché de l'O'Driscoll y boit sans arrêt, sellé, les sacoches pleines. Prêt à partir vite, on dirait.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Dans l'eau noire, la lune et les lanternes du saloon se reflètent en tremblant. Quelque chose brille faiblement au fond, dans la vase.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Une gouttière de bois amène l'eau depuis le puits de la rue de l'Église. Elle fuit à trois endroits, et quelqu'un a bouché les trous avec de la chique."
+      },
+      {
+        "texte": "La pluie fait déborder l'abreuvoir. L'eau verte se mêle à la boue de la rue, et les chevaux attachés pataugent jusqu'aux paturons, l'air résigné.",
+        "si": [
+          "pluie"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu cadres l'abreuvoir avec deux chevaux qui boivent. Le flash les fait sursauter ; l'un d'eux éternue dans l'eau, et la photo est floue."
+      },
+      {
+        "texte": "L'ivrogne surgit dans le champ juste au moment du flash, plonge la tête dans l'eau et la ressort en souriant. Ta photo est ratée ; la sienne est réussie.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le flash de magnésium illumine la rue comme un coup de feu. Trois fenêtres s'ouvrent et l'adjoint sort en caleçon long, revolver au poing.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Sur la plaque, l'eau ressort noire et lisse comme du verre. On dirait un cercueil rempli d'eau ; le croque-mort t'en demanderait sûrement un tirage."
+      }
+    ],
+    "se_laver": [
+      {
+        "texte": "Tu te débarbouilles dans l'eau verte. Te voilà un peu plus propre et beaucoup plus imprégné de l'odeur de cheval. C'est gratuit, au moins.",
+        "effets": {
+          "sante": 2
+        }
+      },
+      {
+        "texte": "La gérante de l'hôtel te regarde par sa fenêtre, outrée : « Un bain coûte cinquante cents ! Vous, les vagabonds, vous me ruinez ! »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu te laves torse nu sous la lune. L'eau glacée te réveille mieux qu'un café. Quelque part, une fenêtre se referme brusquement.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 3
+        }
+      },
+      {
+        "texte": "Le pasteur, qui passait, s'arrête : « La propreté est voisine de la sainteté, mon fils. Mais pas dans l'abreuvoir des chevaux. »",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Tu frottes ta chemise contre le bord de l'abreuvoir. Une sangsue s'accroche à ton poignet ; tu l'arraches en jurant.",
+        "effets": {
+          "sante": -2
+        }
+      },
+      {
+        "texte": "Le dimanche matin, toute la ville en habits du dimanche passe devant toi, torse nu dans l'abreuvoir, en route pour l'église. Personne ne te salue.",
+        "si": [
+          "dimanche"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle traverse une planche : un jet d'eau jaillit à l'horizontale et arrose un passant, qui s'éloigne en jurant. Au deuxième trou, l'abreuvoir pisse comme une fontaine.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le coup de feu affole les chevaux attachés. Le plus nerveux arrache son poteau et part au galop en traînant un bout de bois. L'adjoint sort, déjà en train de dégainer.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Ta balle soulève une gerbe d'eau noire. Derrière l'abreuvoir, une voix d'ivrogne s'élève, indignée : « J'ai rien fait, cette fois ! »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu vides ton arme dans l'abreuvoir. L'eau gicle de partout ; quand le dernier jet s'éteint, il ne reste qu'un bac percé comme une passoire.",
+        "effets": {
+          "etat": "detruit",
+          "honneur": -1,
+          "prime": 5
+        }
+      }
+    ],
+    "mener_cheval_boire": [
+      {
+        "texte": "Ton cheval plonge le museau dans l'eau verte et boit à longs traits bruyants. Il relève la tête, la bouche dégoulinante, et te pousse l'épaule, satisfait."
+      },
+      {
+        "texte": "Ton cheval boit à côté de celui de l'O'Driscoll. Les deux bêtes se reniflent, puis le cheval de l'O'Driscoll te fixe d'un œil mauvais, tout comme son maître.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Ton cheval boit dans le noir, paisible. Tu l'entends déglutir, tu sens sa chaleur contre ton bras, et pour un instant, Valentine semble presque tranquille.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Ton cheval renifle l'eau, souffle dessus, puis refuse de boire. Il a vu l'ivrogne y plonger la tête ce matin, lui aussi."
+      },
+      {
+        "texte": "Pendant que ton cheval boit, l'adjoint arrive et fait boire le sien à côté. Il te regarde, fronce les sourcils, hésite... puis repart. Tu recommences à respirer.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Par cette chaleur, ton cheval boit sans s'arrêter, si longtemps que le palefrenier, de passage, siffle : « Il va te vider l'abreuvoir. Une bête bien tenue, ça. »",
+        "si": [
+          "chaleur"
+        ]
+      }
+    ],
+    "tremper_la_tete": [
+      {
+        "texte": "Tu plonges la tête dans l'abreuvoir. L'eau glacée te chasse la poussière, la fatigue et une partie de tes idées noires. Tu ressors avec un brin de foin sur l'oreille.",
+        "effets": {
+          "sante": 3
+        }
+      },
+      {
+        "texte": "Tu te trempes la tête. En te redressant, tu découvres l'ivrogne à côté de toi qui fait exactement la même chose : « Ça soigne tout, l'ami. Sauf la soif. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 2
+        }
+      },
+      {
+        "texte": "L'eau froide te dégrise d'un coup. Tu remarques alors, sous la surface, un petit caillou jaune qui brille dans la vase.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 3
+        }
+      },
+      {
+        "texte": "Un cheval qui buvait à côté de toi souffle par les naseaux et t'arrose les oreilles. Tu ressors plus mouillé et plus humble.",
+        "effets": {
+          "sante": 1
+        }
+      },
+      {
+        "texte": "L'eau ruisselle sur ton visage. Sur son bout de trottoir, le vétéran mendiant te salue de sa béquille : « Les vrais hommes boivent avec les chevaux. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "sante": 2
+        }
+      },
+      {
+        "texte": "Sous le soleil qui cogne, tu restes la tête dans l'eau jusqu'à ce que tes oreilles bourdonnent. Quand tu ressors, la rue entière te paraît plus fraîche.",
+        "si": [
+          "chaleur"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      }
+    ],
+    "fouiller_vase_abreuvoir": [
+      {
+        "texte": "Tu plonges le bras jusqu'à l'épaule dans la vase. Tu en ressors un cent rouillé, un fer à cheval et une odeur que tu garderas jusqu'au soir."
+      },
+      {
+        "texte": "Tes doigts se referment sur un petit caillou jaune et lourd. Une pépite ? De l'or des fous ? Celle que l'ivrogne a perdue en tombant hier soir ? Il faudra demander."
+      },
+      {
+        "texte": "Le gamin des rues s'accroupit à côté de toi : « Moi j'y trouve des pièces tous les dimanches. Les cow-boys saouls les y font tomber. » Il t'en chipe une au passage.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Dans le noir, ta main rencontre un vieux derringer englué de vase, encore chargé. Qui l'a jeté là, et pourquoi la nuit même où l'O'Driscoll a été coffré ?",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Une sangsue grosse comme un pouce s'accroche à ton avant-bras. Tu la décolles à la pointe du couteau en jurant. Au fond, il n'y avait qu'un dentier.",
+        "effets": {
+          "sante": -3
+        }
+      },
+      {
+        "texte": "Tu trouves deux dollars collés dans la vase, sûrement tombés de la poche d'un cow-boy ivre. Tu les empoches sans te poser de questions.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 2
+        }
+      }
+    ]
+  }
+}

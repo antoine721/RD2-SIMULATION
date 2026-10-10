@@ -1,0 +1,966 @@
+{
+  "id": "diligence",
+  "description": "Une diligence Concord au rouge délavé, grandes roues jaunes crottées jusqu'aux moyeux, lettres dorées à demi effacées : « Valentine – Strawberry ». Des malles sont ficelées sur l'impériale, un coffre de fer dort sous la banquette du cocher, et quatre chevaux bais piaffent dans les traits.",
+  "repliques": [
+    "« En voiture pour Strawberry ! On part quand j'ai fini ma chique ! »",
+    "Les grandes roues grincent dans la boue de la rue principale.",
+    "*Un cheval de tête s'ébroue et frappe le sol du sabot.*"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 6,
+      "lieu": "ecurie",
+      "activite": "remisée sous l'auvent de l'écurie ; Wade, le garde, somnole sur la banquette, fusil sur les genoux"
+    },
+    {
+      "de": 6,
+      "a": 7,
+      "lieu": "ecurie",
+      "activite": "le palefrenier attelle quatre chevaux frais à la lueur d'une lanterne"
+    },
+    {
+      "de": 7,
+      "a": 8,
+      "lieu": "banque",
+      "activite": "charge le sac de courrier et, certains jours, le coffre de fonds sous l'œil inquiet du caissier"
+    },
+    {
+      "de": 8,
+      "a": 12,
+      "lieu": "rue_principale",
+      "activite": "attend les passagers devant l'hôtel ; le vieux Amos crie le départ pour Strawberry"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "rue_principale",
+      "activite": "relais de midi : la voiture arrivée de Strawberry décharge malles et voyageurs poussiéreux"
+    },
+    {
+      "de": 13,
+      "a": 19,
+      "lieu": "rue_principale",
+      "activite": "stationne devant l'hôtel, chevaux à l'abreuvoir, pendant qu'Amos graisse les essieux en jurant"
+    },
+    {
+      "de": 19,
+      "a": 24,
+      "lieu": "ecurie",
+      "activite": "remisée pour la nuit sous l'auvent de l'écurie, lanternes éteintes"
+    }
+  ],
+  "reactions": {
+    "atteler@outil": [
+      {
+        "texte": "Tu mènes {cible} en tête de l'attelage et boucles les traits un à un. Le vieux Amos, le cocher, crache son jus de chique : « Un cheval de selle dans une diligence... Il va tirer de travers jusqu'à Strawberry. »"
+      },
+      {
+        "texte": "Amos t'aide à ajuster le harnais de cuir en sifflotant : « Joli travail. Si un jour tu veux ma place, la Compagnie paie mal, mais on voit du pays. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "À la lueur d'une lanterne, sous l'auvent de l'écurie, tu attelles {cible} à la diligence. Les chevaux de la Compagnie s'agitent au box, et la voix du palefrenier tonne dans le noir : « Qui touche à mes bêtes ? »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Pendant que tu boucles les sangles, Amos lorgne le panneau des avis de recherche, puis ta figure. « Tu comptes partir vite, on dirait. Dix dollars et j'ai la mémoire courte. » Tu les lui glisses dans la main.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -10
+        }
+      },
+      {
+        "texte": "Tu n'as pas fini de passer le collier que Wade, le garde, saute de la banquette, son fusil à double canon braqué sur toi : « Lâche ce cheval et recule. Cette voiture appartient à la Compagnie. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Les trois chevaux de trait mordillent {cible}, le nouveau venu, et refusent de tirer ensemble. Il faut dix minutes de jurons, de caresses et de coups de chapeau pour que l'attelage consente à avancer d'un même pas."
+      }
+    ],
+    "braquer": [
+      {
+        "texte": "Tu jaillis devant l'attelage, arme au poing : « Tout le monde descend, les mains en l'air ! » Amos lève les bras en mâchonnant sa chique, et les passagers vident leurs bourses dans ton chapeau, une institutrice en larmes.",
+        "effets": {
+          "argent": 45,
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "En pleine rue principale, à midi ? Tu arraches la sacoche du courrier, mais l'adjoint du shérif jaillit du bureau en dégainant trop vite et tire à tort et à travers. Tu détales avec une poignée de billets et une balle qui t'a frôlé l'oreille.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 25,
+          "prime": 75,
+          "honneur": -3,
+          "sante": -10
+        }
+      },
+      {
+        "texte": "C'est jour de coffre : Wade épaule son double canon avant que tu aies fini ta phrase. La décharge t'arrache un lambeau d'épaule, mais tu le cloues au sol d'une balle dans la cuisse et fais rouler le coffre de fonds de la banque dans la boue.",
+        "effets": {
+          "argent": 150,
+          "prime": 100,
+          "honneur": -4,
+          "sante": -35
+        }
+      },
+      {
+        "texte": "La diligence dort sous l'auvent de l'écurie, gardée par Wade qui ronfle sur la banquette. Tu lui retires le fusil des mains, le bâillonnes avec son propre foulard et repars dans la nuit avec le sac de courrier.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 30,
+          "prime": 25,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu exiges l'argent de la Compagnie, pas celui des passagers. Une vieille dame te tend quand même sa broche en tremblant ; tu la lui rends d'un salut du chapeau. Amos grommelle : « Un bandit poli. On aura tout vu. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 40,
+          "prime": 50,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Amos te reconnaît avant que tu ouvres la bouche : « L'homme de l'affiche ! » Il te lance la sacoche de lui-même, puis fouette l'attelage vers le bureau du shérif en hurlant ton nom à toute la rue.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 35,
+          "prime": 75,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Amos écarquille les yeux sous son chapeau : « Toi ? Après toutes les bières qu'on a partagées ? » Il te remet la sacoche sans un mot de plus, puis crache dans la boue, juste devant tes bottes.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 40,
+          "prime": 50,
+          "honneur": -3,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Wade t'avait repéré depuis l'aube. Le double canon tonne avant que tu aies levé ton arme ; tu roules derrière l'abreuvoir, la jambe en sang, pendant que la diligence file au grand galop vers la sortie de la ville.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -40,
+          "prime": 30,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Un commis voyageur en corsets sort un derringer de sa manche. Tu le désarmes d'un coup de crosse ; les autres passagers, matés, remplissent ton sac de montres, de bagues et d'un dentier en or.",
+        "effets": {
+          "argent": 60,
+          "prime": 60,
+          "honneur": -3
+        }
+      }
+    ],
+    "conduire": [
+      {
+        "texte": "Tu te hisses sur la banquette du cocher et fais claquer les rênes. Les quatre chevaux partent d'un coup, la caisse tangue sur ses soupentes de cuir, et derrière toi Amos court en agitant son chapeau : « Ma voiture ! Au voleur ! »",
+        "effets": {
+          "prime": 10,
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Amos te tend les rênes en se massant les reins : « Tiens-les jusqu'au bout de la rue, mes vieilles mains n'en peuvent plus. » Tu fais un tour de ville au petit trot, salué par le crieur de journaux.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "La rue est déserte : tu sors la diligence de sous l'auvent, lanternes éteintes. Les roues cerclées de fer grondent sur la terre durcie, mais la ville dort, et tu abandonnes la voiture au bord du ruisseau.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Huit rênes, quatre chevaux, et aucun ne veut aller du même côté. La diligence fait une embardée, renverse les tonneaux devant le saloon et s'arrête net, une roue dans l'abreuvoir. Amos arrive, hilare : « Faut des années, mon gars. »",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu fouettes l'attelage en pleine rue. Le shérif Malloy sort sur le perron, plisse les yeux et épaule sa Winchester : sa balle fait éclater la lanterne à un pouce de ta tête. Tu quittes la ville dans un nuage de verre et de poussière.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 15,
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Amos s'est effondré, terrassé par la chaleur, sur sa banquette. Tu prends les rênes et conduis la voiture et ses passagers jusqu'au cabinet du docteur ; une vieille dame te bénit à travers la portière.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 2,
+          "relation": 2
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines la diligence de profil, ses grandes roues et les malles ficelées sur l'impériale. Amos se penche par-dessus ton épaule, curieux : « Tu pourrais me faire un peu plus mince ? »"
+      },
+      {
+        "texte": "À la lueur d'une lanterne, tu esquisses la voiture remisée sous l'auvent, tout en ombres et en reflets de cuivre. Sur la page, elle a quelque chose d'un corbillard.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu croques la diligence avec un soin très particulier : l'emplacement du coffre sous la banquette, la place du garde, l'angle de la rue et la sortie vers la piste. C'est moins un dessin qu'un plan.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Tu tentes de saisir l'attelage au moment du départ, mais les chevaux ne tiennent pas en place. Sur ta page, quatre bêtes à six jambes tirent une boîte à chaussures."
+      },
+      {
+        "texte": "Assis sur le banc, tu dessines les voyageurs qui embarquent : un commis voyageur et sa valise d'échantillons, une institutrice, un prédicateur serrant sa bible. Le gamin des rues vient admirer ton travail... et lorgner ta poche.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "detruire": [
+      {
+        "texte": "Tu arraches une portière et éclates les vitres à coups de crosse. Les chevaux ruent dans les traits, Amos hurle au meurtre, et la voiture de la Compagnie n'est bientôt plus qu'une caisse éventrée.",
+        "effets": {
+          "etat": "detruit",
+          "prime": 15,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Sous l'auvent de l'écurie, tu brises un à un les rayons des roues à coups de talon. La diligence s'affaisse dans un craquement sinistre ; demain, personne ne partira pour Strawberry.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu t'acharnes sur une roue, mais Wade te tombe dessus à bras raccourcis et te sonne d'un coup de crosse. Tu repars le nez en sang ; la diligence, elle, n'a qu'une éraflure.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -15,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu lèves la crosse sur la portière... puis tu aperçois une fillette en larmes derrière la vitre. Tu baisses le bras ; sa mère t'adresse un regard que tu n'oublieras pas de sitôt.",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Tu tranches les soupentes de cuir qui suspendent la caisse. Elle s'effondre sur les essieux dans un fracas de bois verni, et les buveurs sortent du saloon pour contempler le désastre.",
+        "effets": {
+          "etat": "detruit",
+          "prime": 15,
+          "honneur": -1,
+          "relation": -3
+        }
+      }
+    ],
+    "faire_sauter": [
+      {
+        "texte": "Tu cales {outil} sous la caisse et allumes la mèche. L'explosion soulève la diligence, qui retombe en mille éclats de bois rouge ; les chevaux, arrachés à leurs traits, galopent jusqu'au bout de la rue.",
+        "effets": {
+          "etat": "detruit",
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "La mèche grésille dans le noir, sous l'auvent de l'écurie. La détonation réveille toute la ville ; de la voiture il ne reste qu'un trou fumant, et le palefrenier, en chemise de nuit, calme ses chevaux affolés en te maudissant.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 40,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Wade voit la mèche fumer et tire avant que tu aies fait trois pas. La balle te traverse le bras ; la dynamite roule sous la voiture et la souffle quand même dans une gerbe de flammes.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "sante": -35,
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Le souffle t'envoie rouler dans la boue, les oreilles sifflantes. Quand la fumée se dissipe, il ne reste du coffre de fonds que des billets roussis qui volettent dans la rue ; tu en ramasses une poignée avant que l'adjoint arrive.",
+        "effets": {
+          "etat": "detruit",
+          "argent": 40,
+          "prime": 75,
+          "honneur": -4,
+          "sante": -15
+        }
+      },
+      {
+        "texte": "Tu attends que le dernier passager soit descendu et que les chevaux soient dételés pour allumer {outil}. La voiture vole en éclats dans une rue vide : un crime, mais pas un massacre.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 40,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "En plein jour, des passagers encore à bord : l'explosion projette un commis voyageur dans l'abreuvoir et blesse Amos au visage. Le pasteur accourt, et toute la ville te regarde comme le diable en personne.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "prime": 100,
+          "honneur": -5
+        }
+      }
+    ],
+    "fouiller": [
+      {
+        "texte": "Tu fouilles les malles de l'impériale : des chemises amidonnées, un catalogue de corsets, une bible annotée... et, roulée dans une botte, une liasse de billets.",
+        "effets": {
+          "argent": 12,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu as à peine ouvert une valise qu'Amos te cingle de son fouet : « Ces bagages sont sous la garde de la Compagnie ! » Tu repars avec une zébrure sur la joue et la promesse qu'il en parlera au shérif.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -5,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Sous l'auvent, à la lueur d'une allumette, tu explores la banquette : un flacon de tonique du docteur à moitié vide, un jeu de cartes marquées et quelques pièces glissées entre les coussins.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 3,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Sous la banquette du cocher, tu trouves le registre de la Compagnie : jours de coffre, sommes transportées, noms des gardes. Les jeudis sont soulignés deux fois."
+      },
+      {
+        "texte": "Entre les coussins, tu découvres le portefeuille qu'une passagère a laissé tomber. Tu le rends à Amos, qui en reste bouche bée : « Un honnête homme ! Faut que je l'écrive dans le registre. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Dans le sac de courrier, une enveloppe du bureau du shérif adressée à Strawberry : ton signalement, avec la mention « dangereux ». Tu la froisses au fond de ta poche.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la portière. Le choc fait sursauter l'attelage, et Amos se retourne sur sa banquette : « Hé ! Les réparations, c'est la Compagnie qui les paie, pas toi, hein ? »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lances {outil}, qui ricoche sur l'impériale et finit dans la boue entre les roues. Une passagère pousse un cri suraigu, persuadée que les O'Driscoll attaquent la voiture.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lances {outil} dans le noir de l'écurie. Un bruit mat contre le bois verni, puis la voix pâteuse de Wade, réveillé en sursaut : « Qui va là ? Je tire, hein ! »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu lances {outil} vers la banquette ; Wade esquive d'un mouvement d'épaule et pointe sur toi son double canon : « Encore un geste et c'est toi qu'on ramasse dans la boue. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lances {outil} vers la diligence. Le projectile rebondit sur une grande roue jaune et atterrit aux pieds du gamin des rues, qui le fait disparaître sous sa chemise et détale."
+      }
+    ],
+    "monter_dans": [
+      {
+        "texte": "Tu t'installes sur la banquette de cuir craquelé, coincé entre un commis voyageur qui sent l'eau de Cologne et un prédicateur qui sent l'ail. Amos tape au plafond : « Trois dollars pour Strawberry, ou tu redescends ! »"
+      },
+      {
+        "texte": "La caisse est vide et froide, ses rideaux de cuir tirés. Tu t'allonges sur la banquette ; au-dessus, Wade ronfle sur le siège du cocher. Un lit en vaut un autre.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "À peine assis, tu sens le regard de la passagère d'en face aller de ton visage au journal qu'elle tient : ton portrait y figure, avec le montant de la prime. Elle ne dit rien, mais ses mains tremblent.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Amos te fait signe de monter sans payer : « Pour toi, c'est la Compagnie qui régale. Mais si un inspecteur demande, t'es mon neveu. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu montes et poses ton arme bien en vue sur tes genoux. Les passagers se tassent contre la portière opposée ; un jeune notaire te tend spontanément sa montre, et tu ne la refuses pas.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 5,
+          "honneur": -1
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Une Concord rouge délavé aux grandes roues jaunes, lettres dorées à demi effacées. Des malles sont ficelées sur l'impériale, et le vieux Amos chique sur la banquette en surveillant la rue d'un œil mi-clos."
+      },
+      {
+        "texte": "Devant la banque, deux employés hissent un coffre de fer sous la banquette du cocher, pendant que le caissier, blême, compte et recompte sur son registre. Un garde armé d'un double canon ne quitte pas la rue des yeux.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Remisée sous l'auvent de l'écurie, la diligence n'est qu'une masse sombre. Une braise rougeoie sur la banquette : Wade fume sa pipe et veille, le fusil en travers des genoux.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu notes machinalement les détails utiles : un seul garde, le coffre sous la banquette, les chevaux de tête nerveux. Et la piste de Strawberry traverse des bois où personne n'entend crier.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Amos te dévisage longuement, puis tourne la tête vers le panneau des avis de recherche. Sa main glisse sous la banquette, là où dort sans doute un fusil.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Les roues sont cerclées de fer neuf et la boue de la rue monte jusqu'aux moyeux. Sur la portière, quelqu'un a gravé au couteau : « O'D. était là »."
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu installes {outil} sur son trépied. Amos bombe le torse et ne bouge plus d'un cil ; les chevaux, eux, bougent tout le temps : sur la plaque, ils auront huit têtes."
+      },
+      {
+        "texte": "Le magnésium crépite : les passagers figés devant la portière, la vieille dame et son ombrelle, le commis voyageur et sa valise. Un beau cliché pour l'album d'un voyageur.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu tentes un cliché à la lueur des lanternes. L'éclair de magnésium fait ruer l'attelage au box, et le palefrenier sort de l'écurie en pestant contre « les savants qui effraient les bêtes ».",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Wade pose sa main devant l'objectif : « Pas de portrait de la voiture ni du coffre. Les bandits aussi savent regarder des photographies. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu saisis la diligence au moment du départ, dans un nuage de poussière dorée. Le crieur de journaux te propose aussitôt d'envoyer la plaque au journal de Saint Denis."
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Tu tires avec {outil} : la lanterne de la diligence vole en éclats. Les chevaux se cabrent, les passagers se jettent à plat ventre, et Amos te fixe, les yeux ronds : « T'es fou ou t'es O'Driscoll ? »",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Au premier coup de feu, Wade riposte depuis la banquette. La chevrotine te laboure le flanc et arrache des éclats au panneau des avis de recherche derrière toi.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -40,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Ta balle traverse la caisse de part en part, à un pouce du chapeau d'une passagère, qui s'évanouit. L'adjoint du shérif accourt, la main tremblante sur son étui.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Le coup de feu claque dans la nuit et la balle se loge dans un rayon de roue. Des fenêtres s'éclairent dans toute la rue, un chien aboie, puis plus rien.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu vises le moyeu avec {outil} et fais mouche : la roue avant se fend et la diligence penche comme un ivrogne. Amos descend lentement, ôte son chapeau et contemple les dégâts : « Trois jours de retard. Merci bien. »",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Un O'Driscoll vient de sauter sur le marchepied pour arracher la sacoche du courrier. Ta balle l'atteint à l'épaule ; il roule dans la boue et détale. Amos soulève son chapeau : « Joli coup, l'ami ! »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 2,
+          "relation": 2
+        }
+      }
+    ],
+    "desembourber": [
+      {
+        "texte": "La diligence s'est enfoncée jusqu'aux moyeux dans la boue de la rue principale. Tu pousses de l'épaule pendant qu'Amos fouette l'attelage ; dans un bruit de succion, la voiture s'arrache enfin, et toi tu finis à plat ventre dans la gadoue.",
+        "effets": {
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu glisses des planches sous les roues et fais levier avec un madrier. Les passagers applaudissent par la portière ; le commis voyageur te donne même une pièce pour ta peine.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 1,
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Amos te tend sa flasque après l'effort : « Sans toi, on y serait encore à Noël. La Compagnie devrait te payer. » Elle ne le fera pas, mais le whisky est bon.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2,
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Dans le noir, ta botte s'enfonce plus profond que la roue. Il te faut une heure, une lanterne et un chapelet de jurons pour sortir la diligence de l'ornière.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu pousses avec les autres... et tu profites de la confusion pour soulager une malle de l'impériale d'une montre en argent.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 8,
+          "honneur": -1
+        }
+      }
+    ],
+    "deteler_attelage": [
+      {
+        "texte": "Tu dégrafes les traits et retires les colliers un à un. Les quatre chevaux, libérés, s'ébrouent et filent boire à l'abreuvoir, laissant la diligence plantée au milieu de la rue.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Sous l'auvent, tu détaches l'attelage sans un bruit et ouvres la barrière. Au matin, les chevaux de la Compagnie brouteront sur la berge du ruisseau, et personne ne partira pour Strawberry.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Amos te remercie d'un grognement : « Bonne idée, elles ont chaud. » Tu mènes l'attelage à l'abreuvoir pendant qu'il graisse les essieux.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Wade t'aperçoit les mains dans les harnais : « Touche encore une boucle et je te loge du plomb dans le derrière. » Tu recules, les mains en l'air.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Tu dételles le meilleur cheval de tête et le mènes tranquillement vers la sortie de la ville, comme l'O'Driscoll qui croupit en cellule. Personne ne t'a vu... sauf le gamin des rues, qui sait déjà combien il vendra l'information.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -2
+        }
+      }
+    ],
+    "saboter_roue": [
+      {
+        "texte": "Accroupi derrière la diligence, tu fais sauter avec {outil} la clavette qui retient la roue arrière. Elle tiendra jusqu'à la sortie de la ville... pas plus loin.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Avec {outil}, tu entailles les rayons d'une roue au clair de lune. Demain, quelque part sur la piste de Strawberry, la voiture s'affalera dans le fossé : à toi de décider si tu y seras.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu n'as pas fini de glisser la lame sous le moyeu qu'Amos te surprend : « Qu'est-ce que tu fiches sous ma voiture ? » Tu marmonnes une histoire de pièce tombée ; il ne te croit pas une seconde.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Wade te cale le canon de son fusil sous le menton : « Une clavette, hein ? Les O'Driscoll ont fait pareil le mois dernier. Dégage avant que j'appelle Malloy. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu sors {outil}... puis tu penses à la vieille dame qui voyage demain. Tu rengaines et préviens plutôt Amos qu'une clavette a du jeu ; il te remercie d'une claque dans le dos.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 1
+        }
+      }
+    ],
+    "aller_retour_strawberry": [
+      {
+        "texte": "Tu paies trois dollars et partages la banquette avec un prédicateur qui chante des psaumes tout le long des collines. Six heures de cahots à l'aller, autant au retour : tu rentres à Valentine courbaturé, mais tu connais la piste par cœur.",
+        "effets": {
+          "argent": -3
+        }
+      },
+      {
+        "texte": "À mi-chemin, des cavaliers masqués surgissent des bois : des O'Driscoll. Tu tires par la portière, Wade fait le reste depuis la banquette, et les bandits détalent. À Strawberry, la Compagnie t'offre le voyage.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": 2,
+          "sante": -15,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Le voyage de nuit coûte plus cher et dure plus longtemps : lanternes qui tanguent, loups qui hurlent, Amos qui chante faux pour rester éveillé. Tu dors contre la portière et rentres au petit matin, la nuque raide.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -4,
+          "sante": -5
+        }
+      },
+      {
+        "texte": "À Strawberry, une affiche à ton effigie t'attend sur le mur du relais. Tu ne quittes pas la voiture et refais tout le trajet en sens inverse, chapeau rabattu, sans avoir posé un pied dehors.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -3
+        }
+      },
+      {
+        "texte": "Une roue casse dans une descente, au retour. Pendant que tout le monde pousse, une passagère t'apprend qu'elle a cédé sa ferme au directeur de la banque de Valentine « pour une bouchée de pain, avec ses intérêts de voleur ».",
+        "effets": {
+          "argent": -3
+        }
+      },
+      {
+        "texte": "Amos te fait asseoir à côté de lui sur la banquette et te raconte trente ans de pistes, de rivières en crue et de bandits pendus. Au retour, il refuse ton argent : « T'as tenu les rênes dans la descente, on est quittes. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      }
+    ],
+    "escorter_diligence": [
+      {
+        "texte": "Tu chevauches à hauteur de la portière jusqu'à Strawberry et retour. La piste est calme, à part un serpent qui fait broncher ton cheval. La Compagnie te paie cinq dollars, et Amos un clin d'œil.",
+        "effets": {
+          "argent": 5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "C'est jour de coffre. Dans le défilé des collines, trois O'Driscoll ouvrent le feu depuis les rochers ; tu en désarçonnes un, Wade blesse le deuxième, le troisième s'enfuit. Le directeur de la banque te jette vingt dollars comme on jette un os à un chien.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 20,
+          "honneur": 3,
+          "sante": -25,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Wade te barre la route du canon de son fusil : « Un homme recherché pour escorter le coffre ? Autant confier le poulailler au renard. » La diligence part sans toi.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Pendant tout le trajet, tu ne quittes pas le coffre des yeux. Wade s'en aperçoit et ne quitte plus les tiens. À Strawberry, on te paie et on te prie, poliment, de rentrer seul.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 5,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Escorte de nuit : tu ouvres la marche une lanterne au poing, l'oreille aux aguets. Un cri de chouette, une ombre entre les arbres... rien, finalement. Tu rentres à l'aube, les yeux rouges, sept dollars en poche.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 7,
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Au détour de la piste, un fermier ruiné attend la voiture, un vieux fusil à la main, décidé à reprendre l'argent de la banque qui l'a saisi. Tu mets pied à terre, lui parles longuement, et il rentre chez lui sans avoir tiré.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 5,
+          "honneur": 2
+        }
+      }
+    ],
+    "forcer_coffre_fonds": [
+      {
+        "texte": "Tu appuies {outil} contre le cadenas et tires. Le métal saute, le couvercle s'ouvre : liasses de la banque de Valentine, rouleaux de pièces, un registre. La détonation, elle, a fait sortir toute la rue.",
+        "effets": {
+          "argent": 120,
+          "prime": 75,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Sous l'auvent, tu fais sauter la serrure avec {outil}. Le coffre est vide : ce n'est pas jour de transport. Seul trésor, le casse-croûte oublié de Wade. Et toute la ville a entendu le coup de feu.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Ta balle ricoche sur le fer du coffre et te siffle à l'oreille, puis une décharge de chevrotine te rase pour de bon : Wade t'arrose depuis la porte de l'écurie. Tu fuis, la joue en sang, les mains vides.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -20,
+          "prime": 25
+        }
+      },
+      {
+        "texte": "En plein jour, la détonation fait accourir l'adjoint, qui dégaine trop vite et tire dans le vide. Tu n'as que le temps d'arracher une liasse avant de sauter en selle.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 50,
+          "prime": 100,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Le cadenas résiste à trois balles. À la quatrième, il cède : tu bourres tes poches de billets neufs aux numéros qui se suivent... ceux que le caissier a sûrement recopiés, de sa petite écriture inquiète.",
+        "effets": {
+          "argent": 150,
+          "prime": 75,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Au moment où le cadenas cède, une silhouette se dresse au bout de la rue : le chasseur de primes du Smithfield's. Tu n'emportes qu'une poignée de billets, sous ses balles.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 40,
+          "prime": 75,
+          "sante": -15,
+          "honneur": -3
+        }
+      }
+    ],
+    "grimper_imperiale": [
+      {
+        "texte": "Tu te hisses par la roue jusqu'à l'impériale, entre les malles ficelées et une cage à poules. De là-haut, tu vois toute la rue principale, jusqu'au château d'eau de la gare."
+      },
+      {
+        "texte": "Amos se retourne, furieux : « Descends de là, c'est pas une galerie de théâtre ! » Les passagers rient, sauf celui dont tu viens d'écraser le chapeau melon.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu t'allonges sur les malles, la tête sur le sac de courrier, et regardes les étoiles au-dessus de Valentine. Au loin, le piano du saloon de Keane joue faux.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Couché parmi les bagages, tu surveilles la rue sans être vu. L'adjoint passe juste en dessous, l'œil rivé sur le panneau des avis de recherche, sans jamais lever la tête.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Amos te fait asseoir à côté de lui et te prête son chapeau contre le soleil : « C'est la meilleure place du pays, l'ami. On voit venir les ennuis de loin. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ]
+  }
+}

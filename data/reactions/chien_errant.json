@@ -1,0 +1,706 @@
+{
+  "id": "chien_errant",
+  "description": "Un bâtard jaune et gris, haut sur pattes et maigre à faire peur, les côtes saillantes sous un poil collé de boue. Une oreille déchirée, une patte arrière qui boite un peu, et une queue basse qui se met à battre dès qu'on le regarde.",
+  "personnalite": "Craintif mais affamé d'affection, il cherche un maître et suit quiconque lui jette un regard gentil. Rusé comme un coyote pour trouver à manger, fidèle jusqu'à la bêtise une fois qu'il a choisi. Il gronde contre les O'Driscoll depuis que l'un d'eux l'a chassé à coups de botte. Le crieur l'appelle Scoop, le vétéran l'appelle Caporal ; il dort sous le banc de la rue principale.",
+  "repliques": [
+    "*renifle tes bottes, la queue entre les pattes, puis la remue timidement*",
+    "*gémit doucement en fixant la porte de la boucherie*",
+    "*aboie après le cheval attaché, le poil hérissé*",
+    "*se gratte l'oreille déchirée avec un sérieux de notaire*",
+    "*se roule dans la boue, ravi*",
+    "*hurle avec le sifflet du train, puis se tait, gêné*",
+    "*trotte derrière le crieur, un bout de journal dans la gueule*"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 6,
+      "lieu": "rue_principale",
+      "activite": "dort roulé en boule sous le banc, sur un vieux sac de grain"
+    },
+    {
+      "de": 6,
+      "a": 8,
+      "lieu": "boucherie",
+      "activite": "attend les rognures derrière la boucherie"
+    },
+    {
+      "de": 8,
+      "a": 12,
+      "lieu": "rue_principale",
+      "activite": "suit les passants en quémandant"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "boucherie",
+      "activite": "partage le casse-croûte du crieur"
+    },
+    {
+      "de": 13,
+      "a": 17,
+      "lieu": "rue_principale",
+      "activite": "somnole au soleil près de l'abreuvoir"
+    },
+    {
+      "de": 17,
+      "a": 19,
+      "lieu": "enclos",
+      "activite": "aboie après le taureau Lucifer, à une distance très prudente"
+    },
+    {
+      "de": 19,
+      "a": 21,
+      "lieu": "rue_principale",
+      "activite": "couché aux pieds du vétéran pendant que le crieur lit le journal"
+    },
+    {
+      "de": 21,
+      "a": 24,
+      "lieu": "saloon_smithfield",
+      "activite": "fouille les ordures derrière le Smithfield's en attendant le vétéran"
+    }
+  ],
+  "reactions": {
+    "caresser": [
+      {
+        "texte": "Il se recroqueville quand ta main approche, puis, sentant la caresse, ferme les yeux et pousse un long soupir. Sa queue bat la boue.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il se laisse faire, te lèche le poignet, puis te suit de deux pas, comme pour vérifier que c'était sérieux.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il se roule sur le dos au milieu de la rue principale, les quatre pattes en l'air, sans aucune dignité. Le crieur éclate de rire.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il montre les dents et gronde sourdement. Tu retires ta main trop tard : il te pince le poignet et file sous le banc.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -3
+        }
+      },
+      {
+        "texte": "Il sent sur toi quelque chose qui lui déplaît : la poudre, le sang, ou l'odeur d'un O'Driscoll. Il recule en grondant, l'échine basse.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il dormait sous le banc. Il ouvre un œil, te reconnaît à l'odeur et se rendort, la tête posée sur ta botte.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "nourrir": [
+      {
+        "texte": "Il renifle {outil}, déçu : ce n'est pas de la viande. Il la croque quand même à grands bruits de mâchoire ; la faim ne fait pas de manières.",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il attrape ton offrande au vol, file sous le banc pour la manger à l'abri, puis revient s'asseoir devant toi, l'air de demander la suite.",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il mange dans ta main, délicatement, puis se couche contre ta jambe. Pour lui, c'est décidé : tu es à lui.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Il hésite longtemps en grondant, puis s'approche en rampant, arrache la nourriture de tes doigts et s'enfuit à toute allure.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu le nourris sous la lanterne du saloon. Derrière la vitre du Keane, le gros chat roux vous observe avec un mépris souverain.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Il glapit et roule dans la boue, puis s'enfuit en boitant plus fort, la queue entre les pattes. Sur sa caisse, le crieur te lance un regard noir.",
+        "effets": {
+          "honneur": -1,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il encaisse le coup sans un bruit et se couche à plat ventre, comme s'il avait l'habitude. C'est pire qu'un cri.",
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te saute dessus avant que ton poing ne parte et te plante les crocs dans l'avant-bras.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -8,
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Le vétéran se dresse sur sa béquille : « Frapper un chien ! T'as donc rien de mieux à frapper, lâche ? » Des passants hochent la tête.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il ne comprend pas. Il revient vers toi en rampant, la queue basse, et te lèche la main. Tu te sens plus petit que lui.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -2
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Il glapit et s'effondre, une plaie au flanc. Il essaie de se relever, retombe, et te regarde sans comprendre.",
+        "effets": {
+          "honneur": -2,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il esquive d'un bond et fonce sous le banc, d'où il gronde, les crocs à nu.",
+        "effets": {
+          "relation": -4,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il se jette sur toi le premier et te mord la cuisse jusqu'au sang, avant que {outil} ne l'envoie rouler dans la boue.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Le crieur hurle, le vétéran jure, et le boucher sort de sa boutique, un hachoir à la main : « Pas le chien, bon Dieu ! » Le chien en profite pour filer.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -5,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Le coup est fatal. Le chien meurt sous le banc où il dormait. Personne ne l'entend, sauf le vétéran, qui ne prononcera plus jamais ton nom.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -3,
+          "relation": -5,
+          "etat": "mort"
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Le coup de feu claque. Le chien roule dans la boue et ne bouge plus. Au bout de la rue, le crieur lâche toute sa pile de journaux.",
+        "effets": {
+          "honneur": -3,
+          "prime": 5,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "La balle lui érafle le flanc. Il hurle et file en boitant vers le ruisseau, laissant une traînée rouge dans la boue.",
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "La balle soulève une gerbe de boue à côté de lui. Il détale si vite qu'il renverse un seau devant la boucherie.",
+        "effets": {
+          "prime": 5,
+          "relation": -4,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Le coup de feu réveille la rue. Quelqu'un crie « Encore les O'Driscoll ! » et des lanternes s'allument aux fenêtres. Sous le banc, le chien ne respire plus.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -3,
+          "prime": 5,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Il bondissait vers ta gorge, babines retroussées. Ta balle l'arrête en plein saut ; il retombe à tes pieds. Tu as les mains qui tremblent.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -5,
+          "etat": "mort"
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Touché à la hanche, il glapit et s'enfuit en boitant sous le porche du magasin général.",
+        "effets": {
+          "honneur": -1,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il croit à un jeu ! Il court après ce que tu as lancé, le renifle, et revient vers toi tout content, la queue en hélice.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il esquive d'un bond. Ce qui l'a frôlé roule dans la boue ; il le renifle avec méfiance, puis te fixe, l'air de demander : pourquoi ?",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il ne s'écarte même pas. Il te regarde, la tête penchée, persuadé que tu as juste raté ton lancer de bâton.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Touché, il ne fuit pas : il charge, babines retroussées, et te mord la botte jusqu'au cuir.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -3,
+          "relation": -2,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Le nœud coulant se resserre autour de son cou. Il se débat, s'étrangle à moitié, puis s'assoit, résigné, et te regarde avec des yeux de chien battu. Ce qu'il est.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il se faufile sous la boucle, file entre les jambes du cheval attaché et disparaît derrière le Smithfield's.",
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il se laisse prendre en remuant la queue, comme si la corde était une laisse. Peut-être qu'il en rêvait.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Pris au lasso, il se retourne et ronge la corde à pleins crocs en grondant. Il est libre avant que tu aies fait trois pas.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -2,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu le dessines couché sous le banc, le museau sur les pattes, une oreille dressée et l'autre déchirée. Il lève la tête chaque fois que ton crayon gratte le papier."
+      },
+      {
+        "texte": "Il ne tient pas en place : il vient renifler {outil}, puis ton crayon, puis ta main. Ton croquis ressemble à un coyote flou.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu le dessines à la lueur des fenêtres du saloon, roulé en boule contre la jambe valide du vétéran.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Assis à tes pieds, il pose fièrement, la tête haute, comme s'il comprenait qu'on fait son portrait. Sur la page, il a presque l'air d'un chien de bonne maison.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Le magnésium le fait sursauter : il aboie trois fois contre l'appareil, puis vient le renifler, intrigué."
+      },
+      {
+        "texte": "Il s'assoit pile devant l'objectif, la langue pendante. Sur la plaque, on ne verra que sa truffe, énorme et floue."
+      },
+      {
+        "texte": "Il vient se coller contre ta jambe pour être sur la photo avec toi.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Dans le noir, la plaque ne garde que deux yeux qui brillent sous le banc.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Côtes saillantes, oreille déchirée, patte arrière qui boite : il a la maigreur des chiens qui ont trop attendu. Mais ses yeux suivent chaque passant avec espoir."
+      },
+      {
+        "texte": "Il fait sa tournée : la boucherie, l'arrière du saloon, les jambes du crieur, le banc du vétéran. Chaque arrêt a son odeur, et chaque odeur sa promesse."
+      },
+      {
+        "texte": "Quand le balafré sort du Smithfield's pour aller voir son cheval, le chien se plaque au sol, le poil hérissé, et gronde si bas qu'on l'entend à peine.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il hurle avec le sifflet du train de nuit, puis se tait, gêné, et retourne se coucher sous le banc.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il ne te quitte pas des yeux. Où que tu ailles dans la rue, sa tête te suit, comme une aiguille de boussole.",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu le suis derrière la boucherie. Il gratte la terre au pied d'une palissade et déterre fièrement un os à moitié rongé, qu'il dépose à tes pieds.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te mène par les ruelles jusqu'à l'arrière du Smithfield's et gratte avec insistance sous une caisse : un sac de toile enterré à la hâte, trois dollars et une montre cabossée.",
+        "effets": {
+          "argent": 3
+        }
+      },
+      {
+        "texte": "Il s'aperçoit que tu le suis, s'arrête, revient vers toi, repart, revient : il ne sait plus très bien qui suit qui.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te conduit jusqu'à l'enclos, aboie trois fois contre Lucifer le taureau, depuis une distance très prudente, puis te regarde, très fier de lui.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il trotte jusqu'au ruisseau, boit longuement, puis s'assoit au bord de l'eau à regarder la lune. Tu t'assois à côté de lui. Pour une fois, aucun des deux n'est seul.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      }
+    ],
+    "adopter_chien": [
+      {
+        "texte": "Tu t'accroupis et lui tends la main. Il hésite, renifle, puis pose sa tête dans ta paume. C'est signé : désormais, il trotte dans ton ombre.",
+        "effets": {
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Il ne comprend pas tout de suite. Puis tu te remets en route, et il te suit ; tu t'arrêtes, il s'arrête. Le crieur hurle à la rue : « SCOOP A TROUVÉ UN MAÎTRE ! »",
+        "effets": {
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Il recule en grondant. Il faudra du temps, de la nourriture et beaucoup de patience avant qu'il veuille de toi.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il te renifle longuement, puis s'éloigne vers le vétéran et se couche contre lui. Même un chien errant choisit ses maîtres.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il n'attendait que ça : il bondit, pose ses pattes boueuses sur ta poitrine et te lèche le menton. Le vétéran grogne : « Prends soin de lui, soldat. C'était le meilleur caporal de Valentine. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Il te suit jusqu'à ton campement et se couche en travers de l'entrée, une oreille dressée. Plus personne ne s'approchera de toi sans qu'il le sache.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 3
+        }
+      }
+    ],
+    "ordonner_attaque_chien": [
+      {
+        "texte": "« Attaque ! » Il hésite une seconde, puis fonce et plante les crocs dans le mollet de ton adversaire. Hurlement, jurons, coup de botte : il revient vers toi, la gueule pleine de tissu.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il mord, mais l'homme le frappe à coups de crosse. Le chien revient en boitant, une oreille en sang, et se couche à tes pieds sans une plainte.",
+        "effets": {
+          "relation": 1,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il ne bouge pas. Il te regarde, la tête penchée : personne ne lui a jamais appris ce mot-là.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il part comme une flèche, gronde, mord, esquive la botte et revient se placer devant toi, le poil hérissé, prêt à recommencer. Un vrai chien de garde.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il obéit, mais il mord trop fort et trop longtemps. Les passants s'écartent : on raconte déjà que l'étranger a dressé un chien enragé.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Ton ennemi, c'est le balafré du Smithfield's ? Le chien n'attendait que ça : il lui saute dessus avec une rage de vieille rancune.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "siffler_chien": [
+      {
+        "texte": "Tu siffles entre tes doigts. Ses oreilles se dressent et il arrive au galop, éclaboussant de boue la robe d'une passante.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il lève la tête, hésite, regarde le crieur, regarde le vétéran, puis vient vers toi au petit trot.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il apparaît avant même la fin de ton sifflement, comme s'il t'attendait, et se colle contre ta jambe.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il t'entend, te regarde de loin, et s'enfonce dans la ruelle derrière la boucherie. Il ne reviendra pas pour ce sifflet-là.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Un aboiement répond dans le noir, puis des pattes dans la boue, et une truffe froide se glisse dans ta main.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "jouer_baton_chien": [
+      {
+        "texte": "Tu lances un bâton au bout de la rue. Il part comme une balle, dérape dans la boue, rate le bâton, le retrouve et te le rapporte, crotté jusqu'aux oreilles.",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il regarde le bâton s'envoler, puis te regarde, perplexe. Personne ne lui a jamais appris ce jeu. Il finit par aller le chercher, pour te faire plaisir.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le bâton atterrit près du cheval attaché. Le chien s'arrête net, gronde contre la monture de l'O'Driscoll, puis rapporte le bâton en faisant un grand détour.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te rapporte le bâton vingt fois de suite, puis le pose à tes pieds et s'effondre, langue pendante, heureux comme un roi.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Le crieur abandonne ses journaux pour jouer avec vous. Pendant dix minutes, plus personne à Valentine n'apprend les nouvelles.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      }
+    ],
+    "baptiser_chien": [
+      {
+        "texte": "Tu lui donnes un nom. Il penche la tête, comme pour l'essayer. Au troisième appel, il répond.",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« Il s'appelle déjà Scoop ! » proteste le crieur. « Caporal ! » grogne le vétéran. Le chien, lui, répond à tous les noms à la fois, pourvu qu'il y ait à manger.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu prononces son nouveau nom, et il aboie une fois, comme pour signer le registre.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Le vétéran approuve d'un hochement de tête : « Un nom, c'est le début. Après, ça devient une famille. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu lui murmures son nom à la lueur de la lanterne. Il soupire et s'endort, le museau sur ta botte.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ]
+  }
+}

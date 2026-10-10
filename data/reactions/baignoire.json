@@ -1,0 +1,457 @@
+{
+  "id": "baignoire",
+  "description": "Une grande baignoire en fonte émaillée sur quatre pattes de lion, dans une petite pièce carrelée au fond du couloir de l'hôtel. À côté attendent un seau d'eau fumante, un pain de savon jaune et une brosse en chiendent.",
+  "repliques": [
+    "*L'eau chaude fume doucement dans la baignoire.*",
+    "Un robinet goutte : plic... plic... plic.",
+    "Une odeur de savon au suif flotte dans le couloir."
+  ],
+  "reactions": {
+    "boire_eau": [
+      {
+        "texte": "Tu te penches et tu bois l'eau tiède de la baignoire. Elle a un goût de savon et de rouille ; ton estomac proteste en silence.",
+        "effets": {
+          "sante": -2
+        }
+      },
+      {
+        "texte": "L'eau du seau est encore propre : tu en avales une longue gorgée chaude qui te rappelle le café, sans le café.",
+        "effets": {
+          "sante": 2
+        }
+      },
+      {
+        "texte": "Tu bois dans le creux de ta main. Dans l'embrasure, la gérante pince les lèvres : « On boit au pichet, monsieur. Pas dans la baignoire. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu bois sans état d'âme l'eau grise où tu viens de te décrasser. Même le rat de la boucherie aurait plus de manières.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu croques la baignoire dans {outil} : les pattes de lion, la vapeur en volutes, le savon sur le rebord. Un luxe que peu de gens d'ici connaissent."
+      },
+      {
+        "texte": "À la lueur d'une lampe à pétrole, tu dessines la baignoire dans {outil}. Les ombres des pattes griffues s'allongent sur le carrelage comme des bêtes tapies.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu dessines la baignoire dans {outil} et, sans trop savoir pourquoi, tu ajoutes une main qui dépasse de l'eau. Tu refermes vite le carnet.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "La buée gondole la page pendant que tu dessines dans {outil}. Le résultat ressemble à un cochon sur pattes de lion."
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la baignoire. Ça heurte l'émail avec un bruit de cloche fêlée et retombe dans l'eau. Une voix crie dans le couloir : « Qu'est-ce que c'est que ce vacarme ? »"
+      },
+      {
+        "texte": "Tu envoies {outil} dans la baignoire. Plouf. Une gerbe d'eau savonneuse trempe le carrelage, tes bottes et ta dignité."
+      },
+      {
+        "texte": "En pleine nuit, tu lances {outil} sur la baignoire. Le fracas réveille tout l'étage ; des jurons fusent à travers les cloisons et quelqu'un tape au mur avec une botte.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu lances {outil} sur la baignoire pour faire diversion. La gérante accourt, découvre le carrelage inondé et te dévisage un peu trop longtemps : ce visage-là, elle l'a vu sur l'avis de recherche.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "nager": [
+      {
+        "texte": "Tu essaies de nager dans la baignoire. Deux brasses, et ta tête cogne le robinet. L'eau déborde en vague sur le carrelage.",
+        "effets": {
+          "sante": -2
+        }
+      },
+      {
+        "texte": "Tu fais la planche, les genoux sous le menton, en imitant un bateau à aubes du Mississippi. C'est ridicule, et délicieusement chaud.",
+        "effets": {
+          "sante": 2
+        }
+      },
+      {
+        "texte": "Tu barbotes bruyamment. La gérante ouvre la porte d'un coup sec : « C'est un bain, monsieur, pas le Mississippi. Cinquante cents de plus pour la serpillière. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Tu nages sur place, la nuit, dans l'eau qui refroidit. Par la fenêtre ouverte, le piano du saloon de Keane joue faux une valse de La Nouvelle-Orléans.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Une baignoire en fonte, pattes de lion, émail à peine écaillé. Un anneau gris marque le niveau de l'eau : le dernier client était un vacher, ou un cochon."
+      },
+      {
+        "texte": "Sur le rebord : un pain de savon jaune, une brosse en chiendent et un écriteau à la main : « Bain : 50 cents. Eau changée tous les trois clients. »"
+      },
+      {
+        "texte": "Dans le noir, l'eau refroidit sans bruit. Un reflet de lune tremble à sa surface, et de petites traces de pattes marquent le rebord : le rat de la boucherie fait des visites.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu examines la baignoire en pensant à autre chose : on y est nu, désarmé, dos à la porte. Le meilleur endroit de Valentine pour se faire abattre.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "pecher": [
+      {
+        "texte": "Tu lances ta ligne dans la baignoire avec un sérieux absolu. Au bout d'un moment, tu remontes un bouchon de liège et un cheveu qui n'est pas à toi."
+      },
+      {
+        "texte": "Tu pêches dans la baignoire. La gérante passe la tête par la porte, te regarde longuement, puis referme sans un mot. Tu l'entends soupirer dans l'escalier.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu pêches à la lueur d'une lampe posée sur le carrelage. Ton hameçon accroche le savon. C'est la plus belle prise de la soirée.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Ta ligne s'emmêle dans la brosse à dos. Tu passes dix minutes à démêler le tout, trempé jusqu'aux coudes, en jurant comme un charretier."
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Le magnésium éclate dans la pièce carrelée. Sur la plaque, la baignoire à pattes de lion, nimbée de vapeur, a l'air d'une réclame de Saint Denis."
+      },
+      {
+        "texte": "Tu installes {outil} face à la baignoire. La gérante surgit : « Pas de photographies dans la salle de bains. C'est un établissement respectable. » Tu appuies quand même.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le flash illumine la salle de bains d'un coup. Sur la plaque, on devine dans l'eau sombre une forme qui ressemble à un visage. Sûrement un reflet.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "se_laver": [
+      {
+        "texte": "Tu te débarbouilles avec l'eau du seau et le savon jaune. La crasse de la piste coule en ruisseaux bruns. Tu as l'air presque fréquentable.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "L'eau a refroidi. Tu te laves en grelottant, les dents serrées, et tu ressors propre comme un sou neuf, la peau couleur de lavande.",
+        "effets": {
+          "sante": 2
+        }
+      },
+      {
+        "texte": "Tu te savonnes sans payer. La gérante frappe trois coups secs : « Cinquante cents, monsieur. Même pour une toilette de chat. » Tu poses la pièce sur le rebord.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1,
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu te laves vite, le revolver sur le tabouret, l'oreille tendue vers l'escalier. L'eau rince un sang séché que tu préférerais ne pas expliquer.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu frottes, tu frottes, et l'eau devient noire. Certaines taches, pourtant, ne partent pas au savon. Tu le sais mieux que personne.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle traverse l'émail avec un bruit de gong. Un jet d'eau jaillit par le trou et inonde le carrelage. En bas, la gérante hurle qu'on va lui payer ça.",
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu vides ton chargeur sur la baignoire. Elle devient un arrosoir géant ; l'eau dévale l'escalier jusqu'au hall. On entend l'adjoint arriver au pas de course, déjà la main sur son arme.",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Le coup de feu claque dans l'hôtel endormi. La balle ricoche sur la fonte, siffle à ton oreille et t'entaille la joue avant de se loger dans le chambranle. Des portes s'ouvrent, on crie.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -1,
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu tires sur une araignée grosse comme un dollar perchée sur le rebord. Tu la manques, tu troues la baignoire, et tu laisses deux dollars à la gérante avec tes excuses.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      }
+    ],
+    "nettoyer": [
+      {
+        "texte": "Tu récures l'anneau de crasse avec la brosse en chiendent. Ça te prend un quart d'heure et tout ton vocabulaire, mais la baignoire brille comme au premier jour."
+      },
+      {
+        "texte": "En nettoyant sous le rebord, tu trouves un as de cœur roulé en cylindre, de la taille d'une manche. Quelqu'un, en ville, triche aux cartes."
+      },
+      {
+        "texte": "Tu frottes la baignoire avant de partir. La gérante, stupéfaite, ajuste ses lunettes : « Vous êtes le premier client en six ans. » Elle te rend une pièce.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 1
+        }
+      },
+      {
+        "texte": "Tu nettoies la baignoire avec un soin inquiétant, en insistant sur des taches rouges que personne d'autre n'aurait remarquées.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "prendre_bain_chaud": [
+      {
+        "texte": "Tu poses tes cinquante cents sur le rebord et tu t'enfonces dans l'eau brûlante. Les courbatures de la piste fondent une à une. Pour la première fois depuis des semaines, tu fermes les yeux sans la main sur ton arme.",
+        "effets": {
+          "argent": -1,
+          "sante": 25
+        }
+      },
+      {
+        "texte": "La gérante verse elle-même le dernier seau, le nez plissé : « Savon, brosse, serviette. On ne chante pas, on ne fume pas, et on ne traîne pas plus d'une demi-heure. » Tu obéis presque à tout.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1,
+          "sante": 20
+        }
+      },
+      {
+        "texte": "Bain de minuit à la lueur d'une bougie. L'eau est à peine tiède, mais l'hôtel est silencieux et, au loin, le piano du saloon joue une berceuse de travers.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "sante": 15
+        }
+      },
+      {
+        "texte": "Tu prends ton bain le revolver en équilibre sur le tabouret, le chien armé. Chaque grincement de plancher te fait sursauter et l'eau déborde. Un bain, oui ; un repos, pas vraiment.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -1,
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Tu te prélasses avec un cigare et une bouteille entamée jusqu'à ce que l'eau vire au brun. La gérante te facture le double pour récurer la baignoire.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -2,
+          "sante": 20
+        }
+      },
+      {
+        "texte": "Le joueur de poker sort de la baignoire au moment où tu entres, rasé de près et parfumé comme une danseuse. Il te laisse son eau tiède avec un clin d'œil. Au fond, collée à l'émail, une carte à jouer.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1,
+          "sante": 15
+        }
+      }
+    ],
+    "retenir_souffle_sous_eau": [
+      {
+        "texte": "Tu glisses sous l'eau, les yeux ouverts. Les bruits de l'hôtel deviennent sourds et lointains. Tu tiens quarante secondes avant de remonter en crachant comme un phoque."
+      },
+      {
+        "texte": "Tu restes si longtemps sous l'eau que la gérante, inquiète du silence, entre en trombe avec une serviette : « On ne meurt pas dans mon hôtel, monsieur ! »"
+      },
+      {
+        "texte": "Des bottes montent l'escalier. Tu plonges sous la mousse. On ouvre la porte, quelqu'un marmonne « Personne » et repart. Tu remontes, les poumons en feu, invisible et vivant.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -2
+        }
+      },
+      {
+        "texte": "Tu plonges quand la porte s'ouvre. Hélas, tes bottes boueuses dépassent du rebord. La voix nerveuse de l'adjoint glapit : « Sortez de là, les mains en l'air ! »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -2
+        }
+      },
+      {
+        "texte": "Sous l'eau, dans le noir, ton cœur bat comme un tambour de guerre. Une seconde, tu revois des visages que tu croyais oubliés. Tu remontes d'un coup, haletant.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "noyer_ennemi_baignoire": [
+      {
+        "texte": "Tu traînes l'homme jusqu'à la baignoire et tu lui maintiens la tête sous l'eau. Il griffe la fonte, se débat, puis ses bulles s'espacent. Quand tu le lâches, l'eau ne bouge plus. Tu n'oublieras jamais ce silence.",
+        "effets": {
+          "honneur": -5,
+          "prime": 100
+        }
+      },
+      {
+        "texte": "L'homme se débat si fort qu'il te balance un coude en pleine pommette et t'entraîne dans l'eau. Vous luttez, trempés, jusqu'à ce qu'il cesse de bouger. Tu ressors en sang.",
+        "effets": {
+          "honneur": -4,
+          "prime": 100,
+          "sante": -15
+        }
+      },
+      {
+        "texte": "Les éclaboussures alertent tout l'étage. La gérante arrive, voit la scène et s'enfuit en hurlant « Au meurtre ! » jusque dans la rue principale.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -5,
+          "prime": 150
+        }
+      },
+      {
+        "texte": "En pleine nuit, sans un bruit, tu maintiens ton ennemi sous l'eau jusqu'au bout. Le croque-mort viendra le mesurer en sifflotant ; toi, tu ne dormiras plus jamais tout à fait.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -5,
+          "prime": 50
+        }
+      },
+      {
+        "texte": "Tu lui enfonces la tête sous l'eau... puis tu le relèves, toussant et crachant. « La prochaine fois, je ne te sors pas. » Il file en caleçon dans le couloir, sans demander son reste.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ],
+    "laver_linge_baignoire": [
+      {
+        "texte": "Tu fourres chemise, pantalon et chaussettes dans la baignoire et tu piétines le tout comme du raisin. L'eau devient couleur café ; tes vêtements, eux, redeviennent couleur vêtements."
+      },
+      {
+        "texte": "Ton linge sent le savon au suif plutôt que la sueur, la poudre et le cheval. Tu l'étends à la fenêtre ; en bas, le gamin des rues siffle en voyant ton caleçon rapiécé."
+      },
+      {
+        "texte": "La gérante te surprend en train de tordre ton pantalon : « C'est une baignoire, pas un lavoir ! Le ruisseau est au sud, si ça vous chante. » Supplément de cinquante cents.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Tu laves une chemise tachée de sang à grande eau. L'eau rosit, puis rougit. Tu vides vite la baignoire en espérant que personne ne pose de questions.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "chanter_dans_le_bain": [
+      {
+        "texte": "Tu entonnes « Oh! Susanna » à pleins poumons ; l'écho du carrelage te donne une voix de ténor d'opéra. Dans la chambre voisine, quelqu'un finit par reprendre le refrain."
+      },
+      {
+        "texte": "Tu siffles, tu chantes, tu fais des bulles en imitant une contrebasse. Pour un homme armé de passage, tu as l'air parfaitement heureux."
+      },
+      {
+        "texte": "Tu chantes faux et fort en pleine nuit. Trois coups de canne contre le mur, puis une voix d'homme : « Si tu ne te tais pas, l'ami, c'est moi qui te noie ! »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "La gérante tambourine à la porte : « On ne chante pas dans mes bains ! » Tu baisses d'un ton, puis tu reprends de plus belle. Elle note quelque chose dans son registre, l'air sinistre.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu chantes le vieux cantique que ta mère fredonnait. Dans le couloir, les pas s'arrêtent ; quand tu te tais, une femme de chambre essuie discrètement une larme.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      }
+    ]
+  }
+}

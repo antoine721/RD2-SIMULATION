@@ -1,0 +1,395 @@
+{
+  "id": "cloche",
+  "description": "Une cloche de bronze verdi, grosse comme un tonneau, suspendue sous le clocher de l'église à une poutre de chêne noircie. Une longue corde effilochée descend jusqu'au porche, et on lit encore sur sa robe : « Fondue à Saint Denis, 1871 ».",
+  "repliques": [
+    "La cloche tinte doucement dans le vent.",
+    "Dong... Dong... L'angélus de midi roule sur la rue principale.",
+    "Un pigeon s'envole du clocher en battant des ailes."
+  ],
+  "reactions": {
+    "observer": [
+      {
+        "texte": "Une lourde cloche de bronze verdi, pendue à une poutre de chêne. Sur sa robe, en lettres en relief : « Fondue à Saint Denis, 1871 — Que celui qui l'entend se repente »."
+      },
+      {
+        "texte": "Tu remarques une petite bosse sur le bord de la cloche, ronde et nette : l'impact d'une balle de revolver, très ancienne."
+      },
+      {
+        "texte": "Au clair de lune, la cloche luit faiblement dans le clocher. Le vent la fait frémir sans qu'elle ose tout à fait sonner.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Un pigeon a fait son nid sur la poutre, juste au-dessus de la cloche. Il va avoir une drôle de surprise à midi.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines dans {outil} la cloche sous son petit toit pointu, avec la corde qui pend comme une queue de cheval."
+      },
+      {
+        "texte": "Tu croques la cloche à contre-jour. Le soleil allume dans le bronze des reflets verts impossibles à rendre au crayon.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Sur la page de {outil}, la cloche nocturne devient une grosse lune noire suspendue au-dessus de la ville.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu cadres la cloche au fond de son clocher. Sur la plaque, elle n'est qu'une tache sombre sous un toit pointu."
+      },
+      {
+        "texte": "En plein soleil, ton cliché saisit la cloche, la corde et un pigeon effaré en plein envol. La meilleure photographie de ta journée.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu tentes de photographier la cloche dans le noir. L'éclair de magnésium illumine le clocher et réveille tous les pigeons d'un coup.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle frappe le bronze : DONNNG ! Le son roule sur toute la ville. Les chevaux hennissent, les passants se jettent dans la boue.",
+        "effets": {
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le ricochet revient vers toi en sifflant et t'entaille la joue. La cloche, elle, s'en moque bien.",
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Ton coup de feu fait sonner la cloche en pleine nuit. Les fenêtres s'allument une à une, et l'adjoint sort en caleçon long, fusil à la main.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu fais sonner la cloche à coups de balles, une, deux, trois fois. Le gamin applaudit, perché sur l'abreuvoir ; Malloy, lui, n'applaudit pas.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu vides ton barillet sur la cloche, qui sonne comme un glas détraqué. On dira plus tard que c'est ce jour-là que le diable est arrivé à Valentine.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 5
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} vers le clocher. Il heurte la cloche avec un « ding » ridicule et retombe dans le cimetière."
+      },
+      {
+        "texte": "Ton lancer manque le clocher de deux bons mètres et atterrit sur le toit de l'église. Il y est peut-être encore."
+      },
+      {
+        "texte": "Ton projectile frappe la cloche dans le silence de la nuit : un tintement grave réveille les chiens de toute la rue.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le gamin te regarde lancer {outil} et ricane : « Laisse, je vais te montrer. » D'un caillou à la fronde, il fait tinter la cloche du premier coup.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "detruire": [
+      {
+        "texte": "Tu grimpes au clocher et cognes la cloche à grands coups de crosse. Tu n'y gagnes qu'une épaule endolorie et un bourdonnement d'oreilles pour trois jours.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu tranches la corde et dégondes la cloche, qui passe à travers le plancher du porche dans un fracas de fin du monde. Elle est fêlée de part en part.",
+        "effets": {
+          "etat": "detruit",
+          "honneur": -3,
+          "prime": 15
+        }
+      },
+      {
+        "texte": "En pleine nuit, tu fais basculer la cloche de sa poutre. Elle s'écrase sur le parvis dans un dernier son lugubre, et toute la ville se réveille en croyant au tremblement de terre.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -3,
+          "prime": 20
+        }
+      },
+      {
+        "texte": "Tu t'attaques à la poutre à coups de talon. Le pasteur monte l'échelle derrière toi : « Elle a survécu à la guerre et à pire que toi. Elle te survivra aussi. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "La cloche fendue gît dans la boue. Le pasteur la regarde longtemps, puis lève les yeux vers toi : « Tu viens de faire taire la seule voix de cette ville qui ne mentait jamais. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -3,
+          "prime": 15
+        }
+      }
+    ],
+    "faire_sauter": [
+      {
+        "texte": "Tu cales {outil} sous la poutre et allumes la mèche. L'explosion arrache le clocher ; la cloche s'envole et retombe au milieu du cimetière. Le croque-mort, ravi, sort son mètre ruban.",
+        "effets": {
+          "etat": "detruit",
+          "honneur": -4,
+          "prime": 50
+        }
+      },
+      {
+        "texte": "La mèche s'éteint dans le courant d'air du clocher. Quand tu redescends, le pasteur t'attend au pied de l'échelle, les bras croisés : « Le Seigneur donne une seconde chance. Rarement une troisième. »",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "L'explosion illumine la nuit. Un dernier coup de cloche, monstrueux, roule jusqu'aux collines ; puis plus rien, que des cris et des chiens.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -4,
+          "prime": 50
+        }
+      },
+      {
+        "texte": "La dynamite déchiquette le clocher en plein jour. Une pluie de planches blanches s'abat sur la rue ; Malloy, l'adjoint et le chasseur de primes courent tous vers toi.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -5,
+          "prime": 75
+        }
+      },
+      {
+        "texte": "Tu fais sauter la cloche pour attirer toute la ville vers l'église. Pendant ce temps, la banque est vide de témoins... mais ta prime, elle, enfle à vue d'œil.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "detruit",
+          "honneur": -4,
+          "prime": 75
+        }
+      }
+    ],
+    "sonner_la_cloche": [
+      {
+        "texte": "Tu tires de toutes tes forces sur la corde. DONG... DONG... Le bronze roule sur Valentine ; des chiens hurlent, des têtes sortent aux fenêtres."
+      },
+      {
+        "texte": "Tu sonnes en pleine nuit. Toute la ville se réveille en sursaut : les lampes s'allument, l'adjoint jaillit en chemise, fusil à la main, et Malloy jure qu'il va pendre le sonneur.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu sonnes midi avec un peu d'avance. Le chef de gare sort, montre en main, furieux : « Il est onze heures quarante-sept ! Onze heures quarante-sept ! »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu sonnes pour l'office. Quelques fidèles pressent le pas, et le pasteur te remercie d'un signe de tête depuis le parvis.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu fais sonner la cloche à toute volée, encore et encore, rien que pour le plaisir de voir la ville trembler. Le croque-mort sort de sa boutique, plein d'espoir.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Mauvaise idée : tous les regards se lèvent vers le clocher, et l'adjoint qui accourt reconnaît ton visage de l'affiche.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      }
+    ],
+    "sonner_le_tocsin": [
+      {
+        "texte": "Tu sonnes le tocsin à coups précipités. Les hommes sortent armés, les femmes rassemblent les enfants, et Malloy accourt, colt au poing : « Où ça ? Les O'Driscoll ? »"
+      },
+      {
+        "texte": "Le tocsin déchire la nuit. En dix minutes, la moitié des hommes de Valentine sont dans la rue en caleçon, fusil en main. Quand ils comprennent qu'il n'y a rien, ils se tournent vers toi.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Tu sonnes l'alarme en voyant des cavaliers O'Driscoll descendre des collines. Grâce à toi, la ville se barricade à temps ; Malloy te serre la main sans un mot.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 3
+        }
+      },
+      {
+        "texte": "Ton tocsin vide les rues : les volets claquent, et le caissier verrouille la banque en tremblant, persuadé que c'est enfin le braquage.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu sonnes le tocsin pour vider la rue. Pendant que tout le monde court vers l'église, la banque et le magasin général restent sans surveillance...",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "L'adjoint te reconnaît au pied du clocher : « C'est lui, sur l'affiche ! C'est un piège ! » crie-t-il en dégainant bien trop vite.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10
+        }
+      }
+    ],
+    "sonner_le_glas": [
+      {
+        "texte": "Tu sonnes le glas, un coup lent toutes les dix secondes. La rue s'arrête ; les hommes ôtent leur chapeau sans savoir pour qui."
+      },
+      {
+        "texte": "Au son du glas, la veuve sort sur le pas de sa porte, une main sur la bouche. Elle croit qu'on a pendu un O'Driscoll.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le glas résonne dans la nuit. Le croque-mort sort de sa boutique en se frottant les mains : « Enfin ! Qui est-ce ? »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu sonnes le glas pour un homme que tu as abattu. En bas, sur le parvis, le pasteur s'agenouille et prie, les yeux fermés.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu sonnes le glas pour le mari de la veuve, qu'on n'avait jamais sonné. Elle vient te remercier, les yeux secs et durs : « Maintenant, aidez-moi à trouver ceux qui l'ont tué. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Le croque-mort accourt, mètre ruban en main, et te dévisage de haut en bas : « Pour toi, déjà ? Tu as pourtant l'air bien vivant. »",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "graver_la_cloche": [
+      {
+        "texte": "Tu grattes ton nom dans le bronze avec {outil}. Ça prend une heure, la lame s'émousse, et les lettres ressemblent à des pattes de poule. Mais il est là pour cent ans."
+      },
+      {
+        "texte": "Sous ta lame, tu découvres d'autres noms gravés, plus anciens. L'un d'eux, à demi effacé, dit seulement : « W. — pardonne-moi »."
+      },
+      {
+        "texte": "Tu graves ton nom à la lueur d'une allumette. Un pigeon te fiente dessus en guise de bénédiction.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le pasteur te surprend, {outil} à la main : « Tu veux laisser une trace ? Fais-le dans le cœur des gens, ça s'efface moins vite. » Il te laisse finir quand même.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu graves en lettres profondes ton nom et le compte de tes victimes. La cloche portera ton sinistre palmarès à chaque office.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ]
+  }
+}

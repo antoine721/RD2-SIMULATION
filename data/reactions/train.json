@@ -1,0 +1,520 @@
+{
+  "id": "train",
+  "description": "Une locomotive noire aux cuivres étincelants qui halète et crache sa vapeur, suivie d'un tender plein de charbon, d'un wagon postal aux portes blindées et de trois voitures de voyageurs vert bouteille. La cloche tinte à chaque départ et le sifflet s'entend jusqu'au ruisseau.",
+  "repliques": [
+    "*TCHOU-TCHOUUUU !*",
+    "La locomotive souffle un nuage de vapeur sur le quai.",
+    "Les wagons grincent et s'entrechoquent sur les rails."
+  ],
+  "reactions": {
+    "monter_dans": [
+      {
+        "texte": "Tu grimpes le marchepied de la voiture de voyageurs. Ça sent le tabac froid et le cuir ; un contrôleur moustachu te tend une main gantée : « Billet, monsieur ? »"
+      },
+      {
+        "texte": "Une banquette de bois, une fenêtre qui ne ferme pas, une famille de Rhodes qui mange du poulet froid. Le train s'ébranle et Valentine rapetisse derrière la vitre.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La voiture est plongée dans la pénombre ; les lampes à pétrole tanguent au plafond. Un passager ronfle, un autre te dévisage sous le bord de son chapeau.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "À peine assis, tu vois le contrôleur chuchoter avec un homme à étoile d'argent au fond de la voiture. Ils regardent tous deux dans ta direction.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Une vieille dame te cède la place près de la fenêtre : « Vous êtes celui qui a aidé tout le monde à Valentine, n'est-ce pas ? Asseyez-vous donc, jeune homme. »",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "escalader": [
+      {
+        "texte": "Tu agrippes l'échelle de fer à l'arrière d'un wagon et te hisses sur le toit. La tôle est brûlante, et la fumée de la locomotive te pique les yeux."
+      },
+      {
+        "texte": "Debout sur le toit, tu vois toute Valentine, les prés jaunes et la Dakota au loin. Le chef de gare hurle depuis le quai : « Descendez ! C'est interdit par le règlement, article 12 ! »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Ta botte glisse sur la tôle humide de rosée ; tu te rattrapes de justesse à une cheminée de ventilation, les genoux écorchés.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -8
+        }
+      },
+      {
+        "texte": "Tu atterris sur le tender et t'enfonces jusqu'aux genoux dans le charbon. Le chauffeur te regarde, sa pelle en l'air, bouche bée."
+      }
+    ],
+    "braquer": [
+      {
+        "texte": "Tu tires en l'air dans la voiture de voyageurs : « Les mains en l'air, portefeuilles dans le sac ! » Montres, bagues et dollars pleuvent dans ton chapeau.",
+        "effets": {
+          "argent": 80,
+          "prime": 100,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Tu forces le gardien du wagon postal à ouvrir. Il tremble en tournant la combinaison : dans le coffre, la paie des ranchs de la région, en liasses neuves.",
+        "effets": {
+          "argent": 150,
+          "prime": 150,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Un passager tire un revolver de sa veste et fait feu. Tu ripostes, il s'effondre, tout le train hurle, et tu files avec un maigre butin et une balle dans le bras.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 40,
+          "sante": -30,
+          "prime": 150,
+          "honneur": -5
+        }
+      },
+      {
+        "texte": "Dans le noir, personne ne voit ton visage. Tu traverses les voitures comme une ombre, un sac à la main, et sautes du train avant le pont de la Dakota.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 90,
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Une petite fille te tend sa poupée en pleurant, persuadée que tu veux tout prendre. Tu la lui rends, laisses les voyageurs tranquilles et ne vides que le coffre du wagon postal.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 100,
+          "prime": 100,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Un marshal en civil te reconnaît au premier mot. Échange de coups de feu, vitres brisées, cris : tu sautes du train les mains vides.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -20,
+          "prime": 50,
+          "honneur": -2
+        }
+      }
+    ],
+    "conduire": [
+      {
+        "texte": "Tu pousses le régulateur. La locomotive hoquette, crache, puis s'ébranle dans un fracas de bielles. Le chef de gare court sur le quai en agitant sa montre : « Ce n'est pas l'heure ! »",
+        "effets": {
+          "prime": 20,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le mécanicien t'abandonne la cabine sous la menace. Tu lances le train vers Rhodes à pleine vapeur, la cloche sonnant à tout rompre.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 40,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu conduis le train dans la nuit, seul avec le grondement de la chaudière. Le phare creuse un tunnel de lumière dans le noir.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 30,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le mécanicien, blessé par des pillards, te confie le levier : « Gardez la vitesse et freinez avant le pont ! » Vous entrez en gare de Rhodes sous les acclamations.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 2,
+          "argent": 10
+        }
+      }
+    ],
+    "fouiller": [
+      {
+        "texte": "Sous une banquette, tu trouves un portefeuille oublié : trois dollars et la photographie d'une femme au regard sévère.",
+        "effets": {
+          "argent": 3,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Dans le porte-bagages, une valise contient des échantillons de toniques et un carnet de commandes au nom du docteur de Valentine."
+      },
+      {
+        "texte": "Les voyageurs dorment. Tu fouilles les manteaux pendus aux patères et trouves une montre en or et un billet pour Saint Denis.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 20,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Le contrôleur te surprend la main dans une valise : « Ce n'est pas votre bagage, monsieur ! » Il tire aussitôt le cordon d'alarme.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "La locomotive halète sur la voie, cuivres étincelants et bielles graisseuses. Derrière, un gardien qui ne lâche jamais son fusil veille sur le wagon postal."
+      },
+      {
+        "texte": "Des voyageurs descendent : une dame en deuil, un représentant à valise, et un homme au chapeau noir qui jette un long regard vers la banque.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le train de marchandises passe sans s'arrêter, interminable, wagon après wagon, faisant trembler les vitres de toute la rue.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Sur la porte du wagon postal, une plaque de laiton : coffre à combinaison, double serrure. Pas le genre de chose qu'on crochète. Le genre qu'on fait sauter."
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu croques la locomotive dans {outil} : la cheminée en entonnoir, le chasse-buffles, et un panache de vapeur qui déborde de la page."
+      },
+      {
+        "texte": "Le mécanicien te voit dessiner et prend la pose, une main sur le levier, l'autre sur sa moustache : « Mettez bien le cuivre, c'est moi qui le fais briller ! »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "À la lueur du foyer ouvert, la locomotive ressemble à un dragon endormi. Ton dessin n'est que noir et rouge.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu photographies la locomotive à l'instant où elle lâche sa vapeur. Le cliché semble tout droit sorti d'un journal de Saint Denis."
+      },
+      {
+        "texte": "Les voyageurs se penchent tous aux fenêtres pour figurer sur la photo, sauf un homme qui rabat son chapeau et se détourne.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "L'éclair du magnésium illumine le wagon postal ; le gardien, aveuglé, braque son fusil sur toi : « Qui va là ? »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la locomotive. Le projectile tinte sur la chaudière brûlante, et le chauffeur te menace de sa pelle à charbon."
+      },
+      {
+        "texte": "Tu lances {outil} par la fenêtre d'une voiture. Un voyageur pousse un cri, et le contrôleur passe la tête dehors en jurant comme un charretier.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu lances {outil} sur le wagon postal. Les portes blindées résonnent comme une cloche ; à l'intérieur, tu entends le gardien armer son fusil.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu vises la cheminée avec {outil}. Le train siffle à cet instant précis, comme pour se moquer de toi."
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle ricoche sur la chaudière avec un bruit de cloche. Le mécanicien se jette à plat ventre dans la cabine.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "La vitre d'une voiture explose. Panique à bord : les voyageurs se couchent, un bébé hurle, et le chef de gare souffle dans son sifflet comme un possédé.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 15,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu éteins d'une balle la lanterne du dernier wagon ; le train file dans l'obscurité, aveugle et silencieux.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu perces la citerne du tender. Un jet d'eau jaillit en sifflant, et le chauffeur jure qu'il va devoir s'arrêter au château d'eau pour rien.",
+        "effets": {
+          "prime": 5
+        }
+      }
+    ],
+    "tirer_sifflet": [
+      {
+        "texte": "Tu tires la chaîne : un hurlement de vapeur fait sursauter tout Valentine. Les chevaux de la rue se cabrent et le chat du saloon file sous le comptoir."
+      },
+      {
+        "texte": "Le chef de gare surgit, rouge de colère : « Ce sifflet signifie un départ ! Il n'y a pas de départ ! Vous déréglez l'ordre du monde ! »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le sifflet déchire la nuit. Des lampes s'allument dans toute la ville, et depuis la pension une voix lâche un juron qui ferait rougir le pasteur.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le mécanicien rit et te laisse faire : « Trois coups courts, ça porte chance ! » Tu tires trois fois, et la locomotive répond comme une bête vivante."
+      },
+      {
+        "texte": "Le coup de sifflet attire tous les regards sur la locomotive, et donc sur toi. Sur le perron du bureau du shérif, l'adjoint plisse les yeux.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "decrocher_wagons": [
+      {
+        "texte": "Tu soulèves la goupille d'attelage d'un coup d'épaule. La locomotive repart seule, et les voitures de voyageurs restent en plan sur la voie.",
+        "effets": {
+          "prime": 20,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Le contrôleur te voit faire depuis la plateforme et se met à hurler. Les wagons ralentissent, s'arrêtent, et une centaine de visages te fixent par les fenêtres.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 25,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Dans l'obscurité, tu détaches le wagon postal du convoi. Il s'immobilise lentement sur les rails : seul, sans escorte, à ta merci.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "La goupille résiste, rouillée. Le choc des tampons te coince la main entre deux wagons ; tu la retires en sang.",
+        "effets": {
+          "sante": -15
+        }
+      },
+      {
+        "texte": "Tu décroches les voitures de voyageurs juste avant que la locomotive folle ne s'engage sur le pont fragilisé. Sauvés, les passagers t'applaudissent depuis les fenêtres.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 3
+        }
+      }
+    ],
+    "dynamiter_coffre_postal": [
+      {
+        "texte": "Tu cales {outil} contre la porte du coffre et allumes la mèche. BOUM : la porte saute, et la paie des ranchs voltige dans le wagon en feuilles vertes.",
+        "effets": {
+          "argent": 150,
+          "prime": 150,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "La charge est trop forte : le wagon postal se couche sur le flanc et prend feu. Tu ne sauves que quelques liasses roussies.",
+        "effets": {
+          "argent": 40,
+          "sante": -10,
+          "prime": 150,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "L'explosion fait trembler les vitres de la banque. Tout Valentine sait en une seconde que le train vient d'être attaqué.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 120,
+          "prime": 200,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "La lueur de l'explosion illumine la plaine. Dans le coffre éventré : des sacs de pièces, des actes notariés et une lettre scellée adressée au directeur de la banque.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 130,
+          "prime": 120,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Tu fais d'abord sortir le gardien, ligoté, à bonne distance. La porte saute ; il te regarde emporter l'argent : « Au moins, vous êtes poli. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 140,
+          "prime": 120,
+          "honneur": -3
+        }
+      }
+    ],
+    "resquiller": [
+      {
+        "texte": "Tu te glisses dans un wagon de marchandises entre deux balles de foin. Le train s'ébranle ; tu voyages comme un roi, en compagnie d'un vagabond qui ronfle."
+      },
+      {
+        "texte": "Le contrôleur te déniche caché dans les toilettes : « Billet ! » Au premier ralentissement, il te jette du train dans un fossé plein de ronces.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Tu bondis sur le marchepied du dernier wagon au moment où le train démarre. Le vent glacé te fouette le visage, mais personne ne t'a vu.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Voyager sans billet, sans nom, sans trace : c'est encore la meilleure façon de semer les chasseurs de primes.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Un vieux vagabond, dans le wagon à bestiaux, te fait de la place : « Ici, tout le monde paie sa place. Avec une histoire. Raconte. »"
+      }
+    ],
+    "sauter_en_marche": [
+      {
+        "texte": "Tu sautes du marchepied et roules dans l'herbe haute. Le train s'éloigne sans toi dans un panache de vapeur.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Mal calculé : tu atterris sur le ballast et roules dans les cailloux, les côtes en feu.",
+        "effets": {
+          "sante": -20
+        }
+      },
+      {
+        "texte": "Tu sautes dans le noir sans voir le sol. Un buisson de ronces amortit ta chute, ce qui n'est pas exactement une bonne nouvelle.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -8
+        }
+      },
+      {
+        "texte": "Tu sautes juste avant l'arrêt de Valentine, là où l'adjoint t'attendait sur le quai. De loin, tu le vois inspecter les voitures une à une, en vain.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu sautes avec élégance, atterris sur tes deux pieds, et ton chapeau ne bouge même pas. Un enfant applaudit à la fenêtre.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "guetter_depuis": [
+      {
+        "texte": "Allongé sur le toit d'une voiture, tu embrasses toute la plaine : les chariots sur la route de Rhodes, les cavaliers vers les collines, et la fumée d'une ferme qui brûle au loin."
+      },
+      {
+        "texte": "Du haut du wagon, tu repères trois cavaliers qui longent la voie à distance. Mêmes manteaux, mêmes chevaux nerveux : des O'Driscoll.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Sous les étoiles, la voie est un ruban d'argent. Au loin, un feu de camp brille près des rails, là où aucun train ne devrait jamais s'arrêter.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu vois l'adjoint arpenter le quai en scrutant les fenêtres du train. Il ne pense pas une seconde à lever les yeux vers le toit.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ]
+  }
+}

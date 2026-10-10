@@ -1,0 +1,585 @@
+{
+  "id": "corbeau",
+  "description": "Un grand corbeau d'un noir bleuté, à l'œil vif comme une bille de verre. Il se perche sur les croix du cimetière et sur l'enseigne des pompes funèbres, la tête penchée, et ne quitte jamais des yeux ce qui brille.",
+  "personnalite": "Edgar, le corbeau du cimetière. Curieux, effronté, rancunier et voleur. Le croque-mort le nourrit chaque matin et lui a appris à croasser « Payez d'avance ». Il collectionne tout ce qui brille dans son nid du vieux chêne mort ; il se souvient des visages, en bien comme en mal, et le fait savoir à tous les corbeaux du comté.",
+  "repliques": [
+    "*croasse d'une voix rauque : « Payez d'avance ! »*",
+    "*fixe ta boucle de ceinturon, la tête penchée*",
+    "*sautille de croix en croix*",
+    "*fait claquer son bec sur une pièce volée*",
+    "*croasse trois fois au passage d'un cortège*"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 6,
+      "lieu": "cimetiere",
+      "activite": "dort dans son nid du vieux chêne mort"
+    },
+    {
+      "de": 6,
+      "a": 9,
+      "lieu": "cimetiere",
+      "activite": "inspecte les tombes et les offrandes"
+    },
+    {
+      "de": 9,
+      "a": 12,
+      "lieu": "boucherie",
+      "activite": "guette les déchets derrière la boucherie"
+    },
+    {
+      "de": 12,
+      "a": 15,
+      "lieu": "rue_principale",
+      "activite": "chaparde ce qui brille sur les étals et les chariots"
+    },
+    {
+      "de": 15,
+      "a": 18,
+      "lieu": "pompes_funebres",
+      "activite": "se perche sur l'enseigne du croque-mort"
+    },
+    {
+      "de": 18,
+      "a": 24,
+      "lieu": "cimetiere",
+      "activite": "rentre au nid avec son butin"
+    }
+  ],
+  "reactions": {
+    "observer": [
+      {
+        "texte": "Il te fixe d'un œil, puis de l'autre, en penchant la tête. Son regard s'arrête sur les boutons de ta veste, puis sur ta boucle de ceinturon. Il fait l'inventaire."
+      },
+      {
+        "texte": "Il arpente une stèle d'un air important, un bout de ruban noir dans le bec. Le même noir que le ruban arraché sur la tombe d'Elias Hartley.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Perché sur la croix la plus haute, il est presque invisible. Seul son œil reflète la lune. Il ne dort pas : il surveille.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il se pose sur l'épaule du croque-mort, qui lui glisse un clou en guise de friandise. « Payez d'avance ! » croasse l'oiseau. Le croque-mort a l'air très fier."
+      },
+      {
+        "texte": "L'orage gronde. Il ne s'abrite pas : il reste sur la croix, ailes entrouvertes sous la pluie, et croasse à chaque éclair comme s'il les comptait.",
+        "si": [
+          "orage"
+        ]
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu le suis de croix en croix jusqu'au vieux chêne mort, au fond du cimetière. Dans une fourche, un nid énorme jette des reflets métalliques."
+      },
+      {
+        "texte": "Il s'envole vers la rue principale, plonge sur l'étal du magasin général et repart avec une cuillère en étain. L'épicier hurle ; le corbeau ne se retourne même pas.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il vole sans bruit au-dessus des toits et se pose sur l'enseigne des pompes funèbres, où une lampe brûle encore.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "pister": [
+      {
+        "texte": "Des plumes noires sur la terre des tombes, des fientes blanches sur les stèles, des traces de pattes en éventail près de la tombe d'Elias. Elles mènent toutes au vieux chêne mort."
+      },
+      {
+        "texte": "Sa piste n'est pas au sol, elle est dans les cris : l'épicier qui jure, les gamins qui rient, un bouton d'argent tombé dans la boue. Tu remontes la rue jusqu'au cimetière.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu suis les croassements dans le noir jusqu'au fond du cimetière. Quelque chose brille dans le chêne mort : un reflet d'argent sous la lune.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu croques sa silhouette sur une croix de bois. Il descend, examine ton carnet de très près et tente de te voler ton crayon.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il pose avec une patience étonnante, comme s'il savait. Quand tu as fini, il croasse une fois, satisfait, et s'envole.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Dans la pénombre, ton croquis ne montre qu'une tache noire avec un œil brillant. C'est, en fait, assez ressemblant.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il fixe l'objectif comme un vieux juge. Le cliché est saisissant : un corbeau sur une croix, l'œil plein de malice."
+      },
+      {
+        "texte": "Au moment du déclic, il fond sur l'appareil et s'envole avec le bouchon de l'objectif. Tu le vois disparaître dans le chêne mort.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le flash de magnésium le fait exploser en un nuage de plumes et de croassements outrés. Il te le fera payer.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "nourrir": [
+      {
+        "texte": "Tu lui tends {outil}. Il en arrache un morceau et l'emporte sur une croix pour le manger tranquille, en te surveillant d'un œil.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il vient manger dans ta main et, en échange, laisse tomber dans ta paume un bouton de cuivre poli. Un cadeau. Ou un paiement.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il attrape {outil} et s'envole avec, sans un regard. Il accepte tes offrandes, pas tes excuses.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il dort ; tu poses {outil} au pied du chêne mort. Au matin, il n'en reste qu'un trognon, déposé avec soin sur la tombe d'Elias.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "dresser": [
+      {
+        "texte": "Des heures de patience, de miettes et de sifflements. Il finit par venir sur ton bras quand tu tends la main. Puis il repart, juste pour te montrer qu'il peut.",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il se souvient de toi. Il plonge sur ton chapeau, le fait tomber dans la boue et s'envole en croassant de joie.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il vient au sifflet et se pose sur ton épaule. Le croque-mort, jaloux, marmonne : « Il ne fait jamais ça pour moi. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il apprend vite, trop vite : dès le premier jour, il comprend qu'en se posant sur ton épaule, il atteint ta poche à monnaie.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      }
+    ],
+    "caresser": [
+      {
+        "texte": "Tu tends un doigt prudent. Il penche la tête, se laisse gratter la nuque une seconde, puis te pince le doigt pour rappeler qui commande."
+      },
+      {
+        "texte": "Il ébouriffe ses plumes de plaisir et ferme à demi les yeux, comme le gros chat roux du saloon devant le poêle.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il recule en sifflant et ouvre grand le bec. Pas aujourd'hui, et peut-être jamais.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Il accepte de se percher sur ton épaule, griffes plantées dans ta veste. Son bec reste dangereusement près de ton oreille.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu tends la main pour le prendre ; il te donne un coup de bec sec sur les phalanges et s'envole.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -2,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il se pose de lui-même sur ton épaule et ne te quitte plus. Dans la rue, les gens s'écartent : un étranger armé avec un corbeau sur l'épaule, à Valentine, c'est un mauvais présage.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Il esquive d'un battement d'ailes et te pince l'oreille au passage. Ça saigne un peu.",
+        "effets": {
+          "sante": -2,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu le touches du revers de la main. Il roule dans l'herbe, se relève en titubant et s'envole, furieux.",
+        "effets": {
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il ne comprend pas. Il te regarde, la tête penchée, puis s'éloigne en sautillant, sans même un croassement.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -3
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu frappes avec {outil} ; il saute de côté et, au passage, t'arrache un bouton de veste. Il repart avec, ravi.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Le coup l'atteint en plein envol. Il tombe entre deux tombes, une aile tordue, et croasse de rage.",
+        "effets": {
+          "honneur": -1,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il s'effondre, mort, au pied d'une croix. Le croque-mort accourt, ramasse le petit corps noir et te regarde avec des yeux humides : « C'était Edgar. Il ne faisait de mal à personne. Enfin, presque. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Il s'envole juste à temps. Le lendemain, et tous les jours suivants, une nuée de corbeaux te suit en croassant partout où tu vas.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -4,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle traverse un nuage de plumes noires. Il tombe raide sur une tombe. Le cimetière devient très silencieux.",
+        "effets": {
+          "honneur": -1,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Tu le manques. Il s'envole en croassant et la balle se fiche dans le vieux chêne mort, d'où tombent une cuillère et deux boutons.",
+        "effets": {
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Le coup de feu fait sortir le croque-mort de sa boutique : « Pas Edgar ! » Le corbeau, touché à l'aile, se réfugie sur son épaule.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Dans le noir, ta balle part au hasard. Un battement d'ailes, puis un croassement moqueur depuis le toit de l'église : « Payez d'avance ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "chasser": [
+      {
+        "texte": "Tu l'approches à pas lents, {outil} en main. Il te laisse venir à trois mètres, puis s'envole au dernier moment en croassant : il a vu ce manège mille fois.",
+        "effets": {
+          "relation": -2,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu l'abats proprement. Sa dépouille ne vaut rien chez le boucher, mais ses plumes d'un noir bleuté feraient un bel ornement de chapeau.",
+        "effets": {
+          "honneur": -1,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Il vient de lui-même se poser à tes pieds, confiant, en attendant une friandise. Tu baisses {outil}. Tu ne peux pas.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le croque-mort se plante devant toi, bras écartés : « Pas lui. Allez chasser les rats de la boucherie, ils sont plus gros et moins intelligents. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Il esquive sans effort, puis se pose près de l'objet tombé et l'inspecte longuement. Si ça brillait davantage, il l'emporterait."
+      },
+      {
+        "texte": "Tu le touches en plein vol. Il dégringole dans l'herbe, se relève tout ébouriffé et s'enfuit en sautillant.",
+        "effets": {
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Tu lances {outil} dans le noir, vers le chêne mort. Une demi-douzaine de corbeaux s'envolent en criant, et lui avec.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Attraper un corbeau au lasso ? La boucle tombe à côté de lui ; il la regarde, grimpe dessus et croasse comme s'il riait."
+      },
+      {
+        "texte": "Par miracle, la boucle se resserre sur une patte. Il bat des ailes furieusement et te pince la main jusqu'à ce que tu lâches tout.",
+        "effets": {
+          "sante": -3,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il se laisse prendre, curieux, et s'installe dans la boucle comme dans un nid. Puis il essaie d'emporter le lasso.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "appater_brillant": [
+      {
+        "texte": "Tu fais tourner une pièce au soleil. Il descend aussitôt de sa croix, sautille vers toi et te l'arrache des doigts d'un coup de bec précis. Il repart avec.",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "La pièce ne brille pas assez sous la lune. Il te regarde depuis le chêne mort, l'air méprisant, et ne bouge pas d'une plume.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il descend, regarde la pièce, regarde ton visage, et décide qu'il préfère ta compagnie. Il se pose sur ton bras sans rien voler.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Trois corbeaux arrivent au lieu d'un. Le temps de les chasser, ta pièce a disparu, et un bouton de ta veste avec.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il descend, rafle la pièce et te pince la main au passage, de toutes ses forces. Il n'a pas oublié.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "argent": -1,
+          "sante": -2
+        }
+      }
+    ],
+    "fouiller_nid_corbeau": [
+      {
+        "texte": "Tu grimpes dans le vieux chêne mort. Le nid est un trésor : cuillères en étain, boutons de cuivre, clés, douilles. Et un médaillon d'argent au ruban noir déchiré, avec le portrait d'une femme : la veuve Hartley.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il revient à tire-d'aile et te bombarde de coups de bec pendant que tu fouilles. Tu redescends avec quelques pièces, une griffure sur la joue et la promesse d'une longue rancune.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 3,
+          "sante": -5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "À tâtons dans le nid, tu sens des pièces froides, une montre sans aiguilles et une bague. Au-dessus de toi, dans le noir, deux yeux brillants te regardent faire.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te regarde fouiller son nid sans protester, puis pousse lui-même vers toi, du bout du bec, un médaillon d'argent. Comme s'il savait à qui il fallait le rendre.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu vides le nid de tout ce qui vaut quelque chose : une dent en or, deux bagues, des pièces. Le reste, médaillon compris, tu le jettes dans l'herbe haute.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 8,
+          "honneur": -1,
+          "relation": -3
+        }
+      }
+    ],
+    "apprendre_mot_corbeau": [
+      {
+        "texte": "Tu répètes « Valentine » une vingtaine de fois. Il t'écoute, la tête penchée, puis croasse avec assurance : « Payez d'avance ! » C'est tout ce qu'il sait dire."
+      },
+      {
+        "texte": "Après des jours de patience, il croasse quelque chose qui ressemble à ton nom. Le croque-mort, effaré, se signe deux fois.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu lui apprends un juron du Smithfield's. Le dimanche suivant, il le croasse en plein sermon, perché sur le toit de l'église. Le pasteur fait semblant de ne rien entendre.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu lui apprends « Justice ». Le soir même, perché sur la tombe d'Elias, il le répète à la veuve, qui fond en larmes pour la première fois depuis trois semaines.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu lui apprends « O'Driscoll ». Le mot l'amuse : il va le croasser sous la fenêtre du Smithfield's. À l'intérieur, quelqu'un renverse sa chaise.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "id": "saloon_smithfield",
+  "description": "Une bâtisse de planches noircies au bout de la rue boueuse, enseigne délavée et vitrine fendue rafistolée au papier journal. Dedans, de la sciure brunie au sol, des tables qui boitent, des chaises dépareillées, et une odeur de tabac froid, de sueur et de whisky frelaté.",
+  "repliques": [
+    "Une chaise passe à travers la fenêtre.",
+    "Quelqu'un hurle : « Il triche ! »",
+    "La porte battante grince sur son dernier gond."
+  ],
+  "reactions": {
+    "dessiner": [
+      {
+        "texte": "Tu dessines la façade de guingois, l'enseigne délavée et la porte battante qui pend d'un gond. Sur ton croquis, un homme vole déjà par la fenêtre : tu n'as rien inventé."
+      },
+      {
+        "texte": "Tu croques l'intérieur : la sciure, le barman derrière son comptoir, le balafré au fond et le chasseur de primes face à lui. On dirait le calme d'avant l'orage."
+      },
+      {
+        "texte": "À la lueur des lampes à pétrole, le saloon ressemble à une lanterne posée dans la boue. Tu dessines les silhouettes qui titubent sur le perron.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "En plein jour, la bâtisse paraît plus misérable encore : tu dessines les planches mal jointes, les trous de balle dans la façade et l'ivrogne endormi sur les marches.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "entrer": [
+      {
+        "texte": "Tu pousses la porte battante. La sciure crisse sous tes bottes ; une demi-douzaine de têtes se tournent vers toi, puis replongent dans leur verre. Le vieux piano du coin a servi de bouclier à la dernière fusillade et n'a plus que trois touches."
+      },
+      {
+        "texte": "Tu entres au moment où une chaise traverse la salle. Tu l'esquives ; elle explose contre le chambranle. « Bienvenue au Smithfield's », grogne le barman sans lever les yeux."
+      },
+      {
+        "texte": "La fumée est si épaisse que tu distingues à peine le comptoir. Ça braille, ça jure, ça crache. Un homme dort sous une table, une botte dans le crachoir.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "À peine entré, le silence se fait. Au fond, le chasseur de primes pose sa tasse. Derrière le comptoir, le barman descend lentement la main sous le zinc.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "À cette heure, la salle est presque vide : le barman répand de la sciure fraîche sur les taches brunes de la veille, et un ivrogne ronfle, la joue collée à une table.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Quelques habitués te dévisagent, méfiants : un honnête homme ici, c'est soit un égaré, soit un shérif déguisé.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Le projectile traverse la vitrine rafistolée dans une pluie de verre et de papier journal. Dedans, quelqu'un hurle « Les O'Driscoll ! » et une dizaine d'hommes plongent sous les tables.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu lances {outil} contre la façade. Ça rebondit sur les planches et retombe dans la boue. Un ivrogne, sur le perron, applaudit mollement."
+      },
+      {
+        "texte": "Dans la nuit, ton jet s'écrase contre la porte battante. Un coup de fusil répond de l'intérieur, au hasard, et la chevrotine t'égratigne la joue.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Les fenêtres se garnissent aussitôt de canons de revolvers. Au Smithfield's, on ne réfléchit pas avant de riposter, et ta tête est connue.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Les murs portent vingt ans de bagarres : trous de balle, éclaboussures sombres, et une hache plantée dans une poutre que personne n'a jamais osé retirer."
+      },
+      {
+        "texte": "Tables renversées, chaises à trois pieds, sciure qu'on change quand elle devient trop rouge. Au-dessus du comptoir, une planche peinte : « On ne tire pas sur le barman. Il tire mieux que vous. »"
+      },
+      {
+        "texte": "Toutes les dix minutes, la porte battante s'ouvre pour éjecter un client. Il roule dans la boue, se relève et rentre aussitôt.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le jour, le Smithfield's a l'air presque endormi. Seul le cheval attaché dans la rue, celui du balafré, trahit qu'un certain client ne dort jamais longtemps.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "La façade de guingois tient à peine dans le cadre. Trois habitués sortent poser, bras dessus bras dessous, verres levés et dents en moins."
+      },
+      {
+        "texte": "Au moment de l'éclair, un homme est jeté par la porte battante. La photographie est floue, mais c'est la plus honnête qu'on ait jamais prise du Smithfield's."
+      },
+      {
+        "texte": "Quelqu'un te voit avec ton appareil et crie : « Un photographe ! Cachez vos têtes ! » Les volets se ferment un à un.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle traverse une vitre déjà fendue. Dedans, tout le monde se jette au sol, sauf le chasseur de primes, qui finit tranquillement son café.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu tires dans l'enseigne : le « S » de Smithfield's se décroche et tombe dans la boue. Le barman sort, fusil en main : « Celui-là, tu le paieras. »",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Ton coup de feu dans la nuit déclenche une riposte en règle : trois revolvers crachent par les fenêtres au hasard. Une balle te siffle à l'oreille, une autre te mord le bras.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -20,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "En plein jour, ton tir fait jaillir l'adjoint du bureau du shérif, arme au poing et voix qui tremble : « Qui... Qui a tiré ? »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10
+        }
+      }
+    ],
+    "declencher_bagarre_generale": [
+      {
+        "texte": "Tu renverses la table de quatre muletiers. Une seconde plus tard, tout le saloon cogne sur tout le saloon. Tu ressors par la fenêtre, ravi et couvert de sciure.",
+        "effets": {
+          "sante": -15,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu jettes ton verre à la figure du plus grand gaillard de la salle. Les chaises volent, la sciure vole, les dents volent. Le barman continue d'essuyer ses verres, imperturbable.",
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "La bagarre dure dix minutes. Quand la poussière retombe, tu bois avec ceux que tu viens de cogner. Au Smithfield's, c'est comme ça qu'on se fait des amis.",
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Une bagarre de minuit, la meilleure : un tabouret dans les côtes, un coup de bouteille rendu, quelqu'un qui tire au plafond. Dehors, l'adjoint fait semblant de ne rien entendre.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -20,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Dans la mêlée, une poigne froide te saisit au col : le chasseur de primes profite du chaos pour te traîner vers la porte. Tu te dégages d'un coup de coude et te perds dans la cohue.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Tu lances la bagarre, mais tu la finis en séparant les combattants et en ramassant les dents. Les habitués ne savent plus s'ils doivent te cogner ou te payer un verre.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      }
+    ],
+    "jouer_des_arriere_salle": [
+      {
+        "texte": "Dans l'arrière-salle enfumée, on joue sur une couverture de cheval. Tu lances : double six. Les visages se ferment ; tu ramasses dix dollars et tu sors vite.",
+        "effets": {
+          "argent": 10
+        }
+      },
+      {
+        "texte": "Les dés roulent contre le mur. Tu perds trois fois de suite, puis tu remarques qu'un des dés est un peu trop lourd d'un côté.",
+        "effets": {
+          "argent": -6
+        }
+      },
+      {
+        "texte": "Tu gagnes, tu perds, tu regagnes. Au bout d'une heure, tu ressors avec exactement l'argent que tu avais en entrant, et une furieuse envie de whisky."
+      },
+      {
+        "texte": "À trois heures du matin, les mises s'emballent : un vacher joue sa selle, un muletier son chapeau. Tu gagnes une montre de gousset qui ne marche plus, mais qui se revend bien.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 5
+        }
+      },
+      {
+        "texte": "Un joueur te reconnaît d'après une affiche et mise ta tête sur les dés : « Si je fais sept, je te dénonce. » Il fait huit. Tout le monde rit, sauf toi.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "On te laisse jouer, mais avec leurs dés. Tu perds tout et, quand tu protestes, trois revolvers apparaissent sur la couverture.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -15
+        }
+      }
+    ],
+    "traverser_vitrine": [
+      {
+        "texte": "Tu prends ton élan et traverses la vitrine dans une explosion de verre et de papier journal. Tu roules dans la boue de la rue, entaillé de partout, sous les applaudissements du perron.",
+        "effets": {
+          "sante": -15
+        }
+      },
+      {
+        "texte": "La vitrine, déjà rafistolée trois fois, cède comme une toile d'araignée. Tu atterris sur le dos devant un cheval qui ne cille même pas.",
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Tu passes à travers la vitre en pleine nuit : la rue noire, les éclats qui scintillent, et derrière toi la voix du barman : « Tu me dois trois dollars de carreau ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -12
+        }
+      },
+      {
+        "texte": "Tu traverses la vitrine pour fuir... et tu atterris aux pieds de l'adjoint, qui sursaute et dégaine si vite qu'il en lâche son revolver.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "En plein jour, ta sortie fait sensation : le crieur de journaux en fait aussitôt sa une : « Un étranger traverse la vitrine du Smithfield's ! Deux cents le récit complet ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      }
+    ],
+    "cuver_dans_la_sciure": [
+      {
+        "texte": "Tu t'effondres dans la sciure, le nez dans une odeur de bière et de crachat. Tu te réveilles à l'aube, le crâne en morceaux et les poches un peu plus légères.",
+        "effets": {
+          "argent": -3,
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu dors comme un bienheureux sous une table. Personne ne te touche : le barman t'a épinglé un papier dans le dos : « Il a payé. »",
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Tu t'allonges parmi les autres ivrognes. Un vieux, à côté de toi, te jure qu'il a vu de l'or dans les collines, jusqu'à ce que vous ronfliez tous les deux.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Tu te réveilles une corde autour des poignets, le visage du chasseur de primes penché sur toi : « Tu dormais si bien. » Tu t'en sors de justesse à coups de tabouret.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Au petit matin, le barman te déloge de la sciure à coups de balai et te jette dans la rue : « Pour dormir, y a l'hôtel. Ici, on boit. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      }
+    ]
+  }
+}

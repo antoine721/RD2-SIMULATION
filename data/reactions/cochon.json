@@ -1,0 +1,537 @@
+{
+  "id": "cochon",
+  "description": "Un gros cochon rose taché de noir, couvert de boue séchée jusqu'aux oreilles, qui grogne de contentement dans sa fange. Son groin ne s'arrête jamais de fouiller, à la recherche de n'importe quoi qui ressemble de près ou de loin à de la nourriture.",
+  "personnalite": "Glouton, placide et sale avec délice. Il mange absolument tout : épluchures, vieux chapeaux, lettres d'amour, mégots de cigare. Il appartient à l'éleveur Whitmore, qui l'appelle « le Gouverneur » et compte bien le vendre au poids. Rancunier quand on lui vole sa pâtée, affectueux avec quiconque le gratte derrière les oreilles, et prudemment caché derrière la vache chaque fois que le boucher passe tâter les flancs des bêtes.",
+  "repliques": [
+    "*Groink... groink.*",
+    "*se vautre dans la boue avec un soupir d'aise*",
+    "*mâchonne un vieux chapeau d'un air pensif*",
+    "*renifle bruyamment tes bottes, puis les goûte*"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 5,
+      "lieu": "enclos",
+      "activite": "ronfle dans la paille, collé contre la vache"
+    },
+    {
+      "de": 5,
+      "a": 6,
+      "lieu": "enclos",
+      "activite": "se cache derrière la vache pendant que le boucher tâte les flancs des bêtes"
+    },
+    {
+      "de": 6,
+      "a": 9,
+      "lieu": "enclos",
+      "activite": "réclame sa pâtée à grands cris en cognant l'auge du groin"
+    },
+    {
+      "de": 9,
+      "a": 13,
+      "lieu": "enclos",
+      "activite": "se roule dans la boue avec un bonheur indécent"
+    },
+    {
+      "de": 13,
+      "a": 17,
+      "lieu": "enclos",
+      "activite": "dévore tout ce qui passe à travers la clôture, y compris un gant du vacher"
+    },
+    {
+      "de": 17,
+      "a": 20,
+      "lieu": "enclos",
+      "activite": "attend les épluchures en fixant la barrière d'un œil gourmand"
+    },
+    {
+      "de": 20,
+      "a": 24,
+      "lieu": "enclos",
+      "activite": "digère, couché sur le flanc, en grognant dans son sommeil"
+    }
+  ],
+  "reactions": {
+    "acheter": [
+      {
+        "texte": "Tu négocies longuement avec {outil}. Pour six dollars, le cochon est à toi, avec sa boue en prime. Reste à savoir où tu vas le mettre.",
+        "effets": {
+          "argent": -6
+        }
+      },
+      {
+        "texte": "Tu achètes le cochon. L'éleveur Whitmore, qui passait, ricane derrière son cigare : « Le Gouverneur ? Bonne chance. Il a mangé la selle du dernier qui a voulu l'emmener. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -6
+        }
+      },
+      {
+        "texte": "Le marchandage tourne mal : on te soupçonne de vouloir le revendre au boucher avant la fin de la journée. Tu paies le prix fort pour faire taire les soupçons.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -8
+        }
+      },
+      {
+        "texte": "Le cochon trottine vers toi et pose son groin boueux dans ta main pendant que tu paies. Le marché se conclut à bon prix : on ne sépare pas les amis.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -5,
+          "relation": 1
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu attaques le cochon, {outil} en main. Il pousse un cri strident à réveiller le cimetière et te renverse dans la boue d'un coup de tête. Le vacher accourt en jurant.",
+        "effets": {
+          "sante": -5,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu frappes le cochon avec {outil}. Il s'effondre dans la fange avec un dernier grognement. L'éleveur arrive en courant, écarlate : « Huit dollars de lard ! Shérif ! Shérif ! »",
+        "effets": {
+          "etat": "mort",
+          "honneur": -1,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Tu blesses le cochon au flanc. Il s'enfuit en hurlant à travers l'enclos, bouscule la vache et sème la panique jusque dans le coin de Lucifer.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le cochon charge avant que tu frappes. Deux cents livres de lard lancées à pleine vitesse te fauchent les jambes. Tu te relèves couvert de boue, de honte et d'un bleu à la cuisse.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Ta boucle se referme sur le cochon. Il tire, tu tires, il tire plus fort. Tu traverses tout l'enclos à plat ventre dans la boue, comme une luge.",
+        "effets": {
+          "sante": -3
+        }
+      },
+      {
+        "texte": "Tu attrapes le cochon au lasso du premier coup. Tommy, le vacher, en reste bouche bée : « Si vous faites ça au concours de Saint Denis, vous devenez célèbre ! »",
+        "effets": {
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Le cochon sent la corde, se retourne et fonce sur toi. Tu lâches le lasso et sautes la barrière in extremis ; il mâche la corde d'un air vengeur.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "hostile"
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines le cochon dans {outil} : un ovale de boue avec des oreilles, un groin et un air de profonde satisfaction. C'est l'animal le plus heureux de Valentine."
+      },
+      {
+        "texte": "Pendant que tu le dessines dans {outil}, le cochon passe le groin entre les planches et commence à manger le coin de ta page. Tu sauves le dessin, pas la marge.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le cochon prend la pose, couché sur le flanc dans la boue, les yeux mi-clos. Ton croquis dans {outil} a la majesté d'un portrait de sénateur romain.",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Tu flanques un coup de poing au cochon. C'est comme frapper un sac de farine mouillé. Il te regarde sans comprendre, puis te mord la manche.",
+        "effets": {
+          "sante": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Ton coup de botte arrache un cri strident au cochon, qui détale en bousculant les autres bêtes. De l'autre côté de l'enclos, le vacher te lance un regard noir.",
+        "effets": {
+          "etat": "en_fuite",
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le cochon encaisse et riposte : un coup de tête dans les genoux qui t'envoie au sol, la tête la première dans l'auge. Tu ressors avec des épluchures dans les cheveux.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} sur le cochon. Il ne cherche même pas à esquiver : il ouvre la gueule. Quoi que ce soit, il essaie de le manger."
+      },
+      {
+        "texte": "Tu lances {outil} ; ça rebondit sur le dos du cochon avec un bruit mat. Il grogne, se retourne, puis retourne à sa boue, trop paresseux pour se fâcher."
+      },
+      {
+        "texte": "Tu atteins le cochon en plein groin avec {outil}. Il pousse un cri strident et s'enfuit au fond de l'enclos, le nez en sang.",
+        "effets": {
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Tu lances {outil} sur le cochon, qui charge aussitôt la barrière. Elle tremble, craque... et tient bon. De justesse.",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "nourrir": [
+      {
+        "texte": "Tu tends {outil}. Le cochon l'engloutit en une bouchée, avec ta main jusqu'au poignet. Tu récupères ta main, intacte et couverte de bave.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Dès qu'il te voit, le cochon accourt en couinant de joie. Il mange {outil} délicatement, puis frotte son groin boueux contre ton pantalon propre. C'est de l'amour.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Le cochon avale {outil}, puis te mord la manche pour en réclamer d'autres. Il est toujours fâché, mais il a faim.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "L'éleveur Whitmore hoche la tête en te voyant faire : « Encore deux mois comme ça, et le Gouverneur fera trois cents livres. » Le cochon, qui ignore ce qui arrive aux cochons de trois cents livres, semble ravi.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Un cochon énorme se vautre dans la fange avec un soupir de bonheur. Il a de la boue jusqu'aux oreilles et une épluchure de pomme de terre collée sur le front."
+      },
+      {
+        "texte": "Le cochon fouille le sol de l'enclos et déterre successivement une racine, un fer à cheval, une bouteille vide et ce qui ressemble à une dent humaine. Il mange la racine.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le cochon ronfle dans la paille, collé contre la vache, les pattes agitées par un rêve. Il rêve sans doute de nourriture. Il rêve toujours de nourriture.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le cochon te fixe de ses petits yeux rouges, grogne sourdement et gratte la boue du sabot. Tu comprends pourquoi certains éleveurs ont perdu des doigts.",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Au moment du déclic, le cochon s'ébroue : la plaque montre une gerbe de boue, un groin, et ton objectif éclaboussé au premier plan."
+      },
+      {
+        "texte": "L'éleveur Whitmore te commande une copie du portrait : « Pour le concours agricole. Le Gouverneur va écraser la concurrence. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le cochon lève le groin vers {outil} et sourit. Oui, il sourit. Personne ne croira jamais cette photographie.",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu tentes de soulever le cochon : deux cents livres de lard gigotant et glissant de boue. Tu le lâches au bout de trois pas, avec un tour de reins pour la peine.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Le cochon se laisse porter comme un bébé géant, les pattes en l'air, en grognant de plaisir. Tes bras tremblent, mais tu tiens bon jusqu'à la barrière.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "sante": -2
+        }
+      },
+      {
+        "texte": "Le cochon se débat, te glisse des bras et t'atterrit sur le pied. Il repart en trottinant, satisfait de sa vengeance.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -4
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu suis le cochon. Il fait le tour de l'enclos, s'arrête à l'auge, à la flaque, au tas de fumier, puis recommence. Il a une routine, et elle est parfaite."
+      },
+      {
+        "texte": "Le cochon te mène jusqu'à un trou qu'il a creusé en secret sous la clôture. De l'autre côté, une piste de choux grignotés file droit vers l'église. Le mystère du potager du pasteur est résolu.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le cochon trotte à côté de toi comme un chien, le groin levé. Le vacher vous regarde passer, médusé : « J'ai jamais vu ça. »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle atteint le cochon, qui s'écroule dans la boue. L'éleveur sort en courant, voit la scène et devient écarlate : « Ce cochon valait huit dollars ! Shérif ! »",
+        "effets": {
+          "etat": "mort",
+          "honneur": -1,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Ta balle éraffle le cochon au flanc. Il hurle comme le sifflet d'un train et défonce la barrière pour s'enfuir dans la rue principale, semant la panique.",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu tires sur le cochon dans le noir. La balle le blesse à la patte ; ses cris réveillent toute la ville et les chiens se mettent à hurler en chœur.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le cochon fonce sur toi, tu tires en reculant. Touché, il s'arrête net à tes pieds, souffle une dernière fois et s'écroule. Ton cœur bat la chamade.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "mort"
+        }
+      }
+    ],
+    "caresser": [
+      {
+        "texte": "Tu grattes le cochon derrière les oreilles. Il s'effondre aussitôt sur le flanc, les pattes en l'air, en poussant des grognements d'extase. Tu viens de trouver son point faible.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu caresses le dos du cochon. Ta main ressort couverte d'une boue épaisse dont l'odeur te suivra jusqu'au saloon."
+      },
+      {
+        "texte": "Le cochon ferme les yeux et appuie tout son poids contre ta jambe pour être gratté. Tu manques de tomber dans la boue. Il s'en moque, il est heureux.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu tends la main ; le cochon claque des mâchoires à un pouce de tes doigts. Message reçu : pas aujourd'hui.",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "se_rouler_boue_cochon": [
+      {
+        "texte": "Tu te vautres dans la boue à côté du cochon. Il te regarde, intrigué, puis s'allonge contre toi en soupirant. Vous êtes deux. Ensemble. Dans la boue.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "La boue est fraîche, épaisse, étonnamment apaisante. Le cochon avait raison depuis le début. Tu en ressors avec une odeur qui fera fuir les clients de l'hôtel."
+      },
+      {
+        "texte": "Tu te roules dans la boue en plein jour. Le vacher, l'éleveur et trois passants s'accoudent à la barrière pour regarder. Personne ne dit rien. Personne n'en a besoin.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Couvert de boue des bottes au chapeau, tu ressembles à n'importe quel tas de fumier. L'adjoint passe à deux pas de l'enclos sans te reconnaître. Le cochon, lui, ne te trahit pas.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu te roules dans la boue pour faire rire une fillette qui pleurait près de l'enclos. Elle rit, le cochon grogne, et ta chemise ne s'en remettra jamais.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      }
+    ],
+    "chevaucher_cochon": [
+      {
+        "texte": "Tu enjambes le cochon. Il reste immobile une seconde, surpris, puis part comme une fusée. Trois tours d'enclos, une ruade, et tu t'envoles tête la première dans l'auge.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu chevauches le cochon sous les hourras du vacher, qui compte à voix haute : « Six... sept... huit ! Huit secondes ! » Tu es le premier champion de rodéo porcin de Valentine.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le cochon se laisse monter docilement et fait le tour de l'enclos au petit trot. Tu salues la foule comme un général rentrant de guerre.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le cochon se roule sur le dos et t'écrase dans la boue de tout son poids. Tes côtes protestent. Il se relève, triomphant.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Monter un cochon dans le noir n'était pas ta meilleure idée. Il file sous la clôture, toi dessus, traverse la rue principale au galop et plonge avec toi dans l'abreuvoir.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -3,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "parier_poids_cochon": [
+      {
+        "texte": "Tu paries deux dollars que le cochon pèse deux cent cinquante livres. L'éleveur le hisse sur la balance : deux cent quarante-huit. Il paie en grommelant que la boue compte.",
+        "effets": {
+          "argent": 2
+        }
+      },
+      {
+        "texte": "Tu paries trois cents livres. La balance indique deux cent dix. L'éleveur empoche tes deux dollars avec un sourire de banquier.",
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Le pari attire du monde : le vacher, le gamin des rues et l'ivrogne misent aussi. Sur la balance, le cochon mange la corde de la pesée. Pari annulé, tout le monde rit.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu glisses une pierre dans un sac attaché au cochon avant la pesée. Tu gagnes le pari... jusqu'à ce que le cochon mange le sac. La pierre tombe. Tout le monde la voit.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -2,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le soir, au Smithfield's, le pari sur le poids du cochon tourne à la bagarre générale. Tu repars avec trois dollars et un œil au beurre noir.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 3,
+          "sante": -5
+        }
+      }
+    ],
+    "laver_cochon": [
+      {
+        "texte": "Tu verses un seau d'eau sur le cochon et tu le frottes à la brosse. Dessous, il est rose. Rose bonbon. Il a l'air nu et profondément humilié, et retourne aussitôt dans la boue."
+      },
+      {
+        "texte": "Un écriteau du shérif interdit de laver les cochons au puits ; tu le laves donc à l'abreuvoir de la rue principale. Les chevaux qui attendent pour boire te regardent avec un profond mépris."
+      },
+      {
+        "texte": "Le cochon se laisse laver en grognant de plaisir, offrant chaque flanc à tour de rôle. Il est si propre qu'on pourrait le présenter à Mme Whitlock.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Au premier seau, le cochon se secoue violemment. Tu es trempé de boue de la tête aux pieds, et lui est toujours aussi sale. Un partout.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "L'éleveur te regarde laver son cochon avec stupeur : « Personne ne lave le Gouverneur. » Il te donne quand même un dollar pour le spectacle.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 1
+        }
+      }
+    ]
+  }
+}

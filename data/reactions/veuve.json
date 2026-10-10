@@ -1,0 +1,1013 @@
+{
+  "id": "veuve",
+  "description": "Une femme d'une trentaine d'années, droite comme un cierge, dans une robe de deuil noire boutonnée jusqu'au menton. Un voile de crêpe cache à demi ses yeux rougis ; une alliance d'homme, trop grande, pend à une chaîne autour de son cou.",
+  "personnalite": "Ada Hartley, veuve d'Elias, éleveur de chevaux abattu il y a trois semaines par les O'Driscoll sur le perron de leur ranch. Digne, pieuse, d'une froideur de fer qui cache un chagrin immense ; elle ne pleure jamais en public. Elle veut que les assassins paient, ne croit plus aux promesses du shérif Malloy et cherche un homme assez brave pour la venger. Méfiante envers les hommes armés, fidèle envers ceux qui l'aident.",
+  "repliques": [
+    "Elias disait que Valentine était une bonne ville. Il se trompait.",
+    "Cinquante dollars. C'est tout ce qu'il me reste. Ils sont à l'homme qui m'apportera justice.",
+    "Le shérif Malloy promet. Il promet depuis trois semaines.",
+    "Dieu pardonne. Moi, je ne suis pas Dieu.",
+    "Mon médaillon a disparu de la tombe d'Elias. Qui peut voler une tombe ?",
+    "Ce rire, au Smithfield's... Je le reconnaîtrais entre mille."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 6,
+      "lieu": "maisons",
+      "activite": "dort mal, la lampe allumée"
+    },
+    {
+      "de": 6,
+      "a": 8,
+      "lieu": "maisons",
+      "activite": "se coiffe et revêt sa robe de deuil"
+    },
+    {
+      "de": 8,
+      "a": 10,
+      "lieu": "cimetiere",
+      "activite": "dépose des fleurs fraîches sur la tombe d'Elias"
+    },
+    {
+      "de": 10,
+      "a": 12,
+      "lieu": "eglise",
+      "activite": "prie seule au premier rang"
+    },
+    {
+      "de": 12,
+      "a": 14,
+      "lieu": "maisons",
+      "activite": "déjeune à peine et relit les lettres d'Elias"
+    },
+    {
+      "de": 14,
+      "a": 15,
+      "lieu": "bureau_sherif",
+      "activite": "demande au shérif Malloy où en est l'enquête"
+    },
+    {
+      "de": 15,
+      "a": 17,
+      "lieu": "rue_principale",
+      "activite": "fixe la porte du Smithfield's depuis le trottoir d'en face"
+    },
+    {
+      "de": 17,
+      "a": 18,
+      "lieu": "magasin_general",
+      "activite": "achète le strict nécessaire en comptant ses pièces"
+    },
+    {
+      "de": 18,
+      "a": 24,
+      "lieu": "maisons",
+      "activite": "veille à la lampe à pétrole, le fusil d'Elias sur les genoux"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Elle relève à peine son voile : « Vous n'êtes pas d'ici. Tant mieux. Ici, tout le monde a peur des O'Driscoll. » Elle te jauge, comme on jauge un cheval à vendre."
+      },
+      {
+        "texte": "« Ils sont venus un dimanche, monsieur. Elias est sorti sur le perron, sans arme, pour leur parler. » Sa voix ne tremble pas. Ses mains, si."
+      },
+      {
+        "texte": "Elle te regarde enfin en face : « On parle de vous en ville. En bien. Alors écoutez : l'homme de l'affiche boit au Smithfield's. J'ai cinquante dollars pour celui qui le fera payer. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle recule d'un pas et serre son châle : « Je sais ce que vous êtes. Ce sont des hommes comme vous qui ont tué mon mari. Passez votre chemin. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Votre visage est sur le panneau, à côté du sien. » Elle hésite. « Il faut peut-être un bandit pour abattre un bandit. Revenez quand vous saurez de quel côté vous êtes. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Elle esquisse un sourire, le premier depuis longtemps : « Vous êtes revenu. Asseyez-vous un instant. Elias aurait aimé vous connaître. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle entrouvre la porte, le fusil de son mari à la main : « À cette heure-ci, les honnêtes gens dorment. Dites ce que vous voulez, et vite. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Elle serre son missel contre elle : « Trois dimanches, aujourd'hui. Au temple, le pasteur parle de pardon. Je n'écoute plus cette partie-là. »",
+        "si": [
+          "dimanche"
+        ]
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Elle incline la tête, sans l'ombre d'un sourire : « Monsieur. »"
+      },
+      {
+        "texte": "Elle répond d'un signe bref et resserre son voile. Ses yeux s'attardent une seconde sur l'arme à ta ceinture."
+      },
+      {
+        "texte": "Elle te tend une main gantée de noir : « Que Dieu vous garde, mon ami. Vous êtes bien le seul à qui je puisse dire ça, ici. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle détourne la tête et change de trottoir, sans un mot. La boue de la rue vaut mieux que ta compagnie.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Derrière la vitre, une lampe s'éteint. Elle ne salue plus les inconnus après le coucher du soleil.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Tu plaisantes sur son deuil. Elle ne répond pas : elle te regarde, longtemps, jusqu'à ce que ce soit toi qui baisses les yeux.",
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu dis que son mari n'aurait jamais dû tourner le dos aux O'Driscoll. Sa gifle part si vite que tu ne la vois pas venir.",
+        "effets": {
+          "honneur": -1,
+          "sante": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Des passantes s'arrêtent, scandalisées. De l'autre côté de la rue, le pasteur secoue lentement la tête. La veuve, elle, a déjà tourné les talons.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "« Riez, monsieur. Elias riait aussi, le matin du jour où ils l'ont tué. » Elle s'éloigne, très droite.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Elle te toise de haut en bas : « Vous avez une voix d'O'Driscoll. Je m'en souviendrai. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu t'avances, menaçant. Elle ne recule pas d'un pouce : « On m'a déjà pris tout ce que j'avais, monsieur. Avec quoi voulez-vous me faire peur ? »",
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Ses doigts se crispent sur son livre de prières, mais sa voix reste nette : « Le shérif Malloy saura votre nom ce soir. »",
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Elle claque la porte. Derrière le battant, tu entends le chien d'un fusil qu'on arme : « Elias m'a appris à tirer. Approchez, pour voir. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Elle appelle d'une voix claire : « Adjoint ! » Le jeune adjoint accourt déjà, la main tremblante sur la crosse.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Elle pâlit et laisse tomber son mouchoir : « Ce sont eux qui vous envoient ? Dites-leur que je n'ai plus rien. Plus rien du tout. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -3
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Elle regarde {outil} pointé sur elle et ne lève pas les mains : « Allez-y. J'irai rejoindre Elias. Vous me rendriez service. »",
+        "effets": {
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Elle recule jusqu'au mur, livide, mais ne baisse pas les yeux : « Vous êtes l'un d'eux. Je reconnais cette lâcheté-là. »",
+        "effets": {
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Une femme hurle sur le trottoir. En quelques secondes, le shérif Malloy sort de son bureau, la main sur son arme.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Elle tire la première, à travers la porte. La chevrotine fait voler des éclats de bois autour de toi.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "sante": -20,
+          "relation": -4,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "« C'est donc pour ça qu'on vous a mis une prime ? Pour menacer les veuves ? » Elle crache dans la boue, à tes pieds.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -3
+        }
+      }
+    ],
+    "detrousser": [
+      {
+        "texte": "Tu lui arraches son petit réticule de perles noires. Dedans : quelques pièces, une photographie pâlie d'Elias. Elle ne crie pas. Elle prie.",
+        "effets": {
+          "argent": 6,
+          "honneur": -4,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "« Au voleur ! » Elle n'a crié qu'une fois, mais toute la rue l'a entendue. Avant ce soir, Valentine saura qui a dépouillé la veuve Hartley.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 6,
+          "honneur": -4,
+          "prime": 15,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Tu trouves sur elle une enveloppe cachetée : « Pour celui qui vengera Elias ». Cinquante dollars. Tu viens de voler ta propre récompense.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 50,
+          "honneur": -5,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Ta main s'arrête au-dessus du réticule. Elle te regarde sans peur, avec une immense déception. Tu ne prends que quelques cents, et la honte avec.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 1,
+          "honneur": -3,
+          "relation": -4
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Elle s'effondre dans un froissement de crêpe noir. Son voile glisse dans la boue de la rue.",
+        "effets": {
+          "honneur": -4,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Des cris éclatent : « Il a frappé la veuve Hartley ! » Les volets s'ouvrent un à un ; l'adjoint dégaine déjà.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -4,
+          "prime": 20,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Elle tombe sans un bruit sur le seuil de sa maison. Sa lampe roule dans la poussière et s'éteint.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -4,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu la frappes avec {outil}. Elle tombe à genoux, une main sur sa robe qui se tache de sombre, et murmure le nom d'Elias.",
+        "effets": {
+          "honneur": -5,
+          "prime": 30,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Elle a eu le temps d'empoigner le fusil de son mari. Le coup part avant le tien : la chevrotine te laboure le flanc.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -3,
+          "sante": -30,
+          "relation": -5,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Elle s'effondre au milieu de la rue. Les cris attirent la ville entière : la veuve d'Elias Hartley est morte, et tout le monde a vu ton visage.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -5,
+          "prime": 150,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Elle se dérobe dans un tourbillon de jupes noires et court vers le bureau du shérif en appelant à l'aide.",
+        "effets": {
+          "honneur": -3,
+          "prime": 20,
+          "relation": -5,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle la frappe en pleine poitrine. Elle tombe sur le dos, les yeux ouverts vers le ciel, et ses lèvres forment un dernier mot : « Elias. »",
+        "effets": {
+          "honneur": -5,
+          "prime": 150,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Le coup l'atteint au bras. Elle chancelle, reste debout : « Les O'Driscoll vous paient bien ? » Puis elle s'éloigne en titubant, une main sur sa manche ensanglantée.",
+        "effets": {
+          "honneur": -4,
+          "prime": 50,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Ta balle brise sa fenêtre. La lampe s'éteint, puis un coup de fusil te répond depuis l'obscurité de la maison.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -3,
+          "sante": -15,
+          "relation": -5,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Ta balle la manque. Elle ne court pas : elle marche, très droite, jusqu'au bureau du shérif. Toute la rue l'a regardée faire.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -3,
+          "prime": 40,
+          "relation": -5,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil}, qui la frappe à l'épaule. Elle vacille, ramasse l'objet et le jette à tes pieds : « Gardez vos ordures. »",
+        "effets": {
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu lances {outil}, qui frôle son voile. Une passante pousse un cri, et un vieil homme lève sa canne vers toi : « Honte à vous ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Elle esquive avec une vivacité inattendue ; l'objet roule dans la boue. Elle ne te regarde même pas : elle relève le menton et reprend sa route.",
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "La boucle se referme sur ses bras. Elle tombe à genoux dans la boue mais ne crie pas : « Les O'Driscoll aussi aimaient les cordes. »",
+        "effets": {
+          "honneur": -3,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Tu la traînes sur quelques mètres avant que des cris n'éclatent dans toute la rue. Le shérif sort de son bureau, fusil en main.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -4,
+          "prime": 15,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "La corde la surprend devant sa porte. Elle se débat, griffe le chanvre, se dégage et se barricade chez elle.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -3,
+          "relation": -5,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu lui lies les mains. Elle se laisse faire, raide, le regard fixe : « Faites ce que vous êtes venu faire. Mais sachez que Dieu regarde. »",
+        "effets": {
+          "honneur": -4,
+          "relation": -5,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Le temps d'un nœud, la moitié de la rue s'est arrêtée pour regarder. Quelqu'un court déjà au bureau du shérif.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -4,
+          "prime": 20,
+          "relation": -5,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Elle te fixe, incrédule, pendant que tu serres la corde : « Vous ? Je vous avais fait confiance. Elias disait que j'étais trop naïve. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": -4,
+          "relation": -5,
+          "etat": "ligote"
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Elle n'a sur elle qu'une épingle à chapeau, longue comme un poignard. Tu la lui prends. Elle te regarde faire avec un mépris glacé.",
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu lui arraches le fusil d'Elias des mains. Elle pousse un cri de rage, pas de peur : « C'était le sien ! Rendez-le-moi ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Elle partait vers le Smithfield's, le fusil d'Elias serré contre elle. Tu poses la main sur le canon : « Pas comme ça, madame. Laissez-moi faire. » Elle hésite, puis le lâche, et se met enfin à pleurer.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines son profil sous le voile. Elle remarque ton carnet : « Ne me dessinez pas comme ça. Dessinez-moi le jour où il sera vengé. »"
+      },
+      {
+        "texte": "Elle accepte de poser, la main sur la stèle d'Elias. Devant le dessin, ses lèvres tremblent : « Vous sauriez dessiner Elias ? Je n'ai qu'une photographie, toute pâlie. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle te tourne le dos : « Les veuves ne sont pas des paysages, monsieur. »",
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Elle se raidit devant l'objectif, comme pour un portrait de famille où il manquerait quelqu'un. Le cliché montre une femme en noir, et un grand vide à côté d'elle."
+      },
+      {
+        "texte": "Elle lève une main gantée devant son visage : « Pas de photographie. La dernière, c'était le jour de nos noces. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle pose près de la tombe d'Elias : « Envoyez-en un tirage à sa mère, à Strawberry. Elle n'a pas pu venir à l'enterrement. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu la charges sur ton épaule. Elle se débat, frappe ton dos de ses poings et appelle au secours d'une voix étranglée.",
+        "effets": {
+          "honneur": -3,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Toute la rue principale voit passer la veuve Hartley, jupons noirs en l'air, sur ton épaule. Les commères ne l'oublieront jamais ; le shérif non plus.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -3,
+          "prime": 10,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Elle s'était évanouie devant la tombe ; tu la portes jusque chez elle. À son réveil, elle murmure : « Merci. Ne le dites à personne. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu la suis jusqu'au cimetière. Elle s'agenouille devant une stèle, remplace les fleurs fanées et parle à voix basse, comme si quelqu'un l'écoutait."
+      },
+      {
+        "texte": "Elle entre au bureau du shérif. À travers la vitre, tu la vois frapper le bureau de Malloy du plat de la main. Le vieil homme baisse la tête.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Elle sent qu'on la suit, presse le pas et se retourne d'un bloc, une épingle à chapeau pointée vers toi : « Qui va là ? »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle se poste sur le trottoir, face au Smithfield's, et fixe la porte battante pendant une heure entière, immobile, comme une sentinelle en noir."
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Une alliance d'homme, trop grande, pend à une chaîne sur sa poitrine. Elle la touche chaque fois qu'un cavalier passe dans la rue."
+      },
+      {
+        "texte": "Une lampe brûle tard à sa fenêtre. On devine sa silhouette assise, un fusil couché en travers des genoux, face à la porte.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Elle compte ses pièces devant le magasin général, recompte, et repose une boîte de thé sur le comptoir. Le deuil coûte cher, et l'épicier ne fait pas crédit.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le dos droit, les gants impeccables, les yeux rouges. Tout en elle dit : je ne pleurerai pas devant vous."
+      },
+      {
+        "texte": "Elle s'arrête net devant le cheval attaché du Smithfield's, pose la main sur son encolure, puis la retire comme si elle s'était brûlée.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Elle reste sous la pluie face au Smithfield's, sans parapluie, le crêpe de son voile collé aux joues. Elle ne bouge pas.",
+        "si": [
+          "pluie"
+        ]
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing l'atteint au visage. Elle tombe dans la boue, se relève lentement et essuie le sang de sa lèvre : « Les O'Driscoll frappaient plus fort. »",
+        "effets": {
+          "honneur": -4,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Un concert de cris éclate dans la rue. Le vétéran mendiant brandit sa béquille, des hommes accourent : on ne frappe pas une veuve à Valentine.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -4,
+          "prime": 10,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Elle esquive et t'enfonce son épingle à chapeau dans l'avant-bras, jusqu'à l'os.",
+        "effets": {
+          "honneur": -3,
+          "sante": -8,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Elle recule dans l'embrasure de sa porte et te claque le battant sur les doigts. Le verrou tourne deux fois.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -3,
+          "sante": -5,
+          "relation": -4
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Elle te regarde comme on regarde un idiot : « Un duel ? Contre une femme en deuil ? Gardez vos balles pour ceux qui les méritent. »",
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "« Vous avez envie de tuer quelqu'un ? » Elle tend le doigt vers le Smithfield's. « Il est là-bas. Lui, au moins, ça me rendrait service. »",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Un pâle sourire : « Si j'avais votre adresse au revolver, il y a longtemps que je serais allée au Smithfield's moi-même. »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Elle regarde {outil}, puis toi, et ne tend pas la main : « Je n'accepte rien des inconnus. Elias me l'a appris. »"
+      },
+      {
+        "texte": "Elle accepte {outil} du bout de ses gants noirs et murmure un merci à peine audible.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle prend {outil}, puis serre ta main dans les siennes : « Vous êtes bon. Il y avait si peu de gens bons, à l'enterrement. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Elle repousse ton cadeau : « D'où ça vient, ça ? D'un mort ? Je ne veux rien de ce que vous avez touché. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "presenter_condoleances": [
+      {
+        "texte": "Tu ôtes ton chapeau et lui dis ta peine. Elle hoche la tête, la gorge serrée : « Merci. Vous êtes le premier inconnu à me le dire. Les autres changent de trottoir. »",
+        "effets": {
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle te fixe : « Des condoléances ? De votre part ? Gardez-les pour vos propres victimes. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle pose sa main gantée sur ton bras : « Je sais. Merci d'être là. Elias vous aurait offert un verre chez Keane. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle accepte d'un mouvement de tête et ajoute, très bas : « Les condoléances ne creusent pas la tombe des assassins. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "« Vous êtes recherché, et vous trouvez le temps de consoler une veuve ? » Elle hésite. « C'est plus que n'en fait le shérif. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "interroger_sur_meurtre": [
+      {
+        "texte": "« C'était un dimanche. Ils étaient cinq, foulards verts. Ils voulaient les chevaux. Elias leur a dit de les prendre et de partir. Quand il s'est retourné pour rentrer, ils lui ont tiré dans le dos. »"
+      },
+      {
+        "texte": "Elle ferme les yeux : « Le plus jeune riait. Un rouquin, une cicatrice sur la joue. C'est lui qui a tiré. J'entendrais ce rire parmi mille. »"
+      },
+      {
+        "texte": "Elle tire de son corsage un bouton de cuivre : « Je l'ai arraché à l'un d'eux en me débattant. C'est le même que sur la veste de l'homme de l'affiche, celui qui boit au Smithfield's. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Pourquoi voulez-vous savoir ? Pour aller leur raconter que je me souviens de leurs visages ? » Elle se tait, les lèvres serrées.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle allume une seconde lampe avant de répondre, comme si l'obscurité pouvait l'entendre : « Ils ont mis le feu à la grange. Je voyais le visage d'Elias à la lueur des flammes. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "« Ils ont pris ses six chevaux. L'un d'eux est attaché devant le Smithfield's en ce moment même. Le maréchal-ferrant a reconnu ses propres fers. Et le shérif ne fait rien. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "promettre_vengeance": [
+      {
+        "texte": "Elle soulève son voile pour te regarder en face : « Ne promettez pas si vous ne tenez pas. Deux hommes m'ont déjà promis. Ils ont pris le train pour Saint Denis. »"
+      },
+      {
+        "texte": "Ses yeux brillent : « Alors écoutez. L'homme de l'affiche, au Smithfield's. Celui qu'ils ont arrêté pour les chevaux. Et un rouquin balafré. Rapportez-moi le foulard vert du premier, et les cinquante dollars sont à vous. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Elle hésite longuement : « Je ne vous aime pas. Mais je n'ai pas besoin de vous aimer. Faites-le, et l'argent est à vous. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle serre ta main dans les siennes : « Je prierai pour vous chaque soir. Revenez vivant, c'est tout ce que je demande. Ce cimetière est déjà bien assez plein. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« Un homme recherché qui me promet justice... » Elle a un rire sans joie. « Pourquoi pas. La justice des honnêtes gens dort dans le bureau de Malloy. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "reclamer_recompense": [
+      {
+        "texte": "Elle te fixe sans bouger : « La récompense ? Pour quoi faire ? Il boit encore au Smithfield's, je l'entends rire d'ici. Revenez quand il ne rira plus. »"
+      },
+      {
+        "texte": "Elle sort une enveloppe cachetée et te la tend sans trembler : « Cinquante dollars. Ils sentent la poudre, mais ils sentent aussi la justice. Elias peut dormir. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 50,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Vous croyez que je ne sais pas reconnaître un menteur ? Montrez-moi une preuve, ou sortez de chez moi. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Elle te croit sur parole, ce qui la surprend elle-même. Elle te donne la moitié : « Vingt-cinq. Le reste quand je l'aurai vu de mes yeux, dans la vitrine des pompes funèbres. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 25,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Vous avez une prime sur la tête, et vous réclamez la mienne ? » Elle referme son réticule d'un claquement sec.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "raccompagner_veuve": [
+      {
+        "texte": "Vous marchez côte à côte dans la rue boueuse. Elle ne dit rien jusqu'à sa porte, puis : « Merci. Depuis trois semaines, je n'ose plus rentrer seule. »",
+        "effets": {
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Au coin du Smithfield's, deux silhouettes vous observent en silence. Elle se rapproche de toi sans s'en rendre compte. Personne ne bouge, ce soir.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Elle refuse ton bras : « Je connais le chemin. Et je connais les hommes comme vous. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Devant sa porte, elle hésite : « Entrez boire un café. Je vous montrerai le fusil d'Elias. Il vous irait mieux qu'à moi. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Les commères du magasin général chuchotent sur votre passage. Elle relève le menton : « Laissez-les dire. Elles n'ont rien de mieux à faire. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ]
+  }
+}

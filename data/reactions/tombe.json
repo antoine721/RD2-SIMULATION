@@ -1,0 +1,446 @@
+{
+  "id": "tombe",
+  "description": "Une tombe fraîche au fond du cimetière, sous un saule. Une petite stèle de pierre grise, gravée de frais : « Elias Hartley, 1861-1899 ». La terre n'a pas fini de tasser, et des fleurs des champs, renouvelées chaque matin, reposent à son pied.",
+  "repliques": [
+    "Le vent agite les fleurs fraîches au pied de la stèle.",
+    "Un corbeau se pose sur la stèle, penche la tête, puis repart.",
+    "Un ruban noir déchiré flotte au sommet de la pierre."
+  ],
+  "reactions": {
+    "observer": [
+      {
+        "texte": "La stèle est simple, gravée avec soin. La terre est encore bombée, et l'herbe n'a pas eu le temps d'y repousser. C'est la tombe la plus récente du cimetière, et la mieux tenue."
+      },
+      {
+        "texte": "Les fleurs sont fraîches du matin : des asters violets et une rose de prairie. Sur la terre, la marque de deux genoux, au même endroit, chaque jour.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Une bougie consumée dans un pot de verre, au pied de la stèle. La cire a coulé jusqu'à la terre. Quelqu'un est venu veiller tard.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Au sommet de la stèle, un ruban noir noué autour de la pierre a été arraché : quelque chose y pendait, et a disparu. Dans la terre meuble, des empreintes de pattes d'oiseau."
+      },
+      {
+        "texte": "La pluie a couché les fleurs et creusé une rigole sur la terre fraîche. La pierre ruisselle, comme si elle pleurait à la place de quelqu'un.",
+        "si": [
+          "pluie"
+        ]
+      }
+    ],
+    "lire": [
+      {
+        "texte": "« Ici repose Elias Hartley, 1861-1899. Époux bien-aimé. Tombé sur le seuil de sa maison. Le Seigneur rendra justice. »"
+      },
+      {
+        "texte": "Sous l'épitaphe, en lettres plus petites et moins soignées, quelqu'un a ajouté au couteau : « Ou quelqu'un d'autre. » Les entailles sont récentes."
+      },
+      {
+        "texte": "Tu dois frotter une allumette pour déchiffrer la pierre. La flamme tremble sur les mots « Tombé sur le seuil de sa maison », puis s'éteint d'un coup de vent.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Au dos de la stèle, une signature discrète de tailleur de pierre : « M. Pembrook ». Le croque-mort a gravé lui-même l'épitaphe, et n'a jamais envoyé la facture à la veuve.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines la stèle, le saule et les fleurs. En recopiant l'épitaphe, ta main ralentit sur les mots « rendra justice »."
+      },
+      {
+        "texte": "La veuve s'approche en silence et regarde ton carnet par-dessus ton épaule : « Vous pourriez m'en faire une copie ? Pour la mère d'Elias, à Strawberry. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "À la lueur de ta lampe, le dessin se remplit d'ombres étranges. Un corbeau t'observe depuis le saule, sans un bruit.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Le cliché montre la stèle, la terre fraîche et les fleurs. Une photographie de deuil, comme on en accroche dans les salons de Saint Denis."
+      },
+      {
+        "texte": "Au moment du déclic, un corbeau se pose sur la stèle et fixe l'objectif. La photographie est saisissante, presque une gravure de mauvais augure.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "L'éclair de magnésium blanchit la pierre. Pendant une seconde, les lettres « Le Seigneur rendra justice » semblent flotter seules dans le noir.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le brouillard noie le cimetière. Sur la plaque, il ne reste que la stèle, floue, et une silhouette en noir que tu n'avais pas vue approcher.",
+        "si": [
+          "brouillard"
+        ]
+      }
+    ],
+    "fouiller": [
+      {
+        "texte": "Tu creuses à mains nues jusqu'au couvercle de pin. Elias Hartley repose dans son costume du dimanche ; sa montre de gousset est encore à son gilet. Tu la prends. Elle s'est arrêtée à quatre heures dix.",
+        "effets": {
+          "argent": 15,
+          "honneur": -5
+        }
+      },
+      {
+        "texte": "Tu n'as pas creusé un pied que des cris éclatent : le croque-mort accourt avec sa pelle, le pasteur sur ses talons. « Profanateur ! » Avant ce soir, tout Valentine le saura.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -5,
+          "prime": 25
+        }
+      },
+      {
+        "texte": "La terre est encore meuble. Dans le cercueil, un homme en costume et une bible. Tu repars avec la bible, de la boue jusqu'aux coudes, et l'impression qu'on te regarde depuis le saule.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 2,
+          "honneur": -5
+        }
+      },
+      {
+        "texte": "Tu poses les mains sur la terre fraîche, puis tu t'arrêtes. Les fleurs de la veuve te regardent. Tu remets la terre en place et t'en vas, honteux d'y avoir seulement pensé.",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Tu vides les poches du mort : une alliance, trois dollars, une lettre de sa femme jamais ouverte. Tu gardes l'argent et l'alliance. La lettre, tu la rejettes dans la fosse.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 8,
+          "honneur": -5
+        }
+      }
+    ],
+    "nettoyer": [
+      {
+        "texte": "Tu arraches les mauvaises herbes, redresses les fleurs renversées par le vent et frottes la boue sur le nom d'Elias. La tombe a l'air un peu moins seule.",
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "La veuve arrive au moment où tu finis. Elle s'arrête, voit la stèle propre, pose une main sur ton épaule sans un mot. Puis elle s'agenouille.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu nettoies la stèle à la lueur d'une lanterne. Dans le saule, un corbeau te regarde faire, la tête penchée, sans voler un seul brin de fleur.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu essuies la boue de la pierre. Ça ne rachète rien de ce que tu as fait ailleurs, mais ta main s'attarde un peu sur le mot « justice ».",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      }
+    ],
+    "se_cacher": [
+      {
+        "texte": "Tu t'accroupis derrière la stèle. Elle est étroite, ton épaule dépasse. Elias Hartley, mort, te protège mieux que personne ne l'a protégé, lui."
+      },
+      {
+        "texte": "Tapi derrière la tombe, tu entends des pas dans l'allée. Une lanterne passe : le croque-mort, qui sifflote un air de fanfare beaucoup trop gai. Il ne te voit pas.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Les cavaliers de la loi longent le cimetière sans un regard pour les tombes. Personne ne cherche un vivant chez les morts.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Une balle ricoche sur la stèle à un pouce de ta tête. La pierre tient bon. Elias vient de sauver quelqu'un.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la stèle. L'objet ricoche sur la pierre et retombe au milieu des fleurs, écrasant une rose de prairie.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "La veuve, agenouillée devant la tombe, sursaute quand {outil} heurte la stèle à un pied de sa tête. Elle se relève lentement et te regarde comme on regarde un O'Driscoll.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu lances {outil} dans le noir. L'objet heurte la stèle avec un bruit mat, et tout le saule s'envole d'un coup : une nuée de corbeaux tourne en croassant au-dessus du cimetière.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle écaille la stèle juste au-dessus du nom d'Elias. Un éclat de pierre retombe dans les fleurs.",
+        "effets": {
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Le coup de feu fait sortir le pasteur de l'église : « Même les morts n'ont plus la paix ! » La rumeur courra jusqu'au Smithfield's.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Ta balle arrache un éclat au mot « justice ». Dans le noir, un corbeau croasse trois fois, comme une malédiction.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu vides ton barillet sur la stèle en riant. Quand la fumée se dissipe, l'épitaphe n'est plus qu'une suite de trous : « Elias Ha... Le Seigneur... ».",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -3,
+          "etat": "detruit"
+        }
+      }
+    ],
+    "detruire": [
+      {
+        "texte": "Tu renverses la stèle d'un coup d'épaule. Elle bascule dans la boue, face contre terre, et écrase les fleurs de la veuve.",
+        "effets": {
+          "honneur": -5,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Le croque-mort te voit depuis la grille du cimetière et lâche sa pelle. En quelques minutes, la moitié de Valentine sait que quelqu'un a profané la tombe d'Elias Hartley.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -5,
+          "prime": 25,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Tu frappes la stèle jusqu'à la fendre en deux. Dans le silence qui suit, une fenêtre s'éclaire du côté des maisons, puis s'éteint. Demain matin, une femme en noir trouvera ça.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -5,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Tu poses la main sur la pierre pour la renverser... et tu ne peux pas. Les fleurs fraîches, le nom, la date. Tu recules d'un pas.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "faire_sauter": [
+      {
+        "texte": "La dynamite soulève la tombe dans une gerbe de terre, de fleurs et d'éclats de pierre. Quand la poussière retombe, il ne reste qu'un cratère et des planches de pin éclatées.",
+        "effets": {
+          "honneur": -5,
+          "prime": 50,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "L'explosion réveille toute la ville. Des lanternes accourent vers le cimetière, les chiens hurlent, les corbeaux tournent dans le noir. Le shérif Malloy jure qu'il pendra le coupable.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -5,
+          "prime": 50,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "La détonation fait trembler les vitres de l'église. Le pasteur sort en courant, voit le trou fumant, et tombe à genoux. Pour une fois, ce n'est pas pour prier.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -5,
+          "prime": 75,
+          "etat": "detruit"
+        }
+      }
+    ],
+    "fleurir_tombe": [
+      {
+        "texte": "Tu cueilles quelques fleurs sauvages au bord du chemin et les déposes à côté de celles de la veuve. Le vent les mêle aussitôt.",
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "La veuve te voit faire depuis l'allée. Elle ne s'approche pas, mais elle incline la tête, longuement.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu poses des fleurs sur la tombe d'un homme que tu n'as jamais connu. C'est peut-être pour les autres, ceux dont tu ne connais pas les tombes.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Au matin, la veuve trouvera ton bouquet et se demandera longtemps qui a pu le déposer là, en pleine nuit.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Un corbeau descend du saule, picore une fleur, la recrache avec dédain et repart. Il n'aime que ce qui brille."
+      }
+    ],
+    "se_recueillir_sur_tombe": [
+      {
+        "texte": "Tu ôtes ton chapeau devant la stèle. Le silence n'est troublé que par le vent dans le saule et, au loin, le sifflet du train."
+      },
+      {
+        "texte": "Tu baisses la tête. Les visages de ceux que tu as tués défilent dans ta mémoire ; aucun n'a une stèle aussi bien tenue.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu restes un long moment. Avant de partir, tu promets à voix basse à Elias Hartley que ceux qui l'ont tué ne riront plus longtemps.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Des pas derrière toi : la veuve, une lanterne à la main. Elle s'arrête à ton côté et prie, sans te demander qui tu es.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Les cloches de l'église sonnent la fin de l'office. La veuve sort la première et vient s'agenouiller près de toi. « C'était un dimanche, aussi », murmure-t-elle.",
+        "si": [
+          "dimanche"
+        ]
+      }
+    ],
+    "cracher_sur_tombe": [
+      {
+        "texte": "Tu craches sur la stèle d'Elias Hartley. Le crachat coule lentement sur les mots « Époux bien-aimé ».",
+        "effets": {
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "La veuve était agenouillée à trois pas. Elle se lève, s'essuie la joue du revers du gant comme si c'était elle qu'on avait souillée, et quitte le cimetière sans courir.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Personne ne t'a vu. Seul un corbeau, sur la croix voisine, croasse longuement, comme s'il comptait le raconter à toute la ville.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Tu craches en ricanant. Appuyé sur sa pelle près de la grille, le croque-mort note quelque chose dans son carnet. Ta taille, sans doute.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Tu te racles la gorge... et tu ravales. Les fleurs fraîches, le nom gravé à la main. Ça ne te ressemble pas.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,344 @@
+{
+  "id": "gare",
+  "description": "Un bâtiment de planches peint en rouge sang-de-bœuf, au toit pointu, avec une horloge ronde au-dessus du guichet et un long quai de bois qui longe la voie. Des malles s'empilent sous l'auvent, et le fil du télégraphe court du toit jusqu'aux poteaux qui filent vers l'est.",
+  "repliques": [
+    "L'horloge de la gare sonne l'heure. Exactement.",
+    "Le télégraphe crépite derrière la vitre.",
+    "Un coup de sifflet lointain fait vibrer les carreaux."
+  ],
+  "reactions": {
+    "entrer": [
+      {
+        "texte": "La porte grince sur une salle d'attente qui sent l'encre, le charbon et le cuir. Le chef de gare lève les yeux de sa montre : « Fermez la porte, il y a des courants d'air. »"
+      },
+      {
+        "texte": "Des voyageurs patientent sur les bancs entre malles et cartons à chapeau. Une dame de Saint Denis s'évente en regardant Valentine avec horreur.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La salle d'attente est déserte. Seule l'horloge fait tic-tac, et sous la porte du bureau du télégraphe filtre la lueur d'une lampe.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Ton propre visage te dévisage depuis un avis punaisé près du guichet. Derrière sa vitre, le télégraphiste se fige, la main sur sa clé.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Le chef de gare t'accueille d'un hochement de tête presque cordial et, derrière lui, le télégraphiste agite sa visière verte : on sait déjà tout de tes exploits ici.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Une horloge ronde au-dessus du guichet, un tableau noir des départs écrit à la craie, des malles alignées au cordeau : on sent qu'un maniaque règne ici."
+      },
+      {
+        "texte": "Sur le quai, un représentant en toniques, deux fermières avec des poules en cage, et un homme en noir qui regarde la banque au loin sans jamais cligner des yeux.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La gare dort, mais le bureau du télégraphe est éclairé. Une silhouette maigre y lit des papiers qui ne sont pas les siens.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le fil du télégraphe part du toit et file de poteau en poteau vers l'est, vers Saint Denis. Coupé, il rendrait Valentine sourde et muette."
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines la gare dans {outil} : le toit pointu, l'horloge ronde, et le quai qui file vers l'horizon comme une promesse de départ."
+      },
+      {
+        "texte": "Pendant que tu dessines, le chef de gare passe trois fois devant toi pour ne pas gâcher la perspective, puis se penche, ravi : « Vous avez mis la bonne heure ? »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "À la lueur des lanternes du quai, la gare ressemble à un navire échoué au bord de la prairie. Ton croquis est plein d'ombres.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu cadres la gare avec {outil}. Sur la plaque, l'horloge indique une heure parfaite, et le chef de gare, au bout du quai, a l'air d'une statue."
+      },
+      {
+        "texte": "Au moment du déclic, le train de Rhodes entre en gare dans un nuage de vapeur. La moitié de ta photo est blanche, mais elle est magnifique.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La pose dure une éternité. Sur le cliché, seules les lanternes du quai et la fenêtre du télégraphe brillent, comme deux yeux qui te fixent.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la façade. Le choc résonne sur les planches et le chef de gare sort en brandissant son sifflet : « Respectez le matériel de la Compagnie ! »"
+      },
+      {
+        "texte": "Tu vises l'horloge avec {outil}. Le cadran se fend et les aiguilles s'arrêtent à 14 h 32 ; le chef de gare en restera inconsolable pendant des semaines.",
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu jettes {outil} sur le toit. Le projectile roule sur les bardeaux, tombe dans la gouttière, et un chat noir détale en crachant.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu lances {outil} vers le quai. Les voyageurs s'égaillent en criant, une valise s'ouvre et répand des corsets sur les planches.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle arrache un éclat de bois à la façade. À l'intérieur, quelqu'un plonge sous un banc en renversant une malle.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "La balle fracasse le cadran de l'horloge. Le chef de gare surgit, horrifié, comme si c'était lui que tu avais touché.",
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Les voyageurs se jettent à plat ventre sur le quai, une malle s'éventre, et le télégraphiste tape déjà ton signalement à toute allure.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 15,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Le coup de feu claque dans la nuit et brise une vitre du bureau du télégraphe. Une lampe s'allume à la pension, puis une autre, puis une autre.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      }
+    ],
+    "braquer": [
+      {
+        "texte": "Tu passes le canon sous la grille du guichet. Le chef de gare vide la caisse des billets en tremblant, et note dans sa tête l'heure exacte du crime : « 11 h 02. Je le dirai au juge. »",
+        "effets": {
+          "argent": 45,
+          "prime": 40,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Derrière sa vitre, le télégraphiste a le temps de taper trois mots avant que tu ne le mettes en joue. Quand tu ressors avec la caisse, le shérif sait déjà.",
+        "effets": {
+          "argent": 35,
+          "prime": 60,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Tu forces la porte de la salle d'attente déserte. La caisse du guichet est vissée au plancher : tu repars avec un peu de monnaie et une liasse d'horaires inutiles.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 12,
+          "prime": 20,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Sur le quai, les voyageurs lèvent les mains et vident leurs poches dans ton chapeau. Une vieille dame te tend son dentier par erreur.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 60,
+          "prime": 75,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Tu entres l'arme au poing, mais le chef de gare te reconnaît et éclate de rire, croyant à une farce. Le temps qu'il comprenne, tu as perdu l'élan : tu ne prends que la petite caisse.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 10,
+          "prime": 20,
+          "honneur": -2
+        }
+      }
+    ],
+    "consulter_horaires": [
+      {
+        "texte": "Sur le tableau noir, d'une écriture parfaite : SAINT DENIS 7 h 12 — RHODES 11 h 40 — STRAWBERRY (via Riggs) 16 h 05. Sous chaque heure, le chef de gare a souligné « PRÉCISES »."
+      },
+      {
+        "texte": "Une ligne a été effacée puis réécrite : le train de Rhodes d'hier est arrivé avec quatre minutes de retard. À côté, quelqu'un a ajouté au crayon : « INADMISSIBLE »."
+      },
+      {
+        "texte": "À la lueur des lanternes du quai, tu déchiffres le prochain départ : 7 h 12. La nuit sera longue.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Juste à côté des horaires, un avis de recherche fraîchement punaisé, à hauteur d'yeux. Le tien. Le télégraphiste l'a placé là exprès.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Un gamin des rues lit les horaires à voix haute pour un vieux fermier qui ne sait pas lire, et se trompe exprès pour gagner un cent.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "attendre_train": [
+      {
+        "texte": "Tu t'assois sur un banc du quai. Le chef de gare passe, regarde sa montre, te regarde, regarde sa montre : « Encore douze minutes. Onze et demie. »"
+      },
+      {
+        "texte": "Un grondement monte des rails, puis un panache noir : le train entre en gare dans un vacarme de fer et de vapeur, et les pigeons s'envolent du toit.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Rien ne viendra avant le matin. Le quai est froid, les rails luisent sous la lune, et au loin un coyote répond au silence.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Pendant que tu attends, l'adjoint du shérif traverse la rue et vient s'asseoir au bout du quai, la main près de son holster, l'air de rien.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Un voyageur pour Saint Denis te raconte sa vie en vingt minutes : il vend des brosses à reluire, il a une femme à Annesburg et une peur bleue des O'Driscoll."
+      }
+    ],
+    "couper_telegraphe": [
+      {
+        "texte": "Tu grimpes au premier poteau et tranches le fil avec {outil}. Dans le bureau, le télégraphiste tapote son manipulateur, perplexe : plus rien ne répond.",
+        "effets": {
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Un gamin des rues te voit faire du haut d'un tonneau et file en courant vers le bureau du shérif.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 15
+        }
+      },
+      {
+        "texte": "Le fil tranché siffle en retombant dans l'herbe. Valentine est coupée du monde jusqu'au matin : parfait pour un mauvais coup.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu hésites, le fil entre les doigts : sans télégraphe, le shérif ne pourra plus appeler à l'aide contre les O'Driscoll. Tu coupes quand même, à contrecœur.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Le fil résiste et ta lame dérape, t'entaillant la paume. Il ne cède qu'au troisième essai, tout poisseux de sang.",
+        "effets": {
+          "sante": -5,
+          "honneur": -2
+        }
+      }
+    ],
+    "fouiller_consigne": [
+      {
+        "texte": "Tu ouvres des malles au hasard : des robes de Saint Denis, des bibles, un corset, et au fond d'une valise, cinq dollars roulés dans une chaussette.",
+        "effets": {
+          "argent": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Une malle de cuir porte les initiales du directeur de la banque. Dedans : des actes de saisie de fermes, et une bouteille de cognac français à moitié vide.",
+        "effets": {
+          "argent": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le chef de gare te surprend la main dans une valise : « Ce n'est pas la vôtre ! Consigne ! Règlement ! Shérif ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "À la lueur d'une allumette, tu ouvres une caisse marquée « TONIQUE DU DOCTEUR ». Les bouteilles sentent le whisky frelaté du Smithfield's.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 3,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Au fond d'un sac de voyage, un avis de recherche plié en quatre : le tien, annoté au crayon. Quelqu'un, dans cette gare, te suit à la trace.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ]
+  }
+}

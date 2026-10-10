@@ -3,6 +3,7 @@ import unittest
 from pathlib import Path
 
 from simulation.catalogue import _accorder, charger, charger_situation, generer, verifier
+from simulation.ville import actions_ville, charger_ville, entites_jouables
 
 RACINE = Path(__file__).resolve().parent.parent
 
@@ -19,10 +20,12 @@ class TestCatalogue(unittest.TestCase):
         return {a.texte for a in generer(self.verbes, self.entites, situation)}
 
     def test_donnees_coherentes(self):
-        self.assertEqual(verifier(self.verbes, self.entites), [])
+        ville = entites_jouables(charger_ville(), self.entites)
+        self.assertEqual(verifier(self.verbes, {**self.entites, **ville}), [])
 
     def test_chaque_verbe_produit_au_moins_une_action(self):
         verbes_utilises = {a.verbe for a in generer(self.verbes, self.entites)}
+        verbes_utilises |= {a.verbe for a in actions_ville(charger_ville(), self.verbes, self.entites)}
         self.assertEqual(set(self.verbes) - verbes_utilises, set())
 
     def test_une_entite_ne_sert_pas_d_outil_sur_elle_meme(self):

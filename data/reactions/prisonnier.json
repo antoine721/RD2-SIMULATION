@@ -1,0 +1,959 @@
+{
+  "id": "prisonnier",
+  "description": "Un jeune Irlandais roux de vingt ans à peine, taches de son, nez cassé et dent en moins, accroché aux barreaux de sa cellule comme un singe de foire. Sa chemise déchirée laisse voir un trèfle tatoué sur l'avant-bras : la marque des O'Driscoll.",
+  "personnalite": "Finn Mulligan, voleur de chevaux arrêté hier soir. Bavard, insolent, menteur charmeur : il promet une cachette pleine d'or à quiconque le fera sortir, et la place chaque fois ailleurs. Crâne devant les barreaux, mais terrifié par la corde du juge qui arrive par le train de jeudi. Il attend que son cousin Ciaran, l'O'Driscoll balafré du Smithfield's, vienne le chercher.",
+  "repliques": [
+    "Hé, l'étranger ! Tu veux devenir riche ? Approche, approche...",
+    "Y a de l'or, je te dis ! Assez pour acheter tout Valentine, et le shérif avec.",
+    "Malloy ! Ton café a le goût de la boue de ta rue !",
+    "J'ai jamais volé de chevaux, moi. Ils m'ont suivi tout seuls.",
+    "Le juge arrive par le train de jeudi... et le juge, il aime la corde.",
+    "Les gars viendront me chercher. Les O'Driscoll abandonnent jamais les leurs. Enfin... presque jamais.",
+    "*siffle une gigue irlandaise en tapant du talon contre les barreaux*",
+    "*fixe la petite fenêtre à barreaux, comme s'il attendait un signal*"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 6,
+      "lieu": "bureau_sherif",
+      "activite": "ronfle sur la paillasse de la cellule"
+    },
+    {
+      "de": 6,
+      "a": 7,
+      "lieu": "bureau_sherif",
+      "activite": "réclame son café en secouant les barreaux"
+    },
+    {
+      "de": 7,
+      "a": 12,
+      "lieu": "bureau_sherif",
+      "activite": "harangue les passants par la fenêtre à barreaux"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "bureau_sherif",
+      "activite": "avale une gamelle de haricots froids"
+    },
+    {
+      "de": 13,
+      "a": 18,
+      "lieu": "bureau_sherif",
+      "activite": "fait les cent pas et marchande sa liberté contre de l'or"
+    },
+    {
+      "de": 18,
+      "a": 20,
+      "lieu": "bureau_sherif",
+      "activite": "chante des complaintes irlandaises à tue-tête"
+    },
+    {
+      "de": 20,
+      "a": 24,
+      "lieu": "bureau_sherif",
+      "activite": "gratte le mortier d'un barreau et guette un signal à la fenêtre"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il colle son visage aux barreaux : « Approche, l'ami. Tu vois ces barreaux ? Rouillés. Et moi, j'ai une cachette dans les collines, pleine d'or. Tu fais le calcul. » Il te fait un clin d'œil édenté."
+      },
+      {
+        "texte": "« Tu connais l'ivrogne qui jure avoir vu de l'or dans les collines ? Il l'a vu, pour sûr. C'était le mien ! » Il éclate de rire, ravi de sa trouvaille."
+      },
+      {
+        "texte": "Il jette un regard vers le bureau de Malloy et baisse la voix : « Pas ici. Reviens ce soir, à la petite fenêtre côté ruelle. On parlera affaires. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Sa voix chuchote à travers la fenêtre à barreaux : « T'es venu, hein ? Je savais que t'avais une tête à aimer l'or. Écoute bien, et retiens tout... »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il s'esclaffe en te reconnaissant : « T'es sur le panneau, toi aussi ! Tant qu'à finir pendus, autant finir riches ensemble. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il ricane : « Laisse-moi deviner, tu viens me lire la Bible ? Le pasteur est déjà passé. Il m'a laissé que des remords, et moi j'en ai pas l'usage. »",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Il crache sur tes bottes : « Va au diable. Quand les gars viendront, je leur dirai de garder une balle pour toi. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il murmure, le front contre le fer : « Toi, je t'aime bien. Le chêne foudroyé, au nord, sur la crête. Trois pas côté soleil couchant. Mais tu creuses seulement quand je serai dehors, hein ? »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il soulève un chapeau imaginaire : « Finn Mulligan, pour vous servir. Voleur de chevaux d'après la loi, honnête homme d'après ma mère. »"
+      },
+      {
+        "texte": "Il te salue de deux doigts sur la tempe, à travers les barreaux : « Bien le bonjour ! T'aurais pas une clé sur toi, par hasard ? Non ? Dommage. »"
+      },
+      {
+        "texte": "Il sursaute contre la fenêtre, puis souffle : « Bon sang, tu m'as fait peur ! J'ai cru que c'était... non, rien. Personne. Bonsoir. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "« Tiens, un collègue ! » Il te fait une révérence moqueuse. « Je reconnais un homme qui a sa tête sur une affiche. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te tourne le dos et sifflote une gigue, ignorant ostensiblement ta main levée.",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Tu traites les O'Driscoll de voleurs de poules. Il s'agrippe aux barreaux, rouge comme ses cheveux : « Répète ça quand je serai dehors, gratte-poussière ! »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lui mimes une corde autour du cou. Il pâlit, avale sa salive, puis force un rire : « Le juge m'aime bien. Enfin... il m'aimera. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il te répond du tac au tac : « Ta mère était si laide que les coyotes la ramenaient d'eux-mêmes ! » Même Malloy cache un sourire derrière sa tasse.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il saisit sa gamelle et te la jette à travers les barreaux. Des haricots froids dégoulinent sur ta chemise.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Malloy lève les yeux de ses papiers : « Laissez-le mariner, étranger. Il parle déjà assez tout seul. » Le prisonnier te tire la langue.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu agrippes les barreaux et le fixes sans un mot. Il recule jusqu'au mur du fond : « D'accord, d'accord ! J'ai rien dit. J'dis jamais rien, moi. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il bombe le torse : « Tu me fais pas peur. Ciaran a fait pire à des types plus gros que toi. » Il se mord aussitôt la langue, horrifié d'avoir lâché ce nom."
+      },
+      {
+        "texte": "Quelque chose dans ton regard le fait blêmir : « T'es un des hommes de Colm ? Dis-lui que j'ai rien lâché, je te jure sur saint Patrick ! »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Malloy pose sa tasse : « Intimider mes prisonniers, c'est mon travail, l'étranger. Pas le vôtre. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il craque d'un coup : « D'accord ! J'étais à la ferme Whitlock, mais j'ai juste tenu les chevaux ! C'est Rory le Rouge qui a tiré, celui à la joue balafrée ! Lui, il riait ! »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il hurle à pleins poumons : « Au secours, shérif ! On veut m'assassiner dans ma cellule ! » Des volets claquent dans la rue.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Tu pointes {outil} entre les barreaux. Il lève les mains si vite qu'il se cogne au mur : « Doucement ! Mort, je vaux plus un sou, et mon or non plus ! »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il fixe {outil} sans ciller : « Vas-y. Et l'or pourrira sous terre pour toujours. Personne d'autre que moi sait où il est. »"
+      },
+      {
+        "texte": "Malloy se lève d'un bond, la main sur la crosse : « Rangez ça tout de suite, ou vous prenez sa place sur la paillasse ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu passes {outil} par la fenêtre côté ruelle. Il se plaque contre le mur, livide : « Qui t'envoie ? Colm ? J'ai rien dit au shérif, rien ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te regarde, sincèrement blessé : « Toi aussi ? Je croyais qu'on était associés... »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Tu passes le bras entre les barreaux et le frappes à la tempe. Il s'effondre sur sa paillasse comme un sac d'avoine.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il se jette au fond de la cellule et ton poing ne brasse que de l'air : « Raté ! Ces barreaux me protègent de toi autant qu'ils m'enferment ! »"
+      },
+      {
+        "texte": "Malloy te saisit par le col avant que ton geste soit fini : « Frapper un homme en cage ? Dehors, et que je ne vous y reprenne pas. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "D'un coup sec par la fenêtre à barreaux, tu l'envoies au tapis. Il marmonne, groggy : « ...la cascade... non, le chêne... maman ? »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1,
+          "relation": -2
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing traverse les barreaux et lui écrase le nez. Il recule en jurant en gaélique, du sang plein le menton.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il esquive et ton poing heurte le fer. Tu secoues ta main endolorie pendant qu'il rit à s'en étrangler.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Malloy t'attrape le bras au vol : « Pas dans mon bureau. Cinq dollars d'amende, et estimez-vous heureux. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il te rend le coup à travers la grille : ton chapeau vole et ta lèvre se met à saigner.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "relation": -1
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu frappes avec {outil} à travers les barreaux. Il hurle et se roule au fond de la cellule, l'épaule en sang.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -3,
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il empoigne sa paillasse comme un bouclier et pare le coup : « T'es fou ? Je suis plus utile vivant ! »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Malloy dégaine plus vite que tu ne l'aurais cru : « Lâchez ça ! » Le canon froid de son revolver se pose sur ta nuque.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 15,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu frappes avec {outil} par la fenêtre côté ruelle. Le temps que Malloy bondisse de son lit de camp, le gamin gît recroquevillé contre le mur et ne bouge plus.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "mort",
+          "honneur": -5,
+          "prime": 100
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La détonation résonne dans tout le bureau. Il s'écroule contre la paillasse ; une tache rouge s'élargit sur sa chemise.",
+        "effets": {
+          "etat": "mort",
+          "honneur": -5,
+          "prime": 100
+        }
+      },
+      {
+        "texte": "Ta balle ricoche sur un barreau et se fiche dans le mur. Il s'est jeté à plat ventre : « T'es malade ! Au secours ! »",
+        "effets": {
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Ta balle lui traverse la cuisse. L'adjoint dégaine aussitôt, trop vite, et sa balle t'érafle le bras pendant que Malloy hurle « Cessez le feu ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "sante": -25,
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Tu tires par la fenêtre à barreaux. Il hurle, touché à l'épaule, et les fenêtres de la rue s'allument une à une.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 40,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Il te voyait venir et s'est caché sous la paillasse ; ta balle se perd dans la paille. « Raté ! Ciaran te fera la peau ! »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "prime": 10
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} entre les barreaux. Il l'attrape au vol avec un sourire édenté : « Merci bien ! Tout ce qui entre ici ne ressort plus. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu lances {outil} : il le prend en plein front et s'effondre en jurant contre tous les saints d'Irlande.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Malloy confisque le projectile au milieu du bureau : « On ne nourrit pas les fauves, et on ne les bombarde pas non plus. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il esquive d'un pas de danse ; ton projectile rebondit contre le mur du fond. « Raté, cow-boy ! Ma grand-mère vise mieux, et elle est aveugle. »"
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu passes le lasso entre les barreaux et le plaques contre la grille, poignets ficelés. Il gigote : « C'est pas déjà assez, une cage ? »",
+        "effets": {
+          "etat": "ligote",
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Malloy observe la scène, amusé : « Si ça vous chante. Mais c'est vous qui le détacherez pour la soupe. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Il glisse hors du nœud comme une anguille : « Six ans de vol de chevaux, l'ami. Les nœuds, je les connais mieux que mes prières. »"
+      },
+      {
+        "texte": "Tu le ligotes solidement et le bâillonnes avec son propre foulard. Plus un mot de toute la nuit : depuis son lit de camp, Malloy te remercie d'un grognement.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "relation": -2
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Ta corde siffle entre les barreaux et se resserre sur son épaule. Tu le tires contre la grille ; il grimace : « Hé ! Je suis pas un veau de l'éleveur ! »",
+        "effets": {
+          "etat": "ligote",
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il attrape la corde et tire de toutes ses forces : « Tire, l'ami, tire ! Peut-être que le mur viendra avec ! »"
+      },
+      {
+        "texte": "Ton lasso rebondit sur les barreaux et retombe aux pieds de Malloy, qui le ramasse sans un mot et le pose sur son bureau.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu lui tords le poignet à travers les barreaux : une cuillère aiguisée tombe de sa manche. « Ça ? C'est... pour les haricots. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il écarte les bras : « Désarmer quoi ? Ils m'ont pris mes bottes, mon couteau et ma dignité. » Puis il pose discrètement le pied sur une latte du plancher."
+      },
+      {
+        "texte": "Il soupire et te tend un bout de fil de fer tordu : « Garde-le pour moi. Si Malloy me fouille, je suis bon pour la corde plus tôt que prévu. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Dans sa paillasse, tu trouves un billet froissé : « Jeudi. Quand le train siffle. — C. » Il blêmit : « Rends-moi ça ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il rit à gorge déployée : « Un duel ? Ouvre la porte et rends-moi mon colt, et je te montrerai comment on tire à Tipperary. »"
+      },
+      {
+        "texte": "Malloy n'ouvre même pas les yeux : « Personne ne fait de duel avec mes prisonniers. Allez plutôt vous battre dans la rue. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il fait mine de dégainer avec deux doigts et souffle : « Pan. T'es mort. À moi la cachette. » Puis il retourne s'asseoir, ravi."
+      },
+      {
+        "texte": "« Un jour, oui. Quand les gars m'auront sorti, je te chercherai dans toute la vallée. » Il se passe un doigt sur la gorge.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Un rouquin de vingt ans à peine, nez cassé, dent en moins, des éperons mexicains bien trop beaux pour lui. Un trèfle tatoué sur l'avant-bras : la marque des O'Driscoll."
+      },
+      {
+        "texte": "Tu remarques qu'il lorgne sans arrêt la petite fenêtre à barreaux, comme s'il attendait un signal venu de la ruelle."
+      },
+      {
+        "texte": "Sur le mur de la cellule, il a gravé des traits pour compter les jours... et un petit plan : une rivière, un arbre, une croix."
+      },
+      {
+        "texte": "À la lueur de la lampe, il gratte le mortier autour d'un barreau avec un bout de fer. Il s'arrête net dès qu'il te voit.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Chaque fois que le sifflet d'un train retentit au nord, il sursaute et compte sur ses doigts. Jeudi approche.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu croques son visage derrière les barreaux. Il prend la pose de trois quarts : « Fais-moi plus beau, que les dames de Saint Denis me reconnaissent. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il tire la langue pile au moment où tu traces sa bouche. Ton croquis dans {outil} ressemble à un chat mouillé derrière une grille."
+      },
+      {
+        "texte": "Il te demande d'ajouter une carte au dos, et trace du doigt dans l'air un arbre, un rocher et une croix : « Ça, c'est l'or. Garde ce dessin précieusement. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "L'éclair du magnésium l'aveugle ; il cligne des yeux en jurant : « Préviens, la prochaine fois ! Je vais avoir l'air d'un pendu sur ta photo. »"
+      },
+      {
+        "texte": "Il se recoiffe avec les doigts et prend une pose héroïque : « Pour les journaux de Saint Denis : Finn Mulligan, le plus beau des O'Driscoll ! »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Malloy grommelle : « Envoyez-en un tirage au marshal. Ça m'évitera de payer un dessinateur pour l'avis de recherche. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il fait une grimace monstrueuse au moment exact du déclic. Ta plaque ne montre plus qu'une gargouille rousse.",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu le charges sur ton épaule comme un sac de grain. Il gigote en braillant : « Pose-moi ! Ou plutôt non, emmène-moi loin d'ici ! »"
+      },
+      {
+        "texte": "À peine l'as-tu soulevé que Malloy pose le canon de son revolver sur ta tempe : « Reposez ma marchandise, l'étranger. Délicatement. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Il se fait lourd comme une enclume et s'agrippe aux barreaux : « Pas avant de savoir où tu m'emmènes ! Si c'est la potence, je reste ici ! »"
+      },
+      {
+        "texte": "Il se laisse faire en rigolant : « Vers le nord, cocher ! L'or nous attend ! » Tu files dans la ruelle avec ton fardeau irlandais.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 40,
+          "honneur": -2,
+          "relation": 2
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu fais les cent pas en même temps que lui, de l'autre côté de la grille. Il s'arrête net : « Tu te fiches de moi ? »"
+      },
+      {
+        "texte": "Malloy l'escorte jusqu'aux latrines, menottes aux poignets. Tu les suis à distance ; le prisonnier se retourne et te fait un clin d'œil appuyé.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu longes le mur du bureau jusqu'à la fenêtre de sa cellule. Il est là, accroupi, à attendre quelqu'un qui n'est pas toi.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il se plante devant toi, les mains sur les barreaux : « Me suivre ? Je vais nulle part, l'ami. Pas encore. »"
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il attrape {outil} entre les barreaux et le fourre sous sa paillasse : « Dieu te le rendra. Ou moi, en or massif. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Malloy t'arrache {outil} des mains : « Rien ne passe ces barreaux sans mon accord, l'étranger. » Le prisonnier soupire bruyamment.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il retourne {outil} entre ses doigts, déçu : « C'est tout ? Pas de clé, pas de lime ? Bon... ça se revendra. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu glisses {outil} par la fenêtre côté ruelle. Une main surgit de l'ombre et l'escamote : « T'es un saint. Un saint qui sera riche. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il te dévisage, méfiant : « Un cadeau, comme ça, pour rien ? Personne fait ça. Qu'est-ce que tu veux vraiment ? »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "interroger_sur_gang": [
+      {
+        "texte": "Il gonfle la poitrine : « Les O'Driscoll ? Le plus grand gang de l'Ouest ! Colm en personne m'a serré la main. » Il réfléchit. « Bon, le cou. Mais c'est pareil. »"
+      },
+      {
+        "texte": "Il baisse la voix : « Ils ont un camp dans les collines, pas loin d'ici. Mais si je te dis où, je suis mort avant jeudi. »"
+      },
+      {
+        "texte": "Malloy s'approche, carnet en main : « Continuez, étranger. Vous en tirez plus que moi en deux jours. » Le prisonnier se referme aussitôt comme une huître.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il chuchote : « Un des nôtres boit au Smithfield's en ce moment même. Balafré, un trèfle sur la main. C'est mon cousin Ciaran. Il est là pour moi. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« T'as une tête à travailler pour le shérif, toi. Je dis rien aux mouchards. » Il siffle une gigue en regardant le plafond.",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Dans le noir, sa voix tremble : « La veuve Whitlock... je voulais pas. On devait juste prendre les chevaux. C'est Rory qui a tiré sur son mari. Moi, je me suis enfui. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "« Le gang ? Le gang va venir te trouver, toi. Et tu vas regretter d'avoir posé la question. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "negocier_part_or": [
+      {
+        "texte": "« Moitié-moitié ? T'es fou ! Un tiers. Un tiers, et je te dis même où creuser. » Il te tend la main à travers les barreaux.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Assez d'or pour remplir la baignoire de l'hôtel, l'ami ! Et la gérante te ferait même pas payer les 50 cents. » Il rit de sa propre blague."
+      },
+      {
+        "texte": "Tu exiges les trois quarts. Il grimace comme si tu lui arrachais une dent : « Rapace. Marché conclu. Mais tu me sors d'abord. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il parle si fort que Malloy lève la tête : « Quel or ? Il n'y a pas d'or. Il y a un voleur de chevaux et une corde. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "« Pour toi, la moitié. Parole d'Irlandais. » Il crache dans sa paume et serre la tienne à travers les barreaux.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "rejoindre_odriscoll": [
+      {
+        "texte": "Il te jauge de bas en haut : « Pour entrer chez nous, faut faire ses preuves. Par exemple, au hasard : sortir un pauvre gars de prison. »"
+      },
+      {
+        "texte": "Il éclate de rire : « Toi ? T'as une auréole qui brille à travers ton chapeau. Colm te mangerait tout cru. »",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "« Recherché, armé, sans attaches... t'es déjà à moitié des nôtres ! Sors-moi de là et je te présente à Colm. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Malloy, sans lever les yeux : « Continuez comme ça, et je vous trouve une paillasse à côté de la sienne. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il pose un doigt sur ses lèvres : « Le mot de passe, c'est trèfle. Mais le répète à personne avant que je sois dehors. »",
+        "effets": {
+          "honneur": -1,
+          "relation": 1
+        }
+      }
+    ],
+    "promettre_evasion": [
+      {
+        "texte": "Ses yeux s'allument : « Tu ferais ça ? Avant jeudi, avant le train du juge ! Je te paierai en or, je le jure sur saint Patrick ! »",
+        "effets": {
+          "relation": 2,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu chuchotes, mais l'adjoint lève la tête, la main tremblante sur son colt. Le prisonnier tousse bruyamment pour couvrir ta voix.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il agrippe ta main à travers la fenêtre : « Mon cousin, au Smithfield's, prépare la même chose. Le balafré. Trouve-le, vous ferez ça ensemble. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 2,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il plisse les yeux : « Un honnête homme qui veut faire évader un O'Driscoll ? C'est un piège de Malloy, ça. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Toi ? Après ce que tu m'as fait ? Je préfère encore la corde. » Il te tourne le dos.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il rit nerveusement : « Promettre, c'est facile. Le dernier qui m'a promis ça, il est au cimetière. Le croque-mort a dû lui prendre ses mesures. »"
+      }
+    ],
+    "faire_evader": [
+      {
+        "texte": "Il jaillit de la cellule, t'embrasse sur les deux joues et s'enfuit en braillant une chanson irlandaise. Toute la rue l'entend.",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 40,
+          "honneur": -3,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Tu tires le verrou pendant que Malloy ronfle près du poêle ; il file comme un lièvre vers l'écurie : « Le chêne foudroyé ! Retrouve-moi là-bas ! » La nuit l'avale.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "honneur": -3,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Malloy se dresse, revolver au poing : « Pas si vite ! » Le prisonnier plonge sous le bureau et tu dois fuir sous les balles.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -30,
+          "prime": 50,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Dehors, il te glisse un bout de papier : une croix, un arbre, une rivière. « Ta part. Parole de Mulligan. » Puis il saute sur le premier cheval venu.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 40,
+          "honneur": -2,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "À peine dehors, il te subtilise ta bourse avec un clin d'œil : « Une avance sur ta part ! » Et il détale vers les collines.",
+        "effets": {
+          "etat": "en_fuite",
+          "argent": -10,
+          "prime": 40,
+          "honneur": -2
+        }
+      }
+    ],
+    "apporter_repas": [
+      {
+        "texte": "Il dévore le ragoût à pleines mains : « Que Dieu bénisse ta mère ! Malloy me donne que des haricots froids. »",
+        "effets": {
+          "relation": 2,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Malloy inspecte l'assiette, plonge un doigt dans la sauce à la recherche d'une lime, puis te laisse passer en grognant.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Il renifle l'assiette, méfiant : « T'as pas craché dedans, au moins ? » Il mange quand même, jusqu'à la dernière miette.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "La bouche pleine, il chuchote : « Pour la peine, un indice : l'or est près de l'eau. Ou sous un arbre. Ou les deux. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il partage un bout de pain avec une souris qui loge dans le mur : « Mon seul ami ici. Avec toi, maintenant. »",
+        "effets": {
+          "relation": 2,
+          "honneur": 1
+        }
+      }
+    ]
+  }
+}

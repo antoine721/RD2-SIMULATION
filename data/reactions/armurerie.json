@@ -1,0 +1,482 @@
+{
+  "id": "armurerie",
+  "description": "Une boutique étroite en planches peintes vert bouteille, coincée entre l'écurie et le magasin général, l'enseigne « E. PRATT — ARMES & MUNITIONS » écaillée au-dessus de la porte. Derrière les vitrines, des fusils alignés comme des soldats à la parade ; tout au fond, un couloir de tir où pendent des cibles de papier criblées.",
+  "repliques": [
+    "La clochette de la porte tinte, puis le plancher craque sous les pas de l'armurier.",
+    "Un coup de feu sec résonne au fond de la boutique, puis un autre : on essaie une carabine.",
+    "Une odeur d'huile à fusil et de poudre noire flotte jusqu'au trottoir."
+  ],
+  "reactions": {
+    "braquer": [
+      {
+        "texte": "Tu entres arme au poing et ordonnes de vider la caisse. Le Sergent lève les mains, très lentement… sous le regard de trente fusils accrochés aux murs. Il te tend la recette du jour.",
+        "effets": {
+          "argent": 40,
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Le coup tourne mal : l'armurier plonge derrière le comptoir et se relève avec un fusil à double canon. Tu files avec une poignée de billets et des plombs dans le bras.",
+        "effets": {
+          "argent": 15,
+          "sante": -30,
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Volets clos, rue déserte. Tu forces la porte de derrière et repars avec deux carabines neuves et une caisse de cartouches, le cœur battant.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 60,
+          "prime": 40,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Braquer une armurerie en plein jour, sur la rue principale : avant même que tu ressortes, l'adjoint est dans la rue, revolver tremblant au poing, et tire trop vite.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 30,
+          "sante": -10,
+          "prime": 75,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "L'armurier reconnaît ta tête de l'avis de recherche et dégaine en même temps que toi. Échange de coups de feu, verre brisé : tu repars les poches vides.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -20,
+          "prime": 30,
+          "honneur": -2
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines la façade vert bouteille, l'enseigne écaillée et les fusils derrière la vitre, alignés comme une compagnie au repos."
+      },
+      {
+        "texte": "Assis sur le trottoir d'en face, tu croques l'armurerie coincée entre l'écurie et le magasin général. Le Sergent sort te regarder faire, puis rentre en haussant les épaules."
+      },
+      {
+        "texte": "Une seule fenêtre éclairée à l'étage, la vitrine noire, l'enseigne qui grince : ton dessin a quelque chose d'un poste de garde avant l'assaut.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le soleil frappe les canons bleuis dans la vitrine ; tu passes une heure à rendre leurs reflets dans {outil}, au crayon gras.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "entrer": [
+      {
+        "texte": "La clochette tinte. Odeur d'huile, de cuir et de poudre noire. Derrière le comptoir, le Sergent lève les yeux de son établi : « Entre, et ferme la porte, il y a de la poussière. »"
+      },
+      {
+        "texte": "Au fond, derrière un rideau de toile, un coup de feu claque : un client essaie une carabine sur les cibles de papier. L'armurier ne sursaute même plus."
+      },
+      {
+        "texte": "La porte est verrouillée. À l'étage, une fenêtre s'éclaire et une voix grave tombe sur la rue : « Fermé ! Et j'ai un Spencer chargé, pour ta gouverne ! »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Dès que tu franchis le seuil, l'armurier pose la main sous le comptoir. Il ne dit rien, mais il ne te tourne plus le dos.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "L'armurier te désigne l'écriteau près de la porte : « ON NE SERT NI LES IVROGNES NI LES CANAILLES. » Il garde la main près de son arme.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Le Sergent t'accueille d'un grognement ravi et décroche déjà une carabine du râtelier : « Viens voir ce qui est arrivé de Saint Denis. »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Ton projectile rebondit contre la porte vert bouteille et retombe sur le trottoir. Le Sergent sort sur le perron, les poings sur les hanches."
+      },
+      {
+        "texte": "La vitrine éclate en mille morceaux ; des boîtes de cartouches roulent sur le plancher. De l'intérieur, l'armurier hurle des jurons de caserne.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le bruit de verre brisé résonne dans la rue endormie. Une lampe s'allume à l'étage, puis le canon d'un fusil apparaît à la fenêtre.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu lances {outil} contre la façade en pleine rue principale. Les passants s'écartent, une mère cache les yeux de son enfant, et quelqu'un court chercher Malloy.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Les vitrines alignent des Winchester, des Colt, un vieux Spencer de la guerre et une gravure de la bataille de Gettysburg punaisée de travers."
+      },
+      {
+        "texte": "Une pancarte pend à la porte : « RÉPARATIONS — GRAVURE — MUNITIONS. PAS DE CRÉDIT. PAS D'IVROGNES. »"
+      },
+      {
+        "texte": "Les barreaux aux fenêtres de l'arrière-boutique sont neufs. Quelqu'un ici s'attend à ce qu'on vienne voler des armes."
+      },
+      {
+        "texte": "La boutique est fermée, mais une lueur filtre sous la porte du fond : le Sergent travaille encore à son établi.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Un client sort en soupesant un revolver neuf. Par la porte ouverte, des détonations sèches montent du stand de tir.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu cadres la porte vert bouteille et l'enseigne. Au moment du flash, l'armurier sort et se plante sur le perron, raide comme pour un portrait de régiment."
+      },
+      {
+        "texte": "La vitrine reflète la rue principale sur ta plaque : un cheval, la boue, et ta propre silhouette penchée sur {outil}."
+      },
+      {
+        "texte": "Le cliché est presque noir : seule la lampe de l'étage dessine un petit carré pâle au-dessus de la porte.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle traverse la vitrine et crève une boîte de cartouches : petites détonations en chaîne, fumée blanche, et l'armurier qui hurle.",
+        "effets": {
+          "prime": 10
+        }
+      },
+      {
+        "texte": "La balle se fiche dans l'enseigne, juste entre le E et le P. Le Sergent sort, regarde le trou, puis toi, et note quelque chose dans un carnet.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le coup réveille la moitié de la rue. À l'étage de l'armurerie, une fenêtre s'ouvre et un coup de fusil te répond, au jugé.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -10,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu tires sur une boutique en plein jour : les passants plongent dans la boue, et l'adjoint arrive au pas de course, déjà l'arme à la main.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 15
+        }
+      }
+    ],
+    "crocheter": [
+      {
+        "texte": "La serrure est une neuve, commandée à Saint Denis. Ton crochet glisse, accroche, glisse encore… puis cède dans un déclic. La boutique est à toi.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le crochet casse net dans la serrure. Au-dessus de toi, le plancher craque : quelqu'un vient de se lever.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Accroupi dans l'ombre de la porte, tu travailles la serrure pendant que le chien errant aboie au loin. Déclic. Odeur d'huile et de poudre dans le noir.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Crocheter une porte en plein jour, sur la rue principale ? Un passant te regarde faire, puis s'éloigne d'un pas rapide vers le bureau du shérif.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      }
+    ],
+    "faire_sauter": [
+      {
+        "texte": "La mèche grésille contre la porte. L'explosion arrache la façade, puis la poudre en réserve s'embrase : une deuxième, une troisième déflagration secouent tout Valentine.",
+        "effets": {
+          "prime": 150,
+          "honneur": -4,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Tu cales {outil} contre la porte de derrière. Le souffle arrache le battant et un pan de mur ; à l'intérieur, les râteliers effondrés jonchent le sol d'armes.",
+        "effets": {
+          "prime": 75,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "La mèche s'éteint dans une flaque de boue. Avant que tu aies pu la rallumer, la porte s'ouvre sur le Sergent et son fusil.",
+        "effets": {
+          "sante": -25,
+          "prime": 25,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "L'éclair illumine toute la rue principale. Quand la fumée retombe, l'armurerie n'est plus qu'un trou fumant d'où montent des pétarades de cartouches.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 100,
+          "honneur": -4,
+          "etat": "detruit"
+        }
+      }
+    ],
+    "detruire": [
+      {
+        "texte": "Tu fracasses les vitrines à coups de botte. Les fusils dégringolent, les boîtes de cartouches s'éventrent sur le plancher, et l'armurier crie au voleur.",
+        "effets": {
+          "prime": 20,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu arraches l'enseigne et la piétines dans la boue. « E. PRATT » ne se lit plus qu'à moitié.",
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Seul dans la boutique obscure, tu renverses les râteliers et brises l'établi. Quand tu ressors, plus rien ne tient debout à l'intérieur.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "etat": "detruit"
+        }
+      }
+    ],
+    "fouiller": [
+      {
+        "texte": "Sous le comptoir, tu trouves un Colt Army de la guerre, chargé, et une boîte à cigares où dort la recette du jour.",
+        "effets": {
+          "argent": 25,
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Dans l'arrière-boutique : des caisses de cartouches, des ressorts, des crosses en attente… et une liasse de lettres signées « ta mère », datées de 1863.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "À la lueur d'une allumette, tu ouvres les tiroirs de l'établi : burins, plaques d'argent, et une médaille de l'Union dans un écrin de velours.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu n'as pas fait trois pas derrière le comptoir que l'armurier t'attrape par le col : « On regarde avec les yeux, ici. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -5,
+          "prime": 5
+        }
+      }
+    ],
+    "admirer_vitrines": [
+      {
+        "texte": "Le nez contre la vitre, tu détailles une Winchester 1873 à la crosse gravée de feuilles de chêne. L'étiquette affiche de quoi nourrir une famille pendant un an."
+      },
+      {
+        "texte": "Un Colt nickelé à plaquettes de nacre trône sur un coussin de velours rouge. Derrière, le Sergent t'aperçoit et lève un sourcil engageant."
+      },
+      {
+        "texte": "À la lueur des lanternes de la rue, les canons alignés dans la vitrine luisent comme des cierges. Les barreaux, eux, sont neufs.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Dans le reflet de la vitrine, tu aperçois l'avis de recherche cloué de l'autre côté de la rue. Ton visage est dessus.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Le gamin des rues colle son nez à côté du tien et soupire : « Un jour, j'en aurai un comme ça, et plus personne ne me courra après. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "voler_a_l_etalage": [
+      {
+        "texte": "Pendant que le Sergent grave une plaque, tu glisses une boîte de cartouches dans ta poche. Il ne relève pas la tête… du moins, tu le crois.",
+        "effets": {
+          "argent": 2,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Ta main n'a pas fini son geste qu'un poing noueux s'abat sur ton poignet : « Quatre ans de sentinelle, l'ami. Je vois tout. »",
+        "effets": {
+          "sante": -5,
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Boutique close : rien n'est à portée de main, tout est sous clé derrière des vitres et des barreaux.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Un client occupe l'armurier en marchandant ; tu en profites pour empocher un étui de cuir. Dehors, le gamin des rues t'a vu faire et te sourit.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 3,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il t'a à l'œil depuis ton entrée. Avant même que tu tendes la main, il pose son Colt sur le comptoir, canon tourné vers toi.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "essayer_arme_au_stand": [
+      {
+        "texte": "Le Sergent te tend une Winchester neuve et t'emmène au fond. Trois balles dans la cible de papier ; il siffle : « Pas mal. Elle te va comme un gant. »",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il te fait essayer un revolver à canon long. Le recul te remonte jusqu'à l'épaule, et ta balle troue l'oreille de la silhouette en carton.",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il refuse de charger l'arme : « Tu sens l'alcool. Au stand, on tire à jeun. »",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Il sort de sous le comptoir un fusil qu'il n'a jamais montré à personne : « Prototype. Dis-moi ce que tu en penses. » La cible part en lambeaux.",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Fermé : le Sergent ne fait pas tirer après le coucher du soleil. « Les voisins dorment, et l'adjoint a la gâchette nerveuse. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "s_entrainer_au_tir": [
+      {
+        "texte": "Tu vides {outil} sur la silhouette en carton. Cinq trous dans le cœur, un dans le chapeau. Le Sergent hoche la tête, approbateur.",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Ta première balle part dans le plafond. Le Sergent soupire, corrige ton coude, ton souffle, ta prise : la suivante frappe en plein centre.",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Le Sergent ne te fait plus payer le stand. Il chronomètre tes rechargements avec sa montre de gousset : « Encore deux secondes à gagner. »",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Le stand est fermé la nuit. Tu tires quand même une balle depuis le seuil ; un « Bon sang ! » furieux tombe de l'étage.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le jeune vacher de l'enclos s'est glissé au fond pour te regarder, émerveillé. À chaque balle au centre, il applaudit comme au cirque.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      }
+    ]
+  }
+}

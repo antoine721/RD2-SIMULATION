@@ -1,0 +1,1121 @@
+{
+  "id": "medecin",
+  "description": "Un homme maigre aux favoris gris mal taillés, lorgnons de travers et gilet taché de teinture d'iode. Ses mains tremblent jusqu'au premier verre et sentent l'éther et le whisky ; une flasque cabossée dépasse de sa poche.",
+  "personnalite": "Le docteur Thaddeus Barlow. Brillant chirurgien jadis, ivrogne aujourd'hui. Bavard, sarcastique, il se cache derrière le latin et l'humour noir. Chirurgien de l'armée pendant la guerre de Sécession, il a scié tant de jambes qu'il boit pour ne plus les compter. Vend des toniques dont il connaît mieux que personne l'inutilité, et se trompe parfois de flacon.",
+  "repliques": [
+    "Tonique revigorant du docteur Barlow ! Guérit la toux, la mélancolie et les morsures de serpent !",
+    "*boit une gorgée à sa flasque, les mains tremblantes*",
+    "Primum non nocere... ou quelque chose d'approchant.",
+    "J'ai scié plus de jambes à Antietam que tu n'as vu de vaches.",
+    "Le croque-mort et moi, on se partage la clientèle.",
+    "Le pasteur dit que l'alcool tue. Ma foi, il conserve très bien mes bocaux.",
+    "*hoquette, puis ajuste ses lorgnons avec dignité*"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 8,
+      "lieu": "cabinet_medecin",
+      "activite": "dort tout habillé à l'étage, une bouteille à la main"
+    },
+    {
+      "de": 8,
+      "a": 12,
+      "lieu": "cabinet_medecin",
+      "activite": "reçoit les patients et mélange ses toniques"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "saloon_keane",
+      "activite": "déjeune d'un œuf dur et de deux whiskies"
+    },
+    {
+      "de": 13,
+      "a": 17,
+      "lieu": "cabinet_medecin",
+      "activite": "recoud, panse et extrait des balles"
+    },
+    {
+      "de": 17,
+      "a": 18,
+      "lieu": "pompes_funebres",
+      "activite": "signe les certificats de décès chez le croque-mort"
+    },
+    {
+      "de": 18,
+      "a": 19,
+      "lieu": "rue_principale",
+      "activite": "vante ses toniques sur le trottoir"
+    },
+    {
+      "de": 19,
+      "a": 22,
+      "lieu": "saloon_keane",
+      "activite": "boit au comptoir en racontant la guerre"
+    },
+    {
+      "de": 22,
+      "a": 24,
+      "lieu": "saloon_smithfield",
+      "activite": "recoud les bagarreurs entre deux verres"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il ajuste ses lorgnons et te détaille. « Teint jaune, cernes, odeur de cheval. Il vous faut un tonique, mon ami. Deux dollars. »"
+      },
+      {
+        "texte": "« Le Smithfield's me fait vivre. Une bagarre par soir, trois points de suture par bagarre. Faites le calcul. » Il trinque avec lui-même."
+      },
+      {
+        "texte": "Sa voix baisse. « Antietam. Quatre cents jambes en deux jours. Le vétéran qui mendie dans la rue... c'est peut-être une des miennes. Je ne regardais plus les visages. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il sort deux verres poussiéreux et remplit le tien à ras bord. « Le pasteur prêche la tempérance. Moi, je prêche la désinfection. Santé ! »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il glisse un regard vers la fenêtre. « Je soigne tout le monde, y compris les hommes qui ont un prix sur la tête. Mais le secret médical coûte un supplément. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il recule derrière son bureau, une main dans la poche de son gilet. « Mes consultations sont terminées. Pour vous, définitivement. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il soulève son chapeau melon cabossé. « Bien le bonjour ! Pas encore malade ? Ça viendra, ça vient toujours. »"
+      },
+      {
+        "texte": "Il te rend ton salut avec deux secondes de retard et un hoquet discret. « Pardon. Remède personnel. »"
+      },
+      {
+        "texte": "Il sort du saloon en titubant, te salue d'un grand geste et manque de basculer dans l'abreuvoir. « Docteur Barlow, pour vous servir... demain matin. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "« Ah, mon patient préféré ! » Il te serre la main et en profite pour prendre ton pouls. « Régulier. Dommage, je ne pourrai rien vous facturer. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te salue poliment, mais sa trousse disparaît vite derrière son dos. « Je connais votre genre. Il paie rarement. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Tu le traites de charlatan. Il soupire. « Charlatan ? J'ai un diplôme de Philadelphie, monsieur. Il est encadré. De travers, mais encadré. »"
+      },
+      {
+        "texte": "Tu te moques de ses mains tremblantes. Il les regarde, et quelque chose se brise dans ses yeux. Il retourne à son bureau sans répondre et débouche une bouteille.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Ivre, il se redresse de toute sa maigre hauteur. « Vous finirez sur ma table, vous. Et ce jour-là, j'aurai les mains qui tremblent. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il tire un derringer à crosse de nacre de son gilet et le pointe sur ton ventre. « Une balle là, et personne à cinquante miles ne saura l'extraire. Réfléchissez. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu le taquines sur ses toniques. Il rit malgré lui. « Touché. Le principal ingrédient, c'est l'espoir. Le second, c'est le whisky. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu te penches sur lui. Il pâlit, rougit, pâlit encore. « Je... je n'ai que des fioles et des bandages, monsieur. Prenez ce que vous voulez. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il essaie de soutenir ton regard et échoue. Ses mains tremblent si fort que le flacon qu'il tient tinte contre la table.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Vous ne me faites pas peur. » Il ment très mal. « J'ai recousu les hommes de Malloy toute l'année. Il saura qui vous a soigné, et qui m'a menacé. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Trop ivre pour avoir peur, il éclate d'un rire grinçant. « M'effrayer ? J'ai opéré sous les boulets de canon. Vous n'êtes qu'un courant d'air. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il recule jusqu'à l'armoire et attrape une bouteille d'éther. « Encore un pas, et vous dormez jusqu'à Noël. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Il lève les mains, une fiole dans chacune. « Doucement ! Mes derniers flacons de laudanum ! Vous voulez de l'argent ? Le tiroir de gauche. » Tu y trouves huit dollars.",
+        "effets": {
+          "argent": 8,
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il regarde {outil} d'un œil professionnel. « Je sais ce que ça fait, à l'intérieur d'un homme. J'ai passé la guerre à réparer ce genre de dégâts. Rangez ça. »",
+        "effets": {
+          "relation": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Trop ivre pour comprendre, il prend {outil} pour un instrument, propose de le stériliser au whisky... et boit le whisky.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il te jette le contenu d'une fiole au visage. L'éther te brûle les yeux et la pièce se met à tourner.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il ouvre son tiroir en tremblant et pousse vers toi une liasse de billets et deux flacons de tonique. « Prenez tout. Et partez. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 12,
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing l'envoie valser contre l'armoire à fioles. Le verre se brise, l'éther envahit la pièce, et il reste assis par terre, les lorgnons de travers.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il esquive maladroitement, trébuche sur sa sacoche et tombe sur le derrière. « Enfin, monsieur ! Je suis le seul médecin à cinquante miles ! »",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il pare ton coup avec une scie à amputer. Le métal te mord l'avant-bras ; il te regarde saigner avec intérêt. « Ça, ça va demander des points. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -15,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il est saoul ; il tombe au premier coup et rit, le nez en sang. « Hippocrate n'avait pas prévu ça. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu frappes encore et encore. Le gamin des rues détale vers le bureau du shérif en hurlant qu'on tue le docteur.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -2,
+          "relation": -4
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Un coup de crosse, et le docteur s'effondre sur sa propre table d'examen. Pour une fois, il a le point de vue du patient.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Inutile de frapper fort : il était déjà à moitié parti. Il ronfle sur le plancher, la flasque serrée contre son cœur.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il te voit venir et te plaque sous le nez un tampon imbibé d'éther. C'est toi qui te réveilles par terre une heure plus tard, la bourse plus légère.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "argent": -5
+        }
+      },
+      {
+        "texte": "Ton coup glisse sur son crâne dégarni ; il vacille, s'accroche au rideau et crie « Au meurtre ! » d'une voix étonnamment puissante.",
+        "effets": {
+          "prime": 5,
+          "relation": -3
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu l'atteins avec {outil}. Il s'écroule contre les bocaux et examine lui-même sa plaie, l'air expert. « Superficielle. Vous ratez tout, jeune homme. »",
+        "effets": {
+          "etat": "blesse",
+          "prime": 20,
+          "honneur": -2,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Il esquive {outil} et riposte d'un coup de scalpel, rapide comme au temps où il opérait sous la mitraille. La lame t'ouvre l'avant-bras.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -20,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Il n'a aucune chance. Il tombe au milieu de ses fioles brisées et ne bouge plus. Valentine vient de perdre son seul médecin.",
+        "effets": {
+          "etat": "mort",
+          "prime": 100,
+          "honneur": -5
+        }
+      },
+      {
+        "texte": "Il s'échappe par la fenêtre, s'y coince, s'en extrait enfin et détale en bras de chemise vers le bureau du shérif.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 20,
+          "honneur": -2
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Le lasso le cueille au milieu d'une citation latine. Il tombe à plat ventre dans la boue, sa trousse s'ouvre et les fioles roulent dans la rue.",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "La corde se serre autour de ses bras maigres. « Monsieur ! Je suis un homme de science ! » Les passants rient.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu attrapes le docteur qui titube hors du saloon. Il se laisse traîner sans protester, persuadé que c'est un service de raccompagnement.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il tranche la corde d'un coup de scalpel, avec une précision de chirurgien, et file vers son cabinet.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu le ligotes à sa propre chaise d'examen. Il te donne des conseils sur les nœuds, puis sur la circulation sanguine.",
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il est trop ivre pour résister et s'endort avant que tu aies serré le dernier nœud.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il se débat comme une anguille, griffe, mord, et te plante une aiguille de suture dans la main avant que tu ne le maîtrises.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -2
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu fouilles son gilet et trouves un petit derringer à crosse de nacre. Il soupire. « Cadeau d'un patient reconnaissant. Il est mort quand même. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lui arraches son scalpel des mains. Il te regarde, vexé. « Je coupais un bandage. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il tente de dégainer son derringer, mais ses mains tremblent tant qu'il le lâche de lui-même. Tu n'as qu'à te baisser.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Tu lui prends la flasque qu'il brandissait. C'est sa seule arme après dix heures du soir, et il a l'air plus désespéré que si tu lui avais pris un fusil.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il éclate de rire. « Un duel ? Avec ces mains-là ? Je raterais le soleil à dix pas. » Il te tend sa flasque à la place."
+      },
+      {
+        "texte": "Ivre et piqué au vif, il accepte. Il tire le premier et touche l'abreuvoir. Ta balle lui érafle l'épaule ; il s'assoit dans la boue en riant.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu insistes. Il sort son derringer en tremblant. Le coup claque, il s'effondre, et toute la rue sait que tu viens d'abattre un ivrogne qui ne savait pas tenir une arme.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "mort",
+          "prime": 75,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Il secoue la tête, grave pour une fois. « Gardez vos balles pour les O'Driscoll. Moi, je recouds ceux que vous ne tuez pas. »",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Il touille une mixture verdâtre dans un mortier, goûte du bout du doigt, grimace, et ajoute un grand trait de whisky avant de coller l'étiquette.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Affalé dans le fauteuil du cabinet, près d'une lampe presque éteinte, il parle tout bas à la scie à amputer posée sur ses genoux.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Ses mains tremblent quand il tient une tasse. Mais dès qu'il saisit une aiguille de suture, elles deviennent parfaitement immobiles."
+      },
+      {
+        "texte": "À sa chaîne de montre pend une médaille de l'armée, ternie, qu'il frotte du pouce quand il croit que personne ne le regarde."
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Il passe chez le croque-mort, signe un certificat sans regarder le corps, et ressort avec une bouteille offerte « pour la collaboration »."
+      },
+      {
+        "texte": "Tu le suis du Keane's au Smithfield's, puis du Smithfield's à son cabinet. En chemin, il salue trois poteaux et un chien.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il fait un détour par l'église, s'arrête devant la porte sans entrer, ôte son chapeau, puis repart vers le saloon.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il se retourne d'un bloc, la main dans son gilet. « Si c'est pour me voler, sachez que je n'ai que des dettes. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Il est léger comme un sac de plumes. Il proteste un moment, puis se laisse porter en somnolant contre ton épaule."
+      },
+      {
+        "texte": "Tu ramasses le docteur dans la boue devant le Smithfield's et le portes jusqu'à son lit. Au matin, il te soigne gratuitement sans savoir pourquoi.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 2,
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Il se débat, te bourre de coups de pied et hurle qu'on l'enlève. Un à un, les rideaux de la rue s'écartent.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "prime": 10,
+          "relation": -2
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu le dessines penché sur un patient, les lorgnons au bout du nez. Il regarde le croquis et réclame qu'on lui ajoute un peu de dignité."
+      },
+      {
+        "texte": "Tu croques le docteur endormi sur son bureau, la joue sur un traité d'anatomie, une bouteille vide en guise de presse-papiers.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te demande le dessin, le plie avec soin et le glisse dans son portefeuille. « Pour ma sœur, à Philadelphie. Elle croit que je vais bien. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il prend la pose de l'homme de science, la main sur un crâne en plâtre, le menton levé. Il oublie de cacher la flasque qui dépasse de sa poche.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "L'éclair de magnésium le fait sursauter ; il renverse un flacon d'iode sur son gilet. « Merveilleux. Une tache de plus. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Pas de photographie. » Puis, à voix basse : « Et si on vous demande, je ne vous ai jamais soigné. »",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il soupèse {outil} et le range dans un tiroir déjà plein d'objets laissés par des patients. « On ne sait jamais. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il regarde {outil}, visiblement déçu que ce ne soit pas une bouteille. « Merci. Vraiment. Je suis... touché. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Ému, il te serre la main et te glisse en échange un flacon de son meilleur tonique. « Celui-là, il n'y a presque pas de laudanum dedans. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2,
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Il fixe {outil} un long moment et finit par demander s'il faut l'avaler avant ou après les repas.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "acheter@outil": [
+      {
+        "texte": "Il fouille son arrière-boutique et en sort {cible}. « Un patient m'a payé avec. Il n'en aura plus besoin, il est chez le croque-mort. » Trois dollars.",
+        "effets": {
+          "argent": -3
+        }
+      },
+      {
+        "texte": "Il te vend {cible} et ajoute d'office un flacon de tonique sur la note. Tu ne remarques l'arnaque qu'une fois dehors.",
+        "effets": {
+          "argent": -5
+        }
+      },
+      {
+        "texte": "Il te cède {cible} pour une poignée de pièces, en te faisant jurer de ne rien dire au pasteur.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te vend {cible} par la fenêtre, en chemise de nuit, et se trompe en rendant la monnaie, à ton avantage.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il te tend {cible} et double le prix sans sourciller. « Taxe sur le risque. Vous comprendrez. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -6
+        }
+      }
+    ],
+    "vendre@outil": [
+      {
+        "texte": "Il examine {cible} avec intérêt. « Ça servira. Pour une amputation, ou contre mes créanciers. » Il te tend trois dollars.",
+        "effets": {
+          "argent": 3
+        }
+      },
+      {
+        "texte": "Il n'a pas d'argent liquide. Il propose six flacons de tonique, puis, voyant ta tête, deux dollars et un seul flacon.",
+        "effets": {
+          "argent": 2
+        }
+      },
+      {
+        "texte": "Il retourne {cible} et y trouve une tache sombre. « Je ne pose pas de questions. Je baisse juste le prix. » Un dollar.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 1
+        }
+      },
+      {
+        "texte": "Il t'en offre un prix honnête, puis ajoute un dollar « pour les soins futurs, qui ne sauraient tarder ».",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 4,
+          "relation": 1
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle le touche au flanc. Il tombe à genoux, presse la plaie de ses deux mains et murmure : « Mauvais angle... il me faudrait un docteur. »",
+        "effets": {
+          "etat": "blesse",
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Le coup de feu le projette contre son armoire à fioles, qui s'effondre sur lui dans un fracas de verre. L'éther se mêle à l'odeur de poudre.",
+        "effets": {
+          "etat": "mort",
+          "prime": 100,
+          "honneur": -5
+        }
+      },
+      {
+        "texte": "Tu le rates d'un cheveu ; la balle fait exploser un bocal de sangsues. Il saute par la fenêtre avec une agilité insoupçonnée et court vers le bureau du shérif.",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 20,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il a dégainé son derringer en même temps que toi. Ta balle l'atteint à l'épaule, mais la sienne te touche au côté.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -30,
+          "etat": "blesse",
+          "prime": 50,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Dans la pénombre du saloon, ta balle le touche à la cuisse. Il s'effondre et, par réflexe, se fait lui-même un garrot avec sa cravate.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 50,
+          "honneur": -3
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} sur le docteur. Ça l'atteint au front ; il s'assoit lourdement et se diagnostique lui-même une commotion.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il esquive maladroitement, et ce que tu as lancé fracasse un bocal de formol. Un serpent à sonnette conservé glisse sur le plancher.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il essaie d'attraper {outil} au vol, le rate d'un bon pied et applaudit ton lancer.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te renvoie aussitôt une fiole de vitriol qui éclate à tes pieds et ronge le cuir de tes bottes.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      }
+    ],
+    "se_faire_soigner": [
+      {
+        "texte": "Il nettoie tes plaies au whisky, un peu pour toi, beaucoup pour lui, recoud d'une main soudain très sûre et serre un bandage propre. « Cinq dollars. Et pas de bagarre pendant une semaine. »",
+        "effets": {
+          "sante": 30,
+          "argent": -5
+        }
+      },
+      {
+        "texte": "Il t'applique un onguent noirâtre qui pique comme un essaim de guêpes. Le lendemain, tu te sens mieux ; il refuse de dire ce qu'il y avait dedans.",
+        "effets": {
+          "sante": 20,
+          "argent": -3
+        }
+      },
+      {
+        "texte": "Il te soigne à la lueur d'une lampe, l'haleine chargée et l'œil vague. Il se trompe de flacon et te badigeonne de liniment pour chevaux. Ça brûle, mais ça désinfecte.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 5,
+          "argent": -3
+        }
+      },
+      {
+        "texte": "Il refuse ton argent. « Gardez-le pour le croque-mort. C'est lui qui vous verra la prochaine fois, si vous continuez comme ça. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "sante": 30,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il tire les rideaux, te soigne sans un mot et compte les billets deux fois. « Le prix du silence est compris. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": 25,
+          "argent": -10
+        }
+      },
+      {
+        "texte": "Il te fait avaler une cuillerée de « remède universel » et te donne une tape dans le dos. Tu as surtout l'impression d'être ivre.",
+        "effets": {
+          "sante": 10,
+          "argent": -2
+        }
+      },
+      {
+        "texte": "« On parle de vous en ville, et en bien. Ça me change. » Il te soigne avec un soin rare et ne te fait payer que la moitié.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "sante": 30,
+          "argent": -2,
+          "relation": 1
+        }
+      }
+    ],
+    "se_faire_extraire_une_balle": [
+      {
+        "texte": "Il te tend une lanière de cuir à mordre, fouille la plaie avec une longue pince et fait tinter la balle dans une cuvette. « Calibre .44. Vous la gardez en souvenir ? »",
+        "effets": {
+          "sante": 20,
+          "argent": -5
+        }
+      },
+      {
+        "texte": "Il est ivre. Il fouille, jure, fouille encore, et ressort la balle avec un morceau de ta chemise. Tu as perdu beaucoup de sang dans l'affaire.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -10,
+          "argent": -5
+        }
+      },
+      {
+        "texte": "Il opère avec la précision d'autrefois, sans un tremblement, et te recoud à petits points. « Antietam m'a appris ça. Le whisky ne me l'a pas encore fait oublier. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "sante": 30,
+          "argent": -2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il extrait la balle, la regarde et pâlit. « C'est une balle de carabine d'adjoint, ça. » Il prend le double du prix et ne te regarde plus en face.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": 20,
+          "argent": -10
+        }
+      },
+      {
+        "texte": "Il t'endort à l'éther. Tu te réveilles sur sa table, la balle posée sur ta poitrine comme une médaille, et la bourse allégée d'un pourboire qu'il s'est accordé.",
+        "effets": {
+          "sante": 25,
+          "argent": -6
+        }
+      },
+      {
+        "texte": "Il accepte, mais te fait payer chaque seconde en douleur. « Oh, pardon. J'ai la main lourde, aujourd'hui. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": 10,
+          "argent": -5,
+          "relation": -1
+        }
+      }
+    ],
+    "se_faire_examiner": [
+      {
+        "texte": "Il écoute ton cœur avec un stéthoscope de bois, tapote ton dos et inspecte ta langue. « Diagnostic : vous vivez dans l'Ouest. Pronostic : réservé. » Un dollar.",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il palpe ton épaule et trouve une vieille balle logée sous la peau. « Vous promenez celle-là depuis combien de temps ? » Il te la retire en deux minutes.",
+        "effets": {
+          "sante": 10,
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Il t'examine en titubant et conclut, très sérieux, à une grossesse. Puis il se reprend. « Pardon. Pas vous. » Il prescrit du repos et du whisky.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il regarde tes jointures écorchées et la poudre sous tes ongles. « Vous ne venez pas pour vous faire soigner. Vous venez parce que vous avez fait des dégâts. » Il refuse ton argent.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il t'examine sérieusement et gratuitement. « Le cœur est bon. C'est le reste qui m'inquiète : la balle, la corde, le whisky. Prenez soin de vous. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "sante": 5,
+          "relation": 1
+        }
+      }
+    ],
+    "acheter_un_tonique": [
+      {
+        "texte": "Il te tend une fiole brune étiquetée « Tonique revigorant du Dr Barlow ». C'est du whisky, du sucre et une pointe de laudanum : tu te sens invincible pendant une heure.",
+        "effets": {
+          "sante": 10,
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Le tonique a un goût de rouille et d'herbe pourrie. Tu passes l'après-midi penché au-dessus de l'abreuvoir.",
+        "effets": {
+          "sante": -5,
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Il se trompe d'étagère et te vend une purge pour chevaux. Tu ne t'en rends compte qu'à mi-chemin de l'hôtel, beaucoup trop tard.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -15,
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Il te donne le vrai remède, celui qu'il garde pour lui : écorce de saule et gingembre. Pour une fois, ça marche.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "sante": 15,
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te vend trois flacons au prix de cinq en jurant qu'ils guérissent aussi les blessures par balle. Ils ne guérissent rien du tout.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -5
+        }
+      },
+      {
+        "texte": "Il t'en propose une caisse « à revendre à Saint Denis, moitié pour vous ». Tu ne prends qu'un flacon ; il a un goût d'anis et de pétrole.",
+        "effets": {
+          "sante": 5,
+          "argent": -2
+        }
+      }
+    ],
+    "se_faire_arracher_une_dent": [
+      {
+        "texte": "Il t'assoit, te colle sous le nez un chiffon imbibé d'éther, et tu te réveilles avec un trou dans la mâchoire et ta dent posée sur un mouchoir. « Un dollar. Belle racine. »",
+        "effets": {
+          "sante": 5,
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Ses mains tremblent. Il arrache la mauvaise dent, puis la bonne, et te fait payer les deux.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -10,
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Il décroche du mur des tenailles empruntées au maréchal-ferrant « pour les cas difficiles ». Le tien en est un. La dent cède avec un craquement sinistre.",
+        "effets": {
+          "sante": -5,
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Au lieu de l'arracher, il te soigne la dent et la bouche avec un plombage d'argent dont il est très fier. « Elle vous survivra. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "sante": 5,
+          "argent": -3,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il arrache la dent avec une lenteur calculée, en sifflotant un air de la guerre.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "argent": -2
+        }
+      }
+    ],
+    "confisquer_la_flasque": [
+      {
+        "texte": "Tu lui prends sa flasque des mains. Il te regarde comme un enfant privé de son jouet, puis tire une deuxième flasque de sa botte.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il te la laisse prendre, les yeux humides. « Gardez-la jusqu'à demain. Juste jusqu'à demain. » Ses mains tremblent toute la journée, mais il soigne mieux.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Il se jette sur toi pour la récupérer, te manque et s'écroule en sanglotant sur les marches du cabinet. Le pasteur, qui passait, vient l'aider à se relever.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Son derringer est dans sa main avant que tu touches la flasque. « Pas celle-là. Elle était à mon frère. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu vides la flasque dans l'abreuvoir. Il regarde le whisky couler avec une douleur sincère. « Vous venez de tuer un patient. Moi. »",
+        "effets": {
+          "relation": -2
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1374 @@
+{
+  "id": "joueur_poker",
+  "description": "Un homme mince en gilet de brocart bordeaux, moustache fine et cheveux plaqués à la brillantine, qui bat les cartes d'une seule main sans les regarder. Une chevalière en or trop brillante orne son petit doigt, et ses manchettes sont un peu trop amples.",
+  "personnalite": "Lucius Crane : charmeur, vaniteux, d'un sang-froid de serpent à la table et d'une lâcheté de lièvre dès qu'on sort une arme pour de vrai. Ancien tricheur des bateaux à aube du Mississippi, chassé de Saint Denis, il plume les fermiers de Valentine avec un as dans la manche gauche, une chevalière polie comme un miroir et un derringer dans la poche du gilet.",
+  "repliques": [
+    "Une petite main, l'ami ? Juste pour passer le temps.",
+    "La chance, c'est pour les amateurs. Moi, je fais du calcul.",
+    "*bat les cartes d'une main et fait cascader le paquet d'un bras à l'autre*",
+    "Paire de rois... Oh, quelle malchance, messieurs. Pour vous.",
+    "*tire discrètement sur sa manche gauche*",
+    "Ce chat a quelque chose contre moi, je vous jure.",
+    "Saint Denis ? Une ville d'ingrats. On m'y a chassé pour une simple erreur de calcul.",
+    "Le banquier joue samedi. Préparez vos mouchoirs.",
+    "Je ne triche jamais, monsieur. Je corrige le hasard.",
+    "*fait rouler un jeton de nacre sur ses phalanges*"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 4,
+      "lieu": "saloon_keane",
+      "activite": "joue les grosses mains de la nuit à la table de poker"
+    },
+    {
+      "de": 4,
+      "a": 12,
+      "lieu": "hotel",
+      "activite": "dort dans la meilleure chambre de l'hôtel, payée avec l'argent des autres"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "hotel",
+      "activite": "prend un bain, se fait raser et cire ses bottes vernies"
+    },
+    {
+      "de": 13,
+      "a": 14,
+      "lieu": "saloon_keane",
+      "activite": "déjeune d'un steak en lisant le journal de Saint Denis"
+    },
+    {
+      "de": 14,
+      "a": 15,
+      "lieu": "banque",
+      "activite": "dépose ses gains et salue le directeur, son meilleur client du samedi"
+    },
+    {
+      "de": 15,
+      "a": 16,
+      "lieu": "saloon_smithfield",
+      "activite": "repère les pigeons au Smithfield's et les invite chez Keane"
+    },
+    {
+      "de": 16,
+      "a": 24,
+      "lieu": "saloon_keane",
+      "activite": "tient la table de poker, une carte de trop dans la manche"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il te désigne une chaise vide sans lever les yeux de ses cartes : « Assieds-toi, l'ami. Ici, on parle avec des jetons. Les mots, c'est gratuit, donc ça ne vaut rien. »"
+      },
+      {
+        "texte": "Il cire ses bottes sur le perron de l'hôtel : « Le jour, je me repose. Les cartes, c'est comme les vampires : ça ne sort que la nuit. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il te parle sans cesser de distribuer : « Tu vois le fermier à ma gauche ? Il vient de miser l'argent de sa traite. Ça me fend le cœur. » Il sourit. « Presque. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il baisse la voix et te glisse un jeton de nacre : « Tu me plais. Un conseil gratuit : ne joue jamais contre un homme qui porte une bague au petit doigt. » Il fait tourner la sienne.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il hausse un sourcil : « Tiens, la tête de l'affiche. Tu sais qu'on parie sur ta prime, au Smithfield's ? Moi, j'ai misé que tu tiendrais jusqu'à la fin du mois. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il te jauge avec amusement : « Un honnête homme. On en voit de moins en moins à cette table, et ceux qu'on voit repartent pieds nus. »",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Il pose ses cartes face contre le feutre et glisse la main sous la table : « On n'a plus rien à se dire, toi et moi. »",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il te sourit en complice : « Toi, tu as la tête de quelqu'un qui sait où regarder. Viens me voir après la fermeture, on aura peut-être affaire ensemble. »",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il effleure le bord de son chapeau avec deux doigts, sans cesser de battre les cartes : « Monsieur. Belle soirée pour perdre de l'argent. »"
+      },
+      {
+        "texte": "Croisé sur le perron de la banque, il soulève son chapeau avec une politesse exagérée : « Je viens de déposer les économies de trois fermiers. Bonne journée ! »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "« Mon ami ! » Il se lève et te serre la main un peu trop longtemps ; tu vérifies ensuite, par réflexe, que ta bourse est toujours là.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te rend ton salut d'un hochement de tête glacial, la main droite déjà posée près de sa poche de gilet.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il lève son verre de bourbon dans ta direction : « Une place vient de se libérer. Le dernier occupant n'avait plus de chemise. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te salue avec un respect méfiant, comme on salue un shérif qui ne serait pas en service.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Tu le traites de tricheur à voix haute. La table se tait. Il sourit lentement : « Grave accusation, l'ami. J'espère que tu as des preuves, ou un bon menuisier pour ton cercueil. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu te moques de son gilet. Il le lisse avec soin : « Brocart de La Nouvelle-Orléans. Toi, qui t'habille ? Ton cheval ? » Les joueurs ricanent dans leur barbe.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il ne lève même pas les yeux : « Les grandes gueules, je les plume en silence. Assieds-toi, et on verra qui parlera encore à minuit. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il se lève d'un bond et sa main file vers son gilet. Puis il voit ton arme, se ravise et se rassoit, blanc comme un linge.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il rit de bon cœur : « Toi, insulter Lucius Crane ? Tu n'y mets aucune conviction. Prends un cigare et assieds-toi. »",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "« Tu veux me faire peur ? » Il étale sur le feutre une quinte flush royale, sortie d'on ne sait où. « Moi, c'est ma main qui fait peur. »",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu te penches sur la table. Ses doigts s'immobilisent sur le paquet : « Doucement, l'ami. On peut s'arranger. Combien pour que tu ailles boire ailleurs ? »",
+        "effets": {
+          "argent": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il garde son sourire, mais une goutte de sueur glisse sous sa brillantine : « J'ai joué contre des colonels et des pirates du Mississippi. Tu ne m'impressionnes pas. » Sa voix tremble un peu.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu le plaques contre le dossier de sa chaise. Un as de pique glisse de sa manche et tombe sur le feutre. Le silence qui suit est très, très long.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il sort de son gilet un derringer à deux coups : « Recule. Je ne suis pas un tireur, mais à cette distance, même moi, je ne rate pas. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il lève les mains : « D'accord ! Le fermier et le vacher sont des pigeons, je les plume depuis une semaine. La moitié pour toi si tu te tais. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 15,
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "« Tu me fais les gros yeux, à moi ? » Il te tapote la main. « Garde ça pour les O'Driscoll, mon ami. Moi, je suis inoffensif. »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Il fixe {outil}, déglutit et pousse vers toi une pile de jetons : « Prends. Prends tout. Je n'ai jamais aimé le sang sur le feutre. »",
+        "effets": {
+          "argent": 20,
+          "honneur": -2,
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il garde les mains bien à plat sur la table : « Tu ne feras rien ici. Trop de témoins, et le bureau du shérif est juste à côté. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Les autres joueurs plongent sous la table. Lucius, lui, reste assis et lève les mains en souriant jaune : « Tout ce que tu veux. Mais range {outil}, tu fais peur aux cartes. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Plus vif que tu ne l'aurais cru, il a déjà son derringer pointé sur ton ventre : « Égalité, l'ami. On se sépare en bons perdants ? »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "« Un homme recherché qui menace un honnête joueur ? » Il crie si fort que le saloon entier se retourne : « Qu'on aille chercher l'adjoint ! »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il blêmit, tire de sa manche un as de cœur et le pose devant toi comme une offrande : « C'est tout ce que j'ai d'honnête sur moi. Et ma bourse. Prends ma bourse. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 25,
+          "honneur": -2,
+          "prime": 10,
+          "relation": -3
+        }
+      }
+    ],
+    "soudoyer": [
+      {
+        "texte": "Il fait disparaître ton billet comme un tour de magie : « Qu'est-ce que tu achètes ? Je perds contre qui tu veux, je gagne contre qui tu veux. C'est mon métier. »",
+        "effets": {
+          "argent": -20,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu le paies pour qu'il rende au fermier l'argent de sa traite. Il hésite, soupire, puis laisse le pauvre homme gagner trois mains de suite. « Tu me ruines en vertu, l'ami. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -20,
+          "honneur": 2
+        }
+      },
+      {
+        "texte": "Contre vingt dollars, il te chuchote les manies de ses adversaires : « Le vacher bluffe quand il se gratte l'oreille. Le banquier, lui, ne bluffe jamais : il triche autrement, avec ses taux. »",
+        "effets": {
+          "argent": -20,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il prend ton argent, le compte et le glisse dans sa poche : « Merci pour le pourboire. Mais entre nous, rien n'a changé. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "argent": -20
+        }
+      },
+      {
+        "texte": "Il accepte ton argent pour quitter Valentine par le train de l'aube. Le lendemain, il est toujours à sa table : « Raté le train. Ponctuel comme une horloge, ce chef de gare. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -20,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il repousse ton argent : « Entre amis, on ne se paie pas, on se rend des services. » Et il te glisse le nom du prochain pigeon : le directeur de la banque, samedi soir.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Ton coup s'abat sur sa nuque ; il s'effondre sur la table dans une cascade de jetons. De sa manche s'échappent deux as et un roi.",
+        "effets": {
+          "honneur": -1,
+          "prime": 10,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il s'écroule sur le feutre. Aussitôt, les joueurs se jettent sur le pot et se battent pour les jetons ; dans la mêlée, personne ne pense plus à toi.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il s'esquive d'un mouvement souple et ton poing frappe le dossier de la chaise. Quand tu te retournes, il a filé par la porte de derrière, son chapeau sous le bras.",
+        "effets": {
+          "sante": -3,
+          "relation": -2,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il s'effondre. Tu ramasses les cartes truquées tombées de sa manche et les montres à la table : les joueurs grondent, mais pas contre toi.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il tombe ; un client crie : « C'est l'homme de l'affiche ! » et se rue dehors pour prévenir le shérif.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 15,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Il recule en renversant sa chaise et tu l'atteins au bras avec {outil}. Ses cartes s'envolent, et trois as tombent de sa manche dans un silence de mort.",
+        "effets": {
+          "honneur": -2,
+          "prime": 25,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il sort son derringer plus vite que tu ne l'aurais cru, te loge une balle dans la cuisse et file par la fenêtre dans un fracas de verre.",
+        "effets": {
+          "sante": -30,
+          "prime": 15,
+          "relation": -4,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu frappes sans lui laisser le temps de crier. Il glisse sous la table, mort, la main crispée sur un as de pique qui n'aurait jamais dû être là.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -4,
+          "prime": 75,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Il appelle à l'aide ; les joueurs qu'il plumait une minute plus tôt hésitent... puis te laissent faire en ramassant ses jetons.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 20,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il t'attendait : une chaise vole vers toi, puis un plateau de jetons, puis il disparaît dans l'escalier pendant que tu jures.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "prime": 10,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle l'atteint à l'épaule. Il s'effondre sur la table, et sa manche déchirée laisse voir un ingénieux mécanisme à ressort chargé de cartes.",
+        "effets": {
+          "honneur": -2,
+          "prime": 40,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il plonge derrière le piano à la première détonation et riposte de ses deux coups de derringer ; l'un d'eux te frôle la joue.",
+        "effets": {
+          "sante": -10,
+          "honneur": -2,
+          "prime": 30,
+          "relation": -4,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il meurt les yeux ouverts, un full aux as encore serré dans la main. Le croque-mort, déjà sur le seuil, le mesure du regard : « Cinq pieds dix. Du chêne, il en avait les moyens. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -5,
+          "prime": 100,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Tu le manques, mais ta balle fait exploser son paquet : tout le saloon voit pleuvoir sur le feutre six as de trop. Lucius s'enfuit sous les huées.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 20,
+          "relation": -4,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il s'écroule, blessé. L'adjoint du shérif surgit, revolver au poing, et tire avant même d'avoir fini de crier « Halte ! ». Sa balle te traverse le bras.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -20,
+          "honneur": -2,
+          "prime": 50,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Il se baisse avec un temps d'avance, comme s'il avait lu dans ta main. Ton projectile emporte le chapeau du vacher assis derrière lui. « Raté. Tu bluffes mal, l'ami. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il reçoit {outil} en pleine poitrine et bascule en arrière avec sa chaise ; un éventail de cartes truquées s'échappe de sa manche.",
+        "effets": {
+          "honneur": -1,
+          "prime": 10,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Les joueurs éclatent de rire : il attrape {outil} au vol, comme une carte, et le pose sur le pot. « Je suis, l'ami. Et je relance. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il esquive et sort son derringer. Le coup part de travers et fait éclater une bouteille au-dessus du comptoir ; un éclat de verre t'entaille la joue.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu lui lies les poignets avec {outil}. En serrant, tu sens quelque chose de rigide sous sa manchette : un paquet d'as cousu dans la doublure.",
+        "effets": {
+          "honneur": -1,
+          "prime": 10,
+          "relation": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Il se tortille comme une anguille du Mississippi : « Combien pour desserrer ce nœud ? Trente ? Quarante ? » Il a encore de quoi payer, apparemment.",
+        "effets": {
+          "prime": 10,
+          "relation": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Les joueurs t'aident volontiers : « Il nous a plumés toute la semaine ! » Ils le ficellent avec {outil} à la rampe de l'escalier, et l'un d'eux récupère sa mise.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Il te glisse entre les mains, abandonne sa veste dans le nœud comme un lézard sa queue, et file par la porte de derrière.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "La boucle de ton lasso le cueille au moment où il ramasse le pot ; il tombe à la renverse, et les jetons pleuvent sur le plancher comme de la grêle.",
+        "effets": {
+          "prime": 5,
+          "relation": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Il esquive la boucle d'un pas de côté, te salue d'un geste élégant et s'éclipse : « Belle tentative, l'ami. Trop prévisible. »",
+        "effets": {
+          "relation": -1,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "La boucle se resserre sur ses bras ; tu tires, sa manche se déchire et libère un petit mécanisme de cuivre et une volée de cartes. La salle entière gronde contre lui.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Tu le traînes avec {outil} jusqu'à la porte, mais un client te reconnaît : « C'est le type de l'affiche ! Il enlève le joueur ! » Les chaises raclent le sol.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10,
+          "relation": -3,
+          "etat": "ligote"
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu lui saisis le poignet : un derringer à deux coups tombe de sa poche de gilet. « Il n'est pas à moi. Un cadeau... d'un ami défunt. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu fouilles ses manches : un couteau pliant, trois as, deux rois et un ressort de montre. Il hausse les épaules : « Chacun ses outils. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il tire avant que tu l'atteignes et la balle de son derringer te frôle l'épaule. Puis tu lui tords le bras et l'arme glisse sous la table.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il te tend lui-même son derringer, crosse en avant : « Garde-le pour la soirée. Comme ça, personne ne pourra dire que Lucius Crane a tiré le premier. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines ses mains dans {outil} : longues, blanches, sans une callosité, des mains qui n'ont jamais tenu que des cartes et l'argent des autres."
+      },
+      {
+        "texte": "Il remarque ton crayon et prend la pose, une main sur son gilet : « Dessine surtout la bague. Elle vaut plus que ta selle. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "À la lueur de la lampe, tu croques la partie : Lucius au centre, les pigeons autour. En regardant mieux ton propre dessin, tu remarques un coin de carte qui dépasse de sa manche.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te voit dessiner et pose son chapeau devant son visage : « Pas de portrait. Les portraits finissent sur des affiches. »",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "detrousser": [
+      {
+        "texte": "Tu lui fais les poches dans la cohue : une liasse de billets, un jeu de cartes marqué et une lettre de Saint Denis qui commence par « Dernier avertissement ».",
+        "effets": {
+          "argent": 40,
+          "honneur": -2,
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Ses doigts se referment sur ton poignet avant que tu aies touché sa poche : « On ne vole pas un voleur, l'ami. C'est une question de dignité professionnelle. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il dort affalé sur la table après une nuit de bourbon. Tu repars avec sa bourse ; il ne s'en apercevra qu'au petit matin, en hurlant.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 55,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu vides sa bourse sur la table, devant le fermier qu'il plumait depuis une semaine : « Tiens, c'est à toi. » Le fermier en pleure de reconnaissance.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1,
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il te voit venir, sort son derringer et crie au voleur. Tout le saloon se tourne vers toi, la main sur l'arme.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "prime": 10,
+          "relation": -2,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il examine {outil} en connaisseur et rend aussitôt son estimation : « Deux dollars. Trois avec le sourire. » Il mise ton cadeau sur la main suivante, pour la chance.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il glisse ton cadeau dans sa poche intérieure avec un clin d'œil : « Je ne refuse jamais rien. C'est la première règle du joueur. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Touché, il te tend en échange un jeton de nacre : « Montre-le au barman, il te servira un verre. Ou garde-le comme porte-bonheur : il en a plumé plus d'un. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il repousse {outil} du pommeau de sa canne : « Je ne prends rien de toi. On ne sait jamais ce que ça coûte ensuite. »",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il met immédiatement {outil} en jeu dans le pot : « Les cadeaux, ça se joue. » Le fermier, à sa gauche, le regarde avec envie.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il blêmit, puis se recompose : « Un duel ? Mon cher, je suis joueur, pas pistolero. Je te propose mieux : une main de poker, et le perdant quitte Valentine. »"
+      },
+      {
+        "texte": "Le saloon se vide dans la rue pour assister au spectacle. Lucius sort en tremblant, dégaine son derringer avant le signal... et te rate. Puis il s'enfuit à toutes jambes vers l'écurie.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il se place dans la rue principale, puis tire avant le signal. Sa balle t'égratigne le bras ; la tienne le couche dans la boue, blessé, sous les huées des témoins.",
+        "effets": {
+          "sante": -15,
+          "honneur": 1,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "« Contre toi ? Jamais. » Il jette sa bourse à tes pieds et file vers la gare sans se retourner. Lâche jusqu'au bout.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 30,
+          "honneur": -1,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il accepte avec un calme inquiétant. Dans la rue, au dernier moment, tu aperçois un reflet de canon à une fenêtre de l'hôtel : il a payé quelqu'un. Tu plonges ; la balle se perd dans un tonneau.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing l'atteint au menton ; il s'effondre sur la table et une pluie d'as s'échappe de sa manche. Tout le saloon les compte à voix haute.",
+        "effets": {
+          "prime": 5,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il pare avec une adresse surprenante et te rend un coup de canne dans les côtes : « Mes mains sont mon outil de travail. Je ne les abîme pas sur ta figure. »",
+        "effets": {
+          "sante": -8,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "La bagarre déborde : les joueurs qu'il a plumés en profitent pour régler leurs comptes, les chaises volent, et le pianiste continue de jouer, faux.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -10,
+          "prime": 5,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il recule d'un pas et sort son derringer : « Encore un pas, et le croque-mort aura du travail cette nuit. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "En plein jour, devant la banque, il s'effondre en criant à l'assassin. Derrière la vitre, le caissier, terrorisé, se jette sous son guichet.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Ses mains bougent trop vite pour un honnête homme. Toutes les trois donnes, sa manche gauche frôle le rebord de la table, et une carte change de propriétaire."
+      },
+      {
+        "texte": "Sa chevalière brille sous la lampe. À bien regarder, la face en or est polie comme un miroir : quand il distribue, il voit passer chaque carte au-dessous."
+      },
+      {
+        "texte": "Il boit peu, sourit beaucoup, et laisse gagner le fermier deux fois sur dix : juste assez pour qu'il reste à table.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Sur le perron de l'hôtel, il fait disparaître une pièce entre ses doigts, encore et encore, l'air profondément ennuyé.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le gros chat roux du saloon fixe sa manche gauche, la queue frémissante, comme s'il y avait flairé une souris. Lucius déplace sa chaise, nerveux."
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il se fige, un sourire de réclame aux lèvres, une main sur son gilet : « Prends mon bon profil. Et pas les mains. Surtout pas les mains. »"
+      },
+      {
+        "texte": "L'éclair de magnésium le surprend en pleine donne. Sur la plaque, plus tard, on verra nettement une carte coincée dans sa manchette."
+      },
+      {
+        "texte": "Il se cache derrière son chapeau : « Pas de photographie ! À Saint Denis, la police tient un album de portraits, et je n'ai pas envie d'y figurer deux fois. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il t'offre la pose, les cartes en éventail : quatre as. « Pour la postérité. Ne me demande pas d'où sort le cinquième. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu le soulèves comme un sac de farine. Il gigote, perd son chapeau, et une pluie de cartes tombe de ses manches : « Pose-moi ! C'est du brocart ! »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Les joueurs t'acclament pendant que tu l'emportes : « Dans l'abreuvoir ! » Tu le jettes dans l'abreuvoir. Il en ressort trempé, jurant comme un marinier.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Ivre mort après une nuit de chance, il se laisse porter jusqu'à l'hôtel en chantant une chanson de bateau à aube, faux.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il t'enfonce le bout de sa canne dans le ventre et se dégage : « Je ne suis pas un bagage, l'ami ! »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu le suis jusqu'à la banque, où il dépose une liasse épaisse. En sortant, il te salue d'un coup de chapeau : il t'avait repéré depuis le saloon."
+      },
+      {
+        "texte": "Il entre au Smithfield's et en ressort avec un fermier éméché au bras, qu'il emmène chez Keane « pour une petite partie amicale ».",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "À l'aube, il rejoint l'hôtel et glisse quelque chose sous une planche du perron. Un paquet de cartes neuves, peut-être. Ou ses gains.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te repère, entre au bureau du shérif et en ressort en désignant ta direction à l'adjoint.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il t'entraîne dans une ruelle et t'attend au tournant, derringer au poing : « Tu me suis, l'ami ? Mauvaise idée. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "hostile"
+        }
+      }
+    ],
+    "demasquer_tricheur": [
+      {
+        "texte": "Tu lui saisis le poignet au-dessus du pot et secoues sa manche : un as de pique tombe sur le feutre. Le fermier se lève, rouge de rage ; Lucius ramasse son chapeau et s'éclipse.",
+        "effets": {
+          "honneur": 2,
+          "relation": -4,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu tournes sa chevalière vers la lampe : la face polie renvoie l'image de la carte du dessus. « Un miroir, messieurs. » Lucius sourit jaune et repousse le pot vers ses victimes, qui t'en laissent une part.",
+        "effets": {
+          "argent": 10,
+          "honneur": 2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "La table explose : on le traîne dehors, on le roule dans la boue de la rue principale, et quelqu'un te fourre ses gains dans la main en guise de remerciement.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 25,
+          "honneur": 2,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Démasqué, il sort son derringer et le braque sur toi : « Tu viens de me coûter Valentine, l'ami. » Il recule jusqu'à la porte et disparaît dans la nuit.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu l'accuses sans preuve. Il retourne ses manches en souriant : rien. « Tu disais ? » Le temps que tu comprennes, l'as est déjà dans sa botte.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu le démasques calmement, sans dégainer. Les joueurs récupèrent leurs mises, et le fermier endetté te broie la main : « Avec ça, je peux payer le banquier ce mois-ci. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 3,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il retourne la situation en un clin d'œil : « Un homme recherché qui accuse les honnêtes gens ? Regardez son visage sur l'affiche ! » La table hésite entre vous deux.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "parier_contre": [
+      {
+        "texte": "Tu mises dix dollars. Il abat un full aux rois avec un soupir navré : « Pas de chance, l'ami. La prochaine sera la bonne. » La prochaine ne l'est pas.",
+        "effets": {
+          "argent": -10
+        }
+      },
+      {
+        "texte": "Tu surveilles sa manche plutôt que ses yeux. Au moment de l'échange, tu poses ta main sur la sienne en souriant : il se couche, et le pot est pour toi.",
+        "effets": {
+          "argent": 25,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tard dans la nuit, Lucius a trop bu ; ses doigts s'emmêlent et l'as tombe de sa manche sous la table. Tu ramasses le pot pendant qu'il cherche ses cartes à quatre pattes.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 30,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il te laisse gagner une main, puis deux : « Tu me rappelles moi, jeune. » Il se rattrape aussitôt sur le fermier.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 15,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Vous trichez tous les deux, et chacun le sait. La partie dure trois heures et finit à égalité, devant des spectateurs qui n'y ont rien compris.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "« En plein jour ? » Il étale le paquet sur la table vide. « Une petite, alors, pour le café. » Il gagne, évidemment, et te paie quand même le café.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": 1
+        }
+      }
+    ],
+    "defier_aux_cartes": [
+      {
+        "texte": "Le saloon fait cercle. Il coupe, tu coupes, il distribue... et abat quatre dames. Tu repars plus léger de cinquante dollars.",
+        "effets": {
+          "argent": -50,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu exiges un paquet neuf, encore scellé, acheté au magasin général. Sans ses cartes marquées, il transpire ; ta paire de valets bat sa hauteur au roi. Le saloon hurle de joie.",
+        "effets": {
+          "argent": 50,
+          "honneur": 1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "À la lueur des lampes, la tension est telle que le pianiste cesse de jouer. Il abat un brelan ; tu abats une couleur. Il te tend son chapeau : « Vide-le, j'ai tout mis dedans. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 60,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il accepte, perd, puis renverse la table et file avec le pot sous le bras dans une pluie de jetons.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "argent": -10,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu mises l'argent du fermier endetté contre ses gains de la semaine. Pour une fois, le sort est juste : tu gagnes, et le fermier pleure dans ton chapeau.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 2,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "« Contre toi ? À une seule main ? » Il sourit. « D'accord, mais pour l'honneur, sans argent. » Il perd exprès, et le raconte à tout le monde.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      }
+    ],
+    "s_associer_au_tricheur": [
+      {
+        "texte": "Il t'étudie longuement, puis acquiesce : « Tu te places derrière le fermier et tu te grattes l'oreille quand il a une paire. Moitié-moitié. » La soirée te rapporte vingt dollars et un peu de honte.",
+        "effets": {
+          "argent": 20,
+          "honneur": -2,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il éclate de rire : « Toi ? On t'a vu aider des vieilles dames à traverser la rue. Tu ferais rougir les cartes. » Il refuse poliment.",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Le plan marche à merveille jusqu'à ce que le gros chat roux saute sur la table et griffe la manche de Lucius, faisant voler ses as. Vous filez tous les deux par la porte de derrière.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 10,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Enfin un homme raisonnable. » Il te glisse un jeu marqué : « Les coins limés, ce sont les figures. Apprends-les par cœur pour samedi : le banquier joue. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 10,
+          "honneur": -2,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« Avec ta tête sur l'affiche ? Tu attirerais le shérif à ma table. » Il te tend un dollar pour que tu ailles boire au Smithfield's.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 1,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il te serre la main : « Associés. » Pendant une semaine, Valentine vous croit rivaux ; la nuit, vous partagez les gains dans sa chambre d'hôtel, à la chandelle.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 35,
+          "honneur": -2,
+          "relation": 3
+        }
+      }
+    ],
+    "demander_tour_de_cartes": [
+      {
+        "texte": "Il te fait tirer une carte, la remélange, puis la retrouve dans la poche de ta chemise. Tu ne l'as même pas senti approcher.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il fait danser une pièce de cinq dollars sur ses phalanges, la fait disparaître et te montre sa main vide : « Voilà comment on vide les poches d'un fermier, et il te remercie en partant. »"
+      },
+      {
+        "texte": "Pour la galerie, il lance le paquet en l'air et rattrape les quatre as entre ses doigts. Les clients applaudissent ; tu remarques seulement que sa manche s'est allégée.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te montre, très lentement, comment il glisse une carte dans sa manchette : « Tu me promets de ne jamais t'en servir contre moi, hein ? »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "« Un tour ? Voici le meilleur de mon répertoire : je fais disparaître un importun. » Il se lève et quitte la table sans un regard.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Assis au soleil devant l'hôtel, il devine ta carte trois fois de suite, l'air ennuyé : « Le jour, je m'entretiens les doigts. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "payer_un_verre": [
+      {
+        "texte": "Tu règles son bourbon. Il incline la tête : « Je note. Chez moi, tout se note, l'ami : les dettes comme les politesses. »",
+        "effets": {
+          "argent": -2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Puisque tu paies, il fait signe au barman d'apporter la bouteille entière. Le barman t'en annonce le prix avec un plaisir mal dissimulé.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il trinque et, pour te remercier, t'apprend à repérer un bluffeur : « Regarde la pomme d'Adam, jamais les yeux. Les yeux mentent, la gorge avale. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il verse ton whisky dans le crachoir, lentement, sans te quitter des yeux.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Au déjeuner, il accepte un café noir à tes frais et te lit à voix haute les cours du bétail dans le journal de Saint Denis, comme un sermon.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Un verre pour amadouer le pigeon, hein ? Je connais le truc, c'est moi qui l'ai inventé. » Il boit quand même, et commande le même.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      }
+    ],
+    "offrir_un_verre": [
+      {
+        "texte": "Il commande un bourbon, du meilleur, à tes frais : « À ta santé, et à celle de ta bourse, qui en aura besoin. »",
+        "effets": {
+          "argent": -2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il vide ton verre d'un trait et en commande un deuxième sur ton ardoise sans te demander. Le barman te lance un regard navré.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -3,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Vous trinquez. Un peu ivre, il t'avoue qu'il doit trois cents dollars à un homme de Saint Denis qui ne pardonne pas : « Si un type en bottes vernies demande Lucius Crane, je suis mort. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il laisse le verre plein devant lui et le repousse lentement vers toi : « Bois-le, toi. Je ne bois jamais ce qu'on m'offre. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il lève le verre en te détaillant : « Un honnête homme qui paie à boire à un tricheur. Il y a de l'espoir pour nous deux. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": 1
+        }
+      }
+    ]
+  }
+}

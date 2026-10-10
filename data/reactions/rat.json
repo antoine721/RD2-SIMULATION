@@ -1,0 +1,577 @@
+{
+  "id": "rat",
+  "description": "Un gros rat gris à la queue écailleuse, gras comme un notable, les moustaches luisantes de graisse de bœuf. Il connaît chaque trou de la boucherie et file comme une flèche entre les billots.",
+  "personnalite": "Rapide, effronté et rancunier. Il se croit propriétaire de la boucherie et regarde les humains de haut ; le boucher l'appelle « le Sénateur », parce qu'il s'engraisse aux frais des autres. Il ne craint qu'une chose au monde : le gros chat roux du saloon de Keane.",
+  "repliques": [
+    "*couine d'un air indigné*",
+    "*grignote un bout de lard en te fixant droit dans les yeux*",
+    "*file entre tes bottes et disparaît sous le plancher*",
+    "*se lisse les moustaches avec dédain*"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 4,
+      "lieu": "boucherie",
+      "activite": "festoie sous le billot pendant que le boucher dort"
+    },
+    {
+      "de": 4,
+      "a": 10,
+      "lieu": "boucherie",
+      "activite": "dort dans un trou derrière les tonneaux de saumure"
+    },
+    {
+      "de": 10,
+      "a": 13,
+      "lieu": "hotel",
+      "activite": "inspecte les poubelles des cuisines de l'hôtel"
+    },
+    {
+      "de": 13,
+      "a": 19,
+      "lieu": "boucherie",
+      "activite": "guette les chutes de viande, à l'abri sous l'étal"
+    },
+    {
+      "de": 19,
+      "a": 22,
+      "lieu": "saloon_keane",
+      "activite": "tente sa chance sous le plancher du saloon, au nez du chat roux"
+    },
+    {
+      "de": 22,
+      "a": 24,
+      "lieu": "boucherie",
+      "activite": "regagne la boucherie, la queue basse, après une course-poursuite"
+    }
+  ],
+  "reactions": {
+    "attaquer": [
+      {
+        "texte": "Tu te jettes sur le rat, {outil} levé. Il esquive, te file entre les jambes, et c'est un jambon entier du boucher qui encaisse le coup. Le boucher, lui, éclate de rire.",
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "D'un coup sec, tu cloues le rat contre le plancher. Il ne couinera plus. Gus, le boucher, applaudit de ses grosses mains rouges : « Bon débarras, le Sénateur ! » et te paie la récompense promise sur son ardoise.",
+        "effets": {
+          "etat": "mort",
+          "argent": 5
+        }
+      },
+      {
+        "texte": "Ton coup le cueille de biais. Le rat roule, se relève en boitant et va se terrer derrière les tonneaux de saumure en crachant sa rage.",
+        "effets": {
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Le rat ne fuit pas : il te saute au poignet et y plante ses incisives jaunes. Tu le secoues, il s'accroche, puis il disparaît dans un trou en te laissant un souvenir sanglant.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Tu fais tournoyer ton lasso et tu le lances sur le rat. La boucle tombe parfaitement... autour de rien. Le rat est déjà passé dessous, l'air moqueur.",
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Par un miracle de précision, ta boucle se resserre sur le rat. Tu le ramènes, gigotant et furieux, au bout de vingt pieds de corde. Un vacher qui passait te demande des leçons.",
+        "effets": {
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Dans le noir de la boucherie, tu lances ton lasso au jugé. Tu attrapes un crochet à viande, un demi-mouton et une chaise. Le rat, lui, ricane quelque part.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le rat se débat dans la boucle et ronge la corde en trois coups de dents. Il te regarde, le bout de corde entre les pattes, comme pour dire « Essaie encore. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "chasser": [
+      {
+        "texte": "Tu traques le rat entre les billots et les seaux de sang, {outil} prêt. Après dix minutes de cache-cache, tu le coinces derrière le fourneau. Tu ne le rates pas. Gus en pleurerait de joie.",
+        "effets": {
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Tu chasses le rat jusque dans la rue principale. Il zigzague entre les sabots des chevaux et disparaît sous le trottoir de planches de l'hôtel. Il connaît la ville mieux que toi.",
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Ta chasse au rat tourne au spectacle : le boucher parie sur le rat, le gamin des rues parie sur toi, et un attroupement se forme devant la vitrine. Le rat gagne aux points.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu chasses le rat à la lueur d'une lanterne. Tu finis par le coincer sous l'étal, touché à la patte, couinant de rage.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse"
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines le rat dans {outil} : le museau pointu, les moustaches frémissantes, la queue comme un lacet de botte. Il pose, sans le savoir, avec l'aplomb d'un notable."
+      },
+      {
+        "texte": "Le rat s'installe sur ta botte et attend que tu termines son portrait dans {outil}. Tu jurerais qu'il vérifie la ressemblance.",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Tu dessines le rat dans {outil}, mais il ne tient pas en place. Ton croquis ressemble à une saucisse à pattes. Le boucher, par-dessus ton épaule, trouve ça très réussi.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Tu tentes de frapper le rat à mains nues. Il esquive ton poing, te mord le pouce et s'éloigne d'un pas tranquille. Le boucher rit à en faire trembler ses jambons.",
+        "effets": {
+          "sante": -3
+        }
+      },
+      {
+        "texte": "Ton coup de botte envoie le rat valser contre un tonneau. Il se relève, sonné, et rampe vers son trou en traînant la patte.",
+        "effets": {
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Le rat esquive, grimpe le long de ta jambe et te mord l'avant-bras avant de sauter sur l'étal. Ça brûle, et ça va s'infecter si le docteur n'y jette pas un œil.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -8,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu écrases le rat sous ta botte avec un plaisir mauvais. Le boucher fait la grimace : « Fallait pas faire ça sur mon plancher propre. » Son plancher est rouge de sang de bœuf.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "mort"
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} sur le rat. Il fait un bond de côté avec une agilité insultante et disparaît dans une fente du plancher.",
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Coup chanceux : tu atteins le rat de plein fouet avec {outil}. Il reste étendu, les pattes en l'air, sous les vivats du boucher.",
+        "effets": {
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Tu lances {outil} ; le rat, touché à la queue, pousse un couinement suraigu et file en boitillant derrière les tonneaux.",
+        "effets": {
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Tu lances {outil} vers le rat. Il croit à un jeu, va renifler l'objet, puis revient s'asseoir près de ta botte, déçu que ça ne se mange pas.",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Un rat gris, gros comme un chaton, assis sur une caisse de lard. Il mange avec les deux pattes, comme un banquier au restaurant, et ne te quitte pas des yeux."
+      },
+      {
+        "texte": "Le rat guette le moment où le boucher tourne le dos pour chiper une rognure. Il a calculé ses trajets : jamais plus de trois secondes à découvert.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La nuit, le rat règne sur la boucherie. Il inspecte les crochets, goûte chaque morceau, puis se couche sur une pièce de bœuf comme sur un sofa.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le rat te fixe, le poil hérissé, et claque des dents. Il ne t'a pas oublié.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "À l'aube, quand Sultan, le chat du saloon, vient mendier ses rognures chez Gus, le rat se fait tout petit derrière les tonneaux de saumure, la queue enroulée sous lui, le cœur battant."
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Le magnésium éclate. Sur la plaque, le rat apparaît en pleine fuite, flou, la queue en point d'interrogation. Une œuvre d'art involontaire."
+      },
+      {
+        "texte": "Le rat se dresse sur ses pattes arrière et fixe l'objectif. Le cliché est parfait : on dirait un petit sénateur posant pour son portrait officiel.",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Le flash surprend le rat en train de traîner une saucisse entière vers son trou. Pris la patte dans le sac : tu pourras montrer la preuve au boucher.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "pister": [
+      {
+        "texte": "Tu suis les traces de petites pattes dans la sciure. Elles mènent à un trou derrière les tonneaux, puis ressortent... vers les cuisines de l'hôtel. Ce rat a une vie sociale."
+      },
+      {
+        "texte": "Tu suis la piste grasse du rat : une rognure, une crotte, un bout de ficelle mâchonné. Au bout, son nid : un amas de vieux journaux et de chaussettes volées.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu pistes le rat à la lanterne. Ses traces te conduisent jusqu'au saloon de Keane, où elles s'arrêtent net à côté d'une touffe de poils roux. Le chat est passé par là.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu attrapes le rat par la queue et tu le jettes sur ton épaule comme un trophée. Il se contorsionne et te mord l'oreille. Tu le lâches aussitôt.",
+        "effets": {
+          "sante": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu charges le rat sur ton épaule. Il ne pèse rien, mais l'effet sur les passants est immense : une dame s'évanouit devant l'église."
+      },
+      {
+        "texte": "Le rat grimpe tout seul sur ton épaule et s'y installe comme le perroquet d'un pirate. Les passants changent de trottoir en te voyant arriver.",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Tu attrapes le rat par la queue, tu l'assommes d'un coup sec contre le billot et tu le portes jusqu'au comptoir. Gus efface « Récompense : 5 $ pour le rat » de son ardoise et compte les pièces en sifflotant.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 5,
+          "etat": "mort"
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu suis le rat sous la boucherie, le long de l'hôtel, jusque dans les cuisines de Mme Whitlock. Tu viens de comprendre pourquoi la soupe de l'hôtel a ce petit goût-là."
+      },
+      {
+        "texte": "Le rat te repère et fait exprès de te promener : trois fois le tour de l'étal, un passage sous le tablier du boucher, retour au point de départ. Tu viens de te faire balader par un rongeur.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu suis le rat jusqu'au saloon de Keane. Il se faufile sous le plancher... et ressort à toute vitesse, poursuivi par une boule de poils roux furieuse. Le chat du saloon fait sa ronde.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le rat avance, s'arrête, se retourne pour vérifier que tu suis. Il te mène à sa cachette pleine de trésors volés : un dé, un bouton de cuivre et une pièce d'un dollar.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 1
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle fait voler un éclat de plancher là où se tenait le rat une demi-seconde plus tôt. Le boucher sursaute et lâche son couperet : « Pas dans ma boutique, sacrebleu ! »",
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Le coup de feu claque et le rat se volatilise, littéralement. Il ne reste qu'une queue. Le boucher soupire : « Fallait juste un balai, l'ami. »",
+        "effets": {
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Tu tires sur le rat dans la boucherie déserte. La balle l'effleure, ricoche sur un crochet et perce un tonneau de saumure qui se vide sur tes bottes.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Tu tires sur le rat en pleine journée. Les passants se jettent à terre, l'adjoint accourt en dégainant, et tu dois lui expliquer que c'était un rat. Il ne te croit qu'à moitié.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "nourrir": [
+      {
+        "texte": "Tu tends {outil} au rat. Il hésite, renifle, puis l'emporte dans son trou avec une dignité de sénateur. Il revient une minute plus tard en réclamer une autre.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le rat mange dans ta main en te fixant de ses petits yeux noirs, et se laisse même gratter la tête. Le boucher n'en revient pas : « Tu nourris l'ennemi, l'ami ! »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Le rat prend le fruit... et te mord le doigt au passage, pour le principe. La rancune d'un rat est longue, mais son appétit l'est davantage.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -2,
+          "relation": 1
+        }
+      }
+    ],
+    "caresser": [
+      {
+        "texte": "Tu tends la main vers le rat. Il se laisse effleurer une seconde, puis te mord, juste assez fort pour te rappeler qui commande ici.",
+        "effets": {
+          "sante": -2
+        }
+      },
+      {
+        "texte": "Tu caresses le rat devant la vitrine de la boucherie. Une dame qui passait lâche son panier et court prévenir le pasteur que l'étranger est possédé.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le rat se laisse gratter derrière les oreilles et ferme les yeux de plaisir, en claquant doucement des dents. Tu as un ami bizarre.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le rat se cabre, siffle et te mord jusqu'au sang. Il disparaît derrière un tonneau avec un couinement qui ressemble fort à un rire.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -6
+        }
+      }
+    ],
+    "pieger_rat": [
+      {
+        "texte": "Tu poses {outil} au fond d'un seau, en équilibre sur une planche. Le rat grimpe, renifle, bascule dans le seau. Pris ! Il te regarde d'en bas avec un mépris absolu.",
+        "effets": {
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Le rat contourne ton piège, mange l'appât par le côté sans rien déclencher, puis laisse une petite crotte bien en évidence sur la planche. Message reçu.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu tends ton piège avec {outil} et tu attends dans le noir. À trois heures du matin, un claquement : tu as attrapé le chat roux du saloon, venu chasser lui aussi. Le rat assiste à la scène depuis une étagère.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le rat regarde le piège, puis toi, avec l'air profondément blessé d'un ami trahi. Il s'en va manger ailleurs.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "lacher_rat_saloon": [
+      {
+        "texte": "Tu lâches le rat au milieu du saloon de Keane. La danseuse saute sur une table en hurlant, le pianiste rate une note de plus, et Sultan, le chat roux, se lance dans une poursuite épique entre les crachoirs.",
+        "effets": {
+          "honneur": -1,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Le rat traverse le saloon comme un boulet, droit vers le chat roux qui dort près du poêle. Le chat ouvre un œil, puis l'autre, et la course commence. Les paris aussi.",
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Le rat file entre les pieds des joueurs. Le joueur de poker bondit de sa chaise, et trois as tombent de sa manche sur le tapis. Silence de mort autour de la table.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Le barman assomme le rat d'un coup de torchon expert, le ramasse par la queue et te le rend : « Je crois que c'est à toi. Un dollar pour le dérangement. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Tu lâches le rat dans le décolleté d'une cliente à la porte du saloon. Hurlements, gifle magistrale, et le barman te jette dehors par le col.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -2,
+          "sante": -3,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "apprivoiser_rat": [
+      {
+        "texte": "Tu t'accroupis, immobile, une miette de lard sur la paume. Après une éternité, le rat s'approche, la prend, et reste là. C'est un début.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le rat accepte ta compagnie, mais à ses conditions : il mange d'abord, il décide quand on s'en va, et il dort sur ton chapeau.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu passes l'après-midi à parler doucement à un rat au milieu d'une boucherie. Le boucher, couperet levé, hésite entre rire et appeler le docteur.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le rat grimpe dans ta poche de poitrine et y fait son nid. Désormais, il t'accompagne partout et couine quand quelqu'un s'approche dans ton dos. Un compagnon, en somme.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu essaies d'amadouer le rat. Il te répond en te mordant le gras du pouce, très sérieusement, puis s'en va. Le pardon n'est pas pour aujourd'hui.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -3
+        }
+      }
+    ],
+    "offrir_rat_au_chat": [
+      {
+        "texte": "Tu déposes le rat devant le gros chat roux du saloon. Le chat le regarde, te regarde, bâille et se rendort. Le rat, vexé, s'en va tout seul.",
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Sultan, le gros chat roux, bondit sur le rat avec un rugissement de tigre miniature. La poursuite renverse trois crachoirs et une chaise. Quand la poussière retombe, le chat se lèche les babines.",
+        "effets": {
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Tu tiens le rat au-dessus du chat... et tu n'y arrives pas. Il te regarde avec de grands yeux noirs. Tu le remets dans ta poche, traître à ta parole.",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Sous la véranda du saloon, le rat file entre les pattes du chat. Le matou, humilié, te jette un regard noir et crache. Personne ne gagne cette nuit.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Le rat, furieux, se retourne contre le chat et lui mord le nez. Le gros roux recule en miaulant, sous les rires du barman. Ce rat-là n'a peur de rien.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "en_fuite"
+        }
+      }
+    ]
+  }
+}

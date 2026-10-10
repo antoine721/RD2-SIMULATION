@@ -1,0 +1,744 @@
+{
+  "id": "cheval_attache",
+  "description": "Un mustang gris pommelé, maigre, couvert de poussière et d'écume séchée, attaché court à la barre devant le Smithfield's. Sur sa croupe, une marque au fer grossièrement brûlée par-dessus une autre ; des sacoches gonflées pendent à sa selle, et ses flancs portent des zébrures de cravache.",
+  "personnalite": "Nerveux, épuisé, méfiant : son maître O'Driscoll le monte trop dur et le cravache. Il mord qui l'approche par derrière et rue au moindre geste brusque, mais une voix calme, de l'eau et une pomme peuvent l'amadouer. Le palefrenier jure qu'il s'appelait Fumée, et qu'il était en pension chez lui au printemps, avec un fermier des collines qu'on a enterré depuis.",
+  "repliques": [
+    "*tire nerveusement sur sa longe*",
+    "*couche les oreilles chaque fois que la porte du Smithfield's s'ouvre*",
+    "*tend le cou vers l'abreuvoir, la langue sèche*",
+    "*gratte la boue du sabot, l'œil blanc*"
+  ],
+  "reactions": {
+    "caresser": [
+      {
+        "texte": "Tu tends la main vers son encolure. Il se raidit, l'œil blanc, puis accepte la caresse en frissonnant de toute sa robe. Personne ne l'a touché doucement depuis longtemps.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu l'approches par derrière : erreur. Une ruade te frôle la hanche et t'envoie valser contre la barre d'attache.",
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Il pousse sa tête contre ta poitrine et reste là, immobile, comme s'il te demandait de l'emmener loin de cette barre.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "La porte du Smithfield's s'ouvre : « Touche pas à mon cheval, l'ami. » L'O'Driscoll, appuyé au chambranle, te regarde en caressant la crosse de son revolver.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Dans l'obscurité, il se laisse faire. Sous ta main, tu sens les cicatrices de cravache, en relief, comme des cordes sous le poil.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "brosser": [
+      {
+        "texte": "Sous {outil}, la poussière et l'écume séchée tombent par plaques. Le gris pommelé réapparaît… et avec lui, les zébrures de cravache sur ses flancs.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Au premier passage de {outil}, il fait volte-face et claque des dents à un pouce de ton bras.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il se détend sous la brosse, abaisse la tête et pousse un long soupir. Volé, maltraité, et pourtant il se souvient de ce qu'est une main gentille.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Un client du Smithfield's te regarde faire depuis la galerie : « Tu bichonnes le cheval de l'Irlandais ? T'as envie de mourir, ou quoi ? »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu le brosses à tâtons, sous la lumière jaune des fenêtres du saloon. Il se laisse faire, les oreilles tournées vers les voix avinées à l'intérieur.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "nourrir": [
+      {
+        "texte": "Il arrache {outil} de ta main avec voracité, croque, avale, et en cherche une autre jusque dans ta poche. Il a faim, visiblement.",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il hésite longtemps, le cou tendu, puis attrape la pomme et recule d'un bond. Il ne te fait pas encore confiance, mais il a moins faim.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il mange dans ta main et hennit doucement, pour toi seul. Tu viens de te faire un allié à quatre pattes.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le gamin des rues te regarde faire : « M'sieur, l'Irlandais lui donne une poignée d'avoine le matin, pas plus. Il dit qu'un cheval qui a faim galope plus vite. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "monter_a_cheval": [
+      {
+        "texte": "Tu dénoues la longe et sautes en selle. Le gris part au galop avant même que tu aies trouvé l'autre étrier ; derrière toi, la porte du Smithfield's claque : « Mon cheval ! Au voleur ! » À Valentine, on pend les voleurs de chevaux.",
+        "effets": {
+          "prime": 20,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Personne dans la rue. Tu montes en silence ; le cheval se cabre une seule fois, puis file dans l'obscurité vers le ruisseau. L'O'Driscoll ne s'en apercevra qu'au matin.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il se cabre dès que tu touches la selle et te jette dans la boue, sous la barre d'attache. Des rires gras éclatent sur la galerie du Smithfield's.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Tu montes en selle en annonçant tout haut que tu conduis ce cheval volé au shérif Malloy. Les badauds approuvent ; sur le seuil du saloon, l'O'Driscoll pose lentement la main sur son revolver.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Un homme recherché qui vole un cheval devant le Smithfield's : l'adjoint, qui passait par là, dégaine trop vite et tire trop haut. Tu files au galop, une balle sifflant à ton oreille.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 25,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Le gris te laisse monter sans broncher et part au trot, la tête haute, comme soulagé de quitter enfin cette barre. Il ne fera rien pour retourner chez l'Irlandais.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "prime": 15,
+          "honneur": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "En plein jour, sous les yeux de toute la rue, tu enfourches le cheval de l'O'Driscoll. Le crieur de journaux en lâche sa pile : il tient la nouvelle de demain.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 20,
+          "honneur": -2
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Un mustang gris pommelé, maigre, couvert d'écume séchée. Sur sa croupe, une marque maladroite a été brûlée par-dessus une autre, plus ancienne."
+      },
+      {
+        "texte": "Les sacoches, gonflées à craquer, sont fermées par des lanières neuves. L'une d'elles laisse dépasser un coin de papier plié."
+      },
+      {
+        "texte": "Il somnole debout sous la lumière jaune du Smithfield's, mais une oreille reste dressée vers la porte, comme s'il redoutait le retour de son maître.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il a soif : l'abreuvoir est à deux pas, mais sa longe est trop courte pour l'atteindre. Quelqu'un l'a attaché ainsi exprès.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "De près, tu remarques ses zébrures de cravache et ses fers usés jusqu'à la corne. Ce cheval-là a besoin qu'on s'occupe de lui.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Il ne va nulle part : il tourne en rond au bout de sa longe, trois pas à gauche, trois pas à droite. Le suivre revient à danser avec lui."
+      },
+      {
+        "texte": "Tard dans la nuit, l'O'Driscoll détache le gris et part au pas. Tu suis de loin : il s'arrête derrière le bureau du shérif, fixe longtemps la fenêtre de la cellule, puis revient attacher son cheval devant le saloon.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu suis le regard du cheval plutôt que le cheval : il fixe obstinément l'abreuvoir, la langue sèche.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "C'est lui qui tire sur sa longe pour te suivre, au point de faire grincer la barre d'attache. Il a choisi son nouveau maître.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Tu le frappes au flanc. Il rue de toutes ses forces, manque d'arracher la barre d'attache, et les clients du Smithfield's sortent sur la galerie pour voir.",
+        "effets": {
+          "relation": -2,
+          "honneur": -1,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Ton coup le fait cabrer ; un sabot te frôle le visage et t'oblige à reculer dans la boue.",
+        "effets": {
+          "relation": -2,
+          "honneur": -1,
+          "sante": -5
+        }
+      },
+      {
+        "texte": "L'O'Driscoll sort du saloon en t'entendant : « On frappe pas le cheval d'un autre, l'ami. Ça, c'est mon boulot. » Il éclate de rire, la main sur la crosse.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il ne comprend pas. Toi aussi ? Il recule au bout de sa longe, tremblant, et cesse de te regarder.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -3,
+          "honneur": -1
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu frappes le gris avec {outil}. Il hurle, arrache la barre d'attache et file au galop dans la rue principale en traînant derrière lui un morceau de bois.",
+        "effets": {
+          "etat": "en_fuite",
+          "honneur": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le coup l'atteint à l'encolure. Il s'effondre à genoux, se relève en sang, et l'O'Driscoll jaillit du Smithfield's, revolver au poing : « T'as touché à mon cheval ?! »",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Personne ne voit rien. Au matin, il y a un cheval blessé devant le Smithfield's, et un O'Driscoll fou de rage qui cherche un coupable.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il te voit venir avec {outil} et se défend : une ruade en pleine poitrine te projette contre l'abreuvoir.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -20,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Le gris s'effondre devant la barre d'attache. L'O'Driscoll surgit du Smithfield's, revolver au poing, et cherche le tireur des yeux. Tu as quelques secondes.",
+        "effets": {
+          "etat": "mort",
+          "honneur": -3,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Ta balle coupe la longe net. Le cheval, libre, part au grand galop vers les collines, sacoches comprises. L'O'Driscoll va devoir rester à Valentine… à pied.",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 5
+        }
+      },
+      {
+        "texte": "La balle le touche à la cuisse. Il hennit de douleur au milieu de la rue ; l'adjoint accourt, l'arme à la main, en criant qu'on ne tire pas en ville.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -2,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Un coup de feu dans la nuit, un cheval qui tombe. Personne ne sait d'où c'est parti, mais demain, l'Irlandais cherchera quelqu'un à qui faire payer.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "mort",
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Tu vises le nœud de la longe plutôt que l'animal. Le gris s'échappe, libre pour la première fois depuis des semaines, et disparaît vers les collines.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "honneur": 1,
+          "prime": 5
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Ton lancer atteint le gris à la croupe. Il se cabre, tire sur sa longe à s'en arracher le cou, puis se fige, tremblant.",
+        "effets": {
+          "relation": -2,
+          "honneur": -1,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il voit venir {outil} et l'esquive d'un coup d'encolure. L'objet roule sous la galerie du Smithfield's, aux pieds d'un client qui te regarde de travers.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Dans le noir, ton lancer le blesse à l'épaule. Il hennit, rue contre la barre, et les fenêtres du saloon s'éclairent une à une.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "relation": -2,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il croit à un jeu : il renifle {outil} tombé à ses pieds, puis te regarde, perplexe, en attendant la suite.",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Ta boucle se pose sur son encolure ; il panique et tire en arrière. Voilà le lasso et la longe qui se disputent ce pauvre cheval comme deux maîtres.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Hé ! Qu'est-ce que tu fabriques avec le cheval de l'Irlandais ? » lance un client du Smithfield's. Ta corde pend, bien en vue, sur l'encolure du gris.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu passes {outil} autour de son cou dans le noir. Il se laisse faire, trop épuisé pour lutter.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il se cabre à la seconde où la corde le touche, t'arrache le lasso des mains et te brûle les paumes.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "relation": -1
+        }
+      }
+    ],
+    "atteler": [
+      {
+        "texte": "Tu le détaches pour l'atteler à {outil}. Il n'a jamais connu les brancards : il rue, brise une sangle, et le cocher te traite de fou.",
+        "effets": {
+          "relation": -1,
+          "honneur": -1,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "L'O'Driscoll sort au moment où tu passes le harnais : « Tu crois faire quoi, avec MON cheval ? » Sa main est déjà sur la crosse.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Attelé en pleine nuit à {outil}, le gris tire de toutes ses forces, comme pour fuir Valentine. Au matin, il faudra expliquer pourquoi le cheval de l'O'Driscoll est à l'autre bout de la ville.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il accepte le harnais en soufflant, parce que c'est toi. Tirer {outil}, pour lui, c'est toujours mieux que de rester attaché devant ce saloon.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1,
+          "prime": 10
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines le gris attaché à la barre, tête basse, avec ses sacoches gonflées et la double marque sur la croupe. Un dessin qui pourrait servir de preuve."
+      },
+      {
+        "texte": "Il ne tient pas en place, tire sur sa longe, piaffe. Ton croquis dans {outil} ressemble à un cheval vu à travers une vitre sale.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Sous la lumière jaune du saloon, tu croques sa silhouette maigre et ses côtes saillantes. Le dessin est triste à pleurer.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu reproduis soigneusement les deux marques au fer, l'ancienne et la nouvelle, dans {outil}. Le shérif Malloy aimera voir ça.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Le flash le fait se cabrer contre la barre. Sur la plaque, un cheval terrifié et, dans le reflet de la vitre, un homme à chapeau qui sort du Smithfield's."
+      },
+      {
+        "texte": "Bonne lumière : on distingue nettement la marque maquillée sur sa croupe. Une photographie comme celle-là vaut un témoignage.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Trop sombre : tu n'obtiens qu'une forme grise et deux yeux qui brillent.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Pendant que tu règles l'appareil, l'O'Driscoll t'observe par la fenêtre du saloon. Il reconnaît ton visage : il l'a vu sur le panneau, lui aussi.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "calmer_cheval": [
+      {
+        "texte": "Tu lui parles doucement en tenant ta main à plat devant ses naseaux. Il cesse de tirer sur sa longe, renifle, et ses oreilles reviennent vers toi.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te montre les dents, piaffe, recule. Tu continues à lui parler sans bouger, jusqu'à ce qu'il baisse enfin la tête, épuisé.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": 2,
+          "etat": "normal"
+        }
+      },
+      {
+        "texte": "Un ivrogne sort du Smithfield's en braillant et le gris se cabre. Tu poses la main sur son encolure et murmures jusqu'à ce que son cœur ralentisse sous ta paume.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il se calme dès qu'il reconnaît ta voix, et pose sa tête lourde sur ton épaule.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "faire_boire_cheval": [
+      {
+        "texte": "Tu rallonges sa longe jusqu'à l'abreuvoir. Il plonge le nez dans l'eau et boit, boit, boit, comme s'il n'avait pas bu depuis des jours. C'est sans doute le cas.",
+        "effets": {
+          "relation": 2,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "L'O'Driscoll te regarde faire depuis la galerie, un sourire en coin : « Tu veux aussi lui chanter une berceuse ? » Mais il ne t'en empêche pas.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "À la nuit tombée, tu lui apportes un seau d'eau du puits. Il boit si vite qu'il s'étrangle, tousse, puis recommence.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 2,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Il boit, puis relève la tête et te souffle au visage, ruisselant. Un merci de cheval.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "fouiller_sacoches": [
+      {
+        "texte": "Dans les sacoches : une boîte de cartouches, une flasque de whisky frelaté, une montre en argent gravée au nom de quelqu'un d'autre et douze dollars en billets froissés.",
+        "effets": {
+          "argent": 12,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Sous une couverture roulée, tu trouves un croquis au crayon du bureau du shérif, une croix sur la fenêtre de la cellule et deux mots griffonnés : « nuit prochaine ». L'évasion se prépare."
+      },
+      {
+        "texte": "Personne ne te voit. Tu vides les sacoches en silence : un bâton de dynamite, une alliance d'homme et une liasse de vingt-cinq dollars. Le cheval, lui, ne dira rien.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 25,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "À peine as-tu ouvert une sacoche que des clients du Smithfield's crient au voleur depuis la galerie. Dans la rue, toutes les têtes se tournent vers toi.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le cheval ne te laisse pas faire : un coup de dents, un coup de sabot, et te voilà dans la boue, une sacoche arrachée à la main… vide.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10
+        }
+      },
+      {
+        "texte": "Sous une chemise sale, tu trouves des lettres volées adressées à une ferme des environs. Tu les gardes pour les remettre au shérif Malloy.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      }
+    ],
+    "detacher_cheval": [
+      {
+        "texte": "Tu dénoues la longe. Le gris hésite, surpris d'être libre, puis va droit à l'abreuvoir boire à grandes gorgées.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "L'O'Driscoll sort au moment où tu défais le nœud : « Remets ça comme c'était, ou c'est toi que j'attache. » Sa main ne quitte pas sa crosse.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu libères le cheval dans le noir et lui donnes une claque sur la croupe. Il disparaît au trot vers le ruisseau. Demain, l'O'Driscoll devra partir à pied… s'il part.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu détaches le gris et le mènes droit au bureau du shérif : un cheval volé, c'est une preuve. Malloy sort sur le perron et siffle entre ses dents en voyant la marque.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Dès que la longe tombe, il te bouscule de l'épaule et s'enfuit au galop dans la rue principale, renversant au passage la pile de journaux du crieur.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Tu le détaches en pensant au prix qu'on t'en donnerait à Strawberry. Sur le seuil de l'écurie, le palefrenier t'a vu faire et ne te quitte plus des yeux.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 5
+        }
+      }
+    ],
+    "examiner_marque": [
+      {
+        "texte": "Sous la nouvelle marque, grossière, encore boursouflée, tu devines l'ancienne : un dessin de ranch soigné, brûlé par-dessus. Ce cheval a été volé, aucun doute."
+      },
+      {
+        "texte": "Tu passes le doigt sur la cicatrice. Le cheval frémit : la brûlure date de quelques semaines tout au plus. Du travail bâclé, fait à la hâte."
+      },
+      {
+        "texte": "Il te laisse examiner sa croupe sans broncher. En écartant le poil, tu lis les restes d'une marque de ferme de la région. Le palefrenier saura à qui elle appartenait.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "En pleine lumière, la supercherie saute aux yeux. Le télégraphiste, qui passait, plisse les yeux : « Tiens, tiens… J'ai vu passer un avis de vol de chevaux sur le fil, la semaine dernière. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il ne te laisse pas approcher de sa croupe : chaque fois que tu essaies, il pivote et te présente ses sabots arrière.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "À la lueur d'une allumette, tu distingues l'ancienne marque sous la nouvelle. L'allumette te brûle les doigts au moment précis où la porte du saloon s'ouvre.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -1
+        }
+      }
+    ]
+  }
+}

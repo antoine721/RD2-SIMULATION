@@ -1,0 +1,1249 @@
+{
+  "id": "armurier",
+  "description": "Un homme sec d'une soixantaine d'années, moustache grise taillée au cordeau, tablier de cuir constellé de brûlures de poudre. Une vieille médaille de l'Union pend à sa chaîne de montre, et il lui manque le bout de l'annulaire gauche.",
+  "personnalite": "Ezekiel Pratt, dit « le Sergent », ancien sous-officier de l'Union passé par Gettysburg et Petersburg. Passionné, méticuleux, fier de ses gravures ; droit comme un fusil réglementaire. Méprise les ivrognes, les vantards et les O'Driscoll, respecte ceux qui soignent leur arme. Un peu sourd de l'oreille gauche depuis un coup de canon, et il ne boit jamais plus d'une bière.",
+  "repliques": [
+    "Une arme propre, c'est un homme vivant. Une arme sale, c'est un nom sur une tombe.",
+    "Cartouches de .44, de .38, de calibre 12… J'ai tout ce qu'il faut pour rentrer chez soi entier.",
+    "*souffle dans un barillet et le fait tourner contre son oreille, les yeux fermés*",
+    "L'adjoint m'a encore ramené son revolver avec le ressort du chien cassé. Ce garçon dégaine comme on chasse les mouches.",
+    "Pas d'ivrogne dans ma boutique. La poudre et le whisky, ça finit toujours chez le croque-mort.",
+    "J'ai porté le bleu de l'Union quatre ans. Je sais reconnaître un homme qui tire droit.",
+    "*tapote doucement un burin sur une plaque d'argent, la langue entre les dents*",
+    "Un O'Driscoll est venu m'acheter de la poudre le mois dernier. Je lui ai montré la porte, et mon Spencer."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 6,
+      "lieu": "armurerie",
+      "activite": "dort à l'étage de sa boutique, un Spencer chargé au pied du lit"
+    },
+    {
+      "de": 6,
+      "a": 7,
+      "lieu": "rue_principale",
+      "activite": "balaie le trottoir devant sa vitrine et chasse les ivrognes endormis sur son perron"
+    },
+    {
+      "de": 7,
+      "a": 8,
+      "lieu": "magasin_general",
+      "activite": "achète son café et son tabac chez l'épicier, en contestant la pesée"
+    },
+    {
+      "de": 8,
+      "a": 12,
+      "lieu": "armurerie",
+      "activite": "ouvre la boutique, vend des munitions et conseille les clients"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "saloon_keane",
+      "activite": "déjeune d'un ragoût au saloon de Keane, avec une seule bière"
+    },
+    {
+      "de": 13,
+      "a": 17,
+      "lieu": "armurerie",
+      "activite": "grave, répare et personnalise les armes à son établi"
+    },
+    {
+      "de": 17,
+      "a": 18,
+      "lieu": "armurerie",
+      "activite": "fait essayer les armes neuves au stand de tir du fond"
+    },
+    {
+      "de": 18,
+      "a": 19,
+      "lieu": "forge",
+      "activite": "commande des ressorts et des pièces de fer au maréchal-ferrant"
+    },
+    {
+      "de": 19,
+      "a": 21,
+      "lieu": "saloon_keane",
+      "activite": "dîne au saloon de Keane et raconte la guerre, sans jamais boire plus d'un verre"
+    },
+    {
+      "de": 21,
+      "a": 24,
+      "lieu": "armurerie",
+      "activite": "nettoie ses fusils à la lampe à pétrole, puis monte se coucher"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il repose le barillet qu'il huilait et te jauge des bottes au chapeau : « Ezekiel Pratt, armurier. Si tu cherches de quoi survivre aux Heartlands, tu es au bon endroit. »"
+      },
+      {
+        "texte": "Il tapote la vitrine où dort une Winchester gravée : « Trois semaines de travail, cette crosse. Des feuilles de chêne, comme sur le drapeau de mon régiment. »"
+      },
+      {
+        "texte": "Il pointe le menton vers l'adjoint qui passe dans la rue : « Trois ressorts cassés ce mois-ci. Ce gamin dégaine comme on se gratte. Un jour, il se tirera dans le pied. »"
+      },
+      {
+        "texte": "Il t'ouvre en chemise de nuit, une lampe à pétrole dans une main et un Spencer dans l'autre : « Boutique fermée. Reviens demain, et frappe moins fort. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il baisse la voix et jette un œil vers la rue : « Ta tête est sur le panneau, à côté de celle de l'O'Driscoll. Achète vite et ne traîne pas devant ma vitrine. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il ne lâche pas son chiffon : « Tu sens le whisky du Smithfield's à dix pas. Je ne sers ni les ivrognes ni les pilleurs. Dis ce que tu veux, puis dehors. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il sort deux tasses de café noir de sous le comptoir : « Assieds-toi, soldat. Le type qui boit au Smithfield's, l'O'Driscoll… son Schofield a des encoches toutes fraîches. Méfie-toi de lui. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il se redresse presque au garde-à-vous : « On parle de toi en ville, et en bien. Pour un homme comme toi, je règle la détente gratis. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il porte deux doigts à son front, un salut militaire qui n'a pas pris une ride en trente-cinq ans : « Bonjour, l'ami. »"
+      },
+      {
+        "texte": "Il lève les yeux de son établi, un burin entre les dents, et grogne quelque chose qui ressemble vaguement à « 'jour »."
+      },
+      {
+        "texte": "Il te serre la main d'une poigne de forgeron : « Content de te voir encore debout. Ta carabine tire toujours droit ? »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il ne répond pas. Sa main droite glisse juste sous le comptoir, là où il range son fusil à double canon.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il te rend ton salut d'un signe de tête depuis le pas de sa porte, la pipe aux lèvres, sans quitter la rue sombre des yeux.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te rend ton salut du bout des lèvres, puis ferme lentement sa vitrine à clé sans te quitter du regard.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Tu ricanes devant ses vitrines : « De la ferraille de l'Est. » Il pose son chiffon très doucement : « Cette ferraille a gagné une guerre, fiston. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu le traites de vieux ventre-bleu. Il éclate d'un rire sec : « J'ai entendu pire à Petersburg, sous les obus. Il faudra te lever plus tôt. »"
+      },
+      {
+        "texte": "Tu craches sur son plancher ciré. Il fait le tour du comptoir, se plante sous ton nez et désigne la porte : « Dehors. Et ne remets plus les bottes ici. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il arme le chien d'un Colt Army posé sur le comptoir, sans le pointer : « Encore un mot, et je t'apprends le respect à la manière de 1863. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il secoue la tête en souriant sous sa moustache : « Tu me cherches, hein ? Je t'ai vu tirer, je sais que tu n'en penses pas un mot. »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu te penches sur le comptoir, l'air mauvais. Il ne cille pas : « J'ai vu des charges de cavalerie, mon gars. Tu ne m'impressionnes pas. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lui souffles qu'il ferait mieux de te faire un prix. Il retire ses lunettes, les plie, et te fixe jusqu'à ce que tu détournes les yeux le premier.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu fais sonner ta prime comme une menace. Il hoche la tête, calme : « Soixante-quinze dollars pour l'O'Driscoll. Et pour toi, combien ? Je me le demande. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu poses la main sur ta crosse. Il blêmit légèrement mais garde la voix ferme : « Prends ce que tu veux et va-t'en. Malloy saura qui est passé. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Seul avec lui dans la boutique, tu fais craquer tes doigts. Il souffle la lampe : dans le noir, tu entends très distinctement un fusil qu'on arme.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Il regarde {outil} plus que toi, d'un œil de connaisseur : « Mal entretenu. Si tu dois me tuer, fais-le au moins avec du matériel propre. »",
+        "effets": {
+          "relation": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il lève lentement les mains, sans trembler : « Doucement. Je ne mourrai pas pour une caisse de cartouches. Prends la recette et file. »",
+        "effets": {
+          "argent": 15,
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il t'attendait : un fusil à canon scié jaillit de sous le comptoir et vous restez face à face, {outil} contre double canon. « On a le temps, fiston. Moi, j'ai fait la guerre. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il fronce les sourcils, plus déçu qu'effrayé : « Toi ? On disait que tu étais un homme droit. Range {outil}, et on n'en parle plus. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il siffle entre ses doigts : dehors, l'adjoint arrive en courant, la main déjà sur son étui. Tu as menacé un commerçant en pleine rue principale.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "relation": -2,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu te jettes sur lui, {outil} au poing. Il pare avec la crosse d'un fusil de démonstration et vous roulez ensemble dans les caisses de cartouches.",
+        "effets": {
+          "sante": -10,
+          "prime": 10,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il recule contre le râtelier, l'épaule en sang, puis décroche une baïonnette du mur : « Approche, et on verra lequel de nous deux a fait la guerre. »",
+        "effets": {
+          "sante": -5,
+          "prime": 10,
+          "relation": -4,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il esquive comme un jeune homme, t'envoie un coup de crosse dans les côtes et s'enfuit par la porte en hurlant le nom du shérif.",
+        "effets": {
+          "sante": -10,
+          "prime": 15,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Dans la pénombre de l'arrière-boutique, ton coup le surprend penché sur son établi. Il s'effondre sans un cri, et la rue endormie n'entend rien.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Il n'y croit pas jusqu'au dernier moment : « Toi ? » Le coup le jette au sol, et il te regarde avec plus de tristesse que de colère.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 10,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Un coup sec derrière l'oreille : il s'affale sur le comptoir, le nez dans une boîte de cartouches. La clochette de la porte tinte encore.",
+        "effets": {
+          "prime": 5,
+          "honneur": -1,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il sent venir le coup et baisse la tête comme sous un obus : ton poing ne rencontre que le chambranle. « Raté, la recrue. »",
+        "effets": {
+          "sante": -5,
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu le surprends quand il ferme ses volets. Il glisse contre la vitrine et s'endort sur le trottoir de planches, sa clé encore à la main.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il s'écroule au milieu de la boutique… sous les yeux d'une cliente qui hurle et court chercher Malloy.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "La corde siffle et se referme sur ses épaules. Il bascule dans sa propre vitrine dans un fracas de verre et de jurons de caserne.",
+        "effets": {
+          "prime": 5,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il voit la boucle venir et l'écarte d'un revers de bras : « On ne prend pas un vieux cavalier comme un veau, gamin. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu le traînes au bout de {outil} dans la boue de la rue principale. Les passants s'arrêtent, et quelqu'un court au bureau du shérif.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il se laisse prendre en riant : « Joli lancer. Le vacher de l'enclos devrait prendre des leçons. Maintenant, détache-moi. »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu lui arraches le Colt de la ceinture. Il hausse les épaules et désigne les murs : « Prends-le. J'en ai quarante autres autour de toi. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il pare ta main d'un réflexe de vieux soldat, te tord le poignet et récupère son arme : « Leçon gratuite. La prochaine sera payante. »",
+        "effets": {
+          "sante": -5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu fais sauter le fusil de ses mains d'une claque. Il recule vers le râtelier, les yeux fixés sur les dizaines d'armes à sa portée.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu le surprends assis sur son perron, une carabine en travers des genoux. Il te la cède sans résistance : « Je ne me bats plus pour du bois et du fer. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu croques sa silhouette penchée sur l'établi, la loupe vissée à l'œil. Il remarque ton manège : « Fais-moi la moustache plus grise. C'est plus honnête. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu dessines ses mains couturées de brûlures de poudre, posées sur une crosse de noyer. Elles te prennent une page entière dans {outil}."
+      },
+      {
+        "texte": "Il pose pour toi, la médaille de l'Union bien en vue sur son gilet : « Garde-le. Pour quand je serai dans une boîte chez le croque-mort. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "À la lueur de la lampe, tu dessines son profil penché sur un barillet. L'ombre des fusils au mur fait comme une forêt sur la page.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il soupèse {outil} en fronçant les sourcils : « Un cadeau ? Personne ne fait de cadeau à Valentine sans rien attendre. Qu'est-ce que tu veux ? »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il range {outil} sous son comptoir avec un hochement de tête bref : « Je m'en souviendrai. Un service en vaut un autre. »",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il repousse {outil} du bout des doigts : « D'où ça sort, ça ? Garde ce qui sent le vol loin de ma boutique. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il accepte {outil} et te tape sur l'épaule : « Toi alors. Tiens, prends cette boîte de cartouches en échange, et ne discute pas. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il regarde {outil}, puis l'avis de recherche cloué en face : « Je ne prends rien d'un homme recherché. Chez Malloy, ça s'appelle du recel. »",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il éclate de rire : « Un duel ? J'ai soixante ans et un œil qui pleure. » Puis il dégaine en un éclair, et rengaine aussitôt : « Cherche quelqu'un de ton âge. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il accepte, sort dans la rue et se place à vingt pas, droit comme à la parade. Sa balle t'arrache le chapeau ; la tienne lui troue la manche. « Bien tiré », dit-il seulement.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Au troisième coup de cloche de l'église, vous tirez. Il tombe à genoux dans la boue, la main sur sa médaille : « Pas mal… pour un civil. »",
+        "effets": {
+          "honneur": -2,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "« Je ne me bats pas contre des bandits, je les fais pendre. » Il retourne derrière son comptoir et rédige ton signalement pour le shérif.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il était prêt depuis longtemps : il dégaine avant la fin du compte. Une brûlure te traverse l'épaule, et il rengaine sans un mot.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -40,
+          "relation": -1
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing lui fend la lèvre. Il essuie le sang d'un revers de manche et te rend un crochet de vieux sergent qui t'envoie dans la vitrine.",
+        "effets": {
+          "sante": -15,
+          "prime": 5,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu le frappes au ventre ; il se plie en deux, souffle comme un soufflet de forge, puis empoigne le tisonnier du poêle : « Dehors ! »",
+        "effets": {
+          "prime": 5,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il encaisse, recule jusqu'à la porte et crie dans la rue : « Malloy ! On cogne les commerçants, maintenant ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -2,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il n'y a que toi, lui et le tic-tac de l'horloge. Il tombe contre son établi et ne se relève pas tout de suite.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Il attrape {outil} au vol d'une main de soldat et le pose sur le comptoir : « Ça, c'est à moi maintenant. Autre chose ? »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il plonge derrière le comptoir. Fracas de verre : une vitrine entière vole en éclats au-dessus de sa tête, et des cartouches roulent partout.",
+        "effets": {
+          "prime": 5,
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Touché à l'épaule par {outil}, il chancelle contre le râtelier et décroche un fusil en jurant comme à Petersburg.",
+        "effets": {
+          "prime": 5,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il esquive {outil} d'un pas de côté et te fixe, incrédule : « C'est une blague de cow-boy ? Elle n'est pas drôle. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu lui lies les poignets dans le dos avec {outil}. Il se laisse faire, le regard plein de mépris : « Les Rebelles ficelaient mieux que ça. »",
+        "effets": {
+          "prime": 10,
+          "honneur": -1,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Il se débat comme un diable, renverse une caisse de cartouches et te mord la main avant que le nœud ne tienne.",
+        "effets": {
+          "sante": -5,
+          "prime": 10,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Tu le ficelles sur sa chaise, à la lumière de sa propre lampe. Les fusils accrochés aux murs semblent te regarder faire.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "« Tu plaisantes ? » Il ne résiste pas, trop surpris. Quand le nœud se serre, il ne dit plus rien du tout.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -4,
+          "etat": "ligote"
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Il passe une baguette dans un canon, l'approche de la fenêtre et l'examine comme un joaillier un diamant. Puis il recommence, trois fois."
+      },
+      {
+        "texte": "Tu remarques qu'il lui manque le bout de l'annulaire gauche, et qu'il garde toujours la main droite près du tiroir sous le comptoir."
+      },
+      {
+        "texte": "Une lampe brûle tard à l'étage de l'armurerie. Par la fenêtre, tu le vois fixer une vieille photographie de soldats en uniforme.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Sur le trottoir, il chasse l'ivrogne de devant sa vitrine d'un simple regard. L'homme décampe sans demander son reste.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il t'a vu, lui aussi. Il ne bouge pas, mais il a cessé de travailler et ne te quitte plus des yeux.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il prend la pose devant son râtelier, menton haut, main sur une Winchester, raide comme sur un portrait de régiment de 1863.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le magnésium flashe ; il cligne et grogne : « Préviens, bon sang ! Avec un éclair pareil, j'ai cru à un coup de canon. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il insiste pour accrocher sa médaille avant le cliché, puis te réclame un tirage « pour la vitrine ».",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il tourne le dos à {outil} : « Pas de portrait. Je ne veux pas que ma tête traîne dans les sacoches d'un bandit. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu le hisses sur ton épaule comme un sac de grain. Il tambourine dans ton dos : « Repose-moi, bon sang ! J'ai des clients ! »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il pèse plus lourd qu'il n'en a l'air. Toute la rue principale te regarde passer avec l'armurier sur l'épaule ; quelqu'un court chercher le shérif.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Inerte, il ne pèse guère plus qu'un sac de farine. Tu traverses la rue déserte ; seul le chien errant te suit en gémissant.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il se laisse faire en riant : « Comme les brancardiers à Gettysburg ! Sauf que moi, je ne suis pas blessé, idiot ! »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Il traverse la rue principale d'un pas réglé comme une marche militaire, salue le shérif Malloy d'un signe et entre à la forge."
+      },
+      {
+        "texte": "Tu le suis jusqu'au saloon de Keane. Il commande une seule bière, la boit lentement, et repousse le barman qui lui propose la deuxième."
+      },
+      {
+        "texte": "Il fait le tour de sa boutique, lanterne à la main, et vérifie chaque volet. Puis il s'arrête net : « Je t'entends respirer, l'ami. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il s'en aperçoit au bout de vingt pas, se retourne et pose la main sur son étui : « Tu veux quelque chose ? Dis-le en face. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle le touche à la cuisse ; il s'effondre derrière son comptoir et riposte en aveugle au fusil de chasse. Les plombs te mordent le bras.",
+        "effets": {
+          "sante": -15,
+          "prime": 50,
+          "honneur": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il tombe au milieu de ses vitrines brisées, la main crispée sur sa médaille de l'Union. Le silence retombe, puis toute la rue se met à crier.",
+        "effets": {
+          "prime": 100,
+          "honneur": -4,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Tu le rates : il se jette derrière le comptoir, et une Winchester répond à sa place. Une balle te traverse l'épaule.",
+        "effets": {
+          "sante": -40,
+          "prime": 30,
+          "honneur": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Le coup claque dans la rue endormie. Il s'écroule sur son perron ; sa lanterne roule et s'éteint dans la boue.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 50,
+          "honneur": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Blessé à l'épaule, il s'enfuit par la porte de derrière en hurlant le nom de Malloy. Dans la rue, les volets claquent un à un.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 50,
+          "honneur": -3,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "vendre@outil": [
+      {
+        "texte": "Il examine {cible} sous la lampe, longuement, comme un médecin un malade : « Huit dollars. Pas un cent de plus. »",
+        "effets": {
+          "argent": 8
+        }
+      },
+      {
+        "texte": "Il démonte {cible} en trois gestes, renifle le mécanisme, remonte : « Bien entretenu. Je prends. Voilà un homme qui respecte son matériel. »",
+        "effets": {
+          "argent": 12,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il remarque des traces de lime sur {cible} : « Ça vient d'où ? Non, ne réponds pas. Cinq dollars, et je ne t'ai jamais vu. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 5,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il pose les deux mains à plat sur le comptoir : « Je n'achète rien aux hommes de l'avis de recherche. Malloy épluche mes registres chaque mois. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il compte les billets sans marchander : « Pour toi, le prix juste. Et je te le garde en vitrine, si l'envie te prend de le racheter. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 15,
+          "relation": 1
+        }
+      }
+    ],
+    "acheter@outil": [
+      {
+        "texte": "Il inscrit {cible} dans son grand registre d'une écriture de fourrier, encaisse et te tend un reçu signé : « Tout est en règle, chez Pratt. »",
+        "effets": {
+          "argent": -10
+        }
+      },
+      {
+        "texte": "Il annonce son prix sans sourire et tapote l'écriteau « QUALITÉ DE L'UNION ». Tu paies ; il ajoute une poignée de cartouches en prime.",
+        "effets": {
+          "argent": -12,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il renifle ton haleine et repousse ton argent : « Tu as bu. Je ne vends rien à un homme qui sent le tord-boyaux du Smithfield's. Reviens à jeun. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il jette un œil au panneau d'avis par la fenêtre, puis à toi : « Paie, prends {cible} et sors par derrière. Pas d'histoires chez moi. » Le prix a doublé.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -15,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il te fait un clin d'œil : « Prix d'ami. » Il glisse un chiffon huilé et une boîte de graisse à fusil dans ton paquet.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -6,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il t'ouvre en bonnet de nuit et te fait payer {cible} à la lueur de sa lampe, avec un supplément « dérangement nocturne ».",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -14
+        }
+      }
+    ],
+    "faire_graver_arme": [
+      {
+        "texte": "Il visse sa loupe à l'œil et passe l'après-midi sur {outil}. Le soir, des volutes de feuilles de chêne s'enroulent autour de tes initiales.",
+        "effets": {
+          "argent": -10,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il demande un nom, une date ou une devise. Il grave « Ni peur ni reproche » en lettres anglaises et souffle la limaille d'argent avant de te rendre l'arme.",
+        "effets": {
+          "argent": -8,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il voit les encoches sur {outil} : « Je ne grave pas un tableau de chasse d'hommes. Je peux les poncer, si tu veux redevenir quelqu'un de bien. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il grave une petite étoile cachée sous la poignée : « Ma marque. Ceux qui la connaissent sauront que tu es un ami de Pratt. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -5,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il travaille à la lampe jusqu'à minuit, le burin crissant sur {outil}, et te le rend les yeux rougis : « Plus jamais de commande de nuit. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -12,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il refuse net : « Graver ton nom sur une arme ? Pour que Malloy t'identifie plus vite sur ton cadavre ? Non merci. »",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "faire_reparer_arme": [
+      {
+        "texte": "Il démonte {outil} sur un chiffon blanc, pièce par pièce, et trouve un ressort fatigué : « Encore deux coups et elle s'enrayait en plein duel. » Il le remplace.",
+        "effets": {
+          "argent": -3,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il secoue la tête devant la rouille : « Tu la ranges dans l'abreuvoir ? » Deux heures de travail, trois dollars, et un sermon gratuit sur l'entretien.",
+        "effets": {
+          "argent": -3
+        }
+      },
+      {
+        "texte": "Il te fait patienter le temps de réparer l'arme de l'adjoint, « la troisième fois ce mois-ci », puis redresse le guidon de {outil} et règle la détente au poil.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -4
+        }
+      },
+      {
+        "texte": "Il répare {outil} sans prendre un cent : « Rends-moi plutôt service : garde un œil sur l'O'Driscoll du Smithfield's. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il trouve du sang séché dans le mécanisme. Il nettoie sans un mot, te fait payer le double, et ne te regarde plus.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -8,
+          "relation": -1
+        }
+      }
+    ],
+    "acheter_munitions": [
+      {
+        "texte": "Il pose sur le comptoir trois boîtes de cartouches pour {outil} et les compte une à une : « Cinquante. Pas une de moins, pas une de plus. »",
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Il sort de sous le comptoir des cartouches à pointe creuse : « Pour les loups… et pour les O'Driscoll. » Le prix est le double.",
+        "effets": {
+          "argent": -4
+        }
+      },
+      {
+        "texte": "Il garde la main posée sur la boîte : « Tu sens l'alcool. Pas de poudre pour les ivrognes, j'ai assez vu de monde finir chez le croque-mort. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il te vend les cartouches, mais tu le vois noter quelque chose dans son registre dès que tu tournes les talons.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il glisse une boîte de plus dans ton sac, avec un clin d'œil : « Le gouvernement me doit encore ma solde de 65. Disons que c'est lui qui paie. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te passe les cartouches par le judas de la porte, sans allumer la lampe : « Pas de lumière la nuit. On ne sait jamais qui regarde. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -3
+        }
+      }
+    ],
+    "commander_arme_sur_mesure": [
+      {
+        "texte": "Il sort un carnet et prend tes mesures comme un tailleur : longueur du bras, écart des doigts, œil directeur. « Trois semaines. Crosse en noyer, ou en nacre ? »",
+        "effets": {
+          "argent": -40,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il étale ses croquis : un revolver à canon court pour la ceinture, une carabine équilibrée pour la selle. « La moitié maintenant, le reste à la livraison. »",
+        "effets": {
+          "argent": -25
+        }
+      },
+      {
+        "texte": "Il pose la main sur ton épaule : « Pour un homme qui protège cette ville, je ferai la plus belle pièce de ma vie. Au prix coûtant. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": -20,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il referme son carnet : « Je ne fabrique pas d'outils à faire des veuves. Il y en a déjà une au bout de la rue, ça suffit. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Ses yeux brillent comme ceux d'un gamin : « Enfin quelqu'un qui me laisse travailler ! J'ai une idée de canon damassé depuis vingt ans. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -30,
+          "relation": 2
+        }
+      }
+    ],
+    "faire_estimer_arme": [
+      {
+        "texte": "Il prend {outil}, lit le numéro de série à la loupe et siffle : « Fabrication de 1875. Celle-là a déjà eu deux propriétaires, et sans doute un mort ou deux. Elle vaut ses dix dollars. »"
+      },
+      {
+        "texte": "Il soupèse {outil}, fait jouer le mécanisme contre son oreille valide et rend son verdict en une phrase : « Honnête, mais fatiguée. Comme moi. »"
+      },
+      {
+        "texte": "Il reconnaît son propre poinçon sur {outil} : « C'est moi qui l'ai réglée, il y a six ans, pour un convoyeur de la diligence. Qu'est-il devenu ? » Il n'attend pas vraiment la réponse.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il passe une heure sur {outil} et te raconte l'histoire de chaque pièce comme celle d'un vieil ami. Il refuse d'être payé : « Le plaisir est pour moi. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il plisse les yeux sur {outil} : « Bon outil, entre de bonnes mains. On dit que tu ne t'en sers que pour la bonne cause. Garde-la ainsi. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "ecouter_recit_guerre": [
+      {
+        "texte": "Son regard part loin, très loin : « Petersburg. Neuf mois dans la boue des tranchées. Quand je vois la rue principale après la pluie, j'y suis encore. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il relève sa manche : une cicatrice blanche court jusqu'au coude. « Un Rebelle à la baïonnette, en 64. Je lui ai pris son fusil. Il est là, au mur. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il désigne le vétéran mendiant, sur son banc devant le magasin général : « Lui, il portait le gris ; moi, le bleu. Il y a laissé une jambe, moi un bout de doigt et mon frère. On a tous payé la note. »"
+      },
+      {
+        "texte": "Il sort de son tiroir une lettre jaunie : « Mon frère Caleb. Tombé à Cold Harbor. Je ne l'ai jamais lue à personne. » Et il te la lit, d'une voix qui se casse.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il te toise : « On s'est battus pour que les gens comme toi ne fassent plus la loi. Visiblement, on n'a pas fini le travail. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il remplit deux tasses de café et parle jusqu'à ce que la lampe s'éteigne : des chevaux morts, des noms oubliés, un tambour de quatorze ans.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "marchander": [
+      {
+        "texte": "Tu proposes la moitié du prix. Il rit franchement : « J'aime le culot. » Il baisse d'un dollar, et pas d'un cent de plus.",
+        "effets": {
+          "argent": 1
+        }
+      },
+      {
+        "texte": "Tu vantes une armurerie de Saint Denis. Il hausse les épaules : « Vas-y donc. Leurs pièces s'enrayent à la première averse. » Le prix ne bouge pas.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lui montres une rayure sur la crosse. Il la regarde, la reconnaît, et te concède deux dollars en grognant comme un ours.",
+        "effets": {
+          "argent": 2
+        }
+      },
+      {
+        "texte": "Il soupire, efface un chiffre sur son ardoise et en écrit un plus petit : « Ne le dis à personne, sinon toute la ville va venir marchander. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 3
+        }
+      },
+      {
+        "texte": "Il réfléchit, puis hoche la tête : « Un homme d'honneur mérite une remise. Dix pour cent, et tu ne t'en vantes pas au Smithfield's. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Marchander ? Avec toi ? » Il augmente le prix d'un dollar à chaque mot que tu prononces.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": -1
+        }
+      }
+    ]
+  }
+}

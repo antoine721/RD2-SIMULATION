@@ -1,0 +1,1102 @@
+{
+  "id": "chef_de_gare",
+  "description": "Silas Pettigrew, un homme sec et droit comme un poteau télégraphique, casquette galonnée de la Compagnie et favoris gris taillés au millimètre. Une chaîne de montre en argent barre son gilet noir, et il consulte sa montre à gousset toutes les trente secondes.",
+  "personnalite": "Ponctuel jusqu'à la manie, pointilleux, fier de vingt-deux ans de service « sans une minute de retard ». Méprise le désordre, les ivrognes et les gens qui courent sur le quai. Sous la raideur, un vieux garçon sentimental qui collectionne les horaires de toutes les lignes du pays et se chamaille sans cesse avec le télégraphiste, qu'il trouve trop curieux.",
+  "repliques": [
+    "Le 7 h 12 pour Saint Denis partira à 7 h 12. Pas 7 h 13.",
+    "*sort sa montre à gousset, la compare à l'horloge de la gare, fronce les sourcils*",
+    "Billets pour Saint Denis, Rhodes, Strawberry ! Le guichet est ouvert !",
+    "On ne court pas sur le quai !",
+    "Vingt-deux ans de service, et pas une minute de retard. Enfin… presque.",
+    "Bagages à gauche, voyageurs à droite, ivrognes dehors.",
+    "Dobbs ! Cessez de lire le courrier des autres et tapez !",
+    "Le train de Rhodes a quatre minutes de retard. Quatre ! Quelqu'un en répondra."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 5,
+      "lieu": "gare",
+      "activite": "dort dans le logement de fonction au-dessus du guichet, la montre sur la table de nuit"
+    },
+    {
+      "de": 5,
+      "a": 6,
+      "lieu": "gare",
+      "activite": "remonte l'horloge de la gare et la règle sur sa montre à gousset"
+    },
+    {
+      "de": 6,
+      "a": 12,
+      "lieu": "gare",
+      "activite": "tient le guichet et fait partir le 7 h 12 pour Saint Denis et le 11 h 40 pour Rhodes"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "hotel",
+      "activite": "déjeune seul, toujours à la même table, en vingt-cinq minutes exactement"
+    },
+    {
+      "de": 13,
+      "a": 19,
+      "lieu": "gare",
+      "activite": "surveille le quai, les bagages et le départ du 16 h 05 pour Strawberry"
+    },
+    {
+      "de": 19,
+      "a": 20,
+      "lieu": "saloon_keane",
+      "activite": "boit un unique verre de sherry en consultant sa montre"
+    },
+    {
+      "de": 20,
+      "a": 22,
+      "lieu": "gare",
+      "activite": "recopie les horaires du lendemain à la lampe à pétrole"
+    },
+    {
+      "de": 22,
+      "a": 24,
+      "lieu": "gare",
+      "activite": "dort, après avoir remonté sa montre une dernière fois"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il ne lève pas les yeux de sa montre : « Si c'est pour un billet, c'est au guichet. Si c'est pour bavarder, revenez après le 16 h 05. »"
+      },
+      {
+        "texte": "Il tapote le cadran de sa montre : « Vingt-deux ans que je tiens cette gare, monsieur. Jamais un train n'est parti en avance. En retard, ça, c'est la faute de la Compagnie. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il apparaît en chemise de nuit, une lampe à pétrole à la main : « Le prochain train est à 7 h 12. Il est 2 h 40. Entre les deux, monsieur, il n'y a rien, à part mon sommeil. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il sort de sous le comptoir un horaire plié en quatre : « L'édition de printemps. Ne la montrez à personne, c'est moi qui l'ai corrigée. » Il rougit presque.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il pâlit et range sa montre comme si tu allais la lui prendre : « Le train pour Strawberry est complet. Tous les trains sont complets. Jusqu'à la fin du siècle. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il plisse les yeux derrière la grille : « La Compagnie nous a mis en garde contre les gens de votre espèce. Les attaques de train commencent toujours par des questions sur les horaires. »",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il porte deux doigts à sa casquette galonnée sans quitter l'horloge des yeux : « Bonjour. Vous êtes en avance. C'est bien. »"
+      },
+      {
+        "texte": "Il soulève sa casquette d'un centimètre exactement : « Monsieur. Le quai est à droite, les bagages à gauche, le crachoir au milieu. »"
+      },
+      {
+        "texte": "« Bonsoir », grommelle-t-il en verrouillant le guichet. « Le dernier train est passé il y a trois heures et onze minutes. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te rend ton salut avec une raideur presque chaleureuse : « Ah, le voyageur ponctuel ! Quelle heure avez-vous ? Hm. Votre montre retarde de deux minutes, comme d'habitude. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il fait semblant de ne pas te voir et se met à compter les malles à voix haute, très fort, en te tournant le dos.",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Tu lui dis que sa montre retarde. Il blêmit, la sort, la compare à l'horloge, puis à son chronomètre de réserve, et ne t'adresse plus la parole pendant une minute pleine.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il gonfle son gilet : « Les trains de la Compagnie sont l'orgueil de New Hanover, monsieur, et vous n'êtes qu'un courant d'air sur mon quai. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il saisit le sifflet pendu à son cou et souffle dedans de toutes ses forces : « Shérif ! Désordre sur le quai ! Désordre ! »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il recule derrière la grille du guichet : « Partez, ou je fais télégraphier votre signalement jusqu'à Saint Denis ! » Derrière la cloison, le télégraphiste tend déjà l'oreille.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il rabat le volet du guichet d'un coup sec, en plein sur tes doigts : « Le guichet est fermé. Ma patience aussi. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -2,
+          "relation": -1
+        }
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu t'approches tout près. Il déglutit, mais ne bouge pas d'un pouce : « Vous pouvez me faire peur, monsieur. Ça n'avancera pas le train d'une seule minute. »"
+      },
+      {
+        "texte": "Il lâche sa montre, la rattrape par la chaîne à deux pouces du plancher et recule jusqu'au mur : « Que voulez-vous ? Un horaire ? Prenez l'horaire ! »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il lève les mains si vite qu'il en perd sa casquette : « Je n'ai rien vu, je n'ai rien vendu, vous n'êtes jamais passé dans cette gare ! »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te dévisage longuement : « On dit en ville que vous êtes un homme droit. Les hommes droits ne menacent pas les employés de la Compagnie. » Tu sens ton bras retomber de lui-même.",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Il jette un regard aux voyageurs du quai et hausse le ton : « Vous voyez cet homme ? Retenez bien son visage, mesdames ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "soudoyer": [
+      {
+        "texte": "Il regarde les billets que tu glisses sous la grille, puis sa montre, puis les billets : « La Compagnie ne se soudoie pas, monsieur. » Il repousse l'argent du bout de son poinçon.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il empoche les billets avec une grimace de douleur morale : « Bon. Le 16 h 05 aura peut-être… une minute de battement. Pas deux. » Il en a l'air malade.",
+        "effets": {
+          "argent": -20,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il refuse l'argent mais te glisse la liste des voyageurs du matin : « Gardez vos dollars. Je vous rends service parce que vous êtes ponctuel. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il prend l'argent d'une main tremblante : « Vous n'êtes pas monté dans ce train. Je ne vous ai pas vendu de billet. Je ne vous ai jamais vu. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -25,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il glisse l'argent dans son gilet avec un sourire pincé, puis siffle l'adjoint dès que tu as le dos tourné.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -20,
+          "prime": 5
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Tu pointes {outil} sur lui. Il lève les mains, la montre dans l'une d'elles : « Prenez la caisse, mais je vous en supplie, ne touchez pas à l'horloge. »",
+        "effets": {
+          "relation": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il fixe {outil}, puis sa montre : « Si vous devez tirer, faites-le avant 11 h 40. Après, j'ai le train de Rhodes. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il recule contre le tableau des horaires : « Je sais qui vous êtes. Un billet ? N'importe lequel ? Prenez, prenez, c'est la Compagnie qui offre ! »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Une voyageuse s'évanouit sur le quai. Le chef de gare, livide, porte son sifflet à ses lèvres avant de se raviser devant {outil}.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -2,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Il secoue la tête, incrédule : « Vous ? Vous qui avez aidé la moitié de cette ville ? Rangez ça, voyons. » Sa voix tremble pourtant.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu lui tords le poignet : il ne tenait qu'un poinçon à billets. Il le lâche avec un petit cri outré : « C'est la propriété de la Compagnie ! »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il venait de tirer de sous le comptoir un vieux Colt Navy couvert de rouille. Tu le lui arraches ; il regarde l'arme, puis toi, et se met à trembler.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Dans la pénombre, tu lui arraches la lampe à pétrole qu'il brandissait comme un gourdin. Il recule à tâtons : « Au voleur ! Au voleur de lampe ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu lui prends son sifflet de service juste avant qu'il ne souffle dedans. Il reste figé, les joues encore gonflées, comme un crapaud vexé.",
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Un coup sec derrière l'oreille : il s'effondre sur le quai, et sa montre roule au bout de sa chaîne en continuant de faire tic-tac.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il tombe raide entre deux malles. Une dame hurle sur le quai et, derrière sa vitre, le télégraphiste se jette sur son manipulateur.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il s'écroule sans un bruit sur le banc du quai désert. Personne n'a rien vu, à part l'horloge de la gare.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il esquive à moitié : ton premier coup lui enfonce la casquette jusqu'aux yeux, le second l'envoie au tapis. « Ma… ma montre… » murmure-t-il avant de sombrer.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "honneur": -1
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing l'atteint au menton. Il vacille, rajuste sa casquette et sort son carnet : « Agression d'un agent de la Compagnie. Heure : 10 h 47. » Il note.",
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il s'affale contre le guichet et se met à souffler dans son sifflet à s'en faire éclater les joues, les yeux pleins de larmes.",
+        "effets": {
+          "prime": 5,
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il porte la main à sa joue, plus peiné que blessé : « Vous aussi ? Je vous croyais un homme ponctuel. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il riposte d'un coup de parapluie de service, d'une vivacité surprenante, en plein sur ton nez.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "relation": -1
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu te jettes sur lui avec {outil}. Il pare avec son registre des horaires, qui part en lambeaux, et s'enfuit en hurlant le long de la voie.",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Le coup l'atteint à l'épaule. Il tombe à genoux sur le quai, serrant sa montre contre sa poitrine comme un enfant serre sa poupée.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 20,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Des voyageurs hurlent, une malle se renverse, il s'effondre sur les planches ; derrière sa vitre, le télégraphiste tape ton signalement à toute allure.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 25,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Il t'attendait : un coup de lanterne de signal en pleine figure te fait reculer, mais tu finis par l'envoyer au sol avec {outil}.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "etat": "blesse",
+          "prime": 15,
+          "honneur": -2
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La détonation fait s'envoler les pigeons du toit. Il tombe sur le quai, la main crispée sur sa montre, qui s'arrête avec lui.",
+        "effets": {
+          "etat": "mort",
+          "prime": 100,
+          "honneur": -5
+        }
+      },
+      {
+        "texte": "La balle fait éclater le cadran de l'horloge, juste au-dessus de sa tête. Il détale le long des rails sans demander son reste.",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Touché à la jambe, il se traîne derrière le guichet en gémissant : « Le 16 h 05… Qui va siffler le 16 h 05 ? »",
+        "effets": {
+          "etat": "blesse",
+          "prime": 35,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Il sort de sous le comptoir un vieux Colt Navy et fait feu en même temps que toi. Sa balle t'érafle les côtes ; la tienne le renverse contre les horaires.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -25,
+          "etat": "blesse",
+          "prime": 30,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Dans le noir, ta balle brise sa lampe à pétrole. Il crie, roule au sol en étouffant sa manche qui fume, puis rampe vers la voie ferrée.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 10,
+          "honneur": -1
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Il voit arriver {outil} et plonge derrière le guichet. Le projectile s'écrase contre l'horloge, qui s'arrête net ; il en gémit plus fort que s'il avait été touché.",
+        "effets": {
+          "relation": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il reçoit {outil} en pleine casquette et s'assoit lourdement sur une malle, étourdi : « Vous… vous allez rater votre train, monsieur. »",
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Les voyageurs s'écartent en criant. Il ramasse {outil} au pied du quai, l'inscrit au registre des objets trouvés et te fixe sans ciller.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il esquive avec une souplesse inattendue et te renvoie son poinçon à billets, qui te frappe en plein front.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -3,
+          "relation": -1
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "La boucle se resserre sur ses bras. Il tombe à plat ventre sur le quai et sa casquette galonnée roule jusque sur les rails.",
+        "effets": {
+          "etat": "ligote",
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il se débat comme un beau diable, la montre brinquebalant au bout de sa chaîne : « Lâchez-moi ! Le train de Rhodes entre en gare dans six minutes ! »",
+        "effets": {
+          "etat": "ligote",
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu l'attrapes au milieu des voyageurs. Une vieille dame te frappe à coups d'ombrelle pendant que tu le traînes sur les planches.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -2,
+          "etat": "ligote",
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Tu le cueilles au moment où il verrouille le guichet. Il se tortille dans la poussière en réveillant tous les chiens du quartier.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 5
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu lui lies les mains et les pieds avec {outil}. Il commente chaque nœud : « Celui-ci est mal fait. Celui-là aussi. Vous ne tiendriez pas une semaine à la Compagnie. »",
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Ficelé sur le banc du quai, il te supplie seulement de le tourner vers l'horloge, « pour savoir combien de temps dure l'humiliation ».",
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Un voyageur crie au secours en te voyant faire ; le télégraphiste claque la porte de son bureau et tape à toute vitesse.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 15,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu le traînes, ligoté, jusqu'au bord des rails. Il hurle, blanc comme un linge : « Pas les rails ! Le marchandises passe à 18 h 20 ! Il est toujours à l'heure, lui ! »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 20,
+          "honneur": -4
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Il sort sa montre, la regarde, la range, la ressort, la regarde encore. En deux minutes, tu as compté onze fois."
+      },
+      {
+        "texte": "Il redresse une malle de trois centimètres pour l'aligner sur les autres, recule, juge l'effet, puis la redresse encore d'un demi-centimètre."
+      },
+      {
+        "texte": "Par la fenêtre éclairée au-dessus du guichet, tu le vois remonter sa montre à la lueur de la lampe, puis la comparer à un vieux chronomètre de marine.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il arpente le quai à pas comptés, les mains dans le dos, et foudroie du regard un cow-boy qui crache sur les rails.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Il se fige dans une pose noble, une main sur la chaîne de sa montre : « Prenez mon bon profil. Et notez l'heure : 14 h 22. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu le croques de dos dans {outil}, penché sur son registre : sur le papier, sa casquette paraît plus haute que la gare."
+      },
+      {
+        "texte": "Il jette un œil à ton croquis et y ajoute du bout de son crayon l'horloge au-dessus de sa tête : « L'aiguille était sur le cinq. La précision, monsieur, la précision. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Dans {outil}, tu n'esquisses qu'une silhouette raide au bout du quai désert, et un éclat d'argent au creux de sa main, comme un phare.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il tire sur son gilet et se tient au garde-à-vous sous l'horloge pendant toute la pose, sans même cligner des yeux.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il examine {outil} avec méfiance : « Cette machine est-elle homologuée par la Compagnie ? » Le cliché le montre la bouche ouverte."
+      },
+      {
+        "texte": "Le magnésium éclate ; un cheval hennit, une dame crie, et il gronde : « Pas sur le quai ! Les éclairs effraient les locomotives ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il te demande d'attendre l'entrée du train pour qu'on le voie, lui et la locomotive, sur la même plaque. « C'est pour ma sœur, à Annesburg. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu le charges sur ton épaule comme un sac de courrier. Il est léger et raide comme un manche à balai, et sa montre te bat dans le dos."
+      },
+      {
+        "texte": "Il gigote et te martèle les reins de ses petits poings : « Posez-moi ! J'ai un train à faire partir ! »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -1,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu le portes à travers le quai désert. Sa chaîne de montre cliquette dans le silence comme un grelot de traîneau.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Les voyageurs te regardent passer, bouche bée. Sur ton épaule, le chef de gare a gardé sa casquette parfaitement droite.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Il marche à pas exactement égaux, du guichet au château d'eau et retour, en vérifiant sa montre à chaque bout du quai."
+      },
+      {
+        "texte": "Il quitte le saloon de Keane à 20 h précises, sans un regard en arrière, et remonte vers la gare en comptant ses pas à mi-voix.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "À midi pile, il traverse la rue principale pour déjeuner à l'hôtel. Il s'arrête net, se retourne : « Vous me suivez ? Vous avez une seconde de retard sur mon pas. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il presse le pas en te sentant derrière lui et file droit vers le bureau du shérif, la main crispée sur sa montre.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il éclate d'un petit rire nerveux : « Un duel ? Je suis chef de gare, monsieur, pas pistolero. Revenez avec un billet ! »"
+      },
+      {
+        "texte": "Il sort sa montre : « Très bien. À midi. Pas midi et une : midi. » Puis il va s'enfermer dans le bureau du télégraphe jusqu'au soir."
+      },
+      {
+        "texte": "Il dégaine de sous son gilet un vieux Colt Navy, bien trop lentement. Ta balle lui arrache l'arme des doigts et il s'effondre en se tenant la main.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 15,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il refuse avec dignité : « Un homme comme vous ne tire pas sur un employé désarmé. Je compte là-dessus. » Et il retourne à ses horaires.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il prend {outil} du bout des doigts, l'examine, puis remplit un reçu en trois exemplaires : « Don reçu à 15 h 08. Signez ici, ici et ici. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il fronce les sourcils devant {outil} : « Les agents de la Compagnie n'acceptent pas de cadeaux. » Il le glisse tout de même dans son tiroir.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il accepte {outil} avec une émotion qu'il cache mal : « Personne ne m'avait rien offert depuis… depuis la montre. » Il se mouche bruyamment.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il repousse {outil} comme s'il brûlait : « Je ne veux rien qui vienne de vous. Ça ressemble trop à une pièce à conviction. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "acheter@outil": [
+      {
+        "texte": "Il hausse un sourcil derrière la grille : « Je vends des billets, monsieur, pas {cible}. Voyez l'épicier ou l'armurier. » Il tapote l'affiche des tarifs."
+      },
+      {
+        "texte": "Il consulte le registre des objets non réclamés, y trouve une ligne correspondant à {cible} et te le cède après six minutes de paperasse et un reçu tamponné.",
+        "effets": {
+          "argent": -3,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il refuse d'ouvrir le guichet : « Le commerce, c'est de 6 h à 19 h. Même pour {cible}. Surtout pour {cible}. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il baisse la voix : « Un voyageur a laissé {cible} à la consigne il y a trois mois. Le règlement dit quatre-vingt-dix jours. » Il te le vend au prix coûtant.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      }
+    ],
+    "vendre@outil": [
+      {
+        "texte": "Il regarde {cible} comme un billet mal composté : « La Compagnie n'achète rien aux voyageurs. Essayez l'armurier, ou le prêteur sur gages de Saint Denis. »"
+      },
+      {
+        "texte": "Après une longue hésitation, il prend {cible} pour la vitrine des objets trouvés : « Trois dollars. Et je n'ai rien vu. »",
+        "effets": {
+          "argent": 3
+        }
+      },
+      {
+        "texte": "Il recule d'un pas : « Je n'achète pas d'objets volés. Et je le dirai au télégraphiste. » Le pire, c'est qu'il le dirait.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il compte cinq dollars en pièces, une par une, en vérifiant l'heure entre chaque : « Pour un ami, une exception au règlement. Une seule. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 5,
+          "relation": 1
+        }
+      }
+    ],
+    "acheter_billet": [
+      {
+        "texte": "Il poinçonne un billet pour Saint Denis d'un coup sec : « Départ 7 h 12. À 7 h 13, vous regarderez le train partir sans vous. »",
+        "effets": {
+          "argent": -5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Rhodes ? Excellent choix, la ligne longe la rivière. » Il te tend un billet de deuxième classe encore humide de l'encreur.",
+        "effets": {
+          "argent": -3
+        }
+      },
+      {
+        "texte": "Il fait glisser un billet pour Strawberry sous la grille : « Changement à Riggs. L'embranchement a ses humeurs, prévoyez un livre. »",
+        "effets": {
+          "argent": -4
+        }
+      },
+      {
+        "texte": "Il te vend le billet sans relever les yeux, mais tu le vois noter quelque chose dans la marge de son registre, en tout petit.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -5,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il rouvre le volet en chemise de nuit : « Un billet à 23 h, pour un train de demain ? Vous êtes un homme prévoyant. J'aime ça. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te glisse un billet de première pour le prix d'une troisième : « Le contrôleur me doit trois parties de dames. Ne le dites à personne. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": 1
+        }
+      }
+    ],
+    "demander_heure": [
+      {
+        "texte": "Il ouvre sa montre d'un geste de prestidigitateur : « 10 h 47 et vingt secondes. Vingt et une. Vingt-deux. Vingt-trois. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il compare sa montre à l'horloge de la gare et fronce les sourcils : « L'horloge dit 15 h 02. Elle ment. Il est 15 h 01. »"
+      },
+      {
+        "texte": "« Il est l'heure de dormir », répond-il sèchement depuis sa fenêtre. Puis, incapable de s'en empêcher : « 23 h 16. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te montre l'intérieur du boîtier, gravé : « À Silas Pettigrew, vingt ans sans un retard ». « Il est 16 h 05, mon ami. Écoutez. » Le train siffle, pile.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il referme sa montre d'un claquement sec : « Trop tard pour vous, en tout cas. »",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "voler_montre_gousset": [
+      {
+        "texte": "Tu décroches la chaîne pendant qu'il se penche sur une malle. La montre glisse dans ta poche ; il se redresse, tâte son gilet et devient blanc comme une nappe.",
+        "effets": {
+          "argent": 15,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Ses doigts se referment sur ton poignet avec une vitesse surprenante : « Vingt-deux ans que je sens le poids de cette montre, monsieur. » Il souffle dans son sifflet.",
+        "effets": {
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu réussis, mais un enfant crie sur le quai : « Le monsieur a volé l'heure du monsieur ! » Le chef de gare se lance à ta poursuite en courant comme une cigogne.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 15,
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu prends la montre sur sa table de nuit pendant qu'il ronfle. Au matin, toute la ville saura que, pour la première fois de sa vie, il n'a pas su l'heure.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 15,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu as la montre dans la main quand il se tourne vers toi en souriant pour te demander l'heure. Tu la lui rends, penaud ; il croit à une plaisanterie et rit pour la première fois de l'année.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "demander_arrivees": [
+      {
+        "texte": "Il ouvre son registre : « Le 9 h 30 de Saint Denis : un représentant en toniques, deux sœurs méthodistes, et un monsieur en noir qui a demandé où était la banque. Je n'aime pas les gens qui demandent où est la banque. »"
+      },
+      {
+        "texte": "« Avant-hier, un Irlandais a fait descendre son cheval du fourgon et filé au Smithfield's sans même faire viser son billet. » Il pince les lèvres. « Ça ne me plaît pas. »"
+      },
+      {
+        "texte": "Il baisse la voix : « Un chasseur de primes est descendu du train de Rhodes. Il a demandé si un Irlandais avait pris un billet. Et un marshal a réservé une voiture entière pour jeudi. Avec des barreaux. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il referme le registre d'un coup sec : « Les noms des voyageurs sont la propriété de la Compagnie. Surtout pour vous. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Personne n'arrive la nuit à Valentine, monsieur. À part les ennuis. Et les ennuis ne prennent jamais de billet. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "porter_bagages": [
+      {
+        "texte": "Il te jauge, puis désigne une montagne de malles : « Vingt-cinq cents la malle, jusqu'à la diligence. Ne les retournez pas, il y a de la porcelaine. »",
+        "effets": {
+          "argent": 2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu hisses jusqu'à l'hôtel les six valises d'une dame de Saint Denis. Elle te donne une pièce, et le chef de gare inscrit ton nom dans son carnet. En bien.",
+        "effets": {
+          "argent": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il refuse net : « Je ne confie pas les bagages des voyageurs à un homme dont le visage est punaisé sur un avis. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« À cette heure ? Il n'y a que le courrier. » Il te laisse décharger les sacs postaux du fourgon de nuit pour un dollar, et te surveille comme un faucon.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 1
+        }
+      },
+      {
+        "texte": "Il te laisse porter les malles, mais compte chaque bagage deux fois et vérifie toutes les serrures après ton passage.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 2
+        }
+      }
+    ],
+    "retenir_train": [
+      {
+        "texte": "Il te regarde comme si tu proposais de repeindre l'église en rouge : « Retarder un train ? Monsieur, j'aimerais mieux retarder ma propre naissance. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il sort sa montre, la regarde longuement, puis la range : « Le train part à l'heure. Les gens en retard partent par le suivant. C'est ainsi que tourne le monde. »"
+      },
+      {
+        "texte": "Il souffre visiblement : « Trente secondes. Je vous accorde trente secondes, et nous n'en reparlerons jamais. » Il retient son coup de sifflet en serrant les dents.",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Il comprend tout de suite : « Vous voulez que quelqu'un rate son train… ou ne pas rater le vôtre ? Ni l'un ni l'autre. » Il siffle le départ avec une minute d'avance, par dépit.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il saisit son sifflet et le fait hurler : le train s'ébranle sous ton nez, à l'heure pile, et il te salue d'un air de triomphe.",
+        "si": [
+          "hostile"
+        ]
+      }
+    ]
+  }
+}

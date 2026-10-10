@@ -1,0 +1,442 @@
+{
+  "id": "eglise",
+  "description": "Une petite église en planches peintes en blanc, coiffée d'un clocher pointu où pend une cloche de bronze. À l'intérieur, des bancs de pin qui grincent, un autel couvert d'un drap brodé et, près de la porte, le tronc des pauvres cerclé de fer.",
+  "repliques": [
+    "Le plancher de la nef craque sous un pas invisible.",
+    "Un cantique s'échappe par la porte entrouverte.",
+    "La flamme d'un cierge vacille devant l'autel."
+  ],
+  "reactions": {
+    "entrer": [
+      {
+        "texte": "La porte blanche grince. Il fait frais, ça sent la cire et le pin ; une douzaine de bancs mènent à un autel nu où brûle un seul cierge."
+      },
+      {
+        "texte": "Tu entres pendant que le pasteur balaie la nef. Le gamin, au dernier rang, une écuelle de soupe sur les genoux, se met à prier très fort en te voyant.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La nef est plongée dans le noir. Seule une lampe brûle dans la sacristie, et tu entends le cliquetis d'un barillet qu'on fait tourner, lentement.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu entres en ôtant ton chapeau. Ici, pas d'avis de recherche aux murs, seulement une croix de bois. Pour la première fois depuis des jours, tes épaules se relâchent.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu franchis le seuil. Une vieille paroissienne serre son psautier contre elle et sort par la porte de côté sans te quitter des yeux.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Une église de planches blanches, simple et propre, la seule bâtisse de Valentine qui ne sente ni le bétail ni le whisky. Le clocher penche un peu vers le cimetière."
+      },
+      {
+        "texte": "Tu remarques d'anciens impacts de balles dans le chambranle de la porte, rebouchés au mastic et repeints. Quelqu'un a voulu effacer quelque chose."
+      },
+      {
+        "texte": "La lune fait luire la peinture blanche comme un os. Derrière la fenêtre de la sacristie, une lueur tremble, tard, très tard.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le dimanche, la moitié de la ville s'y presse en habits propres ; les autres jours, seuls la veuve, le gamin et quelques ivrognes repentis en poussent la porte.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le clocher domine toute la rue principale. D'en haut, un tireur verrait venir le shérif bien avant que le shérif ne le voie.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines l'église dans {outil} : la façade blanche, le clocher pointu, et la cloche réduite à un petit trait noir."
+      },
+      {
+        "texte": "Assis sur le muret du cimetière, tu croques l'église en plein soleil. Le gamin passe derrière toi et réclame un corbeau sur le clocher.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu esquisses l'église au clair de lune. Sur ta page, la fenêtre éclairée de la sacristie ressemble à un œil grand ouvert.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu installes {outil} face au parvis. L'église blanche se découpe sur le ciel des Heartlands : une image parfaite pour une carte postale de Saint Denis."
+      },
+      {
+        "texte": "Le pasteur sort sur les marches au moment du déclic et lève la main, trop tard. Il restera flou pour l'éternité, comme il l'aurait sans doute voulu.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Ton cliché nocturne ne montre qu'une silhouette pâle et une fenêtre allumée. On dirait un fantôme qui veille sur la ville.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle perce les planches blanches de la façade. Le bruit résonne dans la nef vide, et le pasteur paraît sur le seuil, très calme : « Tu as tué une planche. Tu te sens mieux ? »",
+        "effets": {
+          "honneur": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu tires sur l'église en plein jour. Les femmes crient, les paroissiens se jettent à plat ventre, et l'adjoint accourt, son colt tremblant au bout du bras.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Tes coups de feu font voler en éclats la vitre de la sacristie. Une lampe s'éteint, et une voix grave dit dans le noir : « Encore un, et je descends. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu cribles de balles la croix du clocher jusqu'à ce qu'elle penche. Dès le soir, on murmure en ville que le diable en personne est de passage.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -3,
+          "prime": 10
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la porte de l'église. Le choc résonne dans la nef, et un pigeon s'envole du clocher.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Ton projectile fait éclater une vitre de la sacristie. Le pasteur ramasse les éclats sans un mot, puis te regarde à travers le trou.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu lances {outil} contre l'église endormie. Le chien errant aboie, une fenêtre s'allume à la pension, puis tout se tait.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu lances {outil} contre l'église pendant l'office. Le cantique s'arrête net, et quarante têtes se tournent vers toi.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 5
+        }
+      }
+    ],
+    "faire_offrande": [
+      {
+        "texte": "Tu glisses des pièces dans le tronc des pauvres cerclé de fer. Elles tombent avec un bruit bien maigre : il ne doit pas y avoir grand-chose d'autre dedans.",
+        "effets": {
+          "argent": -2,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu déposes un billet dans le tronc. La veuve, assise au premier rang, se retourne et t'adresse un petit signe de tête.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -5,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Dans l'église vide, ton offrande résonne au fond du tronc. Le cierge de l'autel semble se redresser, à moins que ce ne soit un courant d'air.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -2,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu bourres le tronc de billets. Le geste ne lave rien, mais demain, le pasteur pourra acheter de la farine pour tout l'hiver.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -20,
+          "honneur": 2
+        }
+      },
+      {
+        "texte": "Tu glisses dans le tronc une part de ce que vaut ta tête. Quelque part, un comptable céleste griffonne une note dans la marge.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -10,
+          "honneur": 1
+        }
+      }
+    ],
+    "prier_a_genoux": [
+      {
+        "texte": "Tu t'agenouilles sur le plancher rugueux. Les mots ne viennent pas, alors tu te tais ; le silence de l'église fait le reste.",
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu pries pour les hommes que tu as tués. La liste est longue, et tes genoux te font mal bien avant la fin.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu pries seul dans le noir. Un « Amen » murmure derrière toi : le pasteur était là depuis le début, assis au dernier rang.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu pries à côté de la veuve. Elle ne demande pas la paix pour son mari : elle demande au ciel les noms de ses assassins.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu pries pour que le shérif regarde ailleurs. Par la fenêtre, tu vois l'adjoint passer sans tourner la tête. Coïncidence, ou miracle ?",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu pries pour Valentine, pour les fermiers, et même pour les O'Driscoll. En te relevant, tu te sens d'aplomb comme après une nuit complète.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "sante": 10,
+          "honneur": 1
+        }
+      }
+    ],
+    "assister_a_l_office": [
+      {
+        "texte": "Le pasteur tonne contre le whisky, les cartes et les femmes de saloon. Au troisième rang, le barman de Keane se tasse sur son banc.",
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Pendant la quête, le gamin fait circuler le panier avec un sérieux de banquier. Tu le vois prélever une pièce au passage.",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "À l'office du dimanche, le pianiste du saloon tient l'harmonium. À jeun, pour une fois, il joue juste.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "À l'office du soir, il n'y a que la veuve, le gamin endormi et l'ivrogne qui ronfle. Le pasteur prêche pour eux comme dans une cathédrale.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Le sermon porte sur le fils prodigue. À chaque phrase, tu as l'impression que le pasteur te regarde, toi, et seulement toi.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Au milieu du cantique, la porte s'ouvre : l'adjoint entre, chapeau bas, s'assoit au fond et ne te quitte plus des yeux jusqu'à l'amen.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "chercher_asile": [
+      {
+        "texte": "Tu te réfugies dans la nef. Le pasteur ferme la porte derrière toi : « Ici, c'est la maison de Dieu. Malloy le respecte. L'adjoint, je n'en jurerais pas. »"
+      },
+      {
+        "texte": "Tu entres en trombe. Le pasteur va se planter sur les marches, Bible en main ; quand l'adjoint arrive, essoufflé, il lui barre le passage sans un mot.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le pasteur t'installe dans la sacristie, derrière les robes de chœur. Au matin, il te réveille : « Tu as une heure d'avance sur le chasseur de primes. Pas une minute de plus. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 15
+        }
+      },
+      {
+        "texte": "Le pasteur te barre d'abord le seuil : « L'asile, c'est pour les repentis. Tu sens encore la poudre. » Puis il s'écarte quand même, en soupirant.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "On sait ce que tu as fait pour la ville. Le pasteur t'accueille, et même Malloy, venu jusqu'au parvis, finit par grommeler : « Je repasserai demain. »",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Le chasseur de primes entre derrière toi, s'assoit sur le banc d'en face et pose son fusil sur ses genoux : « J'ai tout mon temps. Les églises n'ont pas de cuisine. »"
+      }
+    ],
+    "vider_le_tronc": [
+      {
+        "texte": "Tu forces le cadenas du tronc des pauvres. Dedans : trois dollars de cuivre, une dent en or et un bouton. Tu viens de voler la soupe de l'hiver.",
+        "effets": {
+          "argent": 3,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Tu forces le tronc en plein jour. La veuve, au premier rang, te dévisage sans un cri, puis se lève et sort, droit vers le bureau du shérif.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 3,
+          "honneur": -3,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Le cadenas cède sans bruit. Au moment où tu ramasses les pièces, le déclic d'un chien de revolver résonne derrière l'autel : « Repose ça, mon fils. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Ta main s'arrête sur le cadenas. Tu penses aux pieds nus du gamin, à la soupe de midi, et tu ressors les mains vides sans bien comprendre ce qui t'a retenu.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Le tronc est déjà vide : quelqu'un est passé avant toi. Sous le banc le plus proche, tu trouves une petite casquette de laine que tu reconnais."
+      },
+      {
+        "texte": "Tu vides le tronc : quatre dollars. De quoi tenir deux jours de fuite, et de quoi faire grossir ta prime si quelqu'un l'apprend.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 4,
+          "honneur": -3,
+          "prime": 10
+        }
+      }
+    ],
+    "monter_au_clocher": [
+      {
+        "texte": "Tu grimpes l'échelle branlante du clocher. D'en haut, tu vois tout Valentine : la boue de la rue principale, l'enclos, la gare, et le ruisseau qui brille au sud."
+      },
+      {
+        "texte": "Du haut du clocher, tu repères l'O'Driscoll qui sort du Smithfield's et jette un long regard vers le bureau du shérif.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La nuit, depuis le clocher, tu comptes les feux de camp dans les collines. Trois, vers le nord-est. Ce ne sont pas des bergers.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tapi sous la cloche, tu surveilles les rondes du shérif. Le meilleur poste de guet de la ville, et le pire des pièges si on t'y trouve.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu t'installes dans le clocher, fusil sur les genoux, avec une vue parfaite sur la porte de la banque. Une idée sombre te traverse l'esprit.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Une planche pourrie cède sous ton pied ; tu te rattrapes à la corde, et la cloche lâche un coup lugubre sur toute la ville.",
+        "effets": {
+          "sante": -5
+        }
+      }
+    ]
+  }
+}

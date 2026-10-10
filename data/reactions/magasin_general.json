@@ -1,0 +1,485 @@
+{
+  "id": "magasin_general",
+  "description": "Le plus grand commerce de la rue principale : une façade à fausse corniche où s'écaille « CRUMP — MARCHANDISES GÉNÉRALES » en lettres rouges, et un perron encombré de tonneaux de clous et de sacs de farine. À l'intérieur, des étagères jusqu'au plafond, un poêle ventru, et une grande balance de cuivre qui trône sur le comptoir.",
+  "repliques": [
+    "Une pancarte se balance à la porte : « ICI ON NE FAIT PAS CRÉDIT ».",
+    "La clochette de la porte tinte, aussitôt suivie d'un « On regarde avec les yeux ! »",
+    "Une odeur de café moulu, de savon noir et de tabac flotte jusqu'au trottoir."
+  ],
+  "reactions": {
+    "braquer": [
+      {
+        "texte": "Tu cries de vider la caisse. L'épicier ouvre le tiroir en tremblant : quinze dollars en petite monnaie, qu'il recompte par réflexe en te la tendant.",
+        "effets": {
+          "argent": 15,
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "L'épicier refuse d'ouvrir et se cramponne au tiroir-caisse. Tu repars avec quelques billets et des conserves plein les poches, sous ses hurlements.",
+        "effets": {
+          "argent": 10,
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Boutique fermée : tu forces la porte de la réserve et éventres les sacs de farine… Dans le troisième, une liasse de billets : les économies de toute une vie.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 120,
+          "prime": 40,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Braquer le magasin à midi : les clientes hurlent, quelqu'un court chez Malloy, et tu ressors sous les tirs nerveux de l'adjoint.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 15,
+          "sante": -15,
+          "prime": 75,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "L'épicier te reconnaît d'après l'avis de recherche et tire sur le cordon d'une cloche cachée sous le comptoir. Tu files avec une poignée de pièces.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 5,
+          "prime": 30,
+          "honneur": -2
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines la façade à fausse corniche, les tonneaux de clous sur le perron et la pancarte « ICI ON NE FAIT PAS CRÉDIT »."
+      },
+      {
+        "texte": "Tu croques l'intérieur : les étagères jusqu'au plafond, la grande balance de cuivre, et deux vieux qui jouent aux dames près du poêle."
+      },
+      {
+        "texte": "Une lueur jaune à l'étage, la vitrine noire où se reflète la lune : dans {outil}, ton dessin a l'air d'une veillée funèbre pour un commerce.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Sur le perron, le gamin des rues pose malgré lui au milieu de ton croquis, la main suspicieusement proche du tonneau de pommes.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "entrer": [
+      {
+        "texte": "La clochette tinte. Odeur de café moulu, de savon noir et de cuir neuf. Derrière la balance, l'épicier lève les yeux : « On regarde avec les yeux. »"
+      },
+      {
+        "texte": "Le poêle ronfle dans un coin. L'épicier pèse un sac de farine, le retire, le repèse, et te fait signe d'attendre ton tour sans même te regarder."
+      },
+      {
+        "texte": "La porte est fermée à double tour. Une feuille est collée sur la vitre : « FERMÉ. PAS D'ARGENT DANS LA CAISSE. INUTILE D'ESSAYER. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "À ton entrée, l'épicier pâlit et tire discrètement le tiroir-caisse à lui. Une cliente pose son panier et sort à reculons.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Le magasin bourdonne : une fermière marchande des cotonnades, deux vieux jouent aux dames près du poêle, et le crieur de journaux vient chercher son tabac.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "L'épicier vient se planter entre toi et les étagères, et te suit pas à pas dans chaque allée sans dire un mot.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Ton projectile ricoche sur la pancarte « PAS DE CRÉDIT » et tombe dans un tonneau de clous. L'épicier sort en brandissant son balai."
+      },
+      {
+        "texte": "La vitrine vole en éclats ; des boîtes de conserve roulent jusque dans la boue de la rue.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le fracas de verre réveille l'épicier : tu l'entends hurler « Au voleur ! » depuis l'étage, alors que tu n'as encore rien pris.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu lances {outil} sur la façade devant tout le monde : un sac de farine éventré blanchit le perron, et les passants se tournent vers le bureau du shérif.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Des étagères jusqu'au plafond : conserves de pêches, tabac de Virginie, lampes à pétrole, cotonnades, et des bonbons à la menthe dans des bocaux de verre."
+      },
+      {
+        "texte": "Sur le perron, les sacs de farine portent la marque d'un moulin du Minnesota. L'un d'eux, à l'écart dans la réserve, est ficelé bien plus serré que les autres."
+      },
+      {
+        "texte": "Un gros catalogue de vente par correspondance, écorné, est enchaîné au comptoir pour que personne ne l'emporte."
+      },
+      {
+        "texte": "Près du poêle ventru, deux vieux jouent aux dames et commentent les nouvelles du crieur. L'épicier leur fait payer la chaleur en tabac.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Une seule lampe brûle au fond de la réserve. Une ombre penchée sur un sac de farine compte quelque chose à voix basse.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu cadres la façade, les tonneaux et la pancarte. L'épicier sort juste à temps pour se placer au milieu, tablier lissé et menton haut."
+      },
+      {
+        "texte": "Le flash fait sursauter tout le magasin. Une cliente lâche un œuf, et l'épicier pointe aussitôt sur toi un doigt accusateur : « Il est pour toi, celui-là. »"
+      },
+      {
+        "texte": "Sur la plaque, la vitrine sombre reflète les lanternes de la rue ; à l'étage, une silhouette écarte le rideau pour voir qui photographie.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle perce un sac de farine sur le perron : une gerbe blanche s'envole et retombe sur la rue comme une neige de printemps.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "La vitrine explose. À l'intérieur, une boîte de pêches transpercée saigne son sirop sur le plancher, et l'épicier hurle au meurtre.",
+        "effets": {
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Le coup de feu réveille toute la rue. À l'étage, l'épicier ouvre sa fenêtre en criant et vide un pistolet à un coup dans le vide.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Les clientes se jettent à terre, l'adjoint arrive en courant, et l'épicier te crie déjà le montant des dégâts, au cent près.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 15
+        }
+      }
+    ],
+    "crocheter": [
+      {
+        "texte": "La serrure est vieille et rouillée : il n'a jamais voulu payer pour une neuve. Elle cède en trois secondes.",
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Ton crochet tourne dans le vide : derrière la porte, un cadenas, puis un deuxième, puis une chaîne. L'épicier ne fait confiance à personne."
+      },
+      {
+        "texte": "Dans le noir, ton crochet trouve le pêne. La porte s'ouvre sur l'odeur du café et le tic-tac de l'horloge ; à l'étage, quelqu'un ronfle.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu crochètes la porte de la réserve, en plein jour. Un vacher qui passe s'arrête, te regarde… et file droit au bureau du shérif.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      }
+    ],
+    "faire_sauter": [
+      {
+        "texte": "L'explosion souffle la façade : farine, haricots et boîtes de conserve pleuvent sur la rue principale, et la balance de cuivre atterrit devant la banque.",
+        "effets": {
+          "prime": 100,
+          "honneur": -4,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "La dynamite arrache la porte de la réserve. Des billets s'envolent d'un sac de farine éventré, et tu en ramasses autant que tu peux.",
+        "effets": {
+          "argent": 80,
+          "prime": 75,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Les lampes à pétrole en stock s'embrasent après l'explosion. Le magasin brûle comme une torche, et la ville entière accourt avec des seaux.",
+        "effets": {
+          "prime": 150,
+          "honneur": -5,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "L'éclair illumine Valentine. Quand la fumée se dissipe, il ne reste que des poutres fumantes, et l'épicier hurle en chemise de nuit au milieu de la rue.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 100,
+          "honneur": -4,
+          "etat": "detruit"
+        }
+      }
+    ],
+    "detruire": [
+      {
+        "texte": "Tu renverses les étagères une à une. Conserves, bocaux de bonbons et lampes à pétrole s'écrasent au sol dans un vacarme de fin du monde.",
+        "effets": {
+          "prime": 20,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu crèves les sacs de farine du perron et renverses les tonneaux de clous dans la boue, sous les cris aigus de l'épicier.",
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Quand tu ressors, plus rien ne tient debout dans la boutique. Demain matin, l'épicier découvrira vingt ans de sa vie en miettes.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -3,
+          "etat": "detruit"
+        }
+      }
+    ],
+    "fouiller": [
+      {
+        "texte": "Sous le comptoir : un pistolet à un coup, le registre des comptes et un bocal plein de pièces de cinq cents.",
+        "effets": {
+          "argent": 4,
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Dans la réserve, tu éventres les sacs de farine un à un. Au troisième, tes doigts rencontrent une liasse ficelée : les économies de l'épicier.",
+        "effets": {
+          "argent": 80,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "L'épicier te tombe dessus à coups de balai avant que tu aies ouvert un seul tiroir : « Les mains sur le comptoir, voleur ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -5,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "À la lueur d'une allumette : des cotonnades, des boîtes de cartouches, et une lettre d'une sœur de Blackwater qui lui réclame de l'argent depuis dix ans.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      }
+    ],
+    "admirer_vitrines": [
+      {
+        "texte": "Derrière la vitre : une poupée de porcelaine, des bottes cirées, une lampe à abat-jour vert et un bocal de sucres d'orge qui ferait rêver n'importe quel gamin."
+      },
+      {
+        "texte": "Une robe de calicot bleu habille un mannequin de bois. La danseuse du saloon de Keane s'arrête à côté de toi et soupire : « À Saint Denis, elles en ont de plus belles. »"
+      },
+      {
+        "texte": "La vitrine sombre reflète les lanternes de la rue. Derrière, l'épicier a tiré un rideau de toile : il ne laisse même pas la nuit regarder sa marchandise.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Dans le reflet de la vitre, tu vois l'épicier, à l'intérieur, qui t'observe en tenant déjà le cordon de sa cloche d'alarme.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Le gamin des rues colle son nez à côté du tien devant les bocaux de bonbons. L'épicier tape au carreau : « Pas de nez sur ma vitre ! »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "voler_a_l_etalage": [
+      {
+        "texte": "Pendant que l'épicier pèse un sac de farine, tu glisses une boîte de tabac dans ta veste. Il repèse… et ne remarque rien.",
+        "effets": {
+          "argent": 1,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Ta main n'a pas fini son geste qu'il hurle « AU VOLEUR ! » à pleins poumons. Il le crie dix fois par jour, mais cette fois, c'est vrai.",
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu empoches une conserve de pêches sur l'étal du perron. Le gamin des rues, qui a tout vu, te fait un clin d'œil de confrère.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 1,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Le magasin est fermé et l'étal rentré : il ne reste dehors que les tonneaux de clous, et ils sont enchaînés.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "L'épicier ne te quitte pas des yeux une seconde ; dès que ta main approche d'une étagère, il tousse très fort et tapote son vieux fusil.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "feuilleter_catalogue": [
+      {
+        "texte": "Le catalogue pèse quatre livres : selles, corsets, pianos, et même des maisons en kit livrées par le train. Une page entière de revolvers, moins chers que chez l'armurier."
+      },
+      {
+        "texte": "Tu tombes sur une page cornée : billets de train pour la Californie et pelles de chercheur d'or. Quelqu'un a entouré une batée au crayon. L'ivrogne, sans doute."
+      },
+      {
+        "texte": "L'épicier toussote dans ton dos : « On ne lit pas gratuitement. Un cent la page, ou tu commandes. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "À la lueur de la lampe, les gravures semblent s'animer : des villes éclairées à l'électricité, des usines, un monde qui n'a plus besoin de cow-boys.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Entre deux pages, tu trouves un vieux bon de commande au nom de la veuve : une paire de jumelles et une boîte de cartouches de .38."
+      }
+    ],
+    "se_peser_sur_la_bascule": [
+      {
+        "texte": "Tu montes sur la grande bascule à sacs de farine. L'aiguille s'arrête à cent soixante-dix livres. L'épicier note le chiffre, au cas où tu voudrais te vendre."
+      },
+      {
+        "texte": "L'épicier te pèse deux fois, fronce les sourcils, et retranche le poids de ton revolver « pour être honnête »."
+      },
+      {
+        "texte": "Les deux vieux du poêle parient un cent sur ton poids. Le gagnant empoche la mise… et l'épicier prélève sa commission.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "L'aiguille s'envole. L'épicier ricane : « Le poids des péchés, sans doute. Ou des balles que tu as dans les poches. »",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "se_rechauffer_au_poele": [
+      {
+        "texte": "Tu tends les mains vers le poêle ventru. Deux vieux qui jouent aux dames te font une place en grognant, sans quitter la partie des yeux.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Le poêle ronfle, la cafetière en fer-blanc chantonne. Un vieux te raconte que les O'Driscoll ont brûlé une ferme au nord la semaine passée.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Le magasin est fermé et le poêle éteint. Tu ne te réchauffes qu'à la buée de ton propre souffle sur la vitre.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "L'épicier te laisse cinq minutes, puis vient poser sur le poêle une pancarte : « CHALEUR RÉSERVÉE AUX CLIENTS ».",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 2
+        }
+      },
+      {
+        "texte": "Les vieux du poêle se taisent d'un coup en te reconnaissant. L'un d'eux replie son journal, où ta tête est imprimée en page trois.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ]
+  }
+}

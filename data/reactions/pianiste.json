@@ -1,0 +1,1017 @@
+{
+  "id": "pianiste",
+  "description": "Un homme maigre en redingote élimée, lavallière de soie défraîchie et col autrefois blanc. Ses longues mains d'araignée courent sur le clavier pendant qu'un verre de whisky tremble sur le couvercle du piano. Ses yeux noirs regardent toujours ailleurs, vers le sud.",
+  "personnalite": "Mélancolique, doux et rêveur. Théophile Arceneaux, dit Théo, a appris le piano dans les salons de La Nouvelle-Orléans et joue Gottschalk à des vachers qui réclament « Camptown Races ». Il accepte toutes les demandes contre un pourboire. Juste au premier verre, inspiré au deuxième, faux à partir du troisième. Il a fui le sud en laissant une dette de jeu et redoute qu'on le retrouve.",
+  "repliques": [
+    "*plaque un accord mineur et soupire*",
+    "Une demande, cher ? Pour un dollar, je joue même « Oh! Susanna ».",
+    "À La Nouvelle-Orléans, on écoutait la musique. Ici, on la boit.",
+    "*joue une valse en ratant une note sur trois*",
+    "Ce piano a reçu plus de balles que certains soldats.",
+    "Encore un verre et je vous joue Chopin comme personne. Personne ne l'a jamais joué comme ça, en tout cas.",
+    "Le chat est mon meilleur public : il ne réclame jamais « Camptown Races ».",
+    "Un jour, je prendrai le train du sud. Un jour."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 2,
+      "lieu": "saloon_keane",
+      "activite": "joue les derniers airs pour les ivrognes, de plus en plus faux"
+    },
+    {
+      "de": 2,
+      "a": 11,
+      "lieu": "pension",
+      "activite": "dort tout habillé dans sa chambre de la pension"
+    },
+    {
+      "de": 11,
+      "a": 12,
+      "lieu": "pension",
+      "activite": "se rase, boit un café noir et soigne sa migraine"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "gare",
+      "activite": "poste une lettre pour La Nouvelle-Orléans et regarde partir le train"
+    },
+    {
+      "de": 13,
+      "a": 14,
+      "lieu": "eglise",
+      "activite": "écoute le pasteur répéter les cantiques, assis au dernier rang"
+    },
+    {
+      "de": 14,
+      "a": 17,
+      "lieu": "saloon_keane",
+      "activite": "répète au piano dans la salle presque vide, à jeun"
+    },
+    {
+      "de": 17,
+      "a": 24,
+      "lieu": "saloon_keane",
+      "activite": "joue pour la soirée, un verre posé sur le piano"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il continue de jouer sans regarder ses mains : « Tu connais La Nouvelle-Orléans, cher ? Les balcons en fer forgé, l'odeur du fleuve… Ici, ça sent la vache. Même le piano sent la vache. »"
+      },
+      {
+        "texte": "Il fait tourner son verre vide sur le couvercle du piano : « On me demande Camptown Races vingt fois par soir. J'ai étudié avec un élève de Gottschalk, tu sais. Gottschalk ! Personne ici ne sait qui c'est. »"
+      },
+      {
+        "texte": "Il a les yeux brillants et l'haleine chargée de bourbon : « Je vais te dire un secret… La danseuse veut partir à Saint Denis. Moi aussi, je veux partir. Tout le monde veut partir d'ici, sauf les morts et le shérif. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il répète une gamme, lentement, à jeun, et chaque note tombe juste : « Le matin, je joue pour moi. Le soir, je joue pour eux. Ce n'est pas le même piano. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il baisse la voix : « J'ai quitté La Nouvelle-Orléans en laissant une dette chez un homme qui ne pardonne pas. Si un étranger en costume du sud demande un pianiste… tu ne m'as jamais vu. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te glisse un regard sans s'arrêter de jouer : « Ne t'en fais pas, cher. Moi aussi, j'ai quitté une ville en courant. Je ne juge pas les gens sur leur affiche. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Ses mains se crispent et un accord dissonant s'échappe du piano : « Je ne fais que jouer, monsieur. Je ne vois rien, je n'entends rien, je ne sais rien. »",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il te salue d'un arpège joyeux, sans lever les mains du clavier, et incline la tête comme devant le public de l'Opéra français."
+      },
+      {
+        "texte": "Il soulève un chapeau melon cabossé : « Bonsoir, cher. Ou bonjour. Ici, les heures se ressemblent toutes. »"
+      },
+      {
+        "texte": "Il lève son verre vers toi, en renverse la moitié sur les touches et salue avec un grand sourire flou : « À la tienne ! À la mienne ! À tout le monde ! »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Dès qu'il te voit, il enchaîne les premières mesures de l'air que tu lui as demandé la dernière fois, avec un clin d'œil.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Ses doigts se figent sur les touches. Il te rend un signe de tête minuscule, puis se remet à jouer, plus vite, sans plus te regarder.",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Tu lui cries de jouer quelque chose de moins triste. Il te répond par une marche funèbre, parfaitement exécutée, en te regardant droit dans les yeux.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu te moques de sa redingote râpée. Il lisse ses revers avec dignité : « Ce vêtement a assisté à des bals où l'on ne t'aurait pas laissé tenir les chevaux. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lui dis qu'il joue comme un manchot. Il se lève, chancelle et lance d'une voix pâteuse : « Monsieur, vous m'insultez, et je… » Puis il se rassoit et reprend sa valse, encore plus faux.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il se tasse sur son tabouret et joue plus bas, presque pour lui seul. Le barman te fait signe de laisser le pianiste tranquille.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il rit et te répond par une parodie de toi en musique : trois notes lourdes qui titubent, comme un homme botté qui entre au saloon. La salle éclate de rire.",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu te penches au-dessus du piano. Il s'arrête net, les doigts suspendus : « Je n'ai rien, cher, que des partitions et des dettes. Prends les partitions, si tu veux. »",
+        "effets": {
+          "relation": -2,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il blêmit et se met à jouer plus fort, comme si la musique pouvait le protéger. Une fausse note, puis deux, puis une débâcle complète.",
+        "effets": {
+          "relation": -1,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Trop ivre pour avoir peur, il te regarde avec un sourire vague : « Tu me rappelles un homme de La Nouvelle-Orléans. Lui aussi croyait que les menaces faisaient de la musique. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il croit que tu viens pour lui, envoyé par quelqu'un du sud. Il te jure qu'il remboursera, qu'il lui faut juste un mois, juste un petit mois…",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -2,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il te dévisage, surpris, puis secoue la tête : « On m'avait dit que tu étais un homme bien. Les gens disent n'importe quoi. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "À la vue de {outil}, il lève les mains au-dessus du clavier, comme on protège ce qu'on a de plus précieux : « Pas les mains, cher. Prends tout, mais pas les mains. »",
+        "effets": {
+          "prime": 5,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il ne bouge pas. Il continue de jouer, très doucement, les yeux sur {outil} : « Si je dois mourir, autant que ce soit sur une valse. »",
+        "effets": {
+          "prime": 5,
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Le barman crie, le chat bondit sous une table et quelqu'un file chercher le shérif à côté. Le pianiste, lui, a disparu derrière son piano.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il vide son verre d'un trait, en tremblant : « Au moins, laisse-moi finir mon verre… Voilà. Maintenant je suis prêt. Presque. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -2,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te regarde longtemps, blessé : « Toi aussi ? » Puis il referme le couvercle du piano, très lentement. Tu viens de perdre un ami.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -4
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing l'envoie rouler du tabouret. Il atterrit sur le plancher en serrant ses mains contre sa poitrine plutôt que de protéger son visage.",
+        "effets": {
+          "prime": 5,
+          "honneur": -2,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il encaisse sans riposter, se relève et ramasse sa partition : « J'ai connu pire à La Nouvelle-Orléans, cher. Là-bas, au moins, on frappait en rythme. »",
+        "effets": {
+          "prime": 5,
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il s'écroule sur le clavier dans un accord épouvantable. Le barman bondit : « Pas le pianiste ! » et la moitié de la salle te tombe dessus.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -2,
+          "sante": -15,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il avait vu venir le coup : il te balance son tabouret dans les jambes et file vers l'escalier.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "prime": 5,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Un coup sec, et il s'effondre sur le clavier, qui rend un accord grave et lugubre. Rien n'a jamais autant ressemblé à une fin de morceau.",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il s'affaisse sans résistance, comme un homme qui attendait ça depuis longtemps. Sa flasque roule de sa poche et se vide sur le plancher.",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il somnolait déjà sur son tabouret : une petite tape suffit. La salle croit qu'il a simplement trop bu, et personne ne bronche.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -2,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il se jette sous le piano et ton coup frappe le couvercle de plein fouet. Le temps de secouer ta main, il a filé par l'escalier.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "prime": 5,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu te jettes sur lui avec {outil}. Il lève les bras pour protéger son visage et s'écroule contre le piano en gémissant : « Mes mains… mes mains… »",
+        "effets": {
+          "prime": 30,
+          "honneur": -4,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Il tombe sans un cri sur le clavier. Le dernier accord résonne longtemps dans le saloon silencieux, puis plus rien. Quelqu'un ôte son chapeau.",
+        "effets": {
+          "prime": 100,
+          "honneur": -5,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Trop ivre pour comprendre, il t'esquive par hasard en tombant de son tabouret, rampe sous les tables et disparaît par la porte battante dans la nuit.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 20,
+          "honneur": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Avant que tu l'atteignes, le barman épaule son fusil à deux coups et tire au-dessus de ta tête ; des éclats de plâtre te lacèrent la joue. Le pianiste en profite pour fuir à l'étage.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": -10,
+          "prime": 20,
+          "honneur": -3,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Le coup de feu claque. Il s'effondre sur le clavier, juste sous l'écriteau « Prière de ne pas tirer sur le pianiste, il fait de son mieux ». Plus personne ne rira jamais de cette pancarte.",
+        "effets": {
+          "prime": 125,
+          "honneur": -5,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Ta balle l'atteint à l'épaule. Il tombe du tabouret, se traîne derrière le piano et sanglote : « J'ai juste joué un peu faux… »",
+        "effets": {
+          "prime": 50,
+          "honneur": -4,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Tu le rates : la balle se loge dans le bois du piano, à côté des vieux impacts. Il plonge sous le clavier, puis file par la porte de derrière.",
+        "effets": {
+          "prime": 25,
+          "honneur": -3,
+          "relation": -4,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Dans la fumée du saloon, la détonation arrête net la valse. Le pianiste reste figé, intact : ta balle a fauché le verre posé sur le piano. Il le regarde, puis toi : « C'était mon quatrième… »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 15,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il a tiré un petit derringer de son gilet, souvenir des tripots du sud. Vous faites feu ensemble : sa balle te frôle le bras, la tienne le jette sur le clavier.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -15,
+          "prime": 50,
+          "honneur": -2,
+          "etat": "mort"
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} vers lui. Il plonge derrière le piano, et c'est la caisse qui encaisse dans un grand BOÂÂNG désaccordé.",
+        "effets": {
+          "prime": 5,
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Le projectile l'atteint à la tempe. Il glisse de son tabouret et reste assis par terre, hébété, en fredonnant un air de carnaval.",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Tu lances {outil} ; il le reçoit dans le dos sans même s'arrêter de jouer. Trop ivre pour sentir quoi que ce soit, il se retourne, sourit et salue comme sous les applaudissements.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il l'attrape d'une main sans quitter le clavier de l'autre et continue sa mélodie : « Un pianiste a toujours une main libre, cher. Mais ce n'est pas très gentil. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Ta corde se referme sur lui et l'arrache à son tabouret. Il traverse la moitié du saloon sur le dos, en serrant sa partition contre son cœur.",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Le nœud tombe autour de lui… et du piano. Tu tires, et c'est tout l'instrument qui avance d'un pied en grinçant. Il se dégage pendant que la salle hurle de rire.",
+        "effets": {
+          "prime": 5,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Trop ivre pour réagir, il se laisse prendre avec un sourire niais : « Ah, on danse ? » Il te suit au bout de la corde comme un veau au marché.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -1,
+          "etat": "ligote"
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu lui attaches les poignets. Il te supplie de ne pas trop serrer : « Les mains, cher. Ce sont mes seuls biens. »",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Il se laisse faire, résigné, et fredonne un blues du fleuve pendant que tu serres les nœuds.",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -2,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Tu le ligotes dans un coin de la réserve. Avant que tu le bâillonnes, il demande poliment : « Tu pourrais laisser mon verre à portée ? Merci. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -2,
+          "etat": "ligote"
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu fouilles ses poches : un mouchoir de soie, une partition pliée, une flasque vide. Il n'a pas d'arme, seulement des souvenirs.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Ta main trouve un minuscule derringer à crosse de nacre caché dans son gilet. Il te le laisse prendre en soupirant : « Un cadeau d'adieu de La Nouvelle-Orléans. Je ne l'ai jamais utilisé. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il brandissait son tabouret au-dessus de sa tête. Tu le lui arraches des mains, et il reste planté là, les bras en l'air, tout étonné de son propre courage.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": -1,
+          "etat": "normal"
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il éclate d'un rire amer : « Un duel ? Avec ces mains-là ? Si je meurs, qui jouera Camptown Races à ces brutes ? » Il retourne à son clavier."
+      },
+      {
+        "texte": "Il se lève, très digne : « Soit. Je choisis les armes : le piano. » Il te désigne le tabouret. Toute la salle attend que tu joues.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Ivre, il accepte, se lève, fouille ses poches pour trouver une arme et n'en sort qu'une partition. Le barman le rassoit de force : « Assis, Théo. Tu mourras demain. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il blêmit : « Vous voulez tuer un pianiste ? Il y a un écriteau pour ça, juste au-dessus du piano. » Des murmures hostiles montent dans la salle.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2,
+          "honneur": -1
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Un homme maigre en redingote élimée, aux longues mains d'araignée. Il joue les yeux mi-clos, comme s'il voyait autre chose qu'un saloon plein de vachers."
+      },
+      {
+        "texte": "Au-dessus de lui, un écriteau peint à la main : « Prière de ne pas tirer sur le pianiste, il fait de son mieux. » Un impact de balle orne le mur juste à côté."
+      },
+      {
+        "texte": "Tu comptes ses verres : au premier, la valse est parfaite ; au deuxième, elle s'envole ; au troisième, elle déraille. Au quatrième, il joue un autre air que celui qu'il croit jouer.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "À jeun et seul, il joue une pièce lente que tu n'as jamais entendue, une musique de fleuve et de balcons. Il s'interrompt net dès que quelqu'un entre.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines ses longues mains sur le clavier. Il jette un œil : « Tu as oublié mon verre. Sans le verre, ce n'est pas moi. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il prend la pose, profil gauche, menton haut, comme pour une affiche de concert : « Le grand Théophile Arceneaux, de La Nouvelle-Orléans. » Tu ajoutes la pancarte au-dessus, par malice."
+      },
+      {
+        "texte": "Il s'endort pendant que tu dessines, la joue sur les touches. Dans {outil}, ton croquis devient celui d'un homme qui rêve de partir.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il s'arrête de jouer, ajuste sa lavallière et se fige. Le flash éclate : « Envoie le tirage à ma mère, rue de Chartres. Non… ne l'envoie pas. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il se détourne vivement et cache son visage derrière sa partition : « Pas de photographie, cher. Il y a des gens dans le sud qui paieraient cher pour savoir où je suis. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il refuse de poser seul et attire le gros chat roux sur ses genoux. Sur la plaque, il y aura un homme triste et un chat très satisfait.",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Le flash le surprend en pleine fausse note : il sursaute et ses partitions s'envolent. « Tu viens de photographier ma pire mesure. »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu le charges sur ton épaule ; il est léger comme une partition. Il proteste mollement : « Repose-moi, cher, je suis au milieu d'un nocturne. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il s'est endormi sur le clavier. Tu le charges sur ton épaule et le ramènes à la pension, où la logeuse te remercie d'un hochement de tête. Il ronfle en mesure.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 2,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Il se débat et te mord l'oreille. Tu le lâches sur le plancher sous les rires de la salle, pendant qu'il rajuste sa lavallière avec dignité.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "relation": -1
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu le suis jusqu'à la gare. Il poste une lettre pour La Nouvelle-Orléans, puis regarde partir le train jusqu'à ce que la fumée disparaisse."
+      },
+      {
+        "texte": "Il se glisse dans l'église et s'assoit au dernier rang pendant que le pasteur fait répéter les cantiques. Il bat la mesure du bout des doigts, les yeux fermés.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "À la fermeture, il titube vers la pension en fredonnant. Il s'arrête devant le panneau des avis de recherche, scrute chaque visage avec inquiétude, puis repart, soulagé.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il se retourne soudain : « Tu me suis, cher ? Si c'est quelqu'un du sud qui t'envoie, dis-lui que j'ai presque l'argent. Presque. »",
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il prend {outil} avec délicatesse, comme une partition rare : « Pour moi, cher ? Personne ne m'a rien offert depuis La Nouvelle-Orléans. »",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il pose {outil} sur le piano, à côté de son verre : « Je vais en faire quoi ? Le jouer en la mineur ? » Il rit tout seul, touché malgré lui.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il contemple longtemps {outil}, les yeux humides d'alcool, puis le glisse dans la poche de sa redingote : « Je le vendrai pour un billet de train. Un jour. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il retire ses mains du clavier comme si {outil} brûlait : « Je ne prends rien des gens comme toi. Ça finit toujours en dette. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "demander_morceau": [
+      {
+        "texte": "« Une demande ? Avec plaisir. » Il attaque « Camptown Races » avec une énergie désespérée. Les vachers tapent du pied et le plancher tremble."
+      },
+      {
+        "texte": "Il réfléchit, puis joue « Beautiful Dreamer » si doucement que tout le saloon baisse la voix. Même le joueur de poker oublie de tricher pendant un couplet.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il joue ton morceau… ou essaie : après trois verres, la mélodie part d'un côté et la main gauche de l'autre. Il termine fièrement, persuadé d'avoir été brillant.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "À jeun, il te joue « La Bamboula » de Gottschalk, une danse de La Nouvelle-Orléans. Pendant trois minutes, le saloon de Keane devient un bal créole.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il n'attend même pas la fin de ta phrase : il connaît ton air. Il le joue avec des variations que tu n'avais jamais entendues, rien que pour toi.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il hoche poliment la tête… et joue une marche funèbre, très lente, en te fixant dans le miroir du bar.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il sourit et attaque un rag tout neuf venu de Sedalia, qui fait danser les pieds malgré eux : « Pour toi, cher, la musique de demain. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "glisser_pourboire": [
+      {
+        "texte": "Ta pièce tinte au fond du bocal posé sur le piano. Il te remercie d'un trille élégant et d'un clin d'œil.",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il regarde la pièce, la mord, puis la glisse dans son gilet : « Encore quatre-vingt-dix-neuf comme ça et j'ai mon billet pour le sud. »",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il prend ta pièce, fait signe au barman et la transforme aussitôt en whisky. La musique s'en ressent immédiatement.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il repousse la pièce : « Garde-la, cher. Tu es le seul ici qui écoute vraiment. » Puis il la prend quand même, avec un sourire gêné.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il fixe la pièce sans la toucher, comme si elle pouvait mordre : « Merci… » Elle reste au fond du bocal toute la soirée.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      }
+    ],
+    "payer_un_verre": [
+      {
+        "texte": "Il accepte avec un sourire las : « Au premier verre, je joue juste. » Il vide le whisky et attaque une valse impeccable.",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« À la santé de La Nouvelle-Orléans ! » Il trinque, boit, et ses doigts s'envolent : le deuxième verre, c'est celui de l'inspiration.",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "C'est son troisième. Ou son cinquième. Il trinque avec le vide, boit, et entame « Dixie » en croyant jouer du Chopin. Le barman te lance un regard noir.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il regarde le soleil par la fenêtre : « Avant le soir, je ne… bon, d'accord. Un seul. Pour la gorge. » Il en réclame un deuxième dix minutes plus tard.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il lève son verre vers toi, les yeux mouillés : « À la seule personne de Valentine qui me paie à boire sans réclamer Camptown Races. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il hésite, puis prend le verre parce qu'il n'a pas les moyens de refuser un whisky. Il boit sans trinquer.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      }
+    ],
+    "chanter_accompagne": [
+      {
+        "texte": "Il trouve ta tonalité en deux notes et t'accompagne de bonne grâce. Ta voix éraillée sur « Oh! Susanna » fait rire la salle, mais elle rit avec toi.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu chantes faux ; il joue faux exprès pour que ça s'entende moins. À vous deux, vous inventez une musique que personne n'avait jamais entendue.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Toute la salle reprend le refrain avec toi, verres levés. Une femme en robe à volants se penche à la rambarde de l'escalier pour voir qui chante. Pour une nuit, le saloon de Keane a sa vedette.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu entonnes une vieille complainte de soldat. Près de la porte, un vétéran sur une seule jambe ôte son chapeau. Le pianiste a les larmes aux yeux en plaquant le dernier accord.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il t'accompagne, mais personne ne reprend le refrain : les clients regardent leurs verres. Quand tu te tais, pas un n'applaudit.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "jouer_a_quatre_mains": [
+      {
+        "texte": "Il se pousse sur le tabouret : « La main gauche est à toi, cher. Fais boum-tchak, boum-tchak, je m'occupe du reste. » Votre polka bancale fait danser deux vachers.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tes doigts trébuchent sur les touches jaunies. Il te souffle les accords un à un, patient comme un maître de solfège, et finit par te féliciter avec un mensonge charmant.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Vous êtes aussi ivres l'un que l'autre. Le résultat est si épouvantable que le chat du saloon quitte la pièce et que quelqu'un, à l'étage, tape du talon sur le plancher.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Vous jouez Camptown Races à toute allure en vous bousculant les coudes. La salle tape dans ses mains, une pluie de pièces tombe dans le bocal, et il partage avec toi.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 2,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il se lève dès que tu t'assois : « Le tabouret est à toi. » Il va boire au comptoir et te laisse seul face au piano et à la salle qui attend.",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "offrir_un_verre": [
+      {
+        "texte": "Il accepte le verre avec une révérence de salon : « Un gentleman ! Ici ! » Il le pose sur le couvercle du piano, où il tremblera à chaque accord.",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il trinque, ferme les yeux, et l'espace d'une gorgée il est ailleurs : « Ça a le goût du port, le soir, quand les bateaux à aubes s'allument. »",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il a déjà trois verres alignés sur le piano. Il ajoute le tien au bout de la rangée, comme une note de plus, et attaque une valse qui boite.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il lève le verre et joue de la main gauche une petite fanfare en ton honneur : « Pour toi, cher, la prochaine chanson sera juste. Promis. » Elle ne l'est pas.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il prend le verre, regarde ton visage, puis l'affiche par la fenêtre, et trinque quand même : « Aux gens qu'on cherche. Et à ceux qu'on ne trouve jamais. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      }
+    ]
+  }
+}

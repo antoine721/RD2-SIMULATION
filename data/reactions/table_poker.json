@@ -1,0 +1,428 @@
+{
+  "id": "table_poker",
+  "description": "Une table ronde en chêne tendue d'un feutre vert râpé, constellé de brûlures de cigare et de ronds de whisky. Au centre, un pot de jetons d'os et de nacre ; autour, cinq chaises dépareillées, une lampe à pétrole suspendue et un crachoir de cuivre.",
+  "repliques": [
+    "Les jetons cliquettent.",
+    "Une carte glisse sur le feutre.",
+    "« Je relance de cinq. »"
+  ],
+  "reactions": {
+    "jouer_table": [
+      {
+        "texte": "Tu t'assois face au joueur en gilet de brocart. Il te distribue avec un sourire de croque-mort ; une heure plus tard, tu te lèves plus pauvre de quinze dollars.",
+        "effets": {
+          "argent": -15
+        }
+      },
+      {
+        "texte": "La chance te sourit trois mains d'affilée. Au quatrième pot, le professionnel tire sur sa manche gauche et la chance change de camp. Tu te lèves sagement, cinq dollars en poche.",
+        "effets": {
+          "argent": 5
+        }
+      },
+      {
+        "texte": "La partie dure jusqu'à trois heures du matin, entre un fermier qui joue l'argent de sa traite et un vacher qui bluffe à chaque main. Tu ramasses un joli pot sous l'œil noir du professionnel.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 20
+        }
+      },
+      {
+        "texte": "Le matin, la table est vide ; seul le gros chat roux dort sur le feutre, roulé en boule sur le pot. Il ouvre un œil, l'air de dire : « Reviens ce soir. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu triches maladroitement et un as tombe de ta botte. Le professionnel, impassible, te le rend : « Tu as perdu ça, l'ami. Amateur. » Toute la table se lève contre toi.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -10,
+          "sante": -10,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Un joueur reconnaît ton visage, celui de l'affiche, et pose ses cartes : « Je ne joue pas avec un homme recherché. » Les autres se lèvent un à un, et la table se vide.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Tu joues honnêtement, et ça se voit : le fermier se détend, rit pour la première fois de la soirée, et vous gagnez chacun quelques dollars sur le professionnel.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 8
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Le feutre vert est usé jusqu'à la trame à la place du donneur, là où le même homme bat les cartes chaque soir depuis des mois."
+      },
+      {
+        "texte": "Les jetons s'empilent devant le joueur en gilet de brocart comme les dossiers sur le bureau d'un banquier. Devant les autres, ils fondent comme neige au soleil.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Sous le rebord, côté donneur, une petite pince de laiton est vissée dans le bois : exactement de la taille d'une carte à jouer."
+      },
+      {
+        "texte": "Vide, la table garde les traces de la nuit : une carte cornée sous une chaise, un cigare éteint, et le gros chat roux endormi sur le pot.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Une inscription gravée au couteau dans le bois du rebord : « J.D. a perdu son ranch ici, 1897. » Quelqu'un a ajouté en dessous : « Et moi mon cheval. »"
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines la table vue d'en haut dans {outil} : les mains des joueurs, les piles de jetons, et le cercle de lumière de la lampe qui les enferme comme une arène."
+      },
+      {
+        "texte": "Tu croques la partie en cours. Le joueur en gilet de brocart remarque ton crayon et te prie, très aimablement, de ne pas dessiner ses mains.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu dessines la table vide, ses chaises renversées et le chat endormi au milieu. On dirait un champ de bataille au lendemain de la retraite.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le feutre râpé, les brûlures de cigare, le pot de jetons : tu remplis une page entière. Le barman vient jeter un œil : « Tu fais le portrait des meubles, toi ? »"
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "L'éclair de magnésium fige la scène : cinq joueurs, une fortune en jetons, et une carte qui, sur la plaque, dépasse nettement d'une manchette."
+      },
+      {
+        "texte": "Les joueurs protestent, éblouis par l'éclair : « Hé ! Ma femme me croit à la réunion de tempérance du pasteur ! » Un vacher cache son visage derrière ses cartes.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu photographies avec {outil} la table vide, ses chaises renversées et ses cartes éparses, sous la lumière poussiéreuse qui tombe des fenêtres.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le joueur professionnel se lève et se place devant l'objectif : « Pas de photographies pendant la partie. Règle de la maison. » Le barman, lui, n'a jamais entendu parler de cette règle."
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle traverse le plateau et fait exploser le pot : jetons et cartes volent dans toute la salle. Les joueurs se jettent au sol, et certains en profitent pour se remplir les poches.",
+        "effets": {
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "La balle ricoche sur un pied de la table et va se ficher dans une poutre. Une pluie de poussière retombe sur les cartes ; personne n'ose plus bouger.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu vides ton barillet sur la table : le chêne éclate, le feutre s'enflamme sous la lampe et le barman se jette dessus avec un torchon. Il ne reste qu'un tas de planches fumantes.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 15,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "La détonation fait accourir l'adjoint du shérif, qui dégaine à l'instant même où il franchit la porte : « Lâche ça ! »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Tu tires sur le pot pour rire ; un jeton d'os éclate et un éclat entaille la joue du fermier. La table entière te tombe dessus.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 10,
+          "sante": -10
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} au milieu des cartes. Les jetons s'éparpillent et les joueurs te fusillent du regard : « On joue, l'ami. Va faire le malin ailleurs. »"
+      },
+      {
+        "texte": "Ton projectile atterrit pile sur le pot. Le joueur professionnel le ramasse d'un geste nonchalant et l'ajoute à ses gains : « Merci pour la mise. »"
+      },
+      {
+        "texte": "La lampe au-dessus de la table vacille quand {outil} la frôle ; tout le monde retient son souffle, puis la partie reprend comme si de rien n'était.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Sur la table vide, {outil} glisse sur le feutre et réveille le gros chat roux, qui saute au sol avec un regard de profond mépris.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "detruire": [
+      {
+        "texte": "Tu arraches un pied de la table à coups de botte. Elle s'effondre dans un fracas de jetons ; le barman lève les bras au ciel : « Trente dollars de chêne ! »",
+        "effets": {
+          "prime": 5,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Tu fracasses la table en pleine partie. Les joueurs, furieux d'avoir perdu le pot, se jettent sur toi, et la bagarre qui suit coûte trois chaises de plus.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -15,
+          "prime": 10,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Elle est plus solide qu'elle n'en a l'air : du chêne de Pennsylvanie. Tu te démets presque l'épaule, et elle tient toujours debout.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Le plateau se fend et révèle un tiroir caché côté donneur, plein de cartes marquées. Toutes les têtes se tournent vers le joueur en gilet de brocart, qui recule vers la porte.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1,
+          "etat": "detruit"
+        }
+      }
+    ],
+    "faire_sauter": [
+      {
+        "texte": "Tu glisses {outil} sous la table et allumes la mèche. L'explosion fait voler le chêne, les jetons et les vitres du saloon ; une pluie de cartes retombe sur la rue principale comme de la neige.",
+        "effets": {
+          "honneur": -3,
+          "prime": 50,
+          "sante": -10,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "Tu allumes {outil} ; quelqu'un hurle « Dynamite ! » et le saloon se vide en un clin d'œil. De la table, il ne reste qu'un cratère dans le plancher et une odeur de feutre brûlé.",
+        "effets": {
+          "honneur": -2,
+          "prime": 40,
+          "etat": "detruit"
+        }
+      },
+      {
+        "texte": "La mèche grésille... et s'éteint, noyée par une bière renversée dans la panique. Le joueur professionnel s'éponge le front : « Même la dynamite ne veut pas de ma table. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -1,
+          "prime": 20
+        }
+      },
+      {
+        "texte": "L'explosion arrache la table et la moitié du comptoir. Le shérif Malloy accourt, la chemise à moitié boutonnée, et ta prime grimpe d'un coup.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "honneur": -3,
+          "prime": 75,
+          "sante": -10,
+          "etat": "detruit"
+        }
+      }
+    ],
+    "parier_sur_la_partie": [
+      {
+        "texte": "Tu paries cinq dollars sur le fermier. Il abat une paire de huit contre un full ; le professionnel ramasse le pot et te fait un clin d'œil. Tu as misé sur le mauvais cheval.",
+        "effets": {
+          "argent": -5
+        }
+      },
+      {
+        "texte": "Tu paries contre le joueur en gilet de brocart. Le gros chat roux saute sur la table au pire moment, griffe sa manche, et un as en tombe. La main est annulée et ton pari te revient doublé.",
+        "effets": {
+          "argent": 10
+        }
+      },
+      {
+        "texte": "Les paris montent autour de la table, la fumée aussi. Ton homme, un vieux vacher, abat quatre rois. Tu empoches quinze dollars et une tape dans le dos.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 15
+        }
+      },
+      {
+        "texte": "Tu paries sur le professionnel et lui fais un signe discret ; il gagne, évidemment. Le fermier ruiné sort en titubant sous la pluie.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Pas de partie en plein jour : seul le barman, accoudé, te propose de parier sur le temps que mettra le chat à se réveiller. Tu perds un dollar.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Un parieur te reconnaît : « Dix dollars que tu finis pendu avant Noël ! » Il trouve preneur à la table voisine, et tout le monde rit sauf toi.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "rafler_le_pot": [
+      {
+        "texte": "Tu ramasses le pot à pleines mains et fonces vers la porte. Les joueurs, stupéfaits, mettent une seconde de trop à réagir.",
+        "effets": {
+          "argent": 45,
+          "honneur": -2,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Le joueur professionnel est plus vif : son derringer est déjà pointé sur toi. « Repose ça. Lentement. Ce pot est à moi, je l'ai volé honnêtement. »"
+      },
+      {
+        "texte": "Tu balaies les jetons dans ton chapeau, mais ce ne sont que des jetons d'os : sans la caisse du barman, ils ne valent rien. La salle se jette sur toi.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -15,
+          "honneur": -1,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Tu rafles le pot... et le rends au fermier que le tricheur plumait depuis le début de la soirée. Le professionnel n'ose pas protester.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le pot sous le bras, tu enjambes la table ; à la porte, l'adjoint te met en joue et tire avant même de finir son « Halte ! ».",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 30,
+          "honneur": -2,
+          "prime": 15,
+          "sante": -20
+        }
+      }
+    ],
+    "inspecter_le_paquet": [
+      {
+        "texte": "En regardant le dos des cartes à contre-jour, tu remarques de minuscules points d'aiguille dans les volutes du motif : les as et les rois sont marqués."
+      },
+      {
+        "texte": "Tu comptes les cartes : cinquante-trois. Une dame de cœur en trop, presque neuve. Quelqu'un la fait voyager dans sa manche."
+      },
+      {
+        "texte": "Les bords des figures sont légèrement biseautés : pincées entre deux doigts, elles dépassent du paquet d'un cheveu. Du travail d'artiste."
+      },
+      {
+        "texte": "Le joueur professionnel te regarde manipuler son paquet sans cesser de sourire, mais sa main droite a disparu sous la table.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le barman te laisse examiner le paquet du matin : des cartes neuves, propres, honnêtes. « Le tricheur apporte les siennes le soir », murmure-t-il.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "renverser_table": [
+      {
+        "texte": "Tu renverses la table d'un coup d'épaule : jetons, cartes et verres volent dans toute la salle. Le pianiste s'arrête, puis reprend plus fort, et plus faux.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "La table bascule en pleine partie, et la bagarre éclate aussitôt : un vacher frappe un fermier, qui frappe le professionnel, qui frappe... toi.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -10,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "En retombant, la table dévoile son secret : une pince de laiton vissée sous le plateau, côté donneur, avec deux as dedans. La salle se tourne lentement vers le joueur en brocart.",
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Le vacarme fait accourir l'adjoint du shérif, revolver au poing : « Qui a fait ça ? » Tous les doigts se tendent vers toi.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10
+        }
+      },
+      {
+        "texte": "La table vide bascule avec fracas, et le gros chat roux qui dormait dessus atterrit sur ses pattes en crachant comme une bouilloire.",
+        "si": [
+          "jour"
+        ]
+      }
+    ]
+  }
+}

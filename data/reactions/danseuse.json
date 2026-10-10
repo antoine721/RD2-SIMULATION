@@ -1,0 +1,1299 @@
+{
+  "id": "danseuse",
+  "description": "Une jeune femme en robe de satin rouge fané, des plumes piquées dans ses cheveux châtains relevés, les bas reprisés à la cheville. Son sourire de scène tient bon, mais ses yeux, eux, comptent les heures et les pièces.",
+  "personnalite": "Maligne, lucide, lasse et drôle. Sur scène, c'est Miss Rose ; en vrai, c'est Nell Harper, fille de fermier du Kansas. Elle sourit pour dix cents le verre, cache ses économies sous une latte de plancher pour fuir à Saint Denis et voit clair dans le jeu des hommes, à commencer par celui du joueur de poker. Fière : elle déteste la pitié, et plus encore qu'on la touche sans y être invité.",
+  "repliques": [
+    "Encore un verre, cow-boy ? Moi, je prends du thé froid, mais tu le paies au prix du whisky.",
+    "Trois ans que je danse sur ce plancher. J'en connais chaque clou.",
+    "À Saint Denis, il y a des théâtres avec des lustres en cristal. Ici, il y a des crachoirs.",
+    "*masse discrètement sa cheville sous la table*",
+    "Le pianiste a bu : ce soir, on valse sur une polka.",
+    "Garde tes mains sur ton verre, l'ami, et on restera bons amis.",
+    "*glisse une pièce dans sa bottine en comptant tout bas*",
+    "Ne joue pas contre Lucius. Ou alors, regarde ses manches, pas ses yeux.",
+    "Sultan ! Viens là, mon gros. Toi, au moins, tu ne me marches pas sur les pieds.",
+    "Encore vingt-deux dollars, et je prends le train de l'est."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 3,
+      "lieu": "saloon_keane",
+      "activite": "danse sur la petite scène et fait commander des verres jusqu'à la fermeture"
+    },
+    {
+      "de": 3,
+      "a": 11,
+      "lieu": "pension",
+      "activite": "dort dans sa chambre, ses économies cachées sous une latte du plancher"
+    },
+    {
+      "de": 11,
+      "a": 12,
+      "lieu": "pension",
+      "activite": "avale une soupe et recompte ses dollars dans une boîte à biscuits"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "magasin_general",
+      "activite": "feuillette le catalogue de mode de Saint Denis sans rien acheter"
+    },
+    {
+      "de": 13,
+      "a": 14,
+      "lieu": "gare",
+      "activite": "demande au guichet le prix du billet pour Saint Denis, comme chaque jour"
+    },
+    {
+      "de": 14,
+      "a": 16,
+      "lieu": "pension",
+      "activite": "raccommode ses bas et répète ses pas devant un miroir fêlé"
+    },
+    {
+      "de": 16,
+      "a": 18,
+      "lieu": "saloon_keane",
+      "activite": "se maquille et recoud ses plumes dans la loge"
+    },
+    {
+      "de": 18,
+      "a": 24,
+      "lieu": "saloon_keane",
+      "activite": "danse, chante et tient compagnie aux clients du comptoir"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Elle s'accoude près de toi avec un sourire qui n'y croit pas : « Tu m'offres un verre ou tu me fais la conversation ? La conversation ne paie pas mon loyer. »"
+      },
+      {
+        "texte": "Elle crie par-dessus le piano : « Parle plus fort, chéri, ou attends que le pianiste reprenne son souffle ! » Puis, plus bas : « Ou qu'il soit trop saoul pour jouer. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Sans plumes ni fard, en simple robe de coton, elle a l'air de ce qu'elle est : une fille de fermier fatiguée. « Le jour, je ne suis pas Miss Rose. Le jour, je compte mes sous. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Elle baisse la voix : « Trente-huit dollars. C'est ce que j'ai sous ma latte de plancher. Encore vingt-deux et je suis à Saint Denis. Tu ne le répètes à personne, hein ? »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle jette un coup d'œil vers la porte : « Ton portrait traîne chez le télégraphiste, cow-boy. Moi, je n'ai rien vu, mais le barman a la langue bien pendue. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Elle garde son sourire, mais recule sa chaise d'un pouce : « On raconte des choses sur toi. Je souris à tout le monde, mais je ne m'assois pas avec tout le monde. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« C'est toi qui as aidé ce pauvre vieux dans la rue, non ? » Elle te détaille, surprise. « Un homme poli à Valentine. Je croyais que ça n'existait qu'à Saint Denis. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle se raidit et te désigne le comptoir du menton : « Va causer au barman. Moi, j'ai fini de te sourire, même pour dix cents. »",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Elle te fait une petite révérence de théâtre, la jupe pincée entre deux doigts : « Bienvenue chez Keane, étranger. Le whisky y est honnête. Les cartes, beaucoup moins. »"
+      },
+      {
+        "texte": "Croisée dans la rue, un panier au bras, elle te répond d'un hochement de tête pressé : « Pas en service, cow-boy. Repasse ce soir. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Elle lève son verre de thé froid dans ta direction et t'adresse un clin d'œil de métier, déjà tournée vers le client suivant.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "« Te revoilà ! » Elle te pince le bras comme une vieille amie. « Assieds-toi, j'ai les pieds en compote et toi, au moins, tu ne me demandes rien. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle regarde à travers toi comme à travers une vitre sale et continue de rajuster ses plumes.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Elle te répond d'un sourire de façade, le même qu'elle sert aux vachers ivres : poli, rapide, sans la moindre chaleur.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Elle te salue à peine, puis murmure en passant : « Baisse ton chapeau, idiot. Ton visage est sur l'affiche, juste devant la porte. »",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Tu te moques de ses plumes. Elle éclate de rire : « Mes plumes ont plus de classe que ton chapeau, et elles sentent moins le cheval. » Le comptoir rit avec elle."
+      },
+      {
+        "texte": "Tu lui lances qu'elle ne verra jamais Saint Denis. Son sourire se fige une seconde. « Peut-être. Mais toi, tu finiras au cimetière de Valentine, et le croque-mort t'a déjà mesuré. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu la siffles comme un chien. Toute la salle se tourne ; elle pose les poings sur les hanches : « Siffle encore, et le pianiste te jouera ta marche funèbre. » Les rires éclatent à tes dépens.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Elle saisit ton verre et te le jette au visage : « Tiens, celui-là, c'est la maison qui l'offre. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle hausse un sourcil : « Tu essaies de me vexer ? Tu t'y prends comme un manche. Viens, je vais t'apprendre à insulter quelqu'un avec style. »",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Elle t'observe un long moment, sans colère : « Ça ne te ressemble pas. Quelqu'un t'a fait boire le whisky du Smithfield's ? »",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu te dresses au-dessus d'elle. Elle ne recule pas d'un pouce : « J'ai vu des brutes plus larges que toi pleurer dans leur bière, cow-boy. Qu'est-ce que tu veux ? »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle blêmit, cherche le barman des yeux, puis lâche à voix basse : « D'accord, d'accord. Le joueur de poker garde un as dans sa manche gauche. C'est ça que tu voulais savoir ? »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Le pianiste s'arrête net. Dans le silence, elle te fixe : « Tout le saloon te regarde faire peur à une danseuse. Tu es fier de toi ? » Des chaises raclent le plancher.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Elle tire de ses cheveux une épingle à chapeau longue comme la main et la tient devant elle : « Approche encore, et tu repars avec un trou de plus. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle baisse les yeux, vaincue, et pose sur la table les pièces de sa soirée : « Prends ça et laisse-moi tranquille. » Ça ne fait même pas trois dollars.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 2,
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Elle te tapote la joue : « Tu fais les gros yeux à ton amie Rose, maintenant ? Garde ça pour les O'Driscoll. »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Tu lèves {outil} vers elle. Elle lève les mains, la mâchoire serrée : « Je ne suis qu'une danseuse, cow-boy. Si c'est la caisse que tu veux, elle est au comptoir. »",
+        "effets": {
+          "relation": -3,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Elle hurle et renverse un plateau de verres. En un instant, tout le saloon a les yeux sur toi et un gamin file chercher le shérif Malloy.",
+        "effets": {
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Elle recule jusqu'au piano, livide, sous le regard des clients figés : « Range {outil}, je t'en prie... Je n'ai rien fait. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Elle te regarde sans ciller : « Vas-y. Tu me rendrais service, je n'aurais plus jamais mal aux pieds. » Ses mains, elles, tremblent.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "« Encore un crime pour ton affiche ? » Elle glisse lentement vers la porte. « Malloy a déjà mis un prix sur ta tête, ne le fais pas monter. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Elle brise une bouteille sur le rebord du comptoir et pointe le tesson vers toi : « Une fille seule à Valentine sait se défendre, chéri. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -2,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Tu la frappes derrière la nuque. Elle s'effondre dans un froufrou de satin et de plumes ; au comptoir, un verre se brise.",
+        "effets": {
+          "honneur": -3,
+          "prime": 10,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Elle esquive au dernier moment en pivotant comme sur scène : ton poing fend l'air, et elle te fracasse une chope sur le crâne.",
+        "effets": {
+          "sante": -10,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Le coup la cueille au milieu d'un pas de danse. Elle tombe, la salle hurle, et trois vachers te tombent dessus avant que tu aies pu reculer.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -15,
+          "prime": 10,
+          "honneur": -3,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Dans la salle presque vide, elle s'écroule sans un cri. Seul le gros chat roux te regarde depuis le comptoir, la queue battante, comme un témoin qui n'oubliera pas.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -3,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Elle recule, trébuche sur sa traîne, et tu l'atteins au bras avec {outil}. Une tache sombre s'élargit sur le satin rouge ; elle te regarde sans comprendre.",
+        "effets": {
+          "honneur": -3,
+          "prime": 25,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Elle te jette son verre dans les yeux et s'enfuit vers l'escalier en relevant ses jupes. Autour de toi, les clients se lèvent, la main sur leurs armes.",
+        "effets": {
+          "sante": -2,
+          "honneur": -2,
+          "prime": 10,
+          "relation": -4,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Tu frappes sans hésiter. Elle s'effondre près de la scène et le piano se tait pour de bon. Les plumes de sa coiffe tournoient encore quand le barman crie au meurtre.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -5,
+          "prime": 100,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Avant que {outil} ne la touche, un cow-boy t'attrape le bras et te sonne d'un coup de crosse : « On ne touche pas à Miss Rose ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -20,
+          "honneur": -2,
+          "prime": 10,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Elle t'attendait : son épingle à chapeau se plante dans ta main. Tu manques de lâcher {outil}, et elle file par la porte de derrière.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -8,
+          "prime": 10,
+          "etat": "en_fuite"
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La détonation fait taire le piano. Elle s'affaisse contre le comptoir, une main sur l'épaule, plus étonnée que souffrante : « Pourquoi... ? »",
+        "effets": {
+          "honneur": -4,
+          "prime": 50,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Ta balle fracasse le miroir derrière elle. Elle plonge sous une table dans un nuage de plumes, puis s'enfuit à quatre pattes vers l'arrière-salle.",
+        "effets": {
+          "honneur": -2,
+          "prime": 25,
+          "relation": -4,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Elle tombe au milieu de la piste, et le silence qui suit est pire que la détonation. Quelqu'un murmure : « Elle voulait juste aller à Saint Denis. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -5,
+          "prime": 150,
+          "relation": -5,
+          "etat": "mort"
+        }
+      },
+      {
+        "texte": "Elle se jette derrière le piano ; aussitôt, un client dégaine et te loge une balle dans le flanc. Dans la fumée, tu la vois s'échapper par la porte de derrière.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -40,
+          "honneur": -3,
+          "prime": 50,
+          "relation": -5,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Le coup de feu fait accourir l'adjoint du shérif, ravi d'avoir enfin une raison de dégainer. Elle gémit sur le plancher, touchée à la jambe.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -15,
+          "honneur": -4,
+          "prime": 75,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Elle esquive d'un pas de danse et ton projectile va heurter le mur derrière elle. « Raté, cow-boy. Ici, on lance des pièces sur la scène, pas ça. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu lui lances {outil}. Elle se baisse ; derrière elle, une chope vole en éclats et un vacher se lève, trempé et furieux : « Qui a fait ça ? »",
+        "effets": {
+          "relation": -1,
+          "sante": -5,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Elle reçoit {outil} en pleine épaule et s'effondre sur la scène. La musique s'arrête ; tous les regards se tournent vers toi.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": -3,
+          "prime": 15,
+          "relation": -4,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "Elle esquive en riant malgré elle : « Si c'est ta façon de faire la cour, tu as des progrès à faire. Commence par un bouquet. »",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Elle s'en sert comme d'un signal : elle crie « À l'aide ! » et deux clients se lèvent déjà en retroussant leurs manches.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "prime": 5
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu lui lies les poignets avec {outil}. Elle se débat, te mord la main, puis crache : « Tu sais combien vaut une danseuse ligotée ? Rien. Personne ne paiera. »",
+        "effets": {
+          "sante": -2,
+          "honneur": -2,
+          "prime": 10,
+          "relation": -4,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "À peine as-tu sorti {outil} que la salle entière se lève. Un gros éleveur te barre la route : « Range cette corde, l'ami. Tout de suite. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Elle se laisse faire, trop lasse pour lutter, et te regarde avec un mépris tranquille : « Fais vite. Mon numéro commence dans une heure. »",
+        "effets": {
+          "honneur": -2,
+          "prime": 10,
+          "relation": -4,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "« C'est un jeu ? » Elle rit d'abord, puis croise ton regard. « Ce n'est pas un jeu. » Elle te gifle avant que tu aies serré le premier nœud.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "sante": -1,
+          "relation": -3
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Tu fais tournoyer {outil} au-dessus des tables et la boucle se referme sur elle. Elle tombe assise dans ses jupons, rouge de colère : « Je ne suis pas une génisse ! »",
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "relation": -3,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Elle se baisse et la boucle emporte à sa place le chapeau d'un client, qui ne trouve pas ça drôle du tout et te le fait savoir avec son poing.",
+        "effets": {
+          "sante": -5,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "La boucle l'attrape en pleine pirouette. La salle, ivre, éclate de rire et applaudit, croyant à un numéro. Elle, ne rit pas du tout.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2,
+          "etat": "ligote"
+        }
+      },
+      {
+        "texte": "Elle saisit la corde à deux mains, tire d'un coup sec, et c'est toi qui t'étales sur le plancher, sous les huées du comptoir.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu lui saisis le poignet. Elle n'a pour toute arme qu'une longue épingle à chapeau, que tu lui retires sans peine. « Garde-la. J'en ai d'autres. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu cherches une arme dans ses manches et son éventail : rien. « Tu cherchais un pistolet ? Ici, l'arme des filles, c'est le sourire, cow-boy. »"
+      },
+      {
+        "texte": "Elle brandit un tesson de bouteille ; tu lui tords le bras et le verre tombe. Elle se dégage en sifflant : « Tu me le paieras. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -3,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "« Me désarmer ? » Elle te tend son épingle à chapeau en riant. « Tiens, protège-toi avec. Je suis redoutable quand je m'y mets. »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu la croques dans {outil} pendant qu'elle danse : la jupe qui tourne, les plumes, et ce regard qui fixe la porte comme on fixe un quai de gare."
+      },
+      {
+        "texte": "Elle s'aperçoit que tu la dessines et vient voir par-dessus ton épaule : « Tu m'as fait le nez trop long. Mais les yeux... Oui, les yeux, c'est moi. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Assise près de la fenêtre, elle raccommode un bas en fredonnant. Tu dessines ses mains abîmées par l'aiguille ; elle ne s'en aperçoit pas.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Elle pose pour toi, le menton levé comme sur une affiche : « Écris en dessous : Miss Rose, à l'affiche à Saint Denis. Ça portera chance. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Elle rit avec les clients, mais ses yeux ne rient pas : à chaque verre commandé, tu la vois ajouter une pièce dans sa tête."
+      },
+      {
+        "texte": "Sur la petite scène, elle lève la jambe au rythme du piano, rattrape d'une pirouette une fausse note du pianiste et garde le sourire, comme si de rien n'était.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Au guichet de la gare, elle demande le prix du billet pour Saint Denis, compte ses pièces, les remet dans sa bourse et repart sans billet.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Elle surveille le joueur de poker du coin de l'œil et se touche la manche gauche chaque fois qu'il gagne, comme pour prévenir quelqu'un qui ne la regarde jamais."
+      },
+      {
+        "texte": "Entre deux danses, elle glisse en douce une miette de jambon au gros chat roux. Le chat, qui ne regarde personne, la regarde, elle."
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Elle se fige devant {outil}, puis prend la pose d'une actrice : la main sur la hanche, le regard au loin. « Envoie-la à un théâtre de Saint Denis, cow-boy. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "L'éclair de magnésium la fait sursauter ; elle cligne des yeux et rit : « Préviens, la prochaine fois ! J'aurais redressé cette plume tordue. »"
+      },
+      {
+        "texte": "Elle cache son visage derrière son éventail : « Pas de portrait. Je ne veux pas que mon père me retrouve un jour sur une photographie de saloon. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle t'entraîne dehors, dans la lumière, et pose devant la façade du saloon : « Un jour, je la montrerai à Saint Denis : voilà d'où je viens. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu la charges sur ton épaule comme un sac de grain. Elle tambourine sur ton dos à coups de poing : « Pose-moi, espèce de bouvier ! Tout de suite ! »",
+        "effets": {
+          "honneur": -1,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Les clients sifflent et rient pendant que tu la soulèves ; elle, pas du tout. Elle t'arrache ton chapeau et l'envoie droit dans le crachoir.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Elle rit malgré elle : « Bon, d'accord, porte-moi jusqu'à la pension, j'ai les pieds en sang. Mais si tu me fais tomber, tu es un homme mort. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle t'enfonce son épingle à chapeau dans l'épaule ; tu la lâches, et elle retombe sur ses pieds avec l'agilité d'une chatte.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "relation": -1
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu la suis jusqu'à la pension. Devant la porte, elle se retourne d'un coup : « Je t'ai repéré dès la sortie du saloon. Qu'est-ce que tu veux ? »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Elle va à la gare, demande le prix du billet pour Saint Denis, compte ses pièces, puis repart tête basse. Elle ne t'a pas remarqué.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Après la fermeture, elle sort par la porte de derrière, donne des restes au chat roux, puis rentre seule à la pension en serrant son châle contre elle.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Elle t'a repéré. Elle presse le pas et entre droit au bureau du shérif, d'où elle ne ressort que lorsque tu es parti.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Elle t'a vu et ralentit pour que tu la rattrapes : « Raccompagne-moi, alors. La rue n'est pas sûre, le soir, avec ces O'Driscoll qui traînent. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ta gifle claque. Elle se redresse lentement, une main sur la joue, et te rend le coup deux fois plus fort.",
+        "effets": {
+          "sante": -2,
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "À peine as-tu levé la main qu'un vacher, un mineur et le pianiste lui-même te tombent dessus. Tu te retrouves dans la boue de la rue principale.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -15,
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Elle encaisse, chancelle, puis te crache au visage : « C'est tout ? Mon père frappait plus fort, et je suis quand même partie. »",
+        "effets": {
+          "honneur": -2,
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu frappes encore. Elle s'effondre en pleurs derrière le piano, les plumes de travers, et plus personne au saloon ne te regarde en face.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -3,
+          "prime": 10,
+          "relation": -5,
+          "etat": "blesse"
+        }
+      },
+      {
+        "texte": "En pleine rue, devant le magasin général, elle crie si fort que l'adjoint du shérif accourt, la main sur la crosse : « Recule ! Recule tout de suite ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -2,
+          "prime": 10,
+          "relation": -3
+        }
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Elle te regarde comme si tu étais fou : « Un duel ? Avec une danseuse ? Prends mon éventail, je prends ton revolver, et on verra lequel de nous deux a l'air le plus bête. »"
+      },
+      {
+        "texte": "Les clients rient à gorge déployée. Elle s'incline, théâtrale : « J'accepte. Arme : la valse. Le premier qui marche sur les pieds de l'autre a perdu. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Tu veux abattre une fille désarmée devant témoins et appeler ça un duel ? » Elle crache par terre. Plusieurs clients se lèvent, la main sur leur arme.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Elle désigne d'un menton le joueur en gilet de brocart : « Si tu as envie de tirer sur quelqu'un, va provoquer celui-là. Lui, au moins, il l'a mérité. »"
+      },
+      {
+        "texte": "Elle te pince la joue : « Toi, tu as bu. Viens, on va te trouver un café noir avant que tu provoques le chat. »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Elle tourne {outil} entre ses doigts : « C'est pour moi ? Personne ne m'a rien offert depuis le Kansas. » Elle range ton cadeau dans son sac, émue malgré elle.",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Elle soupèse {outil}, pratique : « L'épicier ne reprend rien, ce radin. Mais à Saint Denis, tout se revend. » Elle te remercie d'un vrai sourire.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle accepte ton présent avec un sourire qui n'a rien à voir avec celui de la scène : « Ton cadeau ira dans ma malle pour Saint Denis. J'emporterai au moins un bon souvenir de Valentine. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Elle recule sans toucher {outil} : « Ça vient d'où, ça ? Je ne veux pas finir au bureau du shérif à cause de toi. »",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Elle fait disparaître {outil} sous le comptoir avec un clin d'œil : « Pas devant les clients. Ils vont croire qu'on se fiance. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle repousse ta main : « Garde tes cadeaux. Ce que tu m'as fait ne s'achète pas. »",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "inviter_a_danser": [
+      {
+        "texte": "Elle jauge tes bottes boueuses, soupire, puis te tend la main : « Une danse, c'est un jeton de vingt-cinq cents, et je les vends par quatre. Et si tu me marches sur les pieds, c'est le double. »",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le pianiste attaque une polka. Elle t'entraîne au milieu de la salle et, pendant trois minutes, tu oublies les O'Driscoll, les primes et la boue. Les clients tapent dans leurs mains.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle pose la tête contre ton épaule le temps d'une valse lente : « Tu danses mal, mais tu es le seul ici qui ne compte pas les minutes. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Elle danse avec toi, mais à distance réglementaire, et te lâche dès la dernière note : « Merci, ça fera un dollar. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Elle te tourne le dos : « Je danse avec qui je veux. Et ce soir, je préfère danser avec le chat. »",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "« Sans musique ? » Elle rit, fredonne un air de La Nouvelle-Orléans et fait trois tours de valse avec toi dans la salle vide, entre les chaises retournées.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Au milieu de la danse, elle te souffle à l'oreille : « Les deux types près de la porte te dévisagent depuis tout à l'heure. Danse vers la sortie, je te couvre. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      }
+    ],
+    "offrir_un_verre": [
+      {
+        "texte": "Elle commande d'un geste « son » whisky : du thé froid dans un verre à whisky, payé au prix fort. « Dix cents pour moi, le reste pour la maison. C'est le métier, cow-boy. »",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle repousse le thé et demande un vrai whisky : « Avec toi, pas besoin de faire semblant. » Elle trinque : « À Saint Denis. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Elle trinque, avale cul sec et glisse sa commission dans sa bottine, juste sous ton nez. « Tu n'as rien vu. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle accepte le verre, parce que c'est son travail, mais elle le boit en regardant ailleurs, vers la porte.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Elle fait glisser le verre jusqu'au bout du comptoir, où un vieux vacher l'attrape avec une gratitude infinie.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "« À cette heure-ci ? Offre-moi plutôt un café, j'ai dansé jusqu'à trois heures. » Elle souffle sur la tasse en te racontant le Kansas, les blés et les tornades.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      }
+    ],
+    "payer_un_verre": [
+      {
+        "texte": "Tu poses un dollar sur le comptoir pour son verre. Elle le fait glisser vers elle du bout d'un doigt : « Le barman me reverse dix cents par verre payé. Tu viens de m'offrir trois pas de plus vers Saint Denis. »",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Garde ton argent, tu en auras besoin. » Elle sort sa propre pièce, puis se ravise : « Bon, d'accord, paie. Mais la prochaine est pour moi, à Saint Denis. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle lève son verre de thé froid vers la salle et lance : « Ce monsieur régale ! » Trois vachers assoiffés se retournent vers toi, pleins d'espoir.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -3,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle prend ton dollar sans un mot, le mord pour vérifier qu'il est vrai, et le range dans sa bottine.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Elle repousse ta pièce du bout de son éventail : « Mon verre, je me le paie. Avec toi, tout finit par coûter plus cher. »",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Pas d'alcool avant le coucher du soleil, dit-elle, mais elle accepte une limonade, qu'elle boit à petites gorgées en regardant passer la diligence.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      }
+    ],
+    "aider_a_partir_saint_denis": [
+      {
+        "texte": "Tu lui tends l'argent du billet. Elle le regarde longtemps sans y toucher : « Qu'est-ce que tu veux en échange ? » Quand tu réponds « rien », ses yeux se mouillent.",
+        "effets": {
+          "argent": -20,
+          "honneur": 2,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Elle repousse tes billets, vexée : « Je ne suis pas une œuvre de charité. Je partirai avec mon argent à moi. » Puis, tout bas : « Mais merci. Vraiment. »",
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Elle te serre dans ses bras à t'étouffer : « Le train de demain matin ! Je prends le train de demain matin ! » Elle court déjà vers la pension chercher sa boîte à biscuits.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -20,
+          "honneur": 3,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Elle fait sa malle à la lueur d'une lampe à pétrole et te fait promettre de veiller sur Sultan, le chat. À l'aube, tu portes sa valise jusqu'au quai.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -15,
+          "honneur": 2,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Elle compte tes billets d'un œil méfiant : « D'où sort cet argent ? Si c'est le butin d'une diligence, je ne veux pas qu'on me cueille à la descente du train. » Elle les prend quand même.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -20,
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle prend l'argent, mais refuse que tu l'accompagnes : « Avec ta tête sur l'affiche ? Malloy surveille le quai. Je t'écrirai de Saint Denis, sous un faux nom. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -20,
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Vous allez ensemble au guichet. Le chef de gare, montre en main, annonce le prochain départ à la minute près ; elle serre son billet contre son cœur comme une relique.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -15,
+          "honneur": 2,
+          "relation": 3
+        }
+      }
+    ],
+    "applaudir_le_numero": [
+      {
+        "texte": "Tu applaudis à tout rompre. Elle te repère dans la fumée et t'envoie une plume de sa coiffe, qui atterrit en plein dans ton whisky.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tes applaudissements entraînent toute la salle ; même les joueurs de poker lèvent les yeux de leurs cartes. Elle salue trois fois, rose de plaisir, comme sur une vraie scène.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu applaudis seul dans le saloon vide pendant qu'elle répète. Elle sursaute, puis fait une révérence exagérée : « Merci, cher public. Tous les deux. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Elle ignore tes applaudissements et termine son numéro face au mur du fond.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Tu applaudis trop fort, en sifflant entre tes doigts. Elle termine son numéro, mais te lance un regard à geler le whisky.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "demander_ce_qui_se_trame": [
+      {
+        "texte": "Elle se penche, l'air de rien : « Le joueur de poker ? Un as dans la manche gauche, et sa chevalière en or lui sert de miroir quand il distribue. Mais tu ne tiens pas ça de moi. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Le directeur de la banque vient jouer ici le samedi. Il perd, et le lundi il augmente ses taux aux fermiers. Tu veux savoir où va l'argent de Valentine ? Sur ce feutre vert. »"
+      },
+      {
+        "texte": "Elle désigne la fenêtre du menton : « Un type du Smithfield's est passé demander à quelle heure l'adjoint fait sa ronde. Un O'Driscoll, j'en mettrais ma main au feu. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Elle te souffle : « Le chasseur de primes du Smithfield's n'est pas là pour boire. Il attend quelqu'un. Et l'autre attend quelqu'un aussi. Ça va mal finir, cette histoire. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Les secrets, ça se paie, et toi, tu n'as pas de quoi. » Elle tourne les talons dans un bruissement de satin.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Elle te sourit et te raconte avec aplomb une histoire de trésor enterré sous l'église. Tu mettras deux jours à comprendre qu'elle s'est moquée de toi.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Le caissier de la banque ? Il vient boire un lait chaud ici, les mains tremblantes. Il est sûr qu'on va braquer la banque. Le pauvre ne dort plus. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "defendre_contre_un_client": [
+      {
+        "texte": "Tu poses une main lourde sur l'épaule du vacher qui lui tenait le poignet de force. Il se retourne, voit ton revolver, et se rassoit en bredouillant des excuses.",
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Le client, un mineur saoul comme un tonneau, te balance une chope. La bagarre renverse deux tables avant qu'il ne finisse dans l'abreuvoir de la rue. Elle te tend un mouchoir pour ta lèvre fendue.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -10,
+          "honneur": 2,
+          "prime": 5,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Elle t'arrête d'un geste : « Je m'en occupe. » D'un sourire et d'un talon planté sur le pied du gêneur, elle règle l'affaire. « Mais c'était gentil de vouloir. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te suffit d'un regard. L'importun pose une pièce sur le comptoir pour s'excuser et file. Elle glisse la pièce dans sa bottine : « Des excuses, ça se paie aussi. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu jettes le client dehors avec une violence qui fait taire toute la salle. Elle ne te remercie pas : elle a eu aussi peur de toi que de lui.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le client te reconnaît : « Hé, c'est toi, sur l'affiche ! » Il file chercher l'adjoint pendant qu'elle te pousse vers la porte de derrière : « Va-t'en ! Et merci ! »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      }
+    ]
+  }
+}

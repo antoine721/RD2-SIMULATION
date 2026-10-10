@@ -1,0 +1,360 @@
+{
+  "id": "banque",
+  "description": "La seule façade de brique rouge de Valentine, avec des colonnes peintes en faux marbre, des barreaux de fer à chaque fenêtre et une enseigne dorée : VALENTINE SAVINGS BANK. À l'intérieur, un sol de marbre en damier, deux guichets protégés par des grilles de laiton et une grande horloge murale qui tic-taque dans le silence.",
+  "repliques": [
+    "L'horloge de la façade sonne l'heure, grave et lente.",
+    "La porte vitrée tinte. Derrière la grille, quelqu'un sursaute.",
+    "Un guichet grillagé se referme avec un claquement sec."
+  ],
+  "reactions": {
+    "braquer": [
+      {
+        "texte": "Tu entres le foulard sur le nez, l'arme au poing : « Tout le monde à terre ! » Le caissier vide les tiroirs, le directeur ouvre le coffre en pleurnichant, et tu ressors avec des sacoches pleines tandis que la cloche de l'église sonne l'alarme.",
+        "effets": {
+          "argent": 200,
+          "prime": 250,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Le braquage tourne mal : une cliente hurle, le caissier siffle, et en trente secondes Malloy et son adjoint ouvrent le feu depuis la rue. Tu t'enfuis avec un seul sac de billets et une balle dans la cuisse.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 80,
+          "prime": 200,
+          "sante": -40,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Tu forces la porte de derrière à trois heures du matin. Rien que le tic-tac de l'horloge et l'écho de tes bottes sur le marbre ; au matin, Valentine découvre un coffre vide et placarde une prime pour un braqueur sans visage.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 150,
+          "prime": 150,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Personne ne meurt : tu l'as exigé, et tu laisses même au caissier de quoi payer son mois. Mais l'adjoint fait feu depuis le toit de l'hôtel, et le héros de Valentine devient l'homme le plus recherché de New Hanover.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "argent": 180,
+          "prime": 250,
+          "sante": -20,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Ta réputation te précède : le caissier lève les mains avant que tu dégaines, et le directeur ouvre le coffre de lui-même. Mais dehors, le chasseur de primes du Smithfield's t'attend, adossé à l'abreuvoir, la carabine sur l'épaule.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": 200,
+          "prime": 300,
+          "sante": -25,
+          "honneur": -4
+        }
+      },
+      {
+        "texte": "Tu tires d'abord en l'air, puis dans l'horloge, puis dans le portrait du président. Le directeur ouvre le coffre en sanglotant, et tu repars avec tout l'or de la banque : Valentine ne prononcera plus ton nom qu'à voix basse.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 200,
+          "prime": 300,
+          "honneur": -5
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines la façade de brique, les colonnes en faux marbre et l'enseigne dorée. Dans {outil}, la banque a l'air plus riche que toute la ville réunie."
+      },
+      {
+        "texte": "Tu traces dans {outil} un plan précis de l'intérieur : deux guichets grillagés, le bureau du directeur à gauche, le coffre au fond, la porte de derrière sur la ruelle. Un plan de braqueur.",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "À la lueur d'une lanterne, tu croques la banque endormie. Seule l'horloge de la façade semble vivante, et tu dessines jusqu'à ses aiguilles.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Pendant que tu dessines, une file de fermiers attend devant la porte, chapeau à la main. Tu les ajoutes au croquis : des silhouettes voûtées devant une façade trop belle.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "entrer": [
+      {
+        "texte": "La porte vitrée tinte. Sol de marbre en damier, odeur d'encre et de cire, deux guichets derrière des grilles de laiton, et l'horloge murale qui tic-taque. Derrière sa grille, le caissier sursaute."
+      },
+      {
+        "texte": "Trois fermiers font la queue, chapeau à la main. Au fond, derrière sa porte vitrée, le directeur dicte une lettre de saisie d'une voix forte, pour que tout le monde entende.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "La porte est verrouillée. Par la vitre, tu vois la lune se refléter sur le marbre et la masse noire du coffre-fort. Dans la ruelle, un chat renverse une poubelle.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "À peine as-tu franchi le seuil que le caissier lève les mains et que le directeur plonge sous son bureau. Personne ne t'a encore rien demandé.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Le caissier t'accueille avec un sourire soulagé, et même le directeur se lève pour te saluer. Une vieille cliente te serre la main : « C'est vous, celui dont on parle ? »",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la façade. Le projectile rebondit sur la brique avec un bruit mat ; le caissier colle son visage à la vitre, puis tire précipitamment les rideaux."
+      },
+      {
+        "texte": "La vitre de la porte vole en éclats. Le grelot de l'entrée tinte tout seul, et derrière le guichet une voix aiguë s'écrie : « On nous attaque ! »",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Dans l'obscurité, tu lances {outil} contre l'enseigne dorée. Le « S » de SAVINGS se décroche et pend au bout d'un clou ; seul un chien aboie, quelque part près de la boucherie.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Les passants s'écartent en criant. Le directeur surgit sur le perron, rouge de colère : « Qui a fait ça ? Je ferai payer les dégâts au centuple ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Brique rouge, colonnes en faux marbre, barreaux noirs à chaque fenêtre. Au-dessus de la porte, une horloge ronde avance de trois minutes sur celle de la gare."
+      },
+      {
+        "texte": "Une diligence s'arrête devant la porte ; deux gardes armés en descendent avec un coffret ferré, entrent, ressortent les mains vides et repartent. L'horloge indique onze heures et quart.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Une lampe brûle encore dans le bureau du directeur : derrière la vitre, une ombre ronde est penchée sur un registre. La ruelle de derrière, elle, est noire comme un puits.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "La porte de derrière donne sur une ruelle étroite, entre la banque et le magasin général. Le cadenas est neuf, mais les gonds sont rouillés."
+      },
+      {
+        "texte": "L'adjoint du shérif passe devant la banque toutes les vingt minutes, la main sur son étui, et jette chaque fois un coup d'œil à l'intérieur.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu photographies la façade en plein soleil : brique rouge, enseigne dorée, barreaux noirs. Sur la plaque, la banque a l'air d'une forteresse posée dans la boue."
+      },
+      {
+        "texte": "Le directeur sort sur le perron et prend la pose sans que personne ne lui ait rien demandé, une main sur le revers, l'autre sur sa chaîne de montre. Le cliché est gâché.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Le magnésium illumine la façade une fraction de seconde. Derrière la vitre, une silhouette se jette au sol : le caissier, resté tard pour recompter la caisse.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu photographies méthodiquement chaque fenêtre, chaque porte et la ruelle de derrière. Un passant te regarde faire et s'éloigne d'un pas pressé vers le bureau du shérif.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle fait exploser le cadran de l'horloge de la façade. Les aiguilles s'arrêtent net : Valentine se souviendra longtemps de l'heure exacte où tu as perdu la tête.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Les vitres de la banque volent en éclats. À l'intérieur, le caissier crie « On braque ! » et le directeur hurle « Fermez le coffre ! Fermez le coffre ! »",
+        "effets": {
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Les coups de feu vident la rue principale en un clin d'œil. Deux minutes plus tard, l'adjoint arrive en courant, l'arme au poing, en cherchant qui a tiré sur la banque.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 15
+        }
+      },
+      {
+        "texte": "Tes balles trouent l'enseigne dorée dans la nuit. Des lampes s'allument à l'hôtel et au saloon de Keane, et quelqu'un crie « Les O'Driscoll ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10
+        }
+      }
+    ],
+    "arracher_les_barreaux": [
+      {
+        "texte": "Tu passes {outil} autour des barreaux de la fenêtre de derrière et tu l'attaches à ta selle. Un coup d'éperon : la grille s'arrache dans un nuage de mortier et tombe dans la ruelle.",
+        "effets": {
+          "prime": 20,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Ton cheval tire, tire encore ; les barreaux plient mais tiennent, scellés dans la fonte. Tout ce que tu as gagné, c'est un mur fissuré et un cheval furieux."
+      },
+      {
+        "texte": "Dans le silence de la nuit, l'arrachement des barreaux fait un vacarme de tonnerre. Tu as dix secondes avant que les lampes s'allument, et la fenêtre béante t'attend.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "En plein jour ? Le temps que ton cheval tire, la moitié de la rue principale est là à regarder, et Malloy sort de son bureau en mâchonnant sa moustache : « Je peux savoir ? »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 30
+        }
+      },
+      {
+        "texte": "Les barreaux cèdent, mais le fracas attire l'adjoint, qui tire au jugé dans la ruelle. Une balle siffle près de ta tête, et ton cheval se cabre en t'éclaboussant de boue.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -15,
+          "prime": 20
+        }
+      }
+    ],
+    "reperer_les_lieux": [
+      {
+        "texte": "Tu passes une heure assis sur le banc d'en face, à faire semblant de lire. Bilan : deux guichets, un directeur qui part déjeuner à midi pile, un caissier qui sursaute au moindre bruit."
+      },
+      {
+        "texte": "Tu entres sous prétexte de faire de la monnaie. Le coffre est au fond, la porte du directeur ne ferme pas à clé, et le caissier garde un sifflet de police sous son comptoir.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu fais le tour de la banque dans l'obscurité : porte de derrière cadenassée, barreaux scellés au mortier, une seule ronde de l'adjoint vers minuit. Ensuite, plus rien jusqu'à l'aube.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "L'adjoint te remarque, planté devant la banque à compter les fenêtres. Il te fixe longuement, la main sur son étui, puis s'éloigne vers le bureau du shérif. Mauvais signe.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Le gamin des rues te souffle, contre une pièce, que la diligence apporte l'or des mines chaque jeudi. « Mais j'ai rien dit, hein. » Il disparaît dans la foule.",
+        "effets": {
+          "argent": -1
+        }
+      }
+    ],
+    "regler_sa_montre": [
+      {
+        "texte": "Tu règles ta montre sur l'horloge de la banque. Plus tard, le chef de gare remarquera, horrifié, qu'elle avance de trois minutes : « Trois minutes ! Une éternité ! »"
+      },
+      {
+        "texte": "Sous la lune, tu devines les aiguilles de l'horloge : une heure vingt. Tu règles ta montre, et le silence de Valentine te semble soudain très précis.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le directeur sort sur le perron et te voit faire : « Le temps, c'est de l'argent. Le vôtre, je n'en sais rien. Le mien, assurément. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "L'horloge sonne midi au moment où tu remontes ta montre. Le directeur sort aussitôt, chapeau sur la tête, pour aller déjeuner à l'hôtel : réglé comme elle."
+      }
+    ],
+    "faire_la_queue": [
+      {
+        "texte": "Tu fais la queue derrière trois fermiers. L'un d'eux murmure : « Il va me prendre ma terre. Il a déjà pris celle de mon frère. » Personne ne répond ; on n'entend que l'horloge."
+      },
+      {
+        "texte": "La file avance d'un pas toutes les dix minutes. Devant toi, une vieille femme dépose ses économies en pièces de cinq cents, une à une, sous l'œil anxieux du caissier.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu attends seul devant une porte close, dans la rue sombre. Un ivrogne s'arrête, te regarde et se met dans la file derrière toi, « au cas où ça ouvrirait ».",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Les gens de la file te reconnaissent un à un et s'écartent. En trente secondes, te voilà premier au guichet, et le caissier a déjà les mains en l'air.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Les fermiers te cèdent leur place en ôtant leur chapeau. Tu refuses et attends ton tour comme tout le monde ; on le racontera au saloon le soir même.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      }
+    ]
+  }
+}

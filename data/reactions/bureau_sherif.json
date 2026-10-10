@@ -1,0 +1,366 @@
+{
+  "id": "bureau_sherif",
+  "description": "Une bâtisse de planches basse au perron grinçant, l'étoile du comté peinte à moitié effacée sur la porte bardée de fer. À l'intérieur : un râtelier d'armes cadenassé, des avis de recherche jaunis cloués les uns sur les autres, un poêle de fonte où mijote un café brûlé, et au fond, la cellule de l'O'Driscoll.",
+  "repliques": [
+    "Le poêle crépite. Une odeur de café brûlé s'échappe par la porte entrouverte.",
+    "Derrière les barreaux, quelqu'un siffle un air irlandais.",
+    "Une affiche se décolle du mur et pend, battant au vent comme un drapeau."
+  ],
+  "reactions": {
+    "entrer": [
+      {
+        "texte": "La porte grince. L'odeur te saute à la gorge : café brûlé, tabac froid, sueur de prisonnier. Malloy lève les yeux de sa paperasse sans un mot."
+      },
+      {
+        "texte": "Tu entres. L'adjoint dégaine par réflexe, te reconnaît, et rengaine lentement, les oreilles rouges : « On frappe, d'habitude ! »"
+      },
+      {
+        "texte": "Le bureau est plongé dans la pénombre, éclairé seulement par la gueule rouge du poêle. Une voix sort du noir : « Doucement, l'ami. J'ai un fusil, et des insomnies. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Le soleil entre en biais par la fenêtre crasseuse et fait danser la poussière au-dessus du bureau. Le prisonnier, vautré sur sa paillasse, te salue d'un doigt.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Tu pousses la porte. Ton propre visage te regarde depuis le mur, entre deux O'Driscoll. Personne ne bouge. Le silence pèse une tonne.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "À peine as-tu franchi le seuil que deux canons se lèvent vers toi : le revolver de l'adjoint et le fusil de Malloy. « Demi-tour. »",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Malloy pousse une chaise du bout de la botte vers toi, sans lever les yeux : « Le café est sur le poêle. Sers-toi, il ne s'améliorera pas en attendant. »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Le râtelier contient six fusils et deux carabines, enchaînés par un cadenas rouillé. Sous l'un d'eux, une plaque gravée : « Offert par l'armurier de Valentine, 1897 »."
+      },
+      {
+        "texte": "Les avis de recherche se chevauchent sur trois épaisseurs. Au centre, le portrait du Balafré est entouré d'un cercle à l'encre rouge, avec une note de la main de Malloy : « Smithfield's ? »"
+      },
+      {
+        "texte": "Côté ruelle, au pied du mur de la cellule, des éraflures fraîches entament le mortier, et des traces de bottes s'arrêtent net dans la boue. Quelqu'un a mesuré ce mur."
+      },
+      {
+        "texte": "La porte porte de vieux impacts de balles rebouchés au mastic. Le plus récent n'a pas encore été repeint."
+      },
+      {
+        "texte": "Une seule lampe brûle derrière la vitre. On devine la silhouette du shérif dans son fauteuil, et le canon d'un fusil posé en travers de ses genoux.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "La cafetière fume sur le poêle de fonte depuis l'aube. L'odeur âcre du café brûlé flotte jusqu'au milieu de la rue, et même le chien errant fait un détour.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Sur le mur, entre deux O'Driscoll, une affiche toute fraîche. L'encre n'a pas fini de sécher, et le visage dessiné, c'est le tien.",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu dessines dans {outil} la façade de planches, la porte bardée de fer, l'étoile à moitié effacée. Le prisonnier se colle aux barreaux de la fenêtre pour figurer sur le dessin."
+      },
+      {
+        "texte": "Tu croques l'intérieur : le poêle, le râtelier, la cafetière cabossée. Malloy jette un œil : « Tu as oublié la fuite au plafond. Elle fait partie de la famille. »"
+      },
+      {
+        "texte": "Tu dessines le bureau sous la lune, avec sa lampe unique derrière la vitre. Une ombre passe devant la fenêtre ; tu l'ajoutes d'un trait de crayon, sans savoir à qui elle appartient.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Tu dessines le perron, où l'adjoint, adossé, prend des poses héroïques dès qu'il comprend ce que tu fais.",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Tu photographies la façade. Malloy sort sur le perron juste avant le déclic et se fige, raide, la main sur l'étoile. La photo sera floue, mais solennelle."
+      },
+      {
+        "texte": "Le magnésium illumine l'intérieur. Dans la cellule, le prisonnier se cache le visage : « Pas de photo ! Ma mère croit que je travaille aux chemins de fer ! »"
+      },
+      {
+        "texte": "Tu photographies le mur d'affiches. En développant le cliché, tu remarqueras que la tienne y figure, en plein milieu.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Ton flash illumine la façade en pleine nuit. Une fenêtre s'ouvre à la volée et un canon de fusil en sort : « Qui va là ?! »",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} contre la façade. L'objet rebondit sur les planches et tombe dans la boue. La porte s'ouvre : Malloy le regarde, puis toi, et décroche ses fers.",
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu lances {outil} à travers la vitre du bureau, dans un fracas de verre. À l'intérieur, l'adjoint hurle « On nous attaque ! » et tire deux coups à travers la porte ; un éclat de bois t'entaille le bras.",
+        "effets": {
+          "sante": -10,
+          "prime": 15
+        }
+      },
+      {
+        "texte": "Tu lances {outil} sur le toit de tôle. Le vacarme réveille la rue, et le prisonnier se met à chanter à tue-tête : « Ils arrivent, ils arrivent ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu lances {outil} contre le tableau d'affiches du perron. Une vieille affiche se décroche et s'envole jusqu'à l'abreuvoir. Une dame te traite de voyou depuis le trottoir.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu lances {outil} contre la porte. Elle s'ouvre aussitôt sur deux canons : « Toi. Évidemment. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle se fiche dans le chambranle, à deux pouces de l'étoile peinte sur la porte. Une seconde plus tard, un fusil à double canon répond depuis la fenêtre.",
+        "effets": {
+          "sante": -20,
+          "prime": 25
+        }
+      },
+      {
+        "texte": "Tu tires sur la vitre, qui explose. À l'intérieur, Malloy plonge derrière son bureau et crie à l'adjoint de garder la cellule : il croit à l'assaut des O'Driscoll.",
+        "effets": {
+          "prime": 30,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tes coups de feu crèvent la nuit. Le bureau s'éteint d'un coup, puis deux fenêtres crachent des éclairs. Une balle te frôle, une autre te touche au bras.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -35,
+          "prime": 40
+        }
+      },
+      {
+        "texte": "Tu canardes la façade en plein jour. Les passants se jettent dans la boue, la cloche de l'église sonne l'alerte, et la porte du bureau est criblée de trous.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 40,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu tires sur le bureau. Derrière les barreaux, le prisonnier hurle de joie : il te prend pour un O'Driscoll venu le libérer. Malloy, lui, te prend pour pire, et riposte.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -15,
+          "prime": 50
+        }
+      },
+      {
+        "texte": "Tu vides ton arme sur la façade. Le poêle, touché, crache des braises sur le plancher, et une fumée noire sort par la vitre brisée. Le shérif et son adjoint jaillissent en toussant, armes au poing.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -20,
+          "prime": 50,
+          "honneur": -3
+        }
+      }
+    ],
+    "decrocher_fusil_ratelier": [
+      {
+        "texte": "Tu forces le cadenas rouillé et décroches un fusil, froid et bien huilé. Le vol d'une arme du comté te vaut une ligne de plus dans les registres de New Hanover.",
+        "effets": {
+          "prime": 25,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Tu tends la main vers le râtelier. Derrière toi, un déclic : « Celui-là est à moi. Les autres aussi. Repose ça. » Malloy n'a même pas levé les yeux de son café.",
+        "effets": {
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Pendant que le shérif dort dans son fauteuil, tu décroches un fusil sans un bruit. Dans la cellule, le prisonnier te regarde faire et sourit de toutes ses dents, du moins de celles qui lui restent.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 25,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Malloy te lance la clé du cadenas : « Prends le Winchester du bas. Si les O'Driscoll viennent, je veux que tu sois armé. Tu le rendras après. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Tu décroches un fusil ; l'adjoint te braque aussitôt de son revolver tout neuf : « Vol d'arme de la loi ! J'ai le droit de tirer ! J'ai le droit, hein, shérif ? » Il n'attend pas la réponse.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "sante": -20,
+          "prime": 30
+        }
+      }
+    ],
+    "se_servir_cafe_poele": [
+      {
+        "texte": "Tu verses dans une tasse ébréchée un liquide noir et épais comme du goudron. Il te brûle la langue et te réveille jusqu'aux orteils.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Le café bout depuis l'aube. Tu en avales une gorgée et tousses à t'en arracher les poumons. L'adjoint ricane : « Tu t'habitueras. Ou pas. »",
+        "effets": {
+          "sante": 2
+        }
+      },
+      {
+        "texte": "Le poêle ronronne dans la nuit. Le café, réchauffé pour la sixième fois, a un goût de cendre et de poudre. Il te tiendra éveillé jusqu'au matin.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "Tu te sers une tasse sous le regard incrédule du shérif : « Recherché, et il boit mon café. » Il ne sait pas s'il doit rire ou t'arrêter, alors il fait les deux à moitié.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Malloy pousse vers toi le sucrier, un vrai luxe : « Pour les invités de marque. Il est dur comme de la pierre, mais c'est du sucre. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      }
+    ],
+    "consulter_registre_ecrou": [
+      {
+        "texte": "Le registre est taché de café. Dernière ligne, d'une écriture penchée : « Finn Mulligan, voleur de chevaux, gang O'Driscoll. Arrêté hier soir. Remis au marshal de Saint Denis jeudi, par le train. »"
+      },
+      {
+        "texte": "Tu feuillettes les pages : ivresses, bagarres au Smithfield's, vols de poules… et, en 1887, une ligne encadrée de noir : « Adjoint Thomas Reed, tué par les O'Driscoll. »"
+      },
+      {
+        "texte": "En tournant une page, tu tombes sur ton propre signalement, griffonné la veille, avec une somme en marge. Tu refermes le registre très vite.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "À la lueur de la lampe, tu lis les noms des pendus de Valentine. La liste est longue, et la plupart portent la mention « O'Driscoll ».",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "L'adjoint t'arrache le registre des mains : « C'est confidentiel ! » Puis, plus bas : « T'as vu mon nom ? Page douze. Ma première arrestation. Un ivrogne. Mais quand même. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "demander_nuit_en_cellule": [
+      {
+        "texte": "Malloy hausse un sourcil, puis te tend une couverture qui sent le cheval : « Il n'y a qu'une cellule, et l'O'Driscoll y ronfle déjà. Pas de whisky, pas de chansons, pas de bagarre. »",
+        "effets": {
+          "sante": 10
+        }
+      },
+      {
+        "texte": "Tu dors sur une paillasse pleine de puces, à deux pas du prisonnier qui te raconte toute la nuit ce que son gang fera à cette ville. Au matin, tu as mal au dos, mais tu en sais plus sur les O'Driscoll.",
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "« Une nuit en cellule ? » Malloy sourit en tournant la clé : « Avec plaisir. Et la suivante aussi. Et toutes celles d'après, jusqu'à ce que le juge passe. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "« L'hôtel coûte cinquante cents, ici c'est gratuit. Mais je ferme à clé. » Tu dors mal, et tu te réveilles fouillé de la tête aux pieds.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "sante": 5
+        }
+      },
+      {
+        "texte": "L'adjoint t'ouvre en bâillant, ravi d'avoir de la compagnie : il te parle de ses exploits futurs jusqu'à quatre heures du matin. Tu dors deux heures.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": 3
+        }
+      }
+    ]
+  }
+}

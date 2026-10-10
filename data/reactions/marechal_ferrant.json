@@ -1,0 +1,1083 @@
+{
+  "id": "marechal_ferrant",
+  "description": "Un colosse au crâne rasé et à la barbe rousse roussie par endroits, tablier de cuir sur un torse nu luisant de sueur. Ses avant-bras sont couturés de brûlures et chacune de ses mains ferait deux des tiennes.",
+  "personnalite": "Gunnar, dit « le Suédois ». Taiseux, patient, d'une force effrayante : il répond par grognements et phrases de deux mots. Doux avec les chevaux, inflexible avec les brutes. Ancien boxeur à mains nues à Chicago, il a tué un homme sur le ring et a juré de ne plus jamais frapper personne ; il accepte seulement les bras de fer.",
+  "repliques": [
+    "*Clang. Clang. Clang.*",
+    "Hm.",
+    "*plonge un fer rougi dans le seau ; l'eau siffle et fume*",
+    "Fers. Deux dollars.",
+    "*s'essuie le front d'un avant-bras large comme une cuisse*",
+    "Pas de bagarre dans ma forge.",
+    "Bras de fer ? ... Hm. Assieds-toi."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 5,
+      "lieu": "forge",
+      "activite": "dort sur un lit de camp derrière la forge"
+    },
+    {
+      "de": 5,
+      "a": 6,
+      "lieu": "berge",
+      "activite": "se lave torse nu dans l'eau glacée du ruisseau"
+    },
+    {
+      "de": 6,
+      "a": 12,
+      "lieu": "forge",
+      "activite": "rallume le foyer et ferre les chevaux"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "pension",
+      "activite": "avale un ragoût sans dire un mot"
+    },
+    {
+      "de": 13,
+      "a": 18,
+      "lieu": "forge",
+      "activite": "forge, martèle et répare"
+    },
+    {
+      "de": 18,
+      "a": 19,
+      "lieu": "ecurie",
+      "activite": "livre une caisse de fers au palefrenier"
+    },
+    {
+      "de": 19,
+      "a": 22,
+      "lieu": "saloon_smithfield",
+      "activite": "boit une bière seul au bout du comptoir et accepte les bras de fer"
+    },
+    {
+      "de": 22,
+      "a": 24,
+      "lieu": "forge",
+      "activite": "couvre les braises et s'endort"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il ne lève pas les yeux de l'enclume. « Hm. » Trois coups de marteau plus tard, il ajoute : « Fers, deux dollars. Le reste, ça dépend. »"
+      },
+      {
+        "texte": "Il trempe un fer dans le seau ; la vapeur siffle entre vous. « Le cheval attaché devant le Smithfield's... Mes fers. Posés au printemps, pour Elias Hartley. Elias est au cimetière, maintenant. »"
+      },
+      {
+        "texte": "Assis devant les braises mourantes, une bière tiède à la main, il parle pour une fois : « Chicago. J'ai cogné un homme, un soir. Il ne s'est pas relevé. » Puis il se tait pour de bon.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te pousse un tabouret du pied, ce qui chez lui vaut un discours. « Le Balafré du Smithfield's voulait une lime. Pour son cousin en cellule. Pas vendu. Dis-le à Malloy. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il pose le marteau, te dévisage, puis regarde l'avis de recherche cloué en face. « Hm. » Il reprend son travail, mais garde la pince rougie à portée de main.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il se plante devant toi, bras croisés, et ne répond rien. Le silence dure jusqu'à ce que tu tournes les talons.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il lève son marteau d'un pouce. C'est un salut, et même un chaleureux."
+      },
+      {
+        "texte": "« Hm. » Il hoche la tête une seule fois, sans cesser de pomper le soufflet."
+      },
+      {
+        "texte": "Il pose ses pinces et te serre la main. Tes phalanges craquent ; il ne s'en rend même pas compte.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Assis sur le seuil, une pipe éteinte entre les dents, il te répond d'un grognement presque aimable.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te regarde passer sans rendre le salut, et ses yeux s'attardent sur ton holster.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Tu le traites de gros bœuf suédois. Il continue de marteler sans un mot. Le fer, lui, prend cher."
+      },
+      {
+        "texte": "Tu lui craches tes insultes à la figure. Il pose le marteau, s'essuie les mains et propose d'une voix calme : « Bras de fer. Si tu perds, tu t'excuses. »"
+      },
+      {
+        "texte": "Il ne dit rien. Il t'attrape par le col d'une seule main, te soulève jusqu'à ce que tes bottes quittent le sol, puis te dépose dans l'abreuvoir de la rue.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Au Smithfield's, la salle se tait. Il finit sa bière, se lève — une tête de plus que tout le monde — puis se rassoit. « Pas ce soir. » Les rires sont pour toi.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu le provoques pour rire. Il saisit la plaisanterie avec trois secondes de retard, puis éclate d'un rire qui fait trembler les fers pendus aux poutres.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu bombes le torse. Il te regarde de haut — vraiment de haut — et retourne à son fer sans un mot.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lui dis que tu pourrais lui faire du mal. Il soulève l'enclume par un coin, la repose. Le sol tremble. « Hm ? »"
+      },
+      {
+        "texte": "Il t'écoute jusqu'au bout, essuie ses mains noires et répond lentement : « Je ferre aussi les chevaux du shérif. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il saisit au bout de sa pince une barre chauffée à blanc et la tient entre vous deux. L'air brûle. C'est toi qui recules.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il a bu. Pour la première fois, le géant recule d'un pas et grogne : « Va-t'en. Je ne me bats plus. Plus jamais. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Tu pointes {outil} sur lui. Il le regarde comme un fer mal forgé, puis hausse ses énormes épaules. « Tire, ou ôte-toi de ma lumière. »",
+        "effets": {
+          "relation": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il lève lentement les mains, des mains comme des pelles. « L'argent. Boîte à tabac. Sur l'étagère. » Tu y trouves six dollars et des clous.",
+        "effets": {
+          "argent": 6,
+          "prime": 10,
+          "honneur": -2,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il dormait sur son lit de camp. Il ouvre un œil, voit {outil}, et le referme. « Demain. » Il ronfle déjà.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il lance son marteau avant que tu aies fini ta phrase. Le manche te cingle le poignet, et tu manques de lâcher {outil} dans la sciure.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Ta voix manque de conviction, et il le sent. Il pose doucement un doigt sur {outil}, l'abaisse vers le sol et te tend une louche d'eau fraîche.",
+        "si": [
+          "honneur_haut"
+        ]
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing s'écrase sur sa mâchoire. C'est comme frapper un poteau de clôture. Il se masse le menton pendant que tu secoues ta main endolorie.",
+        "effets": {
+          "sante": -5,
+          "relation": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il encaisse sans broncher, t'attrape par les deux bras et te tient immobile, les dents serrées. « Je ne frappe plus. Calme-toi. » Puis il te lâche dans la boue.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il oublie sa promesse. Un seul crochet, venu tout droit de Chicago, et tu te réveilles dans la sciure avec le goût du sang dans la bouche.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -25,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Au Smithfield's, ton coup de poing déclenche la bagarre générale. Il se contente de soulever les combattants un par un et de les jeter dehors, toi le premier.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -10,
+          "prime": 5,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu le frappes par derrière, sur la nuque. Il pose un genou à terre... puis se relève, très lentement. Tu as tout le temps de le regretter.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "sante": -15,
+          "prime": 5,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Ton coup de crosse lui arrive derrière le crâne. Il se retourne en se frottant la tête. « Aïe. » Puis il te pousse d'une main, et tu traverses la porte.",
+        "effets": {
+          "sante": -10,
+          "relation": -3,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il te faut trois coups. Au troisième, le colosse s'abat sur l'enclume comme un chêne coupé, et toute la forge résonne.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il cuve sur son lit de camp. Un seul coup suffit ; il se contente de ronfler plus fort.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il voit le coup venir, attrape ton bras au vol et serre. Quelque chose craque dans ton poignet.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -20
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu te jettes sur lui avec {outil}. Il pare avec son tablier de cuir, saisit ton bras et te projette contre les sacs de charbon.",
+        "effets": {
+          "sante": -15,
+          "prime": 10,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Tu l'atteins au bras avec {outil}. Le sang coule sur ses vieilles brûlures ; il regarde la plaie, étonné, puis recule vers sa pince en grondant.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 20,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Dans la lueur des braises, ton attaque le surprend. Il s'effondre contre l'enclume et ne se relève pas. Le foyer continue de rougir, indifférent.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "mort",
+          "prime": 100,
+          "honneur": -5
+        }
+      },
+      {
+        "texte": "Il t'attendait. Le marteau de forge s'abat sur ton épaule avant que {outil} ne l'effleure.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -30,
+          "prime": 10
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Le lasso se referme sur ses épaules. Il saisit la corde à deux mains et tire d'un coup sec : c'est toi qui voles dans la boue.",
+        "effets": {
+          "sante": -5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "La corde se serre autour de sa taille. Il ne bouge pas plus qu'un tronc. Les passants rient ; il défait le nœud et te rend le lasso, proprement enroulé.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il enroule la corde autour de son poing et te tire jusqu'à lui comme un veau au marquage. La suite se passe très vite.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -20
+        }
+      },
+      {
+        "texte": "Il a bu. La corde le surprend, il trébuche contre l'abreuvoir et s'étale de tout son long en jurant en suédois.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu essaies de lui lier les poignets. Il écarte les bras et la corde cède avec un claquement de fouet.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il se laisse attacher sans résister, en te regardant faire avec une patience inquiétante. « Fini ? » Il serait temps de partir.",
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu le ligotes pendant qu'il cuve sur son lit de camp. Il faut toute la corde pour faire le tour de ses bras.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il te prend la corde des mains et c'est toi qu'il ficelle, à la barrière de l'enclos. Le palefrenier mettra une heure à te détacher.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5,
+          "relation": -2
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu essaies de lui arracher son marteau. Autant arracher une branche à un chêne. Il te regarde pendu à son bras, perplexe.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il n'a ni holster ni revolver, seulement sa pince et son marteau. Il te les tend, docile. « Je ne m'en sers pas pour ça. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu agrippes le vieux fusil à un coup qu'il garde sous l'établi. Il tire dessus une fois ; tu lâches prise et t'étales dans la sciure.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Au Smithfield's, il a sorti un canif pour couper sa chique. Tu le lui prends ; il te laisse faire et commande une autre bière.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il pose son marteau et ouvre les mains : pas de holster, pas d'arme. « Je ne tire pas. Bras de fer, si tu veux. »"
+      },
+      {
+        "texte": "Tu insistes, la main sur la crosse. Il sort enfin un vieux fusil de sous l'établi. Ta balle part la première et lui traverse l'épaule.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 20,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Il secoue la tête avec un sourire triste. « Tu vaux mieux que ça. » Les témoins te regardent de travers.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il accepte et se poste au milieu de la rue, un marteau de forge contre ton arme. Il marche vers toi sans s'arrêter. Tu tires ; il tombe à trois pas de tes bottes.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "mort",
+          "prime": 75,
+          "honneur": -4
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Il tient le sabot d'un cheval entre ses genoux, trois clous entre les lèvres, et cloue le fer en quatre coups secs. Le cheval ne bronche pas.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il dort assis devant les braises, le menton sur la poitrine. Même endormi, sa main reste posée sur le manche du marteau.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Sur son avant-bras gauche, sous la suie, on devine un vieux tatouage : deux gants de boxe et le mot CHICAGO."
+      },
+      {
+        "texte": "Il déplace une enclume de cent livres comme on range une chaise. Personne ne l'aide ; personne n'oserait proposer."
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu le suis jusqu'à l'écurie, où il livre une caisse de fers au palefrenier. Ils échangent trois mots ; pour eux, c'est une longue conversation."
+      },
+      {
+        "texte": "Il entre au Smithfield's, s'assoit seul au bout du comptoir et pose son coude sur le bois. Personne ne vient s'y mesurer ce soir.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "À l'aube, il descend au ruisseau, entre torse nu dans l'eau glacée et reste immobile, comme un rocher que le courant contourne.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il s'arrête net au milieu de la rue, sans se retourner. « Je t'entends respirer. » Tu fais semblant d'admirer une vitrine.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu glisses l'épaule sous son bras et pousses de toutes tes forces. Rien. C'est comme vouloir charger l'enclume.",
+        "effets": {
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Il te regarde essayer, amusé, puis te soulève, toi, et te repose un mètre plus loin. « Comme ça. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il est ivre mort au Smithfield's. Il faut toi, le barman et deux clients pour le traîner jusqu'à la forge. Tu en gardes un tour de reins.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -10,
+          "relation": 2
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu croques sa silhouette : épaules d'ours, tablier de cuir, gerbe d'étincelles. Il jette un œil au dessin, grogne, et retourne à l'enclume."
+      },
+      {
+        "texte": "Il vient regarder par-dessus ton épaule et, du bout d'un doigt noir, corrige la courbe du fer à cheval. Le dessin est meilleur.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "À la lueur des braises, tu dessines ses mains posées sur ses genoux : couturées, énormes, étonnamment immobiles.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il fige la pose, marteau levé, l'air grave comme pour un portrait de famille, et ne bouge plus jusqu'à ce que tu le lui dises.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "L'éclair de magnésium le fait sursauter. Il grogne et te montre la porte d'un coup de menton.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il pose sa large paume sur l'objectif. « Pas de portrait. Les portraits finissent sur des affiches. Tu devrais le savoir. »",
+        "si": [
+          "est_recherche"
+        ]
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il prend {outil}, le tourne entre ses doigts énormes, puis hoche la tête une fois. Chez lui, c'est un remerciement appuyé.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il examine {outil}, gratte une trace de rouille avec l'ongle, et te le rend une heure plus tard, remis à neuf. Il refuse ton argent.",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il range {outil} dans un coffre sous l'établi et te tend en échange un fer à cheval poli comme de l'argent. « Chance. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il regarde {outil}, puis la bière dans sa main, comme s'il se demandait lequel des deux le fait rêver. Il le pose sur le comptoir sans un mot.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "acheter@outil": [
+      {
+        "texte": "Il désigne {cible} du menton et lève trois doigts noirs de suie. Tu paies ; il range les pièces dans une boîte à tabac sans compter.",
+        "effets": {
+          "argent": -3
+        }
+      },
+      {
+        "texte": "Il fouille sous l'établi, entre les fers rouillés et les clous tordus, et en ressort {cible}. « Laissé en gage. Jamais revenu. » Deux dollars.",
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Il te tend {cible} et repousse la moitié de tes pièces d'un revers de main. « Ami. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te vend {cible}, mais ses yeux s'attardent un peu trop sur ton visage. En face, sur le panneau, il y a une affiche qui te ressemble.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -3,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il couvrait déjà les braises. Il soupire, te cède {cible} au double du prix pour avoir la paix et ferme la porte derrière toi.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -5
+        }
+      }
+    ],
+    "vendre@outil": [
+      {
+        "texte": "Il soupèse {cible}, le retourne, le gratte de l'ongle. « Ferraille. » Il pose deux dollars sur l'enclume.",
+        "effets": {
+          "argent": 2
+        }
+      },
+      {
+        "texte": "Il examine {cible} avec un soin inattendu, souffle dans le mécanisme, puis compte quatre dollars en pièces graisseuses.",
+        "effets": {
+          "argent": 4
+        }
+      },
+      {
+        "texte": "Il regarde {cible}, puis tes mains. « Volé ? » Il le repousse vers toi sans attendre la réponse.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il t'en donne plus qu'il ne vaut et fait mine de ne pas s'en rendre compte.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 5,
+          "relation": 1
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "Ta balle le touche à l'épaule. Il recule contre l'enclume, porte la main à la plaie, puis charge comme un taureau. Il s'effondre à deux pas de toi, vivant mais à bout.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Le coup claque dans la forge. Le colosse s'abat sur la terre battue, les braises crépitent, et son marteau roule jusqu'à tes pieds.",
+        "effets": {
+          "etat": "mort",
+          "prime": 100,
+          "honneur": -5
+        }
+      },
+      {
+        "texte": "Tu le manques : la balle ricoche sur l'enclume avec un hurlement de métal. Il plonge par la porte de derrière et disparaît vers l'enclos.",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 20,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Touché, il trouve encore la force de te lancer son marteau. Le fer te percute en pleine poitrine et te coupe le souffle.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -25,
+          "etat": "blesse",
+          "prime": 50,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Dans le noir, tu tires sur une silhouette penchée sur les braises. Il pousse un rugissement et se traîne dehors en appelant le shérif.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 50,
+          "honneur": -3
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} vers lui. Il l'attrape au vol d'une main énorme, l'examine, et le pose sur l'établi sans un mot.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lui lances {outil} en pleine tempe. Il chancelle, porte la main à son crâne, et le sang coule dans ses sourcils roux.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu lances {outil} ; ça rebondit sur son tablier de cuir, épais comme une selle. Il lève lentement les yeux vers toi.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il esquive {outil} d'un pas de côté, agile pour sa taille, et te renvoie un fer chauffé à blanc qui te brûle l'avant-bras.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -15
+        }
+      }
+    ],
+    "faire_ferrer_son_cheval": [
+      {
+        "texte": "Il prend le sabot de ton cheval entre ses genoux, arrache le vieux fer, râpe la corne et cloue un fer neuf en quatre coups secs. « Deux dollars. » Ton cheval repart plus léger.",
+        "effets": {
+          "argent": -2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il passe la main sur la jambe de ton cheval et fronce les sourcils. Il extrait un caillou coincé dans la fourchette et le jette dans la rue. « Il boitait. Plus maintenant. »",
+        "effets": {
+          "argent": -2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il regarde l'avis de recherche, puis toi. « Je peux ferrer à l'envers. Les traces partiront dans l'autre sens. Dix dollars. » Les marshals chercheront longtemps.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il rallume la forge en grognant, à la lueur d'une lanterne. Le travail est impeccable, mais le prix a doublé.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -4
+        }
+      },
+      {
+        "texte": "Il ferre ton cheval en lui parlant à voix basse en suédois, plus de mots que tu ne lui en as jamais entendu dire. Il refuse ton argent.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il croise les bras sur le seuil. « Ton cheval, oui. Toi, non. » Il ferre l'animal et te laisse attendre dehors, sous la pluie.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      }
+    ],
+    "commander_une_piece_forgee": [
+      {
+        "texte": "Tu dessines dans la poussière ce que tu veux. Il regarde, efface d'un coup de botte et redessine en mieux. Le lendemain, la pièce t'attend sur l'enclume.",
+        "effets": {
+          "argent": -5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu lui commandes une paire d'éperons. Il les forge en une heure, molettes en étoile, et grave une petite fleur sur chacun sans qu'on lui demande rien.",
+        "effets": {
+          "argent": -6,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu lui demandes une clé taillée pour les serrures du bureau du shérif. Il pose son marteau. « J'ai forgé ces barreaux pour Malloy. » La conversation est terminée.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu lui commandes une croix de fer pour la tombe d'un inconnu. Il la forge en silence, refuse ton argent et la porte lui-même au cimetière.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 2,
+          "honneur": 1
+        }
+      },
+      {
+        "texte": "Il sort d'un coffre un couteau à lame damassée qu'il polissait depuis des mois. « Pour toi. Paie quand tu peux. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -3,
+          "relation": 2
+        }
+      }
+    ],
+    "faire_rafistoler_une_arme": [
+      {
+        "texte": "Il démonte {outil} sur l'établi en un clin d'œil, remplace un ressort fatigué par un autre qu'il forge sur-le-champ, et te le rend huilé. « Un dollar. »",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il regarde {outil} et grogne un seul mot : « Armurier. » Puis, voyant que tu ne bouges pas, il le répare quand même en soupirant.",
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Il redresse, ajuste et équilibre {outil} comme si c'était le sien. Il te le rend sans annoncer de prix ; l'arme semble plus légère dans ta main.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il répare {outil}, mais avant de te le rendre, il pose sa main dessus. « Pas contre des gens d'ici. » Il attend que tu acquiesces.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Il travaille à la lanterne, le nez sur le mécanisme, en marmonnant. Au matin, {outil} est réparé, et lui dort sur l'établi.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -3
+        }
+      }
+    ],
+    "proposer_ses_bras": [
+      {
+        "texte": "Il te tend le manche du soufflet sans un mot. Six heures plus tard, tu as les bras en feu, la chemise noire de suie et deux dollars en poche.",
+        "effets": {
+          "argent": 2,
+          "relation": 1,
+          "sante": -5
+        }
+      },
+      {
+        "texte": "Il te fait décharger les barres de fer arrivées par le train. Il en porte quatre quand tu en portes une, mais à la fin, il te tape sur l'épaule.",
+        "effets": {
+          "argent": 3,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il t'apprend à tremper un fer : trop tôt, il casse ; trop tard, il plie. À la fin, tu forges ton premier clou, et il le garde dans sa poche.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 2,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il désigne les braises couvertes, puis son lit de camp, puis la porte. À cette heure, il n'y a plus de travail, seulement du sommeil.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te détaille de la tête aux pieds et secoue la tête. « Pas de voleur près de mes outils. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "defier_au_bras_de_fer": [
+      {
+        "texte": "Il pose son coude sur l'enclume. Tu serres sa main et pousses de toutes tes forces, les veines du cou gonflées. Il bâille, puis plaque ton poing sur le métal.",
+        "effets": {
+          "sante": -5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Au Smithfield's, les paris pleuvent. Tu tiens dix secondes, le record de la saison. Tu perds quand même, et ta mise avec.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le bras de fer dure si longtemps que le barman finit par déclarer match nul. Pour la première fois, tu le vois sourire.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu tentes de tricher en décollant le coude. Il le voit, te broie les doigts et se lève. « Pas de tricheur à ma table. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "sante": -10,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Par miracle, ou par charité, sa main cède. Il se masse le poignet, te regarde longtemps, puis te tend un fer à cheval tordu en forme de cœur. « Gagné. »",
+        "effets": {
+          "relation": 2
+        }
+      }
+    ],
+    "se_faire_arracher_une_dent": [
+      {
+        "texte": "Il sort de grosses tenailles, les essuie sur son tablier et dit : « Ouvre. » Un craquement, un éclair blanc, et ta dent pourrie est sur l'enclume. Il te tend du whisky pour rincer.",
+        "effets": {
+          "sante": 5,
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il te coince la tête sous son bras comme celle d'un veau. Tu n'as pas le temps de crier ; la dent sort du premier coup, et la douleur s'en va avec elle.",
+        "effets": {
+          "sante": 5,
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il a bu. Il tire, tire encore, et arrache la mauvaise dent. Il regarde la dent saine au bout des tenailles, puis toi. « Hm. Pardon. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -10,
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il ne te fait rien payer et te rend la dent dans un petit étui de fer forgé. « Souvenir. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "sante": 5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Le docteur m'emprunte mes tenailles. Autant venir direct. » C'est la plus longue phrase qu'il t'ait jamais dite. La dent sort proprement.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "sante": 5,
+          "argent": -1
+        }
+      }
+    ]
+  }
+}

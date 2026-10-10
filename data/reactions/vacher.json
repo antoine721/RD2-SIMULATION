@@ -1,0 +1,1094 @@
+{
+  "id": "vacher",
+  "description": "Un garçon dégingandé de dix-sept ans, couvert de taches de rousseur, sous un chapeau trop grand pour lui. Ses éperons rouillés tintent à chaque pas, et il porte à la ceinture un vieux colt qu'il fait tourner autour de son doigt dès qu'on ne le regarde pas.",
+  "personnalite": "Tommy Rourke, orphelin du Kansas, vacher pour l'éleveur Whitmore qui le paie une misère. Naïf, vantard, plein de rêves : il veut devenir un pistolero célèbre dont on chantera le nom. Il admire tous les hommes armés, chasseurs de primes comme hors-la-loi, et se laisse facilement entraîner dans de mauvais coups. Au fond, un brave garçon qui adore les bêtes et a une peur bleue du taureau Lucifer.",
+  "repliques": [
+    "Un jour, on imprimera mon nom dans les journaux de Saint Denis. Tommy le Rapide !",
+    "*fait tourner son colt autour de son doigt et le laisse tomber dans la boue*",
+    "Monsieur Whitmore dit que je suis payé en expérience. Ça se mange pas, l'expérience.",
+    "Vous avez déjà tué un homme, m'sieur ? Ça fait comment ?",
+    "Lucifer a encore cassé une planche. Je l'aime pas, ce taureau. Il me regarde comme le diable.",
+    "Un gars au Smithfield's m'a offert un whisky. Il dit qu'il aurait peut-être du boulot pour moi...",
+    "Yiiiiha ! Allez, les filles, on rentre !",
+    "J'ai un roman à dix sous sur Jesse James. Je l'ai lu quatre fois. Enfin, on me l'a lu."
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 5,
+      "lieu": "ecurie",
+      "activite": "dort dans le foin du grenier de l'écurie"
+    },
+    {
+      "de": 5,
+      "a": 7,
+      "lieu": "enclos",
+      "activite": "trait les vaches en bâillant"
+    },
+    {
+      "de": 7,
+      "a": 12,
+      "lieu": "enclos",
+      "activite": "garde le troupeau et s'entraîne au lasso sur les piquets"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "rue_principale",
+      "activite": "mange un quignon de pain en lorgnant l'armurerie"
+    },
+    {
+      "de": 13,
+      "a": 17,
+      "lieu": "enclos",
+      "activite": "nettoie l'enclos et soigne les bêtes"
+    },
+    {
+      "de": 17,
+      "a": 18,
+      "lieu": "berge",
+      "activite": "mène les vaches boire au ruisseau"
+    },
+    {
+      "de": 18,
+      "a": 19,
+      "lieu": "armurerie",
+      "activite": "contemple les revolvers de la vitrine sans pouvoir se les payer"
+    },
+    {
+      "de": 19,
+      "a": 23,
+      "lieu": "saloon_smithfield",
+      "activite": "traîne au Smithfield's en écoutant les histoires des pistoleros"
+    },
+    {
+      "de": 23,
+      "a": 24,
+      "lieu": "ecurie",
+      "activite": "rentre dormir dans le foin"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il se redresse, le pouce dans la ceinture : « Vous êtes un pistolero, hein ? Ça se voit à votre façon de marcher. Vous en avez tué combien ? »"
+      },
+      {
+        "texte": "Il désigne Lucifer d'un coup de menton : « Celui-là, il a envoyé trois gars chez le docteur ce printemps. Monsieur Whitmore donne cinquante dollars à qui tient dessus. Un jour, je le ferai. »"
+      },
+      {
+        "texte": "Il baisse la voix, l'haleine chargée du whisky du Smithfield's : « Un gars au saloon m'a demandé de garder des chevaux derrière le bureau du shérif, un de ces soirs. Cinq dollars ! Facile, non ? »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Ses yeux s'écarquillent : « C'est vous, sur l'avis de recherche ! Je dirai rien, juré craché. Vous voulez pas d'un associé ? »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il ôte son grand chapeau : « On dit que vous avez aidé des gens. Moi aussi je veux être un héros, mais monsieur Whitmore me laisse que le crottin. »",
+        "si": [
+          "honneur_haut"
+        ]
+      },
+      {
+        "texte": "Il accourt vers toi : « J'ai attrapé un veau au lasso du premier coup ! Grâce à vous ! » Il rayonne comme un sou neuf.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il porte deux doigts à son chapeau, comme il l'a vu faire aux pistoleros : « M'sieur. » Puis il rougit de fierté."
+      },
+      {
+        "texte": "Il lâche sa fourche, qui tombe dans le fumier, pour te faire de grands signes : « Belle journée pour le bétail, hein ? »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il agite son chapeau à bout de bras : « Hé ! C'est mon ami le pistolero ! » Toutes les vaches tournent la tête vers toi.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te salue avec un respect mêlé de terreur, puis jette un coup d'œil inquiet vers le bureau du shérif.",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il hésite, puis lève timidement la main. On voit qu'il ne sait pas s'il doit t'admirer ou te craindre.",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Il devient rouge jusqu'aux oreilles et pose la main sur son vieux colt : « Retirez ça ! » Mais sa main tremble.",
+        "effets": {
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il te répond en prenant une voix grave : « T'as de la chance que j'aie pas le temps, étranger. » Puis il file se cacher derrière les vaches.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Devant l'éleveur qui ricane, il perd la face et te lance une motte de boue. Elle te rate et s'écrase sur le gilet de brocart de Whitmore.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Il bafouille en reculant : « J'veux pas d'histoires avec vous, m'sieur. J'voulais juste... pardon. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il croit que tu plaisantes et éclate de rire : « Ha ! Elle est bonne ! Je la ressortirai au Smithfield's ! »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Il recule jusqu'à la barrière, la gorge serrée : « Je... je dirai rien à personne, quoi que vous vouliez ! »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il dégaine son vieux colt, mais l'arme lui glisse des doigts. Il la ramasse, la rengaine et lève les mains en silence.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il s'enfuit à toutes jambes vers l'écurie, en perdant son chapeau en route.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2,
+          "etat": "en_fuite"
+        }
+      },
+      {
+        "texte": "Il te regarde, déçu plus qu'effrayé : « Je croyais que vous étiez un des bons. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": -2,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il crâne, la voix qui déraille : « Vous me faites pas peur ! J'ai déjà vu Lucifer en colère, moi ! »",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Il lève les mains si haut que son chapeau tombe : « Pitié ! J'ai que deux dollars et un sucre d'orge ! »",
+        "effets": {
+          "relation": -3,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il dégaine son vieux colt par réflexe, voit {outil} pointé sur lui et le laisse tomber dans la boue.",
+        "effets": {
+          "relation": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il crie si fort que l'éleveur accourt, derringer au poing : « Laisse mon vacher tranquille, vaurien ! Il ne m'a pas encore remboursé son chapeau ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -3,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Il regarde {outil}, puis tes yeux : « Vous allez pas tirer. Vous êtes pas comme ça. » Il a raison, et ça te vexe.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il fond en larmes : « Vous êtes avec le gars du Smithfield's ? Je lui ai dit que je viendrais tenir les chevaux ! Je viendrai, promis ! »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il retourne {outil} entre ses mains comme un trésor : « Pour moi ? Personne m'a jamais rien donné ! »",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il fourre {outil} dans sa sacoche avant que l'éleveur le voie : « Il me le confisquerait. Il dit que je dois rien posséder qui se trait pas. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il serre {outil} contre sa poitrine : « Je le garderai toute ma vie. Quand je serai célèbre, je dirai que c'est vous qui me l'avez donné. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il accepte {outil} en jetant des regards inquiets autour de lui : « C'est pas volé, au moins ? Monsieur Whitmore me pendrait. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "detrousser": [
+      {
+        "texte": "Tu glisses la main dans sa poche pendant qu'il trait : trois pièces, un sucre d'orge et un roman à dix sous sur Jesse James, corné à toutes les pages.",
+        "effets": {
+          "argent": 1,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il sent ta main et pivote : « Hé ! Au voleur ! Monsieur Whitmore ! » L'éleveur se retourne en te désignant de sa canne.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -1,
+          "relation": -3,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Endormi dans le foin de l'écurie, il ne sent rien. Sa bourse ne contient que deux dollars : toute sa paie du mois.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 2,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il te surprend, la main dans sa poche. Il ne dit rien, mais ses yeux se remplissent de larmes, et il s'en va sans un mot.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -4
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Il s'écroule dans le foin comme un sac ; son grand chapeau roule jusqu'aux sabots d'une vache, qui le renifle.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "L'éleveur hurle de l'autre bout de l'enclos : « Hé ! C'est mon vacher, ça ! Qui va traire, maintenant ? »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il glisse contre la barrière sans un bruit. Seul Lucifer a vu la scène ; il gratte la terre en soufflant.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il esquive maladroitement et te mord la main avant de tomber, sonné.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "sante": -5,
+          "prime": 5
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Il pousse un cri d'enfant et tombe en se tenant le flanc : « J'voulais juste être un cow-boy... »",
+        "effets": {
+          "etat": "blesse",
+          "prime": 15,
+          "honneur": -3,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Il s'écroule dans la paille, les yeux ouverts sur le ciel. Son vieux colt n'est même pas sorti de l'étui.",
+        "effets": {
+          "etat": "mort",
+          "prime": 100,
+          "honneur": -5,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Il lâche tout et court se cacher parmi les vaches en appelant à l'aide. L'éleveur file chercher Malloy.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 15,
+          "honneur": -2,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Il dégaine enfin son vieux colt et tire au jugé : la balle te frôle la hanche avant que tu ne l'abattes d'un revers.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "sante": -10,
+          "prime": 10,
+          "honneur": -1
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Ton lasso le cueille en pleine course. Il roule dans la boue, puis se relève en riant : « Joli lancer ! Vous m'apprenez ? »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu le traînes sur quelques mètres. Il se relève couvert de boue, vexé jusqu'à l'os.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "L'éleveur applaudit de loin : « Enfin quelqu'un qui sait se servir d'une corde ! Tommy, prends-en de la graine ! »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Le nœud se resserre autour de ses bras. Il se débat en jurant comme un charretier et finit le nez dans l'auge des vaches.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -2,
+          "etat": "ligote"
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu lui arraches son vieux colt sans effort. Le barillet est vide : il n'a jamais eu de quoi se payer des balles.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Le colt tombe dans la boue sous les rires de l'éleveur. Tommy rougit jusqu'aux oreilles.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il tente de dégainer, tu lui tords le poignet. Le colt vole dans le fumier ; il le contemple, humilié, et sa colère retombe.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1,
+          "etat": "normal"
+        }
+      },
+      {
+        "texte": "Il te tend son arme lui-même, penaud : « Vous avez raison, je vais finir par me tirer dans le pied. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu croques sa silhouette maigre, son chapeau trop grand et ses éperons rouillés : un gamin qui joue au cow-boy, et qui en est pourtant un."
+      },
+      {
+        "texte": "Il se penche sur {outil} : « Ajoutez-moi une moustache. Et un deuxième revolver. Et Lucifer à mes pieds, vaincu. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il prend la pose, main sur le colt, regard dur, et tient trois secondes avant d'éclater de rire.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "À la lueur des lampes du Smithfield's, tu le dessines accoudé au comptoir, buvant les paroles d'un homme dont le visage est sur le panneau des avis de recherche.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il blêmit, puis redresse les épaules : « D'accord. Au coucher du soleil. » Mais au moment de dégainer, il lâche son colt et s'enfuit en pleurant.",
+        "effets": {
+          "etat": "en_fuite",
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il dégaine avec une vitesse surprenante, mais son vieux colt s'enraye. Ta balle lui traverse l'épaule ; il roule dans la paille en hurlant.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu tires le premier, mais tu vises le chapeau : il s'envole, troué. Le gamin tombe à genoux, vivant, et guéri d'un coup de ses rêves de gloire.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il dégaine trop tard. Ta balle le cueille au ventre ; il meurt dans la boue en appelant sa mère.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "etat": "mort",
+          "prime": 50,
+          "honneur": -4,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "L'éleveur s'interpose en beuglant : « Personne ne tue mon vacher sur mes terres ! Il me coûte trop peu pour que je le remplace ! »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing lui fend la lèvre. Il recule, ahuri : « Mais... qu'est-ce que j'ai fait ? »",
+        "effets": {
+          "etat": "hostile",
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il bascule dans l'auge des vaches. L'éleveur rit à s'en étouffer ; le gamin se relève, trempé et humilié.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Il te rend le coup d'un crochet qui te sonne : à force de porter des seaux, il a de la force dans les bras.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -10,
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il s'écroule contre la porte de l'écurie, le nez en sang, et se recroqueville dans le foin.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1,
+          "relation": -3
+        }
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} ; il l'évite d'un bond de cabri et te nargue : « Raté ! Vous lancez comme ma grand-mère ! »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lances {outil}, qui l'atteint à l'épaule. Il pousse un cri et va se cacher derrière une vache.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "Tu lances {outil} ; il plonge dans le fumier pour l'éviter, et l'éleveur hurle qu'on abîme son personnel.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il attrape {outil} au vol, presque par réflexe, et te le renvoie. Tu l'évites de justesse, impressionné malgré toi.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu lui attaches les poignets. Il ne se débat même pas : « C'est comme ça qu'on attache un veau, vous savez ? Mais vous faites le nœud à l'envers. »",
+        "effets": {
+          "etat": "ligote",
+          "prime": 5,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Tu le ficelles dans le foin de l'écurie. Il gémit qu'il doit traire les vaches à cinq heures, sinon Whitmore le renverra.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "honneur": -1,
+          "relation": -3
+        }
+      },
+      {
+        "texte": "L'éleveur assiste à la scène sans bouger : « Si tu le gardes, ne le nourris pas trop. » Puis il s'éloigne en fumant.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 5,
+          "honneur": -1,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il se débat comme un veau au marquage et te décoche un coup de botte dans le tibia avant que le nœud ne se serre.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "sante": -5,
+          "prime": 5
+        }
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Il s'entraîne à dégainer face à un piquet de clôture, en murmurant « Tommy le Rapide » à chaque fois."
+      },
+      {
+        "texte": "Ses bottes sont percées et ses éperons rouillés, mais il astique chaque jour le vieux colt qu'il porte à la ceinture."
+      },
+      {
+        "texte": "Chaque fois que Lucifer souffle de l'autre côté de la barrière, il sursaute et pose la main sur son arme."
+      },
+      {
+        "texte": "Il trait une vache en chantonnant une complainte de cow-boy, et la gratte entre les cornes quand l'éleveur ne regarde pas.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Au Smithfield's, il boit les paroles d'un homme qui lui paie des whiskys : le même visage que sur le panneau, prime de 75 dollars.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Il se fige, main sur le colt, mâchoire serrée, dans la pose des affiches de Buffalo Bill : « Vous me l'enverrez ? Je l'accrocherai dans l'écurie ! »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le magnésium l'éblouit ; il fait un pas en arrière et s'étale de tout son long dans le fumier.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Une vache lui lèche l'oreille juste au moment de l'éclair. Il est furieux ; toi, tu tiens la photographie de l'année.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il insiste pour poser à côté de toi : « Quand je serai célèbre, ça vaudra une fortune ! »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Il est léger comme une plume. Il gigote en criant : « Lâchez-moi ! Les vaches vont me voir ! »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu portes le gamin, ivre du whisky du Smithfield's, jusqu'au foin de l'écurie. Il marmonne « Tommy le Rapide » dans son sommeil.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "L'éleveur te regarde passer avec son vacher sur l'épaule : « Si tu l'emmènes, ramène-le avant la traite. »",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il rit aux éclats, perché sur ton épaule : « Plus haut ! Je vois tout l'enclos ! Je vois même la prison ! »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu le suis de l'enclos à l'armurerie, où il reste une heure le nez collé à la vitrine sans rien acheter."
+      },
+      {
+        "texte": "Il se retourne soudain : « Vous me suivez ? Vous êtes chasseur de primes ? J'ai rien fait, moi ! »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il mène les vaches au ruisseau en sifflotant, puis lance des cailloux sur une boîte de conserve en faisant « pan ! » à chaque fois.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il se faufile au Smithfield's par la porte de derrière et rejoint un O'Driscoll attablé dans l'ombre. Ils parlent bas, de chevaux et de prison.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La balle l'atteint à la jambe. Il tombe dans le fumier en hurlant ; son grand chapeau roule loin de lui.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 20,
+          "honneur": -3,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Il meurt sans comprendre, la main sur un colt qu'il n'a jamais su dégainer. Les vaches s'écartent du corps en meuglant.",
+        "effets": {
+          "etat": "mort",
+          "prime": 100,
+          "honneur": -5,
+          "relation": -5
+        }
+      },
+      {
+        "texte": "Tu le manques. Il fuit en zigzag comme un lièvre jusqu'au bureau du shérif en criant à l'assassin.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 15,
+          "honneur": -2,
+          "relation": -4
+        }
+      },
+      {
+        "texte": "Il tire en même temps que toi, à l'aveugle. Sa balle te brûle le bras ; la tienne le couche dans la paille.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "mort",
+          "sante": -15,
+          "prime": 50,
+          "honneur": -2
+        }
+      }
+    ],
+    "enseigner_tir": [
+      {
+        "texte": "Tu lui montres comment dégainer sans pencher le canon. Au dixième essai, il réussit et pousse un cri de joie qui fait détaler les vaches.",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il n'a pas de balles. Tu lui en donnes une poignée ; il te remercie comme si tu lui offrais de l'or.",
+        "effets": {
+          "argent": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Vous alignez des boîtes de conserve sur la barrière. Il en touche une sur six, puis crève par erreur le seau de lait. L'éleveur hurle depuis la rue.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il fait trop noir pour viser. Une balle perdue fait voler en éclats une lanterne de l'écurie ; le palefrenier sort en chemise de nuit, fou de rage.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu lui apprends à tirer, mais surtout quand ne pas tirer. Il t'écoute comme on écoute le pasteur : « Alors un vrai pistolero, il dégaine que pour protéger les gens ? »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu lui apprends à tirer dans le dos et à viser les jambes des chevaux. Il retient tout, les yeux brillants.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": 2
+        }
+      }
+    ],
+    "raconter_exploits": [
+      {
+        "texte": "Il t'écoute bouche bée, oubliant le seau de lait qui déborde : « Et après ? Vous l'avez eu, le bandit ? »",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il t'écoute d'un air sceptique : « Le gars du Smithfield's en raconte des meilleures. Il dit qu'il a braqué un train à lui tout seul. »"
+      },
+      {
+        "texte": "Tu racontes comment tu as protégé une diligence. Il serre les poings : « Moi aussi je veux faire ça. Protéger les gens. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Tu racontes tes braquages. Il boit tes paroles et les répète à voix basse, comme une prière. Le pasteur aurait des choses à dire.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il désigne le panneau des avis de recherche : « Alors c'est vrai, c'est vous ? Votre prime, elle grossit chaque semaine ! Vous êtes une légende ! »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Assis sur la barrière sous les étoiles, il t'écoute jusqu'à s'endormir, la tête sur ton épaule.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ],
+    "entrainer_mauvais_coup": [
+      {
+        "texte": "Ses yeux brillent : « Un vrai coup, comme Jesse James ? J'en suis ! » Il t'aide à faire sortir deux vaches de l'enclos à la nuit tombée, et vous les revendez à un acheteur peu regardant.",
+        "effets": {
+          "argent": 15,
+          "honneur": -3,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il refuse, pour une fois : « J'ai déjà promis au gars du Smithfield's de l'aider pour un coup. Faut pas que je me disperse. »"
+      },
+      {
+        "texte": "Il jette un regard nerveux vers l'éleveur : « Pas ici, pas maintenant. Ce soir, derrière l'écurie. » Il en tremble d'excitation.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "honneur": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il fait le guet pendant que tu forces la porte d'une grange, mais il siffle si fort au premier bruit que tout le quartier se réveille. Vous fuyez les mains vides.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il hésite : « Vous ? Mais vous êtes un des bons... » Il te suit quand même, la mort dans l'âme, et tu sens que tu viens d'abîmer quelque chose en lui.",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": -2,
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il accepte avec un enthousiasme qui fait peine à voir. Le lendemain, Malloy le cherche dans toute la ville, et ta prime enfle d'autant.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "prime": 10,
+          "honneur": -3,
+          "relation": 1
+        }
+      }
+    ],
+    "remettre_droit_chemin": [
+      {
+        "texte": "Tu lui racontes comment finissent les pistoleros : au bout d'une corde, ou chez le croque-mort. Il baisse la tête : « Le gars du Smithfield's m'a promis cinq dollars... » Il jure de ne pas y aller.",
+        "effets": {
+          "honneur": 2,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il hausse les épaules : « Facile à dire. Vous, vous avez un revolver qui marche et une réputation. Moi j'ai que des vaches. »"
+      },
+      {
+        "texte": "Tu le tires par le col hors du Smithfield's. Il proteste, vomit son whisky dans la boue, puis finit par te remercier.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il ricane : « C'est vous qui me dites ça ? Avec la réputation que vous avez ? »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il t'écoute en silence, puis te tend la main : « D'accord. Je ferai les choses bien. Mais vous m'apprendrez le lasso comme un champion. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 3
+        }
+      },
+      {
+        "texte": "Il avoue tout : l'O'Driscoll du Smithfield's veut qu'il tienne les chevaux pendant l'évasion du prisonnier. Il te supplie de ne rien dire à Malloy.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "honneur": 1,
+          "relation": 2
+        }
+      }
+    ],
+    "defier_lasso": [
+      {
+        "texte": "Vous visez chacun cinq piquets de clôture. Il en attrape cinq, toi trois. Il se pavane devant les vaches comme un champion du Texas.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu attrapes un veau au galop du premier coup. Il en reste muet, puis te supplie de lui apprendre ce geste du poignet.",
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "L'éleveur parie un dollar sur toi. Ton nœud coulant attrape le gamin par les pieds au lieu du piquet ; tout l'enclos éclate de rire.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Dans le noir, son lasso se prend dans les cornes de Lucifer. Le taureau charge la barrière ; vous fuyez tous les deux en hurlant de rire.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "sante": -5,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il te laisse gagner, et ça se voit : « Fallait bien que le grand pistolero gagne quelque chose », dit-il avec un clin d'œil.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      }
+    ]
+  }
+}

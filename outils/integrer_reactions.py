@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -48,11 +49,18 @@ def _par_categorie(entrees: dict, champ: str) -> list[list[tuple[str, object]]]:
     return list(groupes.values())
 
 
+def _ecrire(chemin: Path, texte: str) -> None:
+    """Écriture atomique : les lecteurs ne voient jamais un fichier à moitié écrit."""
+    tmp = chemin.with_suffix(chemin.suffix + ".tmp")
+    tmp.write_text(texte, encoding="utf-8")
+    os.replace(tmp, chemin)
+
+
 def ecrire_verbes(verbes: dict, chemin: Path = FICHIER_VERBES) -> None:
     groupes = _par_categorie(verbes, "categorie")
     if "_doc" in verbes:
         groupes.insert(0, [("_doc", verbes["_doc"])])
-    chemin.write_text(_objet(groupes, "  ") + "\n", encoding="utf-8")
+    _ecrire(chemin, _objet(groupes, "  ") + "\n")
 
 
 def ecrire_ville(ville: dict, chemin: Path = VILLE_PAR_DEFAUT) -> None:
@@ -63,7 +71,7 @@ def ecrire_ville(ville: dict, chemin: Path = VILLE_PAR_DEFAUT) -> None:
     )
     lieux = '  "lieux": ' + _objet([list(ville["lieux"].items())], "    ")
     entites = '  "entites": ' + _objet(_par_categorie(ville["entites"], "categorie"), "    ")
-    chemin.write_text("{\n" + ",\n\n".join([entete, lieux, entites]) + "\n}\n", encoding="utf-8")
+    _ecrire(chemin, "{\n" + ",\n\n".join([entete, lieux, entites]) + "\n}\n")
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -107,7 +115,7 @@ def main(argv: list[str] | None = None) -> int:
     for chemin, donnees in modifies:
         donnees.pop("nouveaux_verbes", None)
         donnees.pop("nouveaux_tags", None)
-        chemin.write_text(json.dumps(donnees, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        _ecrire(chemin, json.dumps(donnees, ensure_ascii=False, indent=2) + "\n")
     return 0
 
 

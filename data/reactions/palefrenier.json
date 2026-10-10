@@ -1,0 +1,1185 @@
+{
+  "id": "palefrenier",
+  "description": "Un homme sec aux jambes arquées, la cinquantaine tannée, chemise de flanelle délavée et bretelles de cuir rapiécées. Des brins de paille dans la barbe grise, une chique qui gonfle sa joue, et des mains énormes, couturées de cicatrices de morsures.",
+  "personnalite": "Hiram Toller, palefrenier de Valentine depuis vingt ans. Bourru, taiseux, méfiant envers les hommes, d'une douceur infinie avec les chevaux, à qui il parle à voix basse et par leur nom. Pendant la guerre, il soignait les chevaux de la cavalerie : il dit avoir vu mourir plus de chevaux que d'hommes, et que ce sont eux qu'il pleure. Honnête en affaires, intraitable avec ceux qui maltraitent une bête. Il dort au grenier à foin et cache ses économies dans une boîte à café, sous la paille du box du Morgan, le seul endroit où personne n'ose mettre les pieds.",
+  "repliques": [
+    "« Un cheval, ça ment pas. Les hommes, si. »",
+    "« Pension : un dollar la nuit. Foin, avoine et coup de brosse compris. »",
+    "*chuchote quelque chose à l'oreille d'une jument en lui grattant le garrot*",
+    "« Le Morgan ? Du cœur à revendre. Mais personne l'a encore tenu plus de dix secondes. »",
+    "*crache un long jet de chique dans la paille*",
+    "« Le gris attaché devant le Smithfield's… une marque brûlée par-dessus une autre. Ça sent le vol à plein nez. »",
+    "« Qui a encore laissé un seau au milieu de l'allée ? »",
+    "« Une pomme, pas trois. Tu vas me le rendre malade, ton canasson. »",
+    "« Un Irlandais m'a demandé deux chevaux sellés derrière l'écurie, pour une nuit prochaine. J'aime pas ça. »"
+  ],
+  "routine": [
+    {
+      "de": 0,
+      "a": 5,
+      "lieu": "ecurie",
+      "activite": "dort au grenier à foin, sa vieille carabine de cavalerie à portée de main"
+    },
+    {
+      "de": 5,
+      "a": 6,
+      "lieu": "berge",
+      "activite": "mène les chevaux en pension boire au ruisseau, en file indienne"
+    },
+    {
+      "de": 6,
+      "a": 12,
+      "lieu": "ecurie",
+      "activite": "distribue le foin, cure les box et brosse les chevaux"
+    },
+    {
+      "de": 12,
+      "a": 13,
+      "lieu": "ecurie",
+      "activite": "mange des haricots froids, assis sur un seau retourné"
+    },
+    {
+      "de": 13,
+      "a": 14,
+      "lieu": "forge",
+      "activite": "parle fers et sabots avec le maréchal-ferrant, presque sans un mot"
+    },
+    {
+      "de": 14,
+      "a": 15,
+      "lieu": "magasin_general",
+      "activite": "marchande les sacs d'avoine avec l'épicier, qui ne lâche jamais un cent"
+    },
+    {
+      "de": 15,
+      "a": 18,
+      "lieu": "enclos",
+      "activite": "fait travailler le Morgan à la longe, loin du taureau"
+    },
+    {
+      "de": 18,
+      "a": 20,
+      "lieu": "ecurie",
+      "activite": "soigne les chevaux et accueille les voyageurs qui arrivent"
+    },
+    {
+      "de": 20,
+      "a": 21,
+      "lieu": "saloon_keane",
+      "activite": "boit une bière, seul, au bout du comptoir"
+    },
+    {
+      "de": 21,
+      "a": 24,
+      "lieu": "ecurie",
+      "activite": "fait sa ronde à la lanterne en parlant aux chevaux, puis monte se coucher"
+    }
+  ],
+  "reactions": {
+    "parler": [
+      {
+        "texte": "Il ne lève pas les yeux de la jument qu'il brosse : « Si c'est pour causer, les chevaux sont meilleure compagnie. Si c'est pour une pension, c'est un dollar. »"
+      },
+      {
+        "texte": "Il crache sa chique et s'essuie la moustache du revers de la main : « Le gris attaché devant le Smithfield's, t'as vu sa croupe ? Une marque brûlée par-dessus une autre. Un cheval volé, je te dis. »"
+      },
+      {
+        "texte": "Il pose sa fourche et sort deux tasses ébréchées : « Assieds-toi. Un Irlandais m'a payé d'avance pour deux chevaux sellés derrière l'écurie, une de ces nuits. Ton shérif devrait le savoir. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il garde sa fourche pointée vers ton ventre : « T'as rien à faire ici. Sors de mon écurie avant que je te ferre comme un mulet. »",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il apparaît en haut de l'échelle du grenier, en caleçon long, une lanterne à la main : « Les chevaux dorment. Moi aussi, d'habitude. Qu'est-ce que tu veux ? »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te jauge longuement : « J'ai vu ta tête sur le panneau. Je m'en fiche, tant que tu traites bien ta bête et que tu paies. Mais Malloy passe ici tous les matins. »",
+        "si": [
+          "est_recherche"
+        ]
+      },
+      {
+        "texte": "Il hoche la tête, presque aimable : « Paraît que t'es un type correct. Ton cheval aussi le dit : regarde comme il te suit des yeux. Ça trompe pas. »",
+        "si": [
+          "honneur_haut"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« J'ai entendu parler de toi. » Il tapote l'encolure du Morgan sans te quitter des yeux. « Si j'apprends que t'as levé la main sur un cheval, je te vends plus même un clou. »",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "saluer": [
+      {
+        "texte": "Il touche le bord de son chapeau d'un doigt, sans un mot, et retourne à son seau d'avoine."
+      },
+      {
+        "texte": "« Hm. » C'est tout. Venant de lui, c'est presque chaleureux."
+      },
+      {
+        "texte": "Il lève sa main énorme et un rare sourire fend sa barbe : « Hiram. Pas monsieur, Hiram. Et toi, t'es le seul client qui sait tenir une bride. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il fait semblant de ne pas te voir et pousse exprès une brouette de crottin juste devant tes bottes.",
+        "si": [
+          "hostile"
+        ]
+      },
+      {
+        "texte": "Il grogne depuis le grenier, sans même se montrer : « On salue pas à cette heure. On dort. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il te salue d'un coup de menton, puis désigne ton cheval : « Lui, je le salue. Toi, on verra. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "provoquer": [
+      {
+        "texte": "Tu lui lances que ses chevaux sentent meilleur que lui. Il te fixe, mâche, crache : « Eux, au moins, ils ont une excuse. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu te moques de ses jambes arquées. Il s'approche jusqu'à ce que tu sentes son haleine de tabac : « Vingt ans en selle, gamin. Toi, tu tiendrais pas vingt secondes sur le Morgan. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il lâche sa fourche et retrousse ses manches : « Dehors. Toi et moi, dans la rue. Je veux pas qu'un coup perdu blesse un cheval. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "« Des types comme toi, j'en ai vu crever par dizaines pendant la guerre. Sans regret. » Il te tourne le dos, ce qui chez lui est la pire des insultes.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il éclate d'un rire rocailleux qui fait sursauter une jument : « Continue comme ça et je te fais dormir dans le box du Morgan. »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "intimider": [
+      {
+        "texte": "Tu t'approches en jouant de ta carrure. Il ne recule pas d'un pouce : « J'ai pris des ruades de mustangs qui pesaient trois fois toi. Essaie encore. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu l'attrapes par le col. Il regarde ta main, puis toi : « Lâche-moi, ou le Morgan te mange les doigts. Il est juste derrière toi. » Un souffle chaud dans ta nuque le confirme.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Ton nom sur le panneau fait son effet : il lève les mains, sans peur mais sans folie. « Prends ce que tu veux. Mais tu touches pas aux chevaux. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il recule vers la vieille carabine accrochée au-dessus d'un box : « Je sais qui t'es. Tu veux un cheval ? Prends le gris de l'O'Driscoll, devant le Smithfield's. Pas les miens. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Dans la pénombre, il ne voit que ta silhouette et ton arme. Sa voix tremble pour la première fois : « Y a pas d'argent ici… presque pas… » Son regard file malgré lui vers le box du Morgan.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -2
+        }
+      }
+    ],
+    "menacer": [
+      {
+        "texte": "Tu pointes {outil} sur lui. Il lève lentement les mains, sa chique immobile : « Doucement. Tu fais peur aux chevaux. » Derrière lui, six bêtes piétinent dans leurs box.",
+        "effets": {
+          "relation": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Face à {outil}, il ne bronche pas : « J'ai vu Antietam, gamin. Il m'en faut plus. » Il crache à tes pieds.",
+        "effets": {
+          "relation": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il profite de ton hésitation pour décrocher sa carabine de cavalerie. Vous voilà face à face, chacun son arme, au milieu des hennissements affolés.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "hostile",
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il recule contre une stalle, livide : « Prends le cheval que tu veux et va-t'en. Mais pas le Morgan : il te tuerait avant le pont. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "relation": -3,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Un vacher qui passait voit {outil} braqué sur le palefrenier et détale vers le bureau du shérif en criant à l'aide.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -2,
+          "prime": 10
+        }
+      },
+      {
+        "texte": "Il te regarde, incrédule, plus blessé que par une balle : « Toi ? Après tout ça ? » Il te tourne le dos et retourne à ses chevaux.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": -4
+        }
+      }
+    ],
+    "attaquer": [
+      {
+        "texte": "Tu te jettes sur lui avec {outil}. Il pare avec le manche de sa fourche, mais le coup l'atteint au bras ; il s'effondre contre un box en jurant.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 15,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il esquive avec une agilité de vieux cavalier, te balance un seau d'eau glacée au visage et détale vers la rue : « Shérif ! Shérif ! »",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Dans le noir de l'écurie, ton coup le surprend au pied de l'échelle du grenier. Il ne se relève pas. Les chevaux, eux, hennissent jusqu'à l'aube.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "mort",
+          "prime": 75,
+          "honneur": -5
+        }
+      },
+      {
+        "texte": "Il t'attendait : la crosse de sa carabine te cueille au menton avant que {outil} ne le touche. Tu vacilles, le goût du sang dans la bouche.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -20,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Le combat déborde dans la rue principale. Tu le laisses en sang dans la boue devant la moitié de Valentine ; l'adjoint arrive déjà en courant, la main sur son arme.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 25,
+          "honneur": -3
+        }
+      }
+    ],
+    "tirer": [
+      {
+        "texte": "La détonation fait cabrer tous les chevaux de l'écurie. Le palefrenier s'effondre dans la paille, une main sur le ventre, les yeux tournés vers ses bêtes plutôt que vers toi.",
+        "effets": {
+          "etat": "mort",
+          "prime": 100,
+          "honneur": -5
+        }
+      },
+      {
+        "texte": "Ta balle lui traverse l'épaule. Il roule derrière un ballot de foin et gémit : « Pas les chevaux… tire pas vers les chevaux… »",
+        "effets": {
+          "etat": "blesse",
+          "prime": 40,
+          "honneur": -3
+        }
+      },
+      {
+        "texte": "Tu tires, il plonge ; la balle se fiche dans une poutre. Il file par la porte de derrière, et tu l'entends hurler le nom de Malloy jusqu'au bureau du shérif.",
+        "effets": {
+          "etat": "en_fuite",
+          "prime": 25,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il a eu le temps d'épauler sa vieille carabine. Les deux coups partent ensemble : il tombe à genoux, et une brûlure te déchire la cuisse.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "sante": -35,
+          "prime": 40,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Un éclair dans l'obscurité, un cri étouffé au grenier, puis plus rien que les chevaux qui ruent contre les planches. Personne ne t'a vu, mais tout Valentine a entendu.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "mort",
+          "prime": 50,
+          "honneur": -5
+        }
+      },
+      {
+        "texte": "Encore un mort sur ta liste. Il tombe au milieu de l'allée ; le Morgan, affolé, défonce sa porte et file au grand galop dans la rue principale.",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "mort",
+          "prime": 150,
+          "honneur": -5
+        }
+      }
+    ],
+    "frapper": [
+      {
+        "texte": "Ton poing l'atteint à la mâchoire. Il recule d'un pas, se masse la joue, et te rend le coup, sec comme un sabot de mule.",
+        "effets": {
+          "sante": -10,
+          "etat": "hostile",
+          "relation": -2,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il encaisse et tombe sur le derrière dans la paille fraîche. Il y reste, à te fixer : « T'as fini ? Alors sors. »",
+        "effets": {
+          "relation": -3,
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu le cueilles à la sortie du saloon de Keane. Il s'écroule contre l'abreuvoir, sonné par le coup autant que par sa bière.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Il esquive ton crochet d'un pas de côté et te plante son poing calleux dans l'estomac. Tu te plies en deux au milieu du crottin.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -15,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Bagarre devant l'écurie ! Le vacher et deux badauds accourent pour vous séparer, et l'adjoint note ton visage dans un petit carnet.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      }
+    ],
+    "assommer": [
+      {
+        "texte": "Un coup sec derrière l'oreille : il s'affale dans la litière. Une jument vient aussitôt lui renifler les cheveux, inquiète.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Le premier coup ne suffit pas ; il titube, s'agrippe à une bride, puis s'effondre en entraînant une selle dans sa chute.",
+        "effets": {
+          "etat": "blesse",
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu le surprends au pied de l'échelle du grenier. Il s'écroule sans un bruit ; seule sa lanterne roule dans la paille, et tu l'étouffes de justesse du talon.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il te voit venir et se retourne, fourche brandie. Le coup que tu voulais lui donner te vaut une dent de fourche dans l'avant-bras.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -15,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Un témoin crie dans la rue au moment où il tombe. Tu as quelques secondes avant que tout Valentine vienne voir.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -1
+        }
+      }
+    ],
+    "attraper_au_lasso": [
+      {
+        "texte": "Ta corde siffle et se resserre sur ses épaules. Il plie les genoux et tire d'un coup sec : « J'ai attrapé des chevaux sauvages avant ta naissance. » Tu manques de tomber.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "La boucle de {outil} le prend à la taille et le couche dans la boue. Il jure comme un muletier en se débattant.",
+        "effets": {
+          "relation": -2,
+          "prime": 5,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu l'attrapes au lasso au milieu de la rue principale, comme un veau au marquage. Les rires des vachers de l'enclos le blessent plus que la corde.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "relation": -3,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Il se fige dans la boucle, puis éclate de rire : « Pas mal ! Le Morgan, faudra le prendre comme ça. Mais plus bas, aux antérieurs. »",
+        "si": [
+          "ami"
+        ]
+      },
+      {
+        "texte": "Il empoigne la corde à pleines mains et tire : c'est toi qui te retrouves à plat ventre dans le crottin. « La prochaine fois, prends un gibier à ta taille. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "sante": -5
+        }
+      }
+    ],
+    "ligoter": [
+      {
+        "texte": "Tu lui lies poignets et chevilles avec {outil}. Il ne se débat même pas : « Les chevaux ont faim à six heures. Pense à eux, au moins. »",
+        "effets": {
+          "etat": "ligote",
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu le ficelles contre un poteau de box. Il crache sa chique et te maudit sur trois générations, avec un vocabulaire de cavalerie.",
+        "effets": {
+          "etat": "ligote",
+          "honneur": -1,
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Tu le ligotes dans son sommeil, au grenier. Il se réveille saucissonné dans le foin et hurle si fort que tous les chevaux se mettent à hennir en chœur.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Ficelé au milieu de l'allée, il te regarde partir : « Ils te pendront. Pas pour moi, mais ils te pendront. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "etat": "ligote",
+          "prime": 10,
+          "honneur": -1
+        }
+      }
+    ],
+    "desarmer": [
+      {
+        "texte": "Tu lui arraches sa fourche des mains et la jettes sur le tas de fumier. Il serre les poings : « C'était ma meilleure. »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "D'un geste vif, tu décroches la vieille carabine accrochée au-dessus du box. Il blêmit : « Fais attention, elle part toute seule depuis 65. Et rends-la, elle a une histoire. »",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il te tenait en joue ; tu lui tords la carabine des mains et elle tombe dans un seau d'eau. Désarmé mais pas vaincu : « Tu sortiras pas d'ici à cheval. »",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "hostile",
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Tu lui prends son cure-pied des mains, pour rire. Il soupire : « Rends ça. Avec quoi je cure les sabots du Morgan, moi ? Avec tes dents ? »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "duel": [
+      {
+        "texte": "Il éclate d'un rire sec : « Un duel ? Avec moi ? Je tire sur les coyotes qui rôdent autour de l'enclos, pas sur les hommes. » Il retourne à son foin.",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il va chercher sa vieille carabine et se poste au milieu de la rue. Il tire le premier, trop haut. Ta balle lui arrache l'arme des mains ; il reste là, les mains vides, humilié.",
+        "effets": {
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Face à face dans la rue principale, au soleil couchant. Il est plus lent que toi, mais pas de beaucoup : il tombe, touché à la hanche, et sa balle t'a éraflé l'oreille.",
+        "si": [
+          "hostile"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "sante": -10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "« Je me bats pas en duel avec un homme qui tire dans le dos. » Il plante sa fourche dans le foin et te montre la porte. « Va voir l'O'Driscoll, vous vous entendrez. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il te regarde comme si tu avais perdu l'esprit : « Range ça, va. Si tu veux te mesurer à quelqu'un, monte le Morgan. »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "lancer": [
+      {
+        "texte": "Tu lances {outil} sur lui. Il l'esquive d'un pas de côté ; l'objet rebondit contre une porte de box, et le Morgan, furieux, défonce une planche à coups de sabot.",
+        "effets": {
+          "relation": -2,
+          "etat": "hostile"
+        }
+      },
+      {
+        "texte": "Atteint à l'épaule par {outil}, il s'effondre contre le râtelier en jurant comme un charretier.",
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Dans la pénombre, {outil} manque sa cible et fracasse la lanterne de la porte. Le palefrenier piétine les flammèches dans la paille en hurlant comme un damné.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -3,
+          "etat": "hostile",
+          "prime": 5
+        }
+      },
+      {
+        "texte": "Ton lancer l'atteint en pleine poitrine devant l'écurie. Des passants accourent ; quelqu'un court chercher le docteur, qui arrivera sans doute ivre.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "etat": "blesse",
+          "prime": 10,
+          "honneur": -2
+        }
+      },
+      {
+        "texte": "Il attrape {outil} au vol, d'une main, sans même lever les yeux de son sabot : « Pas mal. Mais la prochaine fois, préviens. »",
+        "si": [
+          "ami"
+        ]
+      }
+    ],
+    "dessiner": [
+      {
+        "texte": "Tu le croques au crayon, penché sur un sabot, la tête d'une jument posée sur son épaule. Il ne s'en aperçoit même pas."
+      },
+      {
+        "texte": "Il remarque ton manège et grogne : « Dessine plutôt le Morgan. Lui, il a une gueule. »"
+      },
+      {
+        "texte": "Il pose pour toi, raide comme un piquet, la main sur l'encolure de sa vieille jument. Quand tu lui montres le dessin dans {outil}, ses yeux brillent : « Elle est bien, là-dessus. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "À la lueur de sa lanterne, tu dessines son ombre immense sur les planches, pendant qu'il passe de box en box en murmurant des noms de chevaux.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "photographier": [
+      {
+        "texte": "Le magnésium éclate : tous les chevaux sursautent, et lui avec. « Nom de Dieu ! Pas de ça dans mon écurie ! »",
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il accepte de poser devant la grande porte, une bride dans chaque main, sans l'ombre d'un sourire. Sur la plaque, il aura l'air d'un vieux général ou d'un épouvantail, au choix."
+      },
+      {
+        "texte": "Il insiste pour être photographié avec le Morgan. Le cheval bouge, évidemment : sur la plaque, un palefrenier ravi et une grande tache floue.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il se cache le visage derrière son chapeau : « Pas d'image. La dernière fois qu'on m'a tiré le portrait, c'était pour la liste des disparus. »",
+        "si": [
+          "jour"
+        ]
+      }
+    ],
+    "observer": [
+      {
+        "texte": "Il passe de box en box en parlant à chaque cheval par son nom, d'une voix que tu ne lui connaissais pas : douce, presque tendre."
+      },
+      {
+        "texte": "Tu remarques qu'il jette souvent un œil vers le box du Morgan, là où la paille semble plus épaisse qu'ailleurs."
+      },
+      {
+        "texte": "Assis sur un seau retourné, une lanterne à ses pieds, il recoud une bride en fredonnant une marche de cavalerie.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il surveille la rue par la porte entrouverte, et surtout le gris attaché devant le Smithfield's, les sourcils froncés.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il ne te lâche pas des yeux, la main jamais loin du manche de sa fourche.",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "porter": [
+      {
+        "texte": "Tu le charges sur ton épaule comme un sac d'avoine. Il gigote et martèle ton dos de ses poings : « Pose-moi ! J'ai des chevaux à nourrir ! »",
+        "effets": {
+          "relation": -2,
+          "honneur": -1
+        }
+      },
+      {
+        "texte": "Tu portes son corps inerte au fond de l'écurie et le déposes dans le foin. Le Morgan, dans son box, ne te quitte pas des yeux.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "Il proteste pour la forme, puis se laisse porter jusqu'au saloon en riant : « Trente ans qu'on m'a pas porté. La dernière fois, c'était un brancardier. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Traverser la rue principale avec le palefrenier sur l'épaule ne passe pas inaperçu. « Il a bu ? » demande quelqu'un. « Non, il m'enlève ! » hurle-t-il.",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "prime": 5,
+          "relation": -2
+        }
+      }
+    ],
+    "suivre": [
+      {
+        "texte": "Tu le suis jusqu'à la forge. Le maréchal-ferrant et lui échangent trois mots et vingt hochements de tête : la plus longue conversation de leur journée."
+      },
+      {
+        "texte": "Il entre chez Keane, commande une bière et la boit seul au bout du comptoir, en parlant tout bas à un cheval qui n'est pas là."
+      },
+      {
+        "texte": "Tu le suis dans sa ronde nocturne. Il pose la main sur chaque encolure, puis sort regarder longuement le gris attaché devant le Smithfield's.",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "Il mène les chevaux en pension boire au ruisseau, sans bride ni corde : ils le suivent en file indienne, comme des chiens.",
+        "si": [
+          "jour"
+        ]
+      },
+      {
+        "texte": "Il se retourne d'un bloc : « Tu me suis encore une fois et je lâche le Morgan sur toi. »",
+        "si": [
+          "hostile"
+        ]
+      }
+    ],
+    "donner": [
+      {
+        "texte": "Il prend {outil}, le tourne dans ses mains calleuses et le pose sur une étagère, entre deux fers à cheval : « Hm. Merci. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il fronce les sourcils devant {outil} : « J'ai besoin de rien. Le Morgan, lui, a besoin d'un cavalier. Reviens le monter, ce sera ton cadeau. »"
+      },
+      {
+        "texte": "Il reste un moment sans voix, puis te tend en échange un vieux fer à cheval, poli par les années : « Cloue-le au-dessus de ta porte, si t'en as une. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il accepte {outil} du bout des doigts, comme une chose qui pourrait mordre : « D'où ça sort, ça ? Non, me dis pas. »",
+        "si": [
+          "honneur_bas"
+        ]
+      },
+      {
+        "texte": "Il reçoit ton présent en bâillant, en haut de l'échelle du grenier, et le laisse tomber dans le foin sans même le regarder.",
+        "si": [
+          "nuit"
+        ]
+      }
+    ],
+    "acheter@outil": [
+      {
+        "texte": "Il disparaît derrière une pile de selles et revient avec {cible}, qu'il pose sur un tonneau : « Prix ferme. Je marchande avec les chevaux, pas avec les hommes. »",
+        "effets": {
+          "argent": -5,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il compte tes pièces une à une, en mord une, puis te tend {cible} : « Si ça sert pas, me le ramène pas. »",
+        "effets": {
+          "argent": -4
+        }
+      },
+      {
+        "texte": "Il te fait un prix sans que tu demandes rien : « Pour toi, c'est moins cher. Mais le dis pas au vacher, il me doit déjà trois dollars. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te vend {cible} en gonflant le prix, les bras croisés : « Pour les gens comme toi, c'est le tarif O'Driscoll. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -8
+        }
+      },
+      {
+        "texte": "Il te sert à contrecœur, une lanterne à la main, en chaussettes dans la paille : « La prochaine fois, viens quand le soleil est levé. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -5
+        }
+      },
+      {
+        "texte": "Il te passe {cible} par la porte de derrière, sans un mot, et empoche l'argent avec un supplément « pour la discrétion ».",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -7
+        }
+      }
+    ],
+    "vendre@outil": [
+      {
+        "texte": "Il retourne {cible} dans ses mains sans enthousiasme : « J'en ferai rien, mais bon. Trois dollars, et c'est de la charité. »",
+        "effets": {
+          "argent": 3
+        }
+      },
+      {
+        "texte": "Il examine {cible} avec une moue : « Je l'échangerai à un vacher contre un sac d'avoine. » Il te glisse quelques pièces.",
+        "effets": {
+          "argent": 4
+        }
+      },
+      {
+        "texte": "« Garde ça, t'en auras besoin sur la piste. » Puis, voyant ta mine, il soupire et te donne de quoi payer une semaine de pension.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 6,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il devine que {cible} est volé, et te le fait comprendre en t'en offrant une misère : « Deux dollars. À prendre ou à laisser. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 2
+        }
+      }
+    ],
+    "mettre_en_pension": [
+      {
+        "texte": "Il prend la bride de ton cheval sans te regarder : « Un dollar. Foin, avoine, coup de brosse. Tu le récupères quand tu veux, mais pas avant le lever du jour. »",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il installe ton cheval dans le box du fond, à côté d'une vieille jument placide : « Elle va le calmer. Les nerveux, faut les mettre à côté des sages. Comme les hommes. »",
+        "effets": {
+          "argent": -1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il refuse ton dollar d'un geste : « Ton cheval, c'est un plaisir. Paie-moi plutôt une bière chez Keane. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il descend du grenier en grommelant, mais son visage change dès qu'il voit ta monture fourbue : « Pauvre bête. Allez, viens, toi. »",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il examine ton cheval sous toutes les coutures, cherchant des traces d'éperon : « Deux dollars. Un pour le box, un pour que je vérifie que tu le bats pas. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "« Je le mets au fond, derrière le foin. Si le shérif demande, j'ai jamais vu ce cheval. » Il tend la main : « Ça fera trois dollars. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -3
+        }
+      }
+    ],
+    "demander_conseil_cheval": [
+      {
+        "texte": "« Brosse-le tous les jours. Un cheval qu'on brosse, c'est un cheval qui revient quand on siffle. » Il crache pour ponctuer.",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Une pomme, pas trois. Et jamais d'avoine mouillée : les coliques tuent un cheval plus sûrement qu'une balle. »"
+      },
+      {
+        "texte": "« Le Morgan ? Lui faut une main calme et une voix qui tremble pas. La cravache, il l'a assez connue avec son ancien maître, à Strawberry. »"
+      },
+      {
+        "texte": "Il soulève un sabot de ton cheval : « Regarde. Le fer bouge. Va voir le maréchal-ferrant avant qu'il boite. Dis que c'est moi qui t'envoie : il te parlera. Enfin, il hochera la tête. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "« Un cheval voit mieux que toi la nuit. Sur les pistes sombres, lâche la bride, il te ramènera. C'est comme ça que je suis rentré de Shiloh. »",
+        "si": [
+          "nuit"
+        ]
+      },
+      {
+        "texte": "« Mon conseil ? Traite ton cheval mieux que les gens. Vu ta réputation, ça devrait pas être difficile. »",
+        "si": [
+          "honneur_bas"
+        ]
+      }
+    ],
+    "echanger_cheval": [
+      {
+        "texte": "Il fait le tour de ton cheval, soulève une lèvre, tâte un tendon : « Je te le reprends. Avec vingt dollars de plus, je te donne le Morgan. Si tu sais le monter. »",
+        "effets": {
+          "argent": -20
+        }
+      },
+      {
+        "texte": "Il secoue la tête : « Ce cheval-là t'a choisi. Regarde ses oreilles, elles te suivent partout. On échange pas ça, l'ami. »",
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il te propose un échange honnête et te laisse même ta vieille selle : « Prends soin du nouveau. Je passerai voir. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": -10,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il refuse net : « Je confie pas un de mes chevaux à un homme comme toi. Et le tien, je le garde pas non plus : il a des traces d'éperon partout. »",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "relation": -1
+        }
+      },
+      {
+        "texte": "« Tu veux un cheval que personne reconnaîtra, hein ? » Il sort une jument noire du fond de l'écurie. « Trente dollars de différence. Et j'ai rien vu. »",
+        "si": [
+          "est_recherche"
+        ],
+        "effets": {
+          "argent": -30
+        }
+      }
+    ],
+    "faire_soigner_cheval": [
+      {
+        "texte": "Il lave l'entaille sur le canon de ton cheval à l'eau salée, puis l'enduit d'une pommade qui pue la térébenthine : « Deux dollars. Et pas de galop pendant trois jours. »",
+        "effets": {
+          "argent": -2
+        }
+      },
+      {
+        "texte": "Il passe la main sur chaque jambe, écoute le souffle, regarde les yeux : « Fatigué, pas malade. Laisse-le-moi une nuit, avec du foin et du silence. »",
+        "effets": {
+          "argent": -1
+        }
+      },
+      {
+        "texte": "Il soigne ton cheval comme le sien, en lui parlant tout bas, et refuse ton argent : « Ramène-le-moi vivant, c'est tout ce que je demande. »",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Il découvre les marques d'éperon sur les flancs et se redresse lentement : « Ça, c'est pas une blessure de piste. C'est toi. » Il te fait payer double, sans un mot de plus.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": -4,
+          "relation": -2
+        }
+      },
+      {
+        "texte": "Il glisse un regard noir vers le cabinet du docteur : « Surtout, laisse pas l'autre ivrogne lui donner ses toniques. Il a tué une mule, l'an dernier. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": -2
+        }
+      }
+    ],
+    "aider_a_l_ecurie": [
+      {
+        "texte": "Il te tend une fourche et une brouette : « Les six box. Litière propre, crottin dehors. » Deux heures plus tard, tu as mal au dos et deux dollars en poche.",
+        "effets": {
+          "argent": 2,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Tu cures les box, remplis les râteliers et portes l'eau du puits. Il inspecte ton travail sans un mot, puis te glisse trois pièces : « Pas mal. Pour un humain. »",
+        "effets": {
+          "argent": 3,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Vous travaillez côte à côte en silence. À la fin, il partage avec toi son café trop fort et une histoire de la guerre qu'il n'a jamais racontée à personne.",
+        "si": [
+          "ami"
+        ],
+        "effets": {
+          "argent": 2,
+          "relation": 2
+        }
+      },
+      {
+        "texte": "Il te regarde de travers : « Toi, travailler ? » Il te laisse faire, mais compte les brides avant de te payer.",
+        "si": [
+          "honneur_bas"
+        ],
+        "effets": {
+          "argent": 2
+        }
+      },
+      {
+        "texte": "« La nuit ? T'es fou. » Il te confie quand même une lanterne et les box du fond. Au matin, tu dors dans le foin, un dollar posé sur ton chapeau.",
+        "si": [
+          "nuit"
+        ],
+        "effets": {
+          "argent": 1,
+          "relation": 1
+        }
+      },
+      {
+        "texte": "Le Morgan te surveille pendant que tu cures son box et tente deux fois de te mordre le bras. Le palefrenier rigole : « Il t'aime bien. Sinon, il viserait le cou. »",
+        "si": [
+          "jour"
+        ],
+        "effets": {
+          "argent": 2,
+          "sante": -5
+        }
+      }
+    ]
+  }
+}
