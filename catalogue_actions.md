@@ -1,0 +1,1432 @@
+# Catalogue complet des actions possibles
+
+> Généré automatiquement par `lister_actions.py` — ne pas modifier à la main.
+
+**1403 actions**, calculées à partir de 84 verbes et 57 entités.
+
+## Déplacement (34)
+
+- marcher
+- courir
+- s'accroupir
+- sauter
+- fuir
+- nager dans la rivière
+- escalader un arbre
+- escalader un rocher
+- escalader le train
+- se cacher derrière un tonneau
+- se cacher derrière un arbre
+- se cacher derrière un rocher
+- se cacher derrière un chariot
+- suivre le shérif
+- suivre un fermier
+- suivre le barman
+- suivre l'armurier
+- suivre un étranger
+- suivre un hors-la-loi
+- suivre un membre du gang
+- suivre ton cheval
+- suivre un cheval sauvage
+- suivre un chien
+- suivre un cerf
+- suivre un ours
+- suivre un lapin
+- entrer dans le saloon
+- entrer dans la banque
+- entrer dans le magasin général
+- monter dans la diligence
+- monter dans un chariot
+- monter dans le train
+- conduire la diligence
+- conduire un chariot
+
+## Cheval & animaux (17)
+
+- monter sur ton cheval
+- descendre de cheval
+- galoper
+- faire cabrer son cheval
+- siffler pour appeler son cheval
+- caresser ton cheval
+- caresser un chien
+- nourrir ton cheval avec une pomme
+- nourrir un chien avec une pomme
+- brosser ton cheval avec la brosse
+- dresser un cheval sauvage
+- atteler ton cheval à la diligence
+- atteler ton cheval à un chariot
+- suivre la piste d'un cheval sauvage
+- suivre la piste d'un cerf
+- suivre la piste d'un ours
+- suivre la piste d'un lapin
+
+## Combat (743)
+
+- frapper le shérif à mains nues
+- frapper un fermier à mains nues
+- frapper le barman à mains nues
+- frapper l'armurier à mains nues
+- frapper un étranger à mains nues
+- frapper un hors-la-loi à mains nues
+- frapper un membre du gang à mains nues
+- frapper ton cheval à mains nues
+- frapper un cheval sauvage à mains nues
+- frapper un chien à mains nues
+- frapper un cerf à mains nues
+- frapper un ours à mains nues
+- frapper un lapin à mains nues
+- attaquer le shérif avec le revolver
+- attaquer le shérif avec le fusil
+- attaquer le shérif avec l'arc
+- attaquer le shérif avec le couteau
+- attaquer le shérif avec un tomahawk
+- attaquer un fermier avec le revolver
+- attaquer un fermier avec le fusil
+- attaquer un fermier avec l'arc
+- attaquer un fermier avec le couteau
+- attaquer un fermier avec un tomahawk
+- attaquer le barman avec le revolver
+- attaquer le barman avec le fusil
+- attaquer le barman avec l'arc
+- attaquer le barman avec le couteau
+- attaquer le barman avec un tomahawk
+- attaquer l'armurier avec le revolver
+- attaquer l'armurier avec le fusil
+- attaquer l'armurier avec l'arc
+- attaquer l'armurier avec le couteau
+- attaquer l'armurier avec un tomahawk
+- attaquer un étranger avec le revolver
+- attaquer un étranger avec le fusil
+- attaquer un étranger avec l'arc
+- attaquer un étranger avec le couteau
+- attaquer un étranger avec un tomahawk
+- attaquer un hors-la-loi avec le revolver
+- attaquer un hors-la-loi avec le fusil
+- attaquer un hors-la-loi avec l'arc
+- attaquer un hors-la-loi avec le couteau
+- attaquer un hors-la-loi avec un tomahawk
+- attaquer un membre du gang avec le revolver
+- attaquer un membre du gang avec le fusil
+- attaquer un membre du gang avec l'arc
+- attaquer un membre du gang avec le couteau
+- attaquer un membre du gang avec un tomahawk
+- attaquer ton cheval avec le revolver
+- attaquer ton cheval avec le fusil
+- attaquer ton cheval avec l'arc
+- attaquer ton cheval avec le couteau
+- attaquer ton cheval avec un tomahawk
+- attaquer un cheval sauvage avec le revolver
+- attaquer un cheval sauvage avec le fusil
+- attaquer un cheval sauvage avec l'arc
+- attaquer un cheval sauvage avec le couteau
+- attaquer un cheval sauvage avec un tomahawk
+- attaquer un chien avec le revolver
+- attaquer un chien avec le fusil
+- attaquer un chien avec l'arc
+- attaquer un chien avec le couteau
+- attaquer un chien avec un tomahawk
+- attaquer un cerf avec le revolver
+- attaquer un cerf avec le fusil
+- attaquer un cerf avec l'arc
+- attaquer un cerf avec le couteau
+- attaquer un cerf avec un tomahawk
+- attaquer un ours avec le revolver
+- attaquer un ours avec le fusil
+- attaquer un ours avec l'arc
+- attaquer un ours avec le couteau
+- attaquer un ours avec un tomahawk
+- attaquer un lapin avec le revolver
+- attaquer un lapin avec le fusil
+- attaquer un lapin avec l'arc
+- attaquer un lapin avec le couteau
+- attaquer un lapin avec un tomahawk
+- tirer sur le shérif avec le revolver
+- tirer sur le shérif avec le fusil
+- tirer sur le shérif avec l'arc
+- tirer sur un fermier avec le revolver
+- tirer sur un fermier avec le fusil
+- tirer sur un fermier avec l'arc
+- tirer sur le barman avec le revolver
+- tirer sur le barman avec le fusil
+- tirer sur le barman avec l'arc
+- tirer sur l'armurier avec le revolver
+- tirer sur l'armurier avec le fusil
+- tirer sur l'armurier avec l'arc
+- tirer sur un étranger avec le revolver
+- tirer sur un étranger avec le fusil
+- tirer sur un étranger avec l'arc
+- tirer sur un hors-la-loi avec le revolver
+- tirer sur un hors-la-loi avec le fusil
+- tirer sur un hors-la-loi avec l'arc
+- tirer sur un membre du gang avec le revolver
+- tirer sur un membre du gang avec le fusil
+- tirer sur un membre du gang avec l'arc
+- tirer sur un cadavre avec le revolver
+- tirer sur un cadavre avec le fusil
+- tirer sur un cadavre avec l'arc
+- tirer sur ton cheval avec le revolver
+- tirer sur ton cheval avec le fusil
+- tirer sur ton cheval avec l'arc
+- tirer sur un cheval sauvage avec le revolver
+- tirer sur un cheval sauvage avec le fusil
+- tirer sur un cheval sauvage avec l'arc
+- tirer sur un chien avec le revolver
+- tirer sur un chien avec le fusil
+- tirer sur un chien avec l'arc
+- tirer sur un cerf avec le revolver
+- tirer sur un cerf avec le fusil
+- tirer sur un cerf avec l'arc
+- tirer sur un ours avec le revolver
+- tirer sur un ours avec le fusil
+- tirer sur un ours avec l'arc
+- tirer sur un lapin avec le revolver
+- tirer sur un lapin avec le fusil
+- tirer sur un lapin avec l'arc
+- tirer sur une carcasse de cerf avec le revolver
+- tirer sur une carcasse de cerf avec le fusil
+- tirer sur une carcasse de cerf avec l'arc
+- tirer sur le revolver avec le fusil
+- tirer sur le revolver avec l'arc
+- tirer sur le fusil avec le revolver
+- tirer sur le fusil avec l'arc
+- tirer sur l'arc avec le revolver
+- tirer sur l'arc avec le fusil
+- tirer sur le couteau avec le revolver
+- tirer sur le couteau avec le fusil
+- tirer sur le couteau avec l'arc
+- tirer sur un tomahawk avec le revolver
+- tirer sur un tomahawk avec le fusil
+- tirer sur un tomahawk avec l'arc
+- tirer sur un bâton de dynamite avec le revolver
+- tirer sur un bâton de dynamite avec le fusil
+- tirer sur un bâton de dynamite avec l'arc
+- tirer sur le lasso avec le revolver
+- tirer sur le lasso avec le fusil
+- tirer sur le lasso avec l'arc
+- tirer sur un crochet de serrurier avec le revolver
+- tirer sur un crochet de serrurier avec le fusil
+- tirer sur un crochet de serrurier avec l'arc
+- tirer sur la brosse avec le revolver
+- tirer sur la brosse avec le fusil
+- tirer sur la brosse avec l'arc
+- tirer sur le rasoir avec le revolver
+- tirer sur le rasoir avec le fusil
+- tirer sur le rasoir avec l'arc
+- tirer sur la canne à pêche avec le revolver
+- tirer sur la canne à pêche avec le fusil
+- tirer sur la canne à pêche avec l'arc
+- tirer sur l'appareil photo avec le revolver
+- tirer sur l'appareil photo avec le fusil
+- tirer sur l'appareil photo avec l'arc
+- tirer sur le journal intime avec le revolver
+- tirer sur le journal intime avec le fusil
+- tirer sur le journal intime avec l'arc
+- tirer sur la lanterne avec le revolver
+- tirer sur la lanterne avec le fusil
+- tirer sur la lanterne avec l'arc
+- tirer sur une pomme avec le revolver
+- tirer sur une pomme avec le fusil
+- tirer sur une pomme avec l'arc
+- tirer sur de la viande crue avec le revolver
+- tirer sur de la viande crue avec le fusil
+- tirer sur de la viande crue avec l'arc
+- tirer sur une bouteille de whisky avec le revolver
+- tirer sur une bouteille de whisky avec le fusil
+- tirer sur une bouteille de whisky avec l'arc
+- tirer sur une bière avec le revolver
+- tirer sur une bière avec le fusil
+- tirer sur une bière avec l'arc
+- tirer sur une cigarette avec le revolver
+- tirer sur une cigarette avec le fusil
+- tirer sur une cigarette avec l'arc
+- tirer sur du ginseng avec le revolver
+- tirer sur du ginseng avec le fusil
+- tirer sur du ginseng avec l'arc
+- tirer sur ton chapeau avec le revolver
+- tirer sur ton chapeau avec le fusil
+- tirer sur ton chapeau avec l'arc
+- tirer sur un manteau avec le revolver
+- tirer sur un manteau avec le fusil
+- tirer sur un manteau avec l'arc
+- tirer sur un avis de recherche avec le revolver
+- tirer sur un avis de recherche avec le fusil
+- tirer sur un avis de recherche avec l'arc
+- tirer sur une carte au trésor avec le revolver
+- tirer sur une carte au trésor avec le fusil
+- tirer sur une carte au trésor avec l'arc
+- tirer sur la porte avec le revolver
+- tirer sur la porte avec le fusil
+- tirer sur la porte avec l'arc
+- tirer sur le coffre-fort avec le revolver
+- tirer sur le coffre-fort avec le fusil
+- tirer sur le coffre-fort avec l'arc
+- tirer sur un tonneau avec le revolver
+- tirer sur un tonneau avec le fusil
+- tirer sur un tonneau avec l'arc
+- tirer sur le feu de camp avec le revolver
+- tirer sur le feu de camp avec le fusil
+- tirer sur le feu de camp avec l'arc
+- tirer sur une chaise avec le revolver
+- tirer sur une chaise avec le fusil
+- tirer sur une chaise avec l'arc
+- tirer sur un lit avec le revolver
+- tirer sur un lit avec le fusil
+- tirer sur un lit avec l'arc
+- tirer sur le piano avec le revolver
+- tirer sur le piano avec le fusil
+- tirer sur le piano avec l'arc
+- tirer sur la table de poker avec le revolver
+- tirer sur la table de poker avec le fusil
+- tirer sur la table de poker avec l'arc
+- tirer sur la table de dominos avec le revolver
+- tirer sur la table de dominos avec le fusil
+- tirer sur la table de dominos avec l'arc
+- tirer sur la rivière avec le revolver
+- tirer sur la rivière avec le fusil
+- tirer sur la rivière avec l'arc
+- tirer sur un arbre avec le revolver
+- tirer sur un arbre avec le fusil
+- tirer sur un arbre avec l'arc
+- tirer sur un rocher avec le revolver
+- tirer sur un rocher avec le fusil
+- tirer sur un rocher avec l'arc
+- tirer sur la diligence avec le revolver
+- tirer sur la diligence avec le fusil
+- tirer sur la diligence avec l'arc
+- tirer sur un chariot avec le revolver
+- tirer sur un chariot avec le fusil
+- tirer sur un chariot avec l'arc
+- tirer sur le train avec le revolver
+- tirer sur le train avec le fusil
+- tirer sur le train avec l'arc
+- tirer sur le saloon avec le revolver
+- tirer sur le saloon avec le fusil
+- tirer sur le saloon avec l'arc
+- tirer sur la banque avec le revolver
+- tirer sur la banque avec le fusil
+- tirer sur la banque avec l'arc
+- tirer sur le magasin général avec le revolver
+- tirer sur le magasin général avec le fusil
+- tirer sur le magasin général avec l'arc
+- lancer le couteau sur le shérif
+- lancer un tomahawk sur le shérif
+- lancer un bâton de dynamite sur le shérif
+- lancer la lanterne sur le shérif
+- lancer une pomme sur le shérif
+- lancer une bouteille de whisky sur le shérif
+- lancer ton chapeau sur le shérif
+- lancer une chaise sur le shérif
+- lancer le couteau sur un fermier
+- lancer un tomahawk sur un fermier
+- lancer un bâton de dynamite sur un fermier
+- lancer la lanterne sur un fermier
+- lancer une pomme sur un fermier
+- lancer une bouteille de whisky sur un fermier
+- lancer ton chapeau sur un fermier
+- lancer une chaise sur un fermier
+- lancer le couteau sur le barman
+- lancer un tomahawk sur le barman
+- lancer un bâton de dynamite sur le barman
+- lancer la lanterne sur le barman
+- lancer une pomme sur le barman
+- lancer une bouteille de whisky sur le barman
+- lancer ton chapeau sur le barman
+- lancer une chaise sur le barman
+- lancer le couteau sur l'armurier
+- lancer un tomahawk sur l'armurier
+- lancer un bâton de dynamite sur l'armurier
+- lancer la lanterne sur l'armurier
+- lancer une pomme sur l'armurier
+- lancer une bouteille de whisky sur l'armurier
+- lancer ton chapeau sur l'armurier
+- lancer une chaise sur l'armurier
+- lancer le couteau sur un étranger
+- lancer un tomahawk sur un étranger
+- lancer un bâton de dynamite sur un étranger
+- lancer la lanterne sur un étranger
+- lancer une pomme sur un étranger
+- lancer une bouteille de whisky sur un étranger
+- lancer ton chapeau sur un étranger
+- lancer une chaise sur un étranger
+- lancer le couteau sur un hors-la-loi
+- lancer un tomahawk sur un hors-la-loi
+- lancer un bâton de dynamite sur un hors-la-loi
+- lancer la lanterne sur un hors-la-loi
+- lancer une pomme sur un hors-la-loi
+- lancer une bouteille de whisky sur un hors-la-loi
+- lancer ton chapeau sur un hors-la-loi
+- lancer une chaise sur un hors-la-loi
+- lancer le couteau sur un membre du gang
+- lancer un tomahawk sur un membre du gang
+- lancer un bâton de dynamite sur un membre du gang
+- lancer la lanterne sur un membre du gang
+- lancer une pomme sur un membre du gang
+- lancer une bouteille de whisky sur un membre du gang
+- lancer ton chapeau sur un membre du gang
+- lancer une chaise sur un membre du gang
+- lancer le couteau sur un cadavre
+- lancer un tomahawk sur un cadavre
+- lancer un bâton de dynamite sur un cadavre
+- lancer la lanterne sur un cadavre
+- lancer une pomme sur un cadavre
+- lancer une bouteille de whisky sur un cadavre
+- lancer ton chapeau sur un cadavre
+- lancer une chaise sur un cadavre
+- lancer le couteau sur ton cheval
+- lancer un tomahawk sur ton cheval
+- lancer un bâton de dynamite sur ton cheval
+- lancer la lanterne sur ton cheval
+- lancer une pomme sur ton cheval
+- lancer une bouteille de whisky sur ton cheval
+- lancer ton chapeau sur ton cheval
+- lancer une chaise sur ton cheval
+- lancer le couteau sur un cheval sauvage
+- lancer un tomahawk sur un cheval sauvage
+- lancer un bâton de dynamite sur un cheval sauvage
+- lancer la lanterne sur un cheval sauvage
+- lancer une pomme sur un cheval sauvage
+- lancer une bouteille de whisky sur un cheval sauvage
+- lancer ton chapeau sur un cheval sauvage
+- lancer une chaise sur un cheval sauvage
+- lancer le couteau sur un chien
+- lancer un tomahawk sur un chien
+- lancer un bâton de dynamite sur un chien
+- lancer la lanterne sur un chien
+- lancer une pomme sur un chien
+- lancer une bouteille de whisky sur un chien
+- lancer ton chapeau sur un chien
+- lancer une chaise sur un chien
+- lancer le couteau sur un cerf
+- lancer un tomahawk sur un cerf
+- lancer un bâton de dynamite sur un cerf
+- lancer la lanterne sur un cerf
+- lancer une pomme sur un cerf
+- lancer une bouteille de whisky sur un cerf
+- lancer ton chapeau sur un cerf
+- lancer une chaise sur un cerf
+- lancer le couteau sur un ours
+- lancer un tomahawk sur un ours
+- lancer un bâton de dynamite sur un ours
+- lancer la lanterne sur un ours
+- lancer une pomme sur un ours
+- lancer une bouteille de whisky sur un ours
+- lancer ton chapeau sur un ours
+- lancer une chaise sur un ours
+- lancer le couteau sur un lapin
+- lancer un tomahawk sur un lapin
+- lancer un bâton de dynamite sur un lapin
+- lancer la lanterne sur un lapin
+- lancer une pomme sur un lapin
+- lancer une bouteille de whisky sur un lapin
+- lancer ton chapeau sur un lapin
+- lancer une chaise sur un lapin
+- lancer le couteau sur une carcasse de cerf
+- lancer un tomahawk sur une carcasse de cerf
+- lancer un bâton de dynamite sur une carcasse de cerf
+- lancer la lanterne sur une carcasse de cerf
+- lancer une pomme sur une carcasse de cerf
+- lancer une bouteille de whisky sur une carcasse de cerf
+- lancer ton chapeau sur une carcasse de cerf
+- lancer une chaise sur une carcasse de cerf
+- lancer le couteau sur le revolver
+- lancer un tomahawk sur le revolver
+- lancer un bâton de dynamite sur le revolver
+- lancer la lanterne sur le revolver
+- lancer une pomme sur le revolver
+- lancer une bouteille de whisky sur le revolver
+- lancer ton chapeau sur le revolver
+- lancer une chaise sur le revolver
+- lancer le couteau sur le fusil
+- lancer un tomahawk sur le fusil
+- lancer un bâton de dynamite sur le fusil
+- lancer la lanterne sur le fusil
+- lancer une pomme sur le fusil
+- lancer une bouteille de whisky sur le fusil
+- lancer ton chapeau sur le fusil
+- lancer une chaise sur le fusil
+- lancer le couteau sur l'arc
+- lancer un tomahawk sur l'arc
+- lancer un bâton de dynamite sur l'arc
+- lancer la lanterne sur l'arc
+- lancer une pomme sur l'arc
+- lancer une bouteille de whisky sur l'arc
+- lancer ton chapeau sur l'arc
+- lancer une chaise sur l'arc
+- lancer un tomahawk sur le couteau
+- lancer un bâton de dynamite sur le couteau
+- lancer la lanterne sur le couteau
+- lancer une pomme sur le couteau
+- lancer une bouteille de whisky sur le couteau
+- lancer ton chapeau sur le couteau
+- lancer une chaise sur le couteau
+- lancer le couteau sur un tomahawk
+- lancer un bâton de dynamite sur un tomahawk
+- lancer la lanterne sur un tomahawk
+- lancer une pomme sur un tomahawk
+- lancer une bouteille de whisky sur un tomahawk
+- lancer ton chapeau sur un tomahawk
+- lancer une chaise sur un tomahawk
+- lancer le couteau sur un bâton de dynamite
+- lancer un tomahawk sur un bâton de dynamite
+- lancer la lanterne sur un bâton de dynamite
+- lancer une pomme sur un bâton de dynamite
+- lancer une bouteille de whisky sur un bâton de dynamite
+- lancer ton chapeau sur un bâton de dynamite
+- lancer une chaise sur un bâton de dynamite
+- lancer le couteau sur le lasso
+- lancer un tomahawk sur le lasso
+- lancer un bâton de dynamite sur le lasso
+- lancer la lanterne sur le lasso
+- lancer une pomme sur le lasso
+- lancer une bouteille de whisky sur le lasso
+- lancer ton chapeau sur le lasso
+- lancer une chaise sur le lasso
+- lancer le couteau sur un crochet de serrurier
+- lancer un tomahawk sur un crochet de serrurier
+- lancer un bâton de dynamite sur un crochet de serrurier
+- lancer la lanterne sur un crochet de serrurier
+- lancer une pomme sur un crochet de serrurier
+- lancer une bouteille de whisky sur un crochet de serrurier
+- lancer ton chapeau sur un crochet de serrurier
+- lancer une chaise sur un crochet de serrurier
+- lancer le couteau sur la brosse
+- lancer un tomahawk sur la brosse
+- lancer un bâton de dynamite sur la brosse
+- lancer la lanterne sur la brosse
+- lancer une pomme sur la brosse
+- lancer une bouteille de whisky sur la brosse
+- lancer ton chapeau sur la brosse
+- lancer une chaise sur la brosse
+- lancer le couteau sur le rasoir
+- lancer un tomahawk sur le rasoir
+- lancer un bâton de dynamite sur le rasoir
+- lancer la lanterne sur le rasoir
+- lancer une pomme sur le rasoir
+- lancer une bouteille de whisky sur le rasoir
+- lancer ton chapeau sur le rasoir
+- lancer une chaise sur le rasoir
+- lancer le couteau sur la canne à pêche
+- lancer un tomahawk sur la canne à pêche
+- lancer un bâton de dynamite sur la canne à pêche
+- lancer la lanterne sur la canne à pêche
+- lancer une pomme sur la canne à pêche
+- lancer une bouteille de whisky sur la canne à pêche
+- lancer ton chapeau sur la canne à pêche
+- lancer une chaise sur la canne à pêche
+- lancer le couteau sur l'appareil photo
+- lancer un tomahawk sur l'appareil photo
+- lancer un bâton de dynamite sur l'appareil photo
+- lancer la lanterne sur l'appareil photo
+- lancer une pomme sur l'appareil photo
+- lancer une bouteille de whisky sur l'appareil photo
+- lancer ton chapeau sur l'appareil photo
+- lancer une chaise sur l'appareil photo
+- lancer le couteau sur le journal intime
+- lancer un tomahawk sur le journal intime
+- lancer un bâton de dynamite sur le journal intime
+- lancer la lanterne sur le journal intime
+- lancer une pomme sur le journal intime
+- lancer une bouteille de whisky sur le journal intime
+- lancer ton chapeau sur le journal intime
+- lancer une chaise sur le journal intime
+- lancer le couteau sur la lanterne
+- lancer un tomahawk sur la lanterne
+- lancer un bâton de dynamite sur la lanterne
+- lancer une pomme sur la lanterne
+- lancer une bouteille de whisky sur la lanterne
+- lancer ton chapeau sur la lanterne
+- lancer une chaise sur la lanterne
+- lancer le couteau sur une pomme
+- lancer un tomahawk sur une pomme
+- lancer un bâton de dynamite sur une pomme
+- lancer la lanterne sur une pomme
+- lancer une bouteille de whisky sur une pomme
+- lancer ton chapeau sur une pomme
+- lancer une chaise sur une pomme
+- lancer le couteau sur de la viande crue
+- lancer un tomahawk sur de la viande crue
+- lancer un bâton de dynamite sur de la viande crue
+- lancer la lanterne sur de la viande crue
+- lancer une pomme sur de la viande crue
+- lancer une bouteille de whisky sur de la viande crue
+- lancer ton chapeau sur de la viande crue
+- lancer une chaise sur de la viande crue
+- lancer le couteau sur une bouteille de whisky
+- lancer un tomahawk sur une bouteille de whisky
+- lancer un bâton de dynamite sur une bouteille de whisky
+- lancer la lanterne sur une bouteille de whisky
+- lancer une pomme sur une bouteille de whisky
+- lancer ton chapeau sur une bouteille de whisky
+- lancer une chaise sur une bouteille de whisky
+- lancer le couteau sur une bière
+- lancer un tomahawk sur une bière
+- lancer un bâton de dynamite sur une bière
+- lancer la lanterne sur une bière
+- lancer une pomme sur une bière
+- lancer une bouteille de whisky sur une bière
+- lancer ton chapeau sur une bière
+- lancer une chaise sur une bière
+- lancer le couteau sur une cigarette
+- lancer un tomahawk sur une cigarette
+- lancer un bâton de dynamite sur une cigarette
+- lancer la lanterne sur une cigarette
+- lancer une pomme sur une cigarette
+- lancer une bouteille de whisky sur une cigarette
+- lancer ton chapeau sur une cigarette
+- lancer une chaise sur une cigarette
+- lancer le couteau sur du ginseng
+- lancer un tomahawk sur du ginseng
+- lancer un bâton de dynamite sur du ginseng
+- lancer la lanterne sur du ginseng
+- lancer une pomme sur du ginseng
+- lancer une bouteille de whisky sur du ginseng
+- lancer ton chapeau sur du ginseng
+- lancer une chaise sur du ginseng
+- lancer le couteau sur ton chapeau
+- lancer un tomahawk sur ton chapeau
+- lancer un bâton de dynamite sur ton chapeau
+- lancer la lanterne sur ton chapeau
+- lancer une pomme sur ton chapeau
+- lancer une bouteille de whisky sur ton chapeau
+- lancer une chaise sur ton chapeau
+- lancer le couteau sur un manteau
+- lancer un tomahawk sur un manteau
+- lancer un bâton de dynamite sur un manteau
+- lancer la lanterne sur un manteau
+- lancer une pomme sur un manteau
+- lancer une bouteille de whisky sur un manteau
+- lancer ton chapeau sur un manteau
+- lancer une chaise sur un manteau
+- lancer le couteau sur un avis de recherche
+- lancer un tomahawk sur un avis de recherche
+- lancer un bâton de dynamite sur un avis de recherche
+- lancer la lanterne sur un avis de recherche
+- lancer une pomme sur un avis de recherche
+- lancer une bouteille de whisky sur un avis de recherche
+- lancer ton chapeau sur un avis de recherche
+- lancer une chaise sur un avis de recherche
+- lancer le couteau sur une carte au trésor
+- lancer un tomahawk sur une carte au trésor
+- lancer un bâton de dynamite sur une carte au trésor
+- lancer la lanterne sur une carte au trésor
+- lancer une pomme sur une carte au trésor
+- lancer une bouteille de whisky sur une carte au trésor
+- lancer ton chapeau sur une carte au trésor
+- lancer une chaise sur une carte au trésor
+- lancer le couteau sur la porte
+- lancer un tomahawk sur la porte
+- lancer un bâton de dynamite sur la porte
+- lancer la lanterne sur la porte
+- lancer une pomme sur la porte
+- lancer une bouteille de whisky sur la porte
+- lancer ton chapeau sur la porte
+- lancer une chaise sur la porte
+- lancer le couteau sur le coffre-fort
+- lancer un tomahawk sur le coffre-fort
+- lancer un bâton de dynamite sur le coffre-fort
+- lancer la lanterne sur le coffre-fort
+- lancer une pomme sur le coffre-fort
+- lancer une bouteille de whisky sur le coffre-fort
+- lancer ton chapeau sur le coffre-fort
+- lancer une chaise sur le coffre-fort
+- lancer le couteau sur un tonneau
+- lancer un tomahawk sur un tonneau
+- lancer un bâton de dynamite sur un tonneau
+- lancer la lanterne sur un tonneau
+- lancer une pomme sur un tonneau
+- lancer une bouteille de whisky sur un tonneau
+- lancer ton chapeau sur un tonneau
+- lancer une chaise sur un tonneau
+- lancer le couteau sur le feu de camp
+- lancer un tomahawk sur le feu de camp
+- lancer un bâton de dynamite sur le feu de camp
+- lancer la lanterne sur le feu de camp
+- lancer une pomme sur le feu de camp
+- lancer une bouteille de whisky sur le feu de camp
+- lancer ton chapeau sur le feu de camp
+- lancer une chaise sur le feu de camp
+- lancer le couteau sur une chaise
+- lancer un tomahawk sur une chaise
+- lancer un bâton de dynamite sur une chaise
+- lancer la lanterne sur une chaise
+- lancer une pomme sur une chaise
+- lancer une bouteille de whisky sur une chaise
+- lancer ton chapeau sur une chaise
+- lancer le couteau sur un lit
+- lancer un tomahawk sur un lit
+- lancer un bâton de dynamite sur un lit
+- lancer la lanterne sur un lit
+- lancer une pomme sur un lit
+- lancer une bouteille de whisky sur un lit
+- lancer ton chapeau sur un lit
+- lancer une chaise sur un lit
+- lancer le couteau sur le piano
+- lancer un tomahawk sur le piano
+- lancer un bâton de dynamite sur le piano
+- lancer la lanterne sur le piano
+- lancer une pomme sur le piano
+- lancer une bouteille de whisky sur le piano
+- lancer ton chapeau sur le piano
+- lancer une chaise sur le piano
+- lancer le couteau sur la table de poker
+- lancer un tomahawk sur la table de poker
+- lancer un bâton de dynamite sur la table de poker
+- lancer la lanterne sur la table de poker
+- lancer une pomme sur la table de poker
+- lancer une bouteille de whisky sur la table de poker
+- lancer ton chapeau sur la table de poker
+- lancer une chaise sur la table de poker
+- lancer le couteau sur la table de dominos
+- lancer un tomahawk sur la table de dominos
+- lancer un bâton de dynamite sur la table de dominos
+- lancer la lanterne sur la table de dominos
+- lancer une pomme sur la table de dominos
+- lancer une bouteille de whisky sur la table de dominos
+- lancer ton chapeau sur la table de dominos
+- lancer une chaise sur la table de dominos
+- lancer le couteau sur la rivière
+- lancer un tomahawk sur la rivière
+- lancer un bâton de dynamite sur la rivière
+- lancer la lanterne sur la rivière
+- lancer une pomme sur la rivière
+- lancer une bouteille de whisky sur la rivière
+- lancer ton chapeau sur la rivière
+- lancer une chaise sur la rivière
+- lancer le couteau sur un arbre
+- lancer un tomahawk sur un arbre
+- lancer un bâton de dynamite sur un arbre
+- lancer la lanterne sur un arbre
+- lancer une pomme sur un arbre
+- lancer une bouteille de whisky sur un arbre
+- lancer ton chapeau sur un arbre
+- lancer une chaise sur un arbre
+- lancer le couteau sur un rocher
+- lancer un tomahawk sur un rocher
+- lancer un bâton de dynamite sur un rocher
+- lancer la lanterne sur un rocher
+- lancer une pomme sur un rocher
+- lancer une bouteille de whisky sur un rocher
+- lancer ton chapeau sur un rocher
+- lancer une chaise sur un rocher
+- lancer le couteau sur la diligence
+- lancer un tomahawk sur la diligence
+- lancer un bâton de dynamite sur la diligence
+- lancer la lanterne sur la diligence
+- lancer une pomme sur la diligence
+- lancer une bouteille de whisky sur la diligence
+- lancer ton chapeau sur la diligence
+- lancer une chaise sur la diligence
+- lancer le couteau sur un chariot
+- lancer un tomahawk sur un chariot
+- lancer un bâton de dynamite sur un chariot
+- lancer la lanterne sur un chariot
+- lancer une pomme sur un chariot
+- lancer une bouteille de whisky sur un chariot
+- lancer ton chapeau sur un chariot
+- lancer une chaise sur un chariot
+- lancer le couteau sur le train
+- lancer un tomahawk sur le train
+- lancer un bâton de dynamite sur le train
+- lancer la lanterne sur le train
+- lancer une pomme sur le train
+- lancer une bouteille de whisky sur le train
+- lancer ton chapeau sur le train
+- lancer une chaise sur le train
+- lancer le couteau sur le saloon
+- lancer un tomahawk sur le saloon
+- lancer un bâton de dynamite sur le saloon
+- lancer la lanterne sur le saloon
+- lancer une pomme sur le saloon
+- lancer une bouteille de whisky sur le saloon
+- lancer ton chapeau sur le saloon
+- lancer une chaise sur le saloon
+- lancer le couteau sur la banque
+- lancer un tomahawk sur la banque
+- lancer un bâton de dynamite sur la banque
+- lancer la lanterne sur la banque
+- lancer une pomme sur la banque
+- lancer une bouteille de whisky sur la banque
+- lancer ton chapeau sur la banque
+- lancer une chaise sur la banque
+- lancer le couteau sur le magasin général
+- lancer un tomahawk sur le magasin général
+- lancer un bâton de dynamite sur le magasin général
+- lancer la lanterne sur le magasin général
+- lancer une pomme sur le magasin général
+- lancer une bouteille de whisky sur le magasin général
+- lancer ton chapeau sur le magasin général
+- lancer une chaise sur le magasin général
+- attraper le shérif avec le lasso
+- attraper un fermier avec le lasso
+- attraper le barman avec le lasso
+- attraper l'armurier avec le lasso
+- attraper un étranger avec le lasso
+- attraper un hors-la-loi avec le lasso
+- attraper un membre du gang avec le lasso
+- attraper ton cheval avec le lasso
+- attraper un cheval sauvage avec le lasso
+- attraper un chien avec le lasso
+- attraper un cerf avec le lasso
+- attraper un ours avec le lasso
+- attraper un lapin avec le lasso
+- ligoter le shérif avec le lasso
+- ligoter un fermier avec le lasso
+- ligoter le barman avec le lasso
+- ligoter l'armurier avec le lasso
+- ligoter un étranger avec le lasso
+- ligoter un hors-la-loi avec le lasso
+- ligoter un membre du gang avec le lasso
+- désarmer le shérif
+- désarmer un fermier
+- désarmer le barman
+- désarmer l'armurier
+- désarmer un étranger
+- désarmer un hors-la-loi
+- désarmer un membre du gang
+- assommer le shérif
+- assommer un fermier
+- assommer le barman
+- assommer l'armurier
+- assommer un étranger
+- assommer un hors-la-loi
+- assommer un membre du gang
+- provoquer le shérif en duel
+- provoquer un fermier en duel
+- provoquer le barman en duel
+- provoquer l'armurier en duel
+- provoquer un étranger en duel
+- provoquer un hors-la-loi en duel
+- provoquer un membre du gang en duel
+- faire sauter la lanterne avec un bâton de dynamite
+- faire sauter une bouteille de whisky avec un bâton de dynamite
+- faire sauter la porte avec un bâton de dynamite
+- faire sauter le coffre-fort avec un bâton de dynamite
+- faire sauter un tonneau avec un bâton de dynamite
+- faire sauter une chaise avec un bâton de dynamite
+- faire sauter le piano avec un bâton de dynamite
+- faire sauter la diligence avec un bâton de dynamite
+
+## Social (228)
+
+- saluer le shérif
+- saluer un fermier
+- saluer le barman
+- saluer l'armurier
+- saluer un étranger
+- saluer un hors-la-loi
+- saluer un membre du gang
+- parler au shérif
+- parler à un fermier
+- parler au barman
+- parler à l'armurier
+- parler à un étranger
+- parler à un hors-la-loi
+- parler à un membre du gang
+- provoquer le shérif
+- provoquer un fermier
+- provoquer le barman
+- provoquer l'armurier
+- provoquer un étranger
+- provoquer un hors-la-loi
+- provoquer un membre du gang
+- intimider le shérif
+- intimider un fermier
+- intimider le barman
+- intimider l'armurier
+- intimider un étranger
+- intimider un hors-la-loi
+- intimider un membre du gang
+- menacer le shérif avec le revolver
+- menacer le shérif avec le fusil
+- menacer le shérif avec l'arc
+- menacer le shérif avec le couteau
+- menacer le shérif avec un tomahawk
+- menacer un fermier avec le revolver
+- menacer un fermier avec le fusil
+- menacer un fermier avec l'arc
+- menacer un fermier avec le couteau
+- menacer un fermier avec un tomahawk
+- menacer le barman avec le revolver
+- menacer le barman avec le fusil
+- menacer le barman avec l'arc
+- menacer le barman avec le couteau
+- menacer le barman avec un tomahawk
+- menacer l'armurier avec le revolver
+- menacer l'armurier avec le fusil
+- menacer l'armurier avec l'arc
+- menacer l'armurier avec le couteau
+- menacer l'armurier avec un tomahawk
+- menacer un étranger avec le revolver
+- menacer un étranger avec le fusil
+- menacer un étranger avec l'arc
+- menacer un étranger avec le couteau
+- menacer un étranger avec un tomahawk
+- menacer un hors-la-loi avec le revolver
+- menacer un hors-la-loi avec le fusil
+- menacer un hors-la-loi avec l'arc
+- menacer un hors-la-loi avec le couteau
+- menacer un hors-la-loi avec un tomahawk
+- menacer un membre du gang avec le revolver
+- menacer un membre du gang avec le fusil
+- menacer un membre du gang avec l'arc
+- menacer un membre du gang avec le couteau
+- menacer un membre du gang avec un tomahawk
+- soudoyer le shérif
+- soudoyer un fermier
+- donner le revolver au shérif
+- donner le fusil au shérif
+- donner l'arc au shérif
+- donner le couteau au shérif
+- donner un tomahawk au shérif
+- donner un bâton de dynamite au shérif
+- donner le lasso au shérif
+- donner un crochet de serrurier au shérif
+- donner la brosse au shérif
+- donner le rasoir au shérif
+- donner la canne à pêche au shérif
+- donner l'appareil photo au shérif
+- donner le journal intime au shérif
+- donner la lanterne au shérif
+- donner une pomme au shérif
+- donner de la viande crue au shérif
+- donner une bouteille de whisky au shérif
+- donner une bière au shérif
+- donner une cigarette au shérif
+- donner ton chapeau au shérif
+- donner un manteau au shérif
+- donner un avis de recherche au shérif
+- donner une carte au trésor au shérif
+- donner le revolver à un fermier
+- donner le fusil à un fermier
+- donner l'arc à un fermier
+- donner le couteau à un fermier
+- donner un tomahawk à un fermier
+- donner un bâton de dynamite à un fermier
+- donner le lasso à un fermier
+- donner un crochet de serrurier à un fermier
+- donner la brosse à un fermier
+- donner le rasoir à un fermier
+- donner la canne à pêche à un fermier
+- donner l'appareil photo à un fermier
+- donner le journal intime à un fermier
+- donner la lanterne à un fermier
+- donner une pomme à un fermier
+- donner de la viande crue à un fermier
+- donner une bouteille de whisky à un fermier
+- donner une bière à un fermier
+- donner une cigarette à un fermier
+- donner ton chapeau à un fermier
+- donner un manteau à un fermier
+- donner un avis de recherche à un fermier
+- donner une carte au trésor à un fermier
+- donner le revolver au barman
+- donner le fusil au barman
+- donner l'arc au barman
+- donner le couteau au barman
+- donner un tomahawk au barman
+- donner un bâton de dynamite au barman
+- donner le lasso au barman
+- donner un crochet de serrurier au barman
+- donner la brosse au barman
+- donner le rasoir au barman
+- donner la canne à pêche au barman
+- donner l'appareil photo au barman
+- donner le journal intime au barman
+- donner la lanterne au barman
+- donner une pomme au barman
+- donner de la viande crue au barman
+- donner une bouteille de whisky au barman
+- donner une bière au barman
+- donner une cigarette au barman
+- donner ton chapeau au barman
+- donner un manteau au barman
+- donner un avis de recherche au barman
+- donner une carte au trésor au barman
+- donner le revolver à l'armurier
+- donner le fusil à l'armurier
+- donner l'arc à l'armurier
+- donner le couteau à l'armurier
+- donner un tomahawk à l'armurier
+- donner un bâton de dynamite à l'armurier
+- donner le lasso à l'armurier
+- donner un crochet de serrurier à l'armurier
+- donner la brosse à l'armurier
+- donner le rasoir à l'armurier
+- donner la canne à pêche à l'armurier
+- donner l'appareil photo à l'armurier
+- donner le journal intime à l'armurier
+- donner la lanterne à l'armurier
+- donner une pomme à l'armurier
+- donner de la viande crue à l'armurier
+- donner une bouteille de whisky à l'armurier
+- donner une bière à l'armurier
+- donner une cigarette à l'armurier
+- donner ton chapeau à l'armurier
+- donner un manteau à l'armurier
+- donner un avis de recherche à l'armurier
+- donner une carte au trésor à l'armurier
+- donner le revolver à un étranger
+- donner le fusil à un étranger
+- donner l'arc à un étranger
+- donner le couteau à un étranger
+- donner un tomahawk à un étranger
+- donner un bâton de dynamite à un étranger
+- donner le lasso à un étranger
+- donner un crochet de serrurier à un étranger
+- donner la brosse à un étranger
+- donner le rasoir à un étranger
+- donner la canne à pêche à un étranger
+- donner l'appareil photo à un étranger
+- donner le journal intime à un étranger
+- donner la lanterne à un étranger
+- donner une pomme à un étranger
+- donner de la viande crue à un étranger
+- donner une bouteille de whisky à un étranger
+- donner une bière à un étranger
+- donner une cigarette à un étranger
+- donner ton chapeau à un étranger
+- donner un manteau à un étranger
+- donner un avis de recherche à un étranger
+- donner une carte au trésor à un étranger
+- donner le revolver à un hors-la-loi
+- donner le fusil à un hors-la-loi
+- donner l'arc à un hors-la-loi
+- donner le couteau à un hors-la-loi
+- donner un tomahawk à un hors-la-loi
+- donner un bâton de dynamite à un hors-la-loi
+- donner le lasso à un hors-la-loi
+- donner un crochet de serrurier à un hors-la-loi
+- donner la brosse à un hors-la-loi
+- donner le rasoir à un hors-la-loi
+- donner la canne à pêche à un hors-la-loi
+- donner l'appareil photo à un hors-la-loi
+- donner le journal intime à un hors-la-loi
+- donner la lanterne à un hors-la-loi
+- donner une pomme à un hors-la-loi
+- donner de la viande crue à un hors-la-loi
+- donner une bouteille de whisky à un hors-la-loi
+- donner une bière à un hors-la-loi
+- donner une cigarette à un hors-la-loi
+- donner ton chapeau à un hors-la-loi
+- donner un manteau à un hors-la-loi
+- donner un avis de recherche à un hors-la-loi
+- donner une carte au trésor à un hors-la-loi
+- donner le revolver à un membre du gang
+- donner le fusil à un membre du gang
+- donner l'arc à un membre du gang
+- donner le couteau à un membre du gang
+- donner un tomahawk à un membre du gang
+- donner un bâton de dynamite à un membre du gang
+- donner le lasso à un membre du gang
+- donner un crochet de serrurier à un membre du gang
+- donner la brosse à un membre du gang
+- donner le rasoir à un membre du gang
+- donner la canne à pêche à un membre du gang
+- donner l'appareil photo à un membre du gang
+- donner le journal intime à un membre du gang
+- donner la lanterne à un membre du gang
+- donner une pomme à un membre du gang
+- donner de la viande crue à un membre du gang
+- donner une bouteille de whisky à un membre du gang
+- donner une bière à un membre du gang
+- donner une cigarette à un membre du gang
+- donner ton chapeau à un membre du gang
+- donner un manteau à un membre du gang
+- donner un avis de recherche à un membre du gang
+- donner une carte au trésor à un membre du gang
+- chanter
+- danser
+
+## Économie & crime (88)
+
+- acheter le revolver au barman
+- acheter le revolver à l'armurier
+- acheter le fusil au barman
+- acheter le fusil à l'armurier
+- acheter l'arc au barman
+- acheter l'arc à l'armurier
+- acheter le couteau au barman
+- acheter le couteau à l'armurier
+- acheter un tomahawk au barman
+- acheter un tomahawk à l'armurier
+- acheter un bâton de dynamite au barman
+- acheter un bâton de dynamite à l'armurier
+- acheter un crochet de serrurier au barman
+- acheter un crochet de serrurier à l'armurier
+- acheter la canne à pêche au barman
+- acheter la canne à pêche à l'armurier
+- acheter une pomme au barman
+- acheter une pomme à l'armurier
+- acheter une bouteille de whisky au barman
+- acheter une bouteille de whisky à l'armurier
+- acheter une bière au barman
+- acheter une bière à l'armurier
+- acheter une cigarette au barman
+- acheter une cigarette à l'armurier
+- acheter un manteau au barman
+- acheter un manteau à l'armurier
+- vendre le revolver au barman
+- vendre le revolver à l'armurier
+- vendre le fusil au barman
+- vendre le fusil à l'armurier
+- vendre l'arc au barman
+- vendre l'arc à l'armurier
+- vendre le couteau au barman
+- vendre le couteau à l'armurier
+- vendre un tomahawk au barman
+- vendre un tomahawk à l'armurier
+- vendre le rasoir au barman
+- vendre le rasoir à l'armurier
+- vendre l'appareil photo au barman
+- vendre l'appareil photo à l'armurier
+- vendre de la viande crue au barman
+- vendre de la viande crue à l'armurier
+- vendre du ginseng au barman
+- vendre du ginseng à l'armurier
+- vendre un manteau au barman
+- vendre un manteau à l'armurier
+- vendre une carte au trésor au barman
+- vendre une carte au trésor à l'armurier
+- détrousser un fermier
+- détrousser un étranger
+- détrousser un hors-la-loi
+- voler le revolver
+- voler le fusil
+- voler l'arc
+- voler le couteau
+- voler un tomahawk
+- voler un bâton de dynamite
+- voler le lasso
+- voler un crochet de serrurier
+- voler la brosse
+- voler le rasoir
+- voler la canne à pêche
+- voler l'appareil photo
+- voler le journal intime
+- voler la lanterne
+- voler une pomme
+- voler de la viande crue
+- voler une bouteille de whisky
+- voler une bière
+- voler une cigarette
+- voler ton chapeau
+- voler un manteau
+- voler un avis de recherche
+- voler une carte au trésor
+- braquer la diligence
+- braquer le train
+- braquer la banque
+- braquer le magasin général
+- fouiller un cadavre
+- fouiller le coffre-fort
+- fouiller un tonneau
+- fouiller la diligence
+- fouiller un chariot
+- crocheter la porte avec un crochet de serrurier
+- crocheter le coffre-fort avec un crochet de serrurier
+- capturer un hors-la-loi pour toucher la prime
+- se rendre aux autorités
+- payer sa prime
+
+## Survie (48)
+
+- manger une pomme
+- boire une bouteille de whisky
+- boire une bière
+- boire l'eau de la rivière
+- cuisiner de la viande crue sur le feu de camp
+- allumer la lanterne
+- allumer le feu de camp
+- éteindre la lanterne
+- éteindre le feu de camp
+- dormir dans un lit
+- dormir à la belle étoile
+- chasser un cheval sauvage avec le revolver
+- chasser un cheval sauvage avec le fusil
+- chasser un cheval sauvage avec l'arc
+- chasser un cheval sauvage avec le couteau
+- chasser un cheval sauvage avec un tomahawk
+- chasser un cerf avec le revolver
+- chasser un cerf avec le fusil
+- chasser un cerf avec l'arc
+- chasser un cerf avec le couteau
+- chasser un cerf avec un tomahawk
+- chasser un ours avec le revolver
+- chasser un ours avec le fusil
+- chasser un ours avec l'arc
+- chasser un ours avec le couteau
+- chasser un ours avec un tomahawk
+- chasser un lapin avec le revolver
+- chasser un lapin avec le fusil
+- chasser un lapin avec l'arc
+- chasser un lapin avec le couteau
+- chasser un lapin avec un tomahawk
+- dépecer une carcasse de cerf avec le couteau
+- dépecer une carcasse de cerf avec un tomahawk
+- pêcher dans la rivière avec la canne à pêche
+- cueillir du ginseng
+- se laver dans la rivière
+- se raser avec le rasoir
+- fumer une cigarette
+- charger le shérif sur son épaule
+- charger un fermier sur son épaule
+- charger le barman sur son épaule
+- charger l'armurier sur son épaule
+- charger un étranger sur son épaule
+- charger un hors-la-loi sur son épaule
+- charger un membre du gang sur son épaule
+- charger un cadavre sur son épaule
+- charger un lapin sur son épaule
+- charger une carcasse de cerf sur son épaule
+
+## Entretien & inventaire (67)
+
+- ramasser le revolver
+- ramasser le fusil
+- ramasser l'arc
+- ramasser le couteau
+- ramasser un tomahawk
+- ramasser un bâton de dynamite
+- ramasser le lasso
+- ramasser un crochet de serrurier
+- ramasser la brosse
+- ramasser le rasoir
+- ramasser la canne à pêche
+- ramasser l'appareil photo
+- ramasser le journal intime
+- ramasser la lanterne
+- ramasser une pomme
+- ramasser de la viande crue
+- ramasser une bouteille de whisky
+- ramasser une bière
+- ramasser une cigarette
+- ramasser ton chapeau
+- ramasser un manteau
+- ramasser un avis de recherche
+- ramasser une carte au trésor
+- lâcher le revolver
+- lâcher le fusil
+- lâcher l'arc
+- lâcher le couteau
+- lâcher un tomahawk
+- lâcher un bâton de dynamite
+- lâcher le lasso
+- lâcher un crochet de serrurier
+- lâcher la brosse
+- lâcher le rasoir
+- lâcher la canne à pêche
+- lâcher l'appareil photo
+- lâcher le journal intime
+- lâcher la lanterne
+- lâcher une pomme
+- lâcher de la viande crue
+- lâcher une bouteille de whisky
+- lâcher une bière
+- lâcher une cigarette
+- lâcher ton chapeau
+- lâcher un manteau
+- lâcher un avis de recherche
+- lâcher une carte au trésor
+- équiper le revolver
+- équiper le fusil
+- équiper l'arc
+- équiper ton chapeau
+- équiper un manteau
+- nettoyer le revolver
+- nettoyer le fusil
+- aiguiser le couteau
+- aiguiser un tomahawk
+- ouvrir la porte
+- ouvrir le coffre-fort
+- fermer la porte
+- fermer le coffre-fort
+- détruire la lanterne
+- détruire une bouteille de whisky
+- détruire la porte
+- détruire le coffre-fort
+- détruire un tonneau
+- détruire une chaise
+- détruire le piano
+- détruire la diligence
+
+## Loisirs & culture (178)
+
+- jouer du piano
+- s'asseoir à la table de poker pour jouer
+- s'asseoir à la table de dominos pour jouer
+- lire le journal intime
+- lire un avis de recherche
+- lire une carte au trésor
+- écrire dans le journal intime
+- dessiner le shérif dans le journal intime
+- dessiner un fermier dans le journal intime
+- dessiner le barman dans le journal intime
+- dessiner l'armurier dans le journal intime
+- dessiner un étranger dans le journal intime
+- dessiner un hors-la-loi dans le journal intime
+- dessiner un membre du gang dans le journal intime
+- dessiner un cadavre dans le journal intime
+- dessiner ton cheval dans le journal intime
+- dessiner un cheval sauvage dans le journal intime
+- dessiner un chien dans le journal intime
+- dessiner un cerf dans le journal intime
+- dessiner un ours dans le journal intime
+- dessiner un lapin dans le journal intime
+- dessiner une carcasse de cerf dans le journal intime
+- dessiner le revolver dans le journal intime
+- dessiner le fusil dans le journal intime
+- dessiner l'arc dans le journal intime
+- dessiner le couteau dans le journal intime
+- dessiner un tomahawk dans le journal intime
+- dessiner un bâton de dynamite dans le journal intime
+- dessiner le lasso dans le journal intime
+- dessiner un crochet de serrurier dans le journal intime
+- dessiner la brosse dans le journal intime
+- dessiner le rasoir dans le journal intime
+- dessiner la canne à pêche dans le journal intime
+- dessiner l'appareil photo dans le journal intime
+- dessiner la lanterne dans le journal intime
+- dessiner une pomme dans le journal intime
+- dessiner de la viande crue dans le journal intime
+- dessiner une bouteille de whisky dans le journal intime
+- dessiner une bière dans le journal intime
+- dessiner une cigarette dans le journal intime
+- dessiner du ginseng dans le journal intime
+- dessiner ton chapeau dans le journal intime
+- dessiner un manteau dans le journal intime
+- dessiner un avis de recherche dans le journal intime
+- dessiner une carte au trésor dans le journal intime
+- dessiner la porte dans le journal intime
+- dessiner le coffre-fort dans le journal intime
+- dessiner un tonneau dans le journal intime
+- dessiner le feu de camp dans le journal intime
+- dessiner une chaise dans le journal intime
+- dessiner un lit dans le journal intime
+- dessiner le piano dans le journal intime
+- dessiner la table de poker dans le journal intime
+- dessiner la table de dominos dans le journal intime
+- dessiner la rivière dans le journal intime
+- dessiner un arbre dans le journal intime
+- dessiner un rocher dans le journal intime
+- dessiner la diligence dans le journal intime
+- dessiner un chariot dans le journal intime
+- dessiner le train dans le journal intime
+- dessiner le saloon dans le journal intime
+- dessiner la banque dans le journal intime
+- dessiner le magasin général dans le journal intime
+- photographier le shérif avec l'appareil photo
+- photographier un fermier avec l'appareil photo
+- photographier le barman avec l'appareil photo
+- photographier l'armurier avec l'appareil photo
+- photographier un étranger avec l'appareil photo
+- photographier un hors-la-loi avec l'appareil photo
+- photographier un membre du gang avec l'appareil photo
+- photographier un cadavre avec l'appareil photo
+- photographier ton cheval avec l'appareil photo
+- photographier un cheval sauvage avec l'appareil photo
+- photographier un chien avec l'appareil photo
+- photographier un cerf avec l'appareil photo
+- photographier un ours avec l'appareil photo
+- photographier un lapin avec l'appareil photo
+- photographier une carcasse de cerf avec l'appareil photo
+- photographier le revolver avec l'appareil photo
+- photographier le fusil avec l'appareil photo
+- photographier l'arc avec l'appareil photo
+- photographier le couteau avec l'appareil photo
+- photographier un tomahawk avec l'appareil photo
+- photographier un bâton de dynamite avec l'appareil photo
+- photographier le lasso avec l'appareil photo
+- photographier un crochet de serrurier avec l'appareil photo
+- photographier la brosse avec l'appareil photo
+- photographier le rasoir avec l'appareil photo
+- photographier la canne à pêche avec l'appareil photo
+- photographier le journal intime avec l'appareil photo
+- photographier la lanterne avec l'appareil photo
+- photographier une pomme avec l'appareil photo
+- photographier de la viande crue avec l'appareil photo
+- photographier une bouteille de whisky avec l'appareil photo
+- photographier une bière avec l'appareil photo
+- photographier une cigarette avec l'appareil photo
+- photographier du ginseng avec l'appareil photo
+- photographier ton chapeau avec l'appareil photo
+- photographier un manteau avec l'appareil photo
+- photographier un avis de recherche avec l'appareil photo
+- photographier une carte au trésor avec l'appareil photo
+- photographier la porte avec l'appareil photo
+- photographier le coffre-fort avec l'appareil photo
+- photographier un tonneau avec l'appareil photo
+- photographier le feu de camp avec l'appareil photo
+- photographier une chaise avec l'appareil photo
+- photographier un lit avec l'appareil photo
+- photographier le piano avec l'appareil photo
+- photographier la table de poker avec l'appareil photo
+- photographier la table de dominos avec l'appareil photo
+- photographier la rivière avec l'appareil photo
+- photographier un arbre avec l'appareil photo
+- photographier un rocher avec l'appareil photo
+- photographier la diligence avec l'appareil photo
+- photographier un chariot avec l'appareil photo
+- photographier le train avec l'appareil photo
+- photographier le saloon avec l'appareil photo
+- photographier la banque avec l'appareil photo
+- photographier le magasin général avec l'appareil photo
+- observer le shérif
+- observer un fermier
+- observer le barman
+- observer l'armurier
+- observer un étranger
+- observer un hors-la-loi
+- observer un membre du gang
+- observer un cadavre
+- observer ton cheval
+- observer un cheval sauvage
+- observer un chien
+- observer un cerf
+- observer un ours
+- observer un lapin
+- observer une carcasse de cerf
+- observer le revolver
+- observer le fusil
+- observer l'arc
+- observer le couteau
+- observer un tomahawk
+- observer un bâton de dynamite
+- observer le lasso
+- observer un crochet de serrurier
+- observer la brosse
+- observer le rasoir
+- observer la canne à pêche
+- observer l'appareil photo
+- observer le journal intime
+- observer la lanterne
+- observer une pomme
+- observer de la viande crue
+- observer une bouteille de whisky
+- observer une bière
+- observer une cigarette
+- observer du ginseng
+- observer ton chapeau
+- observer un manteau
+- observer un avis de recherche
+- observer une carte au trésor
+- observer la porte
+- observer le coffre-fort
+- observer un tonneau
+- observer le feu de camp
+- observer une chaise
+- observer un lit
+- observer le piano
+- observer la table de poker
+- observer la table de dominos
+- observer la rivière
+- observer un arbre
+- observer un rocher
+- observer la diligence
+- observer un chariot
+- observer le train
+- observer le saloon
+- observer la banque
+- observer le magasin général
+- s'asseoir sur une chaise
+- s'asseoir sur un lit
