@@ -1,0 +1,6 @@
+{
+  "nom": "Au camp, au bord de la rivière, au crépuscule",
+  "joueur": { "a_cheval": false, "a_de_l_argent": true, "est_recherche": false },
+  "inventaire": ["revolver", "couteau", "lasso", "brosse", "rasoir", "canne_a_peche", "journal_intime", "pomme", "viande_crue", "cigarette"],
+  "a_proximite": ["ton_cheval", "chien", "membre_du_gang", "feu_de_camp", "riviere", "carcasse_de_cerf", "chariot", "lit", "chaise", "table_de_dominos", "lanterne", "arbre"]
+}

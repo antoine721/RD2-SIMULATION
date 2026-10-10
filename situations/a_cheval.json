@@ -1,0 +1,6 @@
+{
+  "nom": "À cheval dans les plaines de Heartlands",
+  "joueur": { "a_cheval": true, "a_de_l_argent": false, "est_recherche": false },
+  "inventaire": ["fusil", "arc", "couteau", "lasso", "appareil_photo", "pomme"],
+  "a_proximite": ["ton_cheval", "cheval_sauvage", "cerf", "lapin", "diligence", "rocher", "ginseng"]
+}

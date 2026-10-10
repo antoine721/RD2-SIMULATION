@@ -1,0 +1,6 @@
+{
+  "nom": "Au saloon de Valentine, recherché par la loi",
+  "joueur": { "a_cheval": false, "a_de_l_argent": true, "est_recherche": true },
+  "inventaire": ["revolver", "lasso", "crochet", "dynamite", "chapeau", "carte_au_tresor"],
+  "a_proximite": ["barman", "sherif", "etranger", "hors_la_loi", "piano", "table_de_poker", "chaise", "whisky", "biere", "porte", "coffre_fort", "avis_de_recherche"]
+}
