@@ -1,0 +1,696 @@
+{
+  "description": "Un voyageur armé, poussiéreux, de passage à Valentine : chapeau cabossé, foulard au cou, revolver à la hanche et fusil en bandoulière. Dans ses poches, une montre de gousset qui avance, une vieille photographie, une flasque, une gourde et un harmonica.",
+  "nouveaux_verbes": {
+    "prier": {"categorie": "Social", "phrase": "prier en silence"},
+    "siffler_un_air": {"categorie": "Loisirs & culture", "phrase": "siffler un air"},
+    "tirer_en_l_air": {"categorie": "Combat", "phrase": "tirer en l'air avec {outil}", "outil": ["arme_de_tir"], "outil_ou": "inventaire"},
+    "crier": {"categorie": "Social", "phrase": "crier à pleins poumons"},
+    "pleurer": {"categorie": "Social", "phrase": "pleurer"},
+    "rire": {"categorie": "Social", "phrase": "éclater de rire"},
+    "jurer": {"categorie": "Social", "phrase": "jurer comme un charretier"},
+    "cracher": {"categorie": "Social", "phrase": "cracher par terre"},
+    "oter_son_chapeau": {"categorie": "Social", "phrase": "ôter son chapeau"},
+    "se_parler_a_soi_meme": {"categorie": "Social", "phrase": "se parler à soi-même"},
+    "faire_craquer_ses_doigts": {"categorie": "Social", "phrase": "faire craquer ses doigts"},
+    "contempler_le_ciel": {"categorie": "Loisirs & culture", "phrase": "contempler le ciel"},
+    "observer_les_alentours": {"categorie": "Loisirs & culture", "phrase": "observer les alentours"},
+    "tendre_l_oreille": {"categorie": "Loisirs & culture", "phrase": "tendre l'oreille"},
+    "humer_l_air": {"categorie": "Loisirs & culture", "phrase": "humer l'air"},
+    "ruminer_son_passe": {"categorie": "Loisirs & culture", "phrase": "réfléchir à son passé"},
+    "regarder_vieille_photo": {"categorie": "Loisirs & culture", "phrase": "regarder une vieille photographie"},
+    "regarder_sa_montre": {"categorie": "Loisirs & culture", "phrase": "regarder l'heure à sa montre de gousset"},
+    "deplier_sa_carte": {"categorie": "Loisirs & culture", "phrase": "déplier sa carte du New Hanover"},
+    "jouer_harmonica": {"categorie": "Loisirs & culture", "phrase": "jouer un air d'harmonica"},
+    "pile_ou_face": {"categorie": "Loisirs & culture", "phrase": "lancer une pièce à pile ou face", "conditions": ["a_de_l_argent"]},
+    "faire_tourner_revolver": {"categorie": "Loisirs & culture", "phrase": "faire tourner son revolver autour du doigt"},
+    "faire_tournoyer_lasso": {"categorie": "Loisirs & culture", "phrase": "faire tournoyer {outil} au-dessus de sa tête", "outil": ["lien"], "outil_ou": "inventaire"},
+    "jeu_du_couteau": {"categorie": "Loisirs & culture", "phrase": "planter {outil} entre ses doigts écartés", "outil": ["arme_blanche"], "outil_ou": "inventaire", "conditions": ["!a_cheval"]},
+    "tailler_un_bout_de_bois": {"categorie": "Loisirs & culture", "phrase": "tailler un bout de bois avec {outil}", "outil": ["arme_blanche"], "outil_ou": "inventaire"},
+    "ecrire_une_lettre": {"categorie": "Loisirs & culture", "phrase": "écrire une lettre sur une page arrachée à {outil}", "outil": ["inscriptible"], "outil_ou": "inventaire"},
+    "autoportrait": {"categorie": "Loisirs & culture", "phrase": "se prendre en portrait avec {outil}", "outil": ["appareil_photo"], "outil_ou": "inventaire"},
+    "verifier_barillet": {"categorie": "Entretien & inventaire", "phrase": "vérifier le barillet de son revolver"},
+    "compter_ses_munitions": {"categorie": "Entretien & inventaire", "phrase": "compter ses munitions"},
+    "fouiller_ses_poches": {"categorie": "Entretien & inventaire", "phrase": "fouiller ses poches"},
+    "cirer_ses_bottes": {"categorie": "Entretien & inventaire", "phrase": "cirer ses bottes avec {outil}", "outil": ["brosse"], "outil_ou": "inventaire", "conditions": ["!a_cheval"]},
+    "epousseter_ses_vetements": {"categorie": "Entretien & inventaire", "phrase": "épousseter ses vêtements"},
+    "recharger": {"categorie": "Combat", "phrase": "recharger {cible}", "cible": ["arme_de_tir"], "cible_ou": "inventaire"},
+    "s_entrainer_a_degainer": {"categorie": "Combat", "phrase": "s'entraîner à dégainer"},
+    "lancer_dynamite_au_loin": {"categorie": "Combat", "phrase": "allumer {outil} et le lancer au loin", "outil": ["explosif"], "outil_ou": "inventaire"},
+    "compter_son_argent": {"categorie": "Économie & crime", "phrase": "compter son argent", "conditions": ["a_de_l_argent"]},
+    "remonter_foulard": {"categorie": "Économie & crime", "phrase": "remonter son foulard sur son visage"},
+    "mediter_sur_sa_prime": {"categorie": "Économie & crime", "phrase": "méditer sur sa prime", "conditions": ["est_recherche"]},
+    "s_etirer": {"categorie": "Survie", "phrase": "s'étirer"},
+    "faire_un_somme": {"categorie": "Survie", "phrase": "faire un petit somme"},
+    "se_gratter": {"categorie": "Survie", "phrase": "se gratter"},
+    "se_curer_les_dents": {"categorie": "Survie", "phrase": "se curer les dents avec la pointe de {outil}", "outil": ["arme_blanche"], "outil_ou": "inventaire"},
+    "chiquer": {"categorie": "Survie", "phrase": "chiquer du tabac"},
+    "rouler_une_cigarette": {"categorie": "Survie", "phrase": "rouler une cigarette"},
+    "se_soigner": {"categorie": "Survie", "phrase": "panser ses blessures"},
+    "boire_a_la_gourde": {"categorie": "Survie", "phrase": "boire à sa gourde"},
+    "boire_a_la_flasque": {"categorie": "Survie", "phrase": "boire une rasade à sa flasque"},
+    "attendre": {"categorie": "Survie", "phrase": "attendre en regardant passer le temps"},
+    "faire_un_feu": {"categorie": "Survie", "phrase": "allumer un feu de camp", "conditions": ["!a_cheval"]},
+    "vider_ses_bottes": {"categorie": "Survie", "phrase": "vider ses bottes", "conditions": ["!a_cheval"]},
+    "faire_des_pompes": {"categorie": "Survie", "phrase": "faire des pompes", "conditions": ["!a_cheval"]}
+  },
+  "reactions": {
+    "marcher": [
+      {"texte": "Tu marches sans te presser, les éperons tintant à chaque pas. Rien ne presse à Valentine, sauf le train."},
+      {"texte": "La boue de la rue principale aspire tes bottes à chaque pas. Tu avances en jurant entre tes dents, le chapeau ruisselant.", "si": ["pluie", "dehors"]},
+      {"texte": "Tu marches dans la rue déserte. Seules les fenêtres du Keane's jettent encore une lumière jaune sur la boue.", "si": ["nuit", "dehors"]},
+      {"texte": "Le soleil cogne. Tu avances d'ombre en ombre, de l'auvent de la banque à celui du magasin général, la chemise collée au dos.", "si": ["chaleur", "dehors"]},
+      {"texte": "Tu marches en rasant les murs, le chapeau bas. Chaque fois qu'une porte grince, ta main frôle la crosse.", "si": ["est_recherche"]},
+      {"texte": "Tu fais les cent pas dans la pièce. Le plancher craque si fort que quelqu'un, en dessous, tape au plafond avec un manche à balai.", "si": ["dedans"]},
+      {"texte": "Le brouillard avale la rue à dix pas. Tu marches en te guidant au bruit du marteau de Gunnar et à l'odeur du bétail.", "si": ["brouillard", "dehors"]}
+    ],
+    "courir": [
+      {"texte": "Tu pars au pas de course, une main sur le chapeau pour ne pas le perdre. Un chien aboie sur ton passage, vexé de ne pas avoir été invité."},
+      {"texte": "Tu cours sous un soleil de plomb. Au bout de cinquante mètres, tu t'arrêtes, plié en deux, le souffle court et la gorge en feu.", "si": ["chaleur"], "effets": {"sante": -3}},
+      {"texte": "Tu cours dans la gadoue. Ton pied dérape et tu t'étales de tout ton long devant le magasin général, sous les rires d'un vacher.", "si": ["pluie", "dehors"], "effets": {"sante": -2}},
+      {"texte": "Tu cours sans te retourner. Derrière toi, quelqu'un crie « Eh, toi ! »... ou peut-être que tu l'as rêvé.", "si": ["est_recherche"]},
+      {"texte": "Tu traverses la pièce en courant et renverses une chaise. On te regarde comme un fou échappé de l'asile de Saint Denis.", "si": ["dedans"]},
+      {"texte": "Tu cours dans le noir et rates une marche du trottoir de bois. Ta cheville proteste, mais elle tient bon.", "si": ["nuit"], "effets": {"sante": -2}}
+    ],
+    "s_accroupir": [
+      {"texte": "Tu t'accroupis, une main posée au sol. D'ici, le monde paraît plus grand et les ennuis un peu plus loin."},
+      {"texte": "Tu t'accroupis derrière ce que tu trouves, l'œil aux aguets. Personne ne semble te chercher... pour l'instant.", "si": ["est_recherche"]},
+      {"texte": "Accroupi au bord de la rue, tu ramasses une poignée de terre et la laisses filer entre tes doigts. Bonne terre, pour qui a le courage de la travailler.", "si": ["dehors", "jour"]},
+      {"texte": "Tu t'accroupis et jettes un œil sous les meubles. Un vieux bouton de nacre brille sous une latte disjointe, avec beaucoup de poussière.", "si": ["dedans"]},
+      {"texte": "Tu t'accroupis dans l'ombre. Un rat passe tout près de ta botte sans même te remarquer. Tu te sens invisible.", "si": ["nuit"]}
+    ],
+    "sauter": [
+      {"texte": "Tu sautes à pieds joints, sans raison particulière. Tes éperons cliquettent. Tu te sens un peu bête, mais vivant."},
+      {"texte": "Tu fais sauter ton cheval par-dessus un tonneau couché. Il retombe proprement et secoue la crinière, fier de lui.", "si": ["a_cheval"]},
+      {"texte": "Tu sautes par-dessus une flaque... et atterris dans la suivante. La boue te monte jusqu'aux genoux.", "si": ["pluie", "dehors"]},
+      {"texte": "Tu sautes, et ton chapeau cogne une poutre basse. Une pluie de poussière et de toiles d'araignée te tombe dans le col.", "si": ["dedans"]},
+      {"texte": "Tu sautes du trottoir dans le noir et te tords la cheville dans une ornière. Valentine n'est pas faite pour les acrobates.", "si": ["nuit"], "effets": {"sante": -3}}
+    ],
+    "fuir": [
+      {"texte": "Tu détales sans demander ton reste. Personne ne te poursuit, mais on n'est jamais trop prudent."},
+      {"texte": "Tu files entre deux bâtiments, le cœur battant. Derrière toi, un coup de sifflet d'adjoint déchire l'air... puis plus rien. Tu les as semés.", "si": ["est_recherche"]},
+      {"texte": "Tu éperonnes ton cheval et quittes la rue principale au grand galop. Les avis de recherche claquent au vent derrière toi.", "si": ["est_recherche", "a_cheval"]},
+      {"texte": "Tu t'enfuis dans la nuit, trébuchant sur les traverses de la voie ferrée. Tu reprends ton souffle à l'abri du château d'eau.", "si": ["nuit"], "effets": {"sante": -1}},
+      {"texte": "Tu prends la fuite... puis tu t'arrêtes, honteux. Un homme comme toi ne détale pas comme un lapin. Tu reviens d'un pas calme.", "si": ["honneur_haut"]},
+      {"texte": "Tu disparais dans le brouillard en trois enjambées. Même toi, tu ne sais plus très bien où tu es.", "si": ["brouillard"]}
+    ],
+    "galoper": [
+      {"texte": "Tu lâches la bride et ton cheval s'élance. Le vent te fouette le visage, les façades de bois défilent en un éclair."},
+      {"texte": "Tu galopes sous l'averse, les sabots projetant des gerbes de boue jusque sur les vitrines. Un commis te maudit depuis le seuil de la banque.", "si": ["pluie"]},
+      {"texte": "Tu galopes dans la nuit. Les sabots résonnent dans la rue vide, et des volets s'ouvrent pour voir quel fou passe à cette heure.", "si": ["nuit"]},
+      {"texte": "Tu galopes au milieu des promeneurs du dimanche. Ils s'écartent en retenant leurs chapeaux, scandalisés, et une dame te traite de païen.", "si": ["dimanche"], "effets": {"honneur": -1}},
+      {"texte": "Tu galopes vers la sortie de la ville, penché sur l'encolure. Si quelqu'un a reconnu ton visage, il devra courir plus vite que ton cheval.", "si": ["est_recherche"]},
+      {"texte": "Tu galopes dans la poussière brûlante. Ton cheval écume, et tu ralentis bientôt pour ne pas le crever.", "si": ["chaleur"]},
+      {"texte": "Tu galopes à l'aveugle dans le brouillard et manques de percuter une charrette. Le charretier t'abreuve d'injures longtemps après que tu as disparu.", "si": ["brouillard"]}
+    ],
+    "cabrer": [
+      {"texte": "Tu tires sur les rênes : ton cheval se dresse sur ses postérieurs en hennissant. Belle allure, digne d'une gravure de journal."},
+      {"texte": "Un éclair zèbre le ciel au moment où ton cheval se cabre. Il manque de te désarçonner, et tu retombes lourdement en selle.", "si": ["orage"], "effets": {"sante": -2}},
+      {"texte": "Ton cheval se cabre au milieu des promeneurs du dimanche. Une vieille dame lâche son ombrelle et te traite de « suppôt de Satan ».", "si": ["dimanche"], "effets": {"honneur": -1}},
+      {"texte": "Tu fais cabrer ta monture juste pour voir les passants reculer. Tu aimes ce petit éclair de peur dans leurs yeux. Tu ne devrais pas.", "si": ["honneur_bas"]},
+      {"texte": "Ton cheval se cabre, glisse dans la boue et retombe de justesse. Tu jures que c'est la dernière fois que tu fais le malin sous l'averse.", "si": ["pluie"], "effets": {"sante": -3}},
+      {"texte": "Ton cheval se cabre sous le plafond bas : ton chapeau s'écrase contre une poutre et la lampe à pétrole se balance dangereusement.", "si": ["dedans"]}
+    ],
+    "appeler_cheval": [
+      {"texte": "Tu portes deux doigts à tes lèvres et siffles. Quelques secondes plus tard, ton cheval trotte vers toi en secouant la tête."},
+      {"texte": "Ton sifflement perce la nuit. Un hennissement lui répond, puis le bruit sourd de sabots qui approchent dans le noir.", "si": ["nuit"]},
+      {"texte": "Tu siffles, mais le tonnerre couvre tout. Il te faut trois essais avant que ton cheval, les oreilles couchées, se décide à venir.", "si": ["orage"]},
+      {"texte": "Tu siffles en plein intérieur. Ton cheval ne viendra pas, mais tout le monde te regarde. Tu fais semblant d'avoir appelé un chien.", "si": ["dedans"]},
+      {"texte": "Tu siffles dans le brouillard. Ton cheval surgit de la brume comme un fantôme et vient fourrer son museau dans ta poche.", "si": ["brouillard"]},
+      {"texte": "Tu siffles ton cheval, prêt à filer. Il arrive au galop, comme s'il sentait lui aussi qu'il est temps de quitter Valentine.", "si": ["est_recherche"]}
+    ],
+    "descendre_de_cheval": [
+      {"texte": "Tu passes la jambe par-dessus la selle et mets pied à terre. Tes genoux craquent comme ceux d'un vieillard."},
+      {"texte": "Tu sautes de selle et tes bottes s'enfoncent dans la boue jusqu'aux chevilles. Bienvenue à Valentine.", "si": ["pluie"]},
+      {"texte": "Tu descends de cheval et lui flattes l'encolure trempée de sueur. Il lorgne déjà l'abreuvoir avec insistance.", "si": ["chaleur"]},
+      {"texte": "Tu mets pied à terre sans un bruit et attaches ton cheval dans l'ombre, loin des lanternes.", "si": ["nuit"]},
+      {"texte": "Tu descends de cheval sans lâcher les rênes, prêt à remonter en selle au moindre cri.", "si": ["est_recherche"]}
+    ],
+    "chanter": [
+      {"texte": "Tu entonnes une vieille complainte de cow-boy. Un chien hurle quelque part, par solidarité ou par protestation."},
+      {"texte": "Ta voix se perd sous la pluie. Personne ne t'écoute, et c'est très bien comme ça.", "si": ["pluie"]},
+      {"texte": "Tu chantes « Rock of Ages » à pleine voix. Une vieille dame endimanchée hoche la tête, approbatrice.", "si": ["dimanche"], "effets": {"honneur": 1}},
+      {"texte": "Tu chantes à tue-tête sous les étoiles. Une fenêtre s'ouvre et une botte vole dans ta direction. Elle te manque de peu.", "si": ["nuit", "dehors"]},
+      {"texte": "Tu chantes, et l'écho de la pièce te fait croire un instant que tu as du talent. Un bref instant.", "si": ["dedans"]},
+      {"texte": "Tu chantes une ballade de bandit, celle où le shérif finit pendu à son propre arbre. Quelques têtes se tournent, inquiètes.", "si": ["honneur_bas"]},
+      {"texte": "Tu chantes au rythme du pas de ton cheval. Il remue les oreilles : impossible de savoir s'il apprécie ou s'il souffre.", "si": ["a_cheval"]}
+    ],
+    "danser": [
+      {"texte": "Tu esquisses quelques pas de gigue, les pouces dans la ceinture. Tes éperons font un raffut de tous les diables."},
+      {"texte": "Tu danses seul au milieu de la pièce. Le plancher grince en rythme, ce qui te tient lieu d'orchestre.", "si": ["dedans"]},
+      {"texte": "Tu danses sous la pluie, la tête renversée, en riant. Un passant pressé te contourne largement, persuadé que tu as bu.", "si": ["pluie", "dehors"]},
+      {"texte": "Tu danses trois mesures sous le soleil, puis tu renonces, en nage. La danse, c'est pour le soir.", "si": ["chaleur"], "effets": {"sante": -1}},
+      {"texte": "Tu danses au clair de lune sur l'air lointain du piano du Keane's, qui joue faux. Tu danses faux aussi : vous allez bien ensemble.", "si": ["nuit"]},
+      {"texte": "Tu danses un dimanche. Quelque part, le révérend Whitlock doit sentir un frisson lui parcourir l'échine.", "si": ["dimanche"]}
+    ],
+    "fumer": [
+      {"texte": "Tu tires une longue bouffée et la gardes un moment. Une quinte de toux te plie en deux : le tabac de l'épicier est une infamie.", "effets": {"sante": -1}},
+      {"texte": "Tu craques une allumette sur ta botte et allumes {cible}. La fumée monte lentement, et le monde ralentit avec elle."},
+      {"texte": "Tu essaies d'allumer {cible} sous la pluie. Trois allumettes noyées plus tard, tu y parviens enfin, à l'abri de ton chapeau.", "si": ["pluie"]},
+      {"texte": "Le bout incandescent rougeoie dans le noir. Tu fumes en silence, à écouter les grillons et le piano lointain du saloon.", "si": ["nuit"]},
+      {"texte": "Tu fumes {cible} sous un soleil de plomb. La fumée te râpe la gorge et te donne encore plus soif.", "si": ["chaleur"], "effets": {"sante": -1}},
+      {"texte": "Tu fumes, adossé à un mur, en regardant les gens passer. Tu te demandes lequel d'entre eux toucherait volontiers ta prime.", "si": ["est_recherche"]}
+    ],
+    "se_raser": [
+      {"texte": "Tu passes {outil} le long de ta joue, sans miroir, à l'instinct. Le résultat est inégal, mais tu as l'air presque respectable."},
+      {"texte": "Ta main glisse : {outil} t'entaille le menton. Tu tamponnes le sang avec ton foulard en jurant.", "effets": {"sante": -2}},
+      {"texte": "Tu te rases devant un bout de miroir, à la lueur d'une lampe à pétrole. Tu redécouvres un visage que tu avais un peu oublié.", "si": ["dedans"]},
+      {"texte": "Tu rases ta barbe de près. Avec un peu de chance, tu ne ressembleras plus au portrait cloué sur le panneau des avis.", "si": ["est_recherche"]},
+      {"texte": "Te raser à cheval ? Ta monture fait un pas de côté et {outil} manque de te couper l'oreille. Tu remets ça à plus tard.", "si": ["a_cheval"], "effets": {"sante": -1}},
+      {"texte": "Tu te rases de frais pour le dimanche, comme ta mère te l'a appris. Tu sens le savon et la bonne conscience.", "si": ["dimanche"]}
+    ],
+    "manger": [
+      {"texte": "Tu croques dans {cible}. Elle est un peu farineuse, mais elle fait taire ton estomac.", "effets": {"sante": 5}},
+      {"texte": "Tu croques {cible}, juteuse et fraîche. Par cette chaleur, c'est presque un festin.", "si": ["chaleur"], "effets": {"sante": 6}},
+      {"texte": "Tu manges {cible} en selle. Ton cheval tourne la tête et te fixe d'un œil si chargé de reproche que tu lui laisses le trognon.", "si": ["a_cheval"], "effets": {"sante": 3}},
+      {"texte": "Tu manges {cible} dans le noir et sens quelque chose bouger sous ta dent. Tu préfères ne pas savoir.", "si": ["nuit"], "effets": {"sante": 3}},
+      {"texte": "Tu manges vite, debout, en surveillant les alentours. Un repas de fugitif, avalé sans plaisir.", "si": ["est_recherche"], "effets": {"sante": 4}}
+    ],
+    "nettoyer": [
+      {"texte": "Tu démontes {cible} pièce par pièce, souffles dans le canon et graisses le mécanisme avec soin. Il brille comme au premier jour."},
+      {"texte": "Tu essuies l'humidité de {cible} avant que la rouille ne s'y mette. Une arme sale, c'est une arme qui t'abandonne au mauvais moment.", "si": ["pluie"]},
+      {"texte": "À la lueur d'une lampe, tu nettoies {cible} lentement, comme un rituel. Le cliquetis du mécanisme t'apaise.", "si": ["nuit"]},
+      {"texte": "Tu nettoies {cible} en silence. Il y a des taches que l'huile n'enlève pas, et tu le sais.", "si": ["honneur_bas"]},
+      {"texte": "Tu nettoies {cible} avec l'attention d'un homme qui sait qu'il devra s'en servir bientôt.", "si": ["est_recherche"]},
+      {"texte": "Tu nettoies {cible} en chassant la poussière fine qui s'est glissée partout. Dans ce pays, même les armes ont soif.", "si": ["chaleur"]}
+    ],
+    "aiguiser": [
+      {"texte": "Tu passes {cible} sur une pierre à aiguiser, d'un geste régulier. Le fil devient assez fin pour trancher une feuille au vol."},
+      {"texte": "Tu testes le tranchant de {cible} sur ton pouce. Trop bien : une goutte de sang perle aussitôt.", "effets": {"sante": -1}},
+      {"texte": "Le crissement de la lame sur la pierre résonne dans le silence de la nuit. Quelque part, un chien se tait.", "si": ["nuit"]},
+      {"texte": "Tu aiguises {cible} à l'abri, au rythme de la pluie qui tambourine sur les planches.", "si": ["pluie"]},
+      {"texte": "Tu aiguises {cible} lentement, sans quitter les alentours des yeux. Ceux qui passent pressent le pas.", "si": ["honneur_bas"]}
+    ],
+    "dessiner": [
+      {"texte": "Tu dessines {cible} dans {outil}, au crayon. Le trait est maladroit, mais on reconnaît l'objet. À peu près."},
+      {"texte": "Tu passes une bonne heure à dessiner {cible}. C'est ton meilleur croquis depuis des mois, et tu le signes d'un paraphe ridicule."},
+      {"texte": "Tu dessines {cible} à la lueur d'une allumette, puis d'une autre. Le dessin est surtout fait d'ombres.", "si": ["nuit"]},
+      {"texte": "Une goutte tombe sur la page et ton croquis se met à baver. On dirait maintenant une œuvre d'art moderne de Saint Denis.", "si": ["pluie"]},
+      {"texte": "Tu essaies de dessiner {cible} en selle. Chaque pas de ton cheval transforme ton trait en zigzag.", "si": ["a_cheval"]},
+      {"texte": "Un dimanche tranquille, tu croques {cible} dans {outil}, avec en marge la silhouette du clocher de Valentine.", "si": ["dimanche"]}
+    ],
+    "dormir_dehors": [
+      {"texte": "Tu t'allonges, la selle en guise d'oreiller, le chapeau sur les yeux. Le sommeil vient vite, et les rêves aussi.", "effets": {"sante": 15}},
+      {"texte": "Tu dors sous la pluie, enroulé dans une couverture trempée. Tu te réveilles grelottant, avec un rhume carabiné.", "si": ["pluie"], "effets": {"sante": -3}},
+      {"texte": "Le tonnerre te réveille toutes les heures. À l'aube, tu as l'impression d'avoir été piétiné par le troupeau de Silas Whitmore.", "si": ["orage"], "effets": {"sante": -5}},
+      {"texte": "Tu dors à la belle étoile. Les grillons, le vent dans l'herbe, un hibou au loin : le meilleur hôtel du Territoire, et il est gratuit.", "si": ["nuit"], "effets": {"sante": 20}},
+      {"texte": "Tu dors d'un œil, la main sur la crosse. Au matin, tu te réveilles avec la forme du barillet imprimée sur la joue.", "si": ["est_recherche"], "effets": {"sante": 8}},
+      {"texte": "Tu dors à l'ombre d'un mur. À ton réveil, des fourmis ont colonisé ta botte gauche.", "si": ["chaleur"], "effets": {"sante": 10}},
+      {"texte": "Faute de lit, tu dors à même le plancher, roulé dans ta veste. Ton dos s'en souviendra longtemps.", "si": ["dedans"], "effets": {"sante": 5}},
+      {"texte": "Tu t'endors dans le brouillard et te réveilles trempé de rosée, sans savoir pendant un instant où tu es.", "si": ["brouillard"], "effets": {"sante": 10}}
+    ],
+    "lacher": [
+      {"texte": "Tu lâches {cible} par terre, puis tu te demandes bien pourquoi tu as fait ça."},
+      {"texte": "Tu laisses tomber {cible} dans une flaque. Plouf. Voilà qui est fait.", "si": ["pluie"]},
+      {"texte": "Tu abandonnes {cible} derrière toi. Moins de poids, moins de preuves.", "si": ["est_recherche"]},
+      {"texte": "Tu jettes {cible} dans la poussière, comme si tout était de sa faute.", "si": ["honneur_bas"]},
+      {"texte": "Tu lâches {cible} du haut de ta selle. Ton cheval fait un écart, vexé qu'on lui jette des choses entre les sabots.", "si": ["a_cheval"]},
+      {"texte": "Tu poses {cible} sur le plancher. Le bruit sec fait sursauter quelqu'un dans la pièce voisine.", "si": ["dedans"]}
+    ],
+    "equiper": [
+      {"texte": "Tu prends {cible} bien en main. Le poids familier te rassure, comme une vieille poignée de main."},
+      {"texte": "Tu gardes {cible} à portée de main. Dans ta situation, mieux vaut ne pas avoir à le chercher.", "si": ["est_recherche"]},
+      {"texte": "Tu équipes {cible} sans fanfaronner, canon vers le sol. Un homme armé n'a pas besoin de le montrer.", "si": ["honneur_haut"]},
+      {"texte": "Tu équipes {cible} à tâtons dans le noir. Tes mains connaissent chaque pièce mieux que tes yeux.", "si": ["nuit"]},
+      {"texte": "Tu équipes {cible} un dimanche. Le Seigneur se reposait le septième jour ; les O'Driscoll, eux, ne se reposent jamais.", "si": ["dimanche"]}
+    ],
+    "lire": [
+      {"texte": "Tu feuillettes {cible}. Des noms de villes, des dates, un dessin de cheval : toute une vie griffonnée à la hâte."},
+      {"texte": "Tu relis {cible} à la lueur d'une allumette. Une vieille page te serre le cœur, et tu tournes vite la suivante.", "si": ["nuit"]},
+      {"texte": "Tu lis {cible} à l'abri pendant que la pluie tambourine. L'encre de certaines pages a coulé, comme des larmes.", "si": ["pluie"]},
+      {"texte": "Tu relis les dernières pages de {cible}. Tu ne reconnais pas toujours l'homme qui les a écrites.", "si": ["honneur_bas"]},
+      {"texte": "Tu relis {cible} et souris : malgré tout, tu as fait plus de bien que de mal. Ta mère aurait été fière, peut-être.", "si": ["honneur_haut"]},
+      {"texte": "Tu lis en selle, les rênes lâches. Ton cheval connaît le chemin mieux que toi.", "si": ["a_cheval"]}
+    ],
+    "ecrire": [
+      {"texte": "Tu écris dans {cible} : « Valentine. Une ville qui sent la vache et la poudre. Je ne compte pas m'y attarder. »"},
+      {"texte": "Tu écris à la lueur d'une lampe : « Encore une nuit loin de tout. Le piano du Keane's joue faux, comme hier. »", "si": ["nuit"]},
+      {"texte": "Tu écris dans {cible} : « Ma tête vaut de l'argent, maintenant. Je me demande combien de gens d'ici seraient prêts à me vendre. »", "si": ["est_recherche"]},
+      {"texte": "Tu écris : « Aujourd'hui, j'ai été quelqu'un de bien. Il faudra recommencer demain. C'est plus dur qu'il n'y paraît. »", "si": ["honneur_haut"]},
+      {"texte": "Tu écris quelques lignes, puis tu les barres. Puis tu arraches la page. Certaines choses ne s'écrivent pas.", "si": ["honneur_bas"]},
+      {"texte": "Tu écris : « Dimanche. Les cloches. Tout le monde à l'église, sauf moi et les ivrognes. Je ne sais pas qui a fait le meilleur choix. »", "si": ["dimanche"]},
+      {"texte": "Tu écris : « Il pleut sur Valentine. La rue principale est devenue un fleuve de boue. Même les cochons hésitent. »", "si": ["pluie"]}
+    ],
+    "observer": [
+      {"texte": "Tu observes {cible} sous tous les angles. Rien de spécial... et pourtant, tu y tiens."},
+      {"texte": "Tu examines {cible} de près. Une éraflure, une tache : chaque marque te raconte une histoire."},
+      {"texte": "Tu approches {cible} de la lueur d'une fenêtre. Dans le noir, tout a l'air plus précieux, ou plus menaçant.", "si": ["nuit"]},
+      {"texte": "Tu sors {cible} de ta sacoche pour l'examiner en selle, et manques de tout laisser tomber.", "si": ["a_cheval"]},
+      {"texte": "Tu observes {cible} pendant que la pluie ruisselle de ton chapeau. Une goutte tombe dessus ; tu l'essuies du pouce.", "si": ["pluie"]}
+    ],
+    "payer_prime": [
+      {"texte": "Tu poses tes billets sur le bureau de Malloy. Il les compte deux fois et tamponne un reçu. « Ton ardoise est plus légère. Garde-la comme ça. »", "effets": {"argent": -20, "prime": -20}},
+      {"texte": "Le bureau est fermé, mais l'adjoint Eli entrouvre la porte en caleçon long. Il prend ton argent en bâillant et griffonne un reçu de travers.", "si": ["nuit"], "effets": {"argent": -20, "prime": -20}},
+      {"texte": "Malloy prend ton argent et en repousse une partie vers toi. « On m'a dit du bien de toi. La moitié suffira, cette fois. »", "si": ["honneur_haut"], "effets": {"argent": -10, "prime": -20}},
+      {"texte": "Malloy compte ton argent sans te quitter des yeux. « Je prends tes dollars, mais je garde ton visage en mémoire. » Il ajoute des « frais de dossier ».", "si": ["honneur_bas"], "effets": {"argent": -30, "prime": -20}},
+      {"texte": "Un dimanche ? Malloy soupire, referme sa Bible et ouvre son registre. « Le crime ne se repose pas. La paperasse non plus, apparemment. »", "si": ["dimanche"], "effets": {"argent": -20, "prime": -20}},
+      {"texte": "Tu règles ta dette au guichet du télégraphe, d'où Elmer Dobbs transmet le paiement au comté. Il lit ton nom deux fois, l'air gourmand.", "effets": {"argent": -25, "prime": -25}}
+    ],
+    "se_rendre": [
+      {"texte": "Tu entres au bureau du shérif, les mains levées. Malloy soupire : « Au moins, toi, tu me fais pas courir. » Une nuit en cellule, une amende, et ton ardoise est propre.", "effets": {"prime": -100, "argent": -15}},
+      {"texte": "Tu te rends. L'adjoint Eli, trop content, te pousse contre le mur plus fort que nécessaire. Tu ressors le lendemain, l'ardoise propre et les côtes douloureuses.", "si": ["honneur_bas"], "effets": {"prime": -100, "argent": -20, "sante": -10}},
+      {"texte": "Tu te présentes de toi-même. Malloy hoche la tête, presque respectueux. « C'est rare, un homme qui assume. » Il réduit l'amende de moitié.", "si": ["honneur_haut"], "effets": {"prime": -100, "argent": -8}},
+      {"texte": "Tu frappes au bureau du shérif en pleine nuit pour te rendre. Malloy, en chemise de nuit, t'enferme sans un mot et retourne se coucher. Au matin, ta dette est réglée.", "si": ["nuit"], "effets": {"prime": -100, "argent": -15}},
+      {"texte": "Tu passes la nuit sur la paillasse de l'unique cellule, à compter les puces et les heures. Au matin, Malloy te rend ton chapeau, ton arme et une ardoise vierge.", "effets": {"prime": -100, "argent": -15, "sante": -2}}
+    ],
+    "prier": [
+      {"texte": "Tu joins les mains et fermes les yeux. Les mots te reviennent mal, mais l'intention y est."},
+      {"texte": "Tu pries pendant que les cloches de l'église sonnent à toute volée. Pour une fois, tu as l'impression que quelqu'un écoute.", "si": ["dimanche"], "effets": {"honneur": 1}},
+      {"texte": "Tu pries pour les hommes que tu as blessés. C'est une longue prière, et elle te laisse un goût de cendre et d'espoir.", "si": ["honneur_bas"], "effets": {"honneur": 1}},
+      {"texte": "Tu pries pour que personne ne te reconnaisse aujourd'hui. Ce n'est sans doute pas le genre de prière que le Seigneur préfère.", "si": ["est_recherche"]},
+      {"texte": "Un éclair illumine le ciel au beau milieu de ta prière. Tu choisis d'y voir un « peut-être ».", "si": ["orage"]},
+      {"texte": "Tu pries à genoux dans la poussière, sous les étoiles. Le silence qui suit ressemble à une réponse.", "si": ["nuit", "dehors"], "effets": {"honneur": 1}},
+      {"texte": "Tu remercies le ciel pour une journée honnête. Ça fait du bien, de n'avoir rien à se faire pardonner.", "si": ["honneur_haut"], "effets": {"sante": 2}}
+    ],
+    "siffler_un_air": [
+      {"texte": "Tu siffles « Oh! Susanna », les mains dans les poches. L'air te met de meilleure humeur, à défaut d'y mettre les autres."},
+      {"texte": "Tu siffles doucement dans la nuit. Un hibou te répond, faux, sur la même note.", "si": ["nuit"]},
+      {"texte": "Tu siffles au rythme du pas de ton cheval. Il dresse une oreille, persuadé que tu l'appelles.", "si": ["a_cheval"]},
+      {"texte": "Tu siffles l'air innocent d'un honnête homme qui n'a jamais vu une affiche de sa vie. Ça ne trompe personne, mais ça détend.", "si": ["est_recherche"]},
+      {"texte": "Tu siffles sous la pluie, l'eau dégoulinant du bord de ton chapeau. Les gouttes battent la mesure sur les toits de tôle.", "si": ["pluie"]},
+      {"texte": "Tu siffles un cantique, le seul que tu connaisses par cœur. Tu cales au deuxième couplet, faute de mémoire.", "si": ["dimanche"]}
+    ],
+    "tirer_en_l_air": [
+      {"texte": "Tu lèves {outil} et presses la détente. La détonation fait trembler les vitres ; des portes claquent, un cheval hennit et quelqu'un crie d'aller chercher Malloy.", "effets": {"prime": 5, "honneur": -1}},
+      {"texte": "Tu tires au plafond. Une pluie de plâtre te tombe sur le chapeau, et à l'étage quelqu'un hurle de terreur.", "si": ["dedans"], "effets": {"prime": 10, "honneur": -2}},
+      {"texte": "Ton coup de feu déchire la nuit. Des lampes s'allument une à une le long de la rue, et l'adjoint Eli surgit du bureau en caleçon, fusil au poing.", "si": ["nuit", "dehors"], "effets": {"prime": 5, "honneur": -1}},
+      {"texte": "Tu tires dans le brouillard. La détonation est étouffée, et personne ne sait d'où elle vient. Quelques chiens aboient, puis plus rien.", "si": ["brouillard"]},
+      {"texte": "Ton coup de feu éclate en plein dimanche. Les cantiques s'interrompent net à l'église, et le révérend Whitlock sort sur le parvis, une main sous sa redingote.", "si": ["dimanche"], "effets": {"prime": 5, "honneur": -2}},
+      {"texte": "Tu tires en l'air en faisant pivoter ton cheval, comme dans les spectacles de Buffalo Bill. Les passants applaudissent... ou se jettent à plat ventre.", "si": ["a_cheval"], "effets": {"prime": 5}},
+      {"texte": "Tu tires au moment précis où éclate le tonnerre. Personne n'entend rien. Le ciel et toi, vous êtes quittes.", "si": ["orage"]},
+      {"texte": "Tu tires coup sur coup vers le ciel en hurlant comme un O'Driscoll. La rue se vide en dix secondes. Malloy, lui, viendra.", "si": ["honneur_bas", "dehors"], "effets": {"prime": 10, "honneur": -2}}
+    ],
+    "crier": [
+      {"texte": "Tu cries à pleins poumons, sans un mot, juste pour sentir ta voix. Des corbeaux s'envolent du toit de l'église."},
+      {"texte": "Ton cri déchire la nuit. Une fenêtre s'ouvre : « Y en a qui dorment ! » Une autre : « Plus maintenant ! »", "si": ["nuit"]},
+      {"texte": "Tu cries dans la pièce. Le silence qui suit est si lourd qu'on entend une mouche se cogner contre la vitre.", "si": ["dedans"]},
+      {"texte": "Tu cries face à l'orage, les bras écartés. Le tonnerre te répond plus fort. Tu as perdu, mais tu te sens mieux.", "si": ["orage"]},
+      {"texte": "Tu hurles des menaces à la cantonade. Une mère rentre ses enfants, les passants s'écartent, et quelqu'un court prévenir le shérif.", "si": ["honneur_bas"], "effets": {"prime": 2, "honneur": -1}},
+      {"texte": "Tu cries en plein dimanche. Une dame en noir te foudroie du regard et murmure quelque chose sur « les sauvages de l'Ouest ».", "si": ["dimanche"], "effets": {"honneur": -1}}
+    ],
+    "pleurer": [
+      {"texte": "Les larmes viennent sans prévenir. Tu les essuies du revers de la manche en vérifiant que personne ne regarde."},
+      {"texte": "Tu pleures sous la pluie. C'est pratique : personne ne peut faire la différence.", "si": ["pluie"]},
+      {"texte": "Tu pleures en silence dans le noir, pour tout ce que tu as perdu en chemin. Après, tu te sens étrangement léger.", "si": ["nuit"], "effets": {"sante": 2}},
+      {"texte": "Tu pleures sur les visages qui reviennent te hanter. Les larmes ne les ramènent pas, mais elles te rappellent que tu es encore un homme.", "si": ["honneur_bas"], "effets": {"honneur": 1}},
+      {"texte": "Tu pleures, le chapeau sur les yeux. Quelqu'un entre, te voit, et ressort aussitôt en refermant doucement la porte.", "si": ["dedans"]},
+      {"texte": "Tu pleures en selle. Ton cheval ralentit le pas, comme s'il comprenait.", "si": ["a_cheval"]}
+    ],
+    "rire": [
+      {"texte": "Tu éclates de rire sans raison. Un passant te regarde de travers, ce qui te fait rire encore plus."},
+      {"texte": "Ton rire a quelque chose d'inquiétant. Les gens autour de toi reculent d'un pas sans trop savoir pourquoi.", "si": ["honneur_bas"]},
+      {"texte": "Tu ris en pensant au prix de ta tête. Pour ce montant, ils auraient au moins pu choisir un meilleur dessinateur.", "si": ["est_recherche"]},
+      {"texte": "Tu ris sous la pluie, trempé jusqu'aux os. À quoi bon râler ? Le ciel ne t'écoute pas.", "si": ["pluie"]},
+      {"texte": "Ton rire résonne dans la rue vide et revient en écho depuis le château d'eau. On dirait que la ville rit avec toi.", "si": ["nuit", "dehors"]},
+      {"texte": "Tu ris si fort que les verres tintent sur l'étagère. Quelqu'un finit par rire aussi, sans savoir de quoi.", "si": ["dedans"]}
+    ],
+    "jurer": [
+      {"texte": "Tu lâches un chapelet de jurons qui ferait rougir un muletier. Ça soulage."},
+      {"texte": "Tu jures en plein dimanche. Une dame endimanchée porte la main à sa poitrine comme si tu l'avais giflée.", "si": ["dimanche"], "effets": {"honneur": -1}},
+      {"texte": "Tu jures à voix haute. La pièce se tait. Quelqu'un chuchote : « On ne parle pas comme ça, ici. »", "si": ["dedans"]},
+      {"texte": "Tu jures contre la pluie, la boue, le ciel et le New Hanover tout entier. La pluie, imperturbable, continue.", "si": ["pluie"]},
+      {"texte": "Tu jures, et ton cheval couche les oreilles comme si c'était pour lui. Tu lui demandes pardon à mi-voix.", "si": ["a_cheval"]},
+      {"texte": "Tu commences à jurer, puis tu te mords la langue. Tu as une réputation à tenir, maintenant.", "si": ["honneur_haut"]}
+    ],
+    "cracher": [
+      {"texte": "Tu craches par terre, un long jet précis. Tu as toujours eu ce talent-là, à défaut d'autres."},
+      {"texte": "Tu craches sur le plancher. Quelqu'un te lance un regard noir et va chercher une serpillière en marmonnant.", "si": ["dedans"], "effets": {"honneur": -1}},
+      {"texte": "Tu craches par terre devant des gens endimanchés. Une dame se signe, son mari fait mine de ne rien avoir vu.", "si": ["dimanche"], "effets": {"honneur": -1}},
+      {"texte": "Tu craches du haut de ta selle. Le vent rabat le crachat sur ta propre botte. Justice divine.", "si": ["a_cheval"]},
+      {"texte": "Tu craches aux pieds d'un passant. Il pâlit, ouvre la bouche, la referme et passe son chemin.", "si": ["honneur_bas"], "effets": {"honneur": -1}},
+      {"texte": "Tu craches dans la boue. Personne ne fera jamais la différence entre la boue de Valentine et ce que tu viens d'y ajouter.", "si": ["pluie", "dehors"]}
+    ],
+    "oter_son_chapeau": [
+      {"texte": "Tu ôtes ton chapeau et passes une main dans tes cheveux aplatis. Un peu d'air sur le crâne, ça ne se refuse pas."},
+      {"texte": "Tu ôtes ton chapeau au passage des fidèles qui vont à l'église. Plusieurs te rendent ton salut avec un sourire.", "si": ["dimanche"], "effets": {"honneur": 1}},
+      {"texte": "Tu ôtes ton chapeau, et la pluie te tombe aussitôt sur le crâne. Tu le remets très vite, en jurant.", "si": ["pluie", "dehors"]},
+      {"texte": "Tu ôtes ton chapeau pour t'éventer. Le soleil te frappe le crâne comme le marteau de Gunnar sur l'enclume.", "si": ["chaleur", "dehors"], "effets": {"sante": -1}},
+      {"texte": "Tu ôtes ton chapeau sous ce toit, comme il se doit. Une dame te gratifie d'un sourire approbateur.", "si": ["dedans"]},
+      {"texte": "Tu ôtes ton chapeau d'un geste moqueur, en une révérence exagérée. Personne ne sait s'il faut rire ou s'inquiéter.", "si": ["honneur_bas"]},
+      {"texte": "Tu ôtes ton chapeau pour sentir la fraîcheur de la nuit. Un frisson te parcourt la nuque.", "si": ["nuit"]}
+    ],
+    "se_parler_a_soi_meme": [
+      {"texte": "« Bon. Et maintenant ? » demandes-tu à voix haute. Personne ne répond, pas même toi."},
+      {"texte": "« Garde ton calme. Tu as connu pire. » Tu te le répètes trois fois, sans parvenir à y croire tout à fait.", "si": ["est_recherche"]},
+      {"texte": "« T'es un salaud, tu le sais ? » murmures-tu. Pour une fois, ta voix intérieure ne te contredit pas.", "si": ["honneur_bas"]},
+      {"texte": "« Pas mal, l'ami. Pas mal du tout. » Tu te souris à toi-même comme un idiot.", "si": ["honneur_haut"]},
+      {"texte": "Tu te parles tout bas dans le noir, juste pour entendre une voix. La solitude pèse plus lourd, la nuit.", "si": ["nuit"]},
+      {"texte": "Tu te parles à mi-voix. Quelqu'un dans la pièce répond « Pardon ? ». Tu fais semblant de tousser.", "si": ["dedans"]},
+      {"texte": "Tu fais la conversation à ton cheval, faute de mieux. Il a l'air d'accord avec tout ce que tu dis, ce qui est reposant.", "si": ["a_cheval"]}
+    ],
+    "faire_craquer_ses_doigts": [
+      {"texte": "Tu fais craquer tes doigts un à un. Le bruit sec résonne comme une série de petits coups de feu."},
+      {"texte": "Tu fais craquer tes jointures en regardant autour de toi. Le message est clair : cherche-moi et tu me trouveras.", "si": ["honneur_bas"]},
+      {"texte": "Tu fais craquer tes doigts. Dans la pièce, quelqu'un sursaute et renverse son verre.", "si": ["dedans"]},
+      {"texte": "Tu fais craquer tes doigts gourds de froid. Ils se réveillent un à un, en protestant.", "si": ["nuit"]},
+      {"texte": "Tu fais craquer tes doigts, prêt à toute éventualité. Tes mains sont ta meilleure arme, après l'autre.", "si": ["est_recherche"]},
+      {"texte": "Tu fais craquer tes doigts, puis ta nuque. Le dernier craquement est si sonore que tu t'inquiètes un instant."}
+    ],
+    "contempler_le_ciel": [
+      {"texte": "Tu lèves les yeux et restes là un long moment. Le ciel du New Hanover est si vaste qu'il rend tous les ennuis petits."},
+      {"texte": "Les étoiles couvrent le ciel d'un bord à l'autre. Tu retrouves la Grande Ourse, comme ton père te l'avait appris.", "si": ["nuit", "dehors"], "effets": {"sante": 2}},
+      {"texte": "Le ciel est noir, zébré d'éclairs violets. C'est magnifique et terrifiant. Une goutte énorme t'atterrit dans l'œil.", "si": ["orage", "dehors"]},
+      {"texte": "Le ciel est d'un bleu dur, sans un nuage. Un rapace tourne très haut, patient. Il attend que quelque chose meure de chaud.", "si": ["chaleur", "dehors"]},
+      {"texte": "Tu lèves les yeux vers... rien. Le brouillard a mangé le ciel. Même le château d'eau a disparu.", "si": ["brouillard", "dehors"]},
+      {"texte": "Faute de ciel, tu contemples le plafond. Une toile d'araignée, une tache d'humidité en forme de Texas. C'est déjà ça.", "si": ["dedans"]},
+      {"texte": "Tu contemples le ciel gris, et le ciel te répond en te pleurant dessus.", "si": ["pluie", "dehors"]}
+    ],
+    "observer_les_alentours": [
+      {"texte": "Tu observes les environs : le panneau des avis de recherche, le bureau du shérif, la fumée de la forge. Valentine vit à son rythme, lent et têtu."},
+      {"texte": "Tu observes la rue principale. Un vacher mène des bêtes, le crieur agite son journal, et Moineau se faufile entre les passants, la main traînant près d'une poche.", "si": ["jour", "dehors"]},
+      {"texte": "Tu observes la ville endormie. Une seule lampe brille encore, au bureau du shérif, où Malloy veille sur son prisonnier.", "si": ["nuit"]},
+      {"texte": "Tu observes... du brouillard. Des silhouettes floues passent, des voix sans corps. Valentine est devenue une ville de fantômes.", "si": ["brouillard"]},
+      {"texte": "Tu observes Valentine un dimanche : rue vide, volets clos, et l'église pleine à craquer. Même les chiens ont l'air recueillis.", "si": ["dimanche", "dehors"]},
+      {"texte": "Tu scrutes les alentours : qui te regarde un peu trop longtemps ? Personne. Ou tout le monde.", "si": ["est_recherche"]},
+      {"texte": "Tu observes la pièce : les issues, les fenêtres, qui est armé et qui ne l'est pas. Une vieille habitude.", "si": ["dedans"]},
+      {"texte": "Tu observes la ville comme un loup observe un troupeau : la banque, les poches pleines, les portes mal fermées.", "si": ["honneur_bas"]},
+      {"texte": "Du haut de ta selle, tu domines la rue. Tu remarques un homme au foulard vert qui fixe la prison un peu trop longtemps, puis s'en va.", "si": ["a_cheval", "jour"]}
+    ],
+    "tendre_l_oreille": [
+      {"texte": "Tu tends l'oreille. Le marteau de Gunnar sur l'enclume, un cheval qui s'ébroue, une porte qui grince : la musique de Valentine."},
+      {"texte": "Dans la nuit, tu entends le piano faux du Keane's, une dispute au Smithfield's, et quelque part, un homme qui pleure.", "si": ["nuit"]},
+      {"texte": "Tu tends l'oreille vers la pièce voisine : « ... jeudi, avec le train du juge... » Puis une porte se ferme, et plus rien.", "si": ["dedans"]},
+      {"texte": "Tu tends l'oreille : les cantiques montent de l'église. La voix du révérend Whitlock porte loin, comme celle d'un homme qui a autrefois crié des ordres.", "si": ["dimanche"]},
+      {"texte": "Tu tends l'oreille, mais la pluie couvre tout. Seule une gouttière qui déborde raconte quelque chose, en boucle.", "si": ["pluie"]},
+      {"texte": "Tu tends l'oreille et entends ton nom, prononcé à mi-voix, quelque part. Ou un nom qui y ressemble beaucoup.", "si": ["est_recherche"]},
+      {"texte": "Dans le brouillard, les sons portent étrangement : deux hommes chuchotent avec un accent irlandais, tout près. Puis des pas s'éloignent.", "si": ["brouillard"]},
+      {"texte": "Tu entends le crieur annoncer les nouvelles de Saint Denis et, plus bas, Moineau qui marchande une rumeur contre une pièce.", "si": ["jour", "dehors"]}
+    ],
+    "humer_l_air": [
+      {"texte": "Tu respires à pleins poumons : bétail, crottin, pain chaud et fumée de forge. L'odeur de Valentine, inimitable et pas toujours agréable."},
+      {"texte": "L'air sent la terre mouillée et le bois humide. C'est la meilleure odeur de Valentine, et elle ne dure qu'une averse.", "si": ["pluie", "dehors"]},
+      {"texte": "L'air brûlant sent la poussière et le fumier cuit au soleil. Tu regrettes aussitôt d'avoir respiré.", "si": ["chaleur", "dehors"]},
+      {"texte": "L'air de la nuit est frais, il sent l'herbe et la fumée des cheminées. Quelque part, quelqu'un fait frire du bacon.", "si": ["nuit", "dehors"]},
+      {"texte": "Le brouillard a un goût de ruisseau et de fer. On croirait respirer un nuage.", "si": ["brouillard"]},
+      {"texte": "Tu inspires l'air de la pièce : tabac froid, sueur, pétrole. Tu as connu pire. Rarement.", "si": ["dedans"]},
+      {"texte": "L'air sent l'ozone et la menace. Les chevaux le sentent aussi : ils tapent du sabot dans l'écurie.", "si": ["orage"]}
+    ],
+    "ruminer_son_passe": [
+      {"texte": "Tu repenses aux chemins que tu as pris et à ceux que tu as laissés. Les deux listes sont longues."},
+      {"texte": "Des visages remontent du passé : ceux que tu as volés, frappés, abandonnés. Tu te jures de faire mieux. Peut-être.", "si": ["honneur_bas"], "effets": {"honneur": 1}},
+      {"texte": "Tu repenses à ta vie. Pas de quoi en faire une chanson, mais pas de quoi en rougir non plus.", "si": ["honneur_haut"]},
+      {"texte": "Les souvenirs reviennent avec la nuit, comme les loups : ta mère qui chantait, la ferme qui brûlait, et la route depuis.", "si": ["nuit"]},
+      {"texte": "La pluie te rappelle un enterrement, il y a longtemps. Tu as oublié le visage, pas le bruit de la terre sur le bois.", "si": ["pluie"]},
+      {"texte": "Tu te demandes à quel moment exact tu es devenu un homme recherché. Il n'y a pas eu de moment. Juste une pente.", "si": ["est_recherche"]},
+      {"texte": "Les cloches du dimanche te ramènent aux bancs durs d'une petite église. Tu étais un gamin sage, en ce temps-là.", "si": ["dimanche"]}
+    ],
+    "regarder_vieille_photo": [
+      {"texte": "Tu sors une photographie jaunie de ta poche intérieure. Une femme, une maison, un été. Tu la regardes longtemps."},
+      {"texte": "Tu regardes la vieille photographie au clair de lune. Les visages s'effacent un peu plus chaque année.", "si": ["nuit"]},
+      {"texte": "Tu regardes la photo et te demandes ce qu'elle penserait de toi aujourd'hui. Tu la ranges. Tu connais la réponse.", "si": ["honneur_bas"]},
+      {"texte": "Une goutte tombe sur la photographie. Tu l'essuies vite, du bout du doigt, comme on essuie une larme sur une joue.", "si": ["pluie"]},
+      {"texte": "Tu regardes la photo en entendant les cloches. Elle aimait les dimanches. Toi, tu ne les supportes plus depuis.", "si": ["dimanche"]},
+      {"texte": "Tu regardes la photo et souris. Elle aurait été fière de toi, ces derniers temps. Vraiment fière.", "si": ["honneur_haut"]}
+    ],
+    "regarder_sa_montre": [
+      {"texte": "Tu ouvres ta montre de gousset. Elle avance de dix minutes, comme toujours. Le chef de gare Pettigrew en ferait une attaque."},
+      {"texte": "Tu consultes ta montre. Saint Denis, 7 h 12 ; Rhodes, 11 h 40 ; Strawberry, 16 h 05. Et Silas Pettigrew ne retient jamais un train.", "si": ["jour"]},
+      {"texte": "Tu ouvres ta montre, mais il fait trop noir pour lire le cadran. Tu écoutes son tic-tac, et c'est presque aussi bien.", "si": ["nuit"]},
+      {"texte": "Tu regardes l'heure. Chaque minute passée à Valentine est une minute de plus pour qu'on te reconnaisse.", "si": ["est_recherche"]},
+      {"texte": "Tu regardes ta montre : c'est l'heure de l'office. Tu la refermes d'un clic et fais semblant de ne pas avoir vu.", "si": ["dimanche"]},
+      {"texte": "Tu ouvres ta montre et tombes sur le portrait minuscule collé dans le couvercle. Tu la refermes trop vite."}
+    ],
+    "deplier_sa_carte": [
+      {"texte": "Tu déplies ta carte. Valentine, les Heartlands, le New Hanover. Au nord, les Grizzlies ; à l'est, la Lemoyne ; partout, des ennuis possibles."},
+      {"texte": "Tu cherches sur la carte un chemin discret pour quitter la région : un gué sur le ruisseau, au sud, puis les collines.", "si": ["est_recherche"]},
+      {"texte": "Tu déplies ta carte en selle, et le vent te la plaque sur la figure. Tu te bats avec elle pendant une bonne minute.", "si": ["a_cheval"]},
+      {"texte": "Tu déplies ta carte sous la pluie : l'encre bave, et Saint Denis se retrouve au fond du bayou.", "si": ["pluie"]},
+      {"texte": "Tu essaies de lire ta carte à la lueur des étoiles. Tu en tires au moins une certitude : il fait trop noir pour lire une carte.", "si": ["nuit"]},
+      {"texte": "Sur ta carte, tu as entouré au crayon des fermes isolées, une banque et un pont. Tu replies vite le papier.", "si": ["honneur_bas"]}
+    ],
+    "jouer_harmonica": [
+      {"texte": "Tu sors ton harmonica et joues une complainte lente. Les notes s'étirent, tristes et belles, et le temps semble ralentir."},
+      {"texte": "Ton harmonica pleure dans la nuit. Au loin, le chien errant se met à hurler à l'unisson. C'est presque de la musique.", "si": ["nuit"]},
+      {"texte": "Tu joues « Amazing Grace » à l'harmonica. Une vieille dame s'arrête, les yeux humides, et te glisse une pièce dans la main.", "si": ["dimanche"], "effets": {"argent": 1}},
+      {"texte": "Tu joues de l'harmonica en selle, au rythme du pas. Ton cheval agite les oreilles, mélomane malgré lui.", "si": ["a_cheval"]},
+      {"texte": "Tu joues un blues lent pendant que la pluie tombe. L'eau dans l'harmonica donne aux notes un drôle de gargouillis.", "si": ["pluie"]},
+      {"texte": "Tu joues quelques mesures. Quelqu'un tape du pied, un autre se met à fredonner. Pour un instant, la pièce se réchauffe.", "si": ["dedans"]},
+      {"texte": "Tu joues un air que fredonnaient les hommes de ta vieille bande. Tu t'arrêtes net : certaines chansons portent malheur.", "si": ["honneur_bas"]}
+    ],
+    "pile_ou_face": [
+      {"texte": "Tu lances une pièce. Pile. Tu ne sais même plus ce que tu avais parié avec toi-même."},
+      {"texte": "Tu lances la pièce : face. Tu prends ça comme un signe. De quoi, tu n'en sais rien, mais un signe."},
+      {"texte": "La pièce retombe dans la boue et s'y enfonce. Ni pile ni face : le destin refuse de répondre, et garde la pièce.", "si": ["pluie", "dehors"], "effets": {"argent": -1}},
+      {"texte": "Tu lances la pièce, ton cheval fait un pas de côté, et la pièce file droit entre deux planches du trottoir. Adieu.", "si": ["a_cheval"], "effets": {"argent": -1}},
+      {"texte": "Tu lances une pièce dans le noir. Tu entends un tintement, puis plus rien. Tu ne sauras jamais.", "si": ["nuit"], "effets": {"argent": -1}},
+      {"texte": "Pile, tu restes à Valentine ; face, tu files. La pièce retombe sur la tranche, coincée dans une fente du plancher. Charmant.", "si": ["est_recherche"]},
+      {"texte": "Tu joues à pile ou face un dimanche. Quelque part, le révérend Whitlock désapprouve les jeux de hasard, même solitaires.", "si": ["dimanche"]}
+    ],
+    "faire_tourner_revolver": [
+      {"texte": "Tu fais tourner ton revolver autour de l'index, une fois, deux fois, et le renvoies dans son étui d'un geste fluide. Pas mal."},
+      {"texte": "Le revolver tourne, tourne... et t'échappe. Il atterrit dans la poussière. Tu le ramasses en priant pour que personne n'ait vu."},
+      {"texte": "Tu fais tourner ton revolver nonchalamment. Si des chasseurs de primes te regardent, autant qu'ils sachent à qui ils ont affaire.", "si": ["est_recherche"]},
+      {"texte": "Tu fais tournoyer ton arme sous le nez des passants. Une femme serre son sac contre elle ; un enfant te regarde avec une admiration qui t'inquiète.", "si": ["honneur_bas"]},
+      {"texte": "Tu fais tourner ton revolver en selle, comme dans les romans à dix cents. Ton cheval sursaute et tu manques de vider les étriers.", "si": ["a_cheval"], "effets": {"sante": -2}},
+      {"texte": "Tu fais tourner ton revolver au clair de lune. Le reflet du métal dessine des éclairs dans l'ombre.", "si": ["nuit"]},
+      {"texte": "Tu enchaînes les tours de revolver. Un client qui passait se fige et lève lentement les mains. « Je... je dérange ? »", "si": ["dedans"]}
+    ],
+    "faire_tournoyer_lasso": [
+      {"texte": "Tu fais tournoyer {outil} au-dessus de ta tête, la boucle de plus en plus large. Elle siffle dans l'air. Tommy le vacher en serait jaloux."},
+      {"texte": "La boucle de {outil} se referme sur ton propre chapeau et te l'arrache. Tu le ramasses avec toute la dignité possible."},
+      {"texte": "Tu fais tourner {outil} en selle, comme pour un rodéo. Ton cheval prend le galop de lui-même, prêt à poursuivre un veau imaginaire.", "si": ["a_cheval"]},
+      {"texte": "Tu fais tournoyer {outil} sous un toit. La boucle accroche une lampe suspendue, qui se balance dangereusement. Tu arrêtes là.", "si": ["dedans"]},
+      {"texte": "Tu fais tournoyer {outil} en dévisageant les passants, l'air d'en choisir un. Ils s'éloignent sans demander leur reste.", "si": ["honneur_bas"]},
+      {"texte": "Tu fais tournoyer la corde gorgée d'eau. Elle pèse une tonne, et la boucle te revient en pleine figure.", "si": ["pluie"], "effets": {"sante": -1}},
+      {"texte": "Tu enchaînes les figures au lasso dans la poussière. Un gamin s'arrête pour regarder, bouche bée, puis applaudit à tout rompre.", "si": ["jour", "dehors"]}
+    ],
+    "jeu_du_couteau": [
+      {"texte": "Tu écartes les doigts sur une planche et plantes {outil} entre chacun, de plus en plus vite. Tac-tac-tac-tac. Pas une goutte de sang."},
+      {"texte": "Tac, tac, tac... aïe ! La lame t'entaille le petit doigt. Tu le suces en faisant mine que ça ne fait pas mal.", "effets": {"sante": -5}},
+      {"texte": "Tu joues au couteau sur une table. Le bruit attire des curieux ; l'un d'eux parie un dollar que tu vas y laisser un doigt. Il perd.", "si": ["dedans"], "effets": {"argent": 1}},
+      {"texte": "Jouer au couteau dans le noir, c'est une idée de whisky. Tu t'arrêtes après avoir planté la lame à un cheveu de ton pouce.", "si": ["nuit"]},
+      {"texte": "Tu plantes {outil} entre tes doigts sans même regarder, les yeux fixés sur ceux qui passent. Ton calme fait plus peur que la lame.", "si": ["honneur_bas"]},
+      {"texte": "Tu joues au couteau pour te calmer les nerfs. Ça marche, jusqu'au moment où tu sursautes à un bruit de bottes.", "si": ["est_recherche"], "effets": {"sante": -3}}
+    ],
+    "tailler_un_bout_de_bois": [
+      {"texte": "Tu tailles un bout de bois avec {outil}. Peu à peu, une forme apparaît : un cheval, ou un chien, ou une pomme de terre."},
+      {"texte": "Tu tailles avec application... et {outil} dérape. Une entaille de plus dans ta paume, une de moins dans le bois.", "effets": {"sante": -2}},
+      {"texte": "Tu tailles un petit sifflet dans le noir, au toucher. Il ne siffle pas, mais il est joli.", "si": ["nuit"]},
+      {"texte": "Tu tailles en selle, les copeaux s'envolant au vent. Ton cheval en attrape un et le mâchonne, perplexe.", "si": ["a_cheval"]},
+      {"texte": "Tu tailles un bout de bois et les copeaux s'accumulent sur le plancher. Quelqu'un soupire en regardant le tas grandir.", "si": ["dedans"]},
+      {"texte": "Tu tailles une petite croix pour une tombe oubliée du cimetière, une de celles qui n'ont plus de nom. Tu as tout l'après-midi.", "si": ["dimanche"], "effets": {"honneur": 1}}
+    ],
+    "ecrire_une_lettre": [
+      {"texte": "Tu arraches une page de {outil} et écris à quelqu'un que tu n'as pas revu depuis dix ans. Tu ne sais pas si tu l'enverras."},
+      {"texte": "Tu écris une lettre d'excuses à quelqu'un que tu as fait souffrir. Tu la relis, la plies en quatre et la ranges contre ton cœur. Un jour, peut-être.", "si": ["honneur_bas"], "effets": {"honneur": 1}},
+      {"texte": "Tu écris : « Si cette lettre te parvient, c'est que je suis toujours libre. Ne crois pas tout ce que disent les journaux. »", "si": ["est_recherche"]},
+      {"texte": "Tu écris une lettre à la lueur d'une lampe. Les mots viennent plus facilement la nuit, quand personne ne regarde.", "si": ["nuit"]},
+      {"texte": "Une gouttière perce juste au-dessus de ta page. L'encre coule, et ta lettre ressemble bientôt à une carte du bayou.", "si": ["pluie"]},
+      {"texte": "Tu écris à ta sœur que tout va bien et que tu as trouvé un travail honnête. Pour une fois, c'est presque vrai.", "si": ["honneur_haut"]},
+      {"texte": "Tu essaies d'écrire en selle, la page posée sur le pommeau. Chaque cahot transforme tes « je t'embrasse » en gribouillis.", "si": ["a_cheval"]}
+    ],
+    "autoportrait": [
+      {"texte": "Tu poses {outil} sur un tonneau, déclenches, et cours prendre la pose. Le cliché montrera surtout ton dos, en pleine course."},
+      {"texte": "Tu te prends en portrait, menton levé, main sur la crosse. Tu as l'air d'un héros de roman à dix cents. Ou d'un avis de recherche."},
+      {"texte": "Tu te photographies de face, puis de profil. Au moins, le prochain avis de recherche aura un portrait ressemblant.", "si": ["est_recherche"]},
+      {"texte": "Tu tentes un portrait équestre en tenant {outil} à bout de bras. Ton cheval tourne la tête au moment du déclic : c'est lui, la vedette.", "si": ["a_cheval"]},
+      {"texte": "Tu te photographies dans le noir. Une fois développé, le cliché montrera un rectangle noir, avec peut-être un œil.", "si": ["nuit"]},
+      {"texte": "Tu te prends en portrait, droit et digne. Si un jour on écrit ton histoire, ce sera l'image de la couverture.", "si": ["honneur_haut"]},
+      {"texte": "La pluie mouille la plaque au moment du déclic. Sur le tirage, tu ressembleras à un fantôme sorti d'un étang.", "si": ["pluie"]}
+    ],
+    "verifier_barillet": [
+      {"texte": "Tu ouvres le barillet et le fais tourner d'un coup de pouce. Six chambres pleines. Tu le refermes d'un claquement sec."},
+      {"texte": "Tu vérifies ton barillet pour la troisième fois de la journée. On n'est jamais trop prudent quand sa tête est mise à prix.", "si": ["est_recherche"]},
+      {"texte": "Tu comptes les balles au toucher, dans le noir. Une, deux... six. Le métal est froid sous tes doigts.", "si": ["nuit"]},
+      {"texte": "Tu vérifies ton barillet à l'abri de ta veste. Pas question qu'une amorce mouillée te trahisse au mauvais moment.", "si": ["pluie"]},
+      {"texte": "Tu fais tourner le barillet en souriant, comme un joueur à la roulette. Il y a des jours où tu te fais peur à toi-même.", "si": ["honneur_bas"]},
+      {"texte": "Tu vérifies ton revolver en selle, sans ralentir. Un geste mille fois répété, devenu presque une prière.", "si": ["a_cheval"]}
+    ],
+    "compter_ses_munitions": [
+      {"texte": "Tu comptes tes cartouches : assez pour un duel, pas assez pour une guerre. Ça devrait suffire pour Valentine."},
+      {"texte": "Tu comptes tes munitions deux fois. Si les chasseurs de primes viennent en nombre, il en faudra davantage. Une visite à l'armurerie s'impose.", "si": ["est_recherche"]},
+      {"texte": "Tu comptes tes munitions. Tu n'en as presque pas utilisé ces derniers temps. C'est bon signe.", "si": ["honneur_haut"]},
+      {"texte": "Ta cartouchière s'est beaucoup vidée ces derniers temps. Tu préfères ne pas compter les raisons.", "si": ["honneur_bas"]},
+      {"texte": "Tu comptes tes cartouches à l'abri : deux sont humides. Tu les mets de côté, elles pourraient faire long feu.", "si": ["pluie"]},
+      {"texte": "Tu comptes tes balles à tâtons, en les faisant rouler dans ta paume. Le laiton tinte doucement.", "si": ["nuit"]}
+    ],
+    "fouiller_ses_poches": [
+      {"texte": "Tu fouilles tes poches : de la ficelle, une allumette, un bouton, une cartouche et un billet de train pour une ville où tu n'iras jamais."},
+      {"texte": "Tu fouilles tes poches et en sors une pièce oubliée. Tu ne te souviens pas de l'avoir gagnée, mais tu ne vas pas la refuser.", "effets": {"argent": 1}},
+      {"texte": "Tu fouilles tes poches et trouves une montre qui n'est pas la tienne. Ah, oui. Celle-là.", "si": ["honneur_bas"]},
+      {"texte": "Tu fouilles tes poches et trouves un avis de recherche plié en quatre. Ton propre visage te regarde, mal dessiné.", "si": ["est_recherche"]},
+      {"texte": "Tu fouilles tes poches : tout est trempé. Tes allumettes ne sont plus qu'une pâte grise.", "si": ["pluie"]},
+      {"texte": "Tu fouilles tes poches dans le noir et te piques le doigt sur un hameçon égaré. Voilà donc où il était passé.", "si": ["nuit"], "effets": {"sante": -1}},
+      {"texte": "Tu trouves au fond de ta poche un sou de cuivre. Juste ce qu'il faut pour la quête. Tu hésites.", "si": ["dimanche"]}
+    ],
+    "cirer_ses_bottes": [
+      {"texte": "Tu frottes tes bottes avec {outil} jusqu'à y voir ton reflet. Pour un temps, tu as l'air d'un banquier. D'un banquier qui sent le cheval."},
+      {"texte": "Tu cires tes bottes avec soin... puis tu fais un pas dehors, dans la boue. Tout est à refaire.", "si": ["pluie"]},
+      {"texte": "Tu cires tes bottes pour le dimanche. Ça ne fait pas de toi un saint, mais ça ne peut pas nuire.", "si": ["dimanche"]},
+      {"texte": "Tu brosses la poussière de tes bottes. Le cuir, cuit par le soleil, craquelle comme une vieille selle.", "si": ["chaleur"]},
+      {"texte": "Tu cires tes bottes comme on te l'a appris autrefois. Les petites disciplines tiennent les grands démons à distance.", "si": ["honneur_haut"]},
+      {"texte": "Tu cires tes bottes, un pied posé sur une chaise. Le propriétaire de la chaise ne semble pas ravi.", "si": ["dedans"]}
+    ],
+    "epousseter_ses_vetements": [
+      {"texte": "Tu tapes sur ta veste et ton pantalon : un nuage de poussière s'élève autour de toi. Tu as perdu une livre et gagné en dignité."},
+      {"texte": "Tu essaies d'épousseter tes vêtements, mais avec la pluie, tu ne fais qu'étaler la boue. Le résultat est pire.", "si": ["pluie"]},
+      {"texte": "Tu époussettes ta veste. Le nuage de poussière fait éternuer quelqu'un, qui te regarde de travers.", "si": ["dedans"]},
+      {"texte": "Tu époussettes tes vêtements et redresses ton col. Un dimanche, on fait un effort, même quand on n'a nulle part où aller.", "si": ["dimanche"]},
+      {"texte": "Tu tapes sur tes cuisses pour en chasser la poussière ; ton cheval prend ça pour un ordre et part au trot.", "si": ["a_cheval"]},
+      {"texte": "Tu époussettes ta chemise raidie de sel et de sueur. Elle aurait surtout besoin d'un bain. Toi aussi, d'ailleurs.", "si": ["chaleur"]}
+    ],
+    "recharger": [
+      {"texte": "Tu glisses les cartouches une à une dans {cible}. Le cliquetis familier te calme les nerfs."},
+      {"texte": "Tu recharges {cible} sans quitter les alentours des yeux. Si quelqu'un vient toucher ta prime, il ne te trouvera pas les mains vides.", "si": ["est_recherche"]},
+      {"texte": "Tu recharges {cible} dans le noir. Une cartouche t'échappe et roule sous un tonneau. Tant pis, elle y restera.", "si": ["nuit"]},
+      {"texte": "Tu recharges {cible} sous ta veste pour garder la poudre au sec. Tes doigts gelés peinent sur les cartouches.", "si": ["pluie"]},
+      {"texte": "Tu recharges {cible} en selle, les rênes entre les dents. Ton cheval, habitué, ne bronche pas.", "si": ["a_cheval"]},
+      {"texte": "Tu recharges {cible} en espérant ne pas avoir à t'en servir. C'est souvent comme ça que ça commence, pourtant.", "si": ["honneur_haut"]}
+    ],
+    "s_entrainer_a_degainer": [
+      {"texte": "Tu dégaines, rengaines, dégaines encore. Ton geste gagne en vitesse à chaque fois. Gare à celui qui te provoquera."},
+      {"texte": "Tu dégaines si vite que le revolver t'échappe et tombe dans la poussière. Personne n'a rien vu. Tu l'espères."},
+      {"texte": "Tu t'entraînes à dégainer devant un miroir. Ton reflet est plus rapide que toi. C'est vexant.", "si": ["dedans"]},
+      {"texte": "Tu t'entraînes à dégainer en fixant le bureau du shérif. Un passant remarque ton manège et presse le pas.", "si": ["honneur_bas", "dehors"]},
+      {"texte": "Tu t'entraînes à dégainer. Si les chasseurs de primes viennent, tu veux être celui qui tire le premier.", "si": ["est_recherche"]},
+      {"texte": "Tu t'entraînes à dégainer en selle. À force, ton cheval sursaute dès que ta main bouge.", "si": ["a_cheval"]},
+      {"texte": "Tu t'entraînes dans l'ombre, et le coup part tout seul. Un éclat de bois vole, des lampes s'allument, quelqu'un crie au voleur.", "si": ["nuit"], "effets": {"prime": 2}}
+    ],
+    "lancer_dynamite_au_loin": [
+      {"texte": "Tu allumes la mèche, comptes jusqu'à trois et lances {outil} au loin. L'explosion soulève un geyser de terre ; toutes les vitres de la ville tremblent.", "effets": {"prime": 15, "honneur": -2}},
+      {"texte": "La mèche est plus courte que prévu. L'explosion te jette à terre, les oreilles sifflantes et les sourcils roussis.", "effets": {"prime": 10, "sante": -15}},
+      {"texte": "Tu allumes la mèche... à l'intérieur. Pris de panique, tu jettes la dynamite par la fenêtre. L'explosion pulvérise un tonneau d'eau de pluie et ce qui te restait de dignité.", "si": ["dedans"], "effets": {"prime": 20, "honneur": -3, "sante": -5}},
+      {"texte": "L'explosion illumine la nuit comme un éclair. Les chiens hurlent, les chevaux ruent dans l'écurie, et l'adjoint Eli arrive en courant, fusil au poing.", "si": ["nuit"], "effets": {"prime": 15, "honneur": -2}},
+      {"texte": "Tu fais sauter {outil} au milieu de l'orage. Entre le tonnerre et ta détonation, la ville croit que la fin du monde est arrivée.", "si": ["orage"], "effets": {"prime": 5}},
+      {"texte": "La mèche grésille sous la pluie... et s'éteint. Tu ramasses le bâton mouillé, un peu soulagé au fond.", "si": ["pluie"]},
+      {"texte": "Ton explosion secoue Valentine en plein jour du Seigneur. À l'église, un cantique se transforme en hurlement collectif.", "si": ["dimanche"], "effets": {"prime": 20, "honneur": -3}},
+      {"texte": "Tu lances la dynamite en riant. Le cratère fume encore quand tu entends Malloy crier ton signalement dans la rue.", "si": ["honneur_bas"], "effets": {"prime": 20, "honneur": -2}}
+    ],
+    "compter_son_argent": [
+      {"texte": "Tu sors ta bourse et comptes tes pièces une à une. Le compte est bon. Il n'est jamais assez bon, mais il est bon."},
+      {"texte": "Tu comptes ton argent à l'abri des regards. Dans ta situation, chaque dollar est un mile de plus entre toi et la corde.", "si": ["est_recherche"]},
+      {"texte": "Tu comptes tes billets froissés. Certains sentent encore la poudre, ou la peur de ceux qui te les ont donnés.", "si": ["honneur_bas"]},
+      {"texte": "Tu comptes ton argent à tâtons et trouves une pièce de plus que prévu, coincée dans la doublure.", "si": ["nuit"], "effets": {"argent": 1}},
+      {"texte": "Tu étales ton argent sur une table pour le compter. Autour, des regards s'allument. Tu le ranges très vite.", "si": ["dedans"]},
+      {"texte": "Tu comptes ton argent en selle, et une pièce t'échappe, roule dans la boue et disparaît. Le Seigneur donne, le Seigneur reprend.", "si": ["a_cheval"], "effets": {"argent": -1}},
+      {"texte": "Tu comptes ton argent, gagné honnêtement, sou après sou. Il pèse moins lourd que celui des bandits, mais il se dépense mieux.", "si": ["honneur_haut"]}
+    ],
+    "remonter_foulard": [
+      {"texte": "Tu remontes ton foulard sur ton nez. Seuls tes yeux dépassent sous le chapeau. Tu as tout l'air de quelqu'un qui prépare un mauvais coup."},
+      {"texte": "Tu remontes ton foulard contre la poussière. Il est trempé de sueur au bout d'une minute.", "si": ["chaleur"]},
+      {"texte": "Foulard sur le visage, tu ressembles moins au portrait de l'affiche. Ou davantage, selon l'angle.", "si": ["est_recherche"]},
+      {"texte": "Tu remontes ton foulard. Toutes les conversations s'arrêtent, et une main disparaît lentement sous un comptoir.", "si": ["dedans"]},
+      {"texte": "Foulard sur le nez, tu te fonds dans le brouillard. Un fantôme parmi d'autres.", "si": ["brouillard"]},
+      {"texte": "Tu remontes ton foulard, puis tu te ravises et le baisses. Un honnête homme n'a pas à cacher son visage.", "si": ["honneur_haut"]},
+      {"texte": "Tu remontes ton foulard contre la pluie qui fouette. Ça ne protège de rien, mais tu as l'air mystérieux.", "si": ["pluie"]}
+    ],
+    "mediter_sur_sa_prime": [
+      {"texte": "Tu penses au prix de ta tête. Pour cette somme, la moitié de Valentine te vendrait ; l'autre moitié se demanderait pourquoi elle n'y a pas pensé avant."},
+      {"texte": "Tu penses à ta prime et tu te dis qu'un homme bien finirait par la payer. Tu es encore un homme bien, non ?", "si": ["honneur_haut"]},
+      {"texte": "Ta prime grimpe. Une part de toi en est fière, comme d'une médaille. L'autre sait comment finissent les médailles de ce genre.", "si": ["honneur_bas"]},
+      {"texte": "La nuit, ta prime pèse plus lourd. Tu imagines le chasseur de primes du Smithfield's en train d'apprendre ton signalement par cœur.", "si": ["nuit"]},
+      {"texte": "Même le dimanche, les primes ne se reposent pas. Tu te demandes si le révérend te dénoncerait, s'il savait.", "si": ["dimanche"]},
+      {"texte": "Tu fixes un mur, plongé dans tes calculs : ta prime, ce qu'il te reste en poche, et la distance jusqu'à la frontière.", "si": ["dedans"]}
+    ],
+    "s_etirer": [
+      {"texte": "Tu t'étires longuement. Ton dos craque en trois endroits, tous différents. Ça va mieux.", "effets": {"sante": 2}},
+      {"texte": "Tu t'étires en selle, les bras en l'air. Des heures de route te sortent des vertèbres une par une.", "si": ["a_cheval"], "effets": {"sante": 2}},
+      {"texte": "Tu t'étires en bâillant à t'en décrocher la mâchoire. Il est tard, et ton corps te le rappelle.", "si": ["nuit"], "effets": {"sante": 1}},
+      {"texte": "Tu t'étires au soleil comme un vieux chat. La chaleur dénoue tes muscles, mais te donne envie de dormir.", "si": ["chaleur"], "effets": {"sante": 3}},
+      {"texte": "Tu t'étires, et la pluie en profite pour couler le long de tes manches jusque sous ta chemise. Brrr.", "si": ["pluie", "dehors"]},
+      {"texte": "Tu t'étires et ta main heurte une lampe suspendue. Tu la rattrapes de justesse avant qu'elle ne mette le feu à la ville.", "si": ["dedans"]}
+    ],
+    "faire_un_somme": [
+      {"texte": "Tu rabats ton chapeau sur tes yeux et somnoles un moment. Tu rêves de champs de blé et d'une maison que tu n'as jamais eue.", "effets": {"sante": 5}},
+      {"texte": "Tu t'assoupis en selle. Livré à lui-même, ton cheval s'arrête pour brouter une jardinière. Tu te réveilles en sursaut sous les cris de la propriétaire.", "si": ["a_cheval"], "effets": {"sante": 3}},
+      {"texte": "Tu fais la sieste à l'ombre d'un auvent. La chaleur pèse comme une couverture de laine ; tu dors comme une pierre.", "si": ["chaleur"], "effets": {"sante": 8}},
+      {"texte": "Tu essaies de dormir un peu, mais chaque bruit de pas te réveille. Tu te relèves plus fatigué qu'avant.", "si": ["est_recherche"]},
+      {"texte": "Tu t'assoupis au son de la pluie sur l'auvent. Le meilleur somme depuis des semaines.", "si": ["pluie"], "effets": {"sante": 6}},
+      {"texte": "Les cloches du dimanche te bercent jusqu'au sommeil. Tu te réveilles quand l'office est fini, frais et sans remords.", "si": ["dimanche"], "effets": {"sante": 6}},
+      {"texte": "Tu t'endors sur une chaise, la tête contre le mur. À ton réveil, quelqu'un a posé une couverture sur tes épaules. Mystère.", "si": ["dedans"], "effets": {"sante": 6}}
+    ],
+    "se_gratter": [
+      {"texte": "Tu te grattes le cou. Puis le bras. Puis la jambe. Tu soupçonnes ta dernière paillasse d'avoir été habitée."},
+      {"texte": "Tu te grattes jusqu'au sang : la sueur, la poussière et les piqûres de moustiques font un mélange insupportable.", "si": ["chaleur"], "effets": {"sante": -1}},
+      {"texte": "Tu te grattes le dos avec le canon de ton fusil. Ton cheval te regarde faire, consterné.", "si": ["a_cheval"]},
+      {"texte": "Tu te grattes la tête. Une dame à côté fait un pas en arrière en fixant tes cheveux avec horreur.", "si": ["dedans"]},
+      {"texte": "Tu te grattes la barbe avec ostentation. Si les puces font fuir les gens, tant mieux : moins de bavards.", "si": ["honneur_bas"]},
+      {"texte": "Tu te grattes la nuque en réfléchissant très fort. Il n'en sort rien, mais ça démange moins."}
+    ],
+    "se_curer_les_dents": [
+      {"texte": "Tu te cures les dents avec la pointe de {outil}. Un morceau de bœuf séché de la semaine dernière capitule enfin."},
+      {"texte": "La pointe de {outil} glisse et t'entaille la gencive. Tu craches un peu de sang en grimaçant.", "effets": {"sante": -2}},
+      {"texte": "Tu te cures les dents au couteau devant tout le monde. Une dame détourne les yeux, outrée ; un vieux cow-boy hoche la tête, connaisseur.", "si": ["dedans"]},
+      {"texte": "Tu te cures les dents avec {outil} en fixant le premier venu droit dans les yeux. Il change de trottoir.", "si": ["honneur_bas"]},
+      {"texte": "Te curer les dents au couteau en selle, c'est risqué. Au premier cahot, tu manques de te percer la joue.", "si": ["a_cheval"], "effets": {"sante": -1}},
+      {"texte": "Tu te cures les dents au couteau, au clair de lune. La lame brille ; tes dents, beaucoup moins.", "si": ["nuit"]}
+    ],
+    "chiquer": [
+      {"texte": "Tu glisses une chique de tabac dans ta joue. Le goût est âcre et la salive abondante. Un vrai plaisir d'homme de l'Ouest."},
+      {"texte": "Tu chiques et avales de travers. Tu passes une bonne minute à tousser, les larmes aux yeux.", "effets": {"sante": -2}},
+      {"texte": "Tu chiques en cherchant un crachoir des yeux. Il n'y en a pas. Tu vas devoir garder ta dignité... et ton jus de tabac.", "si": ["dedans"]},
+      {"texte": "Tu chiques en selle, la joue gonflée comme un vieux vacher. Tu sens presque ta moustache pousser.", "si": ["a_cheval"]},
+      {"texte": "La chique te dessèche la bouche en plein soleil. Tu donnerais un dollar pour un verre d'eau.", "si": ["chaleur"], "effets": {"sante": -1}},
+      {"texte": "Tu chiques d'un air mauvais, la mâchoire qui roule. Ça fait son effet : on te laisse tranquille.", "si": ["honneur_bas"]}
+    ],
+    "rouler_une_cigarette": [
+      {"texte": "Tu sors ta blague à tabac, étales une pincée sur le papier et roules une cigarette d'une seule main. Le geste est parfait."},
+      {"texte": "Tu roules une cigarette si serrée qu'elle ne tire pas. Tu la défais et recommences. Le tabac de l'épicier est trop sec."},
+      {"texte": "Tu roules une cigarette en selle. Le vent emporte la moitié du tabac, mais ce qui reste fera l'affaire.", "si": ["a_cheval"]},
+      {"texte": "Tu roules une cigarette à l'abri de ton chapeau. Le papier se ramollit malgré tout sous les gouttes.", "si": ["pluie"]},
+      {"texte": "Tu roules une cigarette sur la table. Quelqu'un en face tend la main ; tu lui en roules une aussi. C'est comme ça, dans l'Ouest.", "si": ["dedans"]},
+      {"texte": "Tu roules une cigarette à tâtons, dans le noir. Tes doigts se souviennent mieux que tes yeux.", "si": ["nuit"]}
+    ],
+    "se_soigner": [
+      {"texte": "Tu nettoies tes plaies avec un fond de whisky et les bandes d'un vieux foulard. Ça brûle comme l'enfer, mais ça tiendra.", "effets": {"sante": 15}},
+      {"texte": "Tu panses tes blessures à la lueur d'une allumette. Tes doigts tremblent, mais le bandage tient.", "si": ["nuit"], "effets": {"sante": 10}},
+      {"texte": "Tu te soignes avec l'onguent que t'avait donné une fermière reconnaissante. Il sent la sauge et fait merveille.", "si": ["honneur_haut"], "effets": {"sante": 20}},
+      {"texte": "Tu te soignes en vitesse, à l'abri des regards. Pas question d'aller chez le docteur Barlow, qui bavarde trop après son troisième verre.", "si": ["est_recherche"], "effets": {"sante": 10}},
+      {"texte": "Tu panses tes plaies sous la pluie. L'eau lave le sang, mais trempe le bandage. Tu fais de ton mieux.", "si": ["pluie", "dehors"], "effets": {"sante": 8}},
+      {"texte": "Tu te bandes le bras en selle, un bout du tissu entre les dents. Ton cheval attend patiemment que tu aies fini.", "si": ["a_cheval"], "effets": {"sante": 10}},
+      {"texte": "Tu panses tes blessures en chassant les mouches qui tournent autour. Par cette chaleur, il faut faire vite et serrer fort.", "si": ["chaleur"], "effets": {"sante": 12}}
+    ],
+    "boire_a_la_gourde": [
+      {"texte": "Tu débouches ta gourde et bois une longue gorgée. L'eau est tiède et a un goût de fer-blanc, mais elle fait du bien.", "effets": {"sante": 3}},
+      {"texte": "Tu portes la gourde à tes lèvres... vide. Tu la secoues, incrédule. Tu aurais dû la remplir au puits."},
+      {"texte": "Tu bois à ta gourde jusqu'à la dernière goutte. Par cette chaleur, l'eau vaut plus que tout l'or de l'ivrogne.", "si": ["chaleur"], "effets": {"sante": 8}},
+      {"texte": "Tu bois en selle et en verses un peu dans le creux de ta main pour ton cheval. Il lape avec reconnaissance.", "si": ["a_cheval"], "effets": {"sante": 3}},
+      {"texte": "Tu bois à ta gourde, puis la tends vers le ciel pour la remplir de pluie. C'est lent, mais c'est gratuit.", "si": ["pluie", "dehors"], "effets": {"sante": 3}},
+      {"texte": "Tu bois à ta gourde dans le noir. L'eau est enfin fraîche. La nuit a du bon.", "si": ["nuit"], "effets": {"sante": 4}}
+    ],
+    "boire_a_la_flasque": [
+      {"texte": "Tu dévisses ta flasque et avales une rasade de whisky. Ça brûle jusqu'à l'estomac, puis ça réchauffe tout le reste.", "effets": {"sante": 2}},
+      {"texte": "Tu portes la flasque à tes lèvres : vide. Une seule goutte tombe sur ta langue, comme une moquerie."},
+      {"texte": "Tu bois à ta flasque un dimanche. Le révérend Whitlock, qui prêche la tempérance, n'apprécierait pas.", "si": ["dimanche"], "effets": {"honneur": -1, "sante": 2}},
+      {"texte": "Une rasade dans la nuit froide. Le whisky réchauffe les mains, le cœur, et un peu trop la tête.", "si": ["nuit"], "effets": {"sante": 3}},
+      {"texte": "Du whisky par cette chaleur ? La tête te tourne aussitôt. Mauvaise idée, excellente sensation.", "si": ["chaleur"], "effets": {"sante": -3}},
+      {"texte": "Tu vides ta flasque d'un trait. Le whisky noie quelques souvenirs ; les plus coriaces, eux, savent nager.", "si": ["honneur_bas"], "effets": {"sante": -2}},
+      {"texte": "Tu bois une rasade en selle. Ton cheval tourne la tête et renifle, sévère comme une ligue de tempérance.", "si": ["a_cheval"], "effets": {"sante": 2}}
+    ],
+    "attendre": [
+      {"texte": "Tu attends. Les minutes passent, lentes comme une diligence embourbée."},
+      {"texte": "Tu attends dans le noir. Les bruits de la ville s'éteignent un à un : le piano, les rires, les chevaux. Puis plus rien.", "si": ["nuit"]},
+      {"texte": "Tu attends sous un auvent que la pluie se calme. Elle ne se calme pas. Elle redouble, par principe.", "si": ["pluie", "dehors"]},
+      {"texte": "Tu attends à l'ombre, immobile comme un lézard. Bouger, par cette chaleur, serait une folie.", "si": ["chaleur"]},
+      {"texte": "Tu attends, le dos au mur et l'œil sur les entrées. Attendre, c'est le plus dur quand on est recherché.", "si": ["est_recherche"]},
+      {"texte": "Tu attends que le dimanche passe. Tout est fermé, tout le monde est à l'église ou en famille. Toi, tu n'as ni l'un ni l'autre.", "si": ["dimanche"]},
+      {"texte": "Tu attends en selle. Ton cheval en profite pour faire une sieste debout, ce qui est une forme de sagesse.", "si": ["a_cheval"]},
+      {"texte": "Tu attends, le nez contre la vitre. Dehors, la vie de Valentine passe sans toi, et ce n'est pas désagréable.", "si": ["dedans"]}
+    ],
+    "faire_un_feu": [
+      {"texte": "Tu rassembles quelques brindilles et craques une allumette. Un petit feu crépite bientôt, et avec lui l'impression d'être chez toi.", "effets": {"sante": 3}},
+      {"texte": "Tu essaies d'allumer un feu sous la pluie. Le bois fume, siffle et s'éteint. Te voilà trempé, avec une boîte d'allumettes vide.", "si": ["pluie", "dehors"]},
+      {"texte": "Tu t'apprêtes à allumer un feu en plein intérieur, puis tu te souviens que Valentine est bâtie en planches. Tu renonces.", "si": ["dedans"]},
+      {"texte": "Ton feu de camp crépite sous les étoiles. Tu tends les mains vers les flammes ; la chaleur remonte jusque dans tes os.", "si": ["nuit", "dehors"], "effets": {"sante": 8}},
+      {"texte": "Un feu, par cette chaleur ? Tu l'allumes quand même, par habitude, et tu le regrettes aussitôt.", "si": ["chaleur"], "effets": {"sante": -2}},
+      {"texte": "Ton feu fait une tache orange dans le brouillard. Des silhouettes s'arrêtent, hésitent, puis repartent.", "si": ["brouillard"], "effets": {"sante": 4}},
+      {"texte": "Tu allumes un feu minuscule, à peine des braises. La fumée pourrait te trahir.", "si": ["est_recherche"], "effets": {"sante": 3}},
+      {"texte": "Le vent de l'orage disperse tes braises en gerbes d'étincelles. Tu les piétines en catastrophe avant qu'elles n'atteignent l'écurie.", "si": ["orage"]}
+    ],
+    "vider_ses_bottes": [
+      {"texte": "Tu retires une botte et la retournes. Il en tombe du sable, deux cailloux et un scarabée indigné."},
+      {"texte": "Tu secoues ta botte et une pièce d'un dollar en tombe. Comment est-elle arrivée là ? Mystère du voyage.", "effets": {"argent": 1}},
+      {"texte": "Tu vides tes bottes : il en sort un demi-litre d'eau boueuse. Tu les remets, et elles se remplissent aussitôt.", "si": ["pluie", "dehors"]},
+      {"texte": "Tu ôtes tes bottes pour les vider. L'odeur de tes chaussettes fait le vide autour de toi en trois secondes.", "si": ["dedans"]},
+      {"texte": "Tu vides tes bottes en sautillant sur le sol brûlant. Le sable qui en sort cuirait un œuf.", "si": ["chaleur"]},
+      {"texte": "Tu vides tes bottes en hâte, un œil sur les alentours. Pas le moment d'être pris en chaussettes.", "si": ["est_recherche"]}
+    ],
+    "faire_des_pompes": [
+      {"texte": "Tu te mets à plat ventre et enchaînes une trentaine de pompes. Tes bras brûlent, mais tu te sens solide.", "effets": {"sante": 2}},
+      {"texte": "Tu fais des pompes en plein soleil. À la quinzième, tu t'effondres face contre terre, la bouche pleine de poussière.", "si": ["chaleur"], "effets": {"sante": -2}},
+      {"texte": "Tu fais des pompes sur le plancher. Une latte craque, puis une deuxième. Tu t'arrêtes avant de passer à travers.", "si": ["dedans"]},
+      {"texte": "Tu fais des pompes dans la boue. Un passant s'arrête : « Il est tombé ? — Non, il s'entraîne. — À quoi ? »", "si": ["pluie", "dehors"]},
+      {"texte": "Tu fais des pompes au clair de lune pour chasser l'insomnie. Au bout de cinquante, le sommeil vient enfin.", "si": ["nuit"], "effets": {"sante": 3}},
+      {"texte": "Tu fais des pompes pendant que la ville est à l'office. Chacun son culte.", "si": ["dimanche"], "effets": {"sante": 2}}
+    ]
+  }
+}

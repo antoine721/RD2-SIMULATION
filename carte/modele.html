@@ -758,7 +758,7 @@ function reglesSpeciales(cle, option) {
   if (v === "monter_a_cheval" && option.cible) { S.aCheval = true; S.monture = option.cible; }
   if (v === "descendre_de_cheval") { S.aCheval = false; S.monture = null; }
   if (v === "entrer" && option.cible && D.lieux[option.cible]) S.lieu = option.cible;
-  if (v === "payer_prime" && S.argent >= S.prime) { S.argent -= S.prime; S.prime = 0; }
+  if (v === "payer_prime") { const paye = Math.min(S.argent, S.prime); S.argent -= paye; S.prime -= paye; }
   if (v === "se_rendre") { S.prime = 0; S.lieu = "bureau_sherif"; }
   if (/^dormir|sieste/.test(v)) avancer(/sieste/.test(v) ? 2 : 8);
 }
@@ -783,7 +783,9 @@ function agir(id, action, option) {
   }
   let texte = variante.texte.replaceAll("{cible}", nomDe(option.cible)).replaceAll("{outil}", nomDe(option.outil));
   texte = majuscule(accorder(texte));
-  const effets = variante.effets || {};
+  const effets = { ...(variante.effets || {}) };
+  // Payer sa prime règle toute la dette d'un coup : le moteur fait le calcul.
+  if (cle === "payer_prime") { delete effets.prime; delete effets.argent; }
   appliquerEffets(id, effets);
   reglesSpeciales(cle, option);
   const temoins = reactionsTemoins(id, action, effets);
