@@ -1,0 +1,1432 @@
+{
+  "theme": "Les bêtes de Valentine",
+  "evenements": {
+
+    "bete_sultan_chasse_le_senateur": {
+      "titre": "Sultan contre le Sénateur",
+      "texte": "Sous le plancher du Keane's, quelque chose détale en couinant. Sultan, le gros chat roux, saute du comptoir, renverse deux verres et plonge par une latte disjointe. Un fracas, un couinement indigné, puis le silence ; le barman soupire : « Encore match nul. »",
+      "lieu": "saloon_keane",
+      "acteurs": ["chat_saloon", "rat", "barman_keane"],
+      "heures": [19, 22],
+      "chance": 0.3
+    },
+
+    "bete_aube_a_la_boucherie": {
+      "titre": "Le petit-déjeuner des bêtes",
+      "texte": "Derrière la boucherie, Gus jette des rognures dans la boue en chantonnant. Le chien errant attrape les siennes au vol, Sultan trie les meilleures avec des airs de duchesse, et sous les tonneaux de saumure, deux petits yeux de rat brillent d'envie.",
+      "lieu": "boucherie",
+      "acteurs": ["boucher", "chien_errant", "chat_saloon"],
+      "heures": [6, 7],
+      "chance": 0.35
+    },
+
+    "bete_henrietta_a_la_pension": {
+      "titre": "Henrietta s'invite à table",
+      "texte": "Une poule rousse traverse la cuisine de la pension au pas de charge, poursuivie par la logeuse et sa louche. Henrietta saute sur la table commune, picore une pomme de terre dans l'assiette du pianiste et ressort par la fenêtre, triomphante. « Pas de chiens, pas de chevaux, pas de chansons ! » hurle la logeuse. « Et pas de POULES ! »",
+      "lieu": "pension",
+      "acteurs": ["poule", "pianiste"],
+      "heures": [11, 12],
+      "chance": 0.25
+    },
+
+    "bete_edgar_au_petit_matin": {
+      "titre": "Edgar prend son petit-déjeuner",
+      "texte": "Au cimetière, Mortimer Pembrook émiette du pain sur une croix de bois. Edgar, le corbeau, descend du vieux chêne mort, accepte l'offrande avec dignité et croasse : « Payez d'avance ! » Le croque-mort sourit, ce qui ne lui arrive qu'ici.",
+      "lieu": "cimetiere",
+      "acteurs": ["corbeau", "croque_mort"],
+      "heures": [6, 7],
+      "chance": 0.35
+    },
+
+    "bete_file_indienne_au_ruisseau": {
+      "titre": "Les chevaux vont boire",
+      "texte": "Dans la brume de l'aube, Hiram mène les chevaux en pension au ruisseau, en file indienne, en leur parlant à chacun par son nom. Bourbon, le Morgan, marche en tête et mord quiconque tente de le doubler. L'eau fume sous leurs naseaux.",
+      "lieu": "berge",
+      "acteurs": ["palefrenier", "cheval_a_vendre"],
+      "heures": [5, 6],
+      "chance": 0.35
+    },
+
+    "bete_coyotes_dans_la_nuit": {
+      "titre": "Les coyotes chantent",
+      "texte": "Derrière l'enclos, les coyotes se répondent en jappements aigus, comme une bande de gamins qui se moquent de la ville. Le troupeau se serre, Lucifer souffle dans le noir, et quelque part du côté des maisons, une poule panique dans son poulailler.",
+      "lieu": "enclos",
+      "acteurs": ["taureau"],
+      "heures": [22, 4],
+      "meteo": ["beau", "brouillard"],
+      "chance": 0.3
+    },
+
+    "bete_mouches_de_la_canicule": {
+      "titre": "La guerre des mouches",
+      "texte": "La chaleur a réveillé toutes les mouches du comté, et elles ont rendez-vous à la boucherie. Cornelia Whitlock, venue acheter le dîner, les chasse de son éventail en se pinçant le nez ; Gus, galant, agite une queue de vache pour la protéger et lui en met plein le chapeau.",
+      "lieu": "boucherie",
+      "acteurs": ["boucher", "hoteliere"],
+      "heures": [17, 18],
+      "meteo": ["chaleur"],
+      "chance": 0.5
+    },
+
+    "bete_orage_sur_l_ecurie": {
+      "titre": "L'orage affole l'écurie",
+      "texte": "Chaque coup de tonnerre fait trembler les six box de l'écurie. Les chevaux hennissent, tournent, frappent les cloisons ; Hiram passe de l'un à l'autre, lanterne à la main, en murmurant leurs noms. Seul Bourbon refuse d'être consolé et répond à l'orage à grands coups de sabot.",
+      "lieu": "ecurie",
+      "acteurs": ["palefrenier", "cheval_a_vendre"],
+      "meteo": ["orage"],
+      "chance": 0.4
+    },
+
+    "bete_cloche_dans_le_brouillard": {
+      "titre": "Une cloche dans le brouillard",
+      "texte": "Le brouillard a avalé l'enclos. On n'y voit plus à trois pas, mais on entend la cloche de cuivre de Marguerite tinter lentement, de-ci de-là, comme si un fantôme placide promenait une vache. De temps en temps, un « Meuuuh » sort de nulle part.",
+      "lieu": "enclos",
+      "acteurs": ["vache"],
+      "meteo": ["brouillard"],
+      "chance": 0.35
+    },
+
+    "bete_cochon_dans_la_boue": {
+      "titre": "Le bonheur d'un cochon",
+      "texte": "La pluie a changé la rue principale en marécage, et le cochon de l'enclos s'est faufilé sous la barrière pour en profiter. Il se vautre au beau milieu de la chaussée en grognant d'extase, pendant que les cavaliers le contournent en jurant et que Moineau tente de le monter comme un poney.",
+      "lieu": "rue_principale",
+      "acteurs": ["cochon", "gamin"],
+      "heures": [8, 12],
+      "meteo": ["pluie", "orage"],
+      "chance": 0.2
+    },
+
+    "bete_prudence_et_patience": {
+      "titre": "Prudence et Patience font grève",
+      "texte": "Devant le magasin général, les deux mules du chariot ont décidé de ne plus faire un pas. Silas Crump tire sur la bride, pousse, supplie, menace de les vendre au boucher ; Prudence bâille, Patience lui mâchonne la manche. Le chariot bougera quand elles l'auront décidé.",
+      "lieu": "magasin_general",
+      "acteurs": ["epicier"],
+      "heures": [8, 11],
+      "chance": 0.25
+    },
+
+    "bete_sultan_au_piano": {
+      "titre": "Sultan joue du piano",
+      "texte": "Théo répète un nocturne dans la salle vide quand Sultan, réveillé de sa sieste sur le couvercle, descend en marchant sur les touches. Le chat traverse le clavier de bout en bout, s'assied sur les graves et fixe le pianiste. « C'est plus juste que moi après trois verres », admet Théo.",
+      "lieu": "saloon_keane",
+      "acteurs": ["chat_saloon", "pianiste"],
+      "heures": [14, 17],
+      "chance": 0.25
+    },
+
+    "bete_le_train_fait_meugler": {
+      "titre": "Le 11 h 40 réveille l'enclos",
+      "texte": "Le sifflet du train pour Rhodes déchire l'air, et tout l'enclos meugle en chœur comme une fanfare désaccordée. Lucifer charge la barrière par principe, Tommy saute sur un piquet, et Marguerite, imperturbable, continue de ruminer.",
+      "lieu": "enclos",
+      "acteurs": ["taureau", "vacher", "vache"],
+      "heures": [11, 12],
+      "chance": 0.3
+    },
+
+    "bete_cheval_s_ennuie": {
+      "titre": "Ton cheval s'ennuie",
+      "texte": "Attaché devant la porte depuis trop longtemps, ton cheval a défait son nœud avec les dents. Il est allé boire à l'abreuvoir, a mâchonné le chapeau de paille d'un fermier, puis s'est planté devant une vitrine pour contempler son reflet. Il t'attend, l'air de dire que tu exagères.",
+      "lieu": "rue_principale",
+      "acteurs": ["ton_cheval"],
+      "si": ["dedans", "jour"],
+      "chance": 0.15
+    },
+
+    "bete_cheval_hennit_sous_la_fenetre": {
+      "titre": "Un hennissement dans la nuit",
+      "texte": "Dehors, ton cheval hennit sous les fenêtres et frappe le trottoir du sabot, inquiet de ne plus te voir. Une lampe s'allume à l'étage de l'hôtel, une voix sèche réclame le silence. Il finit par se calmer, une oreille tournée vers ta porte.",
+      "lieu": "rue_principale",
+      "acteurs": ["ton_cheval"],
+      "si": ["dedans", "nuit"],
+      "chance": 0.15
+    },
+
+    "bete_caporal_ecoute_le_journal": {
+      "titre": "Le chien écoute les nouvelles",
+      "texte": "Sur le banc, Billy lit le journal de Saint Denis à voix haute pour le sergent Holloway. Le chien errant dort contre la jambe valide du vétéran ; chaque fois que Billy crie un titre, il lève une oreille, et au mot « O'Driscoll », il gronde dans son sommeil.",
+      "lieu": "rue_principale",
+      "acteurs": ["chien_errant", "veteran", "crieur"],
+      "heures": [20, 21],
+      "chance": 0.3
+    },
+
+    "bete_chien_a_la_messe": {
+      "titre": "Un fidèle à quatre pattes",
+      "texte": "En pleine messe, le chien errant pousse la porte de l'église, remonte l'allée sous les regards scandalisés et se couche au pied de la chaire. Le révérend Ezra marque une pause, puis reprend : « Le Seigneur accueille toutes ses créatures. Même celles qui sentent la boucherie. »",
+      "lieu": "eglise",
+      "acteurs": ["chien_errant", "pasteur"],
+      "jours": ["dimanche"],
+      "heures": [9, 12],
+      "chance": 0.3
+    },
+
+    "bete_chat_contre_chien": {
+      "titre": "La guerre des trottoirs",
+      "texte": "Sous le trottoir de bois, Sultan patrouille comme un gendarme. Le chien errant le flaire, aboie, s'approche un peu trop : une patte rousse jaillit entre deux planches et lui griffe la truffe. Le chien file se réfugier derrière la béquille du vétéran en gémissant.",
+      "lieu": "rue_principale",
+      "acteurs": ["chat_saloon", "chien_errant", "veteran"],
+      "heures": [13, 15],
+      "chance": 0.25
+    },
+
+    "bete_gunnar_ferre_un_rebelle": {
+      "titre": "Gunnar ferre un mustang",
+      "texte": "À la forge, un mustang de ranch rue, se cabre et refuse le fer. Gunnar ne dit rien : il cale l'épaule contre le flanc de la bête, soulève le sabot comme une plume et pose le fer en quatre coups de marteau. Le cheval, vaincu, lui souffle dans le cou.",
+      "lieu": "forge",
+      "acteurs": ["marechal_ferrant"],
+      "heures": [6, 12],
+      "chance": 0.3
+    },
+
+    "bete_les_betes_te_fuient": {
+      "titre": "Les bêtes savent",
+      "texte": "Quand tu remontes la rue, le chien errant file sous le banc, les chevaux attachés couchent les oreilles et une poule détale en caquetant. Les bêtes sentent ce que les hommes taisent : l'odeur de poudre et de sang que tu traînes derrière toi.",
+      "lieu": "rue_principale",
+      "acteurs": ["chien_errant"],
+      "si": ["honneur_bas", "jour", "present:rue_principale"],
+      "chance": 0.15
+    },
+
+    "bete_les_betes_te_saluent": {
+      "titre": "Une réputation chez les bêtes",
+      "texte": "Il se passe quelque chose de curieux : le chien errant te salue de la queue, le mustang gris du Smithfield's tend le nez vers ta main, et un corbeau perché sur l'enseigne te regarde passer sans rien voler. Le crieur, qui a tout vu, en oublie de crier : « Les bêtes se trompent rarement, m'sieur. »",
+      "lieu": "rue_principale",
+      "acteurs": ["chien_errant", "cheval_attache", "crieur"],
+      "heures": [8, 12],
+      "si": ["honneur_haut", "present:rue_principale"],
+      "chance": 0.1
+    },
+
+    "bete_chien_vole_un_os": {
+      "titre": "Le chien chaparde chez Gus",
+      "texte": "Un cri retentit à la boucherie : le chien errant file dans la rue avec un os à moelle gros comme un gourdin, Gus à ses trousses, fendoir levé et tablier au vent. Le chien a deux longueurs d'avance, et toute la rue rit déjà.",
+      "lieu": "boucherie",
+      "acteurs": ["chien_errant", "boucher", "crieur"],
+      "heures": [7, 8],
+      "chance": 0.15,
+      "choix": [
+        {
+          "texte": "Payer l'os à Gus (1 $)",
+          "resultat": "Gus s'arrête, essoufflé, et empoche ton dollar en riant : « Pour ce prix-là, il aurait pu prendre le jambon ! » Le chien, lui, ronge son trésor sous le banc sans un regard pour son bienfaiteur.",
+          "effets": { "argent": -1, "honneur": 1 },
+          "consequences": { "entites": { "boucher": { "relation": 1 }, "chien_errant": { "relation": 1 } } }
+        },
+        {
+          "texte": "Barrer la route au chapardeur",
+          "resultat": "Tu te plantes devant le chien, bras écartés. Il freine des quatre pattes, te regarde, lâche l'os à tes pieds et s'assied, la queue battant la boue. Gus récupère son bien et te tape dans le dos à te déboîter l'épaule.",
+          "consequences": { "entites": { "boucher": { "relation": 2 }, "chien_errant": { "relation": -1 } } }
+        },
+        {
+          "texte": "Parier un dollar avec Billy sur Gus",
+          "resultat": "« Un dollar sur le chien ! » crie Billy. Mauvaise affaire pour toi : le boucher glisse sur une bouse et s'étale de tout son long, et le crieur empoche ton dollar en sifflotant.",
+          "effets": { "argent": -1 },
+          "consequences": { "entites": { "crieur": { "relation": 1 } } }
+        }
+      ]
+    },
+
+    "bete_henrietta_s_evade": {
+      "titre": "Henrietta prend la clé des champs",
+      "texte": "Une poule rousse dévale la rue principale, ailes ouvertes, entre les sabots des chevaux et les roues de la diligence. C'est Henrietta, la poule de la vieille Mme Hensley, encore évadée ; le chien errant la suit en jappant, et Moineau suit le chien.",
+      "lieu": "rue_principale",
+      "acteurs": ["poule", "chien_errant", "gamin"],
+      "heures": [8, 11],
+      "chance": 0.2,
+      "choix": [
+        {
+          "texte": "Plonger pour attraper la poule",
+          "resultat": "Tu plonges dans la boue au moment exact où Henrietta fait un crochet. Tu te relèves crotté jusqu'aux oreilles, une plume rousse dans la moustache et la poule sous le bras, sous les applaudissements de la rue.",
+          "effets": { "honneur": 1 },
+          "consequences": { "entites": { "poule": { "relation": -1 }, "gamin": { "relation": 1 } } }
+        },
+        {
+          "texte": "Parier un dollar avec Moineau qu'il ne l'attrapera pas",
+          "resultat": "« Tenu ! » Moineau sprinte, glisse, rebondit et retombe à plat ventre, les mains vides : Henrietta s'est perchée sur ton chapeau. Le gamin te paie en grommelant : « Elle a triché. »",
+          "effets": { "argent": 1 }
+        },
+        {
+          "texte": "Rappeler le chien d'un sifflement",
+          "resultat": "Tu siffles entre tes doigts. Le chien pile net, oreilles dressées, et revient vers toi tout penaud. Libérée de son poursuivant, Henrietta s'arrête, picore un bouton de cuivre et rentre chez elle d'un pas digne.",
+          "consequences": { "entites": { "chien_errant": { "relation": 1 } } }
+        },
+        {
+          "texte": "La regarder filer en riant",
+          "resultat": "Tu t'adosses à un poteau et regardes le défilé : la poule, le chien, le gamin, puis Mme Hensley en bonnet de nuit, balai brandi. Valentine n'a pas besoin de cirque."
+        }
+      ]
+    },
+
+    "bete_serpent_dans_l_ecurie": {
+      "titre": "Un serpent dans la paille",
+      "texte": "Un hennissement de terreur éclate dans l'écurie : un crotale s'est lové dans la paille du troisième box, la queue dressée, et cliquette comme un sac de haricots secs. Les chevaux ruent contre les planches ; Hiram, une fourche à la main, recule pas à pas en jurant entre ses dents.",
+      "lieu": "ecurie",
+      "acteurs": ["palefrenier"],
+      "heures": [8, 12],
+      "meteo": ["chaleur", "beau"],
+      "chance": 0.1,
+      "unique": true,
+      "choix": [
+        {
+          "texte": "Lui trancher la tête d'un coup de pelle",
+          "resultat": "Tu décroches la pelle du mur et frappes une fois, de toutes tes forces. La tête roule dans la paille, la queue cliquette encore un moment. Hiram hoche la tête : « Proprement fait. » Les chevaux mettent une heure à se calmer.",
+          "effets": { "honneur": 1 },
+          "consequences": { "entites": { "palefrenier": { "relation": 2 } } }
+        },
+        {
+          "texte": "Le coincer à la fourche et le vendre au docteur",
+          "resultat": "Tu coinces la tête sous les dents de la fourche et glisses le crotale dans un sac à grain. Le docteur Barlow te l'achète deux dollars, ravi : « Enfin un vrai ingrédient pour mon remède contre les morsures de serpent ! »",
+          "effets": { "argent": 2 },
+          "consequences": { "entites": { "medecin": { "relation": 1 }, "palefrenier": { "relation": 1 } } }
+        },
+        {
+          "texte": "Lui tirer dessus",
+          "resultat": "La détonation dans l'écurie est pire que le serpent : six chevaux s'emballent, une cloison vole en éclats et Bourbon arrache sa longe. Le crotale, lui, est mort. Hiram te regarde longtemps, sans un mot, et ce silence-là fait mal.",
+          "consequences": { "entites": { "palefrenier": { "relation": -2 }, "cheval_a_vendre": { "relation": -1 } } }
+        },
+        {
+          "texte": "L'attraper à mains nues, comme à la foire",
+          "resultat": "Tu le saisis par la queue, fier comme un bateleur. Il se retourne plus vite que ta fierté et te plante ses crocs dans le poignet. Le docteur Barlow t'abreuve de whisky et de latin : tu survivras, mais avec une main comme un jambon.",
+          "effets": { "sante": -10 },
+          "consequences": { "entites": { "medecin": { "relation": 1 } } }
+        }
+      ]
+    },
+
+    "bete_coyote_au_poulailler": {
+      "titre": "Un coyote au poulailler",
+      "texte": "Un vacarme de caquètements éclate derrière les maisons : un coyote maigre s'est glissé sous la palissade de Mme Hensley et tourne autour du poulailler. Une lampe s'allume, puis deux ; quelqu'un crie qu'on lui apporte un fusil.",
+      "lieu": "maisons",
+      "acteurs": ["poule"],
+      "heures": [23, 4],
+      "chance": 0.1,
+      "choix": [
+        {
+          "texte": "Tirer un coup en l'air pour l'effrayer",
+          "resultat": "La détonation claque entre les maisons. Le coyote file comme une ombre vers les collines, et Henrietta, sur son perchoir, te fixe d'un œil rond. Toute la rue te maudit d'avoir réveillé les bébés, mais les poules sont sauves.",
+          "effets": { "honneur": 1 }
+        },
+        {
+          "texte": "L'abattre d'une balle",
+          "resultat": "Ta balle le couche au pied de la palissade. Mme Hensley sort en bonnet de nuit, regarde la bête, puis toi : « Il avait faim, le pauvre diable. Mais c'étaient mes poules. » Elle te glisse un œuf encore chaud dans la main.",
+          "effets": { "sante": 1 }
+        },
+        {
+          "texte": "Le suivre discrètement dans les collines",
+          "resultat": "Tu le suis sous la lune jusqu'à un terrier creusé sous une souche. Trois petits museaux en sortent pour l'accueillir, et le coyote se couche devant eux, bredouille. Tu redescends en silence, et tu ne racontes ça à personne.",
+          "effets": { "honneur": 1 }
+        },
+        {
+          "texte": "Laisser les voisins s'en occuper",
+          "resultat": "Tu remontes ta couverture. Au matin, on raconte qu'il manque deux poules chez Mme Hensley, mais pas Henrietta : elle avait passé la nuit cachée dans une botte."
+        }
+      ]
+    },
+
+    "bete_edgar_te_vole": {
+      "titre": "Edgar fait les poches",
+      "texte": "Un battement d'ailes noir, un coup de bec précis, et la pièce que tu faisais tourner entre tes doigts a disparu. Edgar, le corbeau du cimetière, se pose sur l'enseigne des pompes funèbres, ta pièce dans le bec, et croasse : « Payez d'avance ! »",
+      "lieu": "rue_principale",
+      "acteurs": ["corbeau"],
+      "heures": [12, 15],
+      "si": ["present:rue_principale"],
+      "chance": 0.12,
+      "unique": true,
+      "consequences": { "joueur": { "argent": -1 } },
+      "choix": [
+        {
+          "texte": "Le suivre des yeux jusqu'à son nid",
+          "resultat": "Tu ne le lâches pas du regard. Il file au-dessus des toits, vers le cimetière, et plonge dans la fourche du vieux chêne mort. Tu sais désormais où dort son trésor.",
+          "consequences": { "drapeaux": ["+bete_nid_edgar_repere"] }
+        },
+        {
+          "texte": "Lui lancer une pierre",
+          "resultat": "La pierre siffle à un pouce de ses plumes. Edgar s'envole en hurlant des injures de corbeau, et sur le toit de l'église, trois autres corbeaux tournent la tête vers toi. Ils se souviendront.",
+          "consequences": { "drapeaux": ["+bete_corbeaux_rancuniers"], "entites": { "corbeau": { "relation": -2 } } }
+        },
+        {
+          "texte": "Saluer le voleur d'un coup de chapeau",
+          "resultat": "Tu soulèves ton chapeau. Edgar penche la tête, ébouriffe ses plumes et laisse tomber la pièce dans la boue, à tes pieds. Sur le pas de sa porte, Mortimer Pembrook murmure : « Il vous aime bien. C'est rare. »",
+          "effets": { "argent": 1 },
+          "consequences": { "entites": { "corbeau": { "relation": 2 } } }
+        }
+      ]
+    },
+
+    "bete_nid_d_edgar": {
+      "titre": "Le trésor du vieux chêne",
+      "texte": "Le vieux chêne mort du cimetière tend ses branches noires au-dessus des tombes. Tout là-haut, dans une fourche, le nid d'Edgar scintille comme une vitrine de bijoutier : cuillères, boutons, douilles, et ta pièce. Le corbeau, lui, est parti chaparder en ville.",
+      "lieu": "cimetiere",
+      "drapeaux": ["bete_nid_edgar_repere"],
+      "heures": [9, 15],
+      "si": ["present:cimetiere"],
+      "chance": 0.6,
+      "unique": true,
+      "choix": [
+        {
+          "texte": "Reprendre ta pièce, et rien d'autre",
+          "resultat": "Tu grimpes, récupères ta pièce et redescends sans toucher au reste. Un voleur a ses règles ; un honnête homme aussi.",
+          "effets": { "argent": 1, "honneur": 1 }
+        },
+        {
+          "texte": "Prendre le médaillon d'argent pour la veuve",
+          "resultat": "Sous une cuillère tordue, un médaillon au ruban noir déchiré : le portrait d'Ada Hartley. Tu le lui rapportes. Elle le serre dans son poing longtemps, sans un mot, puis murmure : « Elias me l'avait offert. Merci. »",
+          "effets": { "honneur": 2 },
+          "consequences": { "drapeaux": ["+bete_medaillon_rendu"], "entites": { "veuve": { "relation": 3 } } }
+        },
+        {
+          "texte": "Vider le nid de tout ce qui vaut quelque chose",
+          "resultat": "Tu rafles les pièces, une bague, une dent en or. En redescendant, tu sens des yeux sur ta nuque : sur chaque croix du cimetière, un corbeau te regarde. Edgar est rentré.",
+          "effets": { "argent": 4, "honneur": -1 },
+          "consequences": { "drapeaux": ["+bete_corbeaux_rancuniers"], "entites": { "corbeau": { "relation": -3 } } }
+        },
+        {
+          "texte": "Laisser son trésor au voleur",
+          "resultat": "Tu redescends les mains vides. Après tout, ta pièce a trouvé un collectionneur bien plus passionné que toi."
+        }
+      ]
+    },
+
+    "bete_paris_sultan_senateur": {
+      "titre": "Paris ouverts : Sultan contre le Sénateur",
+      "texte": "Lucius Crane a coincé un gros rat gris sous un seau retourné, au milieu du saloon, et Sultan tourne autour en fouettant l'air de sa queue. « Un dollar sur le chat, un dollar sur le rat ! » lance le tricheur en faisant tinter ses pièces. Les clients s'attroupent ; le barman se cache derrière son comptoir.",
+      "lieu": "saloon_keane",
+      "acteurs": ["chat_saloon", "rat", "joueur_poker"],
+      "heures": [20, 22],
+      "chance": 0.12,
+      "choix": [
+        {
+          "texte": "Parier un dollar sur Sultan",
+          "resultat": "Crane soulève le seau. Sultan bondit, le Sénateur esquive, file entre les bottes et disparaît sous le plancher. Le tricheur rafle les mises : « Le chat n'a pas eu le rat. Le rat gagne. » Tu commences à comprendre comment il gagne sa vie.",
+          "effets": { "argent": -1 }
+        },
+        {
+          "texte": "Parier un dollar sur le rat",
+          "resultat": "Le seau se lève ; Sultan ignore le rat et va planter ses griffes dans la manche gauche de Crane. Un as de pique tombe sur le plancher. Crane le ramasse très vite, très souriant : « Le rat gagne, tiens. Voilà deux dollars, l'ami. Restons discrets. »",
+          "effets": { "argent": 2 },
+          "consequences": { "entites": { "joueur_poker": { "relation": -1 }, "chat_saloon": { "relation": 1 } } }
+        },
+        {
+          "texte": "Refuser ce jeu de brute et soulever le seau",
+          "resultat": "Tu renverses le seau d'un coup de botte. Le rat détale, Sultan bâille, la foule proteste. Crane te dévisage, le sourire figé : il n'aime pas qu'on interrompe ses affaires.",
+          "effets": { "honneur": 1 },
+          "consequences": { "entites": { "joueur_poker": { "relation": -1 } } }
+        }
+      ]
+    },
+
+    "bete_wagons_a_bestiaux": {
+      "titre": "Les bœufs refusent le wagon",
+      "texte": "Sur le quai de chargement, une douzaine de bœufs du W couronné refusent obstinément de monter la rampe du wagon à bestiaux. Silas Whitmore aboie des ordres, ses vachers agitent leurs chapeaux, et le chef de gare consulte sa montre avec désespoir : le train n'attendra pas.",
+      "lieu": "gare",
+      "acteurs": ["eleveur", "chef_de_gare"],
+      "heures": [17, 18],
+      "chance": 0.25,
+      "choix": [
+        {
+          "texte": "Donner un coup de main pour 2 $",
+          "resultat": "Tu sautes dans le couloir de chargement, tu cries, tu claques les croupes. Un bœuf te marche sur le pied, un autre te souffle au visage, mais le dernier monte à 17 h 58. Whitmore te jette deux dollars : « Pas mal, pour un vagabond. »",
+          "effets": { "argent": 2, "sante": -1 },
+          "consequences": { "entites": { "eleveur": { "relation": 1 }, "chef_de_gare": { "relation": 1 } } }
+        },
+        {
+          "texte": "Hisser le bœuf meneur au lasso",
+          "si": ["a_cheval"],
+          "resultat": "Ton lasso cueille les cornes du meneur ; tu le hales jusqu'en haut de la rampe et tout le troupeau suit, docile. Whitmore en lâche son cigare : « Toi, si tu cherches du travail, viens me voir. » Trois dollars tombent dans ta main.",
+          "effets": { "argent": 3 },
+          "consequences": { "entites": { "eleveur": { "relation": 2 }, "chef_de_gare": { "relation": 1 } } }
+        },
+        {
+          "texte": "Photographier le désastre",
+          "resultat": "Ton appareil immortalise l'instant : un bœuf assis sur la rampe, Whitmore rouge comme une brique, Pettigrew brandissant sa montre. Le crieur t'achète le cliché un dollar pour son « édition spéciale ».",
+          "effets": { "argent": 1 },
+          "consequences": { "entites": { "eleveur": { "relation": -1 } } }
+        }
+      ]
+    },
+
+    "bete_course_du_samedi": {
+      "titre": "Tommy veut faire la course",
+      "texte": "Samedi, jour de paie : Tommy Rourke, juché sur la jument pie du ranch, défie qui veut de faire la course de l'enclos jusqu'au ruisseau. « Deux dollars que personne bat Tommy le Rapide ! » Une petite foule s'est formée le long de la barrière, et les paris volent.",
+      "lieu": "enclos",
+      "acteurs": ["vacher"],
+      "jours": ["samedi"],
+      "heures": [14, 17],
+      "chance": 0.3,
+      "choix": [
+        {
+          "texte": "Relever le défi avec ton cheval",
+          "si": ["a_cheval"],
+          "resultat": "Vous partez dans un nuage de boue. Ton cheval allonge la foulée, couche les oreilles et passe la jument à vingt pas du ruisseau. Tommy te paie en riant jaune : « Revanche samedi prochain ! » La foule hurle ton nom, ou à peu près.",
+          "effets": { "argent": 2 },
+          "consequences": { "entites": { "vacher": { "relation": 1 }, "ton_cheval": { "relation": 1 } } }
+        },
+        {
+          "texte": "Parier un dollar sur Tommy",
+          "resultat": "Tommy part trop tôt, se fait rattraper par un vacher du ranch voisin et perd d'une encolure. Il vient te rendre ton dollar de sa poche, rouge de honte : « Vous avez cru en moi. Ça, ça vaut plus qu'un dollar. »",
+          "consequences": { "entites": { "vacher": { "relation": 2 } } }
+        },
+        {
+          "texte": "Rester au bord de la barrière",
+          "resultat": "Tu regardes les cavaliers filer vers le ruisseau dans un tonnerre de sabots. Le samedi, à Valentine, c'est le seul spectacle qui ne coûte rien."
+        }
+      ]
+    },
+
+    "bete_bourbon_te_choisit": {
+      "titre": "Bourbon se laisse approcher",
+      "texte": "Quand tu passes devant le dernier box, Bourbon cesse de frapper la cloison. Le Morgan tend l'encolure, souffle sur ta main et pose le menton sur ton épaule. Hiram en lâche sa fourche : « Vingt ans que je fais ce métier. Il a jamais fait ça à personne. »",
+      "lieu": "ecurie",
+      "acteurs": ["cheval_a_vendre", "palefrenier"],
+      "heures": [6, 12],
+      "si": ["honneur_haut", "present:ecurie"],
+      "chance": 0.4,
+      "unique": true,
+      "choix": [
+        {
+          "texte": "Le monter, là, tout de suite",
+          "resultat": "Hiram selle Bourbon en silence. Le Morgan pointe les oreilles, se tend comme un ressort... puis fait le tour de l'enclos au pas, docile comme un vieux cheval de fiacre. Hiram s'essuie les yeux d'un revers de manche : « Il est à vendre, mais pas à n'importe qui. À toi, oui. »",
+          "consequences": { "entites": { "cheval_a_vendre": { "relation": 3 }, "palefrenier": { "relation": 2 } } }
+        },
+        {
+          "texte": "Lui parler à voix basse, comme Hiram",
+          "resultat": "Tu lui murmures des bêtises, la voix grave et lente. Ses oreilles tournent vers toi, son œil s'apaise. Hiram hoche la tête : « Tu reviendras le voir. Il t'attendra. »",
+          "consequences": { "entites": { "cheval_a_vendre": { "relation": 2 }, "palefrenier": { "relation": 1 } } }
+        },
+        {
+          "texte": "Lui offrir ta pomme",
+          "resultat": "Il la croque en deux bouchées et fouille tes poches pour la suivante. Hiram grogne : « Le voilà vendu pour une pomme. C'est plus que ce qu'en offrait le dernier acheteur. »",
+          "consequences": { "entites": { "cheval_a_vendre": { "relation": 2 } } }
+        }
+      ]
+    },
+
+    "bete_cheval_boite": {
+      "titre": "Ton cheval boite",
+      "texte": "Ton cheval avance en hochant la tête à chaque pas : il a perdu un fer sur les cailloux de la piste et boite de l'antérieur gauche. À la forge, Gunnar lève les yeux de son enclume, regarde le sabot de loin et grogne un seul mot : « Fer. »",
+      "lieu": "forge",
+      "acteurs": ["ton_cheval", "marechal_ferrant"],
+      "heures": [7, 18],
+      "chance": 0.05,
+      "choix": [
+        {
+          "texte": "Le faire ferrer par Gunnar (2 $)",
+          "resultat": "Gunnar prend le sabot dans sa main énorme, gratte, rogne, forge un fer à la mesure et le pose en six coups de marteau. Ton cheval repart d'un pas net et fier. « Bon cheval », dit Gunnar. Pour lui, c'est un discours.",
+          "effets": { "argent": -2 },
+          "consequences": { "entites": { "marechal_ferrant": { "relation": 1 }, "ton_cheval": { "relation": 1 } } }
+        },
+        {
+          "texte": "Le ferrer toi-même sous l'œil de Gunnar",
+          "resultat": "Gunnar te tend le marteau et croise les bras. Tu tapes de travers, tu tords un clou, tu prends un coup de sabot dans la cuisse ; il corrige ton geste d'un doigt. À la fin, le fer tient. Gunnar te donne une claque dans le dos qui te plie en deux.",
+          "effets": { "sante": -2 },
+          "consequences": { "entites": { "marechal_ferrant": { "relation": 2 }, "ton_cheval": { "relation": 1 } } }
+        },
+        {
+          "texte": "Continuer à le monter tel quel",
+          "resultat": "Tu remontes en selle. Ton cheval avance en boitant, l'œil triste, et chaque pas sur les cailloux le fait frissonner. Sur le seuil de sa forge, Gunnar secoue la tête comme si tu venais de frapper un enfant.",
+          "effets": { "honneur": -1 },
+          "consequences": {
+            "drapeaux": ["+bete_cheval_boiteux"],
+            "entites": { "ton_cheval": { "etat": "blesse", "relation": -2 }, "marechal_ferrant": { "relation": -1 } }
+          }
+        }
+      ]
+    },
+
+    "bete_hiram_soigne_ton_cheval": {
+      "titre": "Hiram prend ton cheval en main",
+      "texte": "Hiram t'attend devant l'écurie, la bride de ton cheval boiteux dans sa main couturée. « Un cheval qui boite, on le monte pas. On le soigne. » Il a déjà mis à tremper le sabot dans un seau d'eau salée, et il ne te demande pas ton avis.",
+      "lieu": "ecurie",
+      "acteurs": ["palefrenier", "ton_cheval"],
+      "drapeaux": ["bete_cheval_boiteux"],
+      "heures": [6, 12],
+      "chance": 0.5,
+      "consequences": {
+        "drapeaux": ["-bete_cheval_boiteux"],
+        "entites": { "ton_cheval": { "etat": "normal" } }
+      },
+      "choix": [
+        {
+          "texte": "Payer les soins et le fer (3 $)",
+          "resultat": "Hiram soigne, Gunnar ferre, et le soir même ton cheval trotte sans boiter. Hiram empoche tes trois dollars sans un merci : « La prochaine fois, tu viens avant qu'il souffre. »",
+          "effets": { "argent": -3 },
+          "consequences": { "entites": { "palefrenier": { "relation": 1 }, "ton_cheval": { "relation": 1 } } }
+        },
+        {
+          "texte": "L'aider à soigner le sabot",
+          "resultat": "Tu tiens la jambe pendant qu'Hiram nettoie, bande et graisse. Il t'explique chaque geste à voix basse, comme à un apprenti. À la fin, il te tend sa blague à tabac : « T'es moins bête que t'en as l'air. »",
+          "effets": { "honneur": 1 },
+          "consequences": { "entites": { "palefrenier": { "relation": 2 }, "ton_cheval": { "relation": 2 } } }
+        },
+        {
+          "texte": "Lui dire de se mêler de ses affaires",
+          "resultat": "Hiram te regarde comme on regarde un crotale. « Les chevaux, c'est mes affaires. » Il soigne ton cheval quand même, et te tend la note : quatre dollars, payables tout de suite.",
+          "effets": { "argent": -4 },
+          "consequences": { "entites": { "palefrenier": { "relation": -2 } } }
+        }
+      ]
+    },
+
+    "bete_voleur_de_chevaux": {
+      "titre": "Un voleur de chevaux",
+      "texte": "Un hennissement furieux déchire la nuit. Dans la rue principale, une silhouette encapuchonnée a détaché ton cheval et tente de l'entraîner vers la ruelle ; ton cheval plante ses quatre fers dans la boue et refuse d'avancer.",
+      "lieu": "rue_principale",
+      "acteurs": ["ton_cheval"],
+      "heures": [0, 5],
+      "drapeaux": ["!bete_chien_adopte"],
+      "chance": 0.04,
+      "choix": [
+        {
+          "texte": "Siffler ton cheval",
+          "resultat": "Tu siffles de toutes tes forces. Ton cheval se cabre, arrache la longe des mains du voleur et l'envoie rouler dans l'abreuvoir d'un coup d'épaule. Le temps que tu arrives, l'homme a fui, trempé ; ton cheval t'attend, fier comme un général.",
+          "consequences": { "entites": { "ton_cheval": { "relation": 2 } } }
+        },
+        {
+          "texte": "Tirer au-dessus de sa tête",
+          "resultat": "Ta balle siffle au-dessus du capuchon. Le voleur lâche tout et détale vers le ruisseau. Toutes les lampes de Valentine s'allument, et l'adjoint Eli surgit en caleçon, Colt au poing, en criant « Qui va là ? » à un tonneau.",
+          "consequences": { "entites": { "ton_cheval": { "relation": -1 } } }
+        },
+        {
+          "texte": "Courir plaquer le voleur",
+          "resultat": "Tu jaillis de l'ombre et plaques le voleur dans la boue. C'est un garçon maigre venu de Strawberry, qui pleure en jurant qu'il avait faim. Malloy, réveillé, le reconduit à coups de botte jusqu'à la sortie de la ville et te remercie d'un grognement.",
+          "effets": { "honneur": 2, "sante": -1 },
+          "consequences": { "entites": { "sherif_malloy": { "relation": 1 }, "ton_cheval": { "relation": 1 } } }
+        },
+        {
+          "texte": "Ne pas bouger",
+          "resultat": "Tu tends l'oreille. Un juron, un bruit de sabots, puis plus rien. Au matin, la barre d'attache est vide : ton cheval a disparu, et il ne reste qu'un bout de longe coupée.",
+          "consequences": {
+            "drapeaux": ["+bete_cheval_disparu"],
+            "entites": { "ton_cheval": { "etat": "en_fuite" } }
+          }
+        }
+      ]
+    },
+
+    "bete_cheval_revient_seul": {
+      "titre": "Ton cheval revient seul",
+      "texte": "Au petit matin, un bruit de sabots remonte la rue principale. C'est ton cheval, crotté jusqu'au ventre, un bout de longe coupée pendant à son licol : il a désarçonné son voleur quelque part dans les collines et retrouvé le chemin tout seul. Il vient poser le nez contre ta poitrine, l'air de te reprocher de ne pas l'avoir cherché.",
+      "lieu": "rue_principale",
+      "drapeaux": ["bete_cheval_disparu"],
+      "heures": [5, 9],
+      "chance": 0.5,
+      "consequences": {
+        "drapeaux": ["-bete_cheval_disparu"],
+        "entites": { "ton_cheval": { "etat": "normal" } }
+      }
+    },
+
+    "bete_rook_examine_tes_fers": {
+      "titre": "Rook examine tes fers",
+      "texte": "À l'aube, Rook, le chasseur de primes, est accroupi près de ton cheval, à la barre d'attache. Il soulève un sabot, le compare à un croquis dans son carnet de cuir, puis note quelque chose. Il ne t'a pas encore vu.",
+      "lieu": "rue_principale",
+      "acteurs": ["chasseur_primes", "ton_cheval"],
+      "heures": [7, 8],
+      "si": ["est_recherche"],
+      "chance": 0.4,
+      "choix": [
+        {
+          "texte": "L'aborder franchement",
+          "resultat": "Il se relève sans hâte et referme son carnet. « Tes fers laissent une marque nette. Facile à suivre. » Il te regarde comme une somme d'argent. « Pas aujourd'hui. Mais je sais lire la boue. »",
+          "consequences": { "entites": { "chasseur_primes": { "relation": -1 } } }
+        },
+        {
+          "texte": "Détacher ton cheval en douce et filer",
+          "resultat": "Tu te glisses derrière l'abreuvoir, dénoues la longe et t'éloignes au pas. Quand Rook relève la tête, il n'y a plus qu'une empreinte de sabot dans la boue. Il la recopie, tranquillement."
+        },
+        {
+          "texte": "Payer Moineau pour faire diversion (1 $)",
+          "resultat": "Moineau lâche Henrietta, empruntée on ne sait où, entre les jambes de Rook. Le chasseur de primes se retrouve assis dans la boue, une poule sur les genoux, et tu t'éclipses avec ton cheval. Pour la première fois, Rook a l'air surpris.",
+          "effets": { "argent": -1 },
+          "consequences": { "entites": { "gamin": { "relation": 1 }, "chasseur_primes": { "relation": -1 } } }
+        }
+      ]
+    },
+
+    "bete_chevaux_s_emballent": {
+      "titre": "Les chevaux s'emballent",
+      "texte": "La détonation claque dans la rue principale et les chevaux attachés deviennent fous. Le mustang gris du Smithfield's arrache la barre d'attache, les chevaux de la diligence se cabrent dans les traits, et ton propre cheval tire sur sa longe, l'œil blanc de terreur.",
+      "lieu": "rue_principale",
+      "acteurs": ["cheval_attache", "ton_cheval"],
+      "apres": { "verbes": ["tirer", "faire_sauter"] },
+      "si": ["present:rue_principale"],
+      "chance": 0.6,
+      "choix": [
+        {
+          "texte": "Te jeter à la bride du mustang gris",
+          "resultat": "Tu t'accroches à la bride du mustang. Il te traîne sur trois pas dans la boue, puis s'arrête, tremblant, les naseaux contre ta poitrine. Sur sa croupe, sous la marque grossière, tu devines une autre marque, plus ancienne et plus soignée.",
+          "effets": { "honneur": 1, "sante": -1 },
+          "consequences": { "entites": { "cheval_attache": { "relation": 2 } } }
+        },
+        {
+          "texte": "Calmer d'abord ton propre cheval",
+          "resultat": "Tu poses la main sur l'encolure de ton cheval et lui parles à voix basse jusqu'à ce que ses oreilles reviennent vers toi. Autour, c'est le chaos ; lui ne bouge plus. Il te fait confiance, même quand tu fais du bruit.",
+          "consequences": { "entites": { "ton_cheval": { "relation": 1 } } }
+        },
+        {
+          "texte": "Laisser le chaos s'arranger tout seul",
+          "resultat": "Le mustang file jusqu'au bout de la rue, renverse la caisse du crieur et s'arrête devant l'abreuvoir pour boire, comme si de rien n'était. Amos, le cocher, te traite de tous les noms en rattrapant ses chevaux.",
+          "consequences": { "entites": { "ton_cheval": { "relation": -1 }, "crieur": { "relation": -1 } } }
+        }
+      ]
+    },
+
+    "bete_cheval_accourt_au_sifflet": {
+      "titre": "Ton cheval accourt",
+      "texte": "À ton sifflet, un hennissement répond au bout de la rue. Ton cheval arrive au grand trot, sa longe arrachée traînant dans la boue, fait fuir une poule, frôle le crieur et pile net devant toi, fier comme s'il avait gagné une course. Le crieur ramasse ses journaux en jurant.",
+      "lieu": "rue_principale",
+      "acteurs": ["ton_cheval"],
+      "apres": { "verbes": ["appeler_cheval"] },
+      "si": ["jour"],
+      "chance": 0.2
+    },
+
+    "bete_cheval_reconnaissant": {
+      "titre": "Ton cheval te remercie",
+      "texte": "Ton cheval ferme à demi les yeux, pousse un long soupir et pose sa grosse tête sur ton épaule, tout son poids abandonné contre toi. Un vacher qui passe ricane ; un vieux cavalier, lui, touche le bord de son chapeau. Entre vous, quelque chose se resserre.",
+      "lieu": "rue_principale",
+      "acteurs": ["ton_cheval"],
+      "apres": { "verbes": ["brosser", "caresser", "nourrir", "faire_boire_cheval"], "cibles": ["ton_cheval"] },
+      "chance": 0.25,
+      "consequences": { "entites": { "ton_cheval": { "relation": 1 } } }
+    },
+
+    "bete_hiram_a_tout_vu": {
+      "titre": "Hiram a tout vu",
+      "texte": "Ton cheval arrache sa longe et file au galop se réfugier à l'écurie, l'œil blanc. Hiram en sort aussitôt, fourche à la main, et marche sur toi avec une lenteur terrible. « Un homme qui frappe son cheval, chez moi, on l'appelle pas un homme. »",
+      "lieu": "ecurie",
+      "acteurs": ["palefrenier", "ton_cheval"],
+      "apres": { "verbes": ["frapper", "attaquer"], "cibles": ["ton_cheval"] },
+      "chance": 0.7,
+      "consequences": { "entites": { "palefrenier": { "relation": -2 } } },
+      "choix": [
+        {
+          "texte": "Baisser la tête et demander pardon à ton cheval",
+          "resultat": "Tu entres dans le box, chapeau à la main. Ton cheval recule au fond, tremblant ; il te faut une heure de patience et deux pommes pour qu'il tende enfin le nez. Hiram, adossé à la porte, finit par cracher sa chique : « Bon. On recommence de zéro. »",
+          "effets": { "honneur": 1 },
+          "consequences": { "entites": { "palefrenier": { "relation": 2 }, "ton_cheval": { "relation": 1 } } }
+        },
+        {
+          "texte": "Payer Hiram pour qu'il le soigne et le calme (2 $)",
+          "resultat": "Hiram prend tes dollars sans te regarder. « Il reste ici cette nuit. Toi, va dormir ailleurs. » Derrière lui, ton cheval ne tourne même pas la tête vers toi.",
+          "effets": { "argent": -2 },
+          "consequences": { "entites": { "palefrenier": { "relation": 1 } } }
+        },
+        {
+          "texte": "Lui rappeler que c'est ton cheval, pas le sien",
+          "resultat": "Hiram plante sa fourche dans la terre, à un pouce de ta botte. « Alors viens le chercher. » Tu regardes la fourche, les mains couturées, l'œil gris. Tu décides que demain sera un meilleur jour pour ça.",
+          "effets": { "honneur": -1 },
+          "consequences": { "entites": { "palefrenier": { "relation": -2 }, "ton_cheval": { "relation": -1 } } }
+        }
+      ]
+    },
+
+    "bete_sultan_t_offre_un_rat": {
+      "titre": "Un cadeau de Sultan",
+      "texte": "Un peu plus tard, Sultan traverse le saloon d'un pas solennel et dépose à tes pieds un rat mort, gros comme un écureuil. Il s'assied, te regarde, et attend. Le barman éclate de rire : « Félicitations. Il ne fait ça que pour les gens qu'il respecte. »",
+      "lieu": "saloon_keane",
+      "acteurs": ["chat_saloon", "barman_keane"],
+      "apres": { "verbes": ["caresser", "nourrir", "offrir_du_lait"], "cibles": ["chat_saloon"] },
+      "chance": 0.35
+    },
+
+    "bete_mme_hensley_remercie": {
+      "titre": "La tarte de Mme Hensley",
+      "texte": "Mme Hensley t'ouvre sa porte en bonnet de dentelle, serre Henrietta contre elle et te fourre dans les mains une part de tarte aux pommes encore tiède, enveloppée dans un torchon. « Vous êtes le premier, depuis des années, qui me la rapporte sans l'avoir plumée à moitié. »",
+      "lieu": "maisons",
+      "acteurs": ["poule"],
+      "apres": { "verbes": ["rapporter_poule"], "cibles": ["poule"] },
+      "chance": 0.6,
+      "consequences": { "joueur": { "sante": 3, "honneur": 1 } }
+    },
+
+    "bete_corbeaux_se_souviennent": {
+      "titre": "Les corbeaux se souviennent",
+      "texte": "Un à un, des corbeaux se posent en silence sur le toit de l'église, sur les croix, sur l'enseigne des pompes funèbres. Ils sont dix, puis vingt, et tous te regardent. Mortimer Pembrook ôte son haut-de-forme : « Ils n'oublient jamais un visage. Moi non plus, d'ailleurs. »",
+      "lieu": "cimetiere",
+      "apres": { "verbes": ["tirer", "lancer", "attaquer", "frapper", "chasser", "fouiller_nid_corbeau"], "cibles": ["corbeau"] },
+      "chance": 0.8,
+      "consequences": { "drapeaux": ["+bete_corbeaux_rancuniers"] }
+    },
+
+    "bete_corbeaux_te_harcelent": {
+      "titre": "Les corbeaux te suivent",
+      "texte": "Une ombre noire passe au-dessus de toi, puis une autre. Depuis que tu t'en es pris à l'un des leurs, les corbeaux du comté te suivent de toit en toit, croassent sur ton passage et laissent parfois tomber sur ton chapeau quelque chose qui n'est pas une plume.",
+      "lieu": "rue_principale",
+      "drapeaux": ["bete_corbeaux_rancuniers"],
+      "si": ["jour", "dehors"],
+      "chance": 0.12
+    },
+
+    "bete_la_paix_des_corbeaux": {
+      "titre": "La paix des corbeaux",
+      "texte": "Edgar descend de sa croix, prend ton offrande dans son bec et la soupèse longuement. Puis il la dépose sur une tombe, avec cérémonie, comme on signe un traité. Sur le toit de l'église, les autres corbeaux s'envolent un à un : la dette est payée.",
+      "lieu": "cimetiere",
+      "acteurs": ["corbeau"],
+      "drapeaux": ["bete_corbeaux_rancuniers"],
+      "apres": { "verbes": ["appater_brillant", "nourrir"], "cibles": ["corbeau"] },
+      "chance": 0.5,
+      "consequences": {
+        "drapeaux": ["-bete_corbeaux_rancuniers"],
+        "entites": { "corbeau": { "relation": 2 } }
+      }
+    },
+
+    "bete_le_chien_te_suit": {
+      "titre": "Le chien errant t'a choisi",
+      "texte": "Tu fais trois pas, le chien errant en fait trois. Tu t'arrêtes, il s'arrête, la tête penchée, la queue battant timidement la boue. Visiblement, il a pris une décision, et cette décision, c'est toi.",
+      "lieu": "rue_principale",
+      "acteurs": ["chien_errant"],
+      "apres": { "verbes": ["nourrir", "caresser", "adopter_chien", "siffler_chien", "jouer_baton_chien"], "cibles": ["chien_errant"] },
+      "drapeaux": ["!bete_chien_suit", "!bete_chien_rejete", "!bete_chien_au_veteran"],
+      "chance": 0.5,
+      "unique": true,
+      "consequences": { "drapeaux": ["+bete_chien_suit"] },
+      "choix": [
+        {
+          "texte": "Le laisser te suivre",
+          "resultat": "Tu reprends ta route. Derrière toi, quatre pattes clopinent dans la boue, à distance respectueuse, puis de moins en moins respectueuse. Le crieur te lance un clin d'œil : « Scoop s'est trouvé quelqu'un ! »",
+          "consequences": { "entites": { "chien_errant": { "relation": 1 } } }
+        },
+        {
+          "texte": "Partager ton casse-croûte avec lui",
+          "resultat": "Tu romps ton pain en deux. Il prend sa part avec une délicatesse inattendue, puis s'assied contre ta botte comme s'il y avait toujours été.",
+          "consequences": { "entites": { "chien_errant": { "relation": 2 } } }
+        },
+        {
+          "texte": "Le chasser d'un geste",
+          "resultat": "Tu tapes du pied. Il recule, les oreilles basses, et retourne se coucher sous le banc, le museau entre les pattes. Il ne te regardera plus jamais tout à fait de la même façon.",
+          "consequences": {
+            "drapeaux": ["-bete_chien_suit", "+bete_chien_rejete"],
+            "entites": { "chien_errant": { "relation": -2 } }
+          }
+        }
+      ]
+    },
+
+    "bete_le_chien_rapporte": {
+      "titre": "Le chien te rapporte un cadeau",
+      "texte": "Le chien errant arrive au galop et dépose fièrement à tes pieds un chapelet de saucisses encore pendu à son crochet. Au bout de la rue, Gus sort de la boucherie, fendoir levé, et cherche le coupable des yeux. Le chien remue la queue : il attend tes félicitations.",
+      "lieu": "rue_principale",
+      "acteurs": ["chien_errant", "boucher"],
+      "drapeaux": ["bete_chien_suit"],
+      "heures": [8, 12],
+      "chance": 0.3,
+      "unique": true,
+      "consequences": { "drapeaux": ["+bete_chien_s_attache"] },
+      "choix": [
+        {
+          "texte": "Payer les saucisses à Gus (1 $)",
+          "resultat": "Tu rapportes les saucisses et un dollar. Gus éclate de son grand rire : « Garde-les ! Un chien qui vole pour son maître, c'est un chien qui a du cœur. » Tu partages le butin avec ton complice.",
+          "effets": { "argent": -1, "honneur": 1 },
+          "consequences": { "entites": { "boucher": { "relation": 1 }, "chien_errant": { "relation": 1 } } }
+        },
+        {
+          "texte": "Rendre les saucisses et gronder le chien",
+          "resultat": "Tu rends les saucisses à Gus et grondes le chien, qui baisse la tête, consterné. Il ne comprend pas : il voulait seulement te nourrir. Il te suit quand même, trois pas plus loin derrière.",
+          "consequences": { "entites": { "boucher": { "relation": 1 }, "chien_errant": { "relation": -1 } } }
+        },
+        {
+          "texte": "Partager les saucisses avec le vétéran",
+          "resultat": "Tu offres le butin au sergent Holloway, qui en avale trois d'affilée avant de grogner : « Le Caporal a toujours su où trouver le ravitaillement. » Gus, lui, a trouvé le complice : toi. Il ne te sourira plus pendant un bout de temps.",
+          "consequences": { "entites": { "veteran": { "relation": 2 }, "boucher": { "relation": -2 }, "chien_errant": { "relation": 1 } } }
+        },
+        {
+          "texte": "Faire mine de ne pas connaître ce chien",
+          "resultat": "Tu siffles en regardant les nuages. Gus récupère ses saucisses en maudissant tous les chiens du comté ; le tien te regarde, regarde Gus, et semble conclure que les humains sont bien compliqués."
+        }
+      ]
+    },
+
+    "bete_scoop_ou_caporal": {
+      "titre": "Scoop ou Caporal ?",
+      "texte": "Au crépuscule, sur le banc, le sergent Holloway siffle : « Caporal ! » Au même moment, Billy, son journal sous le bras, appelle : « Scoop ! » Le chien errant s'arrête au milieu de la rue, regarde le vétéran, regarde le crieur, puis vient s'asseoir à tes pieds. Les deux se tournent vers toi.",
+      "lieu": "rue_principale",
+      "acteurs": ["chien_errant", "veteran", "crieur"],
+      "drapeaux": ["bete_chien_s_attache"],
+      "heures": [20, 21],
+      "chance": 0.4,
+      "unique": true,
+      "choix": [
+        {
+          "texte": "L'appeler Caporal, en l'honneur du sergent",
+          "resultat": "« Caporal », dis-tu. Le vétéran se redresse sur son banc et te fait un salut militaire impeccable : « Prends soin de lui, soldat. C'est le meilleur de la compagnie. » Billy fait la moue, puis sourit quand même.",
+          "consequences": {
+            "drapeaux": ["+bete_chien_adopte"],
+            "entites": { "veteran": { "relation": 2 }, "chien_errant": { "relation": 1 } }
+          }
+        },
+        {
+          "texte": "L'appeler Scoop, pour faire plaisir à Billy",
+          "resultat": "« Scoop », dis-tu. Billy lance sa casquette en l'air : « Je vais l'écrire dans mon carnet ! Scoop et son maître, les héros de Valentine ! » Le vétéran grommelle que ce n'est pas un nom de soldat.",
+          "consequences": {
+            "drapeaux": ["+bete_chien_adopte"],
+            "entites": { "crieur": { "relation": 2 }, "chien_errant": { "relation": 1 } }
+          }
+        },
+        {
+          "texte": "Lui laisser ses deux noms",
+          "resultat": "« Il répondra aux deux. » Le chien aboie une fois pour chaque nom. Le vétéran et le crieur éclatent de rire ensemble, et le chien a soudain l'air d'appartenir à toute une rue, et à toi en particulier.",
+          "effets": { "honneur": 1 },
+          "consequences": {
+            "drapeaux": ["+bete_chien_adopte"],
+            "entites": { "veteran": { "relation": 1 }, "crieur": { "relation": 1 }, "chien_errant": { "relation": 2 } }
+          }
+        },
+        {
+          "texte": "Le laisser au vétéran, qui en a plus besoin que toi",
+          "resultat": "Tu poses la main sur la tête du chien et le pousses doucement vers le banc. Il hésite, puis va se coucher contre la jambe du sergent. Le vieil homme détourne le visage pour qu'on ne le voie pas s'essuyer les yeux. « Merci, soldat. »",
+          "effets": { "honneur": 3 },
+          "consequences": {
+            "drapeaux": ["-bete_chien_suit", "+bete_chien_au_veteran"],
+            "entites": { "veteran": { "relation": 3 } }
+          }
+        }
+      ]
+    },
+
+    "bete_le_chien_et_le_balafre": {
+      "titre": "Ton chien flaire un O'Driscoll",
+      "texte": "Devant le Smithfield's, l'homme au foulard vert nourrit son mustang gris quand ton chien se fige, le poil hérissé de la nuque à la queue. Un grondement sourd lui monte de la gorge : il a reconnu la botte qui l'a chassé autrefois. Ciaran Doyle se retourne lentement, la main sur la crosse de son Schofield.",
+      "lieu": "rue_principale",
+      "acteurs": ["chien_errant", "odriscoll", "cheval_attache"],
+      "drapeaux": ["bete_chien_adopte"],
+      "heures": [10, 11],
+      "chance": 0.4,
+      "unique": true,
+      "choix": [
+        {
+          "texte": "Rappeler ton chien d'un sifflement",
+          "resultat": "Tu siffles. Le chien hésite, les crocs à nu, puis revient se coller contre ta jambe sans quitter le Balafré des yeux. Doyle crache dans la boue : « Tiens ton clébard, l'étranger. La prochaine fois, je le tue. »",
+          "consequences": {
+            "drapeaux": ["+bete_chien_obeit"],
+            "entites": { "odriscoll": { "relation": -1 }, "chien_errant": { "relation": 1 } }
+          }
+        },
+        {
+          "texte": "Te placer entre le chien et le revolver",
+          "resultat": "Tu fais un pas, un seul, entre le Schofield et ton chien. Le Balafré te dévisage longtemps, puis sourit de sa bouche fendue et retourne à son cheval. Derrière la fenêtre du bureau, l'adjoint Eli a tout vu, la main tremblante sur son Colt.",
+          "effets": { "honneur": 2 },
+          "consequences": {
+            "drapeaux": ["+bete_chien_protege"],
+            "entites": { "odriscoll": { "relation": -2 }, "adjoint": { "relation": 1 }, "chien_errant": { "relation": 2 } }
+          }
+        },
+        {
+          "texte": "Laisser le chien régler ses comptes",
+          "resultat": "Le chien bondit et plante ses crocs dans la botte de l'O'Driscoll. Doyle hurle, le secoue, et lui décoche un coup de pied qui l'envoie rouler sous l'abreuvoir. Il revient vers toi en boitant bas, fier, un lambeau de cuir dans la gueule.",
+          "consequences": {
+            "drapeaux": ["+bete_chien_blesse"],
+            "entites": { "odriscoll": { "relation": -3 }, "chien_errant": { "etat": "blesse" } }
+          }
+        }
+      ]
+    },
+
+    "bete_soigner_le_chien": {
+      "titre": "Ton chien a besoin de soins",
+      "texte": "Depuis le coup de botte du Balafré, ton chien boite plus que jamais. Il ne se plaint pas, mais il se couche dès que tu t'arrêtes et lèche à sa hanche une plaie qui ne se referme pas.",
+      "lieu": "rue_principale",
+      "acteurs": ["chien_errant"],
+      "drapeaux": ["bete_chien_blesse"],
+      "heures": [8, 18],
+      "chance": 0.5,
+      "unique": true,
+      "choix": [
+        {
+          "texte": "Le porter chez le docteur Barlow (2 $)",
+          "resultat": "Le docteur examine le chien avec plus de sérieux que la plupart de ses patients : « Au moins, lui, il ne ment pas sur ses symptômes. » Trois points de suture, un bandage, et un peu de whisky, pour le médecin.",
+          "effets": { "argent": -2 },
+          "consequences": {
+            "drapeaux": ["-bete_chien_blesse", "+bete_chien_gueri"],
+            "entites": { "chien_errant": { "etat": "normal", "relation": 2 }, "medecin": { "relation": 1 } }
+          }
+        },
+        {
+          "texte": "Demander à Hiram de le soigner",
+          "resultat": "Hiram nettoie la plaie à l'eau salée, applique un onguent pour chevaux qui sent la térébenthine et grogne : « Un chien, c'est un petit cheval qui aboie. » Ton chien lui lèche la main ; Hiram fait semblant de ne pas aimer ça.",
+          "consequences": {
+            "drapeaux": ["-bete_chien_blesse", "+bete_chien_gueri"],
+            "entites": { "chien_errant": { "etat": "normal", "relation": 2 }, "palefrenier": { "relation": 1 } }
+          }
+        },
+        {
+          "texte": "Le soigner toi-même, au whisky et au foulard",
+          "resultat": "Tu nettoies la plaie au whisky, il gémit, tu bandes avec ton foulard. Ce n'est pas joli, mais ça tiendra. Il dort contre toi toute la nuit, la tête sur ta cuisse.",
+          "consequences": {
+            "drapeaux": ["-bete_chien_blesse", "+bete_chien_gueri"],
+            "entites": { "chien_errant": { "etat": "normal", "relation": 3 } }
+          }
+        }
+      ]
+    },
+
+    "bete_le_chien_monte_la_garde": {
+      "titre": "Ton chien monte la garde",
+      "texte": "En pleine nuit, ton chien aboie comme jamais. Près de la barre d'attache, une silhouette lâche la longe de ton cheval et détale vers le ruisseau, ton chien accroché à sa jambe de pantalon. Il revient quelques minutes plus tard, un lambeau de tissu dans la gueule, la queue haute.",
+      "lieu": "rue_principale",
+      "acteurs": ["chien_errant", "ton_cheval"],
+      "drapeaux": ["bete_chien_adopte", "!bete_chien_blesse"],
+      "heures": [0, 5],
+      "chance": 0.15,
+      "unique": true,
+      "consequences": { "drapeaux": ["+bete_chien_heros"] },
+      "choix": [
+        {
+          "texte": "Suivre la piste du voleur avec ton chien",
+          "resultat": "Le chien te mène, truffe au sol, jusqu'à un feu mourant sous les saules. Le voleur y cuve son whisky, un lasso volé à l'épaule. Tu le traînes chez Malloy, qui le chasse de la ville à l'aube et te serre la main : « Joli chien. Il me faudrait un adjoint comme lui. »",
+          "effets": { "honneur": 2 },
+          "consequences": { "entites": { "sherif_malloy": { "relation": 2 }, "chien_errant": { "relation": 2 } } }
+        },
+        {
+          "texte": "Le récompenser avec la meilleure viande de Gus",
+          "resultat": "Au matin, tu achètes à Gus un steak digne d'un banquier. Ton chien le dévore sous le banc, et le crieur, qui a tout appris, hurle déjà sa une : « LE CHIEN QUI VEILLE SUR VALENTINE ! »",
+          "effets": { "argent": -1 },
+          "consequences": { "entites": { "chien_errant": { "relation": 3 }, "crieur": { "relation": 1 }, "boucher": { "relation": 1 } } }
+        },
+        {
+          "texte": "Le caresser longuement et te rendormir",
+          "resultat": "Tu t'agenouilles et lui grattes les oreilles. Il se couche en travers de la porte, une oreille dressée. Plus personne ne s'approchera de ton cheval tant qu'il respirera.",
+          "consequences": { "entites": { "chien_errant": { "relation": 2 }, "ton_cheval": { "relation": 1 } } }
+        }
+      ]
+    },
+
+    "bete_ton_chien_fidele": {
+      "titre": "Ton chien, ton ombre",
+      "texte": "Où que tu ailles, ton chien trotte dans ton ombre, la truffe au vent et l'oreille déchirée dressée. Il t'attend devant les portes, gronde contre les inconnus trop curieux et chaparde de temps à autre une saucisse qu'il dépose à tes pieds, l'air innocent.",
+      "lieu": "rue_principale",
+      "acteurs": ["chien_errant"],
+      "drapeaux": ["bete_chien_adopte"],
+      "si": ["jour"],
+      "chance": 0.15
+    },
+
+    "bete_le_sergent_et_son_caporal": {
+      "titre": "Le sergent et son caporal",
+      "texte": "Sur le banc, le sergent Holloway a noué au cou du chien un bout de ruban de sa vieille médaille. Ils montent la garde ensemble devant le magasin général, l'un sur une jambe, l'autre sur trois et demie, et toisent les passants avec la même dignité.",
+      "lieu": "rue_principale",
+      "acteurs": ["chien_errant", "veteran"],
+      "drapeaux": ["bete_chien_au_veteran"],
+      "heures": [7, 11],
+      "chance": 0.2
+    },
+
+    "bete_lucifer_charge_la_barriere": {
+      "titre": "Lucifer charge la barrière",
+      "texte": "Lucifer baisse la tête, gratte la terre et charge. Tout l'enclos tremble sous le choc : la barrière tient, mais une planche se fend sur toute sa longueur avec un craquement de mauvais augure. Tommy, blême, te regarde : « Faut pas l'énerver, m'sieur. Il oublie jamais. »",
+      "lieu": "enclos",
+      "acteurs": ["taureau", "vacher"],
+      "apres": { "verbes": ["narguer_taureau", "lancer", "tirer", "frapper"], "cibles": ["taureau"] },
+      "drapeaux": ["!bete_lucifer_en_ville"],
+      "chance": 0.7,
+      "consequences": {
+        "drapeaux": ["+bete_barriere_fendue", "-bete_barriere_reparee"],
+        "entites": { "taureau": { "relation": -1 } }
+      }
+    },
+
+    "bete_la_barriere_fendue": {
+      "titre": "La barrière de Lucifer ne tiendra pas",
+      "texte": "Tommy te fait signe depuis l'enclos et te montre une planche de la barrière, fendue de haut en bas, là où Lucifer cogne de la tête toutes les nuits. « M. Whitmore veut pas payer de bois neuf. Il dit que ça tiendra. » Derrière lui, le taureau fixe la planche avec beaucoup d'intérêt.",
+      "lieu": "enclos",
+      "acteurs": ["vacher", "taureau"],
+      "heures": [7, 12],
+      "drapeaux": ["!bete_barriere_fendue", "!bete_barriere_reparee"],
+      "chance": 0.12,
+      "unique": true,
+      "consequences": { "drapeaux": ["+bete_barriere_fendue"] },
+      "choix": [
+        {
+          "texte": "Aider Tommy à clouer des planches neuves (1 $ de clous)",
+          "resultat": "Tu achètes des clous chez Crump, qui les pèse un par un, et tu passes l'après-midi à clouer avec Tommy sous l'œil noir de Lucifer. La barrière est solide comme un mur de prison. Tommy te serre la main à te la broyer : « Vous êtes un vrai, vous. »",
+          "effets": { "argent": -1, "honneur": 1 },
+          "consequences": {
+            "drapeaux": ["-bete_barriere_fendue", "+bete_barriere_reparee"],
+            "entites": { "vacher": { "relation": 2 } }
+          }
+        },
+        {
+          "texte": "Aller prévenir Whitmore",
+          "resultat": "Whitmore t'écoute en tirant sur son cigare, puis éclate de rire : « Lucifer ne sortira jamais, il est bien trop nourri pour ça. » Il te tourne le dos. Tommy hausse les épaules : tu as essayé.",
+          "consequences": { "entites": { "eleveur": { "relation": -1 }, "vacher": { "relation": 1 } } }
+        },
+        {
+          "texte": "Dire à Tommy que ce n'est pas ton affaire",
+          "resultat": "Tommy hoche la tête, déçu, et cale la planche avec une pierre. Lucifer souffle très fort, comme s'il riait.",
+          "consequences": { "entites": { "vacher": { "relation": -1 } } }
+        }
+      ]
+    },
+
+    "bete_lucifer_s_echappe": {
+      "titre": "Lucifer est en liberté !",
+      "texte": "Un fracas de bois éclaté secoue l'enclos : la planche fendue a cédé, et Lucifer est sorti. Le taureau noir trotte vers la rue principale, tête haute, la corne cassée pointée vers la ville, pendant que Tommy court derrière en agitant son chapeau et en hurlant à tout le monde de rentrer.",
+      "lieu": "enclos",
+      "acteurs": ["taureau"],
+      "drapeaux": ["bete_barriere_fendue", "!bete_barriere_reparee"],
+      "heures": [7, 19],
+      "chance": 0.12,
+      "unique": true,
+      "consequences": {
+        "drapeaux": ["+bete_lucifer_en_ville"],
+        "entites": { "taureau": { "lieu": "rue_principale" } }
+      }
+    },
+
+    "bete_lucifer_dans_la_rue": {
+      "titre": "Un taureau dans la rue principale",
+      "texte": "Lucifer est planté au milieu de la rue principale, naseaux fumants, et la ville entière a grimpé sur quelque chose : l'épicier sur ses tonneaux, le crieur sur le toit de la diligence, des dames sur le balcon de l'hôtel. Juste devant le taureau, Moineau est coincé sur le rebord de l'abreuvoir, blanc comme un linge.",
+      "lieu": "rue_principale",
+      "acteurs": ["taureau", "gamin"],
+      "drapeaux": ["bete_lucifer_en_ville"],
+      "si": ["present:rue_principale"],
+      "chance": 0.9,
+      "unique": true,
+      "choix": [
+        {
+          "texte": "L'attraper au lasso depuis ta selle",
+          "si": ["a_cheval"],
+          "resultat": "Tu lances ton cheval et ta corde se referme sur les cornes. Lucifer tire, ton cheval s'arc-boute, la rue retient son souffle... puis le taureau cède. Tu le ramènes à l'enclos au bout de ta corde, sous les vivats de Valentine, avec Moineau perché derrière ta selle.",
+          "effets": { "honneur": 3 },
+          "consequences": {
+            "drapeaux": ["-bete_lucifer_en_ville", "+bete_lucifer_capture"],
+            "entites": { "taureau": { "lieu": null, "relation": -2 }, "eleveur": { "relation": 2 }, "gamin": { "relation": 2 } }
+          }
+        },
+        {
+          "texte": "L'attirer avec une pomme jusqu'à l'enclos",
+          "resultat": "Tu avances lentement, ta pomme la plus rouge tendue à bout de bras. Lucifer souffle, hésite, renifle... et te suit. Pas à pas, sur toute la longueur de la rue, tu ramènes le diable dans son enclos comme un chien de salon. Personne à Valentine n'oubliera ça.",
+          "effets": { "honneur": 3 },
+          "consequences": {
+            "drapeaux": ["-bete_lucifer_en_ville", "+bete_lucifer_capture"],
+            "entites": { "taureau": { "lieu": null, "relation": 2 }, "eleveur": { "relation": 2 }, "gamin": { "relation": 2 } }
+          }
+        },
+        {
+          "texte": "L'abattre avant qu'il ne charge le gamin",
+          "resultat": "Ta balle frappe Lucifer entre les yeux. Le taureau fait encore deux pas, puis s'effondre dans la boue à un mètre de l'abreuvoir. Moineau saute dans tes bras en tremblant. Dans le silence, on entend Whitmore arriver en courant et hurler.",
+          "effets": { "honneur": 1 },
+          "consequences": {
+            "drapeaux": ["-bete_lucifer_en_ville", "+bete_lucifer_abattu"],
+            "entites": { "taureau": { "etat": "mort" }, "eleveur": { "relation": -3 }, "gamin": { "relation": 2 } }
+          }
+        },
+        {
+          "texte": "Arracher Moineau à l'abreuvoir et laisser Gunnar s'en charger",
+          "resultat": "Tu attrapes le gamin par le col et roules avec lui sous le trottoir. Lucifer cabosse l'abreuvoir, puis fonce dans les tonneaux de farine de Crump. C'est Gunnar, sorti de sa forge, qui l'empoigne par les cornes et le tient jusqu'à ce que Tommy lui passe une corde.",
+          "effets": { "honneur": 2 },
+          "consequences": {
+            "drapeaux": ["-bete_lucifer_en_ville", "+bete_lucifer_saccage"],
+            "entites": { "taureau": { "lieu": null }, "gamin": { "relation": 3 }, "marechal_ferrant": { "relation": 1 } }
+          }
+        }
+      ]
+    },
+
+    "bete_gunnar_contre_lucifer": {
+      "titre": "Gunnar contre Lucifer",
+      "texte": "La rue principale a vécu une heure de terreur : Lucifer a éventré les tonneaux de farine de Crump, piétiné la caisse du crieur et poursuivi l'adjoint jusque sur le toit du bureau du shérif. C'est Gunnar le Suédois qui l'a arrêté, à mains nues, en l'empoignant par les cornes, et Tommy l'a ramené à l'enclos, penaud, au bout d'une corde.",
+      "lieu": "rue_principale",
+      "acteurs": ["marechal_ferrant", "vacher"],
+      "drapeaux": ["bete_lucifer_en_ville"],
+      "chance": 0.35,
+      "unique": true,
+      "consequences": {
+        "drapeaux": ["-bete_lucifer_en_ville", "+bete_lucifer_saccage"],
+        "entites": { "taureau": { "lieu": null } }
+      }
+    },
+
+    "bete_crump_compte_ses_degats": {
+      "titre": "Crump compte ses tonneaux",
+      "texte": "Devant le magasin général, Silas Crump fait l'inventaire du désastre, crayon en main : trois tonneaux de farine éventrés, un sac de clous éparpillé, une vitrine fendue. Il présente la note à Whitmore, qui la déchire ; il la recopie, deux fois. Moineau, lui, vend aux passants des « éclats authentiques de la barrière de Lucifer » à un cent pièce.",
+      "lieu": "magasin_general",
+      "acteurs": ["epicier", "gamin"],
+      "drapeaux": ["bete_lucifer_saccage"],
+      "heures": [8, 12],
+      "chance": 0.4,
+      "unique": true
+    },
+
+    "bete_whitmore_paie_sa_tournee": {
+      "titre": "Whitmore paie sa tournée",
+      "texte": "Au saloon de Keane, Silas Whitmore frappe le comptoir de sa grosse main baguée : « Une tournée ! Pour l'homme qui a ramené Lucifer ! » Il te pousse un verre, puis une liasse de billets, en te soufflant la fumée de son cigare au visage. « Dix dollars. Un taureau comme ça vaut plus que la moitié des hommes de cette ville. »",
+      "lieu": "saloon_keane",
+      "acteurs": ["eleveur"],
+      "drapeaux": ["bete_lucifer_capture"],
+      "heures": [19, 23],
+      "chance": 0.5,
+      "unique": true,
+      "choix": [
+        {
+          "texte": "Empocher les dix dollars",
+          "resultat": "Tu glisses la liasse dans ta poche. Whitmore te tape dans le dos comme on flatte un bon cheval et retourne à sa partie de poker, où Lucius Crane la lui reprendra sans doute avant minuit.",
+          "effets": { "argent": 10 },
+          "consequences": { "entites": { "eleveur": { "relation": 1 } } }
+        },
+        {
+          "texte": "Exiger plutôt une barrière neuve et une prime pour Tommy",
+          "resultat": "Le saloon se tait. Whitmore rougit, mâchonne son cigare, puis grogne : « Soit. » Le lendemain, des planches neuves arrivent à l'enclos, et Tommy exhibe un dollar d'argent comme une médaille.",
+          "effets": { "honneur": 2 },
+          "consequences": {
+            "drapeaux": ["+bete_barriere_reparee", "-bete_barriere_fendue"],
+            "entites": { "eleveur": { "relation": -1 }, "vacher": { "relation": 3 } }
+          }
+        },
+        {
+          "texte": "Proposer de chevaucher Lucifer au rodéo de dimanche",
+          "resultat": "Whitmore te dévisage, puis éclate d'un rire énorme : « Toi, sur Lucifer ? Dimanche, après la messe ! Vingt dollars si tu tiens huit secondes, et je paie le croque-mort si tu ne les tiens pas ! » Tout le saloon applaudit.",
+          "consequences": {
+            "drapeaux": ["+bete_rodeo_lucifer"],
+            "entites": { "eleveur": { "relation": 1 } }
+          }
+        }
+      ]
+    },
+
+    "bete_whitmore_pleure_son_taureau": {
+      "titre": "Whitmore pleure son taureau",
+      "texte": "Silas Whitmore te barre la route, rouge de fureur, le cigare tremblant entre ses dents. « Lucifer valait trois cents dollars ! Le meilleur reproducteur des Heartlands, abattu comme un chien ! » Derrière lui, Gus le boucher contemple la carcasse d'un air rêveur.",
+      "lieu": "rue_principale",
+      "acteurs": ["eleveur", "boucher"],
+      "drapeaux": ["bete_lucifer_abattu"],
+      "heures": [8, 18],
+      "chance": 0.5,
+      "unique": true,
+      "choix": [
+        {
+          "texte": "Lui verser un dédommagement (20 $)",
+          "resultat": "Tu comptes vingt dollars dans sa main moite. Whitmore grogne que c'est une aumône, mais il les empoche. Gus rachète la carcasse : ce soir, au Keane's, on mangera du Lucifer.",
+          "effets": { "argent": -20, "honneur": 1 },
+          "consequences": { "entites": { "eleveur": { "relation": 2 }, "boucher": { "relation": 1 } } }
+        },
+        {
+          "texte": "Lui rappeler que ton geste a sauvé un enfant",
+          "si": ["honneur_haut"],
+          "resultat": "« Un enfant, Whitmore. Un gamin de onze ans, devant tout Valentine. » Autour de vous, la rue gronde. Whitmore ravale sa colère, crache et s'en va. Plus tard, Malloy te glisse : « Bien joué. Il voulait porter plainte. »",
+          "effets": { "honneur": 1 },
+          "consequences": { "entites": { "sherif_malloy": { "relation": 1 } } }
+        },
+        {
+          "texte": "Lui conseiller de mieux entretenir ses barrières",
+          "resultat": "Whitmore devient violet et file au bureau du shérif réclamer ta tête. Malloy, qui a entendu parler de la barrière fendue, l'écoute en bâillant et te colle une amende de principe : deux dollars.",
+          "effets": { "argent": -2 },
+          "consequences": { "entites": { "eleveur": { "relation": -2 } } }
+        },
+        {
+          "texte": "Vendre toi-même la carcasse à Gus",
+          "resultat": "Tu tapes dans la main de Gus avant Whitmore : quinze dollars la carcasse. L'éleveur s'étouffe de rage, le boucher aiguise déjà ses couteaux, et Malloy inscrit ton nom dans son registre. Tu viens de te faire un ennemi pour la vie.",
+          "effets": { "argent": 15, "honneur": -2, "prime": 5 },
+          "consequences": { "entites": { "eleveur": { "relation": -4 }, "boucher": { "relation": 1 } } }
+        }
+      ]
+    },
+
+    "bete_rodeo_de_lucifer": {
+      "titre": "Huit secondes sur le dos du diable",
+      "texte": "Dimanche, après la messe, la moitié de Valentine s'est entassée autour de l'enclos. Lucifer souffle dans son couloir de planches, l'œil fou ; Whitmore brandit sa montre, le croque-mort prend discrètement tes mesures, et Tommy te tend une paire de gants en tremblant plus que toi.",
+      "lieu": "enclos",
+      "acteurs": ["taureau", "eleveur", "vacher", "croque_mort"],
+      "drapeaux": ["bete_rodeo_lucifer"],
+      "jours": ["dimanche"],
+      "heures": [13, 17],
+      "chance": 0.7,
+      "unique": true,
+      "choix": [
+        {
+          "texte": "Monter sur Lucifer et tenir huit secondes",
+          "resultat": "Une seconde : tu tiens. Trois : le ciel et la terre échangent leur place. Six : tu ne sens plus tes dents. Huit ! Whitmore crie, tu lâches, tu voles, tu atterris dans le crottin sous un tonnerre d'applaudissements. Vingt dollars et deux côtes fêlées : un bon dimanche.",
+          "effets": { "argent": 20, "sante": -8, "honneur": 1 },
+          "consequences": { "entites": { "eleveur": { "relation": 1 }, "vacher": { "relation": 2 } } }
+        },
+        {
+          "texte": "Parier 5 $ sur toi-même, puis monter",
+          "resultat": "Tu tiens huit secondes, puis une de trop : Lucifer te catapulte par-dessus la barrière. Tu touches le prix et ton pari, mais le docteur Barlow en récupère une bonne part pour te recoudre le cuir chevelu, en latin.",
+          "effets": { "argent": 15, "sante": -12 },
+          "consequences": { "entites": { "eleveur": { "relation": 1 }, "medecin": { "relation": 1 } } }
+        },
+        {
+          "texte": "Laisser ta place à Tommy",
+          "resultat": "« Moi ? » Tommy devient tout pâle, puis tout rouge, et grimpe sur Lucifer. Il tient quatre secondes, vole par-dessus la barrière, se relève couvert de boue et hurle de bonheur : on parlera de Tommy le Rapide jusqu'à Saint Denis !",
+          "consequences": { "entites": { "vacher": { "relation": 3 } } }
+        },
+        {
+          "texte": "Renoncer devant tout le monde",
+          "resultat": "Tu enjambes la barrière dans l'autre sens. Les huées pleuvent, Whitmore ricane, et Lucifer te suit des yeux avec une satisfaction évidente. Le croque-mort range son mètre ruban, déçu.",
+          "consequences": { "entites": { "eleveur": { "relation": -1 } } }
+        }
+      ]
+    },
+
+    "bete_marguerite_s_isole": {
+      "titre": "Marguerite se met à l'écart",
+      "texte": "Marguerite a quitté le troupeau pour le coin le plus calme de l'enclos. Elle ne rumine plus, se couche, se relève, meugle doucement vers personne. Tommy, accoudé à la barrière, se gratte la tête : « Elle va vêler. M. Whitmore dit pas avant la semaine prochaine, mais elle, elle a pas lu son calendrier. »",
+      "lieu": "enclos",
+      "acteurs": ["vache", "vacher"],
+      "heures": [7, 17],
+      "chance": 0.15,
+      "unique": true,
+      "consequences": { "drapeaux": ["+bete_marguerite_pleine"] }
+    },
+
+    "bete_marguerite_vele": {
+      "titre": "Marguerite vêle dans la nuit",
+      "texte": "Tommy surgit devant toi, une lanterne à la main, le visage défait : « Marguerite ! Le veau se présente mal, et M. Whitmore est au poker ! » À l'enclos, la vache est couchée dans la paille, haletante, et de longs meuglements de douleur montent dans la nuit.",
+      "lieu": "enclos",
+      "acteurs": ["vache", "vacher"],
+      "drapeaux": ["bete_marguerite_pleine"],
+      "heures": [21, 23],
+      "chance": 0.25,
+      "unique": true,
+      "choix": [
+        {
+          "texte": "Retrousser tes manches et aider le veau à sortir",
+          "resultat": "Tu t'agenouilles dans la paille, guides les pattes du veau et tires au rythme des contractions. Un dernier effort, et un petit veau pie glisse dans la paille, tout luisant. Marguerite se retourne et le lèche à grands coups de langue. Tommy pleure sans se cacher.",
+          "effets": { "honneur": 2 },
+          "consequences": {
+            "drapeaux": ["+bete_veau_ne"],
+            "entites": { "vacher": { "relation": 3 }, "vache": { "relation": 3 } }
+          }
+        },
+        {
+          "texte": "Courir chercher Hiram à l'écurie",
+          "resultat": "Hiram arrive en chemise, retrousse ses manches et retourne le veau d'un geste sûr, comme il l'a fait cent fois pour des juments. « Les vaches, c'est pas mon rayon », grogne-t-il, le veau dans les bras. Tu as eu raison de le réveiller.",
+          "effets": { "honneur": 1 },
+          "consequences": {
+            "drapeaux": ["+bete_veau_ne"],
+            "entites": { "palefrenier": { "relation": 1 }, "vacher": { "relation": 2 } }
+          }
+        },
+        {
+          "texte": "Aller tirer le docteur Barlow du saloon (2 $)",
+          "resultat": "Le docteur arrive en titubant, déclame « Natura non facit saltus » et délivre la vache avec une précision stupéfiante, entre deux gorgées. « La guerre, mon ami. On apprend à tout faire. » Il réclame deux dollars pour le dérangement.",
+          "effets": { "argent": -2 },
+          "consequences": {
+            "drapeaux": ["+bete_veau_ne"],
+            "entites": { "medecin": { "relation": 1 }, "vacher": { "relation": 2 } }
+          }
+        },
+        {
+          "texte": "Dire à Tommy de se débrouiller",
+          "resultat": "Tommy te regarde partir, puis retourne seul dans la paille. Au matin, il a les yeux rouges et les bras couverts de sang séché : le veau est né, chétif, et respire à peine. « J'ai fait ce que j'ai pu », dit-il, sans te regarder.",
+          "consequences": { "entites": { "vacher": { "relation": -2 } } }
+        }
+      ]
+    },
+
+    "bete_un_nom_pour_le_veau": {
+      "titre": "Un nom pour le veau",
+      "texte": "Le petit veau pie de Marguerite tète en remuant la queue, déjà solide sur ses pattes. Tommy s'approche, chapeau à la main : il voudrait lui donner ton nom. Mais Whitmore, accoudé à la barrière, a déjà fait ses comptes : « Un veau mâle ? Gus en donnera huit dollars à l'automne. »",
+      "lieu": "enclos",
+      "acteurs": ["vache", "vacher", "eleveur"],
+      "drapeaux": ["bete_veau_ne"],
+      "heures": [7, 12],
+      "chance": 0.4,
+      "unique": true,
+      "choix": [
+        {
+          "texte": "Racheter le veau à Whitmore (8 $)",
+          "resultat": "Tu comptes huit dollars dans la main de Whitmore, qui ricane : « Un sentimental. » Tu confies le veau à Tommy, qui jure de l'élever comme un frère. Marguerite te regarde longuement et, pour une fois, cesse de ruminer.",
+          "effets": { "argent": -8, "honneur": 2 },
+          "consequences": {
+            "drapeaux": ["+bete_veau_sauve"],
+            "entites": { "vacher": { "relation": 3 }, "eleveur": { "relation": 1 }, "vache": { "relation": 2 } }
+          }
+        },
+        {
+          "texte": "Accepter qu'il porte ton nom",
+          "resultat": "Tommy grave ton nom au couteau sur une planchette qu'il cloue au-dessus de la mangeoire. Le veau ne sait pas encore qu'il est célèbre, mais Tommy le raconte déjà à tout le Smithfield's.",
+          "consequences": { "entites": { "vacher": { "relation": 2 } } }
+        },
+        {
+          "texte": "Proposer de l'appeler Lucifer Junior",
+          "si": ["vivant:taureau"],
+          "resultat": "Tommy éclate de rire, Whitmore aussi. Derrière sa barrière, le vrai Lucifer souffle si fort que le petit veau file se cacher sous sa mère. Le nom reste.",
+          "consequences": { "entites": { "vacher": { "relation": 1 }, "eleveur": { "relation": 1 } } }
+        },
+        {
+          "texte": "Laisser Whitmore décider",
+          "resultat": "Whitmore range son carnet en sifflotant. Tommy baisse la tête et caresse le veau un long moment, sans un mot. Tu n'as rien fait de mal. Tu n'as rien fait du tout.",
+          "consequences": { "entites": { "vacher": { "relation": -1 } } }
+        }
+      ]
+    },
+
+    "bete_le_cochon_fait_le_mur": {
+      "titre": "Le cochon fait le mur",
+      "texte": "Un cri strident traverse Valentine : le cochon de l'enclos s'est glissé sous la barrière et galope dans la rue principale, oreilles au vent. Il renverse un seau, passe entre les jambes d'une dame, avale une pomme sur l'étal de Crump et fonce droit vers la banque, poursuivi par la moitié de la ville.",
+      "lieu": "rue_principale",
+      "acteurs": ["cochon", "gamin"],
+      "heures": [8, 12],
+      "chance": 0.06,
+      "unique": true,
+      "consequences": {
+        "drapeaux": ["+bete_cochon_en_ville"],
+        "entites": { "cochon": { "lieu": "rue_principale" } }
+      },
+      "choix": [
+        {
+          "texte": "Le plaquer dans la boue",
+          "resultat": "Tu plonges. Le cochon glisse entre tes bras comme une savonnette, tu replonges et tu le coinces enfin contre l'abreuvoir. Couverts de boue tous les deux, vous rentrez à l'enclos sous les applaudissements ; le cochon a l'air ravi de sa journée.",
+          "effets": { "honneur": 1, "sante": -1 },
+          "consequences": {
+            "drapeaux": ["-bete_cochon_en_ville"],
+            "entites": { "cochon": { "lieu": null }, "eleveur": { "relation": 1 } }
+          }
+        },
+        {
+          "texte": "L'attraper au lasso",
+          "si": ["a_cheval"],
+          "resultat": "Ta corde siffle et se referme sur le cochon en plein galop. Il s'assied net, outré, et refuse de bouger : tu dois le traîner jusqu'à l'enclos pendant qu'il hurle comme si on l'égorgeait. Whitmore te jette un dollar sans lever les yeux de ses comptes.",
+          "effets": { "argent": 1 },
+          "consequences": {
+            "drapeaux": ["-bete_cochon_en_ville"],
+            "entites": { "cochon": { "lieu": null }, "eleveur": { "relation": 1 } }
+          }
+        },
+        {
+          "texte": "Parier un dollar avec Moineau sur la destination du cochon",
+          "resultat": "« La banque ! » dis-tu. « La boucherie ! » répond Moineau. Le cochon, sagement, évite la boucherie et s'engouffre dans la banque. Moineau te paie en riant : « Il est plus malin que nous deux. »",
+          "effets": { "argent": 1 },
+          "consequences": { "entites": { "gamin": { "relation": 1 } } }
+        },
+        {
+          "texte": "Le laisser aller où bon lui semble",
+          "resultat": "Tu t'écartes poliment. Le cochon file vers la banque comme un client pressé. Après tout, ce n'est pas ton cochon."
+        }
+      ]
+    },
+
+    "bete_un_cochon_a_la_banque": {
+      "titre": "Un client à quatre pattes",
+      "texte": "Hurlements à la banque : le cochon de l'enclos a poussé la porte vitrée et trottine sur le marbre en damier, laissant des traces de boue jusqu'aux guichets. Horace P. Whitlock est perché sur son bureau, canne brandie ; derrière sa grille, Wendell Pruitt rit pour la première fois depuis des semaines.",
+      "lieu": "banque",
+      "acteurs": ["cochon", "banquier", "caissier"],
+      "drapeaux": ["bete_cochon_en_ville"],
+      "heures": [8, 12],
+      "chance": 0.5,
+      "unique": true,
+      "consequences": {
+        "drapeaux": ["-bete_cochon_en_ville"],
+        "entites": { "cochon": { "lieu": null } }
+      },
+      "choix": [
+        {
+          "texte": "Attraper le cochon et le ramener à l'enclos",
+          "resultat": "Tu cueilles le cochon sous le bras. Horace descend de son bureau en époussetant son gilet et te tend un dollar, avec l'air de quelqu'un qui accorde un prêt : « Pour la peine. Ne le racontez à personne. » Tout Valentine le saura avant midi.",
+          "effets": { "argent": 1 },
+          "consequences": { "entites": { "banquier": { "relation": 1 }, "eleveur": { "relation": 1 } } }
+        },
+        {
+          "texte": "Laisser le cochon faire encore un tour de guichet",
+          "resultat": "Tu t'adosses à la porte, bras croisés. Le cochon fait trois fois le tour de la banque, renifle le coffre et mâchonne un acte de saisie tombé par terre. Wendell en pleure de rire ; Horace, lui, n'oubliera pas ton sourire. Tommy finit par venir chercher la bête.",
+          "consequences": { "entites": { "caissier": { "relation": 2 }, "banquier": { "relation": -2 } } }
+        },
+        {
+          "texte": "Demander au cochon s'il vient ouvrir un compte",
+          "resultat": "« Monsieur vient pour un prêt ? Méfiez-vous, les intérêts sont à trente pour cent. » Wendell s'étouffe, les clients éclatent de rire, Horace devient écarlate. Le cochon, vexé, ressort de lui-même, et Tommy le ramène à l'enclos.",
+          "consequences": { "entites": { "caissier": { "relation": 1 }, "banquier": { "relation": -1 }, "fermier": { "relation": 1 } } }
+        }
+      ]
+    }
+  }
+}
