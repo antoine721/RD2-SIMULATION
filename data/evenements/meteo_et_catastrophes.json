@@ -1,0 +1,1018 @@
+{
+  "theme": "Le ciel et les malheurs",
+  "evenements": {
+
+    "ciel_incendie_la_pipe_de_pepite": {
+      "titre": "Une pipe dans le foin",
+      "texte": "Une lueur orange danse entre les planches de l'écurie. Amos « Pépite » Pickett s'est endormi dans le foin avec sa pipe allumée, et la paille sèche s'embrase d'un coup. Les chevaux hurlent dans leurs box ; la fumée sort déjà par les fentes du toit.",
+      "lieu": "ecurie",
+      "acteurs": ["ivrogne", "palefrenier"],
+      "heures": [0, 5],
+      "meteo": ["beau", "chaleur"],
+      "drapeaux": ["!ciel_ecurie_en_feu", "!ciel_apres_incendie"],
+      "chance": 0.04,
+      "unique": true,
+      "consequences": { "drapeaux": ["+ciel_ecurie_en_feu", "+ciel_feu_suspect"] },
+      "choix": [
+        { "texte": "Courir sonner le tocsin à l'église", "resultat": "Tu traverses la rue en courant et te pends à la corde. DONG ! DONG ! DONG ! Les fenêtres s'allument une à une ; en cinq minutes, Valentine est dehors avec des seaux.", "effets": { "honneur": 2 }, "consequences": { "drapeaux": ["+ciel_chaine_tenue"] } },
+        { "texte": "Tirer Pépite hors des flammes", "resultat": "Tu empoignes le vieil homme par le col et le traînes dans la boue. Il tousse, crache, et serre sa bourse de cuir contre lui : « Ma pépite ! T'as sauvé ma pépite ! » Ta manche fume encore.", "effets": { "honneur": 2, "sante": -5 }, "consequences": { "entites": { "ivrogne": { "relation": 3 } } } },
+        { "texte": "Crier au feu et te tenir à l'écart", "resultat": "Ta voix porte jusqu'au bureau du shérif. Des portes claquent, des pas courent dans la boue. Toi, tu regardes les flammes lécher le toit, les bras croisés." },
+        { "texte": "Profiter de l'agitation pour filer", "resultat": "Pendant que tout le monde court vers l'écurie, tu t'éclipses dans l'ombre. Personne ne se souviendra de toi cette nuit… sauf peut-être Pépite.", "effets": { "honneur": -1 } }
+      ]
+    },
+
+    "ciel_foudre_sur_l_ecurie": {
+      "titre": "La foudre tombe sur l'écurie",
+      "texte": "Un éclair blanc fend le ciel et frappe le fer à cheval cloué à l'envers au-dessus de la porte de l'écurie. Le tonnerre éclate au moment où les flammes jaillissent du grenier à foin, que la pluie ne parvient pas à éteindre. Hiram Pruitt sort en chemise, sa carabine à la main, et hurle le nom de ses chevaux.",
+      "lieu": "ecurie",
+      "acteurs": ["palefrenier"],
+      "meteo": ["orage"],
+      "drapeaux": ["!ciel_ecurie_en_feu", "!ciel_apres_incendie"],
+      "chance": 0.05,
+      "unique": true,
+      "consequences": { "drapeaux": ["+ciel_ecurie_en_feu"] },
+      "choix": [
+        { "texte": "Ouvrir les box et chasser les chevaux sous l'orage", "resultat": "Tu tires les loquets un à un, aveuglé par la fumée. Les chevaux jaillissent dans la rue noyée de pluie, ruant et hennissant. Hiram te serre l'épaule si fort qu'il te fait mal.", "effets": { "honneur": 2, "sante": -5 }, "consequences": { "drapeaux": ["+ciel_heros_incendie"], "entites": { "palefrenier": { "relation": 2 } } } },
+        { "texte": "Courir sonner le tocsin", "resultat": "Tu cours sous les éclairs jusqu'au clocher. Le tocsin se mêle au tonnerre, et toute la ville comprend : ce n'est pas l'orage qui sonne, c'est le feu.", "effets": { "honneur": 1 }, "consequences": { "drapeaux": ["+ciel_chaine_tenue"] } },
+        { "texte": "Rester sous l'auvent du magasin à regarder", "resultat": "Le feu et l'orage se battent au-dessus de l'écurie. C'est beau, d'une beauté terrible. Quelqu'un te bouscule en passant avec un seau, sans un regard." }
+      ]
+    },
+
+    "ciel_incendie_c_est_toi": {
+      "titre": "Le feu que tu as allumé",
+      "texte": "Les flammes que tu as nourries grimpent le long des planches grises et dévorent l'enseigne « ÉCURIE — PENSION ». Dans le grenier, une petite voix crie : Moineau dormait dans le foin. Et sous la galerie d'en face, une silhouette t'a vu craquer l'allumette.",
+      "lieu": "ecurie",
+      "acteurs": ["gamin"],
+      "si": ["nuit"],
+      "drapeaux": ["!ciel_ecurie_en_feu", "!ciel_apres_incendie"],
+      "apres": { "verbes": ["incendier_ecurie"], "cibles": ["ecurie"] },
+      "chance": 1,
+      "unique": true,
+      "consequences": { "drapeaux": ["+ciel_ecurie_en_feu", "+ciel_incendiaire_toi"] },
+      "choix": [
+        { "texte": "Te jeter dans les flammes pour sortir le gamin", "resultat": "Tu grimpes au grenier dans une fumée à couper au couteau et redescends avec Moineau sous le bras, toussant à fendre l'âme. Tu as allumé ce feu, mais tu as sauvé cet enfant. Allez savoir ce que retiendra le Bon Dieu.", "effets": { "honneur": 3, "sante": -15 }, "consequences": { "drapeaux": ["+ciel_heros_incendie", "+ciel_moineau_dehors"], "entites": { "gamin": { "relation": 2 } } } },
+        { "texte": "Disparaître dans la nuit avant qu'on te reconnaisse", "resultat": "Tu tournes le dos aux cris et t'enfonces dans l'ombre de la ruelle. Derrière toi, Moineau saute du grenier dans la boue, le bras brûlé, et Hiram Pruitt hurle au secours.", "effets": { "honneur": -2 }, "consequences": { "drapeaux": ["+ciel_moineau_dehors"], "entites": { "gamin": { "etat": "blesse" } } } },
+        { "texte": "Crier au feu comme un honnête homme", "resultat": "« AU FEU ! » Tu cries plus fort que tout le monde, un seau à la main, le visage noirci. Personne ne songe à te soupçonner. Personne, sauf la silhouette sous la galerie.", "effets": { "honneur": -1 } }
+      ]
+    },
+
+    "ciel_incendie_chaine_de_seaux": {
+      "titre": "La chaîne de seaux",
+      "texte": "Toute la ville est dans la rue, en chemise de nuit ou en tablier. Une chaîne humaine s'étire du puits de la rue de l'Église jusqu'à l'écurie en flammes, et les seaux passent de main en main : Gunnar en tête, le révérend au milieu, Cornelia Whitlock en robe de chambre qui donne les ordres. Il manque des bras, et le feu gagne.",
+      "lieu": "rue_principale",
+      "drapeaux": ["ciel_ecurie_en_feu"],
+      "chance": 0.95,
+      "unique": true,
+      "consequences": { "drapeaux": ["+ciel_seaux_passes"] },
+      "choix": [
+        { "texte": "Prendre ta place dans la chaîne", "resultat": "Tu attrapes un seau, puis un autre, puis cent autres. Tes bras brûlent, tes mains saignent, mais la chaîne tient. À côté de toi, Gunnar grogne : « Bien. »", "effets": { "honneur": 2, "sante": -3 }, "consequences": { "drapeaux": ["+ciel_chaine_tenue"], "entites": { "marechal_ferrant": { "relation": 1 } } } },
+        { "texte": "Faire puiser à l'abreuvoir, deux fois plus près", "resultat": "Tu cries de puiser à l'abreuvoir de la rue principale. Cornelia te foudroie du regard, puis hoche la tête : « Il a raison. Faites ce qu'il dit ! » Les seaux vont deux fois plus vite.", "effets": { "honneur": 2 }, "consequences": { "drapeaux": ["+ciel_chaine_tenue"], "entites": { "hoteliere": { "relation": 2 } } } },
+        { "texte": "Piller le magasin général pendant qu'il est vide", "resultat": "Silas Crump fait la chaîne avec les autres, pour une fois. Tu te glisses dans sa boutique et vides le tiroir-caisse à tâtons, dans la lueur rouge de l'incendie.", "effets": { "argent": 25, "honneur": -3 }, "consequences": { "drapeaux": ["+ciel_pillard"] } },
+        { "texte": "Regarder brûler, adossé à un poteau", "resultat": "Tu restes adossé à un poteau, les mains dans les poches. Les seaux passent devant toi. Le révérend te lance un regard qui vaut tous les sermons.", "effets": { "honneur": -1 }, "consequences": { "entites": { "pasteur": { "relation": -1 } } } }
+      ]
+    },
+
+    "ciel_incendie_bourbon_dans_les_flammes": {
+      "titre": "Bourbon retourne dans les flammes",
+      "texte": "Les chevaux jaillissent de l'écurie, crinières fumantes, et s'égaillent dans la rue. Tous sauf un : Bourbon, le Morgan, affolé, a fait demi-tour et s'est rué dans son box en feu, comme les chevaux qui ne connaissent pas d'autre abri. Hiram Pruitt veut y retourner ; Gunnar le retient à bras-le-corps.",
+      "lieu": "ecurie",
+      "drapeaux": ["ciel_ecurie_en_feu", "ciel_seaux_passes"],
+      "chance": 0.9,
+      "unique": true,
+      "consequences": { "drapeaux": ["+ciel_incendie_combattu"] },
+      "choix": [
+        { "texte": "Bander les yeux de Bourbon et le sortir", "resultat": "Tu jettes ta veste sur la tête du Morgan et le guides à la voix, pas à pas, entre les poutres qui tombent. Il tremble contre toi, mais il te suit. Hiram Pruitt pleure sans s'en cacher.", "effets": { "honneur": 2, "sante": -10 }, "consequences": { "drapeaux": ["+ciel_heros_incendie"], "entites": { "cheval_a_vendre": { "relation": 3 }, "palefrenier": { "relation": 3 } } } },
+        { "texte": "Défoncer la cloison du fond à coups de hache", "resultat": "Tu attrapes la hache de Hiram et défonces la cloison du fond. Bourbon jaillit par la brèche, la crinière en feu, et file droit vers la prairie sans se retourner. Il est vivant ; reste à le retrouver.", "effets": { "honneur": 2, "sante": -5 }, "consequences": { "entites": { "cheval_a_vendre": { "etat": "en_fuite" }, "palefrenier": { "relation": 2 } } } },
+        { "texte": "Abattre le cheval pour abréger ses souffrances", "resultat": "Un coup de feu sec, et les hennissements cessent. Hiram Pruitt se tourne vers toi, le visage noir de suie. Il sait que tu as peut-être bien fait. Il ne te le pardonnera jamais.", "effets": { "honneur": -1 }, "consequences": { "entites": { "cheval_a_vendre": { "etat": "mort" }, "palefrenier": { "relation": -3 } } } }
+      ]
+    },
+
+    "ciel_incendie_moineau_au_grenier": {
+      "titre": "Moineau est au grenier",
+      "texte": "Une petite voix crie dans la fumée, tout en haut : Moineau s'était endormi dans le foin du grenier, et l'échelle brûle déjà sous lui. On voit sa casquette, sa main qui s'agite à la lucarne, et les flammes qui montent le long des planches.",
+      "lieu": "ecurie",
+      "drapeaux": ["ciel_ecurie_en_feu", "ciel_seaux_passes", "!ciel_moineau_dehors"],
+      "chance": 0.9,
+      "unique": true,
+      "consequences": { "drapeaux": ["+ciel_moineau_dehors"] },
+      "choix": [
+        { "texte": "Foncer au grenier dans la fumée", "resultat": "Tu te mouilles le foulard à un seau et plonges dans la fumée. L'échelle brûle sous tes mains ; tu trouves le gamin recroquevillé dans le foin et le jettes sur ton épaule. Dehors, la foule rugit quand vous roulez tous les deux dans la boue.", "effets": { "honneur": 3, "sante": -20 }, "consequences": { "drapeaux": ["+ciel_heros_incendie"], "entites": { "gamin": { "relation": 3 }, "pasteur": { "relation": 2 } } } },
+        { "texte": "Lui crier de sauter dans tes bras", "resultat": "« Saute, Moineau ! Je te tiens ! » Il hésite, la lucarne crache de la fumée, et il saute. Tu le rattrapes de justesse et vous roulez dans la boue sous les vivats. Il se relève, furieux : « J'avais pas peur ! »", "effets": { "honneur": 2, "sante": -3 }, "consequences": { "drapeaux": ["+ciel_heros_incendie"], "entites": { "gamin": { "relation": 2 } } } },
+        { "texte": "Arracher le pignon avec ton lasso et ton cheval", "si": ["a_cheval"], "resultat": "Tu lances ton lasso sur une planche du pignon et éperonnes. Ton cheval tire, la planche cède, puis trois autres, et Moineau dégringole par la brèche dans un tas de fumier. Le tas de fumier le plus applaudi de l'histoire de Valentine.", "effets": { "honneur": 3, "sante": -3 }, "consequences": { "drapeaux": ["+ciel_heros_incendie"], "entites": { "gamin": { "relation": 2 }, "ton_cheval": { "relation": 1 } } } },
+        { "texte": "Rester en arrière : c'est de la folie", "resultat": "Tu recules devant la chaleur. C'est Gunnar qui grimpe, le visage dans son tablier, et qui ressort avec Moineau inanimé dans les bras, le bras brûlé. Le gamin vivra. Il se souviendra aussi de qui n'a pas bougé.", "consequences": { "entites": { "gamin": { "etat": "blesse", "relation": -1 } } } }
+      ]
+    },
+
+    "ciel_incendie_gagne_l_armurerie": {
+      "titre": "Le feu gagne l'armurerie",
+      "texte": "La chaîne de seaux ne suffit pas : le vent couche les flammes vers l'armurerie voisine. Des cartouches éclatent dans la vitrine comme un feu d'artifice de guerre, et Ezekiel Pratt, le Sergent, sort en titubant avec un tonnelet de poudre sous chaque bras : « Il en reste six dans la réserve ! Si ça saute, la moitié de la rue y passe ! »",
+      "lieu": "armurerie",
+      "acteurs": ["armurier"],
+      "drapeaux": ["ciel_ecurie_en_feu", "ciel_seaux_passes", "!ciel_chaine_tenue"],
+      "chance": 0.8,
+      "unique": true,
+      "choix": [
+        { "texte": "Entrer avec lui sortir la poudre", "resultat": "Vous faites trois allers-retours sous la pluie de cartouches qui claquent. Au dernier tonnelet, une balle perdue te frôle l'oreille. Le Sergent te salue, au garde-à-vous, le visage noir de suie : « Gettysburg n'était pas pire, soldat. »", "effets": { "honneur": 3, "sante": -10 }, "consequences": { "drapeaux": ["+ciel_heros_incendie"], "entites": { "armurier": { "relation": 3 } } } },
+        { "texte": "Rouler les tonnelets dans l'abreuvoir", "resultat": "Tu roules les tonnelets jusqu'à l'abreuvoir et les y fais basculer l'un après l'autre. La poudre est perdue, mais la rue est sauve. Pratt grimace, puis approuve : « Bien pensé. Mouillée, elle ne tue personne. »", "effets": { "honneur": 2 }, "consequences": { "entites": { "armurier": { "relation": 2 } } } },
+        { "texte": "Te jeter à l'abri derrière la banque", "resultat": "Tu plonges derrière le mur de brique de la banque. Une détonation énorme secoue Valentine : le toit de l'armurerie s'envole en morceaux. Pratt s'en sort avec les sourcils brûlés, un bras cassé et une colère froide.", "consequences": { "entites": { "armurerie": { "etat": "detruit" }, "armurier": { "etat": "blesse" } } } },
+        { "texte": "Rafler un fusil dans la vitrine brisée", "resultat": "Pendant que le Sergent se bat avec la poudre, tu passes le bras par la vitrine éclatée et décroches un fusil à répétition encore tiède. Un vol en plein incendie : si quelqu'un t'a vu, on ne te le pardonnera pas.", "effets": { "argent": 30, "honneur": -4 }, "consequences": { "drapeaux": ["+ciel_pillard"] } }
+      ]
+    },
+
+    "ciel_incendie_le_matin_des_cendres": {
+      "titre": "Le matin des cendres",
+      "texte": "Au lever du jour, l'écurie n'est plus qu'un squelette de poutres noires qui fument au bout de la rue. Hiram Pruitt est assis sur un seau retourné au milieu des cendres, le fer à cheval tordu de l'entrée entre les mains, et il compte ses chevaux à voix basse. Toute la ville défile devant lui sans savoir quoi dire.",
+      "lieu": "ecurie",
+      "heures": [5, 10],
+      "drapeaux": ["ciel_ecurie_en_feu", "ciel_incendie_combattu"],
+      "chance": 0.9,
+      "unique": true,
+      "consequences": {
+        "drapeaux": ["-ciel_ecurie_en_feu", "+ciel_ecurie_brulee", "+ciel_apres_incendie"],
+        "entites": { "ecurie": { "etat": "detruit" } }
+      },
+      "choix": [
+        { "texte": "T'asseoir à côté de lui sans rien dire", "resultat": "Tu t'assois sur une poutre encore tiède. Au bout d'un long moment, il marmonne : « Ils sont presque tous sortis. Presque. » Puis, plus bas : « Merci d'être resté. »", "effets": { "honneur": 1 }, "consequences": { "entites": { "palefrenier": { "relation": 2 } } } },
+        { "texte": "Lui donner 20 $ pour rebâtir", "resultat": "Il regarde les billets comme s'ils allaient mordre, puis les fourre dans sa poche de chemise roussie. « Je te rendrai ça. En foin ou en dollars, mais je te le rendrai. »", "effets": { "argent": -20, "honneur": 2 }, "consequences": { "entites": { "palefrenier": { "relation": 3 } } } },
+        { "texte": "Fouiller les cendres du dernier box", "resultat": "Sous les cendres du box du Morgan, tu déterres une boîte à café noircie, pleine de pièces soudées par la chaleur : les économies de Hiram. Tu la glisses sous ta veste. Il ne l'a pas vue ; il ne voit plus rien.", "effets": { "argent": 15, "honneur": -3 }, "consequences": { "drapeaux": ["+ciel_pillard"] } }
+      ]
+    },
+
+    "ciel_incendie_qui_a_mis_le_feu": {
+      "titre": "Qui a mis le feu ?",
+      "texte": "Le shérif Malloy remue les cendres du bout de sa botte et ramasse un goulot de bouteille entouré d'un chiffon brûlé. « Pépite jure qu'il avait éteint sa pipe, et pour une fois je le crois. Quelqu'un voulait toute la ville aux seaux cette nuit-là, et mon bureau vide. » Il regarde la fenêtre à barreaux de Finn Mulligan, puis toi.",
+      "lieu": "ecurie",
+      "acteurs": ["sherif_malloy"],
+      "heures": [8, 18],
+      "drapeaux": ["ciel_apres_incendie", "ciel_feu_suspect", "!ciel_incendiaire_toi"],
+      "chance": 0.5,
+      "unique": true,
+      "choix": [
+        { "texte": "Accuser le Balafré : une diversion pour l'évasion", "resultat": "Malloy hoche lentement la tête. « Toute la ville aux seaux, et moi au milieu de la rue… Il voulait voir combien de temps je laisse le bureau. » Ce soir, Eli et lui dormiront tous les deux à côté de la cellule.", "effets": { "honneur": 1 }, "consequences": { "entites": { "sherif_malloy": { "relation": 2 } } } },
+        { "texte": "Proposer de garder le bureau la nuit prochaine", "resultat": "Malloy te jauge longuement, puis hoche la tête. « Une nuit. Sur le perron, avec un fusil, et tu ne tires que si je tire. » Eli fait une tête de six pieds de long : c'était sa garde.", "effets": { "honneur": 1 }, "consequences": { "entites": { "sherif_malloy": { "relation": 2 }, "adjoint": { "relation": -1 } } } },
+        { "texte": "Souffler que Pépite ment", "resultat": "Tu hausses les épaules : « Un ivrogne, ça jure tout ce qu'on veut. » Pépite passe la nuit en cellule à côté de Finn Mulligan, qui lui chante des complaintes irlandaises jusqu'à l'aube. Le vrai coupable, lui, court toujours.", "effets": { "honneur": -2 }, "consequences": { "entites": { "ivrogne": { "relation": -3 } } } }
+      ]
+    },
+
+    "ciel_incendie_moineau_a_tout_vu": {
+      "titre": "Moineau a tout vu",
+      "texte": "Moineau t'attend derrière les tonneaux, les cheveux roussis et le regard dur. Il ne sourit pas. « Je t'ai vu, la nuit du feu, m'sieur. J'ai rien dit à Malloy. Pas encore. » Il tend la main, paume ouverte.",
+      "lieu": "rue_principale",
+      "acteurs": ["gamin"],
+      "heures": [8, 18],
+      "drapeaux": ["ciel_apres_incendie", "ciel_incendiaire_toi"],
+      "chance": 0.6,
+      "unique": true,
+      "choix": [
+        { "texte": "Lui donner 10 $ pour son silence", "resultat": "Il compte les pièces deux fois, comme l'épicier. « Un secret, ça se paie tous les mois, m'sieur. Mais pour toi, je ferai un prix. » Il disparaît entre deux chariots.", "effets": { "argent": -10, "honneur": -1 }, "consequences": { "entites": { "gamin": { "relation": 1 } } } },
+        { "texte": "Aller tout avouer au shérif Malloy", "resultat": "Malloy t'écoute sans un mot, puis repose sa tasse. « Personne n'est mort. Tu paieras le bois de la nouvelle écurie jusqu'au dernier clou, et tu dormiras une nuit en cellule. » Hiram Pruitt, lui, ne te reparlera jamais.", "effets": { "argent": -30, "honneur": 3 }, "consequences": { "drapeaux": ["-ciel_incendiaire_toi"], "entites": { "palefrenier": { "relation": -3 }, "sherif_malloy": { "relation": 1 } } } },
+        { "texte": "L'attraper par le col pour le faire taire", "resultat": "Tu l'attrapes par le col. Il ne pleure pas : il te crache sur la botte et file comme un chat. Le soir même, ton visage est sur une affiche neuve, et Malloy sait pourquoi.", "effets": { "honneur": -3, "prime": 50 }, "consequences": { "entites": { "gamin": { "relation": -3 } } } }
+      ]
+    },
+
+    "ciel_incendie_malloy_te_soupconne": {
+      "titre": "Malloy te soupçonne",
+      "texte": "Le shérif Malloy s'assoit à côté de toi sans y être invité et pose sa tasse de café froid entre vous. « Un étranger de mauvaise réputation arrive, et une écurie brûle. Je ne crois pas aux coïncidences, l'ami. Tu étais où, la nuit du feu ? »",
+      "lieu": "saloon_keane",
+      "acteurs": ["sherif_malloy"],
+      "heures": [12, 20],
+      "si": ["honneur_bas"],
+      "drapeaux": ["ciel_apres_incendie", "!ciel_incendiaire_toi"],
+      "chance": 0.4,
+      "unique": true,
+      "choix": [
+        { "texte": "Dire la vérité, calmement", "resultat": "Tu racontes ta nuit, sans en rajouter. Malloy t'écoute en tournant sa tasse, puis se lève. « Les menteurs donnent toujours trop de détails. Toi, pas assez. Ça te sauve, pour cette fois. »", "consequences": { "entites": { "sherif_malloy": { "relation": 1 } } } },
+        { "texte": "Lui retourner la question : où était le Balafré ?", "resultat": "Malloy ne répond pas tout de suite. « Au Smithfield's, devant trois témoins. Trop de témoins, pour un homme comme lui. » Il repart songeur : tu viens peut-être de lui donner une idée." },
+        { "texte": "Le menacer de ne plus t'approcher", "resultat": "Malloy ne cille pas. « Trente ans d'insigne, mon garçon. Des plus durs que toi m'ont menacé ; je les ai enterrés à côté de leurs menaces. » Il vide sa tasse et s'en va. Désormais, il te suit des yeux partout.", "effets": { "honneur": -1 }, "consequences": { "entites": { "sherif_malloy": { "relation": -2 } } } }
+      ]
+    },
+
+    "ciel_incendie_pillard_demasque": {
+      "titre": "Un pillard parmi nous",
+      "texte": "Silas Crump a recompté sa caisse trois fois, et Hiram Pruitt a fouillé ses cendres à quatre pattes. Il manque de l'argent, et dans une ville où tout le monde faisait la chaîne, une seule personne n'avait pas de seau. Billy Pruitt le hurle déjà sur sa caisse à savon : « Un pillard parmi nous ! »",
+      "lieu": "rue_principale",
+      "acteurs": ["crieur", "epicier"],
+      "heures": [8, 18],
+      "drapeaux": ["ciel_pillard", "ciel_apres_incendie"],
+      "chance": 0.4,
+      "unique": true,
+      "choix": [
+        { "texte": "Rendre l'argent avant qu'on te désigne", "resultat": "Tu poses l'argent sur le comptoir de Crump sans un mot. Il le compte deux fois, puis le recompte. « Rendu, c'est pas volé… mais c'est pas oublié non plus. »", "effets": { "argent": -30, "honneur": 1 }, "consequences": { "drapeaux": ["-ciel_pillard"], "entites": { "epicier": { "relation": -1 } } } },
+        { "texte": "Accuser les O'Driscoll", "resultat": "« Des O'Driscoll, pendant le feu, je les ai vus ! » La foule gronde vers le Smithfield's. Le Balafré, lui, te regarde par la vitrine fendue : il sait que tu mens, et il s'en souviendra.", "effets": { "honneur": -2 }, "consequences": { "entites": { "odriscoll": { "relation": -2 } } } },
+        { "texte": "Passer ton chemin sans répondre", "resultat": "Tu baisses ton chapeau et passes ton chemin. Les chuchotements te suivent jusqu'au bout de la rue, et l'adjoint Eli note quelque chose dans son carnet, en te fixant.", "effets": { "honneur": -1, "prime": 15 } }
+      ]
+    },
+
+    "ciel_incendie_le_heros_de_la_gazette": {
+      "titre": "Le héros de l'incendie",
+      "texte": "Perché sur sa caisse à savon, Billy Pruitt hurle à pleins poumons : « Édition spéciale ! Un étranger se jette dans les flammes de l'écurie ! » Il a ajouté un ours et deux O'Driscoll à son récit, et derrière lui, Tommy Rourke attend avec un bout de papier et un crayon, pour un autographe.",
+      "lieu": "rue_principale",
+      "acteurs": ["crieur", "vacher"],
+      "heures": [7, 16],
+      "drapeaux": ["ciel_heros_incendie", "ciel_apres_incendie"],
+      "chance": 0.6,
+      "unique": true,
+      "consequences": { "joueur": { "honneur": 1 } },
+      "choix": [
+        { "texte": "Signer l'autographe de Tommy", "resultat": "Tu signes d'une croix et d'un nom. Tommy plie le papier en quatre, le glisse dans son chapeau trop grand et ne l'enlèvera plus. « Un jour, c'est moi qui signerai, et je dirai que je t'ai connu. »", "consequences": { "entites": { "vacher": { "relation": 2 } } } },
+        { "texte": "Corriger Billy : pas d'ours, pas d'O'Driscoll", "resultat": "« Pas d'ours ? » Billy est désespéré. Il réfléchit, lèche son crayon : « Alors un cougar. Un petit. » Les journalistes de Saint Denis n'ont qu'à bien se tenir.", "consequences": { "entites": { "crieur": { "relation": 1 } } } }
+      ]
+    },
+
+    "ciel_incendie_corvee_de_charpente": {
+      "titre": "La corvée de la nouvelle écurie",
+      "texte": "Une grange se relève en un jour quand une ville s'y met. Les poutres de pin blond arrivent par le chariot, Gunnar forge les clous à la chaîne, Gus a mis un cochon entier à rôtir et Cornelia Whitlock sert la limonade. Au pied de la charpente, Horace Whitlock propose à Hiram « un petit prêt, à un taux d'ami ».",
+      "lieu": "ecurie",
+      "acteurs": ["palefrenier", "marechal_ferrant", "banquier", "boucher"],
+      "heures": [8, 17],
+      "jours": ["samedi"],
+      "drapeaux": ["ciel_ecurie_brulee"],
+      "chance": 0.5,
+      "unique": true,
+      "consequences": {
+        "drapeaux": ["-ciel_ecurie_brulee"],
+        "entites": { "ecurie": { "etat": "normal" } }
+      },
+      "choix": [
+        { "texte": "Monter sur la charpente et clouer avec Gunnar", "resultat": "Tu passes la journée à califourchon sur une poutre, la bouche pleine de clous. Au coucher du soleil, quand le faîtage est posé, tout Valentine applaudit, et Gunnar te tend une bière sans un mot. Chez lui, c'est un discours.", "effets": { "honneur": 2, "sante": -2 }, "consequences": { "entites": { "marechal_ferrant": { "relation": 2 }, "palefrenier": { "relation": 2 } } } },
+        { "texte": "Payer toi-même le bois : 30 $ au lieu du prêt", "resultat": "Tu poses les billets sur la poutre, sous le nez d'Horace Whitlock. « Hiram n'a besoin de personne à votre taux d'ami. » Le banquier sourit jaune ; la foule, elle, rit de bon cœur.", "effets": { "argent": -30, "honneur": 3 }, "consequences": { "entites": { "palefrenier": { "relation": 3 }, "banquier": { "relation": -2 } } } },
+        { "texte": "Dénoncer le taux du banquier devant tous", "si": ["honneur_haut"], "resultat": "Tu répètes à voix haute le « taux d'ami » d'Horace Whitlock. Le marteau de Gunnar s'arrête, puis tous les autres. Le banquier remonte dans sa calèche sous les sifflets.", "effets": { "honneur": 1 }, "consequences": { "entites": { "banquier": { "relation": -3 }, "palefrenier": { "relation": 2 } } } },
+        { "texte": "Manger du cochon et faire la sieste", "resultat": "Tu te sers trois fois de cochon rôti et une fois de limonade, puis tu fais la sieste à l'ombre de la charpente. Personne ne t'en veut : il faut aussi des spectateurs." }
+      ]
+    },
+
+    "ciel_le_tocsin_rameute_la_ville": {
+      "titre": "Le tocsin rameute la ville",
+      "texte": "À ton tocsin, Valentine jaillit de ses maisons : en quelques minutes, une chaîne de seaux s'étire du puits jusqu'à l'écurie en flammes. Malloy, en chemise, te crie depuis la rue : « Bien joué ! Continue de sonner, qu'on t'entende jusqu'aux ranchs ! »",
+      "lieu": "eglise",
+      "acteurs": ["sherif_malloy"],
+      "drapeaux": ["ciel_ecurie_en_feu", "!ciel_chaine_tenue"],
+      "apres": { "verbes": ["sonner_le_tocsin", "sonner_la_cloche"], "cibles": ["cloche"] },
+      "chance": 1,
+      "unique": true,
+      "consequences": { "drapeaux": ["+ciel_chaine_tenue"], "joueur": { "honneur": 2 } }
+    },
+
+    "ciel_tocsin_pour_rien": {
+      "titre": "Le tocsin pour rien",
+      "texte": "Au son du tocsin, la rue se remplit d'hommes en caleçon armés de fusils et de femmes chargées de seaux. Ils cherchent la fumée, les O'Driscoll, l'inondation. Rien. Une centaine de regards remontent lentement la corde de la cloche jusqu'à toi.",
+      "lieu": "eglise",
+      "drapeaux": ["!ciel_ecurie_en_feu"],
+      "apres": { "verbes": ["sonner_le_tocsin"], "cibles": ["cloche"] },
+      "chance": 0.6,
+      "choix": [
+        { "texte": "Montrer l'orage : « La foudre va frapper ! »", "si": ["orage"], "resultat": "À l'instant précis où tu tends le bras, un éclair zèbre le ciel au-dessus de la gare. Toute la ville rentre en courant, persuadée que tu as un don. Le révérend, lui, a des doutes." },
+        { "texte": "Inventer des cavaliers dans les collines", "resultat": "« Des O'Driscoll ! Au nord ! » L'adjoint Eli part au galop avec six hommes et revient trois heures plus tard, bredouille, couvert de poussière et furieux. Il te regardera de travers pendant des semaines.", "effets": { "honneur": -1 }, "consequences": { "entites": { "adjoint": { "relation": -2 } } } },
+        { "texte": "Payer une tournée générale chez Keane (10 $)", "resultat": "« Fausse alerte, tournée générale chez Keane ! » La colère fond comme neige au soleil, et le barman te serre la main des deux mains. Valentine pardonne beaucoup à qui paie à boire.", "effets": { "argent": -10 }, "consequences": { "entites": { "barman_keane": { "relation": 2 } } } },
+        { "texte": "Hausser les épaules", "resultat": "Tu lâches la corde et hausses les épaules. Un trognon de pomme te frappe à l'épaule, puis un autre. Malloy, les bras croisés, range ton visage dans un coin de sa mémoire.", "effets": { "honneur": -1 }, "consequences": { "entites": { "sherif_malloy": { "relation": -1 } } } }
+      ]
+    },
+
+    "ciel_flammeches_sur_l_ecurie": {
+      "titre": "Des flammèches sur le toit de l'écurie",
+      "texte": "Le souffle de ta dynamite projette des planches enflammées par-dessus les toits. L'une d'elles retombe sur le foin du grenier de l'écurie, et une fumée jaune monte aussitôt, pendant que les chevaux se mettent à hurler dans leurs box.",
+      "lieu": "ecurie",
+      "meteo": ["beau", "chaleur"],
+      "drapeaux": ["!ciel_ecurie_en_feu", "!ciel_apres_incendie"],
+      "apres": { "verbes": ["faire_sauter"] },
+      "chance": 0.2,
+      "unique": true,
+      "choix": [
+        { "texte": "Grimper étouffer les flammes avec ta veste", "resultat": "Tu escalades la façade et bats le foin avec ta veste jusqu'à ce que la dernière flammèche meure. Tu redescends noir de suie, les mains cloquées. L'écurie est sauve, et personne n'a besoin de savoir d'où venait la planche.", "effets": { "honneur": 1, "sante": -8 } },
+        { "texte": "Crier au feu de toutes tes forces", "resultat": "« AU FEU ! À L'ÉCURIE ! » Les portes s'ouvrent, les seaux sortent, la ville accourt. Le feu prend quand même, mais Valentine est debout, et prête à se battre.", "effets": { "honneur": 1 }, "consequences": { "drapeaux": ["+ciel_ecurie_en_feu", "+ciel_chaine_tenue"] } },
+        { "texte": "Laisser brûler et filer", "resultat": "Tu tournes les talons pendant que le grenier s'embrase. La diversion parfaite… sauf pour les chevaux enfermés là-dedans, et pour le gamin qui dort dans le foin.", "effets": { "honneur": -3 }, "consequences": { "drapeaux": ["+ciel_ecurie_en_feu", "+ciel_incendiaire_toi"] } }
+      ]
+    },
+
+    "ciel_la_detonation_secoue_la_ville": {
+      "titre": "La détonation secoue Valentine",
+      "texte": "La détonation fait trembler Valentine jusqu'aux fondations. Les vitres de l'hôtel, les plus propres de la ville, tombent en pluie sur le trottoir, les chevaux arrachent leurs longes, et une nuée de corbeaux s'envole du cimetière en croassant. Puis le silence, et quelque part, un bébé qui se met à pleurer.",
+      "lieu": "rue_principale",
+      "apres": { "verbes": ["faire_sauter"] },
+      "chance": 0.5
+    },
+
+    "ciel_l_herbe_seche_s_embrase": {
+      "titre": "L'herbe sèche s'embrase",
+      "texte": "Une étincelle saute de ta flamme dans l'herbe jaunie par la canicule. En trois battements de cœur, une langue de feu court dans les herbes folles vers l'enclos, où le troupeau se met à meugler et à se bousculer contre la barrière.",
+      "lieu": "enclos",
+      "meteo": ["chaleur"],
+      "si": ["dehors"],
+      "apres": { "verbes": ["allumer"] },
+      "chance": 0.3,
+      "choix": [
+        { "texte": "Étouffer les flammes sous ta couverture", "resultat": "Tu te jettes sur les flammes avec ta couverture de selle et frappes, frappes, jusqu'à ce que la fumée ne soit plus qu'un filet gris. Ta couverture est fichue, tes sourcils aussi, mais l'enclos est intact.", "effets": { "honneur": 1, "sante": -5 } },
+        { "texte": "Ouvrir la barrière pour libérer le troupeau", "resultat": "Le troupeau déferle vers le ruisseau dans un nuage de poussière, et le feu meurt tout seul sur la terre nue. Seul Lucifer reste au milieu de l'enclos, à regarder les flammes avec intérêt. Whitmore passera deux jours à rassembler ses bêtes.", "consequences": { "entites": { "eleveur": { "relation": -2 } } } },
+        { "texte": "Crier à Tommy d'apporter des seaux", "resultat": "Tommy Rourke accourt avec deux seaux, éperons tintants. À vous deux, vous noyez le feu dans un nuage de vapeur, et il te regarde comme si tu venais de livrer bataille : « On fait une sacrée équipe, hein ? »", "effets": { "honneur": 1 }, "consequences": { "entites": { "vacher": { "relation": 2 } } } }
+      ]
+    },
+
+    "ciel_forge_les_copeaux_s_embrasent": {
+      "titre": "Les étincelles de la forge",
+      "texte": "Un coup de vent chaud chasse une gerbe d'étincelles hors de la forge, droit sur le tas de copeaux de pin entassé derrière les pompes funèbres. En un instant, les flammes lèchent la réserve de cercueils, et Mortimer Pembrook sort en redingote, les bras au ciel : « Pas les cercueils ! Ils sont payés d'avance ! »",
+      "lieu": "forge",
+      "acteurs": ["marechal_ferrant", "croque_mort"],
+      "heures": [13, 18],
+      "meteo": ["chaleur"],
+      "chance": 0.05,
+      "unique": true,
+      "choix": [
+        { "texte": "Faire la chaîne avec Gunnar depuis l'abreuvoir", "resultat": "Gunnar porte deux seaux dans chaque main, toi un dans chacune ; Moineau et Billy font la navette. En dix minutes, il ne reste qu'un tas de copeaux noirs qui sifflent et un croque-mort qui compte ses cercueils sur ses doigts. Tous là.", "effets": { "honneur": 2, "sante": -2 }, "consequences": { "entites": { "marechal_ferrant": { "relation": 1 }, "croque_mort": { "relation": 2 } } } },
+        { "texte": "Sortir les cercueils de la réserve en feu", "resultat": "Tu tires les cercueils hors de la réserve un à un, debout, comme des clients pressés de partir. Le dernier fume un peu. Mortimer Pembrook te serre longuement la main : « Celui-là, je vous le garde. Avec une remise. »", "effets": { "honneur": 1, "sante": -5 }, "consequences": { "entites": { "croque_mort": { "relation": 3 } } } },
+        { "texte": "Demander au croque-mort combien il paie", "resultat": "« Un dollar par cercueil sauvé ! » glapit-il. Tu en sauves cinq, il t'en paie quatre : le cinquième, dit-il, était déjà roussi. Les affaires sont les affaires, même au milieu des flammes.", "effets": { "argent": 4, "honneur": -1 } }
+      ]
+    },
+
+    "ciel_coup_de_feu_et_tonnerre": {
+      "titre": "Coup de feu et coup de tonnerre",
+      "texte": "Ton coup de feu et le tonnerre éclatent au même instant, si fort que toute la rue croit à une bataille. Des chevaux attachés arrachent leur longe et s'enfuient au galop sous la pluie, et ton propre cheval tire sur sa bride, les yeux blancs.",
+      "lieu": "rue_principale",
+      "acteurs": ["ton_cheval"],
+      "meteo": ["orage"],
+      "si": ["dehors"],
+      "apres": { "verbes": ["tirer"] },
+      "chance": 0.3,
+      "consequences": { "entites": { "ton_cheval": { "relation": -1 } } }
+    },
+
+    "ciel_defier_la_foudre": {
+      "titre": "Défier la foudre au clocher",
+      "texte": "Tu viens d'atteindre le haut du clocher quand la foudre frappe la croix, à trois pieds au-dessus de ta tête. Un éclair blanc, une odeur de soufre, la cloche qui gronde toute seule : tu te retrouves assis dans la poussière, les cheveux dressés, avec un sifflement dans les oreilles qui durera jusqu'au soir.",
+      "lieu": "eglise",
+      "meteo": ["orage"],
+      "apres": { "verbes": ["monter_au_clocher"], "cibles": ["eglise"] },
+      "chance": 0.5,
+      "consequences": { "joueur": { "sante": -12 } }
+    },
+
+    "ciel_le_courant_t_emporte": {
+      "titre": "Le courant t'emporte",
+      "texte": "Le ruisseau en crue n'a plus rien d'un ruisseau. Le courant te fauche les jambes, l'eau brune t'avale et te roule contre les galets, et tu dérives vers le coude où s'entassent les branches arrachées.",
+      "lieu": "berge",
+      "drapeaux": ["ciel_crue"],
+      "apres": { "verbes": ["traverser_a_gue", "nager", "attraper_ecrevisses", "chercher_or_batee", "se_laver"], "cibles": ["ruisseau"] },
+      "chance": 0.8,
+      "choix": [
+        { "texte": "T'agripper à une branche de saule", "resultat": "Tu attrapes une branche basse au vol. Elle plie, craque, tient. Tu te hisses sur la berge, trempé, grelottant, avec la moitié du ruisseau dans les bottes.", "effets": { "sante": -8 } },
+        { "texte": "Te laisser porter jusqu'au coude", "resultat": "Tu cesses de lutter. Le courant te dépose, couvert de bleus, sur un banc de gravier, à côté d'une sacoche de cuir coincée dans les racines. Dedans, quelques dollars mouillés et une lettre illisible.", "effets": { "sante": -12, "argent": 6 } },
+        { "texte": "Siffler ton cheval entre deux gorgées d'eau", "resultat": "Tu siffles en recrachant de l'eau boueuse. Ton cheval accourt, entre dans le courant jusqu'au poitrail, et tu t'accroches à sa queue. Il te tire hors de l'eau sans même s'ébrouer.", "effets": { "sante": -5 }, "consequences": { "entites": { "ton_cheval": { "relation": 2 } } } }
+      ]
+    },
+
+    "ciel_nuit_sous_la_pluie": {
+      "titre": "Une belle étoile sans étoiles",
+      "texte": "Tu te réveilles dans une flaque, ta couverture lourde comme un noyé et l'eau qui te coule dans le col. Ton cheval te regarde d'un air de reproche, la crinière collée, et tes os craquent comme ceux d'un vieillard.",
+      "lieu": "berge",
+      "meteo": ["pluie", "orage"],
+      "apres": { "verbes": ["dormir_dehors"] },
+      "chance": 0.7,
+      "consequences": { "joueur": { "sante": -5 } }
+    },
+
+    "ciel_coup_de_feu_dans_le_brouillard": {
+      "titre": "Un coup de feu dans le brouillard",
+      "texte": "Ton coup de feu se perd dans le blanc, étouffé comme dans du coton. Une seconde de silence, puis des voix de partout : « Qui a tiré ? » « Par ici ! » « Non, par là ! » Quelque part, une vache meugle d'indignation, et l'adjoint Eli tire à son tour, sur rien.",
+      "lieu": "rue_principale",
+      "acteurs": ["adjoint"],
+      "meteo": ["brouillard"],
+      "si": ["dehors"],
+      "apres": { "verbes": ["tirer"] },
+      "chance": 0.4
+    },
+
+    "ciel_rue_en_bourbier": {
+      "titre": "La rue principale tourne au bourbier",
+      "texte": "La pluie transforme la rue principale en une soupe brune où les bottes s'enfoncent jusqu'à la cheville. Cornelia Whitlock fait poser des planches devant l'hôtel, la poule Henrietta patauge d'un air outré, et un cavalier de passage jure en tirant sa monture hors d'une ornière.",
+      "lieu": "rue_principale",
+      "heures": [7, 20],
+      "meteo": ["pluie", "orage"],
+      "chance": 0.35
+    },
+
+    "ciel_chariot_embourbe": {
+      "titre": "Prudence et Patience dans la boue",
+      "texte": "Le chariot du magasin général s'est enfoncé jusqu'aux moyeux au milieu de la rue. Prudence et Patience, les deux mules, tirent, glissent, puis s'assoient dans la boue avec une dignité de sénateurs. Silas Crump, trempé, hurle qu'il ne paiera personne pour pousser.",
+      "lieu": "rue_principale",
+      "acteurs": ["chariot", "epicier"],
+      "heures": [11, 17],
+      "meteo": ["pluie", "orage"],
+      "chance": 0.2,
+      "choix": [
+        { "texte": "Épauler la roue et pousser", "resultat": "Tu cales ton épaule contre la roue et pousses à t'en faire éclater les veines. Le chariot sort de l'ornière d'un coup, et toi tu tombes à plat ventre dans la boue. Crump te tend… un mouchoir. Usagé.", "effets": { "honneur": 1 }, "consequences": { "entites": { "epicier": { "relation": 1 } } } },
+        { "texte": "Atteler ton cheval devant les mules", "si": ["a_cheval"], "resultat": "Tu passes ton lasso au timon et éperonnes. Ton cheval arrache le chariot à la boue sous les vivats du perron de chez Keane. Crump, ému, t'offre un bonbon à la menthe. Un seul.", "effets": { "honneur": 1 }, "consequences": { "entites": { "epicier": { "relation": 2 } } } },
+        { "texte": "Exiger un dollar pour ta peine", "resultat": "Crump te regarde comme si tu lui avais demandé un rein. Il finit par lâcher une pièce, une seule, en la serrant si fort que tu dois lui déplier les doigts pour la prendre.", "effets": { "argent": 1 }, "consequences": { "entites": { "epicier": { "relation": -1 } } } },
+        { "texte": "Rire depuis le trottoir", "resultat": "Tu t'adosses à un poteau et ris de bon cœur. Patience tourne la tête vers toi et brait, longuement, d'un ton qui ressemble beaucoup à une insulte." }
+      ]
+    },
+
+    "ciel_toit_qui_fuit_au_smithfield": {
+      "titre": "Il pleut dans le Smithfield's",
+      "texte": "Le toit du Smithfield's fuit à six endroits, et Cyrus Hollis a placé dessous six crachoirs, qu'il vide de temps en temps dans le tonneau de whisky. Les buveurs déplacent leurs chaises au gré des gouttes sans interrompre leur partie de cartes.",
+      "lieu": "saloon_smithfield",
+      "acteurs": ["barman_smithfield"],
+      "heures": [15, 2],
+      "meteo": ["pluie", "orage"],
+      "chance": 0.3
+    },
+
+    "ciel_messe_sous_la_pluie": {
+      "titre": "Le déluge et le sermon",
+      "texte": "La pluie tambourine si fort sur le toit de l'église que le révérend Whitlock doit crier son sermon. Une goutte tombe pile sur le chapeau de Cornelia au premier rang, une autre dans le tronc des pauvres. Le révérend en profite pour prêcher sur Noé, qui, lui au moins, avait pensé à l'arche.",
+      "lieu": "eglise",
+      "acteurs": ["pasteur", "hoteliere"],
+      "heures": [9, 12],
+      "jours": ["dimanche"],
+      "meteo": ["pluie", "orage"],
+      "chance": 0.5
+    },
+
+    "ciel_orage_chevaux_affoles": {
+      "titre": "L'orage affole les chevaux",
+      "texte": "À chaque coup de tonnerre, l'écurie entière tremble sous les ruades. Bourbon, le Morgan, a défoncé une planche de son box, et Hiram Pruitt court d'un cheval à l'autre, la lanterne à la main, en leur parlant à voix basse.",
+      "lieu": "ecurie",
+      "acteurs": ["palefrenier", "cheval_a_vendre"],
+      "meteo": ["orage"],
+      "drapeaux": ["!ciel_ecurie_en_feu", "!ciel_ecurie_brulee"],
+      "chance": 0.3,
+      "choix": [
+        { "texte": "Aider Hiram à calmer les bêtes", "resultat": "Tu prends une longe et parles doucement à une jument grise jusqu'à ce qu'elle cesse de trembler. Hiram ne dit rien, mais à la fin de l'orage, il te tend sa flasque. Personne ne l'a jamais vu partager quoi que ce soit.", "effets": { "honneur": 1 }, "consequences": { "entites": { "palefrenier": { "relation": 2 } } } },
+        { "texte": "Entrer dans le box de Bourbon", "resultat": "Le Morgan se cabre, les yeux blancs. Tu restes immobile, la main tendue, sous ses sabots. Au troisième coup de tonnerre, il pose son nez dans ta paume, et Hiram murmure : « Ça alors. »", "effets": { "honneur": 1 }, "consequences": { "entites": { "cheval_a_vendre": { "relation": 3 } } } },
+        { "texte": "Laisser le vieux se débrouiller", "resultat": "Tu rabats ton col et passes ton chemin. Derrière toi, les hennissements se mêlent au tonnerre, et une planche vole en éclats." }
+      ]
+    },
+
+    "ciel_orage_ton_cheval_tremble": {
+      "titre": "Ton cheval et le tonnerre",
+      "texte": "Un éclair tombe derrière la gare, et ton cheval se cabre à la barre d'attache, les naseaux grands ouverts, en tirant si fort sur sa longe que le poteau gémit. Il cherche ton regard à travers la pluie.",
+      "lieu": "rue_principale",
+      "acteurs": ["ton_cheval"],
+      "meteo": ["orage"],
+      "chance": 0.25,
+      "choix": [
+        { "texte": "Lui parler doucement, le front contre le sien", "resultat": "Tu poses ton front contre le sien et lui parles comme à un enfant. Peu à peu, sa respiration ralentit. Au coup de tonnerre suivant, il frémit à peine.", "consequences": { "entites": { "ton_cheval": { "relation": 2 } } } },
+        { "texte": "Le mettre à l'abri dans un box (1 $)", "resultat": "Hiram Pruitt lui donne un box sec et une poignée d'avoine. Ton cheval s'ébroue, soulagé, puis te regarde repartir sous l'averse avec un reproche dans l'œil : et toi, tu restes dehors ?", "effets": { "argent": -1 }, "consequences": { "entites": { "ton_cheval": { "relation": 1 } } } },
+        { "texte": "Tirer sèchement sur la bride", "resultat": "Tu tires sur la bride en jurant. Il se calme, mais d'une immobilité de bête battue, les oreilles couchées. Il s'en souviendra.", "consequences": { "entites": { "ton_cheval": { "relation": -2 } } } }
+      ]
+    },
+
+    "ciel_foudre_sur_le_chateau_d_eau": {
+      "titre": "La foudre frappe le château d'eau",
+      "texte": "La foudre s'abat sur le château d'eau dans un fracas de fin du monde. Une des quatre pattes de poutres se fend du haut en bas, et la cuve pleine penche lentement au-dessus de la voie. Silas Pettigrew, montre en main, calcule à voix haute : le 16 h 05 pour Strawberry arrive dans moins d'une heure.",
+      "lieu": "gare",
+      "acteurs": ["chef_de_gare", "chateau_d_eau"],
+      "heures": [14, 16],
+      "meteo": ["orage"],
+      "chance": 0.15,
+      "unique": true,
+      "choix": [
+        { "texte": "Étayer la patte avec des traverses de rechange", "resultat": "Tu traînes des traverses de chêne sous la pluie et les cales contre la poutre fendue, pendant que Pettigrew tient la lanterne en récitant les horaires pour se calmer. La cuve tient. Le 16 h 05 passe à 16 h 05, et le chef de gare te serre la main avec une émotion de jeune marié.", "effets": { "honneur": 2, "sante": -3 }, "consequences": { "entites": { "chef_de_gare": { "relation": 3 } } } },
+        { "texte": "Courir au-devant du train avec un drapeau rouge", "resultat": "Tu cours sur le ballast en agitant le drapeau rouge du quai. Le mécanicien freine dans une gerbe d'étincelles, cent pieds avant le château d'eau, qui s'écroule sur les rails. Le 16 h 05 aura deux heures de retard ; Pettigrew en pleure, mais personne n'est mort.", "effets": { "honneur": 3 }, "consequences": { "entites": { "chateau_d_eau": { "etat": "detruit" }, "chef_de_gare": { "relation": 2 } } } },
+        { "texte": "Regarder le château d'eau tomber", "resultat": "La patte cède avec un craquement d'arbre abattu. La cuve éclate sur les rails dans une vague qui balaie le quai et emporte la casquette de Pettigrew. Le télégraphe crépite : par chance, le 16 h 05 est arrêté à la station précédente.", "consequences": { "entites": { "chateau_d_eau": { "etat": "detruit" } } } }
+      ]
+    },
+
+    "ciel_foudre_sur_le_clocher": {
+      "titre": "La foudre sur le clocher",
+      "texte": "Un éclair frappe la croix du clocher, et la cloche de bronze, toute seule, lâche un coup immense qui fait trembler les vitres de la rue. Une fumée bleue s'échappe des bardeaux. Sur le parvis, le révérend Ezra Whitlock lève les yeux vers le ciel, livide, comme un homme qui vient d'entendre son nom.",
+      "lieu": "eglise",
+      "acteurs": ["pasteur", "cloche"],
+      "meteo": ["orage"],
+      "chance": 0.1,
+      "unique": true,
+      "choix": [
+        { "texte": "Grimper étouffer les bardeaux qui fument", "resultat": "Tu montes au clocher avec un seau, la pluie dans les yeux, et étouffes les braises sous ta veste. En bas de l'échelle, le révérend t'attend : « Il y a des hommes que le Seigneur envoie, et d'autres qu'il frappe. Merci d'être des premiers. »", "effets": { "honneur": 2, "sante": -5 }, "consequences": { "entites": { "pasteur": { "relation": 2 } } } },
+        { "texte": "Demander au révérend ce qui l'effraie", "resultat": "Il reste longtemps silencieux sous la pluie. « L'homme que j'ai été, autrefois, croyait que Dieu ne regardait pas. Ce soir, j'en suis moins sûr. » Puis il rentre dans l'église et ferme la porte derrière lui.", "consequences": { "entites": { "pasteur": { "relation": 1 } } } },
+        { "texte": "Plaisanter sur la foudre qui épargne les saloons", "resultat": "« Le Seigneur frappe l'église et épargne le Smithfield's ? » Le révérend te regarde, puis éclate d'un rire bref : « Il a de l'humour. Ou il vise mal. Comme moi, jadis. »" }
+      ]
+    },
+
+    "ciel_tempete_arrache_les_enseignes": {
+      "titre": "Le vent arrache les enseignes",
+      "texte": "Une rafale balaie la rue principale et arrache tout ce qui n'est pas cloué deux fois. Le « K » doré du KEANE'S SALOON s'envole jusqu'à l'abreuvoir, l'auvent de la boucherie claque comme une voile, et l'enseigne « Pembrook — Pompes funèbres — Prix honnêtes » vient se planter dans la boue, juste à tes pieds.",
+      "lieu": "rue_principale",
+      "acteurs": ["croque_mort", "barman_keane"],
+      "meteo": ["orage"],
+      "chance": 0.12,
+      "unique": true,
+      "choix": [
+        { "texte": "Aider à raccrocher les enseignes", "resultat": "Tu passes l'après-midi sur une échelle, un marteau à la main et des clous plein la bouche, sous la pluie qui fouette. Le barman de Keane t'offre un verre ; Mortimer Pembrook, lui, t'offre dix pour cent sur ton futur cercueil.", "effets": { "honneur": 1 }, "consequences": { "entites": { "barman_keane": { "relation": 1 }, "croque_mort": { "relation": 1 } } } },
+        { "texte": "Rapporter son enseigne au croque-mort", "resultat": "Mortimer Pembrook essuie la boue de son enseigne avec sa manche, puis te mesure du regard. « Merci. Six pieds et un pouce. Je note, au cas où. »", "consequences": { "entites": { "croque_mort": { "relation": 2 } } } },
+        { "texte": "Garder le « K » doré en souvenir", "resultat": "Tu ramasses la grosse lettre dorée et la glisses sous ton bras. Le saloon s'appelle désormais « EANE'S », et le barman mettra trois jours à comprendre ce qui cloche.", "effets": { "honneur": -1 }, "consequences": { "entites": { "barman_keane": { "relation": -1 } } } }
+      ]
+    },
+
+    "ciel_grele_sur_l_enclos": {
+      "titre": "Grêle sur l'enclos",
+      "texte": "Des grêlons gros comme des œufs de pigeon crépitent sur l'enclos et rebondissent dans la boue. Tommy Rourke s'est caché sous la mangeoire, son chapeau trop grand plaqué sur la tête, pendant que le troupeau se serre contre la barrière en meuglant. Seul Lucifer encaisse sans broncher, au milieu de l'enclos, l'œil mauvais.",
+      "lieu": "enclos",
+      "acteurs": ["vacher", "taureau"],
+      "heures": [7, 17],
+      "meteo": ["orage"],
+      "chance": 0.15
+    },
+
+    "ciel_brouillard_cavaliers": {
+      "titre": "Des cavaliers dans le brouillard",
+      "texte": "Le brouillard monte du ruisseau et noie la rue au point qu'on ne voit plus le trottoir d'en face. Des sabots passent au pas, tout près, sans lanterne : trois silhouettes à cheval, foulards relevés, qui s'arrêtent un instant devant le bureau du shérif avant de se fondre dans le blanc.",
+      "lieu": "rue_principale",
+      "heures": [22, 5],
+      "meteo": ["brouillard"],
+      "chance": 0.12,
+      "choix": [
+        { "texte": "Les suivre à pas de loup", "resultat": "Tu les suis au bruit jusqu'à la berge, où un feu rougeoie sous les saules. Tu entends des voix irlandaises, le mot « jeudi », puis un cheval renâcle dans ta direction. Tu recules avant qu'ils ne te voient." },
+        { "texte": "Réveiller le shérif Malloy", "resultat": "Malloy ouvre avant même que tu frappes, le fusil à la main : il ne dormait pas. Il écoute, plisse les yeux vers le blanc. « Trois, tu dis. Ils comptent mes fenêtres. Merci. »", "effets": { "honneur": 1 }, "consequences": { "entites": { "sherif_malloy": { "relation": 1 } } } },
+        { "texte": "Lancer un « Qui va là ? »", "resultat": "Ta voix se perd dans le blanc. Un long silence, puis le déclic d'un chien de revolver qu'on arme, quelque part tout près. Les sabots s'éloignent au trot. Tu ne sauras jamais qui c'était." },
+        { "texte": "Rentrer et caler une chaise sous la poignée", "resultat": "Tu rentres, cales une chaise sous la poignée et écoutes les sabots s'éloigner. Il y a des nuits où le courage consiste à vivre jusqu'au matin." }
+      ]
+    },
+
+    "ciel_brouillard_pepite_perdu": {
+      "titre": "Pépite perdu dans le brouillard",
+      "texte": "Dans un brouillard épais comme du lait, Amos « Pépite » Pickett s'est perdu entre les deux saloons. On l'entend demander pardon à l'abreuvoir, puis faire la cour au panneau des avis de recherche, qu'il a pris pour une veuve de Leadville.",
+      "lieu": "rue_principale",
+      "acteurs": ["ivrogne"],
+      "heures": [21, 6],
+      "meteo": ["brouillard"],
+      "chance": 0.3
+    },
+
+    "ciel_brouillard_sur_le_quai": {
+      "titre": "Le 7 h 12 sort du brouillard",
+      "texte": "Le brouillard avale la voie ferrée à dix pas du quai. Silas Pettigrew agite sa lanterne au bout du quai, montre en main, et le sifflet du 7 h 12 perce le blanc bien avant la locomotive, qui surgit d'un coup comme un fantôme noir crachant sa vapeur.",
+      "lieu": "gare",
+      "acteurs": ["chef_de_gare", "train"],
+      "heures": [6, 8],
+      "meteo": ["brouillard"],
+      "chance": 0.5
+    },
+
+    "ciel_canicule_chez_keane": {
+      "titre": "Canicule chez Keane",
+      "texte": "La chaleur écrase Valentine, et tout ce qui respire s'est réfugié chez Keane. Sultan est étalé de tout son long sur le plancher, plat comme une peau d'ours, Théo joue en manches de chemise, et le barman vend la bière tiède au prix de l'eau fraîche.",
+      "lieu": "saloon_keane",
+      "acteurs": ["chat_saloon", "pianiste", "barman_keane"],
+      "heures": [14, 19],
+      "meteo": ["chaleur"],
+      "chance": 0.35
+    },
+
+    "ciel_canicule_malaise_du_veteran": {
+      "titre": "Le vétéran s'effondre au soleil",
+      "texte": "Sur son banc en plein soleil, le sergent Ezra Holloway s'est affaissé, le képi de travers et les lèvres grises. Sa béquille a glissé dans la poussière, et Caporal, le chien errant, lui lèche la main en gémissant.",
+      "lieu": "rue_principale",
+      "acteurs": ["veteran", "chien_errant"],
+      "heures": [12, 17],
+      "meteo": ["chaleur"],
+      "si": ["present:rue_principale"],
+      "chance": 0.15,
+      "choix": [
+        { "texte": "Le porter à l'ombre et lui donner de l'eau", "resultat": "Tu le traînes sous l'auvent du magasin général et lui verses de l'eau sur la nuque. Il rouvre un œil : « Pas un mot de ça à Billy. Un sergent du Tennessee ne s'évanouit pas. Il… inspecte le sol. »", "effets": { "honneur": 2 }, "consequences": { "entites": { "veteran": { "relation": 2 } } } },
+        { "texte": "Courir chercher le docteur Barlow", "resultat": "Le docteur arrive en traînant les pieds, prend le pouls, renifle et décrète : « Coup de chaleur. Remède : ombre, eau, et un whisky, que je vais boire pour lui. » Le vétéran survit, surtout à la consultation.", "effets": { "honneur": 1 }, "consequences": { "entites": { "veteran": { "relation": 1 } } } },
+        { "texte": "Lui poser ton chapeau sur la tête et passer", "resultat": "Tu poses ton chapeau sur son crâne brûlant et t'éloignes. Une heure plus tard, il est ressuscité sur son banc, ton chapeau sur la tête : « Merci pour le képi d'été, l'ami. Je te le rendrai quand il neigera. »", "effets": { "honneur": 1 } }
+      ]
+    },
+
+    "ciel_tourbillon_de_poussiere": {
+      "titre": "Le diable de poussière",
+      "texte": "Un tourbillon de poussière haut comme le clocher remonte la rue principale en sifflant. Il arrache les chapeaux, fait tournoyer les journaux de Billy Pruitt et décroche du panneau l'avis de recherche du Balafré, qui s'envole par-dessus les toits.",
+      "lieu": "rue_principale",
+      "acteurs": ["crieur", "panneau_avis"],
+      "heures": [10, 18],
+      "meteo": ["chaleur", "beau"],
+      "chance": 0.12,
+      "choix": [
+        { "texte": "Courir après l'avis de recherche", "resultat": "Tu cours, sautes par-dessus un tonneau et rattrapes l'affiche au vol devant le Smithfield's. Le Balafré en personne te regarde par la vitrine fendue et lève son verre. Tu recloues son portrait sous son nez.", "effets": { "honneur": 1 } },
+        { "texte": "Aider Billy à ramasser ses journaux", "resultat": "Vous courez tous les deux après les feuilles qui volent jusqu'à l'enclos. Billy récupère tout, sauf la page des primes, que Marguerite est en train de mâcher. « C'était l'édition spéciale ! »", "effets": { "honneur": 1 }, "consequences": { "entites": { "crieur": { "relation": 2 } } } },
+        { "texte": "Te plaquer contre un mur, le foulard sur le nez", "resultat": "Tu te plaques contre une façade, le foulard sur le nez. Quand le tourbillon passe, tu as du sable jusque dans les dents, et Valentine a l'air d'avoir été secouée dans un sac." }
+      ]
+    },
+
+    "ciel_arc_en_ciel": {
+      "titre": "Un arc-en-ciel sur les Heartlands",
+      "texte": "La dernière averse s'éloigne vers les collines, et un arc-en-ciel immense enjambe Valentine, de la gare jusqu'à l'enclos. Moineau jure qu'il y a de l'or à son pied, Pépite le croit, et sur le perron de chez Keane, Nell Harper le regarde en silence, tournée vers Saint Denis.",
+      "lieu": "rue_principale",
+      "acteurs": ["gamin", "ivrogne", "danseuse"],
+      "heures": [9, 18],
+      "meteo": ["beau"],
+      "chance": 0.08
+    },
+
+    "ciel_nuit_etoilee": {
+      "titre": "Une nuit à compter les étoiles",
+      "texte": "La nuit est si claire que la Voie lactée ressemble à une traînée de farine sur du velours noir. Sur le banc, le sergent Holloway nomme les étoiles pour Billy Pruitt, toutes d'après des généraux confédérés, pendant que Caporal ronfle contre sa jambe valide.",
+      "lieu": "rue_principale",
+      "acteurs": ["veteran", "crieur", "chien_errant"],
+      "heures": [20, 23],
+      "meteo": ["beau"],
+      "chance": 0.3
+    },
+
+    "ciel_coyotes_sous_la_lune": {
+      "titre": "Les coyotes chantent à la lune",
+      "texte": "Une lune ronde comme un dollar d'argent se lève sur les collines, et les coyotes se mettent à chanter de l'autre côté du ruisseau. Dans l'enclos, Marguerite répond d'un meuglement inquiet, et le chien errant hésite longuement entre hurler avec eux et aboyer contre eux.",
+      "lieu": "enclos",
+      "acteurs": ["vache", "chien_errant"],
+      "heures": [22, 4],
+      "meteo": ["beau"],
+      "chance": 0.25
+    },
+
+    "ciel_l_auvent_s_effondre": {
+      "titre": "L'auvent du magasin général s'effondre",
+      "texte": "Gorgé d'eau après des heures de pluie, l'auvent du magasin général cède d'un coup dans un craquement sinistre. Sacs de farine, tonneaux de clous et bardeaux s'écrasent sur le trottoir, et sous les décombres, on entend jurer avec l'accent du Tennessee : le sergent Holloway était sur son banc.",
+      "lieu": "rue_principale",
+      "acteurs": ["veteran", "epicier"],
+      "heures": [8, 20],
+      "meteo": ["pluie", "orage"],
+      "chance": 0.06,
+      "unique": true,
+      "consequences": { "entites": { "banc": { "etat": "detruit" } } },
+      "choix": [
+        { "texte": "Soulever la poutre à mains nues", "resultat": "Tu cales ton dos sous la poutre et pousses en hurlant. Elle se soulève de trois pouces, assez pour que Billy Pruitt tire le vétéran par les bras. Il ressort couvert de farine comme un fantôme et grogne : « Les Yankees ont essayé avant toi, poutre de malheur. »", "effets": { "honneur": 2, "sante": -8 }, "consequences": { "entites": { "veteran": { "relation": 3 } } } },
+        { "texte": "Courir chercher Gunnar à la forge", "resultat": "Gunnar arrive au pas de course, soulève la poutre comme une brindille et la pose à côté. Le vétéran sort, sonné mais vivant, sa béquille en deux morceaux. Gunnar la regarde et grogne : « Demain. » Le lendemain, elle est en fer.", "effets": { "honneur": 1 }, "consequences": { "entites": { "veteran": { "relation": 1 }, "marechal_ferrant": { "relation": 1 } } } },
+        { "texte": "Sauver d'abord la farine de Crump", "resultat": "Tu tires les sacs de farine à l'abri pendant que d'autres dégagent le vétéran. Silas Crump t'en est d'une reconnaissance éperdue. Holloway, lui, te regarde passer sans un mot.", "effets": { "honneur": -1 }, "consequences": { "entites": { "epicier": { "relation": 2 }, "veteran": { "relation": -2 } } } }
+      ]
+    },
+
+    "ciel_orage_porte_close": {
+      "titre": "Pas d'abri pour les hommes recherchés",
+      "texte": "L'orage te surprend dans la rue, et la porte la plus proche est celle de l'hôtel. Cornelia Whitlock l'entrouvre, reconnaît ton visage, celui de l'avis de recherche, et referme d'un geste sec : « Pas sous mon toit. » Les volets claquent un à un le long de la rue.",
+      "lieu": "hotel",
+      "acteurs": ["hoteliere"],
+      "meteo": ["orage"],
+      "si": ["est_recherche", "dehors"],
+      "chance": 0.25,
+      "choix": [
+        { "texte": "Te glisser dans le foin de l'écurie", "resultat": "Tu entres par la porte de derrière. Hiram Pruitt te voit, mâchonne sa chique et te jette une couverture de cheval sans un mot. Les chevaux, eux, ne lisent pas les avis de recherche.", "consequences": { "entites": { "palefrenier": { "relation": 1 } } } },
+        { "texte": "Glisser 3 $ sous la porte", "resultat": "Un long silence, puis la porte se rouvre de deux pouces. « Le cagibi sous l'escalier. Pas de bottes sur le tapis, pas de bruit, et vous partez avant l'aube. » Cornelia a des principes. Elle a aussi des factures.", "effets": { "argent": -3 }, "consequences": { "entites": { "hoteliere": { "relation": -1 } } } },
+        { "texte": "Passer la nuit sous l'auvent de la boucherie", "resultat": "Tu restes sous l'auvent de la boucherie, trempé jusqu'aux os, à regarder les éclairs danser sur les toits entre les lapins pendus. Au matin, tu as le nez qui coule et la mâchoire qui claque.", "effets": { "sante": -5 } }
+      ]
+    },
+
+    "ciel_cafe_chez_la_veuve": {
+      "titre": "Un café chez la veuve Hartley",
+      "texte": "La pluie redouble, et sur son porche, Ada Hartley te fait signe d'approcher : deux tasses de café fument à côté du fusil d'Elias. « Elias détestait les orages, dit-elle sans te regarder. Ses chevaux aussi. Il passait ces nuits-là à l'écurie, à leur chanter des cantiques. »",
+      "lieu": "maisons",
+      "acteurs": ["veuve"],
+      "heures": [18, 22],
+      "meteo": ["pluie", "orage"],
+      "si": ["honneur_haut"],
+      "chance": 0.2,
+      "unique": true,
+      "choix": [
+        { "texte": "L'écouter parler d'Elias", "resultat": "Tu bois ton café en silence, et elle parle. D'Elias, de ses chevaux, du dimanche où ils l'ont abattu sur le perron du ranch. Elle ne pleure pas. Quand la pluie cesse, elle dit simplement : « Merci de n'avoir rien promis. »", "consequences": { "entites": { "veuve": { "relation": 3 } } } },
+        { "texte": "Lui promettre que les assassins paieront", "resultat": "Elle tourne enfin les yeux vers toi, longuement. « Rory le Rouge. Retenez ce nom. » Puis elle reprend sa tasse, et ses mains ne tremblent plus.", "consequences": { "entites": { "veuve": { "relation": 2 } } } },
+        { "texte": "Décliner poliment et repartir sous la pluie", "resultat": "Tu touches ton chapeau et repars sous l'averse. Derrière toi, elle reste assise sur le porche avec ses deux tasses, et elle boit la tienne, lentement, en regardant la rue." }
+      ]
+    },
+
+    "ciel_secheresse_le_puits_baisse": {
+      "titre": "Le niveau du puits baisse",
+      "texte": "Trois semaines sans une goutte de pluie, et il faut maintenant rallonger la corde du puits de six pieds pour toucher l'eau. Elle remonte tiède, couleur de rouille, avec un goût de fer. Le shérif Malloy cloue un écriteau sur le treuil : « UN SEAU PAR FAMILLE ET PAR JOUR ».",
+      "lieu": "rue_eglise",
+      "acteurs": ["sherif_malloy", "puits"],
+      "heures": [8, 17],
+      "meteo": ["chaleur"],
+      "chance": 0.1,
+      "unique": true,
+      "consequences": { "drapeaux": ["+ciel_secheresse"] }
+    },
+
+    "ciel_secheresse_poussiere": {
+      "titre": "La sécheresse et la poussière",
+      "texte": "La sécheresse a tout poudré de jaune : les vitres, les chevaux, les moustaches. Cornelia Whitlock bat ses tapis sur le balcon de l'hôtel et regarde la poussière retomber exactement d'où elle vient, et l'abreuvoir n'est plus qu'une flaque verte où boivent les mouches.",
+      "lieu": "rue_principale",
+      "acteurs": ["hoteliere", "abreuvoir"],
+      "heures": [8, 19],
+      "meteo": ["chaleur", "beau"],
+      "drapeaux": ["ciel_secheresse"],
+      "chance": 0.3
+    },
+
+    "ciel_puits_a_sec": {
+      "titre": "Le puits est à sec",
+      "texte": "Le seau remonte vide, avec un bruit de casserole. Penchés sur la margelle, Moineau et le vétéran fixent le fond : la boue a craquelé, et au milieu brille quelque chose de rond et de jaune. La pièce d'or de la fondation de Valentine existe donc bel et bien.",
+      "lieu": "rue_eglise",
+      "acteurs": ["gamin", "veteran", "puits"],
+      "heures": [6, 18],
+      "meteo": ["chaleur"],
+      "drapeaux": ["ciel_secheresse"],
+      "chance": 0.25,
+      "unique": true,
+      "choix": [
+        { "texte": "Descendre au fond avec ton lasso", "resultat": "Tu attaches ton lasso au treuil et descends trente pieds dans le noir, les bottes contre la pierre moite. Au fond, la pièce est là : un aigle d'or de dix dollars, daté de 1851. Quand tu remontes, la moitié de la rue t'attend à la margelle.", "effets": { "argent": 10, "sante": -3 } },
+        { "texte": "Descendre Moineau au bout d'une corde", "resultat": "Moineau descend en riant, remonte en riant plus fort, la pièce entre les dents, et file comme un lièvre avant que tu aies défait le nœud. « Merci pour l'ascenseur, m'sieur ! »", "effets": { "honneur": -1 }, "consequences": { "entites": { "gamin": { "relation": 1 } } } },
+        { "texte": "Creuser le fond pour retrouver l'eau", "resultat": "Tu descends avec une pelle et creuses la boue pendant deux heures. Au troisième pied, l'eau jaillit, froide et claire, et engloutit la pièce d'or dans une gerbe de bulles. Tu remontes trempé, les mains vides, sous les acclamations de la rue de l'Église.", "effets": { "honneur": 3, "sante": -5 } },
+        { "texte": "Laisser la pièce aux légendes", "resultat": "Tu détournes les yeux. Certaines légendes valent plus que dix dollars. Le vétéran hoche la tête : « Bien. Une ville a besoin de ses histoires. » Moineau, lui, te regarde comme si tu étais fou.", "consequences": { "entites": { "veteran": { "relation": 1 } } } }
+      ]
+    },
+
+    "ciel_eau_de_la_compagnie": {
+      "titre": "L'eau de la Compagnie",
+      "texte": "La seule eau fraîche de Valentine dort maintenant dans la cuve du château d'eau, et Silas Pettigrew monte la garde au pied de l'échelle, un vieux fusil de chasse sur le bras. Devant lui, une file de femmes avec des seaux, Ruth Dunbar en tête, et un écriteau : « PROPRIÉTÉ DE LA COMPAGNIE — EAU RÉSERVÉE AUX LOCOMOTIVES ».",
+      "lieu": "gare",
+      "acteurs": ["chef_de_gare", "chateau_d_eau"],
+      "heures": [8, 19],
+      "drapeaux": ["ciel_secheresse"],
+      "chance": 0.3,
+      "unique": true,
+      "choix": [
+        { "texte": "Négocier un seau par famille, noté au registre", "resultat": "Tu parles horaires, registres et responsabilités jusqu'à ce que Pettigrew sorte son carnet. « Un seau par famille, noté, signé, daté. Et à l'heure. » La file applaudit ; il rougit jusqu'aux favoris.", "effets": { "honneur": 2 }, "consequences": { "entites": { "chef_de_gare": { "relation": 1 } } } },
+        { "texte": "Abaisser le bras verseur pendant qu'il discute", "resultat": "Pendant que Pettigrew récite le règlement, tu tires sur la chaîne du bras verseur. L'eau jaillit en cascade, les seaux se remplissent dans les rires, et le chef de gare court partout comme une poule. La rue boit ; la Compagnie porte plainte.", "effets": { "honneur": 1, "prime": 5 }, "consequences": { "entites": { "chef_de_gare": { "relation": -3 } } } },
+        { "texte": "Prendre le parti du règlement", "resultat": "« La loi, c'est la loi. » Pettigrew te regarde avec une gratitude éperdue. Ruth Dunbar, elle, te regarde comme on regarde un serpent, et repart avec son seau vide.", "effets": { "honneur": -1 }, "consequences": { "entites": { "chef_de_gare": { "relation": 2 } } } }
+      ]
+    },
+
+    "ciel_seau_de_boue": {
+      "titre": "Un seau de boue",
+      "texte": "Le seau remonte à moitié plein d'une eau épaisse comme du café, où nage un têtard indigné. Derrière toi, trois femmes attendent leur tour en serrant leurs cruches, et l'une d'elles murmure que si la pluie ne vient pas, ce sont les vaches qu'on enterrera d'abord.",
+      "lieu": "rue_eglise",
+      "drapeaux": ["ciel_secheresse"],
+      "apres": { "verbes": ["remonter_seau", "remplir_sa_gourde"], "cibles": ["puits"] },
+      "chance": 0.7
+    },
+
+    "ciel_eau_pour_tous": {
+      "titre": "L'eau du château d'eau pour tous",
+      "texte": "À peine as-tu abaissé le bras verseur que la nouvelle court la rue : il y a de l'eau à la gare ! Une foule de seaux, de cruches et même une baignoire accourt sur le quai, et Silas Pettigrew, débordé, finit par organiser la file lui-même, montre en main.",
+      "lieu": "gare",
+      "acteurs": ["chef_de_gare"],
+      "drapeaux": ["ciel_secheresse"],
+      "apres": { "verbes": ["abaisser_bras_verseur"], "cibles": ["chateau_d_eau"] },
+      "chance": 1,
+      "unique": true,
+      "consequences": { "joueur": { "honneur": 1 }, "entites": { "chef_de_gare": { "relation": -1 } } }
+    },
+
+    "ciel_il_pleut_enfin": {
+      "titre": "Il pleut enfin !",
+      "texte": "Une goutte, puis dix, puis un déluge tiède qui fait fumer la poussière : la pluie tombe enfin sur Valentine. Toute la rue sort tête nue, Cyrus Hollis aligne ses tonneaux sous la gouttière, et le révérend Whitlock, debout sur le parvis, rit aux éclats, les bras ouverts au ciel.",
+      "lieu": "rue_principale",
+      "acteurs": ["barman_smithfield", "pasteur"],
+      "meteo": ["pluie", "orage"],
+      "drapeaux": ["ciel_secheresse"],
+      "chance": 0.8,
+      "unique": true,
+      "consequences": { "drapeaux": ["-ciel_secheresse"] },
+      "choix": [
+        { "texte": "Inviter Nell à danser sous la pluie", "resultat": "Nell hésite, puis relève sa robe de satin et te prend la main. Vous dansez une valse boueuse au milieu de la rue, sous les sifflets du perron de chez Keane. « Pour une fois, cow-boy, c'est moi qui ne fais pas payer. »", "consequences": { "entites": { "danseuse": { "relation": 2 } } } },
+        { "texte": "Lever ton visage vers le ciel", "resultat": "Tu ôtes ton chapeau et laisses l'eau couler sur ton visage, longtemps. Autour de toi, des gens qui ne se parlaient plus se donnent l'accolade. Ce soir, même Silas Crump offre une tournée. D'eau.", "effets": { "honneur": 1 } },
+        { "texte": "Remplir ta gourde avant tout le monde", "resultat": "Tu tends ta gourde sous la gouttière de la banque et la remplis à ras bord en jouant des coudes. Une vieille dame te regarde faire en secouant la tête. Il pleut pour tout le monde, l'ami.", "effets": { "honneur": -1 } }
+      ]
+    },
+
+    "ciel_crue_le_ruisseau_deborde": {
+      "titre": "Le ruisseau sort de son lit",
+      "texte": "Après une nuit de déluge, le ruisseau clair n'est plus qu'un torrent brun qui charrie des branches, des piquets de clôture et un poulailler entier. Sous les saules, le camp du Balafré est emporté : Ciaran Doyle, dans l'eau jusqu'à la ceinture, tente de sauver sa selle pendant que sa sacoche file au fil du courant.",
+      "lieu": "berge",
+      "acteurs": ["odriscoll", "ruisseau"],
+      "heures": [5, 9],
+      "meteo": ["pluie", "orage"],
+      "chance": 0.15,
+      "unique": true,
+      "consequences": { "drapeaux": ["+ciel_crue"] },
+      "choix": [
+        { "texte": "Lui lancer ton lasso", "resultat": "Tu lances ta corde ; il l'attrape d'une main, l'autre serrée sur sa selle. Une fois sur la berge, il crache de l'eau boueuse et te fixe longuement : « Un O'Driscoll n'oublie jamais une dette. Dans un sens comme dans l'autre. »", "effets": { "honneur": 1 }, "consequences": { "entites": { "odriscoll": { "relation": 2 } } } },
+        { "texte": "Repêcher la sacoche plus bas", "resultat": "Tu cours le long de la berge et harponnes la sacoche avec une branche. Dedans : trois bâtons de dynamite détrempés, un plan grossier du bureau du shérif et la photo jaunie de deux garçons roux. Sur l'autre rive, le Balafré te regarde.", "effets": { "honneur": 1 }, "consequences": { "entites": { "odriscoll": { "relation": -3 } } } },
+        { "texte": "Le laisser patauger et prévenir Malloy", "resultat": "Tu remontes en ville en courant. Quand Malloy arrive à la berge, il ne trouve qu'une couverture trempée et des traces de bottes : le Balafré a filé, mais il a perdu son camp et la moitié de ses affaires.", "consequences": { "entites": { "sherif_malloy": { "relation": 1 } } } },
+        { "texte": "Regarder le spectacle depuis une souche", "resultat": "Tu t'assois sur une souche et regardes le Balafré se battre contre le courant. Il finit par se hisser sur la rive, trempé, ridicule, et le premier regard qu'il lève est pour toi. Il ne l'oubliera pas.", "consequences": { "entites": { "odriscoll": { "relation": -1 } } } }
+      ]
+    },
+
+    "ciel_crue_marguerite_emportee": {
+      "titre": "Marguerite emportée par le courant",
+      "texte": "Le troupeau descendu boire s'est fait surprendre par la crue, et Marguerite se débat au milieu du torrent, sa cloche de cuivre sonnant à chaque vague. Sur la berge, Tommy Rourke court en hurlant son nom, son lasso trop court à la main.",
+      "lieu": "berge",
+      "acteurs": ["vache", "vacher"],
+      "heures": [16, 19],
+      "drapeaux": ["ciel_crue"],
+      "chance": 0.6,
+      "unique": true,
+      "choix": [
+        { "texte": "Lancer ton lasso sur ses cornes", "resultat": "Ta corde siffle et se referme sur les cornes de Marguerite. Tommy s'accroche à ta taille, vous tirez à deux, et la vache sort de l'eau en meuglant son indignation. Tommy te regarde comme on regarde Buffalo Bill.", "effets": { "honneur": 2 }, "consequences": { "entites": { "vache": { "relation": 2 }, "vacher": { "relation": 3 }, "eleveur": { "relation": 1 } } } },
+        { "texte": "Plonger dans le torrent", "resultat": "Tu plonges. L'eau glacée te frappe comme un poing, une branche t'écorche la joue, mais tu attrapes la cloche et ramènes Marguerite vers le gué à la force des bras. Sur la berge, tu craches la moitié du ruisseau.", "effets": { "honneur": 3, "sante": -15 }, "consequences": { "entites": { "vache": { "relation": 2 }, "vacher": { "relation": 2 } } } },
+        { "texte": "Négocier d'abord avec Whitmore", "resultat": "Silas Whitmore, accouru à cheval, mâchonne son cigare : « Cinq dollars si tu la sors. » Tu la sors, il paie, et il te regarde comme une bonne affaire. Tommy, lui, ne te regarde plus du tout.", "effets": { "argent": 5 }, "consequences": { "entites": { "vacher": { "relation": -1 }, "eleveur": { "relation": 1 } } } },
+        { "texte": "Ne rien faire : ce n'est qu'une vache", "resultat": "Le courant emporte Marguerite au coude du ruisseau, puis plus loin, sa cloche sonnant de plus en plus faiblement. Tommy reste longtemps sur la berge, les bras ballants, à écouter le silence.", "consequences": { "entites": { "vache": { "etat": "en_fuite" }, "vacher": { "relation": -2 } } } }
+      ]
+    },
+
+    "ciel_crue_premier_retard": {
+      "titre": "Le premier retard en vingt-deux ans",
+      "texte": "La crue a noyé la voie là où elle enjambe le ruisseau, à l'est de la ville, et le 11 h 40 pour Rhodes reste à quai, chaudière fumante. Silas Pettigrew fixe sa montre à gousset comme on regarde mourir un ami : vingt-deux ans de service sans une minute de retard s'arrêtent aujourd'hui, à 11 h 41.",
+      "lieu": "gare",
+      "acteurs": ["chef_de_gare", "train"],
+      "heures": [11, 13],
+      "jours": ["lundi", "mardi", "mercredi", "vendredi", "samedi", "dimanche"],
+      "drapeaux": ["ciel_crue"],
+      "chance": 0.7,
+      "unique": true,
+      "choix": [
+        { "texte": "Aider l'équipe à recharger le ballast", "resultat": "Tu passes deux heures à pelleter du gravier avec les cheminots, de l'eau jusqu'aux genoux. Le 11 h 40 part à 13 h 52. Pettigrew note l'heure exacte dans son registre, puis ajoute d'une main tremblante : « Aidé par un voyageur. »", "effets": { "honneur": 1, "sante": -2 }, "consequences": { "entites": { "chef_de_gare": { "relation": 2 } } } },
+        { "texte": "Le consoler : c'est la faute du ciel", "resultat": "« Le ciel n'a pas d'horaire, monsieur Pettigrew. » Il renifle, se mouche dans un mouchoir amidonné et murmure : « C'est bien ce que je lui reproche. »", "consequences": { "entites": { "chef_de_gare": { "relation": 2 } } } },
+        { "texte": "Lui demander l'heure, juste pour voir", "resultat": "Il sort sa montre par réflexe, la regarde, et sa lèvre inférieure se met à trembler. Derrière son guichet, Elmer Dobbs doit se cacher sous le comptoir pour rire.", "consequences": { "entites": { "chef_de_gare": { "relation": -2 } } } }
+      ]
+    },
+
+    "ciel_crue_paillettes_d_or": {
+      "titre": "La décrue révèle de l'or",
+      "texte": "Le ruisseau est rentré dans son lit, laissant derrière lui une langue de gravier neuf au coude de la berge. Amos « Pépite » Pickett y est à genoux, sa batée cabossée entre les mains, et il ne crie pas, il ne chante pas : il pleure, parce qu'au fond de la batée brillent de vraies paillettes d'or.",
+      "lieu": "berge",
+      "acteurs": ["ivrogne", "ruisseau"],
+      "heures": [10, 18],
+      "meteo": ["beau", "chaleur"],
+      "drapeaux": ["ciel_crue"],
+      "chance": 0.5,
+      "unique": true,
+      "consequences": { "drapeaux": ["-ciel_crue"] },
+      "choix": [
+        { "texte": "L'aider à planter ses piquets de concession", "resultat": "Vous plantez quatre piquets aux coins de la langue de gravier, et tu l'accompagnes au bureau du shérif pour enregistrer la concession à son nom. Pour la première fois depuis Leadville, Amos Pickett signe un papier à jeun.", "effets": { "honneur": 2 }, "consequences": { "entites": { "ivrogne": { "relation": 3 } } } },
+        { "texte": "Laver le gravier avec lui, moitié-moitié", "resultat": "Vous lavez le gravier jusqu'au soir, côte à côte, les doigts gelés. Il partage au cure-dent près, scrupuleusement, en racontant Leadville. Ta moitié tient dans un dé à coudre, mais c'est de l'or.", "effets": { "argent": 8 }, "consequences": { "entites": { "ivrogne": { "relation": 2 } } } },
+        { "texte": "Lui arracher sa bourse de cuir", "resultat": "Tu arraches la petite bourse pendue à son cou. Il ne se bat même pas : il te regarde partir de ses yeux bleus délavés, et plus jamais il ne dira à personne où il a vu de l'or.", "effets": { "argent": 20, "honneur": -4 }, "consequences": { "entites": { "ivrogne": { "relation": -5 } } } },
+        { "texte": "Crier la nouvelle dans toute la ville", "resultat": "Tu cours jusqu'à la rue principale en criant « De l'or au ruisseau ! » En une heure, la moitié de Valentine est à genoux dans la boue, Pépite noyé dans la foule, et Silas Crump vend des batées au triple du prix.", "effets": { "honneur": -1 }, "consequences": { "drapeaux": ["+ciel_ruee_au_ruisseau"], "entites": { "ivrogne": { "relation": -2 } } } }
+      ]
+    },
+
+    "ciel_crue_decrue_sans_pepite": {
+      "titre": "La décrue, et personne pour chercher",
+      "texte": "Le ruisseau est rentré dans son lit, laissant au coude de la berge une langue de gravier neuf où quelque chose scintille au soleil. Il n'y a plus personne à Valentine pour s'agenouiller là avec une batée cabossée en chantant « Clementine ». Seul le corbeau Edgar vient picorer ce qui brille.",
+      "lieu": "berge",
+      "acteurs": ["corbeau"],
+      "meteo": ["beau", "chaleur"],
+      "si": ["mort:ivrogne"],
+      "drapeaux": ["ciel_crue"],
+      "chance": 0.5,
+      "unique": true,
+      "consequences": { "drapeaux": ["-ciel_crue"] }
+    },
+
+    "ciel_ruee_au_ruisseau": {
+      "titre": "La petite ruée vers l'or du ruisseau",
+      "texte": "La berge ressemble à un champ de bataille : des boutiquiers en manches de chemise, des vachers, le caissier et même Nell Harper, robe relevée, lavent le gravier à genoux. Silas Crump a doublé, puis triplé le prix des batées, et chacun jure avoir trouvé une paillette plus grosse que celle du voisin.",
+      "lieu": "berge",
+      "heures": [8, 19],
+      "drapeaux": ["ciel_ruee_au_ruisseau"],
+      "chance": 0.3
+    },
+
+    "ciel_ruee_fin_de_la_fievre": {
+      "titre": "La fièvre de l'or retombe",
+      "texte": "Au bout de quatre jours, le gravier du coude a été lavé jusqu'au dernier grain. Bilan, selon Billy Pruitt qui a tout noté : onze dollars d'or trouvés par toute la ville, trois cents dollars de batées vendues par Silas Crump. Le seul vrai chercheur d'or de Valentine, c'était l'épicier.",
+      "lieu": "rue_principale",
+      "acteurs": ["crieur", "epicier"],
+      "heures": [8, 18],
+      "drapeaux": ["ciel_ruee_au_ruisseau"],
+      "chance": 0.12,
+      "unique": true,
+      "consequences": { "drapeaux": ["-ciel_ruee_au_ruisseau"] }
+    },
+
+    "ciel_grippe_la_pension_tousse": {
+      "titre": "La toux de la pension",
+      "texte": "Après des jours de pluie froide, la pension de famille tousse à tous les étages. Elmer Dobbs éternue sur ses télégrammes, Théo a la voix d'un corbeau, et le docteur Barlow ressort en se grattant les favoris : « La grippe. La même qu'à Saint Denis. Elle va faire le tour de la ville. »",
+      "lieu": "pension",
+      "acteurs": ["medecin", "telegraphiste", "pianiste"],
+      "heures": [7, 11],
+      "meteo": ["pluie", "brouillard"],
+      "chance": 0.08,
+      "unique": true,
+      "consequences": { "drapeaux": ["+ciel_grippe"] }
+    },
+
+    "ciel_grippe_docteur_deborde": {
+      "titre": "Le docteur Barlow est débordé",
+      "texte": "La file des malades déborde du cabinet jusque sur le trottoir : des vachers fiévreux, une mère et ses trois enfants, le caissier qui claque des dents. Le docteur Barlow court d'un lit à l'autre, les mains tremblantes, et sa flasque se vide aussi vite que ses fioles. Il t'attrape par la manche : « Vous, là ! Vous savez faire bouillir de l'eau ? »",
+      "lieu": "cabinet_medecin",
+      "acteurs": ["medecin", "caissier"],
+      "heures": [8, 18],
+      "drapeaux": ["ciel_grippe"],
+      "chance": 0.5,
+      "unique": true,
+      "choix": [
+        { "texte": "Retrousser tes manches et l'aider", "resultat": "Tu fais bouillir l'eau, poses des compresses, tiens des bassines et des mains jusqu'à la nuit. Barlow, étonnamment, ne touche plus à sa flasque. « Vous auriez fait un infirmier passable, dans le Maryland. C'est un compliment. »", "effets": { "honneur": 2, "sante": -3 }, "consequences": { "drapeaux": ["+ciel_grippe_aide"], "entites": { "medecin": { "relation": 2 } } } },
+        { "texte": "Commander de la quinine à Saint Denis (15 $)", "resultat": "Tu cours à la gare et paies de ta poche une caisse de quinine et de poudres contre la fièvre. Elmer Dobbs lit le télégramme à voix haute en le tapant : « Arrivée par le premier train. Si le ciel le veut. »", "effets": { "argent": -15, "honneur": 2 }, "consequences": { "drapeaux": ["+ciel_remede_commande"] } },
+        { "texte": "Confisquer sa flasque", "resultat": "Tu lui arraches la flasque et la vides dans le crachoir. Il te traite de tous les noms en latin, puis, les mains tremblantes mais l'esprit clair, soigne mieux qu'il ne l'a fait depuis dix ans.", "effets": { "honneur": 1 }, "consequences": { "drapeaux": ["+ciel_grippe_aide"], "entites": { "medecin": { "relation": -1 } } } },
+        { "texte": "Acheter un tonique et repartir", "resultat": "Tu repars avec un flacon de « Tonique revigorant du docteur Barlow » au goût de réglisse et de pétrole. Il ne guérit rien, mais il te fait tousser assez fort pour que la file s'écarte sur ton passage.", "effets": { "argent": -1 } }
+      ]
+    },
+
+    "ciel_grippe_moineau_grelotte": {
+      "titre": "Moineau grelotte sous le porche",
+      "texte": "Recroquevillé sous le porche de l'église, Moineau grelotte de fièvre, les joues rouges et les lèvres bleues, sa casquette serrée contre lui. Le révérend Whitlock lui a jeté sa propre couverture sur les épaules : « Il refuse d'aller chez le docteur. Il dit que les docteurs, ça vous scie les jambes. »",
+      "lieu": "eglise",
+      "acteurs": ["gamin", "pasteur"],
+      "heures": [19, 7],
+      "drapeaux": ["ciel_grippe"],
+      "chance": 0.4,
+      "unique": true,
+      "choix": [
+        { "texte": "Le porter chez le docteur de force", "resultat": "Il se débat comme un chat mouillé, puis s'endort contre ton épaule avant même la rue principale. Barlow lui fait avaler une potion amère et le couche dans son propre lit. Au matin, la fièvre est tombée, et Moineau te fait les poches pour te remercier.", "effets": { "honneur": 2 }, "consequences": { "entites": { "gamin": { "relation": 2 } } } },
+        { "texte": "Lui payer une chambre à l'hôtel (2 $)", "resultat": "Cornelia Whitlock regarde les pieds nus du gamin, puis toi, puis tes dollars. Elle soupire et fait chauffer un bain. Le lendemain, Moineau sent le savon et la lavande, et il en est profondément humilié.", "effets": { "argent": -2, "honneur": 2 }, "consequences": { "entites": { "gamin": { "relation": 3 }, "hoteliere": { "relation": 1 } } } },
+        { "texte": "Le laisser aux soins du révérend", "resultat": "Le révérend veille Moineau toute la nuit dans la sacristie en lui lisant des histoires de pirates, pas la Bible. La fièvre tombe au matin. Le gamin se souviendra de qui est resté.", "consequences": { "entites": { "pasteur": { "relation": 1 } } } },
+        { "texte": "Lui donner ta veste et partir", "resultat": "Tu poses ta veste sur lui et t'éloignes dans la nuit froide. Le lendemain, Moineau la porte, manches retroussées trois fois, et refuse de te la rendre : « Elle est à moi, maintenant. C'est la loi de la fièvre. »", "effets": { "honneur": 1 }, "consequences": { "entites": { "gamin": { "relation": 1 } } } }
+      ]
+    },
+
+    "ciel_grippe_pas_de_messe": {
+      "titre": "Pas de messe ce dimanche",
+      "texte": "Pour la première fois depuis la fondation de la ville, la porte de l'église reste close un dimanche matin. Sur le battant, le révérend Whitlock a cloué un mot de sa belle écriture : « Le Seigneur entend aussi les prières dites au lit. Restez chez vous, couvrez-vous, et buvez du bouillon, pas du whisky. »",
+      "lieu": "eglise",
+      "heures": [8, 12],
+      "jours": ["dimanche"],
+      "drapeaux": ["ciel_grippe"],
+      "chance": 0.9,
+      "unique": true
+    },
+
+    "ciel_grippe_le_croque_mort_mesure": {
+      "titre": "Le croque-mort prend des mesures",
+      "texte": "Mortimer Pembrook arpente la rue principale avec son mètre ruban, s'arrêtant poliment devant chaque personne qui tousse pour la mesurer du regard. « Simple précaution, madame. La grippe est une cliente pressée. » Sur son épaule, Edgar le corbeau croasse : « Payez d'avance ! »",
+      "lieu": "rue_principale",
+      "acteurs": ["croque_mort", "corbeau"],
+      "heures": [9, 17],
+      "drapeaux": ["ciel_grippe"],
+      "chance": 0.25
+    },
+
+    "ciel_grippe_la_quinine_arrive": {
+      "titre": "La quinine arrive par le train",
+      "texte": "Une caisse marquée « PHARMACIE — SAINT DENIS — FRAGILE » descend du wagon de marchandises, et le docteur Barlow la serre contre lui comme un nouveau-né. Le soir même, la file devant le cabinet a fondu de moitié ; en trois jours, la toux quitte la pension.",
+      "lieu": "gare",
+      "acteurs": ["medecin", "chef_de_gare"],
+      "heures": [7, 17],
+      "drapeaux": ["ciel_grippe", "ciel_remede_commande"],
+      "chance": 0.6,
+      "unique": true,
+      "consequences": { "drapeaux": ["-ciel_grippe"], "joueur": { "honneur": 1 }, "entites": { "medecin": { "relation": 2 } } }
+    },
+
+    "ciel_grippe_la_fievre_tombe": {
+      "titre": "La fièvre quitte Valentine",
+      "texte": "Avec le retour du soleil, la toux se tait d'étage en étage à la pension, et les malades ressortent sur les trottoirs, pâles et maigres, en clignant des yeux. Le docteur Barlow, épuisé, dort vingt heures d'affilée, et pour une fois sans bouteille.",
+      "lieu": "rue_principale",
+      "acteurs": ["medecin"],
+      "meteo": ["beau", "chaleur"],
+      "drapeaux": ["ciel_grippe", "ciel_grippe_aide"],
+      "chance": 0.2,
+      "unique": true,
+      "consequences": { "drapeaux": ["-ciel_grippe"] }
+    },
+
+    "ciel_grippe_madame_hensley": {
+      "titre": "La grippe emporte la vieille Mme Hensley",
+      "texte": "La grippe a fini par prendre quelqu'un : la vieille Mme Hensley, quatre-vingt-un ans, s'est éteinte dans la nuit, seule dans sa maison. Le cortège est court, sous une pluie fine, et Henrietta, sa poule, suit le cercueil jusqu'au cimetière en caquetant doucement, sans que personne ose la chasser.",
+      "lieu": "cimetiere",
+      "acteurs": ["croque_mort", "pasteur", "poule"],
+      "heures": [9, 17],
+      "meteo": ["pluie"],
+      "drapeaux": ["ciel_grippe", "!ciel_grippe_aide", "!ciel_remede_commande"],
+      "chance": 0.12,
+      "unique": true,
+      "consequences": { "drapeaux": ["-ciel_grippe"] },
+      "choix": [
+        { "texte": "Adopter Henrietta", "resultat": "Tu prends la poule sous ton bras. Elle te pique le pouce, puis s'installe comme sur un nid. Mortimer Pembrook hoche la tête : « Elle a choisi. Les veuves choisissent toujours mieux que nous. »", "effets": { "honneur": 1 }, "consequences": { "entites": { "poule": { "relation": 3 } } } },
+        { "texte": "Payer la pierre tombale (10 $)", "resultat": "Mortimer Pembrook grave lui-même la pierre dans la soirée : « Mme Hensley, 1818-1899. Elle nourrissait les poules et les gamins. » Pour une fois, il ne fait payer que le granit.", "effets": { "argent": -10, "honneur": 2 }, "consequences": { "entites": { "croque_mort": { "relation": 2 } } } },
+        { "texte": "Rester au fond du cimetière, chapeau bas", "resultat": "Tu restes au fond, chapeau à la main, pendant que le révérend dit les mots. Il n'y a pas grand monde. Ta présence compte, même si personne ne te le dira.", "effets": { "honneur": 1 } }
+      ]
+    },
+
+    "ciel_sauterelles_arrivent": {
+      "titre": "Les sauterelles arrivent",
+      "texte": "Un nuage brun et bourdonnant descend des collines et s'abat sur Valentine dans un crépitement de grêle sèche. Des sauterelles partout : sur les vitres, dans les cheveux, dans l'abreuvoir. À l'enclos, Silas Whitmore jure en voyant fondre son pâturage, et Jonas Dunbar, livide, regarde vers le nord, où sont ses derniers champs.",
+      "lieu": "enclos",
+      "acteurs": ["eleveur", "fermier"],
+      "heures": [9, 17],
+      "meteo": ["chaleur"],
+      "chance": 0.04,
+      "unique": true,
+      "consequences": { "drapeaux": ["+ciel_sauterelles"] },
+      "choix": [
+        { "texte": "Aller aider Jonas à enfumer ses champs", "resultat": "Vous galopez jusqu'à sa ferme et allumez des feux de paille mouillée autour du champ de maïs. Toute la nuit, Martha, Ruth et les garçons battent les sauterelles avec des draps. Au matin, il reste la moitié de la récolte. C'est assez pour vivre.", "effets": { "honneur": 3, "sante": -5 }, "consequences": { "entites": { "fermier": { "relation": 3 } } } },
+        { "texte": "Bâcher le foin de Whitmore contre 10 $", "resultat": "Whitmore te paie dix dollars pour bâcher ses meules avec ses vachers. Tu sauves son fourrage d'hiver ; ses bêtes mangeront, elles. Celles des fermiers, on verra.", "effets": { "argent": 10 }, "consequences": { "entites": { "eleveur": { "relation": 2 } } } },
+        { "texte": "Ramasser des sauterelles pour le boucher", "resultat": "Gus te paie un dollar le seau : « Grillées au sel, mon gars, c'est des crevettes des prairies ! » Tu lui rapportes trois seaux grouillants. Personne ne sait ce qu'il en fera, et personne ne veut le savoir.", "effets": { "argent": 3 } },
+        { "texte": "T'enfermer au saloon et attendre", "resultat": "Tu t'enfermes chez Keane, où les sauterelles tapent contre les vitres comme une pluie sèche. Sultan, ravi, les chasse sur le comptoir une par une. C'est le plus beau jour de sa vie." }
+      ]
+    },
+
+    "ciel_sauterelles_partout": {
+      "titre": "Valentine sous les sauterelles",
+      "texte": "Les sauterelles sont dans la soupe de la pension, dans les bottes de l'adjoint et jusque dans le tiroir-caisse de Silas Crump. Henrietta la poule en a tant mangé qu'elle ne peut plus voler, et Gus propose sur son ardoise des « crevettes des prairies, grillées au sel ».",
+      "lieu": "rue_principale",
+      "acteurs": ["poule", "boucher"],
+      "heures": [8, 19],
+      "drapeaux": ["ciel_sauterelles"],
+      "chance": 0.3
+    },
+
+    "ciel_sauterelles_s_en_vont": {
+      "titre": "La pluie chasse les sauterelles",
+      "texte": "L'averse plaque les sauterelles au sol, et au matin, le nuage est reparti vers le sud en laissant derrière lui des prés rasés et des arbres nus en plein été. Sur les marches de la banque, Horace Whitlock relit déjà la liste des fermes qui ne pourront plus payer.",
+      "lieu": "banque",
+      "acteurs": ["banquier"],
+      "meteo": ["pluie", "orage"],
+      "drapeaux": ["ciel_sauterelles"],
+      "chance": 0.6,
+      "unique": true,
+      "consequences": { "drapeaux": ["-ciel_sauterelles"] }
+    }
+  }
+}
